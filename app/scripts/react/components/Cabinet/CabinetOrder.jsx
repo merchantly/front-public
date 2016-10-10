@@ -27,6 +27,7 @@ class CabinetOrder extends Component {
       reservation,
       delivery,
       deliveryState,
+      t
     } = this.props;
 
     return (
@@ -49,7 +50,7 @@ class CabinetOrder extends Component {
           </h2>
           {itemsCount > 0 &&
             (<small className='text-muted'>
-              {itemsCount + ' поз.'}
+              {t('vendor.cabinet_order.items_count', {itemsCount: itemsCount})}
             </small>)
           }
         </div>
