@@ -39,7 +39,7 @@ class Cabinet extends Component {
               <div>
                 <h3> Список заказов </h3>
                 <ul className='b-cart__list'>
-                  {items.map((order) => <CabinetOrder {...order} key={`cabinet-order-$(order.id)`} />)}
+                  {items.map((order) => <CabinetOrder {...order} key={order.id} />)}
                 </ul>
                 <Pagination currentPage={currentPage} totalPages={totalPages} />
               </div>

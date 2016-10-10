@@ -325,7 +325,10 @@ global.gon = {
           'both': 'Зарезервировано локально и на складе в %{reservedAt}',
           'local': 'Зарезервировано только локально в %{reservedAt}',
           'remote': 'Зарезервировано только на складе в %{reservedAt}',
-        }
+        },
+        'cabinet_order': {
+          'items_count': '%{itemsCount} поз.'
+        },
       },
     },
   },
