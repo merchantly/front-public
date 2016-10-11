@@ -54,9 +54,7 @@ class BlogPostListItem extends Component {
         {imagePart}
         <div className="post__content">
           {titlePart}
-          <div className="post__text b-text">
-            {text}
-          </div>
+          <div className="post__text b-text" dangerouslySetInnerHTML={{__html: text}} />
           <div className="post__date">
             {date}
           </div>
@@ -72,7 +70,7 @@ class BlogPostListItem extends Component {
 BlogPostListItem.propTypes = {
   hasLink: PropTypes.bool.isRequired,
   linkTarget: PropTypes.string.Optional,
-  image: PropTypes.string.isOptional,
+  imageUrl: PropTypes.string.isOptional,
   headerUrl: PropTypes.string.isOptional,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
