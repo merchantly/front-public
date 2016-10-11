@@ -7,21 +7,21 @@
         "hasLink":false,
         "title":"example",
         "text":"example",
-        "readMore":"read_more",
+        "publicUrl":"/example",
         "date":"12.04.2016"
       },
       { 
         "hasLink":false,
         "title":"example",
         "text":"example",
-        "readMore":"read_more",
+        "publicUrl":"/example",
         "date":"12.04.2016"
       },
       { 
         "hasLink":false,
         "title":"example",
         "text":"example",
-        "readMore":"read_more",
+        "publicUrl":"/example",
         "date":"12.04.2016"
       },
     ]

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import provideTranslations from 'rc/HoC/provideTranslations';
 
 class BlogPostListItem extends Component {
   render() {
@@ -6,11 +7,12 @@ class BlogPostListItem extends Component {
       hasLink,
       title,
       text,
-      readMore,
+      publicUrl,
       date,
       headerUrl,
       linkTarget,
-      image
+      image,
+      t,
     } = this.props
 
     let imagePart = '';
@@ -56,7 +58,7 @@ class BlogPostListItem extends Component {
             {date}
           </div>
           <div className="post__read_more b-text">
-            {readMore}
+            <a href={publicUrl}>{t('vendor.blog.read_more')}</a>
           </div>
         </div>
       </article>
@@ -71,9 +73,9 @@ BlogPostListItem.propTypes = {
   headerUrl: PropTypes.string.isOptional,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  readMore: PropTypes.string.isRequired,
+  publicUrl: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
 }
 
-export default BlogPostListItem;
+export default provideTranslations(BlogPostListItem);
 
