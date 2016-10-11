@@ -11,7 +11,9 @@ class InstagramContainer extends Component {
     profileUrl: null,
   }
   componentDidMount() {
-    const { entriesLimit } = this.props;
+    const { entriesLimit, isVisible } = this.props;
+
+    if (!isVisible) return;
 
     loadEntries(entriesLimit)
       .then(({ data }) => {
@@ -51,9 +53,10 @@ class InstagramContainer extends Component {
 
 InstagramContainer.propTypes = {
   entriesLimit: PropTypes.number,
+  isVisible: PropTypes.bool.isRequired
 };
 InstagramContainer.defaultProps = {
-  entriesLimit: 10,
+  entriesLimit: 10
 };
 
 export default InstagramContainer;
