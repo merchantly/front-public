@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import provideTranslations from 'rc/HoC/provideTranslations';
+import ThumborService from 'r/services/Thumbor';
 
 class BlogPostListItem extends Component {
   render() {
@@ -11,14 +12,16 @@ class BlogPostListItem extends Component {
       date,
       headerUrl,
       linkTarget,
-      image,
+      imageUrl,
       t,
     } = this.props
 
     let imagePart = '';
     let titlePart = '';
     
-    if(image) {
+    if(imageUrl) {
+      const image = ThumborService.imageUrl(imageUrl, {width: 450}, ['no_upscale()']);
+
       if(hasLink) {
         imagePart = ( 
           <a href={headerUrl} title={title} target={linkTarget}>

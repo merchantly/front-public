@@ -1,7 +1,9 @@
 {
   "blogPosts": {
-    "totalPages":3,
-    "currentPage":2,
+    "pagination": {
+      "totalPages":3,
+      "currentPage":2,
+    },
     "posts": [
       { 
         "hasLink":false,

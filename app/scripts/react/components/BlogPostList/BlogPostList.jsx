@@ -7,8 +7,10 @@ class BlogPostList extends Component {
     const {
       blogPosts: {
         posts,
-        totalPages,
-        currentPage
+        pagination: {
+          totalPages,
+          currentPage,
+        },
       }
     } = this.props;
 
@@ -26,8 +28,10 @@ class BlogPostList extends Component {
 
 BlogPostList.propTypes = {
   blogPosts: PropTypes.shape({
-    totalPages: PropTypes.number.isRequired,
-    currentPage: PropTypes.number.isRequired,
+    pagination: PropTypes.shape({
+      totalPages: PropTypes.number.isRequired,
+      currentPage: PropTypes.number.isRequired,
+    }),
     posts: PropTypes.arrayOf(
       PropTypes.shape(...BlogPostListItem.propTypes)
     ).isRequired,
