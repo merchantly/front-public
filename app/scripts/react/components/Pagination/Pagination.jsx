@@ -24,7 +24,7 @@ class Pagination extends Component {
       totalPages,
     } = this.props;
 
-    const showArrows = (totalPages <= WINDOW_SIZE)
+    const showArrows = (totalPages >= WINDOW_SIZE)
 
     return (
       <nav className="pagination">
