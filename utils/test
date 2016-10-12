@@ -1,1 +1,1 @@
-test -d ./dist && npm run dist
+mkdir dist && npm run dist
