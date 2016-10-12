@@ -32,7 +32,7 @@ const baseDependencies = {
   'fancybox': './app/bower_components/fancybox/source/jquery.fancybox',
   'fancybox.wannabe': './app/bower_components/fancybox-wannabe-fix/index',
   'accounting': './app/bower_components/accounting.js/accounting',
-  'lodash': './node_modules/lodash'
+  'lodash': './node_modules/lodash',
 };
 const staticDependencies = {
   'react-addons-test-utils': './node_modules/react-addons-test-utils',
@@ -81,7 +81,7 @@ gulp.task('[Static] Client scripts', () => {
     cache: {},
     packageCache: {},
     entries: config.static.client.entries,
-    extensions: config.static.client.extensions
+    extensions: config.static.client.extensions,
   });
 
   externalDependencies('static', bundler);
@@ -96,13 +96,13 @@ gulp.task('[Static] Client scripts', () => {
       .on('end', function() {
         bundleLogger.end(config.static.client.outputName);
       });
-  };
+  }
 
   if (global.isWatching) {
     bundler = watchify(bundler
       .transform('coffee-reactify')
       .transform('babelify', {
-        ignore: /(node_modules|bower_components)/
+        ignore: /(node_modules|bower_components)/,
       })
     );
     bundler.on('update', rebundle);
@@ -110,7 +110,7 @@ gulp.task('[Static] Client scripts', () => {
     bundler
       .transform('coffee-reactify')
       .transform('babelify', {
-        ignore: /(node_modules|bower_components)/
+        ignore: /(node_modules|bower_components)/,
       });
   }
 
@@ -122,7 +122,7 @@ gulp.task('[Static] Vendor scripts', (cb) => {
     cache: {},
     packageCache: {},
     entries: config.static.vendor.entries,
-    extensions: config.static.vendor.extensions
+    extensions: config.static.vendor.extensions,
   });
 
   requireDependencies('static', bundler);
@@ -164,13 +164,13 @@ gulp.task('[Static] Test scripts', () => {
       .on('end', function() {
         bundleLogger.end(config.static.test.outputName);
       });
-  };
+  }
 
   if (global.isWatching) {
     bundler = watchify(bundler
       .transform('coffee-reactify')
       .transform('babelify', {
-        ignore: /(node_modules|bower_components)/
+        ignore: /(node_modules|bower_components)/,
       })
     );
     bundler.on('update', rebundle);
@@ -178,7 +178,7 @@ gulp.task('[Static] Test scripts', () => {
     bundler
       .transform('coffee-reactify')
       .transform('babelify', {
-        ignore: /(node_modules|bower_components)/
+        ignore: /(node_modules|bower_components)/,
       });
   }
 
@@ -186,11 +186,11 @@ gulp.task('[Static] Test scripts', () => {
 });
 
 gulp.task('[Production] Scripts', () => {
-  var bundler = browserify({
+  const bundler = browserify({
     cache: {},
     packageCache: {},
     entries: config.production.bundle.entries,
-    extensions: config.production.bundle.extensions
+    extensions: config.production.bundle.extensions,
   });
 
   requireDependencies('production', bundler);
@@ -199,13 +199,13 @@ gulp.task('[Production] Scripts', () => {
 
   return bundler
     .transform('babelify', {
-      ignore: /(node_modules|bower_components)/
+      ignore: /(node_modules|bower_components)/,
     })
     .transform('coffee-reactify')
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.bundle.outputName))
-    //.pipe(streamify(uglify({ mangle: false })))
+    .pipe(streamify(uglify({ mangle: true })))
     .pipe(gulp.dest(config.production.bundle.dest))
     .on('end', function() {
       bundleLogger.end(config.production.bundle.outputName);
@@ -226,7 +226,7 @@ gulp.task('[Production] Components scripts', () => {
 
   return bundler
     .transform('babelify', {
-      ignore: /(node_modules|bower_components|prerender.bundle\.js)/
+      ignore: /(node_modules|bower_components|prerender.bundle\.js)/,
     })
     .transform('coffee-reactify')
     .bundle()
@@ -244,7 +244,7 @@ gulp.task('[Development] Components scripts', () => {
     cache: {},
     packageCache: {},
     entries: config.development.components.entries,
-    extensions: config.development.components.extensions
+    extensions: config.development.components.extensions,
   });
 
   requireDependencies('prerender', bundler);
@@ -253,7 +253,7 @@ gulp.task('[Development] Components scripts', () => {
 
   return bundler
     .transform('babelify', {
-      ignore: /(node_modules|bower_components|prerender.bundle\.js)/
+      ignore: /(node_modules|bower_components|prerender.bundle\.js)/,
     })
     .transform('coffee-reactify')
     .bundle()
