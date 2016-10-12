@@ -22,7 +22,8 @@ class CartListItem extends Component {
       changeAmount,
       item,
     } = this.props;
-    const floatVal = parseFloat(ev.target.value) || 0;
+    const floatVal = parseFloat(ev.target.value) ||
+      parseFloat(item.getIn(['good', 'weightOfPrice'], 0));
 
     changeAmount(item.get('id'), floatVal);
   }
@@ -74,6 +75,7 @@ class CartListItem extends Component {
               <div className="b-cart__item__quantity__input">
                 <input
                   defaultValue={amount}
+                  min={WEIGHT_STEP}
                   name={`cart[items][${item.get('id')}][weight]`}
                   onChange={this.changeWeight.bind(this)}
                   step={(WEIGHT_STEP).toString()}

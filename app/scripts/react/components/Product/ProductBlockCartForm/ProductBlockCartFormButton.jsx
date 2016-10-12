@@ -29,7 +29,7 @@ class ProductBlockCartFormButton extends Component {
     };
   }
   onChangeAmount(value) {
-    this.setState({amount: value});
+    this.setState({ amount: value });
   }
   addToBasket() {
     const { product } = this.props;
@@ -38,25 +38,23 @@ class ProductBlockCartFormButton extends Component {
   }
   renderQuanity() {
     const { product } = this.props;
-
-    var step, defaultValue, min;
+    let step, defaultValue, min;
 
     if (product.selling_by_weight) {
       step = 0.01;
       min = step;
       defaultValue = parseFloat(product.weight_of_price);
-    }else{
+    } else {
       step = 1;
       defaultValue = 1;
       min = step;
     }
     return (
       <InputNumberSpinner
-        value={this.state.amount}
+        min={min}
         onChange={this.onChangeAmount.bind(this)}
         step={step}
-        min={min}
-        defaultValue={defaultValue}
+        value={this.state.amount || defaultValue}
       />
     );
   }
@@ -70,8 +68,8 @@ class ProductBlockCartFormButton extends Component {
         {showQuantity && this.renderQuanity()}
         <button
           className="b-btn element--active"
-          onClick={this.addToBasket.bind(this)}
           disabled={itemState.isRequestProcessing}
+          onClick={this.addToBasket.bind(this)}
         >
           {text}
         </button>
@@ -81,10 +79,11 @@ class ProductBlockCartFormButton extends Component {
 }
 ProductBlockCartFormButton.propTypes = {
   product: PropTypes.object.isRequired,
-  showQuantity: PropTypes.bool
+  showQuantity: PropTypes.bool,
+  t: PropTypes.func,
 };
 ProductBlockCartFormButton.defaultProps = {
-  showQuantity: false
+  showQuantity: false,
 };
 
 export default ProductBlockCartFormButton;
