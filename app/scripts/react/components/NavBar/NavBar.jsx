@@ -50,7 +50,7 @@ NavBar.propTypes = {
   searchQuery: PropTypes.string,
   showClientBar: PropTypes.bool,
   vendor: schemas.vendor.isRequired,
-  t: PropTypes.func.isRequired,
+  t: PropTypes.func,
 };
 
 export default NavBar;

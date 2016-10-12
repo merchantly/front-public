@@ -11,5 +11,8 @@ export default function(WrappedComponent) {
       );
     }
   }
+
+  ReduxConnection.wrapped = WrappedComponent;
+
   return ReduxConnection;
 }

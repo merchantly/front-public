@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
