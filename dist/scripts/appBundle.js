@@ -30434,9 +30434,93 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
       value: value,
       enumerable: true
     });
+<<<<<<< HEAD
   }
   inherits(DiffEdit, Diff);
 
+  function DiffNew(path, value) {
+    DiffNew.super_.call(this, 'N', path);
+    Object.defineProperty(this, 'rhs', {
+      value: value,
+      enumerable: true
+    });
+  }
+  inherits(DiffNew, Diff);
+
+  function DiffDeleted(path, value) {
+    DiffDeleted.super_.call(this, 'D', path);
+    Object.defineProperty(this, 'lhs', {
+      value: value,
+      enumerable: true
+    });
+  }
+  inherits(DiffDeleted, Diff);
+
+  function DiffArray(path, index, item) {
+    DiffArray.super_.call(this, 'A', path);
+    Object.defineProperty(this, 'index', {
+      value: index,
+      enumerable: true
+    });
+    Object.defineProperty(this, 'item', {
+      value: item,
+      enumerable: true
+    });
+  }
+  inherits(DiffArray, Diff);
+
+  function arrayRemove(arr, from, to) {
+    var rest = arr.slice((to || from) + 1 || arr.length);
+    arr.length = from < 0 ? arr.length + from : from;
+    arr.push.apply(arr, rest);
+    return arr;
+  }
+
+  function realTypeOf(subject) {
+    var type = typeof subject;
+    if (type !== 'object') {
+      return type;
+    }
+
+    if (subject === Math) {
+      return 'math';
+    } else if (subject === null) {
+      return 'null';
+    } else if (Array.isArray(subject)) {
+      return 'array';
+    } else if (Object.prototype.toString.call(subject) === '[object Date]') {
+      return 'date';
+    } else if (typeof subject.toString !== 'undefined' && /^\/.*\//.test(subject.toString())) {
+      return 'regexp';
+    }
+    return 'object';
+=======
+>>>>>>> fix top banner z-index
+  }
+  inherits(DiffEdit, Diff);
+
+<<<<<<< HEAD
+  function deepDiff(lhs, rhs, changes, prefilter, path, key, stack) {
+    path = path || [];
+    var currentPath = path.slice(0);
+    if (typeof key !== 'undefined') {
+      if (prefilter) {
+        if (typeof(prefilter) === 'function' && prefilter(currentPath, key)) { return; }
+        else if (typeof(prefilter) === 'object') {
+          if (prefilter.prefilter && prefilter.prefilter(currentPath, key)) { return; }
+          if (prefilter.normalize) {
+            var alt = prefilter.normalize(currentPath, key, lhs, rhs);
+            if (alt) {
+              lhs = alt[0];
+              rhs = alt[1];
+            }
+          }
+        }
+      }
+      currentPath.push(key);
+    }
+
+=======
   function DiffNew(path, value) {
     DiffNew.super_.call(this, 'N', path);
     Object.defineProperty(this, 'rhs', {
@@ -30515,6 +30599,7 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
       currentPath.push(key);
     }
 
+>>>>>>> fix top banner z-index
     // Use string comparison for regexes
     if (realTypeOf(lhs) === 'regexp' && realTypeOf(rhs) === 'regexp') {
       lhs = lhs.toString();
