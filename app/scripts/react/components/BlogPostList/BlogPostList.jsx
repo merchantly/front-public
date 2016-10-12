@@ -19,7 +19,7 @@ class BlogPostList extends Component {
         <section className="posts">
           {posts.map((post, idx) => <BlogPostListItem {...post} key={`blog-post-list-item-${idx}`} />)}
 
-          <Pagination totalPages={totalPages} currentPage={currentPage} />
+          {(totalPages > 1) && (<Pagination totalPages={totalPages} currentPage={currentPage} />)}
         </section>
       </div>
     );

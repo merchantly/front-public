@@ -69,9 +69,9 @@ class BlogPostListItem extends Component {
 
 BlogPostListItem.propTypes = {
   hasLink: PropTypes.bool.isRequired,
-  linkTarget: PropTypes.string.Optional,
-  imageUrl: PropTypes.string.isOptional,
-  headerUrl: PropTypes.string.isOptional,
+  linkTarget: PropTypes.string,
+  imageUrl: PropTypes.string,
+  headerUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   publicUrl: PropTypes.string.isRequired,
