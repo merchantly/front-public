@@ -7,10 +7,7 @@ class BlogPostList extends Component {
     const {
       blogPosts: {
         posts,
-        pagination: {
-          totalPages,
-          currentPage,
-        },
+        pagination
       }
     } = this.props;
 
@@ -19,7 +16,7 @@ class BlogPostList extends Component {
         <section className="posts">
           {posts.map((post, idx) => <BlogPostListItem {...post} key={`blog-post-list-item-${idx}`} />)}
 
-          {(totalPages > 1) && (<Pagination totalPages={totalPages} currentPage={currentPage} />)}
+          {(pagination.totalPages > 1) && (<Pagination {...pagination} />)}
         </section>
       </div>
     );
@@ -31,6 +28,7 @@ BlogPostList.propTypes = {
     pagination: PropTypes.shape({
       totalPages: PropTypes.number.isRequired,
       currentPage: PropTypes.number.isRequired,
+      currentHref: PropTypes.string
     }),
     posts: PropTypes.arrayOf(
       PropTypes.shape(...BlogPostListItem.propTypes)
