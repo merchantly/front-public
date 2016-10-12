@@ -1,1 +1,1 @@
-mkdir dist && npm run dist
+mkdir -p dist && npm run dist
