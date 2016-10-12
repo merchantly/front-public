@@ -34,9 +34,9 @@ describe('[Component] Pagination', () => {
     ).to.have.length(0);
   });
 
-  it('should render `prev` and `first` links when not on the first page', () => {
+  it('should render `prev` and `first` links when not on the first page and totalPages >= WINDOW_SIZE', () => {
     expect(
-      render(<Pagination currentPage={2} totalPages={3} />)
+      render(<Pagination currentPage={2} totalPages={10} />)
       .find(`${prevPageSelector}, ${firstPageSelector}`)
     ).to.have.length(2);
   });
@@ -48,9 +48,9 @@ describe('[Component] Pagination', () => {
     ).to.have.length(0);
   });
 
-  it('should render `last` and `next` links when not on the last page', () => {
+  it('should render `last` and `next` links when not on the last page and totalPages >= WINDOW_SIZE', () => {
     expect(
-      render(<Pagination currentPage={1} totalPages={2} />)
+      render(<Pagination currentPage={1} totalPages={10} />)
       .find(`${nextPageSelector}, ${lastPageSelector}`)
     ).to.have.length(2);
   });
