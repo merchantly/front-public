@@ -9,6 +9,5 @@ const {
 
 export default arrayOf(shape({
   products: arrayOf(product).isRequired,
-  vendorCategoryPath: string.isRequired,
   title: string,
 }));
