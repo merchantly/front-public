@@ -1,10 +1,13 @@
-VERSION=`./utils/version`
-echo "Build and push version ${VERSION}"
+echo "Build and push"
+rm -rf node_modules && \
+rm -rf app/bower_components && \
 npm install && \
 ./node_modules/bower/bin/bower -v && \
 ./node_modules/bower/bin/bower install && \
-test -d ./dist && \
+mkdir -p ./dist && \
 npm run dist && \
-git add dist && \
-git commit -m "build dist ${VERSION}" && \
-git push
+git add -f dist && \
+git add package.json && \
+git add app/scripts/react/application.js && \
+git commit -m "build dist `./utils/version`" && \
+git push --force
