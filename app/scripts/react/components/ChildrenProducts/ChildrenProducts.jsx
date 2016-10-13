@@ -8,6 +8,7 @@ class ChildrenProducts extends Component {
     const {
       catalogFilterProps,
       childrenProducts,
+      i18n,
       showCartButton,
       showCatalogFilter,
       showQuantity,
@@ -21,16 +22,16 @@ class ChildrenProducts extends Component {
             {title}
           </h1>
         )}
-        {childrenProducts.map(({ products, title, vendorCategoryPath }, idx) => (
+        {childrenProducts.map(({ products, title }, idx) => (
           <ProductGroup
             catalogFilterProps={catalogFilterProps}
-            key={`product-group-${vendorCategoryPath}`}
+            i18n={i18n}
+            key={`product-group-${idx}`}
             products={{ items: products }}
             showCartButton={showCartButton}
             showCatalogFilter={showCatalogFilter && idx === 0}
             showQuantity={showQuantity}
             title={title}
-            vendorCategoryPath={vendorCategoryPath}
           />
         ))}
       </div>
@@ -41,6 +42,7 @@ class ChildrenProducts extends Component {
 ChildrenProducts.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
   childrenProducts: schemas.childrenProducts.isRequired,
+  i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,

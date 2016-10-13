@@ -12,6 +12,7 @@ class ChildrenProductsContainer extends Component {
 ChildrenProductsContainer.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
   childrenProducts: schemas.childrenProducts.isRequired,
+  i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,

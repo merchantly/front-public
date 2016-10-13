@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import ProductGroup from './ProductGroup';
 import ProductBlock from 'rc/Product/ProductBlock';
 import CatalogFilterContainer from 'rc/CatalogFilter';
-import provideTranslations from 'rc/HoC/provideTranslations';
 
 class ProductGroupContainer extends Component {
   render() {
@@ -21,9 +20,7 @@ ProductGroupContainer.propTypes = {
   showCartButton: PropTypes.bool.isRequired,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
-  t: PropTypes.func.isRequired,
   title: PropTypes.string,
-  vendorCategoryPath: PropTypes.string.isRequired,
 };
 
 ProductGroupContainer.defaultProps = {
@@ -36,4 +33,4 @@ ProductGroupContainer.defaultProps = {
   title: '',
 };
 
-export default provideTranslations(ProductGroupContainer);
+export default ProductGroupContainer;

@@ -13,9 +13,7 @@ class ProductGroup extends Component {
       showCartButton,
       showCatalogFilter,
       showQuantity,
-      t,
       title,
-      vendorCategoryPath,
     } = this.props;
 
     return (
@@ -23,9 +21,9 @@ class ProductGroup extends Component {
         {showCatalogFilter && <CatalogFilterContainer {...catalogFilterProps} />}
         {title && (
           <h2>
-            <a href={vendorCategoryPath}>
+            <span>
               {title}
-            </a>
+            </span>
           </h2>
         )}
         <div className="b-item-list__content">
@@ -39,11 +37,6 @@ class ProductGroup extends Component {
             />
           ))}
         </div>
-        <div className="b-page__content__inner">
-          <a href={vendorCategoryPath}>
-            {t('vendor.products.others')}
-          </a>
-        </div>
       </section>
     );
   }
@@ -56,9 +49,7 @@ ProductGroup.propTypes = {
   showCartButton: PropTypes.bool.isRequired,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
-  t: PropTypes.func.isRequired,
   title: PropTypes.string,
-  vendorCategoryPath: PropTypes.string.isRequired,
 };
 
 ProductGroup.defaultProps = {
