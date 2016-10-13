@@ -70,6 +70,13 @@ class CartContainer extends Component {
 }
 
 CartContainer.propTypes = {
+  // initial props
+  formAuthenticity: PropTypes.object,
+  initialCart: PropTypes.object,
+  initialPackages: PropTypes.array,
+  isTesting: PropTypes.bool,
+
+  // calculated props
   amounts: PropTypes.object.isRequired,
   cartDefaultUrl: PropTypes.string.isRequired,
   cartErrors: PropTypes.object.isRequired,
@@ -77,14 +84,10 @@ CartContainer.propTypes = {
   cartItems: PropTypes.object.isRequired,
   changeAmount: PropTypes.func.isRequired,
   couponCode: PropTypes.string,
-  initialCart: PropTypes.object,
-  initialPackages: PropTypes.array,
   fetchCart: PropTypes.func.isRequired,
   fetchPackages: PropTypes.func.isRequired,
-  formAuthenticity: PropTypes.object,
   initCart: PropTypes.func.isRequired,
   initPackages: PropTypes.func.isRequired,
-  isTesting: PropTypes.bool,
   packageItem: PropTypes.object.isRequired,
   packages: PropTypes.object.isRequired,
   packagesIsFetching: PropTypes.bool.isRequired,

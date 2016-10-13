@@ -4,9 +4,7 @@ import './resources/gon';
 import './render.libs';
 import './render.bundle';
 
-import cartEmpty from '../../test/fixtures/cart/empty';
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
-import cartWithPackage from '../../test/fixtures/cart/with-package';
 import orderSample from '../../test/fixtures/order/with-coupon';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';
 import wishlistSample from '../../test/fixtures/wishlist/synteticData';
@@ -42,9 +40,7 @@ import orderShowProps from 'test/fixtures/orderShow/sample.json';
 import clientSessionNewProps from 'test/fixtures/clientSessionNew/sample.json';
 import cabinetProps from 'test/fixtures/cabinet/sample.json'
 
-global.CartContainerEmpty = () => React.createElement(global.CartContainer, cartEmpty);
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
-global.CartContainerWithPackage = () => React.createElement(global.CartContainer, cartWithPackage);
 global.OrderContainerSample = () => React.createElement(global.OrderContainer, orderSample);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.WishlistContainerSample = () => React.createElement(global.WishlistContainer, wishlistSample);
@@ -82,6 +78,9 @@ global.OrderPaidSample = () => React.createElement(global.OrderPaid, orderPaidPr
 global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
 global.OrderShowSample = () => React.createElement(global.OrderShow, orderShowProps);
 global.ClientSessionNewSample = () => React.createElement(global.ClientSessionNew, clientSessionNewProps);
-global.CabinetSample = () =>  React.createElement(global.Cabinet, cabinetProps);
+global.CabinetSample = () => React.createElement(global.Cabinet, cabinetProps);
+
+global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
+global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
 
 import './lib/ReactRailsUJS';

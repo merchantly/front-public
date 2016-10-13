@@ -1,0 +1,656 @@
+{
+  "layoutProps": {
+    "flash": [],
+    "menuBottomProps": {
+      "leftItems": [
+        {
+          "id": 1,
+          "title": "Доставка",
+          "url": "/dostavka",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 2,
+          "title": "Оплата",
+          "url": "/oplata",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 3,
+          "title": "Контакты",
+          "url": "/contacts",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 4,
+          "title": "Новости",
+          "url": "/news",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }
+      ],
+      "leftActiveItems": [
+        {
+          "id": 2,
+          "url": "/oplata",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }
+      ],
+      "rightItems": [
+        {
+          "id": 10,
+          "title": "Facebook",
+          "url": "/facebook",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 11,
+          "title": "Хиты продаж",
+          "url": "/instagramm",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 12,
+          "title": "Вконтакте",
+          "url": "/vk",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }
+      ],
+      "rightActiveItems": [],
+      "currenciesIsoCodes": ["RUB"],
+      "currentCurrency": "RUB",
+      "locales": [
+        {
+          "lang": "ru",
+          "url": "/ru"
+        }
+      ],
+      "currentLocale": "ru",
+      "vendorLandingLink": "http://kiiosk.ru",
+      "isVendorLandingLinkDisabled": false
+    },
+    "menuTopProps": {
+      "items": [
+        {
+          "id": 348,
+          "title": "Новинки",
+          "url": "/categories/2209-novinki",
+          "products_count": 155,
+          "children": [],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }, {
+          "id": 753,
+          "title": "Хиты продаж",
+          "url": "/categories/2904-hity-prodazh",
+          "products_count": 29,
+          "children": [],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }, {
+          "id": 738,
+          "title": "Украшения",
+          "url": "/categories/2926-ukrasheniya",
+          "products_count": 925,
+          "children": [
+            {
+              "id": 6838,
+              "title": "Аксессуары",
+              "url": "/categories/6838-ukrasheniya-aksessuary",
+              "products_count": 6,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 4148,
+              "title": "Безразмерные кольца",
+              "url": "/categories/4148-ukrasheniya-bezrazmernye-koltsa",
+              "products_count": 41,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1585,
+              "title": "Браслеты",
+              "url": "/categories/1585-ukrasheniya-braslety",
+              "products_count": 119,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1763,
+              "title": "Браслеты-нитки",
+              "url": "/categories/1763-ukrasheniya-braslety-nitki",
+              "products_count": 65,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 4762,
+              "title": "Броши",
+              "url": "/categories/4762-ukrasheniya-broshi",
+              "products_count": 7,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1581,
+              "title": "Каффы",
+              "url": "/categories/1581-ukrasheniya-kaffy",
+              "products_count": 29,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1587,
+              "title": "Кольца",
+              "url": "/categories/1587-ukrasheniya-koltsa",
+              "products_count": 207,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 2486,
+              "title": "Кольца на фалангу",
+              "url": "/categories/2486-ukrasheniya-koltsa-na-falangu",
+              "products_count": 49,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 2678,
+              "title": "Моносережки",
+              "url": "/categories/2678-ukrasheniya-monoserezhki",
+              "products_count": 60,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1584,
+              "title": "Подвески",
+              "url": "/categories/1584-ukrasheniya-podveski",
+              "products_count": 78,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 1583,
+              "title": "Серьги",
+              "url": "/categories/1583-ukrasheniya-sergi",
+              "products_count": 177,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 6348,
+              "title": "Серьги-гвоздики",
+              "url": "/categories/6348-ukrasheniya-sergi-gvozdiki",
+              "products_count": 36,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }, {
+              "id": 6917,
+              "title": "Чокеры",
+              "url": "/categories/6917-ukrasheniya-chokery",
+              "products_count": 15,
+              "children": [],
+              "type": "MenuItemCategory",
+              "link_target": ""
+            }
+          ],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }, {
+          "id": 254,
+          "title": "Бренды",
+          "url": "#",
+          "products_count": 0,
+          "children": [
+            {
+              "id": 493,
+              "title": "ANNA.M.OBJECTS",
+              "url": "/entities/493-anna-m-objects",
+              "products_count": 73,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 8653,
+              "title": "ATJEWELER",
+              "url": "/entities/8653-atjeweler",
+              "products_count": 15,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 11853,
+              "title": "FIANCÈ",
+              "url": "/entities/11853-fianc",
+              "products_count": 8,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 452,
+              "title": "HIMÈRE",
+              "url": "/entities/452-him-re",
+              "products_count": 86,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 12092,
+              "title": "JULS JWLS",
+              "url": "/entities/12092-juls-jwls",
+              "products_count": 14,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 22973,
+              "title": "LACET",
+              "url": "/entities/22973-lacet",
+              "products_count": 4,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 646,
+              "title": "LENA BELASH",
+              "url": "/entities/646-lena-belash",
+              "products_count": 1,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 19458,
+              "title": "LIZA VINTOVA",
+              "url": "/entities/19458-liza-vintova",
+              "products_count": 6,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 454,
+              "title": "MAYA KOTELNITSKAYA",
+              "url": "/entities/454-maya-kotelnitskaya",
+              "products_count": 41,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 10032,
+              "title": "MMKXSS JEWELRY",
+              "url": "/entities/10032-mmkxss-jewelry",
+              "products_count": 25,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 27746,
+              "title": "MOONKA",
+              "url": "/entities/27746-moonka",
+              "products_count": 14,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 6648,
+              "title": "MOONSWOON",
+              "url": "/entities/6648-moonswoon",
+              "products_count": 20,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 1639,
+              "title": "MONQUÈR",
+              "url": "/entities/1639-monqu-r",
+              "products_count": 1,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 16302,
+              "title": "MOST",
+              "url": "/entities/16302-most",
+              "products_count": 9,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 10658,
+              "title": "MYTHOS",
+              "url": "/entities/10658-mythos",
+              "products_count": 27,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 495,
+              "title": "NATALIA BRYANTSEVA",
+              "url": "/entities/495-natalia-bryantseva",
+              "products_count": 33,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 19434,
+              "title": "NASTYA MAXIMOVA",
+              "url": "/entities/19434-nastya-maximova",
+              "products_count": 33,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 554,
+              "title": "NATASHA GELB",
+              "url": "/entities/554-natasha-gelb",
+              "products_count": 54,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 6750,
+              "title": "NATASHA DEA",
+              "url": "/entities/6750-natasha-dea",
+              "products_count": 8,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 488,
+              "title": "NO NAME",
+              "url": "/entities/488-no-name",
+              "products_count": 2,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 27732,
+              "title": "O-SH",
+              "url": "/entities/27732-o-sh",
+              "products_count": 4,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 459,
+              "title": "QARI QRIS",
+              "url": "/entities/459-qari-qris",
+              "products_count": 34,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 460,
+              "title": "RUE GEMBON",
+              "url": "/entities/460-rue-gembon",
+              "products_count": 1,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 1585,
+              "title": "SOLOMEINA NY\u0026LONDON",
+              "url": "/entities/1585-solomeina-ny-london",
+              "products_count": 46,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 10241,
+              "title": "STELLAR JEWELLERY",
+              "url": "/entities/10241-stellar-jewellery",
+              "products_count": 9,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 8205,
+              "title": "SUMEI",
+              "url": "/entities/8205-sumei",
+              "products_count": 18,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 462,
+              "title": "VACHE",
+              "url": "/entities/462-vache",
+              "products_count": 27,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 36331,
+              "title": "MADRE KUNST",
+              "url": "/entities/36331-madre-kunst",
+              "products_count": 7,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 31423,
+              "title": "YANA PASTEL JEWELRY",
+              "url": "/entities/31423-yana-pastel-jewelry",
+              "products_count": 17,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }, {
+              "id": 14444,
+              "title": "САХАРОК",
+              "url": "/entities/14444-saharok",
+              "products_count": 6,
+              "children": [],
+              "type": "MenuItemDictionaryEntity",
+              "link_target": ""
+            }
+          ],
+          "type": "MenuItemDictionary",
+          "link_target": ""
+        }, {
+          "id": 253,
+          "title": "Подарочные сертификаты",
+          "url": "/categories/2972-podarochnye-sertifikaty",
+          "products_count": 4,
+          "children": [],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }, {
+          "id": 1760,
+          "title": "На заказ",
+          "url": "/pages/797-na-zakaz",
+          "products_count": null,
+          "children": [],
+          "type": "MenuItemPage",
+          "link_target": ""
+        }, {
+          "id": 1179,
+          "title": "Скидки",
+          "url": "/categories/4877-skidki",
+          "products_count": 34,
+          "children": [],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }
+      ],
+      "activeItems": [
+        {
+          "id": 348,
+          "title": "Новинки",
+          "url": "/categories/2209-novinki",
+          "products_count": 155,
+          "children": [],
+          "type": "MenuItemCategory",
+          "link_target": ""
+        }
+      ]
+    },
+    "navBarProps": {
+      "clientBarProps": {
+        "cartUrl": "/cart",
+        "showFullBasketCount": false,
+        "hasCart": true
+      },
+      "logoProps": {
+        "logoUrl": "http://assets.kiiiosk.ru/uploads/vendor/logo/5/logo.svg",
+        "linkUrl": "http://google.ru",
+        "logoText": "Test",
+        "imageAlt": "Test2"
+      },
+      "vendor": {
+        "contacts": [
+          {
+            "type": "email",
+            "value": "saharokstore@gmail.com",
+            "link": "mailto:saharokstore@gmail.com"
+          }, {
+            "type": "phone",
+            "value": "+7 666 555 44 33",
+            "link": "tel:+76665554433"
+          }, {
+            "type": "text",
+            "value": "plain text contact"
+          }
+        ],
+        "title": "Магазин мебели ручной работы",
+        "search_products_path": "/products/search"
+      },
+      "searchQuery": "query"
+    },
+    "publishShopPath": "/publish/shop",
+    "scrollToTopProps": {},
+    "showInstagramContainer": true,
+    "showMenuTop": false,
+    "showTopBanner": true,
+    "topBannerProps": {
+      "content": "Бесплатная доставка от 10 000 рублей / Срочная доставка по Москве в течение 3 часов",
+      "url": ""
+    },
+    "userbarProps": {
+      "authUrl": "/auth/url",
+      "categoryPageUrl": "/category/page",
+      "pageType": "",
+      "productPageUrl": "/product/page"
+    },
+    "vendor": {
+      "custom_append_html": "<p>custom append html</p>",
+      "custom_after_content_html": "<p>custom after content html</p>"
+    },
+    "w1ptEnabled": ""
+  },
+  "initialCart": {
+    "id": 12888853,
+    "total_price": {
+      "cents": 15000,
+      "currency_iso_code": "RUB"
+    },
+    "total_with_delivery_price": {
+      "cents": 38000,
+      "currency_iso_code": "RUB"
+    },
+    "products_with_package_price": {
+      "cents": 15000,
+      "currency_iso_code": "RUB"
+    },
+    "products_price": {
+      "cents": 0,
+      "currency_iso_code": "RUB"
+    },
+    "delivery_price": {
+      "cents": 23000,
+      "currency_iso_code": "RUB"
+    },
+    "package_price": {
+      "cents": 15000,
+      "currency_iso_code": "RUB"
+    },
+    "items": [],
+    "package_item": null,
+    "items_amount": 0,
+    "coupon_code": "",
+    "default_url": "http://saharok.stage.kiiiosk.ru/cart",
+    "errors": {
+      "not_empty": ["Корзина пуста"]
+    },
+    "updated_at": "2016-09-16T13:00:19.023+03:00",
+    "created_at": "2016-09-07T17:38:05.153+03:00",
+    "session_id": "8f6d1be5a77168c4ee523632eac265b2"
+  },
+  "initialPackages": [
+    {
+      "id": 43869,
+      "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQzODY5",
+      "category_ids": [
+        4763, 1562
+      ],
+      "title": "Подарочная упаковка САХАРОК",
+      "updated_at": "2016-08-20T17:21:19.084+03:00",
+      "union_position": 670,
+      "price": {
+        "cents": 15000,
+        "currency_iso_code": "RUB"
+      },
+      "is_published": true,
+      "is_manual_published": true,
+      "is_sold": false,
+      "has_ordering_goods": true,
+      "total_items_quantity": 17,
+      "quantity_unit": {
+        "id": "pcs",
+        "short": "шт."
+      },
+      "operator_state": {
+        "css_class": "__published",
+        "visible": true,
+        "title": "OK"
+      },
+      "article": null,
+      "ident": "#43869",
+      "ms_code": null,
+      "description": "Упаковка из плотной фактурной бумаги, приятной на ощупь, перевязанная атласной лентой.",
+      "is_archived": false,
+      "edit_path": "/operator/products/43869/edit",
+      "image": {
+        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
+        "product_id": 43869,
+        "vendor_id": 68,
+        "id": 51342
+      },
+      "images": [
+        {
+          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
+          "product_id": 43869,
+          "vendor_id": 68,
+          "id": 51342
+        }, {
+          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/61777/26849fea-2d79-4fa3-bb47-1fdc4d18751f.jpg",
+          "product_id": 43869,
+          "vendor_id": 68,
+          "id": 61777
+        }
+      ]
+    }
+  ]
+}

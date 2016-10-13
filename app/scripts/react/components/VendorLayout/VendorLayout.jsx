@@ -45,12 +45,14 @@ class VendorLayout extends Component {
             </div>
           )}
           {showTopBanner && <TopBanner {...topBannerProps} />}
-          <div className="b-page__content__inner b-page__content__inner-navbar">
+          <div className="b-page__content__inner b-page__content__inner_navbar">
             <NavBar {...navBarProps} t={t} />
             {showMenuTop && <MenuTop {...menuTopProps} />}
           </div>
           <LayoutMessages flash={flash} />
-          {children}
+          <div className="b-page__content__inner b-page__content__inner_content">
+            {children}
+          </div>
           <Footer
             customAfterContentHtml={vendor.custom_after_content_html}
             i18n={i18n}
@@ -68,7 +70,7 @@ class VendorLayout extends Component {
 }
 
 VendorLayout.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.element,
   flash: LayoutMessages.propTypes.flash,
   i18n: PropTypes.object,
   menuBottomProps: PropTypes.shape(...MenuBottom.wrapped.propTypes).isRequired,
@@ -79,7 +81,7 @@ VendorLayout.propTypes = {
   showInstagramContainer: PropTypes.bool,
   showMenuTop: PropTypes.bool,
   showTopBanner: PropTypes.bool,
-  t: PropTypes.func.isRequired,
+  t: PropTypes.func,
   topBannerProps: PropTypes.shape(...TopBanner.propTypes),
   userbarProps: PropTypes.shape(...UserbarContainer.wrapped.propTypes).isRequired,
   vendor: schemas.vendor.isRequired,

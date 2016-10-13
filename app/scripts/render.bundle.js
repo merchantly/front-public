@@ -69,4 +69,6 @@ global.Payment = require('./react/components/Payment');
 global.ClientSessionNew = require('rc/ClientSessionNew');
 global.Cabinet = require('./react/components/Cabinet');
 
+global.CartPage = require('rc/Cart/CartPage');
+
 import './react/application';

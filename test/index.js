@@ -20,8 +20,11 @@ import './react/components/Product/ProductCard/ProductCardDetails.test';
 import './react/components/Product/ProductCard/ProductCardGallerySlider.test';
 import './react/components/Product/ProductProperties/index.test';
 import './react/components/Product/ProductProperties/utils.test';
+
 import './react/components/Cart/CartCoupon.test';
 import './react/components/Cart/index.test';
+import './react/components/Cart/CartPage';
+
 import './react/components/Order/index.test';
 import './react/components/Wishlist/index.test';
 

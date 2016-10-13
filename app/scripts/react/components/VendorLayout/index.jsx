@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import VendorLayout from './VendorLayout';
+import provideTranslations from 'rc/HoC/provideTranslations';
 
 class VendorLayoutContainer extends Component {
   render() {
@@ -7,12 +8,6 @@ class VendorLayoutContainer extends Component {
   }
 }
 
-VendorLayoutContainer.propTypes = {
+VendorLayoutContainer.propTypes = VendorLayout.propTypes;
 
-};
-
-VendorLayoutContainer.defaultProps = {
-
-};
-
-export default VendorLayoutContainer;
+export default provideTranslations(VendorLayoutContainer);
