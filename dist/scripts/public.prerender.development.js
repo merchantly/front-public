@@ -730,9 +730,7 @@ var BlogPostList = function (_Component) {
     value: function render() {
       var _props$blogPosts = this.props.blogPosts;
       var posts = _props$blogPosts.posts;
-      var _props$blogPosts$pagi = _props$blogPosts.pagination;
-      var totalPages = _props$blogPosts$pagi.totalPages;
-      var currentPage = _props$blogPosts$pagi.currentPage;
+      var pagination = _props$blogPosts.pagination;
 
 
       return _react2.default.createElement(
@@ -744,7 +742,7 @@ var BlogPostList = function (_Component) {
           posts.map(function (post, idx) {
             return _react2.default.createElement(_BlogPostListItem2.default, (0, _extends3.default)({}, post, { key: 'blog-post-list-item-' + idx }));
           }),
-          _react2.default.createElement(_Pagination2.default, { totalPages: totalPages, currentPage: currentPage })
+          pagination.totalPages > 1 && _react2.default.createElement(_Pagination2.default, pagination)
         )
       );
     }
@@ -756,7 +754,8 @@ BlogPostList.propTypes = {
   blogPosts: _react.PropTypes.shape({
     pagination: _react.PropTypes.shape({
       totalPages: _react.PropTypes.number.isRequired,
-      currentPage: _react.PropTypes.number.isRequired
+      currentPage: _react.PropTypes.number.isRequired,
+      currentHref: _react.PropTypes.string
     }),
     posts: _react.PropTypes.arrayOf(_react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_BlogPostListItem2.default.propTypes))).isRequired
   })
@@ -896,9 +895,9 @@ var BlogPostListItem = function (_Component) {
 
 BlogPostListItem.propTypes = {
   hasLink: _react.PropTypes.bool.isRequired,
-  linkTarget: _react.PropTypes.string.Optional,
-  imageUrl: _react.PropTypes.string.isOptional,
-  headerUrl: _react.PropTypes.string.isOptional,
+  linkTarget: _react.PropTypes.string,
+  imageUrl: _react.PropTypes.string,
+  headerUrl: _react.PropTypes.string,
   title: _react.PropTypes.string.isRequired,
   text: _react.PropTypes.string.isRequired,
   publicUrl: _react.PropTypes.string.isRequired,
@@ -10719,7 +10718,7 @@ var Pagination = function (_Component) {
       var totalPages = _props.totalPages;
 
 
-      var showArrows = totalPages <= WINDOW_SIZE;
+      var showArrows = totalPages >= WINDOW_SIZE;
 
       return _react2.default.createElement(
         'nav',
