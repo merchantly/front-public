@@ -1,6 +1,5 @@
 app/bower_components/
 build
-/dist/
 /secret
 /rails
 tags

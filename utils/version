@@ -1,0 +1,2 @@
+npm version | grep Public | awk -F\' '{print $2}'   
+# node -e "console.log(require('./package.json').version)"
