@@ -1,0 +1,10 @@
+VERSION=`./utils/version`
+echo "Build and push version ${VERSION}"
+npm install && \
+./node_modules/bower/bin/bower -v && \
+./node_modules/bower/bin/bower install && \
+test -d ./dist && \
+npm run dist && \
+git add dist && \
+git commit -m "build dist ${VERSION}" && \
+git push
