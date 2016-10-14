@@ -51,7 +51,9 @@ class BlogPostListItem extends Component {
 
     return (
       <article className="post post--short">
-        {imagePart}
+        <div className="post__image">
+          {imagePart}
+        </div>
         <div className="post__content">
           {titlePart}
           <div className="post__text b-text" dangerouslySetInnerHTML={{__html: text}} />
