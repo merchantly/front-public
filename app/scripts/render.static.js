@@ -82,5 +82,6 @@ global.CabinetSample = () => React.createElement(global.Cabinet, cabinetProps);
 
 global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
 global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
+global.CategoriesShowChildrenPageSample = () => React.createElement(global.CategoriesShowChildrenPage, require('test/fixtures/categoriesShowChildren/page-sample.json'));
 
 import './lib/ReactRailsUJS';

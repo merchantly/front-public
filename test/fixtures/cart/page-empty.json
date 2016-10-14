@@ -552,7 +552,20 @@
       "authUrl": "/auth/url",
       "categoryPageUrl": "/category/page",
       "pageType": "",
-      "productPageUrl": "/product/page"
+      "productPageUrl": "/product/page",
+      "operatorText": "",
+      "operatorUrl": "/operator/url",
+      "hasOperator": false,
+      "designMode": "close",
+      "designText": "",
+      "hasDesign": false,
+      "cabinetText": "",
+      "cabinetUrl": "/vendor/cabinet",
+      "hasCabinet": false,
+      "wishlistText": "",
+      "wishlistUrl": "/wishlist/url",
+      "hasWishlist": true,
+      "wishlistItemsCount": 1
     },
     "vendor": {
       "custom_append_html": "<p>custom append html</p>",

@@ -1,7 +1,8 @@
 import classNames from 'classnames';
-import Ps from 'perfect-scrollbar';
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
+
+let Ps;
 
 export default class Scroller extends Component {
   static propTypes = {
@@ -15,6 +16,7 @@ export default class Scroller extends Component {
     this.updateScroller = this.updateScroller.bind(this);
   }
   componentDidMount() {
+    Ps = require('perfect-scrollbar'); // FIXME: replace with something that doesn't crash during SSR
     Ps.initialize(findDOMNode(this), { suppressScrollX: true });
 
     if (this.props.updateEvent) {

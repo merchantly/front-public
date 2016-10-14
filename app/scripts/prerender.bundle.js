@@ -65,3 +65,4 @@ ClientSessionNew = require('./react/components/ClientSessionNew');
 Cabinet = require('./react/components/Cabinet');
 
 CartPage = require('./react/components/Cart/CartPage');
+CategoriesShowChildrenPage = require('./react/components/CategoriesShowChildren/CategoriesShowChildrenPage');

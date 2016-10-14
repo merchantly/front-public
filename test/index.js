@@ -23,7 +23,7 @@ import './react/components/Product/ProductProperties/utils.test';
 
 import './react/components/Cart/CartCoupon.test';
 import './react/components/Cart/index.test';
-import './react/components/Cart/CartPage';
+import './react/components/Cart/CartPage.test';
 
 import './react/components/Order/index.test';
 import './react/components/Wishlist/index.test';
@@ -44,8 +44,12 @@ import './react/components/ProductList/index.test';
 import './react/components/ProductGroup/index.test';
 import './react/components/ChildrenProducts/index.test';
 import './react/components/Pagination/index.test';
+
 import './react/components/CategoriesShow/index.test';
+
 import './react/components/CategoriesShowChildren/index.test';
+import './react/components/CategoriesShowChildren/CategoriesShowChildrenPage.test';
+
 import './react/components/common/PostProducts.test';
 import './react/components/DictionaryEntitiesShow/index.test';
 import './react/components/ProductArchived/index.test';

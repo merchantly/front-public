@@ -70,5 +70,6 @@ global.ClientSessionNew = require('rc/ClientSessionNew');
 global.Cabinet = require('./react/components/Cabinet');
 
 global.CartPage = require('rc/Cart/CartPage');
+global.CategoriesShowChildrenPage = require('rc/CategoriesShowChildren/CategoriesShowChildrenPage');
 
 import './react/application';
