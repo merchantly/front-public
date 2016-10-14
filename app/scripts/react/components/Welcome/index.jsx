@@ -12,6 +12,7 @@ class WelcomeContainer extends Component {
 
 WelcomeContainer.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
+  i18n: PropTypes.object,
   isFilterDirty: PropTypes.bool.isRequired,
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool.isRequired,
