@@ -73,5 +73,6 @@ global.CartPage = require('rc/Cart/CartPage');
 global.CategoriesShowChildrenPage = require('rc/CategoriesShowChildren/CategoriesShowChildrenPage');
 global.CategoriesShowPage = require('rc/CategoriesShow/CategoriesShowPage');
 global.DictionaryEntitiesShowPage = require('rc/DictionaryEntitiesShow/DictionaryEntitiesShowPage');
+global.ProductArchivedPage = require('rc/ProductArchived/ProductArchivedPage');
 
 import './react/application';

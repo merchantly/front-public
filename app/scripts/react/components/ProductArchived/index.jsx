@@ -10,6 +10,7 @@ class ProductArchivedContainer extends Component {
 }
 
 ProductArchivedContainer.propTypes = {
+  i18n: PropTypes.object,
   product: schemas.product.isRequired,
   searchProductsPath: PropTypes.string.isRequired,
   t: PropTypes.func.isRequired,

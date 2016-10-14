@@ -57,6 +57,8 @@ import './react/components/DictionaryEntitiesShow/index.test';
 import './react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage';
 
 import './react/components/ProductArchived/index.test';
+import './react/components/ProductArchived/ProductArchivedPage.test';
+
 import './react/components/ProductSearch/index.test';
 import './react/components/WelcomeChildren/index.test';
 import './react/components/Welcome/index.test';
