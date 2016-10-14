@@ -12,6 +12,7 @@ class ProductSearchContainer extends Component {
 
 ProductSearchContainer.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
+  i18n: PropTypes.object,
   products: schemas.productList.isRequired,
   showCatalogFilter: PropTypes.bool.isRequired,
   showCartButton: PropTypes.bool.isRequired,

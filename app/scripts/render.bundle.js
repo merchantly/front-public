@@ -74,5 +74,6 @@ global.CategoriesShowChildrenPage = require('rc/CategoriesShowChildren/Categorie
 global.CategoriesShowPage = require('rc/CategoriesShow/CategoriesShowPage');
 global.DictionaryEntitiesShowPage = require('rc/DictionaryEntitiesShow/DictionaryEntitiesShowPage');
 global.ProductArchivedPage = require('rc/ProductArchived/ProductArchivedPage');
+global.ProductSearchPage = require('rc/ProductSearch/ProductSearchPage');
 
 import './react/application';

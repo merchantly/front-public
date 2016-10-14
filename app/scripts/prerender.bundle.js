@@ -69,3 +69,4 @@ CategoriesShowChildrenPage = require('./react/components/CategoriesShowChildren/
 CategoriesShowPage = require('./react/components/CategoriesShow/CategoriesShowPage');
 DictionaryEntitiesShowPage = require('./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage');
 ProductArchivedPage = require('./react/components/ProductArchived/ProductArchivedPage');
+ProductSearchPage = require('./react/components/ProductSearch/ProductSearchPage');

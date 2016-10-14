@@ -81,5 +81,6 @@ global.CategoriesShowChildrenPageSample = () => React.createElement(global.Categ
 global.CategoriesShowPageSample = () => React.createElement(global.CategoriesShowPage, require('test/fixtures/categoriesShow/page-sample.json'));
 global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
+global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
 
 import './lib/ReactRailsUJS';
