@@ -27,8 +27,19 @@ class Userbar extends Component {
   }
   render() {
     const {
-      cabinetText, cabinetUrl, designText, hasCabinet, hasDesign, hasOperator, hasWishlist,
-      openDesignSettingsPopup, operatorText, operatorUrl, wishlistItemsCount, wishlistText, wishlistUrl,
+      cabinetText,
+      cabinetUrl,
+      designText,
+      hasCabinet,
+      hasDesign,
+      hasOperator,
+      hasWishlist,
+      openDesignSettingsPopup,
+      operatorText,
+      operatorUrl,
+      wishlistItemsCount,
+      wishlistText,
+      wishlistUrl,
     } = this.props;
 
     return (
@@ -75,6 +86,7 @@ Userbar.propTypes = {
   openDesignSettingsPopup: PropTypes.func.isRequired,
   operatorText: PropTypes.string,
   operatorUrl: PropTypes.string,
+  wishlistItemsCount: PropTypes.number,
   wishlistText: PropTypes.string,
   wishlistUrl: PropTypes.string,
 };

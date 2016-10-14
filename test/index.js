@@ -20,8 +20,11 @@ import './react/components/Product/ProductCard/ProductCardDetails.test';
 import './react/components/Product/ProductCard/ProductCardGallerySlider.test';
 import './react/components/Product/ProductProperties/index.test';
 import './react/components/Product/ProductProperties/utils.test';
+
 import './react/components/Cart/CartCoupon.test';
 import './react/components/Cart/index.test';
+import './react/components/Cart/CartPage.test';
+
 import './react/components/Order/index.test';
 import './react/components/Wishlist/index.test';
 
@@ -41,14 +44,30 @@ import './react/components/ProductList/index.test';
 import './react/components/ProductGroup/index.test';
 import './react/components/ChildrenProducts/index.test';
 import './react/components/Pagination/index.test';
+
 import './react/components/CategoriesShow/index.test';
+import './react/components/CategoriesShow/CategoriesShowPage.test';
+
 import './react/components/CategoriesShowChildren/index.test';
+import './react/components/CategoriesShowChildren/CategoriesShowChildrenPage.test';
+
 import './react/components/common/PostProducts.test';
+
 import './react/components/DictionaryEntitiesShow/index.test';
+import './react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage';
+
 import './react/components/ProductArchived/index.test';
+import './react/components/ProductArchived/ProductArchivedPage.test';
+
 import './react/components/ProductSearch/index.test';
+import './react/components/ProductSearch/ProductSearchPage.test';
+
 import './react/components/WelcomeChildren/index.test';
+import './react/components/WelcomeChildren/WelcomeChildrenPage.test';
+
 import './react/components/Welcome/index.test';
+import './react/components/Welcome/WelcomePage.test';
+
 import './react/components/OrderCancelled/index.test';
 import './react/components/OrderCreated/index.test';
 import './react/components/OrderPaid/index.test';

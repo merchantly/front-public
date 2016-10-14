@@ -3,18 +3,7 @@
   %head
     +include 'app/haml/shared/_head.haml'
   %body.b-page.b-page_topbanner-enabled.b-page_layout-slider
-    .b-page__content
-      .top-banner(ks-topbanner)
-        .top-banner__close(ks-topbanner-close)
-        %a.top-banner__link{href: '#'}
-          .top-banner__content Только до 23 сентября! Акция! Бесплатная доставка от 500 рублей
-      .b-page__content__inner.b-page__content__inner_navbar
-        +include 'app/haml/react/_navbar1.haml'
-
-      %div{data: {react-class: 'WelcomeChildrenSample'}}
-
-      .b-page__content__inner.b-page__content__inner_footer
-        +include 'app/haml/shared/_footer.haml'
+    %div{data: {react-class: 'WelcomeChildrenPageSample'}}
 
     %script{src: '../scripts/vendor.js'}
     %script{src: '../scripts/client.js'}

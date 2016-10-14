@@ -63,3 +63,12 @@ OrderShow = require('./react/components/OrderShow');
 Payment = require('./react/components/Payment');
 ClientSessionNew = require('./react/components/ClientSessionNew');
 Cabinet = require('./react/components/Cabinet');
+
+CartPage = require('./react/components/Cart/CartPage');
+CategoriesShowChildrenPage = require('./react/components/CategoriesShowChildren/CategoriesShowChildrenPage');
+CategoriesShowPage = require('./react/components/CategoriesShow/CategoriesShowPage');
+DictionaryEntitiesShowPage = require('./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage');
+ProductArchivedPage = require('./react/components/ProductArchived/ProductArchivedPage');
+ProductSearchPage = require('./react/components/ProductSearch/ProductSearchPage');
+WelcomeChildrenPage = require('./react/components/WelcomeChildren/WelcomeChildrenPage');
+WelcomePage = require('./react/components/Welcome/WelcomePage');

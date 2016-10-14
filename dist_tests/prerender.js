@@ -37,4 +37,13 @@ t(global.OrderPayment, require('../test/fixtures/orderPayment/sample.json'));
 t(global.OrderShow, require('../test/fixtures/orderShow/sample.json'));
 t(global.ClientSessionNew, require('../test/fixtures/clientSessionNew/sample.json'));
 
+t(global.CartPage, require('../test/fixtures/cart/page-with-package.json'));
+t(global.CategoriesShowChildrenPage, require('../test/fixtures/categoriesShowChildren/page-sample.json'));
+t(global.CategoriesShowPage, require('../test/fixtures/categoriesShow/page-sample.json'));
+t(global.DictionaryEntitiesShowPage, require('../test/fixtures/dictionaryEntitiesShow/page-sample.json'));
+t(global.ProductArchivedPage, require('../test/fixtures/productArchived/page-sample.json'));
+t(global.ProductSearchPage, require('../test/fixtures/productSearch/page-sample.json'));
+t(global.WelcomeChildrenPage, require('../test/fixtures/welcomeChildren/page-sample.json'));
+t(global.WelcomePage, require('../test/fixtures/welcome/page-sample.json'));
+
 console.log('Prerendering public components test finished successfully');

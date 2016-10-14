@@ -11,13 +11,17 @@ class CategoriesShowChildrenContainer extends Component {
 
 CategoriesShowChildrenContainer.propTypes = {
   childrenProducts: ChildrenProducts.propTypes.childrenProducts,
-  t: PropTypes.func.isRequired,
+  showCartButton: PropTypes.bool,
+  showQuantity: PropTypes.bool,
+  t: PropTypes.func,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
 };
 
 CategoriesShowChildrenContainer.defaultProps = {
   childrenProducts: [],
+  showCartButton: false,
+  showQuantity: false,
   vendorRootPath: '',
 };
 

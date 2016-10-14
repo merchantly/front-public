@@ -5,13 +5,22 @@ class CategoriesShowChildren extends Component {
   render() {
     const {
       childrenProducts,
+      showCartButton,
+      showQuantity,
       t,
       title,
       vendorRootPath,
     } = this.props;
 
     return childrenProducts.length
-      ? <ChildrenProducts childrenProducts={childrenProducts} title={title} />
+      ? (
+        <ChildrenProducts
+          childrenProducts={childrenProducts}
+          showCartButton={showCartButton}
+          showQuantity={showQuantity}
+          title={title}
+        />
+      )
       : (
         <div className="b-text b-text_center">
           <p>
@@ -27,6 +36,8 @@ class CategoriesShowChildren extends Component {
 
 CategoriesShowChildren.propTypes = {
   childrenProducts: PropTypes.array.isRequired,
+  showCartButton: PropTypes.bool,
+  showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,

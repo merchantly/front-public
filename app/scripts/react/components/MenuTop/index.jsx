@@ -13,16 +13,16 @@ class MenuTop extends Component {
       items,
       t,
       vendorCabinetPath,
-      isMenuTopDesktopSticky
+      isMenuTopDesktopSticky,
     } = this.props;
 
     return (
       <div>
         <Sticky
-          enabled={isMenuTopDesktopSticky}
-          top=".top-banner"
-          innerZ={500}
           activeClass="sticky-active"
+          enabled={isMenuTopDesktopSticky}
+          innerZ={500}
+          top=".top-banner"
         >
           <MenuTopDesktop
             activeItems={activeItems}
@@ -46,11 +46,11 @@ MenuTop.propTypes = {
   items: PropTypes.arrayOf(schemas.menuItem).isRequired,
   t: PropTypes.func.isRequired,
   vendorCabinetPath: PropTypes.string,
-  isMenuTopDesktopSticky: PropTypes.bool
+  isMenuTopDesktopSticky: PropTypes.bool,
 };
 
 MenuTop.defaultProps = {
-  isMenuTopDesktopSticky: false
+  isMenuTopDesktopSticky: false,
 };
 
 export default provideTranslations(MenuTop);
