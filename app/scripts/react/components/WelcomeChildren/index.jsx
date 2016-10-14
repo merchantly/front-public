@@ -10,7 +10,7 @@ class WelcomeChildrenContainer extends Component {
 
 WelcomeChildrenContainer.propTypes = {
   childrenProducts: schemas.childrenProducts,
-  showWelcomeSlider: PropTypes.bool.isRequired,
+  showWelcomeSlider: PropTypes.bool,
   vendor: schemas.vendor,
 };
 

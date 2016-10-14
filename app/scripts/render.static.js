@@ -23,11 +23,9 @@ import productGroupSample from 'test/fixtures/productGroup/sample.json';
 import childrenProductsSample from 'test/fixtures/childrenProducts/sample.json';
 import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.json';
 import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/sample.json';
-import productArchivedSample from 'test/fixtures/productArchived/sample.json';
 import blogPostListSample from 'test/fixtures/blogPostList/sample.json';
 import productSearchSample from 'test/fixtures/productSearch/sample.json';
 import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
-import welcomeChildrenSample from 'test/fixtures/welcomeChildren/sample.json';
 import welcomeSample from 'test/fixtures/welcome/sample.json';
 import lookbookSample from 'test/fixtures/lookbook/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
@@ -63,7 +61,6 @@ global.DictionaryEntitiesShowEmpty = () => React.createElement(global.Dictionary
 global.BlogPostListSample = () => React.createElement(global.BlogPostList, blogPostListSample);
 global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
 global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
-global.WelcomeChildrenSample = () => React.createElement(global.WelcomeChildren, welcomeChildrenSample);
 global.WelcomeSample = () => React.createElement(global.Welcome, welcomeSample);
 global.LookbookSample = () => React.createElement(global.Lookbook, lookbookSample);
 global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
@@ -82,5 +79,6 @@ global.CategoriesShowPageSample = () => React.createElement(global.CategoriesSho
 global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
 global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
+global.WelcomeChildrenPageSample = () => React.createElement(global.WelcomeChildrenPage, require('test/fixtures/welcomeChildren/page-sample.json'));
 
 import './lib/ReactRailsUJS';

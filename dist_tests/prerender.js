@@ -43,5 +43,6 @@ t(global.CategoriesShowPage, require('../test/fixtures/categoriesShow/page-sampl
 t(global.DictionaryEntitiesShowPage, require('../test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 t(global.ProductArchivedPage, require('../test/fixtures/productArchived/page-sample.json'));
 t(global.ProductSearchPage, require('../test/fixtures/productSearch/page-sample.json'));
+t(global.WelcomeChildrenPage, require('../test/fixtures/welcomeChildren/page-sample.json'));
 
 console.log('Prerendering public components test finished successfully');
