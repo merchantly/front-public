@@ -66,3 +66,4 @@ Cabinet = require('./react/components/Cabinet');
 
 CartPage = require('./react/components/Cart/CartPage');
 CategoriesShowChildrenPage = require('./react/components/CategoriesShowChildren/CategoriesShowChildrenPage');
+CategoriesShowPage = require('./react/components/categoriesShow/CategoriesShowPage');

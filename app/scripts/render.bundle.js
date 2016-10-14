@@ -71,5 +71,6 @@ global.Cabinet = require('./react/components/Cabinet');
 
 global.CartPage = require('rc/Cart/CartPage');
 global.CategoriesShowChildrenPage = require('rc/CategoriesShowChildren/CategoriesShowChildrenPage');
+global.CategoriesShowPage = require('rc/CategoriesShow/CategoriesShowPage');
 
 import './react/application';
