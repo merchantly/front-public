@@ -72,3 +72,4 @@ ProductArchivedPage = require('./react/components/ProductArchived/ProductArchive
 ProductSearchPage = require('./react/components/ProductSearch/ProductSearchPage');
 WelcomeChildrenPage = require('./react/components/WelcomeChildren/WelcomeChildrenPage');
 WelcomePage = require('./react/components/Welcome/WelcomePage');
+ClientSessionNewPage = require('./react/components/ClientSessionNew/ClientSessionNewPage');

@@ -81,5 +81,6 @@ global.ProductArchivedPageSample = () => React.createElement(global.ProductArchi
 global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
 global.WelcomeChildrenPageSample = () => React.createElement(global.WelcomeChildrenPage, require('test/fixtures/welcomeChildren/page-sample.json'));
 global.WelcomePageSample = () => React.createElement(global.WelcomePage, require('test/fixtures/welcome/page-sample.json'));
+global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessionNewPage, require('test/fixtures/clientSessionNew/page-sample.json'));
 
 import './lib/ReactRailsUJS';

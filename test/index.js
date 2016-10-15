@@ -73,4 +73,6 @@ import './react/components/OrderCreated/index.test';
 import './react/components/OrderPaid/index.test';
 import './react/components/OrderPayment/index.test';
 import './react/components/OrderShow/index.test';
+
 import './react/components/ClientSessionNew/index.test';
+import './react/components/ClientSessionNew/ClientSessionNewPage.test';
