@@ -69,6 +69,8 @@ import './react/components/Welcome/index.test';
 import './react/components/Welcome/WelcomePage.test';
 
 import './react/components/OrderCancelled/index.test';
+import './react/components/OrderCancelled/OrderCancelledPage.test';
+
 import './react/components/OrderCreated/index.test';
 import './react/components/OrderPaid/index.test';
 import './react/components/OrderPayment/index.test';

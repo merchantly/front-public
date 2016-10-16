@@ -78,5 +78,6 @@ global.ProductSearchPage = require('rc/ProductSearch/ProductSearchPage');
 global.WelcomeChildrenPage = require('rc/WelcomeChildren/WelcomeChildrenPage');
 global.WelcomePage = require('rc/Welcome/WelcomePage');
 global.ClientSessionNewPage = require('rc/ClientSessionNew/ClientSessionNewPage');
+global.OrderCancelledPage = require('rc/OrderCancelled/OrderCancelledPage');
 
 import './react/application';

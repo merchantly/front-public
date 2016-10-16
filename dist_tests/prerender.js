@@ -46,5 +46,6 @@ t(global.ProductSearchPage, require('../test/fixtures/productSearch/page-sample.
 t(global.WelcomeChildrenPage, require('../test/fixtures/welcomeChildren/page-sample.json'));
 t(global.WelcomePage, require('../test/fixtures/welcome/page-sample.json'));
 t(global.ClientSessionNewPage, require('../test/fixtures/clientSessionNew/page-sample.json'));
+t(global.OrderCancelledPage, require('../test/fixtures/orderCancelled/page-sample.json'));
 
 console.log('Prerendering public components test finished successfully');
