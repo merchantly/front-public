@@ -26,12 +26,14 @@ import './react/components/Cart/index.test';
 import './react/components/Cart/CartPage.test';
 
 import './react/components/Order/index.test';
+import './react/components/Order/OrderCoupon.test';
+import './react/components/Order/OrderPage.test';
+
 import './react/components/Wishlist/index.test';
 
 import './react/components/Clientbar/index.test';
 import './react/components/Product/ProductBlock/index.test';
 import './react/components/TopBanner/index.test';
-import './react/components/Order/OrderCoupon.test';
 import './react/components/InstagramContainer/index.test';
 import './react/components/ScrollToTop/index.test';
 import './react/components/ImageSlider/index.test';

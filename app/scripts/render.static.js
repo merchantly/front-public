@@ -29,16 +29,12 @@ import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
 import welcomeSample from 'test/fixtures/welcome/sample.json';
 import lookbookSample from 'test/fixtures/lookbook/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
-import orderCancelledProps from 'test/fixtures/orderCancelled/sample.json';
-import orderCreatedProps from 'test/fixtures/orderCreated/sample.json';
 import orderPaidProps from 'test/fixtures/orderPaid/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
 import orderShowProps from 'test/fixtures/orderShow/sample.json';
-import clientSessionNewProps from 'test/fixtures/clientSessionNew/sample.json';
 import cabinetProps from 'test/fixtures/cabinet/sample.json';
 
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
-global.OrderContainerSample = () => React.createElement(global.OrderContainer, orderSample);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.WishlistContainerSample = () => React.createElement(global.WishlistContainer, wishlistSample);
 global.ProductCardSample = () => React.createElement(global.ProductCard, productSample);
@@ -81,5 +77,6 @@ global.WelcomePageSample = () => React.createElement(global.WelcomePage, require
 global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessionNewPage, require('test/fixtures/clientSessionNew/page-sample.json'));
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
+global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
 
 import './lib/ReactRailsUJS';
