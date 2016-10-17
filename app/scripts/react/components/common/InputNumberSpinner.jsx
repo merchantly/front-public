@@ -15,10 +15,12 @@ export default class InputNumberSpinner extends Component {
     max: 999,
     value: 1,
   }
-  handleIncrement() {
+  handleIncrement(e) {
+    e.preventDefault();
     this.setValue(parseFloat(this.refs.input.value) + this.props.step);
   }
-  handleDecrement() {
+  handleDecrement(e) {
+    e.preventDefault();
     this.setValue(parseFloat(this.refs.input.value) - this.props.step);
   }
   setValue(value) {
