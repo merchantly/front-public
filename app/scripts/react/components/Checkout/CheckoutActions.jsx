@@ -17,7 +17,11 @@ class CheckoutActions extends Component {
     }
   }
   render() {
-    const { backUrl, publicOffer, t } = this.props;
+    const {
+      backUrl,
+      publicOffer,
+      t,
+    } = this.props;
 
     return (
       <div className="b-cart__action">
@@ -38,6 +42,7 @@ class CheckoutActions extends Component {
           <div className="b-cart__action__col-submit">
             <input
               className="b-btn b-cart__action__next"
+              data-disable-with={t('vendor.button.disable_with.waiting')}
               type="submit"
               value={t('vendor.order.next')}
             />
@@ -51,6 +56,7 @@ class CheckoutActions extends Component {
 CheckoutActions.propTypes = {
   backUrl: PropTypes.string,
   publicOffer: schemas.checkoutPublicOffer,
+  t: PropTypes.func.isRequired,
 };
 
 export default CheckoutActions;
