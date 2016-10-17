@@ -90,3 +90,5 @@ import './react/components/OrderShow/OrderShowPage.test';
 
 import './react/components/ClientSessionNew/index.test';
 import './react/components/ClientSessionNew/ClientSessionNewPage.test';
+
+import './react/components/VendorPaymentLayout/index.test';
