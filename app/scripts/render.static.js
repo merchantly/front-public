@@ -5,10 +5,7 @@ import './render.libs';
 import './render.bundle';
 
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
-import orderSample from '../../test/fixtures/order/with-coupon';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';
-import wishlistSample from '../../test/fixtures/wishlist/synteticData';
-import productSample from '../../test/fixtures/products/22983';
 import productMultiSelect from '../../test/fixtures/products/multi-select';
 import productWeight from '../../test/fixtures/products/weight';
 import productDoesntSell from '../../test/fixtures/products/3917';
@@ -29,15 +26,11 @@ import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
 import welcomeSample from 'test/fixtures/welcome/sample.json';
 import lookbookSample from 'test/fixtures/lookbook/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
-import orderPaidProps from 'test/fixtures/orderPaid/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
-import orderShowProps from 'test/fixtures/orderShow/sample.json';
 import cabinetProps from 'test/fixtures/cabinet/sample.json';
 
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
-global.WishlistContainerSample = () => React.createElement(global.WishlistContainer, wishlistSample);
-global.ProductCardSample = () => React.createElement(global.ProductCard, productSample);
 global.ProductCardMultiSelect = () => React.createElement(global.ProductCard, productMultiSelect);
 global.ProductCardDoesntSell = () => React.createElement(global.ProductCard, productDoesntSell);
 global.ProductCardWeight = () => React.createElement(global.ProductCard, productWeight);
@@ -78,5 +71,7 @@ global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPag
 global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
 global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
 global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));
+global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
+global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
 
 import './lib/ReactRailsUJS';

@@ -78,3 +78,5 @@ OrderCreatedPage = require('./react/components/OrderCreated/OrderCreatedPage');
 OrderPage = require('./react/components/Order/OrderPage');
 OrderPaidPage = require('./react/components/OrderPaid/OrderPaidPage');
 OrderShowPage = require('./react/components/OrderShow/OrderShowPage');
+ProductCardPage = require('./react/components/Product/ProductCard/ProductCardPage');
+WishlistPage = require('./react/components/Wishlist/WishlistPage');

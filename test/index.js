@@ -15,7 +15,10 @@ import './react/components/Notice/Notice.test';
 import './react/components/DesignSettings/DesignSettings.test';
 import './react/components/Product/ProductCart/ProductCart.test';
 import './react/components/Product/ProductCard/ProductCardContainer.test';
+
 import './react/components/Product/ProductCard/ProductCard.test';
+import './react/components/Product/ProductCard/ProductCardPage.test';
+
 import './react/components/Product/ProductCard/ProductCardDetails.test';
 import './react/components/Product/ProductCard/ProductCardGallerySlider.test';
 import './react/components/Product/ProductProperties/index.test';
@@ -30,6 +33,7 @@ import './react/components/Order/OrderCoupon.test';
 import './react/components/Order/OrderPage.test';
 
 import './react/components/Wishlist/index.test';
+import './react/components/Wishlist/WishlistPage.test';
 
 import './react/components/Clientbar/index.test';
 import './react/components/Product/ProductBlock/index.test';
@@ -74,11 +78,13 @@ import './react/components/OrderCancelled/index.test';
 import './react/components/OrderCancelled/OrderCancelledPage.test';
 
 import './react/components/OrderCreated/index.test';
+import './react/components/OrderCreated/OrderCreatedPage.test';
 
 import './react/components/OrderPaid/index.test';
 import './react/components/OrderPaid/OrderPage.test';
 
 import './react/components/OrderPayment/index.test';
+
 import './react/components/OrderShow/index.test';
 import './react/components/OrderShow/OrderShowPage.test';
 

@@ -12,6 +12,7 @@ import ProductCardTitle from './ProductCardTitle';
 import ProductCardVideo from './ProductCardVideo';
 import ReactDisqusThread from 'react-disqus-thread';
 import { DISQUS_IDENTIFIER } from './ProductCard.constants';
+import * as schemas from 'r/schemas';
 
 class ProductCard extends Component {
   state = {
@@ -31,25 +32,35 @@ class ProductCard extends Component {
     this.setState({ good, product });
   }
   renderDisqus(product) {
-    var disqus_identifier = DISQUS_IDENTIFIER + product.id;
+    let disqus_identifier = DISQUS_IDENTIFIER + product.id;
 
     if (this.props.hasComments && this.props.disqusUrl && this.props.disqusUrl.trim()) {
       return (
-        <ReactDisqusThread shortname={this.props.disqusUrl} identifier={disqus_identifier} />
+        <ReactDisqusThread
+          identifier={disqus_identifier}
+          shortname={this.props.disqusUrl}
+        />
       );
     }else{
       return null;
     }
   }
   render() {
-    const { similarProducts, otherProducts, t } = this.props;
-    const { good, product } = this.state;
+    const {
+      similarProducts,
+      otherProducts,
+      t,
+    } = this.props;
+    const {
+      good,
+      product,
+    } = this.state;
 
     return (
       <div className="mrch-ProductCard cleanslate">
         <div
           className="b-page__content__inner b-page__content__inner_content h-product"
-          itemScope={true}
+          itemScope
           itemType="http://schema.org/Product"
         >
           <div className="b-item-full">
@@ -74,7 +85,11 @@ class ProductCard extends Component {
                   <ProductCardBadges product={product} t={t} />
                 </div>
                 <div className="b-item-full__price p-price">
-                  <ProductPrices good={good} product={product} t={t} />
+                  <ProductPrices
+                    good={good} 
+                    product={product}
+                    t={t}
+                  />
                 </div>
                 <ProductCardSchema product={product} />
                 <div className="b-item-full__form">
@@ -85,7 +100,11 @@ class ProductCard extends Component {
                     t={t}
                   />
                 </div>
-                <ProductCardDetails t={t} product={product} otherProducts={otherProducts} />
+                <ProductCardDetails
+                  otherProducts={otherProducts}
+                  product={product}
+                  t={t}
+                />
               </div>
               <ProductCardVideo product={product} />
             </div>
@@ -100,23 +119,24 @@ class ProductCard extends Component {
 
 ProductCard.propTypes = {
   addWishlistUrl: PropTypes.string,
-  formAuthenticity: PropTypes.object,
+  formAuthenticity: schemas.formAuthenticity,
   hasWishlist: PropTypes.bool,
   hasComments: PropTypes.bool,
   disqusUrl: PropTypes.string,
   isWishlisted: PropTypes.bool,
-  product: PropTypes.object,
-  similarProducts: PropTypes.array,
-  otherProducts: PropTypes.array,
+  product: schemas.product,
+  similarProducts: PropTypes.arrayOf(schemas.product),
+  otherProducts: PropTypes.arrayOf(schemas.product),
   wishlistUrl: PropTypes.string,
+  t: PropTypes.func.isRequired,
 };
 ProductCard.defaultProps = {
   formAuthenticity: {},
   hasComments: false,
-  disqusUrl: "",
+  disqusUrl: '',
   product: {},
   similarProducts: [],
-  otherProducts: []
+  otherProducts: [],
 };
 
 export default provideTranslations(ProductCard);

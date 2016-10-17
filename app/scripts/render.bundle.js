@@ -83,5 +83,7 @@ global.OrderCreatedPage = require('rc/OrderCreated/OrderCreatedPage');
 global.OrderPage = require('rc/Order/OrderPage');
 global.OrderPaidPage = require('rc/OrderPaid/OrderPaidPage');
 global.OrderShowPage = require('rc/OrderShow/OrderShowPage');
+global.ProductCardPage = require('rc/Product/ProductCard/ProductCardPage');
+global.WishlistPage = require('rc/Wishlist/WishlistPage');
 
 import './react/application';
