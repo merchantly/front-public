@@ -542,7 +542,7 @@
     "publishShopPath": "/publish/shop",
     "scrollToTopProps": {},
     "showInstagramContainer": true,
-    "showMenuTop": true,
+    "showMenuTop": false,
     "showTopBanner": true,
     "topBannerProps": {
       "content": "Бесплатная доставка от 10 000 рублей / Срочная доставка по Москве в течение 3 часов",

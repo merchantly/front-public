@@ -74,9 +74,13 @@ import './react/components/OrderCancelled/index.test';
 import './react/components/OrderCancelled/OrderCancelledPage.test';
 
 import './react/components/OrderCreated/index.test';
+
 import './react/components/OrderPaid/index.test';
+import './react/components/OrderPaid/OrderPage.test';
+
 import './react/components/OrderPayment/index.test';
 import './react/components/OrderShow/index.test';
+import './react/components/OrderShow/OrderShowPage.test';
 
 import './react/components/ClientSessionNew/index.test';
 import './react/components/ClientSessionNew/ClientSessionNewPage.test';

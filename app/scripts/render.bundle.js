@@ -82,5 +82,6 @@ global.OrderCancelledPage = require('rc/OrderCancelled/OrderCancelledPage');
 global.OrderCreatedPage = require('rc/OrderCreated/OrderCreatedPage');
 global.OrderPage = require('rc/Order/OrderPage');
 global.OrderPaidPage = require('rc/OrderPaid/OrderPaidPage');
+global.OrderShowPage = require('rc/OrderShow/OrderShowPage');
 
 import './react/application';

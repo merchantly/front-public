@@ -50,5 +50,6 @@ t(global.OrderCancelledPage, require('../test/fixtures/orderCancelled/page-sampl
 t(global.OrderCreatedPage, require('../test/fixtures/orderCreated/page-sample.json'));
 t(global.OrderPage, require('../test/fixtures/order/page-with-coupon.json'));
 t(global.OrderPaidPage, require('../test/fixtures/orderPaid/page-sample.json'));
+t(global.OrderShowPage, require('../test/fixtures/orderShow/page-sample.json'));
 
 console.log('Prerendering public components test finished successfully');

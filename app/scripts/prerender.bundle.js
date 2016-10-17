@@ -77,3 +77,4 @@ OrderCancelledPage = require('./react/components/OrderCancelled/OrderCancelledPa
 OrderCreatedPage = require('./react/components/OrderCreated/OrderCreatedPage');
 OrderPage = require('./react/components/Order/OrderPage');
 OrderPaidPage = require('./react/components/OrderPaid/OrderPaidPage');
+OrderShowPage = require('./react/components/OrderShow/OrderShowPage');
