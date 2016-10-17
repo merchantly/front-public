@@ -84,6 +84,7 @@ import './react/components/OrderPaid/index.test';
 import './react/components/OrderPaid/OrderPage.test';
 
 import './react/components/OrderPayment/index.test';
+import './react/components/OrderPayment/OrderPaymentPage.test';
 
 import './react/components/OrderShow/index.test';
 import './react/components/OrderShow/OrderShowPage.test';
