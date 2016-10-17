@@ -1,9 +1,9 @@
 import React from 'react';
-import { camelizeKeys } from 'humps';
 import BlogPost from './BlogPost';
+import provideTranslations from 'rc/HoC/provideTranslations';
 
 function BlogPostContainer(props) {
-  return <BlogPost {...camelizeKeys(props)} />;
+  return <BlogPost {...props} />;
 }
 
-export default BlogPostContainer;
+export default provideTranslations(BlogPostContainer);

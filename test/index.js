@@ -96,3 +96,6 @@ import './react/components/VendorPaymentLayout/index.test';
 
 import './react/components/BlogPostList/BlogPostList.test';
 import './react/components/BlogPostList/BlogPostListPage.test';
+
+import './react/components/BlogPost/index.test';
+import './react/components/BlogPost/BlogPostPage.test';

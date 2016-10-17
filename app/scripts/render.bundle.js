@@ -87,5 +87,6 @@ global.ProductCardPage = require('rc/Product/ProductCard/ProductCardPage');
 global.WishlistPage = require('rc/Wishlist/WishlistPage');
 global.OrderPaymentPage = require('rc/OrderPayment/OrderPaymentPage');
 global.BlogPostListPage = require('rc/BlogPostList/BlogPostListPage');
+global.BlogPostPage = require('rc/BlogPost/BlogPostPage');
 
 import './react/application';

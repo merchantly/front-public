@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import provideTranslations from '../HoC/provideTranslations';
 
 class BlogPost extends Component {
   render() {
@@ -9,7 +8,7 @@ class BlogPost extends Component {
       text,
       prev,
       next,
-      t
+      t,
     } = this.props;
 
     return (
@@ -46,12 +45,13 @@ BlogPost.propTypes = {
   text: PropTypes.string.isRequired,
   prev: PropTypes.shape({
     url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
   }).isOptional,
   next: PropTypes.shape({
     url: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired    
-  }).isOptional
+    title: PropTypes.string.isRequired,
+  }).isOptional,
+  t: PropTypes.func.isRequired,
 };
 
-export default provideTranslations(BlogPost);
+export default BlogPost;
