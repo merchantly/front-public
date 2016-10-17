@@ -76,3 +76,4 @@ ClientSessionNewPage = require('./react/components/ClientSessionNew/ClientSessio
 OrderCancelledPage = require('./react/components/OrderCancelled/OrderCancelledPage');
 OrderCreatedPage = require('./react/components/OrderCreated/OrderCreatedPage');
 OrderPage = require('./react/components/Order/OrderPage');
+OrderPaidPage = require('./react/components/OrderPaid/OrderPaidPage');

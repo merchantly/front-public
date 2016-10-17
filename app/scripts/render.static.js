@@ -60,7 +60,6 @@ global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, prod
 global.WelcomeSample = () => React.createElement(global.Welcome, welcomeSample);
 global.LookbookSample = () => React.createElement(global.Lookbook, lookbookSample);
 global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
-global.OrderPaidSample = () => React.createElement(global.OrderPaid, orderPaidProps);
 global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
 global.OrderShowSample = () => React.createElement(global.OrderShow, orderShowProps);
 global.CabinetSample = () => React.createElement(global.Cabinet, cabinetProps);
@@ -78,5 +77,6 @@ global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessi
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
 global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
+global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
 
 import './lib/ReactRailsUJS';

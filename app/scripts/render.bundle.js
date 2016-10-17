@@ -81,5 +81,6 @@ global.ClientSessionNewPage = require('rc/ClientSessionNew/ClientSessionNewPage'
 global.OrderCancelledPage = require('rc/OrderCancelled/OrderCancelledPage');
 global.OrderCreatedPage = require('rc/OrderCreated/OrderCreatedPage');
 global.OrderPage = require('rc/Order/OrderPage');
+global.OrderPaidPage = require('rc/OrderPaid/OrderPaidPage');
 
 import './react/application';
