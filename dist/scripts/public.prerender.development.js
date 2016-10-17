@@ -1030,7 +1030,11 @@ var BlogPostListItem = function (_Component) {
       return _react2.default.createElement(
         'article',
         { className: 'post post--short' },
-        imagePart,
+        _react2.default.createElement(
+          'div',
+          { className: 'post__image' },
+          imagePart
+        ),
         _react2.default.createElement(
           'div',
           { className: 'post__content' },
@@ -4820,6 +4824,7 @@ var CheckoutActions = function (_Component) {
             { className: 'b-cart__action__col-submit' },
             _react2.default.createElement('input', {
               className: 'b-btn b-cart__action__next',
+              'data-disable-with': t('vendor.button.disable_with.waiting'),
               type: 'submit',
               value: t('vendor.order.next')
             })
@@ -4833,7 +4838,8 @@ var CheckoutActions = function (_Component) {
 
 CheckoutActions.propTypes = {
   backUrl: _react.PropTypes.string,
-  publicOffer: schemas.checkoutPublicOffer
+  publicOffer: schemas.checkoutPublicOffer,
+  t: _react.PropTypes.func.isRequired
 };
 
 exports.default = CheckoutActions;
@@ -21403,7 +21409,8 @@ var CartButtonController = function (_Component) {
 
       var itemsCount = this.getItemsCount();
 
-      var total_price = (0, _money.humanizedMoneyWithCurrency)(this.state.basket.total_with_delivery_price, '');
+      // выводим total_price, т.е. без учета стоимости доставки
+      var total_price = (0, _money.humanizedMoneyWithCurrency)(this.state.basket.total_price, '');
 
       return _react2.default.createElement(_CartButton2.default, {
         text: t('vendor.cart.basket_button', { total_price: total_price }),
@@ -23663,12 +23670,14 @@ var InputNumberSpinner = (_temp = _class = function (_Component) {
 
   (0, _createClass3.default)(InputNumberSpinner, [{
     key: 'handleIncrement',
-    value: function handleIncrement() {
+    value: function handleIncrement(e) {
+      e.preventDefault();
       this.setValue(parseFloat(this.refs.input.value) + this.props.step);
     }
   }, {
     key: 'handleDecrement',
-    value: function handleDecrement() {
+    value: function handleDecrement(e) {
+      e.preventDefault();
       this.setValue(parseFloat(this.refs.input.value) - this.props.step);
     }
   }, {
