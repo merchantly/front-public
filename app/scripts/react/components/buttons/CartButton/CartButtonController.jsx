@@ -50,7 +50,8 @@ class CartButtonController extends Component {
     const { url, t } = this.props;
     const itemsCount = this.getItemsCount();
 
-    const total_price = humanizedMoneyWithCurrency(this.state.basket.total_with_delivery_price, '');
+    // выводим total_price, т.е. без учета стоимости доставки
+    const total_price = humanizedMoneyWithCurrency(this.state.basket.total_price, '');
 
     return (
       <CartButton
