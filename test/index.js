@@ -93,3 +93,6 @@ import './react/components/ClientSessionNew/index.test';
 import './react/components/ClientSessionNew/ClientSessionNewPage.test';
 
 import './react/components/VendorPaymentLayout/index.test';
+
+import './react/components/BlogPostList/BlogPostList.test';
+import './react/components/BlogPostList/BlogPostListPage.test';

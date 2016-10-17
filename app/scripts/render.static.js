@@ -20,7 +20,6 @@ import productGroupSample from 'test/fixtures/productGroup/sample.json';
 import childrenProductsSample from 'test/fixtures/childrenProducts/sample.json';
 import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.json';
 import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/sample.json';
-import blogPostListSample from 'test/fixtures/blogPostList/sample.json';
 import productSearchSample from 'test/fixtures/productSearch/sample.json';
 import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
 import welcomeSample from 'test/fixtures/welcome/sample.json';
@@ -47,7 +46,6 @@ global.CategoriesShowEmpty = () => React.createElement(global.CategoriesShow, ca
 global.CategoriesShowFilterDirty = () => React.createElement(global.CategoriesShow, { ...categoriesShowEmpty, isFilterDirty: true });
 global.CategoriesShowChildrenEmpty = () => React.createElement(global.CategoriesShowChildren, { childrenProducts: [], vendorRootPath: '/vendor/root/path' });
 global.DictionaryEntitiesShowEmpty = () => React.createElement(global.DictionaryEntitiesShow, { ...dictionaryEntitiesShowSample, products: { items: [], pagination: {} }});
-global.BlogPostListSample = () => React.createElement(global.BlogPostList, blogPostListSample);
 global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
 global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
 global.WelcomeSample = () => React.createElement(global.Welcome, welcomeSample);
@@ -74,5 +72,6 @@ global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, req
 global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
 global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
 global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPage, require('test/fixtures/orderPayment/page-sample.json'));
+global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
 
 import './lib/ReactRailsUJS';

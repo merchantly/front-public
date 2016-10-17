@@ -54,5 +54,6 @@ t(global.OrderShowPage, require('../test/fixtures/orderShow/page-sample.json'));
 t(global.ProductCardPage, require('../test/fixtures/products/page-sample.json'));
 t(global.WishlistPage, require('../test/fixtures/wishlist/page-sample.json'));
 t(global.OrderPaymentPage, require('../test/fixtures/orderPayment/page-sample.json'));
+t(global.BlogPostListPage, require('../test/fixtures/blogPostList/page-sample.json'));
 
 console.log('Prerendering public components test finished successfully');
