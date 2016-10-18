@@ -63,5 +63,6 @@ t(global.BlogPostPage, require('../test/fixtures/blogPost/page-sample.json'));
 t(global.CabinetPage, require('../test/fixtures/cabinet/page-sample.json'));
 t(global.DictionaryPage, { layoutProps, title: 'title' });
 t(global.LookbookPage, Object.assign({}, { layoutProps }, require('../test/fixtures/lookbook/sample.json')));
+t(global.PaymentPage, { layoutProps, state: 'success', vendorUrl: '/v' });
 
 console.log('Prerendering public components test finished successfully');

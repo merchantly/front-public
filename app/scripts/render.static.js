@@ -23,13 +23,14 @@ import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/s
 import productSearchSample from 'test/fixtures/productSearch/sample.json';
 import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
 import welcomeSample from 'test/fixtures/welcome/sample.json';
-import lookbookSample from 'test/fixtures/lookbook/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
-import cabinetProps from 'test/fixtures/cabinet/sample.json';
 import {
   layoutProps,
 } from 'test/fixtures/vendorLayout/sample.json';
+import {
+  PAYMENT_SUCCESS,
+} from 'rc/Payment';
 
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
@@ -52,10 +53,8 @@ global.DictionaryEntitiesShowEmpty = () => React.createElement(global.Dictionary
 global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
 global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
 global.WelcomeSample = () => React.createElement(global.Welcome, welcomeSample);
-global.LookbookSample = () => React.createElement(global.Lookbook, lookbookSample);
 global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
 global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
-global.CabinetSample = () => React.createElement(global.Cabinet, cabinetProps);
 
 global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
 global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
@@ -80,5 +79,6 @@ global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, requi
 global.CabinetPageSample = () => React.createElement(global.CabinetPage, require('test/fixtures/cabinet/page-sample.json'));
 global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
 global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
+global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 
 import './lib/ReactRailsUJS';

@@ -108,3 +108,6 @@ import './react/components/Dictionary/DictionaryPage.title';
 
 import './react/components/Lookbook/index.test';
 import './react/components/Lookbook/LookbookPage.test';
+
+import './react/components/Payment/index.test';
+import './react/components/Payment/PaymentPage.test';

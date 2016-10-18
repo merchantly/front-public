@@ -60,7 +60,7 @@ OrderCreated = require('./react/components/OrderCreated');
 OrderPaid = require('./react/components/OrderPaid');
 OrderPayment = require('./react/components/OrderPayment');
 OrderShow = require('./react/components/OrderShow');
-Payment = require('./react/components/Payment');
+Payment = require('./react/components/Payment').default;
 ClientSessionNew = require('./react/components/ClientSessionNew');
 Cabinet = require('./react/components/Cabinet');
 
@@ -86,3 +86,4 @@ BlogPostPage = require('./react/components/BlogPost/BlogPostPage');
 CabinetPage = require('./react/components/Cabinet/CabinetPage');
 DictionaryPage = require('./react/components/Dictionary/DictionaryPage');
 LookbookPage = require('./react/components/Lookbook/LookbookPage');
+PaymentPage = require('./react/components/Payment/PaymentPage');
