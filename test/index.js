@@ -105,3 +105,6 @@ import './react/components/Cabinet/CabinetPage.test';
 
 import './react/components/Dictionary/index.test';
 import './react/components/Dictionary/DictionaryPage.title';
+
+import './react/components/Lookbook/index.test';
+import './react/components/Lookbook/LookbookPage.test';

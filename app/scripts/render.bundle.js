@@ -90,5 +90,6 @@ global.BlogPostListPage = require('rc/BlogPostList/BlogPostListPage');
 global.BlogPostPage = require('rc/BlogPost/BlogPostPage');
 global.CabinetPage = require('rc/Cabinet/CabinetPage');
 global.DictionaryPage = require('rc/Dictionary/DictionaryPage');
+global.LookbookPage = require('rc/Lookbook/LookbookPage');
 
 import './react/application';

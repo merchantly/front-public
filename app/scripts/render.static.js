@@ -79,5 +79,6 @@ global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPag
 global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, require('test/fixtures/blogPost/page-sample.json'));
 global.CabinetPageSample = () => React.createElement(global.CabinetPage, require('test/fixtures/cabinet/page-sample.json'));
 global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
+global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
 
 import './lib/ReactRailsUJS';

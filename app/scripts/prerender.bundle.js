@@ -85,3 +85,4 @@ BlogPostListPage = require('./react/components/BlogPostList/BlogPostListPage');
 BlogPostPage = require('./react/components/BlogPost/BlogPostPage');
 CabinetPage = require('./react/components/Cabinet/CabinetPage');
 DictionaryPage = require('./react/components/Dictionary/DictionaryPage');
+LookbookPage = require('./react/components/Lookbook/LookbookPage');
