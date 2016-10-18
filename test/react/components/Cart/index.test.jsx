@@ -5,6 +5,7 @@ import { render } from 'enzyme';
 import t from 'test/mocks/t';
 import emptyCart from 'test/fixtures/cart/empty';
 import weightOfPriceCart from 'test/fixtures/cart/weight-of-price';
+import selectPackageCart from 'test/fixtures/cart/select-package.json';
 import CartContainer from 'rc/Cart';
 import { createStore, combineReducers } from 'redux';
 import * as reducers from 'r/reducers';
@@ -29,8 +30,30 @@ describe('[Component] CartContainer', () => {
     const itemPrice = Object.assign({}, item.good.actual_price, { cents: itemSum });
 
     expect(render(<CartContainer {...props} />)
-      .find('.b-cart__item__price > span > span').eq(0) 
+      .find('.b-cart__item__price > span > span').eq(0)
       .text()
     ).to.equal(humanizedMoney(itemPrice));
+  });
+
+  it('should show error and disable submit button when minimal price present and is larger than cart sum', () => {
+    const props = { ...selectPackageCart, isTesting: true };
+
+    expect(render(<CartContainer {...props} />)
+      .find('input.b-cart__action__submit')
+      .attr('disabled')
+    ).to.exist;
+
+    expect(render(<CartContainer {...props} />)
+      .find('.help-block #cart-error-minimal-price')
+    ).to.have.length(1);
+  });
+
+  it('should not disable submit button when there is no any minimal price', () => {
+    const props = { ...selectPackageCart, isTesting: true, minimalPrice: null };
+
+    expect(render(<CartContainer {...props} />)
+      .find('input.b-cart__action__submit')
+      .attr('disabled')
+    ).not.to.exist;
   });
 });

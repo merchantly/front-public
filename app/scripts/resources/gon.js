@@ -70,6 +70,7 @@ global.gon = {
         'errors': {
           'cart': {
             'empty': 'В корзине нет товаров',
+            'minimal_price': 'Минимальная стоимость заказа составляет %{minimal_price} %{currency}',
           },
           'coupon': {
             'not_found': 'Несуществующий промокод %{code}',
@@ -286,9 +287,6 @@ global.gon = {
           'nothing_found_by_criteria': 'По данным критериям ничего не найдено',
         },
         'client': {
-          'cabinet': {
-            'title': 'Личный кабинет',
-          },
           'auth': 'Личный кабинет',
           'placeholders': {
             'phone': 'Номер телефона',
@@ -318,7 +316,7 @@ global.gon = {
         'add_gift_package': 'Добавить подарочную коробку',
         'no_package': 'Без упаковки',
         'order_payment_state_icon': {
-          'wait':'Ожидаем оплату',
+          'wait': 'Ожидаем оплату',
           'paid': 'Оплачено: %{updatedAt}',
         },
         'order_reserve_state_icon': {
@@ -327,7 +325,7 @@ global.gon = {
           'remote': 'Зарезервировано только на складе в %{reservedAt}',
         },
         'cabinet_order': {
-          'items_count': '%{itemsCount} поз.'
+          'items_count': '%{itemsCount} поз.',
         },
       },
     },

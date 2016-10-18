@@ -3,21 +3,35 @@ import { CartCoupon } from './CartCoupon';
 import CartList from './CartList';
 import FormAuthenticity from '../common/FormAuthenticity';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
+import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import { decamelizeKeys } from 'humps';
+import * as schemas from 'r/schemas';
 
 class Cart extends Component {
+  renderError(err, key) {
+    const id = `cart-error-${key}`;
+
+    return (
+      <div id={id} key={id}>
+        {err}
+      </div>
+    );
+  }
   renderErrors() {
     const {
       cartErrors,
+      isBelowMinimalPrice,
+      minimalPrice,
+      t,
     } = this.props;
 
     return (
       <span className="help-block">
-        {cartErrors.flatten(false).map((err, key) => (
-          <div key={`cart-error-${key}`}>
-            {err}
-          </div>
-        )).valueSeq()}
+        {isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
+          minimal_price: humanizedMoneyWithCurrency(minimalPrice),
+          currency: '',
+        }), 'minimal-price')}
+        {cartErrors.flatten(false).map(this.renderError).valueSeq()}
       </span>
     );
   }
@@ -30,6 +44,7 @@ class Cart extends Component {
       changeAmount,
       couponCode,
       formAuthenticity,
+      isBelowMinimalPrice,
       packageItem,
       packages,
       prices,
@@ -38,6 +53,7 @@ class Cart extends Component {
       t,
       totalPrice,
     } = this.props;
+    const hasErrors = isBelowMinimalPrice || cartErrors.count() > 0;
 
     return (
       <section className="b-cart">
@@ -63,7 +79,7 @@ class Cart extends Component {
               noValidate
             >
               <FormAuthenticity {...formAuthenticity} />
-              {cartErrors.count() > 0 && this.renderErrors()}
+              {hasErrors && this.renderErrors()}
               <CartList
                 amounts={amounts}
                 changeAmount={changeAmount}
@@ -104,6 +120,7 @@ class Cart extends Component {
                         className="b-cart__action__submit b-btn"
                         data-cart-submit
                         data-disable-with={t('vendor.button.disable_with.waiting')}
+                        disabled={isBelowMinimalPrice}
                         name="commit"
                         type="submit"
                         value={t('vendor.order.submit')}
@@ -130,6 +147,8 @@ Cart.propTypes = {
   changeAmount: PropTypes.func.isRequired,
   couponCode: PropTypes.string,
   formAuthenticity: PropTypes.object,
+  isBelowMinimalPrice: PropTypes.bool.isRequired,
+  minimalPrice: schemas.money,
   packages: PropTypes.object.isRequired,
   packageItem: PropTypes.object.isRequired,
   prices: PropTypes.object.isRequired,

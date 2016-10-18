@@ -1,4 +1,8 @@
 {
+  "minimalPrice": {
+    "cents": 2000000,
+    "currency_iso_code": "RUB"
+  },
   "initialCart": {
     "id": 12888853,
     "total_price": {
