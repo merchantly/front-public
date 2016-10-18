@@ -1945,6 +1945,7 @@ var Cart = function (_Component) {
                     {
                       className: 'b-cart__action__clear b-btn b-btn_trans',
                       'data-confirm': t('vendor.alerts.confirm'),
+                      'data-disable-with': t('vendor.button.disable_with.waiting'),
                       'data-method': 'delete',
                       href: cartDefaultUrl
                     },
@@ -1961,6 +1962,7 @@ var Cart = function (_Component) {
                     _react2.default.createElement('input', {
                       className: 'b-cart__action__submit b-btn',
                       'data-cart-submit': true,
+                      'data-disable-with': t('vendor.button.disable_with.waiting'),
                       name: 'commit',
                       type: 'submit',
                       value: t('vendor.order.submit')
@@ -5140,6 +5142,7 @@ var CheckoutActions = function (_Component) {
               'a',
               {
                 className: 'b-btn b-btn_trans b-cart__action__clear',
+                'data-disable-with': t('vendor.button.disable_with.waiting'),
                 href: backUrl || '#',
                 onClick: this.handleClick
               },

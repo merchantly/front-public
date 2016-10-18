@@ -33,6 +33,7 @@ class CheckoutActions extends Component {
           <div className="b-cart__action__col-back">
             <a
               className="b-btn b-btn_trans b-cart__action__clear"
+              data-disable-with={t('vendor.button.disable_with.waiting')}
               href={backUrl || '#'}
               onClick={this.handleClick}
             >

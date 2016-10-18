@@ -90,6 +90,7 @@ class Cart extends Component {
                     <a
                       className="b-cart__action__clear b-btn b-btn_trans"
                       data-confirm={t('vendor.alerts.confirm')}
+                      data-disable-with={t('vendor.button.disable_with.waiting')}
                       data-method="delete"
                       href={cartDefaultUrl}
                     >
@@ -102,6 +103,7 @@ class Cart extends Component {
                       <input
                         className="b-cart__action__submit b-btn"
                         data-cart-submit
+                        data-disable-with={t('vendor.button.disable_with.waiting')}
                         name="commit"
                         type="submit"
                         value={t('vendor.order.submit')}
