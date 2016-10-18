@@ -6,23 +6,29 @@ class ContentPage extends Component {
     const {
       title,
       text,
-      images
+      images,
     } = this.props;
 
     return (
-      <div className='b-page__content__inner b-page__content__inner_content'>
-        <div className='b-article'>
-          <div className='b-text'>
-            <h1>{title}</h1>
+      <div className="b-page__content__inner b-page__content__inner_content">
+        <div className="b-article">
+          <div className="b-text">
+            <h1>
+              {title}
+            </h1>
           </div>
         </div>
-          
-        <section className='b-item-list'>
-          <ImageSlider slides={images} hasThumbs={images.length > 1} className='b-slider_promo'/>
+
+        <section className="b-item-list">
+          <ImageSlider
+            className="b-slider_promo"
+            hasThumbs={images.length > 1}
+            slides={images}
+          />
         </section>
 
-        <article className='b-article'>
-          <div className='b-text'>
+        <article className="b-article">
+          <div className="b-text">
             {text}
           </div>
         </article>
