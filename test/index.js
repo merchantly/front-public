@@ -102,3 +102,6 @@ import './react/components/BlogPost/BlogPostPage.test';
 
 import './react/components/Cabinet/index.test';
 import './react/components/Cabinet/CabinetPage.test';
+
+import './react/components/Dictionary/index.test';
+import './react/components/Dictionary/DictionaryPage.title';

@@ -89,5 +89,6 @@ global.OrderPaymentPage = require('rc/OrderPayment/OrderPaymentPage');
 global.BlogPostListPage = require('rc/BlogPostList/BlogPostListPage');
 global.BlogPostPage = require('rc/BlogPost/BlogPostPage');
 global.CabinetPage = require('rc/Cabinet/CabinetPage');
+global.DictionaryPage = require('rc/Dictionary/DictionaryPage');
 
 import './react/application';

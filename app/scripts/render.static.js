@@ -27,6 +27,9 @@ import lookbookSample from 'test/fixtures/lookbook/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
 import cabinetProps from 'test/fixtures/cabinet/sample.json';
+import {
+  layoutProps,
+} from 'test/fixtures/vendorLayout/sample.json';
 
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
@@ -75,5 +78,6 @@ global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPag
 global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
 global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, require('test/fixtures/blogPost/page-sample.json'));
 global.CabinetPageSample = () => React.createElement(global.CabinetPage, require('test/fixtures/cabinet/page-sample.json'));
+global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
 
 import './lib/ReactRailsUJS';
