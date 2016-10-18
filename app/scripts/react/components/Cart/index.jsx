@@ -22,6 +22,7 @@ import {
 import {
   canUseDOM,
 } from '../../helpers/dom';
+import * as schemas from 'r/schemas';
 import { Map, List } from 'immutable';
 
 const emptyErrors = Map();
@@ -75,6 +76,7 @@ CartContainer.propTypes = {
   initialCart: PropTypes.object,
   initialPackages: PropTypes.array,
   isTesting: PropTypes.bool,
+  minimalPrice: schemas.money,
 
   // calculated props
   amounts: PropTypes.object.isRequired,
@@ -88,6 +90,7 @@ CartContainer.propTypes = {
   fetchPackages: PropTypes.func.isRequired,
   initCart: PropTypes.func.isRequired,
   initPackages: PropTypes.func.isRequired,
+  isBelowMinimalPrice: PropTypes.bool.isRequired,
   packageItem: PropTypes.object.isRequired,
   packages: PropTypes.object.isRequired,
   packagesIsFetching: PropTypes.bool.isRequired,
@@ -110,6 +113,7 @@ export default provideTranslations(connectToRedux(connect(
       initialCart,
       initialPackages,
       isTesting,
+      minimalPrice,
     } = ownProps;
     const {
       cart,
@@ -149,6 +153,7 @@ export default provideTranslations(connectToRedux(connect(
     const totalPrice = cart
       .getIn(['cart', 'totalPrice'], emptyPrice)
       .set('cents', prices.reduce(((acc, price) => acc + price.get('cents', 0)), packagePrice));
+    const isBelowMinimalPrice = !!minimalPrice && (totalPrice.get('cents', 0) < minimalPrice.cents);
 
     return {
       amounts,
@@ -157,6 +162,7 @@ export default provideTranslations(connectToRedux(connect(
       cartIsFetching,
       cartItems,
       couponCode,
+      isBelowMinimalPrice,
       packageItem,
       packages,
       packagesIsFetching,

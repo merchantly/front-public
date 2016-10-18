@@ -1826,7 +1826,15 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
+var _money = require('../../helpers/money');
+
 var _humps = require('humps');
+
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1839,42 +1847,57 @@ var Cart = function (_Component) {
   }
 
   (0, _createClass3.default)(Cart, [{
+    key: 'renderError',
+    value: function renderError(err, key) {
+      var id = 'cart-error-' + key;
+
+      return _react2.default.createElement(
+        'div',
+        { id: id, key: id },
+        err
+      );
+    }
+  }, {
     key: 'renderErrors',
     value: function renderErrors() {
-      var cartErrors = this.props.cartErrors;
+      var _props = this.props;
+      var cartErrors = _props.cartErrors;
+      var isBelowMinimalPrice = _props.isBelowMinimalPrice;
+      var minimalPrice = _props.minimalPrice;
+      var t = _props.t;
 
 
       return _react2.default.createElement(
         'span',
         { className: 'help-block' },
-        cartErrors.flatten(false).map(function (err, key) {
-          return _react2.default.createElement(
-            'div',
-            { key: 'cart-error-' + key },
-            err
-          );
-        }).valueSeq()
+        isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
+          minimal_price: (0, _money.humanizedMoneyWithCurrency)(minimalPrice),
+          currency: ''
+        }), 'minimal-price'),
+        cartErrors.flatten(false).map(this.renderError).valueSeq()
       );
     }
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var amounts = _props.amounts;
-      var cartDefaultUrl = _props.cartDefaultUrl;
-      var cartErrors = _props.cartErrors;
-      var cartItems = _props.cartItems;
-      var changeAmount = _props.changeAmount;
-      var couponCode = _props.couponCode;
-      var formAuthenticity = _props.formAuthenticity;
-      var packageItem = _props.packageItem;
-      var packages = _props.packages;
-      var prices = _props.prices;
-      var selectPackage = _props.selectPackage;
-      var selectedPackage = _props.selectedPackage;
-      var t = _props.t;
-      var totalPrice = _props.totalPrice;
+      var _props2 = this.props;
+      var amounts = _props2.amounts;
+      var cartDefaultUrl = _props2.cartDefaultUrl;
+      var cartErrors = _props2.cartErrors;
+      var cartItems = _props2.cartItems;
+      var changeAmount = _props2.changeAmount;
+      var couponCode = _props2.couponCode;
+      var formAuthenticity = _props2.formAuthenticity;
+      var isBelowMinimalPrice = _props2.isBelowMinimalPrice;
+      var packageItem = _props2.packageItem;
+      var packages = _props2.packages;
+      var prices = _props2.prices;
+      var selectPackage = _props2.selectPackage;
+      var selectedPackage = _props2.selectedPackage;
+      var t = _props2.t;
+      var totalPrice = _props2.totalPrice;
 
+      var hasErrors = isBelowMinimalPrice || cartErrors.count() > 0;
 
       return _react2.default.createElement(
         'section',
@@ -1906,7 +1929,7 @@ var Cart = function (_Component) {
               noValidate: true
             },
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
-            cartErrors.count() > 0 && this.renderErrors(),
+            hasErrors && this.renderErrors(),
             _react2.default.createElement(_CartList2.default, {
               amounts: amounts,
               changeAmount: changeAmount,
@@ -1963,6 +1986,7 @@ var Cart = function (_Component) {
                       className: 'b-cart__action__submit b-btn',
                       'data-cart-submit': true,
                       'data-disable-with': t('vendor.button.disable_with.waiting'),
+                      disabled: isBelowMinimalPrice,
                       name: 'commit',
                       type: 'submit',
                       value: t('vendor.order.submit')
@@ -1988,6 +2012,8 @@ Cart.propTypes = {
   changeAmount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
+  isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
+  minimalPrice: schemas.money,
   packages: _react.PropTypes.object.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
   prices: _react.PropTypes.object.isRequired,
@@ -2000,7 +2026,7 @@ Cart.propTypes = {
 exports.default = Cart;
 module.exports = exports['default'];
 
-},{"../common/FormAuthenticity":238,"../common/Money/HumanizedMoneyWithCurrency":252,"./CartCoupon":26,"./CartList":27,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react"}],25:[function(require,module,exports){
+},{"../../helpers/money":283,"../../schemas":308,"../common/FormAuthenticity":238,"../common/Money/HumanizedMoneyWithCurrency":252,"./CartCoupon":26,"./CartList":27,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react"}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3111,7 +3137,13 @@ var _packages = require('../../reducers/packages');
 
 var _dom = require('../../helpers/dom');
 
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
 var _immutable = require('immutable');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3180,6 +3212,7 @@ CartContainer.propTypes = {
   initialCart: _react.PropTypes.object,
   initialPackages: _react.PropTypes.array,
   isTesting: _react.PropTypes.bool,
+  minimalPrice: schemas.money,
 
   // calculated props
   amounts: _react.PropTypes.object.isRequired,
@@ -3193,6 +3226,7 @@ CartContainer.propTypes = {
   fetchPackages: _react.PropTypes.func.isRequired,
   initCart: _react.PropTypes.func.isRequired,
   initPackages: _react.PropTypes.func.isRequired,
+  isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
   packages: _react.PropTypes.object.isRequired,
   packagesIsFetching: _react.PropTypes.bool.isRequired,
@@ -3213,6 +3247,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   var initialCart = ownProps.initialCart;
   var initialPackages = ownProps.initialPackages;
   var isTesting = ownProps.isTesting;
+  var minimalPrice = ownProps.minimalPrice;
 
   var _ref = storeInitialized && !isTesting ? state : {
     cart: (0, _cart.initCartStore)(state.cart, (0, _CartActions.initCart)(initialCart)),
@@ -3250,6 +3285,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   var totalPrice = cart.getIn(['cart', 'totalPrice'], emptyPrice).set('cents', prices.reduce(function (acc, price) {
     return acc + price.get('cents', 0);
   }, packagePrice));
+  var isBelowMinimalPrice = !!minimalPrice && totalPrice.get('cents', 0) < minimalPrice.cents;
 
   return {
     amounts: amounts,
@@ -3258,6 +3294,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     cartIsFetching: cartIsFetching,
     cartItems: cartItems,
     couponCode: couponCode,
+    isBelowMinimalPrice: isBelowMinimalPrice,
     packageItem: packageItem,
     packages: packages,
     packagesIsFetching: packagesIsFetching,
@@ -3275,7 +3312,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(CartContainer)));
 module.exports = exports['default'];
 
-},{"../../actions/CartActions":4,"../../actions/PackagesActions":5,"../../helpers/dom":282,"../../reducers/cart":294,"../../reducers/packages":295,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Cart":24,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"immutable":"immutable","react":"react","react-redux":602}],33:[function(require,module,exports){
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":5,"../../helpers/dom":282,"../../reducers/cart":294,"../../reducers/packages":295,"../../schemas":308,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Cart":24,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"immutable":"immutable","react":"react","react-redux":602}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
