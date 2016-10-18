@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 class Dictionary extends Component {
   render() {
     const {
-      title
+      title,
     } = this.props;
 
     return (

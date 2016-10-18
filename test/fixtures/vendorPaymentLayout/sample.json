@@ -1,0 +1,16 @@
+{
+  "layoutProps": {
+    "flash": [],
+    "logoProps": {
+      "logoUrl": "http://assets.kiiiosk.ru/uploads/vendor/logo/5/logo.svg",
+      "linkUrl": "http://google.ru",
+      "logoText": "Test",
+      "imageAlt": "Test2"
+    },
+    "vendor": {
+      "custom_append_html": "<p>custom append html</p>",
+      "custom_after_content_html": "<p>custom after content html</p>"
+    },
+    "w1ptEnabled": ""
+  }
+}

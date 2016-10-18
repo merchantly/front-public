@@ -15,7 +15,10 @@ import './react/components/Notice/Notice.test';
 import './react/components/DesignSettings/DesignSettings.test';
 import './react/components/Product/ProductCart/ProductCart.test';
 import './react/components/Product/ProductCard/ProductCardContainer.test';
+
 import './react/components/Product/ProductCard/ProductCard.test';
+import './react/components/Product/ProductCard/ProductCardPage.test';
+
 import './react/components/Product/ProductCard/ProductCardDetails.test';
 import './react/components/Product/ProductCard/ProductCardGallerySlider.test';
 import './react/components/Product/ProductProperties/index.test';
@@ -26,12 +29,15 @@ import './react/components/Cart/index.test';
 import './react/components/Cart/CartPage.test';
 
 import './react/components/Order/index.test';
+import './react/components/Order/OrderCoupon.test';
+import './react/components/Order/OrderPage.test';
+
 import './react/components/Wishlist/index.test';
+import './react/components/Wishlist/WishlistPage.test';
 
 import './react/components/Clientbar/index.test';
 import './react/components/Product/ProductBlock/index.test';
 import './react/components/TopBanner/index.test';
-import './react/components/Order/OrderCoupon.test';
 import './react/components/InstagramContainer/index.test';
 import './react/components/ScrollToTop/index.test';
 import './react/components/ImageSlider/index.test';
@@ -69,8 +75,39 @@ import './react/components/Welcome/index.test';
 import './react/components/Welcome/WelcomePage.test';
 
 import './react/components/OrderCancelled/index.test';
+import './react/components/OrderCancelled/OrderCancelledPage.test';
+
 import './react/components/OrderCreated/index.test';
+import './react/components/OrderCreated/OrderCreatedPage.test';
+
 import './react/components/OrderPaid/index.test';
+import './react/components/OrderPaid/OrderPage.test';
+
 import './react/components/OrderPayment/index.test';
+import './react/components/OrderPayment/OrderPaymentPage.test';
+
 import './react/components/OrderShow/index.test';
+import './react/components/OrderShow/OrderShowPage.test';
+
 import './react/components/ClientSessionNew/index.test';
+import './react/components/ClientSessionNew/ClientSessionNewPage.test';
+
+import './react/components/VendorPaymentLayout/index.test';
+
+import './react/components/BlogPostList/BlogPostList.test';
+import './react/components/BlogPostList/BlogPostListPage.test';
+
+import './react/components/BlogPost/index.test';
+import './react/components/BlogPost/BlogPostPage.test';
+
+import './react/components/Cabinet/index.test';
+import './react/components/Cabinet/CabinetPage.test';
+
+import './react/components/Dictionary/index.test';
+import './react/components/Dictionary/DictionaryPage.title';
+
+import './react/components/Lookbook/index.test';
+import './react/components/Lookbook/LookbookPage.test';
+
+import './react/components/Payment/index.test';
+import './react/components/Payment/PaymentPage.test';

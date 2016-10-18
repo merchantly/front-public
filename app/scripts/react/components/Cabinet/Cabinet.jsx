@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import CabinetOrder from './CabinetOrder'
-import Pagination from 'rc/Pagination'
-import provideTranslations from 'rc/HoC/provideTranslations';
+import CabinetOrder from './CabinetOrder';
+import Pagination from 'rc/Pagination';
 
 class Cabinet extends Component {
   render() {
@@ -15,41 +14,45 @@ class Cabinet extends Component {
       orders: {
         currentPage,
         totalPages,
-        items
+        items,
       },
       t,
     } = this.props;
 
     return (
-      <div className='b-page__content__inner b-page__content__inner_content'>
-        <section className='b-cart'>
-          <div className='b-cabinet b-cart__content'>
-            <div className='b-cabinet_title'>
+      <div className="b-page__content__inner b-page__content__inner_content">
+        <section className="b-cart">
+          <div className="b-cabinet b-cart__content">
+            <div className="b-cabinet_title">
               {t('vendor.client.cabinet.title')}
               {' '}
               {name}
               {' '}
-              {phones.join("\n")}
+              {phones.join('\n')}
               {' '}
-              {emails.join("\n")}
+              {emails.join('\n')}
               {' '}
-              <a href={logoutUrl} className='pull-right'>{t('vendor.client.logout')}</a>
+              <a className="pull-right" href={logoutUrl}>
+                {t('vendor.client.logout')}
+              </a>
             </div>
-            { items ? ( 
+            {items ? (
               <div>
                 <h3> Список заказов </h3>
-                <ul className='b-cart__list'>
+                <ul className="b-cart__list">
                   {items.map((order) => <CabinetOrder {...order} key={order.id} />)}
                 </ul>
                 <Pagination currentPage={currentPage} totalPages={totalPages} />
               </div>
-            ) : (
-              <div className='b-text b-text_center'>
-                <p>{t('vendor.orders.empty')}</p>
+              ) : (
+              <div className="b-text b-text_center">
+                <p>
+                  {t('vendor.orders.empty')}
+                </p>
               </div>
             )}
           </div>
-          <div className='b-cart__action'></div>
+          <div className="b-cart__action" />
         </section>
       </div>
     );
@@ -64,10 +67,11 @@ Cabinet.propTypes = {
     logoutUrl: PropTypes.string.isRequired,
   }).isRequired,
   orders: PropTypes.shape({
-    currentPage: Pagination.propTypes.currentPage, 
+    currentPage: Pagination.propTypes.currentPage,
     totalPages: Pagination.propTypes.totalPages,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
-  }).isOptional,
+  }),
+  t: PropTypes.func.isRequired,
 };
 
-export default provideTranslations(Cabinet);
+export default Cabinet;

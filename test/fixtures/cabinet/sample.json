@@ -3,7 +3,7 @@
     "name": "example name",
     "phones": ["666666", "666666"],
     "emails": ["example@example", "example@example"],
-    "logoutUrl": "/vendor/logout",
+    "logoutUrl": "/vendor/logout"
   },
   "orders": {
     "currentPage": 2,
@@ -14,7 +14,7 @@
         "localId": "11668",
         "workflowState": {
           "color": "#d1dade",
-          "title": "Отменен",
+          "title": "Отменен"
         },
         "createdDate": "2016-08-25 09:39:28 +0300",
         "title": "11668",
@@ -26,18 +26,18 @@
         "payment": {
           "type": "OrderPaymentW1",
           "state": "canceled",
-          "updatedAt": "",
+          "updatedAt": ""
         },
         "paymentType": "Банковской картой на сайте",
         "paymentState": "payment state",
         "reservation": {
           "type": "remote",
-          "reservedAt": "2016-08-25 09:39:28 +0300",
+          "reservedAt": "2016-08-25 09:39:28 +0300"
         },
         "delivery": {
-          "state": "canceled",
+          "state": "canceled"
         },
-        "deliveryState": "Отменена",
+        "deliveryState": "Отменена"
       }
     ]
   }

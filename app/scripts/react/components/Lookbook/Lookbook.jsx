@@ -1,23 +1,24 @@
 import React, { Component, PropTypes } from 'react';
-import ImageSlider from '../common/ImageSlider';
+import ImageSlider from 'rc/common/ImageSlider';
 
 class Lookbook extends Component {
   render() {
     const {
       title,
-      images
+      images,
     } = this.props;
 
     return (
-      <div className='b-page__content__inner b-page__content__inner_content'>
-        <section className='b-item-list'>
-
-          <h1 className='b-item-list__title'> {title} </h1>
-          
-          <ImageSlider slides={images} hasThumbs={images.length > 1} className='b-slider_promo'/>
-        
-        </section>
-      </div>
+      <section className="b-item-list">
+        <h1 className="b-item-list__title">
+          {title}
+        </h1>
+        <ImageSlider
+          className="b-slider_promo"
+          hasThumbs={images.length > 1}
+          slides={images}
+        />
+      </section>
     );
   }
 }

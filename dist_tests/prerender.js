@@ -1,5 +1,9 @@
 require('../dist/scripts/public.prerender.development');
 
+const {
+  layoutProps,
+} = require('../test/fixtures/vendorLayout/sample.json');
+
 const logoProps = {
   'linkUrl': 'http://wannabe.vagrant.dev:3000',
   'logoText': 'Wannabe Jewelry Moscow',
@@ -45,5 +49,20 @@ t(global.ProductArchivedPage, require('../test/fixtures/productArchived/page-sam
 t(global.ProductSearchPage, require('../test/fixtures/productSearch/page-sample.json'));
 t(global.WelcomeChildrenPage, require('../test/fixtures/welcomeChildren/page-sample.json'));
 t(global.WelcomePage, require('../test/fixtures/welcome/page-sample.json'));
+t(global.ClientSessionNewPage, require('../test/fixtures/clientSessionNew/page-sample.json'));
+t(global.OrderCancelledPage, require('../test/fixtures/orderCancelled/page-sample.json'));
+t(global.OrderCreatedPage, require('../test/fixtures/orderCreated/page-sample.json'));
+t(global.OrderPage, require('../test/fixtures/order/page-with-coupon.json'));
+t(global.OrderPaidPage, require('../test/fixtures/orderPaid/page-sample.json'));
+t(global.OrderShowPage, require('../test/fixtures/orderShow/page-sample.json'));
+t(global.ProductCardPage, require('../test/fixtures/products/page-sample.json'));
+t(global.WishlistPage, require('../test/fixtures/wishlist/page-sample.json'));
+t(global.OrderPaymentPage, require('../test/fixtures/orderPayment/page-sample.json'));
+t(global.BlogPostListPage, require('../test/fixtures/blogPostList/page-sample.json'));
+t(global.BlogPostPage, require('../test/fixtures/blogPost/page-sample.json'));
+t(global.CabinetPage, require('../test/fixtures/cabinet/page-sample.json'));
+t(global.DictionaryPage, { layoutProps, title: 'title' });
+t(global.LookbookPage, Object.assign({}, { layoutProps }, require('../test/fixtures/lookbook/sample.json')));
+t(global.PaymentPage, { layoutProps, state: 'success', vendorUrl: '/v' });
 
 console.log('Prerendering public components test finished successfully');
