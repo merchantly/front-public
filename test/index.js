@@ -99,3 +99,6 @@ import './react/components/BlogPostList/BlogPostListPage.test';
 
 import './react/components/BlogPost/index.test';
 import './react/components/BlogPost/BlogPostPage.test';
+
+import './react/components/Cabinet/index.test';
+import './react/components/Cabinet/CabinetPage.test';

@@ -74,5 +74,6 @@ global.WishlistPageSample = () => React.createElement(global.WishlistPage, requi
 global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPage, require('test/fixtures/orderPayment/page-sample.json'));
 global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
 global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, require('test/fixtures/blogPost/page-sample.json'));
+global.CabinetPageSample = () => React.createElement(global.CabinetPage, require('test/fixtures/cabinet/page-sample.json'));
 
 import './lib/ReactRailsUJS';

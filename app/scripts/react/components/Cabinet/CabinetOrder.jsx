@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import OrderState from 'rc/common/Order/OrderState';
 import provideTranslations from 'rc/HoC/provideTranslations';
 
-import { 
-  OrderPaymentIcon, 
-  OrderDeliveryIcon, 
+import {
+  OrderPaymentIcon,
+  OrderDeliveryIcon,
   OrderReserveStateIcon,
-  OrderPaymentStateIcon
-} from '../common/Order/OrderIcons'
+  OrderPaymentStateIcon,
+} from '../common/Order/OrderIcons';
 
 class CabinetOrder extends Component {
   render() {
@@ -27,51 +27,51 @@ class CabinetOrder extends Component {
       reservation,
       delivery,
       deliveryState,
-      t
+      t,
     } = this.props;
 
     return (
-      <li className='b-cart__item'>
-        <div className='b-cart__item__col-quantity'>
+      <li className="b-cart__item">
+        <div className="b-cart__item__col-quantity">
           {localId}
-
-          <OrderState state={workflowState}/> 
-          
-          <div className='text-small.text-muted.m-t-sm'>
+          <OrderState state={workflowState}/>
+          <div className="text-small text-muted m-t-sm">
             {createdDate}
           </div>
         </div>
-
-        <div className='b-cart__item__col-content'>
-          <h2 className='b-cart__item__title'>
+        <div className="b-cart__item__col-content">
+          <h2 className="b-cart__item__title">
             <a href={clientOrderUrl}>
               {title}
             </a>
           </h2>
-          {itemsCount > 0 &&
-            (<small className='text-muted'>
+          {itemsCount > 0 && (
+            <small className="text-muted">
               {t('vendor.cabinet_order.items_count', {itemsCount: itemsCount})}
-            </small>)
-          }
+            </small>
+          )}
         </div>
-
-        <div className='b-cart__item__col-price'>
-          <div className='b-cart__item__price'>
+        <div className="b-cart__item__col-price">
+          <div className="b-cart__item__price">
             <a href={clientOrderUrl}>
               {totalWithDeliveryPrice}
             </a>
           </div>
-          <OrderPaymentIcon orderPaymentType={paymentType} {...payment}/>
-          <OrderPaymentStateIcon orderPaymentType={paymentType} orderPaymentState={paymentState} {...payment} />
+          <OrderPaymentIcon {...payment}
+            orderPaymentType={paymentType}
+          />
+          <OrderPaymentStateIcon {...payment}
+            orderPaymentState={paymentState}
+            orderPaymentType={paymentType}
+          />
         </div>
-
-        <div className='b-cart__item__col-quantity'>
-          <div className='b-cart__item__quantity__text'>
+        <div className="b-cart__item__col-quantity">
+          <div className="b-cart__item__quantity__text">
             {cityTitle}
             {deliveryName}
           </div>
-         <OrderReserveStateIcon {...reservation} />
-         <OrderDeliveryIcon {...delivery} />
+          <OrderReserveStateIcon {...reservation} />
+          <OrderDeliveryIcon {...delivery} />
         </div>
       </li>
     );
@@ -89,21 +89,22 @@ CabinetOrder.propTypes = {
   cityTitle: PropTypes.string.isRequired,
   deliveryName: PropTypes.string.isRequired,
   itemsCount: PropTypes.number.isRequired,
-  payment: {
+  payment: PropTypes.shape({
     type: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired,
     updatedAt: PropTypes.string.isRequired,
-  },
+  }),
   paymentType: PropTypes.string.isRequired,
   paymentState: PropTypes.string.isRequired,
-  reservation: {
+  reservation: PropTypes.shape({
     type: PropTypes.string.isRequired,
     reservedAt: PropTypes.string.isRequired,
-  },
-  delivery: {
+  }),
+  delivery: PropTypes.shape({
     state: PropTypes.string.isRequired,
-  },
+  }),
   deliveryState: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default provideTranslations(CabinetOrder);
