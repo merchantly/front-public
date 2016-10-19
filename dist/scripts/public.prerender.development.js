@@ -6380,6 +6380,7 @@ var ChildrenProducts = function (_Component) {
         childrenProducts.map(function (_ref, idx) {
           var products = _ref.products;
           var title = _ref.title;
+          var vendorCategoryPath = _ref.vendorCategoryPath;
           return _react2.default.createElement(_ProductGroup2.default, {
             catalogFilterProps: catalogFilterProps,
             i18n: i18n,
@@ -6388,7 +6389,8 @@ var ChildrenProducts = function (_Component) {
             showCartButton: showCartButton,
             showCatalogFilter: showCatalogFilter && idx === 0,
             showQuantity: showQuantity,
-            title: title
+            title: title,
+            vendorCategoryPath: vendorCategoryPath
           });
         })
       );
@@ -11036,7 +11038,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*global $ */
 var MenuTopDesktop = function (_Component) {
   (0, _inherits3.default)(MenuTopDesktop, _Component);
 
@@ -11150,12 +11151,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var MenuTopDesktopChild = function (_Component) {
   (0, _inherits3.default)(MenuTopDesktopChild, _Component);
 
-  function MenuTopDesktopChild() {
+  function MenuTopDesktopChild(props) {
     (0, _classCallCheck3.default)(this, MenuTopDesktopChild);
-    return (0, _possibleConstructorReturn3.default)(this, (MenuTopDesktopChild.__proto__ || (0, _getPrototypeOf2.default)(MenuTopDesktopChild)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (MenuTopDesktopChild.__proto__ || (0, _getPrototypeOf2.default)(MenuTopDesktopChild)).call(this, props));
+
+    _this.handleClickLink = _this.handleClickLink.bind(_this);
+    return _this;
   }
 
   (0, _createClass3.default)(MenuTopDesktopChild, [{
+    key: 'handleClickLink',
+    value: function handleClickLink(ev) {
+      var child = this.props.child;
+
+
+      ev.preventDefault();
+      if (child && child.url) {
+        window.location.href = child.url;
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props;
@@ -11170,7 +11186,6 @@ var MenuTopDesktopChild = function (_Component) {
       var id = child.id;
       var products_count = child.products_count;
       var title = child.title;
-      var url = child.url;
 
       var childClasses = (0, _classnames2.default)({
         'b-nav__item': true,
@@ -11189,7 +11204,8 @@ var MenuTopDesktopChild = function (_Component) {
           {
             className: 'b-nav__link',
             'data-count': products_count,
-            href: url
+            href: '#',
+            onClick: this.handleClickLink
           },
           title
         )
@@ -19658,12 +19674,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProductGroup = function (_Component) {
   (0, _inherits3.default)(ProductGroup, _Component);
 
-  function ProductGroup() {
+  function ProductGroup(props) {
     (0, _classCallCheck3.default)(this, ProductGroup);
-    return (0, _possibleConstructorReturn3.default)(this, (ProductGroup.__proto__ || (0, _getPrototypeOf2.default)(ProductGroup)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ProductGroup.__proto__ || (0, _getPrototypeOf2.default)(ProductGroup)).call(this, props));
+
+    _this.handleCategoryClick = _this.handleCategoryClick.bind(_this);
+    return _this;
   }
 
   (0, _createClass3.default)(ProductGroup, [{
+    key: 'handleCategoryClick',
+    value: function handleCategoryClick(ev) {
+      ev.preventDefault();
+      window.location.href = this.props.vendorCategoryPath;
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props;
@@ -19673,6 +19699,7 @@ var ProductGroup = function (_Component) {
       var showCartButton = _props.showCartButton;
       var showCatalogFilter = _props.showCatalogFilter;
       var showQuantity = _props.showQuantity;
+      var t = _props.t;
       var title = _props.title;
 
 
@@ -19684,8 +19711,8 @@ var ProductGroup = function (_Component) {
           'h2',
           null,
           _react2.default.createElement(
-            'span',
-            null,
+            'a',
+            { href: '#', onClick: this.handleCategoryClick },
             title
           )
         ),
@@ -19701,6 +19728,15 @@ var ProductGroup = function (_Component) {
               showQuantity: showQuantity
             });
           })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'b-page__content__inner' },
+          _react2.default.createElement(
+            'a',
+            { href: '#', onClick: this.handleCategoryClick },
+            t('vendor.products.others')
+          )
         )
       );
     }
@@ -19715,7 +19751,9 @@ ProductGroup.propTypes = {
   showCartButton: _react.PropTypes.bool.isRequired,
   showCatalogFilter: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool.isRequired,
-  title: _react.PropTypes.string
+  t: _react.PropTypes.func.isRequired,
+  title: _react.PropTypes.string,
+  vendorCategoryPath: _react.PropTypes.string.isRequired
 };
 
 ProductGroup.defaultProps = {
@@ -19774,6 +19812,10 @@ var _CatalogFilter = require('../CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
+var _provideTranslations = require('../HoC/provideTranslations');
+
+var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductGroupContainer = function (_Component) {
@@ -19802,7 +19844,9 @@ ProductGroupContainer.propTypes = {
   showCartButton: _react.PropTypes.bool.isRequired,
   showCatalogFilter: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool.isRequired,
-  title: _react.PropTypes.string
+  t: _react.PropTypes.func.isRequired,
+  title: _react.PropTypes.string,
+  vendorCategoryPath: _react.PropTypes.string.isRequired
 };
 
 ProductGroupContainer.defaultProps = {
@@ -19815,10 +19859,10 @@ ProductGroupContainer.defaultProps = {
   title: ''
 };
 
-exports.default = ProductGroupContainer;
+exports.default = (0, _provideTranslations2.default)(ProductGroupContainer);
 module.exports = exports['default'];
 
-},{"../CatalogFilter":42,"../Product/ProductBlock":150,"./ProductGroup":189,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"babel-runtime/helpers/toConsumableArray":354,"react":"react"}],191:[function(require,module,exports){
+},{"../CatalogFilter":42,"../HoC/provideTranslations":91,"../Product/ProductBlock":150,"./ProductGroup":189,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"babel-runtime/helpers/toConsumableArray":354,"react":"react"}],191:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

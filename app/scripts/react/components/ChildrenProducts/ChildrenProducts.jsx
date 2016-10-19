@@ -22,7 +22,7 @@ class ChildrenProducts extends Component {
             {title}
           </h1>
         )}
-        {childrenProducts.map(({ products, title }, idx) => (
+        {childrenProducts.map(({ products, title, vendorCategoryPath }, idx) => (
           <ProductGroup
             catalogFilterProps={catalogFilterProps}
             i18n={i18n}
@@ -32,6 +32,7 @@ class ChildrenProducts extends Component {
             showCatalogFilter={showCatalogFilter && idx === 0}
             showQuantity={showQuantity}
             title={title}
+            vendorCategoryPath={vendorCategoryPath}
           />
         ))}
       </div>
