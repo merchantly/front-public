@@ -1,4 +1,3 @@
-/*global $ */
 import React, { Component, PropTypes } from 'react';
 import * as schemas from 'r/schemas';
 import MenuTopDesktopSingle from './MenuTopDesktopSingle';
@@ -31,22 +30,22 @@ class MenuTopDesktop extends Component {
     return (
       <nav className="b-nav">
         <ul className="b-nav__list">
-          {items.map((item, idx) => (item.children && item.children.length) 
-            ? ( 
+          {items.map((item, idx) => (item.children && item.children.length)
+            ? (
               <MenuTopDesktopWithChildren
                 checkIfActive={this.isActive}
-                isLast={idx === items.length - 1} 
+                isLast={idx === items.length - 1}
                 item={item}
                 key={`menu-top-${idx}`}
               />
             )
             : (
               <MenuTopDesktopSingle
-                checkIfActive={this.isActive} 
+                checkIfActive={this.isActive}
                 item={item}
                 key={`menu-top-${idx}`}
               />
-            ) 
+            )
           )}
         </ul>
       </nav>

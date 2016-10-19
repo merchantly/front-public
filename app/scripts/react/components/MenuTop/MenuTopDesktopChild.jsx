@@ -3,6 +3,21 @@ import * as schemas from 'r/schemas';
 import classNames from 'classnames';
 
 class MenuTopDesktopChild extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClickLink = this.handleClickLink.bind(this);
+  }
+  handleClickLink(ev) {
+    const {
+      child,
+    } = this.props;
+
+    ev.preventDefault();
+    if (child && child.url) {
+      window.location.href = child.url;
+    }
+  }
   render() {
     const {
       checkIfActive,
@@ -17,7 +32,6 @@ class MenuTopDesktopChild extends Component {
       id,
       products_count,
       title,
-      url,
     } = child;
     const childClasses = classNames({
       'b-nav__item': true,
@@ -33,7 +47,8 @@ class MenuTopDesktopChild extends Component {
         <a
           className="b-nav__link"
           data-count={products_count}
-          href={url}
+          href="#"
+          onClick={this.handleClickLink}
         >
           {title}
         </a>

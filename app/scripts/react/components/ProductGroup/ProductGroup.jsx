@@ -3,6 +3,15 @@ import ProductBlock from 'rc/Product/ProductBlock';
 import CatalogFilterContainer from 'rc/CatalogFilter';
 
 class ProductGroup extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleCategoryClick = this.handleCategoryClick.bind(this);
+  }
+  handleCategoryClick(ev) {
+    ev.preventDefault();
+    window.location.href = this.props.vendorCategoryPath;
+  }
   render() {
     const {
       catalogFilterProps,
@@ -13,6 +22,7 @@ class ProductGroup extends Component {
       showCartButton,
       showCatalogFilter,
       showQuantity,
+      t,
       title,
     } = this.props;
 
@@ -21,9 +31,9 @@ class ProductGroup extends Component {
         {showCatalogFilter && <CatalogFilterContainer {...catalogFilterProps} />}
         {title && (
           <h2>
-            <span>
+            <a href="#" onClick={this.handleCategoryClick}>
               {title}
-            </span>
+            </a>
           </h2>
         )}
         <div className="b-item-list__content">
@@ -37,6 +47,12 @@ class ProductGroup extends Component {
             />
           ))}
         </div>
+        <div className="b-page__content__inner">
+          <a href="#" onClick={this.handleCategoryClick}>
+            {t('vendor.products.others')}
+          </a>
+        </div>
+
       </section>
     );
   }
@@ -49,7 +65,9 @@ ProductGroup.propTypes = {
   showCartButton: PropTypes.bool.isRequired,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
+  t: PropTypes.func.isRequired,
   title: PropTypes.string,
+  vendorCategoryPath: PropTypes.string.isRequired,
 };
 
 ProductGroup.defaultProps = {
