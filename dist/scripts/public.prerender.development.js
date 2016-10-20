@@ -2024,7 +2024,7 @@ var Cart = function (_Component) {
                     'div',
                     { className: 'b-cart__action__col-submit' },
                     _react2.default.createElement('input', {
-                      className: 'b-cart__action__submit b-btn',
+                      className: 'b-cart__action__submit b-btn element--active-opacity',
                       'data-cart-submit': true,
                       'data-disable-with': t('vendor.button.disable_with.waiting'),
                       disabled: isBelowMinimalPrice,
@@ -5272,7 +5272,7 @@ var CheckoutActions = function (_Component) {
             'div',
             { className: 'b-cart__action__col-submit' },
             _react2.default.createElement('input', {
-              className: 'b-btn b-cart__action__next',
+              className: 'b-btn b-cart__action__next element--active-opacity',
               'data-disable-with': t('vendor.button.disable_with.waiting'),
               onClick: this.startProcessing,
               type: 'submit',

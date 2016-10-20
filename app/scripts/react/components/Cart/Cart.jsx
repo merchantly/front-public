@@ -146,7 +146,7 @@ class Cart extends Component {
                     <CartCoupon code={couponCode} t={t} />
                     <div className="b-cart__action__col-submit">
                       <input
-                        className="b-cart__action__submit b-btn"
+                        className="b-cart__action__submit b-btn element--active-opacity"
                         data-cart-submit
                         data-disable-with={t('vendor.button.disable_with.waiting')}
                         disabled={isBelowMinimalPrice}
