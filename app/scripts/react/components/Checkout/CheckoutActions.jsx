@@ -69,7 +69,7 @@ class CheckoutActions extends Component {
           </div>
           <div className="b-cart__action__col-submit">
             <input
-              className="b-btn b-cart__action__next"
+              className="b-btn b-cart__action__next element--active-opacity"
               data-disable-with={t('vendor.button.disable_with.waiting')}
               onClick={this.startProcessing}
               type="submit"
