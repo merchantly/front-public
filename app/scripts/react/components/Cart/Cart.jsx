@@ -5,9 +5,22 @@ import FormAuthenticity from '../common/FormAuthenticity';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import { decamelizeKeys } from 'humps';
+import Rodal from 'rodal';
+import Spinner from 'react-spinjs';
 import * as schemas from 'r/schemas';
 
 class Cart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isProcessing: false,
+    };
+    this.startProcessing = this.startProcessing.bind(this);
+  }
+  startProcessing() {
+    this.setState({ isProcessing: true });
+  }
   renderError(err, key) {
     const id = `cart-error-${key}`;
 
@@ -54,9 +67,24 @@ class Cart extends Component {
       totalPrice,
     } = this.props;
     const hasErrors = isBelowMinimalPrice || cartErrors.count() > 0;
+    const {
+      isProcessing,
+    } = this.state;
 
     return (
       <section className="b-cart">
+        <Rodal
+          onClose={null}
+          showCloseButton={false}
+          visible={isProcessing}
+        >
+          <div className="b-modal__container">
+            <div className="b-modal__spinner-container">
+              <Spinner />
+            </div>
+            {t('vendor.cart.wait')}
+          </div>
+        </Rodal>
         <div className="b-cart__content">
           <h1 className="b-cart__title" title={t('vendor.cart.title')}>
             {t('vendor.cart.title')}
@@ -109,6 +137,7 @@ class Cart extends Component {
                       data-disable-with={t('vendor.button.disable_with.waiting')}
                       data-method="delete"
                       href={cartDefaultUrl}
+                      onClick={this.startProcessing}
                     >
                       {t('vendor.cart.clear')}
                     </a>
@@ -122,6 +151,7 @@ class Cart extends Component {
                         data-disable-with={t('vendor.button.disable_with.waiting')}
                         disabled={isBelowMinimalPrice}
                         name="commit"
+                        onClick={this.startProcessing}
                         type="submit"
                         value={t('vendor.order.submit')}
                       />

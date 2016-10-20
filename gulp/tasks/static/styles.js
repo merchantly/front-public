@@ -14,8 +14,9 @@ gulp.task('[Static] Styles', () => {
       includePaths: [
         './app/stylesheets/',
         './app/bower_components/',
-        './app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap'
-      ]
+        './app/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap',
+        './node_modules/',
+      ],
     }))
     .pipe(autoprefixer('last 2 versions'))
     .pipe(rename(config.static.outputName))

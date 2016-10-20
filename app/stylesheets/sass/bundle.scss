@@ -55,6 +55,8 @@
 // Entypo Plus
 @import "entypo-plus/scss/entypo-plus";
 
+// Rodal
+@import "rodal/lib/rodal";
 
 // =====================================================================
 // Vendors
@@ -131,6 +133,7 @@
 @import "partials/w1widget"; // Виджет W1
 @import "partials/b-product-properties"; // Форма выбора характеристик в карточке
 @import "partials/b-wishlist"; // Страница список желаний
+@import "partials/b-modal"; // модалка
 
 // Global layout blocks
 @import "partials/b-page"; // Основная страница
