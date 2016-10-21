@@ -1,32 +1,18 @@
 import React, { Component, PropTypes } from 'react';
-import Cookies from 'cookies-js';
-import * as cookieKeys from '../../constants/cookieKeys';
 import { CabinetButton } from '../buttons/CabinetButton';
 import { DesignButton } from '../buttons/DesignButton';
 import { OperatorButton } from '../buttons/OperatorButton';
 import { WishlistButton } from '../buttons/WishlistButton';
+import DesignSettings from '../DesignSettings/DesignSettingsContainer';
+import DesignPreview from '../DesignPreview';
 
 class Userbar extends Component {
-  componentDidMount() {
-    const { designMode, openDesignSettingsPopup } = this.props;
-
-    switch(designMode) {
-      case 'auto':
-        if (Cookies.get(cookieKeys.DESIGN_IS_OPEN) === 'true') {
-          openDesignSettingsPopup();
-        }
-        break;
-      case 'open':
-        openDesignSettingsPopup();
-        Cookies.set(cookieKeys.DESIGN_IS_OPEN, true);
-        break;
-      case 'close':
-        Cookies.set(cookieKeys.DESIGN_IS_OPEN, false);
-        break;
-    }
-  }
   render() {
     const {
+      authUrl,
+      categoryPageUrl,
+      pageType,
+      productPageUrl,
       cabinetText,
       cabinetUrl,
       designText,
@@ -43,53 +29,71 @@ class Userbar extends Component {
     } = this.props;
 
     return (
-      <div className="Userbar">
-        {hasOperator && operatorUrl &&
-          <OperatorButton
-            text={operatorText}
-            url={operatorUrl}
-          />
-        }
-        {hasDesign &&
-          <DesignButton
-            onClick={openDesignSettingsPopup}
-            text={designText}
-          />
-        }
-        {hasCabinet && cabinetUrl &&
-          <CabinetButton
-            text={cabinetText}
-            url={cabinetUrl}
-          />
-        }
-        {hasWishlist && wishlistUrl &&
-          <WishlistButton
-            itemsCount={wishlistItemsCount}
-            text={wishlistText}
-            url={wishlistUrl}
-          />
-        }
+      <div>
+        <div className="Userbar">
+          {hasOperator && operatorUrl &&
+            <OperatorButton
+              text={operatorText}
+              url={operatorUrl}
+            />
+          }
+          {hasDesign &&
+            <DesignButton
+              onClick={openDesignSettingsPopup}
+              text={designText}
+            />
+          }
+          {hasCabinet && cabinetUrl &&
+            <CabinetButton
+              text={cabinetText}
+              url={cabinetUrl}
+            />
+          }
+          {hasWishlist && wishlistUrl &&
+            <WishlistButton
+              itemsCount={wishlistItemsCount}
+              text={wishlistText}
+              url={wishlistUrl}
+            />
+          }
+        </div>
+        <DesignSettings
+          authUrl={authUrl}
+          categoryPageUrl={categoryPageUrl}
+          pageType={pageType}
+          productPageUrl={productPageUrl}
+        />
+        <DesignPreview pageType={pageType} />
       </div>
     );
   }
 }
 
 Userbar.propTypes = {
+  // design settings props
+  authUrl: PropTypes.string.isRequired,
+  categoryPageUrl: PropTypes.string.isRequired,
+  pageType: PropTypes.string.isRequired,
+  productPageUrl: PropTypes.string.isRequired,
+
+  // userbar props
   cabinetText: PropTypes.string,
   cabinetUrl: PropTypes.string,
-  designMode: PropTypes.string.isRequired,
   designText: PropTypes.string,
   hasCabinet: PropTypes.bool,
+  operatorText: PropTypes.string,
+  operatorUrl: PropTypes.string,
+  wishlistText: PropTypes.string,
+  wishlistUrl: PropTypes.string,
+
+  // redux props
+  openDesignSettingsPopup: PropTypes.func.isRequired,
   hasDesign: PropTypes.bool,
   hasOperator: PropTypes.bool,
   hasWishlist: PropTypes.bool,
-  openDesignSettingsPopup: PropTypes.func.isRequired,
-  operatorText: PropTypes.string,
-  operatorUrl: PropTypes.string,
   wishlistItemsCount: PropTypes.number,
-  wishlistText: PropTypes.string,
-  wishlistUrl: PropTypes.string,
 };
+
 Userbar.defaultProps = {
   hasCabinet: false,
   hasDesign: false,

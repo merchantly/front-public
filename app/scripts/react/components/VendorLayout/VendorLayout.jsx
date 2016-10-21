@@ -6,7 +6,7 @@ import MenuTop from 'rc/MenuTop';
 import LayoutMessages from 'rc/common/LayoutMessages';
 import Footer from './Footer';
 import MenuBottom from 'rc/MenuBottom';
-import { UserbarContainer } from 'rc/Userbar';
+import Userbar from 'rc/Userbar/Userbar';
 import W1Widget from 'rc/common/W1Widget';
 import ScrollToTop from 'rc/ScrollToTop';
 import * as schemas from 'r/schemas';
@@ -59,7 +59,7 @@ class VendorLayout extends Component {
             menuBottomProps={menuBottomProps}
             showInstagramContainer={showInstagramContainer}
           />
-          <UserbarContainer {...userbarProps} />
+          <Userbar {...userbarProps} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />
@@ -83,7 +83,7 @@ VendorLayout.propTypes = {
   showTopBanner: PropTypes.bool,
   t: PropTypes.func,
   topBannerProps: PropTypes.shape(...TopBanner.propTypes),
-  userbarProps: PropTypes.shape(...UserbarContainer.wrapped.propTypes).isRequired,
+  userbarProps: PropTypes.shape(...Userbar.propTypes).isRequired,
   vendor: schemas.vendor.isRequired,
   w1ptEnabled: PropTypes.string,
 };

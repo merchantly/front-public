@@ -23,7 +23,7 @@ import './shared/theme_switcher';
 
 // Exposing neccessary resources outside
 global.CatalogFilter = require('./react/components/CatalogFilter').CatalogFilter;
-global.Userbar = require('./react/components/Userbar').UserbarContainer;
+global.Userbar = require('./react/components/Userbar');
 global.Clientbar = require('./react/components/Clientbar').Clientbar;
 global.Logo = require('./react/components/Logo/LogoContainer');
 global.ProductBlock = require('./react/components/Product/ProductBlock');

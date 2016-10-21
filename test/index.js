@@ -2,6 +2,7 @@
 import 'babel-polyfill';
 import './mocks/gon';
 import './mocks/mrch';
+import './mocks/redux';
 
 // Libs
 import '../app/scripts/render.libs';

@@ -7,11 +7,7 @@ import emptyCart from 'test/fixtures/cart/empty';
 import weightOfPriceCart from 'test/fixtures/cart/weight-of-price';
 import selectPackageCart from 'test/fixtures/cart/select-package.json';
 import CartContainer from 'rc/Cart';
-import { createStore, combineReducers } from 'redux';
-import * as reducers from 'r/reducers';
 import { humanizedMoney } from 'r/helpers/money';
-
-global.redux = createStore(combineReducers(reducers));
 
 describe('[Component] CartContainer', () => {
   it('should render empty message when the cart is empty', () => {
