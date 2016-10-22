@@ -8,6 +8,7 @@ import weightOfPriceCart from 'test/fixtures/cart/weight-of-price';
 import selectPackageCart from 'test/fixtures/cart/select-package.json';
 import CartContainer from 'rc/Cart';
 import { humanizedMoney } from 'r/helpers/money';
+import { initStore } from 'test/mocks/redux';
 
 describe('[Component] CartContainer', () => {
   it('should render empty message when the cart is empty', () => {

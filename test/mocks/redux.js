@@ -7,7 +7,9 @@ import {
   combineReducers,
 } from 'redux';
 
-global.redux = (applyMiddleware(
-  thunkMiddleware,
-  apiMiddleware
-)(createStore))(combineReducers(reducers));
+export function initStore(data) {
+  return (applyMiddleware(
+    thunkMiddleware,
+    apiMiddleware
+  )(createStore))(combineReducers(reducers), data);
+}

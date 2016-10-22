@@ -1,2 +1,4 @@
 window.mrch = {};
-window.mrch.config = {};
+window.mrch.config = {
+  public_api_url: '',
+};

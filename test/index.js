@@ -1,16 +1,22 @@
+/*global beforeEach */
+
 // Mocks
 import 'babel-polyfill';
 import './mocks/gon';
 import './mocks/mrch';
-import './mocks/redux';
+import { initStore } from './mocks/redux';
 
 // Libs
 import '../app/scripts/render.libs';
 import './libsConfigs';
 
+beforeEach('init redux', () => {
+  global.redux = initStore();
+});
+
 // Components
 import './react/components/CatalogFilter/CatalogFilter.test';
-import './react/components/Userbar/Userbar.test';
+import './react/components/Userbar/index.test';
 import './react/components/Logo/Logo.test';
 import './react/components/Notice/Notice.test';
 import './react/components/DesignSettings/DesignSettings.test';
