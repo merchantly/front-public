@@ -1,12 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import PublishShopButton from 'rc/common/PublishShopButton';
 import TopBanner from 'rc/TopBanner';
-import NavBar from 'rc/NavBar/NavBar';
+import NavBar, {
+  externalPropTypes as navBarPropTypes,
+} from 'rc/NavBar';
 import MenuTop from 'rc/MenuTop';
 import LayoutMessages from 'rc/common/LayoutMessages';
 import Footer from './Footer';
 import MenuBottom from 'rc/MenuBottom';
-import Userbar from 'rc/Userbar/Userbar';
+import Userbar, {
+  externalPropTypes as userbarPropTypes,
+} from 'rc/Userbar';
 import W1Widget from 'rc/common/W1Widget';
 import ScrollToTop from 'rc/ScrollToTop';
 import * as schemas from 'r/schemas';
@@ -75,7 +79,7 @@ VendorLayout.propTypes = {
   i18n: PropTypes.object,
   menuBottomProps: PropTypes.shape(...MenuBottom.wrapped.propTypes).isRequired,
   menuTopProps: PropTypes.shape(...MenuTop.wrapped.propTypes),
-  navBarProps: PropTypes.shape(...NavBar.propTypes).isRequired,
+  navBarProps: PropTypes.shape(navBarPropTypes).isRequired,
   publishShopPath: PropTypes.string.isRequired,
   scrollToTopProps: PropTypes.shape(...ScrollToTop.propTypes),
   showInstagramContainer: PropTypes.bool,
@@ -83,7 +87,7 @@ VendorLayout.propTypes = {
   showTopBanner: PropTypes.bool,
   t: PropTypes.func,
   topBannerProps: PropTypes.shape(...TopBanner.propTypes),
-  userbarProps: PropTypes.shape(...Userbar.propTypes).isRequired,
+  userbarProps: PropTypes.shape(userbarPropTypes).isRequired,
   vendor: schemas.vendor.isRequired,
   w1ptEnabled: PropTypes.string,
 };

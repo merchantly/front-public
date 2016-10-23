@@ -4,14 +4,19 @@ import {
 import {
   CALL_API,
 } from 'r/middleware/api';
+import queryString from 'query-string';
+import { canUseDOM } from 'r/helpers/dom';
 
 export const USER_STATE_REQUEST = 'USER_STATE_REQUEST';
 export const USER_STATE_SUCCESS = 'USER_STATE_SUCCESS';
 export const USER_STATE_FAILURE = 'USER_STATE_FAILURE';
 
-export function fetchUserState(force=false) {
+export function fetchUserState(force) {
   return (dispatch, getState) => {
     const state = getState().userState;
+    const { design } = canUseDOM() && (
+      queryString.parse(window.location.search)
+    ) || {};
 
     return state.notAsked || force
       ? dispatch({
@@ -22,6 +27,7 @@ export function fetchUserState(force=false) {
               USER_STATE_SUCCESS,
               USER_STATE_FAILURE,
             ],
+            data: { design },
           },
         })
       : Promise.resolve({ response: state.data });

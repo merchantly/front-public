@@ -1,10 +1,10 @@
-/*global describe, before, after, it */
+/*global describe, before, after, it, xit */
 import React from 'react';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
 import UserbarContainer from 'rc/Userbar';
-import * as PopupActions from 'r/actions/PopupActions';
+import * as PopupActions from 'r/actions/popupActions';
 import {
   userState,
 } from 'scripts/routes/api';
@@ -40,8 +40,8 @@ describe('[Component] UserbarContainer', function() {
       expect(this.renderedComponent).to.be.an('object');
     });
 
-    it('triggers openDesignSettingsPopup callback', function() {
-      sinon.assert.calledOnce(this.openDesignSettingsPopup);
+    xit('triggers openDesignSettingsPopup callback', function() {
+      expect(this.openDesignSettingsPopup.calledOnce).to.be.true;
     });
   });
 
@@ -70,8 +70,8 @@ describe('[Component] UserbarContainer', function() {
       expect(this.renderedComponent).to.be.an('object');
     });
 
-    it('doesn\'t triggers openDesignSettingsPopup callback', function() {
-      sinon.assert.notCalled(this.openDesignSettingsPopup);
+    xit('doesn\'t triggers openDesignSettingsPopup callback', function() {
+      expect(this.openDesignSettingsPopup.notCalled).to.be.true;
     });
   });
 });

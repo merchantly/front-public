@@ -36,7 +36,12 @@ import * as cookieKeys from 'r/constants/cookieKeys';
 )
 class UserbarContainer extends Component {
   componentWillMount() {
-    this.props.fetchUserState()
+    const {
+      fetchUserState,
+      openDesignSettingsPopup,
+    } = this.props;
+
+    fetchUserState()
       .then(({ response: { designMode } }) => {
         switch(designMode) {
         case 'auto':
@@ -59,7 +64,7 @@ class UserbarContainer extends Component {
   }
 }
 
-UserbarContainer.propTypes = {
+export const externalPropTypes = {
   // design settings props
   authUrl: PropTypes.string.isRequired,
   categoryPageUrl: PropTypes.string.isRequired,
@@ -75,6 +80,10 @@ UserbarContainer.propTypes = {
   operatorUrl: PropTypes.string,
   wishlistText: PropTypes.string,
   wishlistUrl: PropTypes.string,
+};
+
+UserbarContainer.propTypes = {
+  ...externalPropTypes,
 
   // redux props
   openDesignSettingsPopup: PropTypes.func.isRequired,
