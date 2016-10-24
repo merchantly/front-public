@@ -3,7 +3,6 @@ import { humanizedMoneyWithCurrency } from '../../helpers/money';
 import { simpleFormat } from '../../helpers/text';
 import { decamelizeKeys } from 'humps';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { Map } from 'immutable';
 
 class CheckoutDeliveries extends Component {
   renderItem(item) {
@@ -13,16 +12,20 @@ class CheckoutDeliveries extends Component {
       onChange,
       t,
     } = this.props;
-    const itemId = item.get('id');
-    const price = item.get('price', Map());
-    const threshold = item.get('freeDeliveryThreshold') || Map();
+    const {
+      id: itemId,
+      price={},
+      title='',
+      description,
+      freeDeliveryThreshold: threshold={},
+    } = item;
 
     return (
       <div className="b-form__row__widget" key={itemId}>
         <span className="b-form__radio">
           <label>
             <input
-              checked={current && itemId === current.get('id')}
+              checked={current && itemId === current.id}
               className="form-control radio_buttons"
               name={`vendor_order[${itemFieldName}]`}
               onChange={() => onChange(item)}
@@ -30,17 +33,17 @@ class CheckoutDeliveries extends Component {
               value={itemId}
             />
             <div className="b-cart__form__delivery-name">
-              {item.get('title','')}
+              {title}
             </div>
             <div className="b-cart__form__delivery-price">
-              <HumanizedMoneyWithCurrency money={decamelizeKeys(price.toJS())} />
+              <HumanizedMoneyWithCurrency money={decamelizeKeys(price)} />
             </div>
-            {threshold.get('cents')
+            {threshold && threshold.cents
               ? <div
                 className="cart__form__delivery-address"
                 dangerouslySetInnerHTML={{
                   __html: t('vendor.order.checkout_free_delivery_text_html', {
-                    free_delivery_threshold: humanizedMoneyWithCurrency(decamelizeKeys(threshold.toJS())),
+                    free_delivery_threshold: humanizedMoneyWithCurrency(decamelizeKeys(threshold)),
                   }),
                 }}
                 />
@@ -48,7 +51,7 @@ class CheckoutDeliveries extends Component {
             }
             <div
               className="cart__form__delivery-address"
-              dangerouslySetInnerHTML={{ __html: simpleFormat(item.get('description')) }}
+              dangerouslySetInnerHTML={{ __html: simpleFormat(description) }}
             />
           </label>
         </span>
@@ -61,7 +64,7 @@ class CheckoutDeliveries extends Component {
 
     return (
       <span>
-        {items.map(item => this.renderItem(item)).valueSeq()}
+        {items.map(item => this.renderItem(item))}
       </span>
     );
   }
@@ -70,7 +73,7 @@ class CheckoutDeliveries extends Component {
 CheckoutDeliveries.propTypes = {
   current: PropTypes.object.isRequired,
   itemFieldName: PropTypes.string,
-  items: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
   t: PropTypes.func.isRequired,
 };

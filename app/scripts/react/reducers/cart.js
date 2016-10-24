@@ -1,9 +1,5 @@
 import createReducer from '../utils/createReducer';
 import {
-  Map,
-  fromJS,
-} from 'immutable';
-import {
   CART_REQUEST,
   CART_SUCCESS,
   CART_FAILURE,
@@ -14,8 +10,10 @@ import {
   CART_SELECT_DELIVERY,
   CART_SELECT_PAYMENT,
 } from '../actions/CartActions';
+import { merge, set, setIn, getIn } from 'timm';
+import { reduce } from 'lodash';
 
-const initialState = fromJS({
+const initialState = {
   cart: {},
   coupon: {
     show: true,
@@ -32,18 +30,19 @@ const initialState = fromJS({
   isFetching: false,
   error: null,
   isInitialized: false,
-});
+};
 
 export function initCartStore(state, { response }) {
-  const amounts = fromJS(response.items)
-    .toMap()
-    .mapKeys((key, val) => val.get('id'))
-    .map((item) => item.getIn(['good', 'sellingByWeight']) ?
-      parseFloat(item.get('weight', 0)) :
-      parseInt(item.get('count', 0), 10)
-    );
+  const amounts = reduce(response.items, (result, item) => {
+    const isSellingByWeight = getIn(item, ['good', 'sellingByWeight']);
 
-  return state.merge({
+    result[item.id] = isSellingByWeight
+      ? parseFloat(item.weight || 0)
+      : parseInt(item.count || 0, 10);
+    return result;
+  }, {});
+
+  return merge(state, {
     amounts,
     coupon: {
       show: true,
@@ -57,17 +56,17 @@ export function initCartStore(state, { response }) {
 }
 
 export function initCheckoutCartStore(state, { data }) {
-  const checkoutFieldValues = fromJS(data.checkoutFields)
-    .toMap()
-    .mapKeys((_, f) => f.get('name'))
-    .map((f) => Map({ value: f.get('value', null) }));
+  const checkoutFieldValues = reduce(data.checkoutFields, (result, field) => {
+    result[field.name] = { value: field.value };
+    return result;
+  }, {});
 
-  return state.merge(data).set('checkoutFieldValues', checkoutFieldValues);
+  return merge(state, data, { checkoutFieldValues });
 }
 
 const actionMap = {
   [CART_REQUEST](state) {
-    return state.merge({
+    return merge(state, {
       isFetching: true,
       error: null,
     });
@@ -78,18 +77,18 @@ const actionMap = {
   },
 
   [CART_FAILURE](state, { error }) {
-    return state.merge({
+    return merge(state, {
       isFetching: false,
       error,
     });
   },
 
   [CART_SET_AMOUNT](state, { id, amount }) {
-    return state.setIn(['amounts', id], amount);
+    return setIn(state, ['amounts', id], amount);
   },
 
   [CART_SET_PACKAGE](state, { id }) {
-    return state.set('selectedPackage', id);
+    return set(state, 'selectedPackage', id);
   },
 
   [CART_INIT_CHECKOUT](state, action) {
@@ -97,15 +96,15 @@ const actionMap = {
   },
 
   [CART_SET_FIELD_VALUE](state, { name, value }) {
-    return state.setIn(['checkoutFieldValues', name, 'value'], value);
+    return setIn(state, ['checkoutFieldValues', name, 'value'], value);
   },
 
   [CART_SELECT_DELIVERY](state, { id }) {
-    return state.set('selectedDeliveryType', id);
+    return set(state, 'selectedDeliveryType', id);
   },
 
   [CART_SELECT_PAYMENT](state, { id }) {
-    return state.set('selectedPaymentType', id);
+    return set(state, 'selectedPaymentType', id);
   },
 };
 

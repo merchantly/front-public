@@ -1,11 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { camelize } from 'humps';
-// import { Map, List } from 'immutable';
+import { getIn } from 'timm';
 
 const STRING_TYPE = 'string';
 const TEXTAREA_TYPE = 'textarea';
-
-// const emptyList = List();
 
 class CheckoutFields extends Component {
   renderItem(item, value) {
@@ -13,13 +11,15 @@ class CheckoutFields extends Component {
       deliveryType,
       onChange,
     } = this.props;
-    const errorMessage = item.get('errorMessage', '');
-    const name = item.get('name', '');
-    const type = item.get('type', STRING_TYPE);
-    const placeholder = item.get('placeholder', '');
-    const title = item.get('title', '');
+    const {
+      errorMessage='',
+      name='',
+      type=STRING_TYPE,
+      placeholder='',
+      title='',
+    } = item;
     // const isRequired = deliveryType.get('requiredFields', emptyList).includes(name);
-    const reservedValue = deliveryType.getIn(['reservedFieldValues', camelize(name)]);
+    const reservedValue = getIn(deliveryType, ['reservedFieldValues', camelize(name)]);
     const isDisabled = !!reservedValue;
     const itemId = `vendor_order_${name}`;
     const itemName = `vendor_order[${name}]`;
@@ -86,10 +86,10 @@ class CheckoutFields extends Component {
     return (
       <span>
         {items.map((item) => {
-          const value = itemValues.getIn([item.get('name'), 'value'], null);
+          const value = getIn(itemValues, [item.name, 'value']);
 
           return this.renderItem(item, value);
-        }).valueSeq()}
+        })}
       </span>
     );
   }
@@ -97,7 +97,7 @@ class CheckoutFields extends Component {
 
 CheckoutFields.propTypes = {
   deliveryType: PropTypes.object.isRequired,
-  items: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
   itemValues: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
 };

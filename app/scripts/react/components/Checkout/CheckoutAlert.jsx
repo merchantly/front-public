@@ -6,7 +6,7 @@ class CheckoutAlert extends Component {
     return (
       <Alert
         className="coupon-info"
-        info={true}
+        info
         text={this.props.text}
       />
     );
