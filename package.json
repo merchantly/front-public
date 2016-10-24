@@ -88,7 +88,7 @@
     "gulp-gh-pages": "^0.5.2",
     "gulp-haml-coffee": "0.0.6",
     "gulp-minify-css": "^0.3.11",
-    "gulp-mocha-phantomjs": "^0.8.1",
+    "gulp-mocha-phantomjs": "^0.12.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.4",
