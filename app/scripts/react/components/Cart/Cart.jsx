@@ -44,7 +44,13 @@ class Cart extends Component {
           minimal_price: humanizedMoneyWithCurrency(minimalPrice),
           currency: '',
         }), 'minimal-price')}
-        {cartErrors.flatten(false).map(this.renderError).valueSeq()}
+        {cartErrors
+          .filterNot((_, key) => key === 'minimalPrice')
+          .toList()
+          .flatten(false)
+          .map(this.renderError)
+          .valueSeq()
+        }
       </span>
     );
   }

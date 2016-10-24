@@ -56,4 +56,12 @@ describe('[Component] CartContainer', () => {
       .attr('disabled')
     ).not.to.exist;
   });
+
+  it('should not display server generated minimal price error', () => {
+    const props = { ...selectPackageCart, isTesting: true };
+
+    expect (render(<CartContainer {...props} />)
+      .find('.help-block [id^=cart-error-]')
+    ).to.have.length(2);
+  });
 });
