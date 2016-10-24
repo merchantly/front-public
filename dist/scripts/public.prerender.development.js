@@ -349,6 +349,8 @@ var USER_STATE_REQUEST = exports.USER_STATE_REQUEST = 'USER_STATE_REQUEST';
 var USER_STATE_SUCCESS = exports.USER_STATE_SUCCESS = 'USER_STATE_SUCCESS';
 var USER_STATE_FAILURE = exports.USER_STATE_FAILURE = 'USER_STATE_FAILURE';
 
+var userStatePromise = void 0;
+
 function fetchUserState(force) {
   return function (dispatch, getState) {
     if (!(0, _dom.canUseDOM)()) {
@@ -365,11 +367,19 @@ function fetchUserState(force) {
     var design = _ref.design;
 
 
-    return state.notAsked || force ? dispatch((0, _defineProperty3.default)({}, _api2.CALL_API, {
-      endpoint: (0, _api.userState)(),
-      types: [USER_STATE_REQUEST, USER_STATE_SUCCESS, USER_STATE_FAILURE],
-      data: { design: design }
-    })) : _promise2.default.resolve({ response: state.data });
+    if (state.notAsked || force) {
+      return userStatePromise = _promise2.default.resolve(dispatch((0, _defineProperty3.default)({}, _api2.CALL_API, {
+        endpoint: (0, _api.userState)(),
+        types: [USER_STATE_REQUEST, USER_STATE_SUCCESS, USER_STATE_FAILURE],
+        data: { design: design }
+      })));
+    } else if (userStatePromise) {
+      return userStatePromise;
+    } else {
+      return _promise2.default.resolve({
+        response: state.data
+      });
+    }
   };
 }
 
@@ -12654,9 +12664,9 @@ NavBarContainer.defaultProps = {
   showClientBar: false
 };
 
-exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
+exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
   return {
-    showClientBar: state.userState.data.showClientBar
+    showClientBar: ownProps.showClientBar || state.userState.data.showClientBar
   };
 }, {
   fetchUserState: _UserStateActions.fetchUserState
@@ -21483,10 +21493,15 @@ var UserbarContainer = (_dec = (0, _reactRedux.connect)(function (state, ownProp
     key: 'componentWillMount',
     value: function componentWillMount() {
       var _props = this.props;
+      var designMode = _props.designMode;
       var fetchUserState = _props.fetchUserState;
       var openDesignSettingsPopup = _props.openDesignSettingsPopup;
 >>>>>>> fix prerender tests
 
+
+      if (designMode) {
+        return;
+      }
 
       fetchUserState().then(function (_ref) {
         var designMode = _ref.response.designMode;
@@ -42992,10 +43007,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../instances":586,"../update-geometry":587,"../update-scroll":588}],579:[function(require,module,exports){
 =======
 },{"../../lib/helper":578,"../instances":590,"../update-geometry":591,"../update-scroll":592}],583:[function(require,module,exports){
 >>>>>>> fix prerender tests
+=======
+},{"../instances":590,"../update-geometry":591,"../update-scroll":592}],583:[function(require,module,exports){
+>>>>>>> fix concurency ajax issue, [resolves #305]
 'use strict';
 
 var _ = require('../../lib/helper');

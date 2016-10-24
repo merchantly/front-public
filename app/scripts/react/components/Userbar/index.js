@@ -37,9 +37,14 @@ import * as cookieKeys from 'r/constants/cookieKeys';
 class UserbarContainer extends Component {
   componentWillMount() {
     const {
+      designMode, // FIXME: remove when moved to api
       fetchUserState,
       openDesignSettingsPopup,
     } = this.props;
+
+    if (designMode) {
+      return;
+    }
 
     fetchUserState()
       .then(({ response: { designMode } }) => {

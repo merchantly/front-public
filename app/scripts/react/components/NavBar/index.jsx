@@ -49,8 +49,8 @@ NavBarContainer.defaultProps = {
 };
 
 export default provideTranslations(connectToRedux(connect(
-  (state) => ({
-      showClientBar: state.userState.data.showClientBar,
+  (state, ownProps) => ({
+      showClientBar: ownProps.showClientBar || state.userState.data.showClientBar,
   }),
   {
     fetchUserState,

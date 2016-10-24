@@ -11,6 +11,8 @@ export const USER_STATE_REQUEST = 'USER_STATE_REQUEST';
 export const USER_STATE_SUCCESS = 'USER_STATE_SUCCESS';
 export const USER_STATE_FAILURE = 'USER_STATE_FAILURE';
 
+let userStatePromise;
+
 export function fetchUserState(force) {
   return (dispatch, getState) => {
     if (!canUseDOM()) {
@@ -23,18 +25,24 @@ export function fetchUserState(force) {
     const state = getState().userState;
     const { design } = queryString.parse(window.location.search) || {};
 
-    return state.notAsked || force
-      ? dispatch({
-          [CALL_API]: {
-            endpoint: userState(),
-            types: [
-              USER_STATE_REQUEST,
-              USER_STATE_SUCCESS,
-              USER_STATE_FAILURE,
-            ],
-            data: { design },
-          },
-        })
-      : Promise.resolve({ response: state.data });
+    if (state.notAsked || force) {
+      return (userStatePromise = Promise.resolve(dispatch({
+        [CALL_API]: {
+          endpoint: userState(),
+          types: [
+            USER_STATE_REQUEST,
+            USER_STATE_SUCCESS,
+            USER_STATE_FAILURE,
+          ],
+          data: { design },
+        },
+      })));
+    } else if (userStatePromise) {
+      return userStatePromise;
+    } else {
+      return Promise.resolve({
+        response: state.data,
+      });
+    }
   };
 }
