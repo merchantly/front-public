@@ -13,10 +13,15 @@ export const USER_STATE_FAILURE = 'USER_STATE_FAILURE';
 
 export function fetchUserState(force) {
   return (dispatch, getState) => {
+    if (!canUseDOM()) {
+      return Promise.resolve(dispatch({
+        response: {},
+        type: null,
+      }));
+    }
+
     const state = getState().userState;
-    const { design } = canUseDOM() && (
-      queryString.parse(window.location.search)
-    ) || {};
+    const { design } = queryString.parse(window.location.search) || {};
 
     return state.notAsked || force
       ? dispatch({

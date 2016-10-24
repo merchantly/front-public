@@ -4,11 +4,14 @@ ReactDOM = require('react-dom');
 ReactDOMServer = require('react-dom/server');
 createStore = require('redux').createStore;
 combineReducers = require('redux').combineReducers;
+applyMiddleware = require('redux').applyMiddleware;
+thunk = require('redux-thunk').default;
 Provider = require('react-redux').Provider;
 DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
 CartReducer = require('./react/reducers/cart').default;
 PackagesReducer = require('./react/reducers/packages').default;
+userState = require('./react/reducers/userState');
 require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
@@ -16,9 +19,10 @@ var prerenderReducers = combineReducers({
   packages: PackagesReducer,
   design: DesignReducer,
   popup: PopupReducer,
+  userState: userState,
 });
 
-global.redux = createStore(prerenderReducers, {});
+global.redux = (applyMiddleware(thunk)(createStore))(prerenderReducers, {});
 
 Logo = require('./react/components/Logo/LogoContainer');
 ProductBlock = require('./react/components/Product/ProductBlock');
