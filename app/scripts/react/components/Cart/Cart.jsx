@@ -82,7 +82,7 @@ class Cart extends Component {
     return (
       <section className="b-cart">
         <Rodal
-          onClose={null}
+          onClose={() => {}}
           showCloseButton={false}
           visible={isProcessing}
         >

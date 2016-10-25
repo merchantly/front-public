@@ -6,7 +6,7 @@ createStore = require('redux').createStore;
 combineReducers = require('redux').combineReducers;
 Provider = require('react-redux').Provider;
 DesignReducer = require('./react/reducers/Design.prerender');
-PopupReducer = require('./react/reducers/Popup');
+PopupReducer = require('./react/reducers/popup');
 CartReducer = require('./react/reducers/cart').default;
 PackagesReducer = require('./react/reducers/packages').default;
 require('./locales/numeral/ru');

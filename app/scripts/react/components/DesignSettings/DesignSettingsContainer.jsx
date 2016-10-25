@@ -11,10 +11,11 @@ import * as storageKeys from '../../constants/storageKeys';
 import * as cookieKeys from '../../constants/cookieKeys';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
 import DesignSettings from '.';
+import { any } from 'lodash';
 
 @connect((state) => ({
   design: state.design,
-  popups: state.popup.get('popups'),
+  popups: state.popup.popups,
 }))
 class DesignSettingsContainer extends Component {
   static propTypes = {
@@ -38,8 +39,8 @@ class DesignSettingsContainer extends Component {
     Cookies.set(cookieKeys.DESIGN_IS_OPEN, isOpened);
   }
   isOpened(props) {
-    return props.popups.some((popup) => (
-      popup.get('style') === 'DesignSettings'
+    return any(props.popups, (popup) => (
+      popup.style === 'DesignSettings'
     ));
   }
   updatePageClass(isOpened) {

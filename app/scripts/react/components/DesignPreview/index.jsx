@@ -1,11 +1,12 @@
+import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fromJS } from 'immutable';
 import jss from 'jss';
-import nested from 'jss-nested'
-import assign from 'react/lib/Object.assign';
+import nested from 'jss-nested';
 import tinycolor from 'tinycolor2';
 import connectToRedux from '../HoC/connectToRedux';
+import { any } from 'lodash';
 
 jss.use(nested);
 
@@ -16,10 +17,10 @@ const _rules = {
 
       return {
         ['.b-page .b-item-list_catalog .b-item-list__item:nth-child(n + ' + newValue + ')']: {
-          display: 'none'
+          display: 'none',
         },
       };
-    }
+    },
   },
   categories: {
     categoryPageRows(value, { categoryPageProductsInRow }) {
@@ -27,24 +28,24 @@ const _rules = {
 
       return {
         ['.b-page .b-item-list_catalog .b-item-list__item:nth-child(n + ' + newValue + ')']: {
-          display: 'none'
+          display: 'none',
         },
       };
-    }
+    },
   },
   common: {
     pageBgColor(value) {
       return {
         '.b-page': {
-          'background-color': value
-        }
+          'background-color': value,
+        },
       };
     },
     pageBgUrl(value) {
       return {
         '.b-page': {
-          'background-image': value ? `url("${value}")` : 'none'
-        }
+          'background-image': value ? `url("${value}")` : 'none',
+        },
       };
     },
     feedBgColor(value) {
@@ -53,17 +54,17 @@ const _rules = {
         rule(depValue) {
           return {
             '.b-page__content__inner, .sticky-active .b-nav': {
-              'background-color': tinycolor(value).setAlpha(1 - depValue).toRgbString()
-            }
-          }
-        }
+              'background-color': tinycolor(value).setAlpha(1 - depValue).toRgbString(),
+            },
+          };
+        },
       };
     },
     fontColor(value) {
       return {
         '.b-page': {
-          'color': value
-        }
+          'color': value,
+        },
       };
     },
     activeElementsColor(value) {
@@ -84,8 +85,8 @@ const _rules = {
           },
         },
       };
-    }
-  }
+    },
+  },
 };
 const _states = {
   welcome: {
@@ -121,7 +122,7 @@ const _switchableStates = {
 
 @connect((state) => ({
   design: state.design,
-  popups: state.popup.get('popups'),
+  popups: state.popup.popups,
 }))
 class DesignPreview extends Component {
   static propTypes = {
@@ -143,8 +144,8 @@ class DesignPreview extends Component {
     this.sheet = null;
   }
   isPopupOpened(props) {
-    return props.popups.some((popup) => (
-      popup.get('style') === 'DesignSettings'
+    return any(props.popups, (popup) => (
+      popup.style === 'DesignSettings'
     ));
   }
   attachSheet() {
@@ -230,7 +231,7 @@ class DesignPreview extends Component {
   }
   getElements() {
     return {
-      page: document.body || document.getElementsByTagName('body')[0]
+      page: document.body || document.getElementsByTagName('body')[0],
     };
   }
   emitChangeEvents() {

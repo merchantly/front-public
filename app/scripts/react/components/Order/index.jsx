@@ -140,7 +140,10 @@ export default provideTranslations(connectToRedux(connect(
     const {
       coupon={},
       deliveryTypes=[],
-      totalCount=0,
+      cart: {
+        totalCount=0,
+        totalPrice: cartTotalPrice={},
+      }={},
       checkoutFields=[],
       checkoutFieldValues: fieldValues=[],
       selectedDeliveryType: selectedDeliveryTypeId,
@@ -160,7 +163,7 @@ export default provideTranslations(connectToRedux(connect(
       paymentTypes,
       (p) => p.id === selectedPaymentTypeId
     ) || first(paymentTypes) || {};
-    const totalPrice = updateIn(cart.totalPrice, ['cents'], (cents) => {
+    const totalPrice = updateIn(cartTotalPrice, ['cents'], (cents) => {
         if (cents == null) {
           return cents;
         }
