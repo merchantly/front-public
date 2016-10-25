@@ -11,6 +11,9 @@ export default class DesignSettingsSlider extends Component {
     to: PropTypes.number,
     value: PropTypes.number.isRequired,
   }
+  handleSlide(range) {
+    this.props.onChange(parseFloat(range[0]));
+  }
   render() {
     const { displayValue, value } = this.props;
     const sliderClasses = classNames({
@@ -21,8 +24,8 @@ export default class DesignSettingsSlider extends Component {
       <span className={sliderClasses}>
         <Slider
           {...this.props}
-          onSlide={this.handleSlide.bind(this)}
           onChange={this.handleSlide.bind(this)}
+          onSlide={this.handleSlide.bind(this)}
         />
         {displayValue &&
           <span className="design-settings__slider-value">
@@ -31,8 +34,5 @@ export default class DesignSettingsSlider extends Component {
         }
       </span>
     );
-  }
-  handleSlide(range) {
-    this.props.onChange(parseFloat(range[0]));
   }
 }

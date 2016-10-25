@@ -1,6 +1,5 @@
 import React from 'react';
 import { renderIntoDocument } from 'react-addons-test-utils';
-import Immutable from 'immutable';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import DesignSettings from '../../../../app/scripts/react/components/DesignSettings';
@@ -30,13 +29,13 @@ const current = {
 };
 
 describe('[Component] DesignSettings', () => {
-  it('should render without errors', () => {  
-    const design = Immutable.fromJS({
+  it('should render without errors', () => {
+    const design = {
       current: current,
       currentSaved: current,
       unsavedFields: {},
       isSaving: false,
-    });
+    };
     const callbacks = {
       changeImage: sinon.spy(),
       changeOption: sinon.spy(),
@@ -47,7 +46,7 @@ describe('[Component] DesignSettings', () => {
 
     const renderedComponent = renderIntoDocument(
       <DesignSettings
-        {...design.toObject()}
+        {...design}
         {...callbacks}
         authUrl="http://google.ru"
         categoryPageUrl="http://wanna-be.ru/categories/635-braslety"

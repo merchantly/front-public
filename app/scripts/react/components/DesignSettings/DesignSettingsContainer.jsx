@@ -1,4 +1,4 @@
-/*global $ */
+import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import Cookies from 'cookies-js';
 import store from 'store';
@@ -10,7 +10,7 @@ import * as popupActions from '../../actions/popupActions';
 import * as storageKeys from '../../constants/storageKeys';
 import * as cookieKeys from '../../constants/cookieKeys';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
-import DesignSettings from '.';
+import DesignSettings from './index';
 import { any } from 'lodash';
 
 @connect((state) => ({
@@ -30,7 +30,7 @@ class DesignSettingsContainer extends Component {
     const isOpened = this.isOpened(this.props);
 
     if (isOpened) {
-      store.set(storageKeys.DESIGN_CURRENT, this.props.design.toJS().current);
+      store.set(storageKeys.DESIGN_CURRENT, this.props.design.current);
     } else {
       store.remove(storageKeys.DESIGN_CURRENT);
     }
@@ -69,7 +69,7 @@ class DesignSettingsContainer extends Component {
     if (this.isOpened(this.props)) {
       return (
         <DesignSettings
-          {...design.toObject()}
+          {...design}
           {...bindActionCreators({...designActions, ...popupActions}, dispatch)}
           authUrl={authUrl}
           categoryPageUrl={categoryPageUrl}

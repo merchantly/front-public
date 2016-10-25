@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class DesignSettingsCloseButton extends Component {
   static propTypes = {
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   }
   render() {
     return (

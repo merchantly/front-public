@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.625",
+  "version": "0.0.627",
   "description": "JS application for kormilica.info",
   "repository": {
     "type": "git",
@@ -28,7 +28,6 @@
     "flux": "^2.0.1",
     "humps": "^1.1.0",
     "i18next": "^2.0.10",
-    "immutable": "^3.7.4",
     "jquery": "^2.1.4",
     "jquery-ujs": "^1.2.2",
     "jss": "^2.3.5",

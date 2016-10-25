@@ -1,4 +1,3 @@
-import Immutable from 'immutable';
 import createReducer from '../utils/createReducer';
 
 const current = {
@@ -25,11 +24,11 @@ const current = {
   fontSize: 'md',
 };
 
-const initialState = Immutable.fromJS({
+const initialState = {
   current: current,
   currentSaved: current,
   unsavedFields: {},
-  isSaving: false
-});
+  isSaving: false,
+};
 
 export default createReducer(initialState, {});

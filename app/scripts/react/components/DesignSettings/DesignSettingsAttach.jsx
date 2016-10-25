@@ -1,31 +1,30 @@
 import React, { Component, PropTypes } from 'react';
-import { Map } from 'immutable';
 import classNames from 'classnames';
 
 function selectFile(name, text, onChange) {
   return class SelectFile extends Component {
     static propTypes = {
       withText: PropTypes.bool,
-      className: PropTypes.string
+      className: PropTypes.string,
     }
     render() {
       return (
         <label
-          htmlFor={name}
           className={classNames('select-file', this.props.className)}
+          htmlFor={name}
         >
           {this.props.withText && text}
           <input
-            type="file"
             accept="image/*"
-            id={name}
             className="select-file__input"
+            id={name}
             onChange={onChange}
+            type="file"
           />
         </label>
       );
     }
-  }
+  };
 }
 
 export default class DesignSettingsAttach extends Component {
@@ -35,7 +34,32 @@ export default class DesignSettingsAttach extends Component {
     className: PropTypes.string,
     value: PropTypes.string,
     children: PropTypes.func,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
+  };
+  renderBox() {
+    if (this.props.value) {
+      return (
+        <div className="design-settings__attach-box">
+          <span onClick={this.handleDelete.bind(this)}>
+            <i className="design-settings__attach-delete" />
+          </span>
+          <img
+            className="design-settings__attach-img"
+            src={this.props.value}
+          />
+        </div>
+      );
+    }
+  }
+  getSelectText() {
+    const { value } = this.props;
+    return value ? 'Выбрать другой файл...' : 'Выбрать файл...';
+  }
+  handleChange(e) {
+    this.props.onChange(e.target.files[0]);
+  }
+  handleDelete() {
+    this.props.onChange(null);
   }
   render() {
     const { name, children } = this.props;
@@ -47,30 +71,5 @@ export default class DesignSettingsAttach extends Component {
         {children && children(selectFile(name, selectText, this.handleChange.bind(this)))}
       </div>
     );
-  }
-  renderBox() {
-    if (this.props.value) {
-      return (
-        <div className="design-settings__attach-box">
-          <span onClick={this.handleDelete.bind(this)}>
-            <i className="design-settings__attach-delete" />
-          </span>
-          <img
-            src={this.props.value}
-            className="design-settings__attach-img"
-          />
-        </div>
-      );
-    }
-  }
-  getSelectText() {
-    const { value } = this.props;
-    return value ? 'Выбрать другой файл...' : 'Выбрать файл...'
-  }
-  handleChange(e) {
-    this.props.onChange(e.target.files[0]);
-  }
-  handleDelete() {
-    this.props.onChange(null);
   }
 }
