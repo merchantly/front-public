@@ -18,7 +18,7 @@ class CheckoutFields extends Component {
       placeholder='',
       title='',
     } = item;
-    // const isRequired = deliveryType.get('requiredFields', emptyList).includes(name);
+    // const isRequired = includes(deliveryType.requiredFields || [], name);
     const reservedValue = getIn(deliveryType, ['reservedFieldValues', camelize(name)]);
     const isDisabled = !!reservedValue;
     const itemId = `vendor_order_${name}`;

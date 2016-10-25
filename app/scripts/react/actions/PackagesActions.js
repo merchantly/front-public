@@ -15,7 +15,7 @@ export function initPackages(initialPackages) {
 
 export function fetchPackages() {
   return (dispatch, getState) => {
-    const isFetching = getState().packages.get('isFetching', false);
+    const isFetching = getState().packages.isFetching;
 
     if (isFetching) {
       return null;

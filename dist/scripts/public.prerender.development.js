@@ -283,7 +283,7 @@ function initPackages(initialPackages) {
 
 function fetchPackages() {
   return function (dispatch, getState) {
-    var isFetching = getState().packages.get('isFetching', false);
+    var isFetching = getState().packages.isFetching;
 
     if (isFetching) {
       return null;
@@ -5806,7 +5806,7 @@ var CheckoutFields = function (_Component) {
           placeholder = _item$placeholder === undefined ? '' : _item$placeholder,
           _item$title = item.title,
           title = _item$title === undefined ? '' : _item$title;
-      // const isRequired = deliveryType.get('requiredFields', emptyList).includes(name);
+      // const isRequired = includes(deliveryType.requiredFields || [], name);
 
       var reservedValue = (0, _timm.getIn)(deliveryType, ['reservedFieldValues', (0, _humps.camelize)(name)]);
       var isDisabled = !!reservedValue;
@@ -10554,11 +10554,13 @@ var _index = require('./index');
 
 var _index2 = _interopRequireDefault(_index);
 
+var _timm = require('timm');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LogoContainer = (_dec = (0, _reactRedux.connect)(function (state) {
   return {
-    globalLogoUrl: state.design.getIn(['current', 'logoUrl'])
+    globalLogoUrl: (0, _timm.getIn)(state.design, ['current', 'logoUrl'])
   };
 }), _dec(_class = (_temp2 = _class2 = function (_Component) {
   (0, _inherits3.default)(LogoContainer, _Component);
@@ -10605,7 +10607,7 @@ var LogoContainer = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(LogoContainer);
 module.exports = exports['default'];
 
-},{"../HoC/connectToRedux":90,"./index":100,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react","react-redux":"react-redux"}],100:[function(require,module,exports){
+},{"../HoC/connectToRedux":90,"./index":100,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react","react-redux":"react-redux","timm":"timm"}],100:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
