@@ -10,19 +10,28 @@ import { scripts as config } from '../config';
 
 const baseDependencies = {
   'classnames': './node_modules/classnames',
-  'immutable': './node_modules/immutable/dist/immutable',
+  'cookies-js': './node_modules/cookies-js',
+  'deep-diff': '././node_modules/deep-diff',
+  'i18next': './node_modules/i18next',
   'jss': './node_modules/jss/lib',
+  'jquery': './node_modules/jquery/dist/jquery',
+  'lodash': './node_modules/lodash',
   'nouislider': './node_modules/nouislider/distribute/nouislider',
   'perfect-scrollbar': './node_modules/perfect-scrollbar',
   'react': './node_modules/react',
   'react-dom': './node_modules/react-dom',
+  'react-nouislider': './node_modules/react-nouislider',
+  'react-redux': './node_modules/react-redux',
+  'react-spinjs': './node_modules/react-spinjs',
+  'react-stickynode': './node_modules/react-stickynode',
   'redux': './node_modules/redux',
+  'redux-thunk': './node_modules/redux-thunk',
+  'rodal': './node_modules/rodal',
   'reqwest': './node_modules/reqwest',
   'tinycolor2': './node_modules/tinycolor2',
+  'timm': './node_modules/timm',
   'urijs': './node_modules/urijs/src/URI',
-  'i18next': './node_modules/i18next',
-
-  'jquery': './node_modules/jquery/dist/jquery',
+  
   'jquery.mmenu': './app/bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all',
   'jquery.role': './app/bower_components/jquery.role/lib/jquery.role',
   'jquery.sticky-kit': './app/bower_components/sticky-kit/jquery.sticky-kit',
@@ -32,7 +41,6 @@ const baseDependencies = {
   'fancybox': './app/bower_components/fancybox/source/jquery.fancybox',
   'fancybox.wannabe': './app/bower_components/fancybox-wannabe-fix/index',
   'accounting': './app/bower_components/accounting.js/accounting',
-  'lodash': './node_modules/lodash',
 };
 const staticDependencies = {
   'react-addons-test-utils': './node_modules/react-addons-test-utils',

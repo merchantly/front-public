@@ -1,10 +1,10 @@
 import store from 'store';
-import Immutable from 'immutable';
 import { diff } from 'deep-diff';
 import createReducer from '../utils/createReducer';
 import createObjectUrl from '../utils/createObjectUrl';
 import * as actionTypes from '../constants/actionTypes';
 import * as storageKeys from '../constants/storageKeys';
+import { merge, mergeIn, set, setIn, omit, getIn } from 'timm';
 
 const current = {
   activeElementsColor: '#000000',
@@ -30,12 +30,12 @@ const current = {
   fontSize: 'md',
 };
 
-const initialState = Immutable.fromJS({
+const initialState = {
   current: current,
   currentSaved: current,
   unsavedFields: {},
-  isSaving: false
-});
+  isSaving: false,
+};
 
 function getUnsavedFields(currentSaved, current) {
   return Object.keys(current).reduce((prev, key) => {
@@ -48,20 +48,20 @@ function getUnsavedFields(currentSaved, current) {
 
 export default createReducer(initialState, {
   [actionTypes.POPUP_CLOSE](state) {
-    const currentSaved = state.toJS().currentSaved;
+    const currentSaved = state.currentSaved;
 
-    return state.merge({
+    return merge(state, {
       current: currentSaved,
       unsavedFields: {},
       isSaving: false,
     });
   },
   [actionTypes.DESIGN_INIT](state) {
-    const currentSaved = state.toJS().current;
+    const currentSaved = state.current;
     const currentCached = store.get(storageKeys.DESIGN_CURRENT);
 
     if (currentCached && diff(currentSaved, currentCached)) {
-      return state.merge({
+      return merge(state, {
         current: currentCached,
         unsavedFields: getUnsavedFields(currentSaved, currentCached),
       });
@@ -70,54 +70,52 @@ export default createReducer(initialState, {
     }
   },
   [actionTypes.DESIGN_CHANGE_OPTION](state, { name, value }) {
-    let unsavedFields = state.get('unsavedFields');
+    let unsavedFields = state.unsavedFields;
 
-    if (state.getIn(['currentSaved', name]) !== value) {
-      unsavedFields = unsavedFields.set(name, value);
+    if (getIn(state, ['currentSaved', name]) !== value) {
+      unsavedFields = set(unsavedFields, name, value);
     } else {
-      unsavedFields = unsavedFields.delete(name);
+      unsavedFields = omit(unsavedFields, name);
     }
 
-    return state
-      .mergeDeep({ current: { [name]: value } })
-      .merge({ unsavedFields });
+    return set(
+      setIn(state, ['current', name], value),
+      'unsavedFields',
+      unsavedFields
+    );
   },
   [actionTypes.DESIGN_CHANGE_ATTACHMENT_OPTION](state, { name, file }) {
-    let unsavedFields = state.get('unsavedFields');
+    let unsavedFields = state.unsavedFields;
 
-    if (state.getIn(['currentSaved', name]) !== file) {
-      unsavedFields = unsavedFields.set(name, file);
+    if (getIn(state, ['currentSaved', name]) !== file) {
+      unsavedFields = set(unsavedFields, name, file);
     } else {
-      unsavedFields = unsavedFields.delete(name);
+      unsavedFields = omit(unsavedFields, name);
     }
 
-    return state
-      .mergeDeep({
-        current: {
-          [name + 'Url']: file ? createObjectUrl(file) : file,
-          [name + 'File']: file
-        }
-      })
-      .merge({ unsavedFields });
+    return set(
+      mergeIn(state, ['current'], {
+        [`${name}Url`]: file ? createObjectUrl(file) : file,
+        [`${name}File`]: file,
+      }),
+      'unsavedFields',
+      unsavedFields
+    );
   },
   [actionTypes.DESIGN_SAVE](state) {
-    return state.merge({
-      isSaving: true
-    });
+    return set(state, 'isSaving', true);
   },
   [actionTypes.DESIGN_SAVE_FAILURE](state) {
-    return state.merge({
-      isSaving: false
-    });
+    return set(state, 'isSaving', false);
   },
   [actionTypes.DESIGN_SAVE_SUCCESS](state, { design }) {
     store.remove(storageKeys.DESIGN_CURRENT);
 
-    return state.merge({
+    return merge(state, {
       current: design,
       currentSaved: design,
       unsavedFields: {},
-      isSaving: false
+      isSaving: false,
     });
-  }
+  },
 });

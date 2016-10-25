@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { Map } from 'immutable';
-
 import designOptions from '../../models/designOptions';
 
 import Scroller from '../common/Scroller';
@@ -21,7 +19,7 @@ export default class DesignSettings extends Component {
     changeImage: PropTypes.func.isRequired,
     changeOption: PropTypes.func.isRequired,
     closeDesignSettingsPopup: PropTypes.func.isRequired,
-    current: PropTypes.instanceOf(Map).isRequired,
+    current: PropTypes.object.isRequired,
     isSaving: PropTypes.bool.isRequired,
     onItemClick: PropTypes.func.isRequired,
     pageType: PropTypes.string.isRequired,
@@ -33,17 +31,17 @@ export default class DesignSettings extends Component {
     const { current, changeOption } = this.props;
     return {
       ...designOptions[property],
-      value: current.get(property),
-      onChange: changeOption.bind(this, property)
+      value: current[property],
+      onChange: changeOption.bind(this, property),
     };
   }
   getAttachProps(property) {
     const { current, changeImage } = this.props;
     return {
-      ...designOptions[property + 'Url'],
-      value: current.get(property + 'Url'),
-      onChange: changeImage.bind(this, property)
-    }
+      ...designOptions[`${property}Url`],
+      value: current[`${property}Url`],
+      onChange: changeImage.bind(this, property),
+    };
   }
   getAccordionItemProps(title) {
     return {
@@ -58,8 +56,14 @@ export default class DesignSettings extends Component {
   }
   render() {
     const {
-      authUrl, categoryPageUrl, closeDesignSettingsPopup, isSaving, pageType,
-      productPageUrl, saveChanges, unsavedFields
+      authUrl,
+      categoryPageUrl,
+      closeDesignSettingsPopup,
+      isSaving,
+      pageType,
+      productPageUrl,
+      saveChanges,
+      unsavedFields,
     } = this.props;
 
     return (
@@ -85,15 +89,15 @@ export default class DesignSettings extends Component {
                   <DesignSettingsRadioList {...this.getProps('mainPageProductsInRow')} />
                 </DesignSettingsOption>
                 <DesignSettingsOption title="Строк товаров">
-                  <DesignSettingsSlider {...this.getProps('mainPageRows')} displayValue={true} />
+                  <DesignSettingsSlider {...this.getProps('mainPageRows')} displayValue />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Фильтр товаров слева">
+                <DesignSettingsOption inRow title="Фильтр товаров слева">
                   <DesignSettingsCheckbox {...this.getProps('mainPageFilter')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Слайдер посередине">
+                <DesignSettingsOption inRow title="Слайдер посередине">
                   <DesignSettingsCheckbox {...this.getProps('mainPageSlider')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Товары в порядке установки">
+                <DesignSettingsOption inRow title="Товары в порядке установки">
                   <DesignSettingsCheckbox {...this.getProps('mainPageOrdered')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -107,9 +111,9 @@ export default class DesignSettings extends Component {
                   <DesignSettingsRadioList {...this.getProps('categoryPageProductsInRow')} />
                 </DesignSettingsOption>
                 <DesignSettingsOption title="Строк товаров">
-                  <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue={true} />
+                  <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Фильтр товаров слева">
+                <DesignSettingsOption inRow title="Фильтр товаров слева">
                   <DesignSettingsCheckbox {...this.getProps('categoryPageFilter')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -122,7 +126,7 @@ export default class DesignSettings extends Component {
                 <DesignSettingsOption title="Расположение фото">
                   <DesignSettingsRadioList {...this.getProps('productPagePhoto')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Подобные товары снизу">
+                <DesignSettingsOption inRow title="Подобные товары снизу">
                   <DesignSettingsCheckbox {...this.getProps('showSimilarProducts')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -131,13 +135,13 @@ export default class DesignSettings extends Component {
                 {...this.getAccordionItemProps('Общие настройки')}
                 itemKey="common"
               >
-                <DesignSettingsOption inRow={true} title="Галерея Instagram снизу">
+                <DesignSettingsOption inRow title="Галерея Instagram снизу">
                   <DesignSettingsCheckbox {...this.getProps('mainPageInstagram')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Баннер сверху">
+                <DesignSettingsOption inRow title="Баннер сверху">
                   <DesignSettingsCheckbox {...this.getProps('mainPageBanner')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow={true} title="Виджет W1 снизу">
+                <DesignSettingsOption inRow title="Виджет W1 снизу">
                   <DesignSettingsCheckbox {...this.getProps('w1Widget')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -149,7 +153,7 @@ export default class DesignSettings extends Component {
                     className="design-settings__attach--image"
                   >
                     {(SelectFile) =>
-                       <SelectFile className="select-file--icon select-file--icon-pencil" />
+                      <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
@@ -159,7 +163,7 @@ export default class DesignSettings extends Component {
                     className="design-settings__attach--image"
                   >
                     {(SelectFile) =>
-                       <SelectFile className="select-file--icon select-file--icon-pencil" />
+                      <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
@@ -191,8 +195,8 @@ export default class DesignSettings extends Component {
         <div className="design-settings__footer">
           <DesignSettingsSaveButton
             isSaving={isSaving}
-            unsavedFields={unsavedFields}
             onClick={saveChanges.bind(this, authUrl)}
+            unsavedFields={unsavedFields}
           />
         </div>
       </div>

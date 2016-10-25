@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fromJS } from 'immutable';
 import jss from 'jss';
 import nested from 'jss-nested';
 import tinycolor from 'tinycolor2';
 import connectToRedux from '../HoC/connectToRedux';
-import { any } from 'lodash';
+import { any, reduce } from 'lodash';
+import { merge } from 'lodash';
 
 jss.use(nested);
 
@@ -132,12 +132,12 @@ class DesignPreview extends Component {
   componentDidMount() {
     this.attachSheet();
     if (this.isPopupOpened(this.props)) {
-      this.apply(this.props.design.get('current'));
+      this.apply(this.props.design.current);
     }
   }
   componentWillUpdate(nextProps) {
     this.reattachSheet();
-    this.apply(nextProps.design.get('current'));
+    this.apply(nextProps.design.current);
   }
   componentWillUnmount() {
     this.sheet.detach();
@@ -170,7 +170,7 @@ class DesignPreview extends Component {
   }
   getStatesValues(design, states, pageType) {
     const statesForPageType = this.getStatesByPageType(states, pageType);
-    return design.reduce((previous, value, property) => {
+    return reduce(design, (previous, value, property) => {
       const state = statesForPageType[property];
       if (state) {
         previous[state] = value;
@@ -192,19 +192,20 @@ class DesignPreview extends Component {
   }
   getRules(design, pageType) {
     const rulesForPageType = this.getRulesByPageType(_rules, pageType);
-    return design.reduce((previous, value, property) => {
+    return reduce(design, (previous, value, property) => {
       const rule = rulesForPageType[property];
       if (rule) {
-        const cssRule = rule(value, design.toJS());
+        const cssRule = rule(value, design);
         if (cssRule.dep) {
-          const depValue = design.get(cssRule.dep);
-          previous = previous.mergeDeep(cssRule.rule(depValue));
+          const depValue = design[cssRule.dep];
+          return merge(previous, cssRule.rule(depValue));
         } else {
-          previous = previous.mergeDeep(cssRule);
+          return merge(previous, cssRule);
         }
       }
+
       return previous;
-    }, fromJS({})).toJS();
+    }, {});
   }
   getPageClasses(design, states) {
     const page = this.getElements().page;

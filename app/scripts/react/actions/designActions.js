@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import NoticeService from '../services/Notice';
 import buildParams from '../utils/buildParams';
 import * as apiRoutes from '../../routes/api';
@@ -21,7 +22,7 @@ export function changeImage(name, file) {
 
 export function saveChanges(authUrl) {
   return (dispatch, getState) => {
-    const current = getState().design.get('current').toJS();
+    const { current } = getState().design;
     const ignoredKeys = ['logoUrl', 'pageBgUrl'];
     const data = Object.keys(current).reduce(function (previous, key) {
       if (ignoredKeys.indexOf(key) === -1) previous[key] = current[key];
@@ -34,7 +35,7 @@ export function saveChanges(authUrl) {
     const formData = new FormData();
     const add = function add(key, value) {
       formData.append(key, value === null ? '' : value);
-    }
+    };
 
     for(let key in data) {
       if(data.hasOwnProperty(key)) {
@@ -48,11 +49,11 @@ export function saveChanges(authUrl) {
       data: formData,
       cache: false,
       contentType: false,
-      processData: false
+      processData: false,
     }).then((design) => {
         dispatch({
           type: actionTypes.DESIGN_SAVE_SUCCESS,
-          design
+          design,
         });
       })
       .fail((jqXHR) => {
@@ -65,5 +66,5 @@ export function saveChanges(authUrl) {
 
         dispatch({ type: actionTypes.DESIGN_SAVE_FAILURE });
       });
-  }
+  };
 }

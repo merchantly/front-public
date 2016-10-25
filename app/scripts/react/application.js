@@ -7,7 +7,6 @@ import {
 import * as reducers from './reducers';
 import apiMiddleware from './middleware/api';
 import thunkMiddleware from 'redux-thunk';
-import { fromJS } from 'immutable';
 
 // Bootstraping serverside data
 let data = {};
@@ -15,17 +14,17 @@ if (global.gon.__data) {
   const { design } = global.gon.__data;
 
   data = {
-    design: fromJS({
+    design: {
       current: design,
       currentSaved: design,
       unsavedFields: {},
       isSaving: false,
-    }),
+    },
   };
 }
 
 global.Kiosk = {
-  version: '0.0.625',
+  version: '0.0.628',
 };
 
 // Unless we have no one common component, we will be pass <Provider /> global redux

@@ -2,9 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import connectToRedux from '../HoC/connectToRedux';
 import Logo from './index';
+import { getIn } from 'timm';
 
 @connect((state) => ({
-  globalLogoUrl: state.design.getIn(['current', 'logoUrl']),
+  globalLogoUrl: getIn(state.design, ['current', 'logoUrl']),
 }))
 class LogoContainer extends Component {
   static propTypes = {
