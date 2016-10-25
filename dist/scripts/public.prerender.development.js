@@ -236,7 +236,7 @@ function initCheckout(params) {
 
 function fetchCart() {
   return function (dispatch, getState) {
-    var isFetching = getState().cart.get('isFetching', false);
+    var isFetching = getState().cart.isFetching;
 
     if (isFetching) {
       return null;
@@ -1842,6 +1842,8 @@ var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
 
+var _lodash = require('lodash');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -1894,9 +1896,7 @@ var Cart = function (_Component) {
           minimal_price: (0, _money.humanizedMoneyWithCurrency)(minimalPrice),
           currency: ''
         }), 'minimal-price'),
-        cartErrors.filterNot(function (_, key) {
-          return key === 'minimalPrice';
-        }).toList().flatten(false).map(this.renderError).valueSeq()
+        (0, _lodash.chain)(cartErrors).omit('minimalPrice').toArray().flatten(true).map(this.renderError).value()
       );
     }
   }, {
@@ -1919,7 +1919,7 @@ var Cart = function (_Component) {
       var t = _props2.t;
       var totalPrice = _props2.totalPrice;
 
-      var hasErrors = isBelowMinimalPrice || cartErrors.count() > 0;
+      var hasErrors = isBelowMinimalPrice || (0, _lodash.size)((0, _lodash.omit)(cartErrors, 'minimalPrice')) > 0;
       var isProcessing = this.state.isProcessing;
 
 
@@ -1952,7 +1952,7 @@ var Cart = function (_Component) {
             { className: 'b-cart__title', title: t('vendor.cart.title') },
             t('vendor.cart.title')
           ),
-          cartItems.count() === 0 ? _react2.default.createElement(
+          (0, _lodash.size)(cartItems) === 0 ? _react2.default.createElement(
             'div',
             { className: 'b-text b-text_center' },
             _react2.default.createElement(
@@ -1992,7 +1992,7 @@ var Cart = function (_Component) {
                 'span',
                 null,
                 _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
-                  money: (0, _humps.decamelizeKeys)(totalPrice.toJS())
+                  money: (0, _humps.decamelizeKeys)(totalPrice)
                 })
               )
             ),
@@ -2052,13 +2052,13 @@ Cart.propTypes = {
   cartDefaultUrl: _react.PropTypes.string.isRequired,
   cartErrors: _react.PropTypes.object.isRequired,
   cartIsFetching: _react.PropTypes.bool.isRequired,
-  cartItems: _react.PropTypes.object.isRequired,
+  cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
-  packages: _react.PropTypes.object.isRequired,
+  packages: _react.PropTypes.array.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
@@ -2070,7 +2070,7 @@ Cart.propTypes = {
 exports.default = Cart;
 module.exports = exports['default'];
 
-},{"../../helpers/money":283,"../../schemas":308,"../common/FormAuthenticity":238,"../common/Money/HumanizedMoneyWithCurrency":252,"./CartCoupon":26,"./CartList":27,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react","react-spinjs":611,"rodal":780}],25:[function(require,module,exports){
+},{"../../helpers/money":283,"../../schemas":308,"../common/FormAuthenticity":238,"../common/Money/HumanizedMoneyWithCurrency":252,"./CartCoupon":26,"./CartList":27,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"lodash":"lodash","react":"react","react-spinjs":611,"rodal":780}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2163,6 +2163,10 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -2252,7 +2256,7 @@ var CartCoupon = exports.CartCoupon = function (_Component) {
     value: function checkCode(code) {
       if (this.pendingRequest) this.pendingRequest.abort();
 
-      this.pendingRequest = $.ajax({
+      this.pendingRequest = _jquery2.default.ajax({
         url: apiRoutes.checkCouponCode(),
         type: 'POST',
         data: { code: code }
@@ -2307,7 +2311,7 @@ CartCoupon.defaultProps = {
 
 exports.default = (0, _provideTranslations2.default)(CartCoupon);
 
-},{"../../../routes/api":331,"../HoC/provideTranslations":91,"../common/TextInput":267,"./CartAlert":25,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],27:[function(require,module,exports){
+},{"../../../routes/api":331,"../HoC/provideTranslations":91,"../common/TextInput":267,"./CartAlert":25,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"jquery":"jquery","react":"react"}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2350,6 +2354,8 @@ var _CartListPackages = require('./CartListPackages');
 
 var _CartListPackages2 = _interopRequireDefault(_CartListPackages);
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CartList = function (_Component) {
@@ -2378,19 +2384,20 @@ var CartList = function (_Component) {
       return _react2.default.createElement(
         'ul',
         { className: 'b-cart__list' },
-        items.map(function (item, idx) {
-          var itemId = item.get('id');
+        (0, _lodash.map)(items, function (item, idx) {
+          var itemId = item.id;
+
 
           return _react2.default.createElement(_CartListItem2.default, {
-            amount: amounts.get(itemId, 0),
+            amount: amounts[itemId] || 0,
             changeAmount: changeAmount,
             item: item,
             key: 'cart-item-' + idx,
-            price: prices.get(itemId, 0),
+            price: prices[itemId] || 0,
             t: t
           });
-        }).valueSeq(),
-        !packageItem.isEmpty() ? _react2.default.createElement(_CartListPackageItem2.default, {
+        }),
+        !(0, _lodash.isEmpty)(packageItem) ? _react2.default.createElement(_CartListPackageItem2.default, {
           item: packageItem,
           t: t
         }) : _react2.default.createElement(_CartListPackages2.default, {
@@ -2408,9 +2415,9 @@ var CartList = function (_Component) {
 CartList.propTypes = {
   amounts: _react.PropTypes.object.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
-  items: _react.PropTypes.object.isRequired,
+  items: _react.PropTypes.array.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
-  packages: _react.PropTypes.object.isRequired,
+  packages: _react.PropTypes.array.isRequired,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
@@ -2420,7 +2427,7 @@ CartList.propTypes = {
 exports.default = CartList;
 module.exports = exports['default'];
 
-},{"./CartListItem":28,"./CartListPackageItem":29,"./CartListPackages":30,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],28:[function(require,module,exports){
+},{"./CartListItem":28,"./CartListPackageItem":29,"./CartListPackages":30,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"lodash":"lodash","react":"react"}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2465,19 +2472,17 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
-var _immutable = require('immutable');
-
 var _humps = require('humps');
 
 var _lodash = require('lodash');
+
+var _timm = require('timm');
 
 var _OrderConstants = require('../../constants/OrderConstants');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var emptyMap = (0, _immutable.Map)(); /*global gon */
-
-var WEIGHT_STEP = 0.01;
+var WEIGHT_STEP = 0.01; /*global gon */
 
 var CartListItem = function (_Component) {
   (0, _inherits3.default)(CartListItem, _Component);
@@ -2494,9 +2499,9 @@ var CartListItem = function (_Component) {
       var changeAmount = _props.changeAmount;
       var item = _props.item;
 
-      var floatVal = parseFloat(ev.target.value) || parseFloat(item.getIn(['good', 'weightOfPrice'], 0));
+      var floatVal = parseFloat(ev.target.value) || parseFloat((0, _timm.getIn)(item, ['good', 'weightOfPrice']) || 0);
 
-      changeAmount(item.get('id'), floatVal);
+      changeAmount(item.id, floatVal);
     }
   }, {
     key: 'changeCount',
@@ -2506,36 +2511,36 @@ var CartListItem = function (_Component) {
       var item = _props2.item;
 
 
-      changeAmount(item.get('id'), count);
+      changeAmount(item.id, count);
     }
   }, {
     key: 'renderGoodDetails',
     value: function renderGoodDetails() {
-      var customAttributes = this.props.item.getIn(['good', 'customAttributes'], emptyMap);
+      var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']) || {};
 
-      return customAttributes.map(function (val, key) {
+      return (0, _lodash.map)(customAttributes, function (val, key) {
         return _react2.default.createElement(
           'div',
           { className: 'b-cart__item__option', key: 'custom-attr-' + key },
           key + ': ' + val
         );
-      }).valueSeq();
+      });
     }
   }, {
     key: 'renderErrors',
     value: function renderErrors() {
-      var errors = this.props.item.get('errors', emptyMap);
+      var errors = this.props.item.errors || {};
 
       return _react2.default.createElement(
         'div',
         { className: 'b-alert b-alert_danger' },
-        errors.map(function (err, key) {
+        (0, _lodash.map)(errors, function (err, key) {
           return _react2.default.createElement(
             'p',
             { key: 'cart-list-item-error-' + key },
             err.join(', ')
           );
-        }).valueSeq()
+        })
       );
     }
   }, {
@@ -2550,7 +2555,7 @@ var CartListItem = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'b-cart__item__col-weight' },
-        item.getIn(['good', 'hasOrderingGoods'], false) ? _react2.default.createElement(
+        (0, _timm.getIn)(item, ['good', 'hasOrderingGoods']) ? _react2.default.createElement(
           'span',
           null,
           _react2.default.createElement(
@@ -2564,7 +2569,7 @@ var CartListItem = function (_Component) {
             _react2.default.createElement('input', {
               defaultValue: amount,
               min: WEIGHT_STEP,
-              name: 'cart[items][' + item.get('id') + '][weight]',
+              name: 'cart[items][' + item.id + '][weight]',
               onChange: this.changeWeight.bind(this),
               step: WEIGHT_STEP.toString(),
               type: 'number'
@@ -2585,7 +2590,7 @@ var CartListItem = function (_Component) {
       var item = _props4.item;
       var t = _props4.t;
 
-      var maxAvail = Math.min(gon.max_items_count, item.getIn(['good', 'maxOrderableQuantity'], 0));
+      var maxAvail = Math.min(gon.max_items_count, (0, _timm.getIn)(item, ['good', 'maxOrderableQuantity']) || 0);
       var options = (0, _lodash.range)(0, Math.max(amount, maxAvail)).map(function (i) {
         return {
           value: i + 1,
@@ -2597,7 +2602,7 @@ var CartListItem = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'b-cart__item__col-quantity' },
-        item.getIn(['good', 'hasOrderingGoods'], false) ? _react2.default.createElement(
+        (0, _timm.getIn)(item, ['good', 'hasOrderingGoods']) ? _react2.default.createElement(
           'span',
           null,
           _react2.default.createElement(
@@ -2609,7 +2614,7 @@ var CartListItem = function (_Component) {
             'div',
             { className: 'b-cart__item__quantity__select' },
             _react2.default.createElement(_Select2.default, {
-              name: 'cart[items][' + item.get('id') + '][count]',
+              name: 'cart[items][' + item.id + '][count]',
               onChange: this.changeCount.bind(this),
               options: options,
               value: amount
@@ -2629,7 +2634,17 @@ var CartListItem = function (_Component) {
       var item = _props5.item;
       var price = _props5.price;
 
-      var priceObj = (0, _humps.decamelizeKeys)(price.toJS());
+      var _ref = item.good || {};
+
+      var image = _ref.image;
+      var _ref$defaultUrl = _ref.defaultUrl;
+      var defaultUrl = _ref$defaultUrl === undefined ? '' : _ref$defaultUrl;
+      var _ref$title = _ref.title;
+      var title = _ref$title === undefined ? '' : _ref$title;
+      var _ref$sellingByWeight = _ref.sellingByWeight;
+      var sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
+
+      var priceObj = (0, _humps.decamelizeKeys)(price);
 
       return _react2.default.createElement(
         'li',
@@ -2639,7 +2654,7 @@ var CartListItem = function (_Component) {
           { className: 'b-cart__item__col-img' },
           _react2.default.createElement(_Image.RelativeImage, {
             className: 'b-cart__item__img',
-            image: item.getIn(['good', 'image'], (0, _immutable.Map)()).toJS(),
+            image: image || {},
             maxHeight: _OrderConstants.ORDER_IMG_SIZE,
             maxWidth: _OrderConstants.ORDER_IMG_SIZE
           })
@@ -2653,16 +2668,16 @@ var CartListItem = function (_Component) {
             _react2.default.createElement(
               'a',
               {
-                href: item.getIn(['good', 'defaultUrl'], ''),
+                href: defaultUrl,
                 target: '_blank'
               },
-              item.getIn(['good', 'title'], '')
+              title
             )
           ),
           this.renderGoodDetails(),
-          item.get('errors', (0, _immutable.Map)()).count() > 0 && this.renderErrors()
+          (0, _lodash.size)(item.errors) > 0 && this.renderErrors()
         ),
-        item.getIn(['good', 'sellingByWeight'], false) ? this.renderWeight() : this.renderQuantity(),
+        sellingByWeight ? this.renderWeight() : this.renderQuantity(),
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-price' },
@@ -2680,7 +2695,7 @@ var CartListItem = function (_Component) {
             {
               className: 'b-cart__item__remove',
               'data-method': 'delete',
-              href: item.get('destroyPath', '')
+              href: item.destroyPath || ''
             },
             _react2.default.createElement(_AssetImage2.default, { src: 'images/cross_white.svg' })
           )
@@ -2702,7 +2717,7 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":269,"../common/AssetImage":234,"../common/Image":244,"../common/Money/HumanizedMoneyWithCurrency":252,"../common/Select":265,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"immutable":"immutable","lodash":"lodash","react":"react"}],29:[function(require,module,exports){
+},{"../../constants/OrderConstants":269,"../common/AssetImage":234,"../common/Image":244,"../common/Money/HumanizedMoneyWithCurrency":252,"../common/Select":265,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"lodash":"lodash","react":"react","timm":902}],29:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2743,9 +2758,11 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
-var _immutable = require('immutable');
-
 var _humps = require('humps');
+
+var _timm = require('timm');
+
+var _lodash = require('lodash');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2760,20 +2777,31 @@ var CartListPackageItem = function (_Component) {
   (0, _createClass3.default)(CartListPackageItem, [{
     key: 'renderGoodDetails',
     value: function renderGoodDetails() {
-      var customAttributes = this.props.item.getIn(['good', 'customAttributes'], (0, _immutable.Map)());
+      var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']) || {};
 
-      return customAttributes.map(function (val, key) {
+      return (0, _lodash.map)(customAttributes, function (val, key) {
         return _react2.default.createElement(
           'div',
           { className: 'b-cart__item__option', key: 'custom-attr-' + key },
           key + ': ' + val
         );
-      }).valueSeq();
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-      var item = this.props.item;
+      var _ref = this.props.item || {};
+
+      var _ref$destroyUrl = _ref.destroyUrl;
+      var destroyUrl = _ref$destroyUrl === undefined ? '' : _ref$destroyUrl;
+      var _ref$good = _ref.good;
+      var image = _ref$good.image;
+      var _ref$good$defaultUrl = _ref$good.defaultUrl;
+      var defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl;
+      var _ref$good$title = _ref$good.title;
+      var title = _ref$good$title === undefined ? '' : _ref$good$title;
+      var _ref$good$actualPrice = _ref$good.actualPrice;
+      var actualPrice = _ref$good$actualPrice === undefined ? {} : _ref$good$actualPrice;
 
 
       return _react2.default.createElement(
@@ -2784,7 +2812,7 @@ var CartListPackageItem = function (_Component) {
           { className: 'b-cart__item__col-img' },
           _react2.default.createElement(_Image.RelativeImage, {
             className: 'b-cart__item__img',
-            image: item.getIn(['good', 'image'], (0, _immutable.Map)()).toJS(),
+            image: image || {},
             maxHeight: 92,
             maxWidth: 92
           })
@@ -2798,10 +2826,10 @@ var CartListPackageItem = function (_Component) {
             _react2.default.createElement(
               'a',
               {
-                href: item.getIn(['good', 'defaultUrl'], ''),
+                href: defaultUrl,
                 target: '_blank'
               },
-              item.getIn(['good', 'title'], '')
+              title
             )
           ),
           this.renderGoodDetails()
@@ -2814,7 +2842,7 @@ var CartListPackageItem = function (_Component) {
             'div',
             { className: 'b-cart__item__price' },
             _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
-              money: (0, _humps.decamelizeKeys)(item.getIn(['good', 'actualPrice'], (0, _immutable.Map)()).toJS())
+              money: (0, _humps.decamelizeKeys)(actualPrice)
             })
           )
         ),
@@ -2826,7 +2854,7 @@ var CartListPackageItem = function (_Component) {
             {
               className: 'b-cart__item__remove',
               'data-method': 'delete',
-              href: item.get('destroyUrl')
+              href: destroyUrl
             },
             _react2.default.createElement(_AssetImage2.default, { src: 'images/cross_white.svg' })
           )
@@ -2844,7 +2872,7 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
-},{"../common/AssetImage":234,"../common/Image":244,"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"immutable":"immutable","react":"react"}],30:[function(require,module,exports){
+},{"../common/AssetImage":234,"../common/Image":244,"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"lodash":"lodash","react":"react","timm":902}],30:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2879,9 +2907,11 @@ var _Image = require('../common/Image');
 
 var _money = require('../../helpers/money');
 
-var _immutable = require('immutable');
-
 var _humps = require('humps');
+
+var _lodash = require('lodash');
+
+var _timm = require('timm');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2934,15 +2964,20 @@ var CartListPackages = function (_Component) {
   }, {
     key: 'renderTitle',
     value: function renderTitle(item) {
+      var _item$title = item.title;
+      var title = _item$title === undefined ? '' : _item$title;
+      var price = item.price;
+
+
       return _react2.default.createElement(
         'span',
         null,
-        item.get('title', ''),
+        title,
         ' - ',
         _react2.default.createElement(
           'b',
           null,
-          (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(item.get('price', (0, _immutable.Map)()).toJS()))
+          (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(price))
         )
       );
     }
@@ -2957,7 +2992,7 @@ var CartListPackages = function (_Component) {
       var t = _props.t;
 
 
-      if (packages.count() === 0) {
+      if ((0, _lodash.size)(packages) === 0) {
         return _react2.default.createElement('noscript', null);
       }
 
@@ -2972,7 +3007,7 @@ var CartListPackages = function (_Component) {
             { className: 'b-cart__item__col-img' },
             _react2.default.createElement(_Image.RelativeImage, {
               className: 'b-cart__item__img',
-              image: packages.first().get('image').toJS(),
+              image: (0, _timm.getIn)(packages, [0, 'image']),
               maxHeight: 184,
               maxWidth: 184
             })
@@ -2991,14 +3026,14 @@ var CartListPackages = function (_Component) {
               title: t('vendor.packaging.no_package'),
               checked: !selectedPackage
             }),
-            packages.map(function (item, idx) {
+            (0, _lodash.map)(packages, function (item, idx) {
               return _this2.renderRadioButton({
                 key: 'radio-button-' + idx,
                 title: _this2.renderTitle(item),
-                value: item.get('globalId', ''),
-                checked: selectedPackage === item.get('globalId')
+                value: item.globalId || '',
+                checked: selectedPackage === item.globalId
               });
-            }).valueSeq()
+            })
           )
         )
       );
@@ -3008,7 +3043,7 @@ var CartListPackages = function (_Component) {
 }(_react.Component);
 
 CartListPackages.propTypes = {
-  packages: _react.PropTypes.object.isRequired,
+  packages: _react.PropTypes.array.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired
@@ -3017,7 +3052,7 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
-},{"../../helpers/money":283,"../common/Image":244,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"immutable":"immutable","react":"react"}],31:[function(require,module,exports){
+},{"../../helpers/money":283,"../common/Image":244,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"lodash":"lodash","react":"react","timm":902}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3185,17 +3220,13 @@ var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
 
-var _immutable = require('immutable');
+var _timm = require('timm');
+
+var _lodash = require('lodash');
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var emptyErrors = (0, _immutable.Map)();
-var emptyAmounts = (0, _immutable.Map)();
-var emptyItems = (0, _immutable.List)();
-var emptyItem = (0, _immutable.Map)();
-var emptyPrice = (0, _immutable.Map)();
 
 var storeInitialized = false;
 
@@ -3263,7 +3294,7 @@ CartContainer.propTypes = {
   cartDefaultUrl: _react.PropTypes.string.isRequired,
   cartErrors: _react.PropTypes.object.isRequired,
   cartIsFetching: _react.PropTypes.bool.isRequired,
-  cartItems: _react.PropTypes.object.isRequired,
+  cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   fetchCart: _react.PropTypes.func.isRequired,
@@ -3272,7 +3303,7 @@ CartContainer.propTypes = {
   initPackages: _react.PropTypes.func.isRequired,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
-  packages: _react.PropTypes.object.isRequired,
+  packages: _react.PropTypes.array.isRequired,
   packagesIsFetching: _react.PropTypes.bool.isRequired,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
@@ -3300,36 +3331,47 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 
   var cart = _ref.cart;
   var packagesStore = _ref.packages;
+  var _cart$cart = cart.cart;
+  var _cart$cart$defaultUrl = _cart$cart.defaultUrl;
+  var cartDefaultUrl = _cart$cart$defaultUrl === undefined ? '' : _cart$cart$defaultUrl;
+  var _cart$cart$errors = _cart$cart.errors;
+  var cartErrors = _cart$cart$errors === undefined ? {} : _cart$cart$errors;
+  var _cart$cart$items = _cart$cart.items;
+  var cartItems = _cart$cart$items === undefined ? [] : _cart$cart$items;
+  var packageItem = _cart$cart.packageItem;
+  var _cart$cart$totalPrice = _cart$cart.totalPrice;
+  var cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice;
+  var _cart$isFetching = cart.isFetching;
+  var cartIsFetching = _cart$isFetching === undefined ? false : _cart$isFetching;
+  var _cart$amounts = cart.amounts;
+  var amounts = _cart$amounts === undefined ? {} : _cart$amounts;
+  var coupon = cart.coupon;
+  var selectedPackage = cart.selectedPackage;
+  var _packagesStore$packag = packagesStore.packages;
+  var packages = _packagesStore$packag === undefined ? [] : _packagesStore$packag;
+  var _packagesStore$isFetc = packagesStore.isFetching;
+  var packagesIsFetching = _packagesStore$isFetc === undefined ? false : _packagesStore$isFetc;
 
+  var couponCode = coupon && coupon.value || '';
 
-  var cartDefaultUrl = cart.getIn(['cart', 'defaultUrl'], '');
-  var cartErrors = cart.getIn(['cart', 'errors'], emptyErrors);
-  var cartItems = cart.getIn(['cart', 'items'], emptyItems);
-  var cartIsFetching = cart.get('isFetching', false);
-  var packageItem = cart.getIn(['cart', 'packageItem']) || emptyItem;
-  var packagesIsFetching = packagesStore.get('isFetching', false);
-  var packages = packagesStore.get('packages', emptyItems);
-  var selectedPackage = cart.get('selectedPackage', null);
-  var amounts = cart.get('amounts', emptyAmounts);
-  var couponCode = cart.getIn(['coupon', 'value'], '');
-  var prices = amounts.map(function (amount, itemId) {
-    var item = cartItems.find(function (i) {
-      return i.get('id') === itemId;
-    }, (0, _immutable.Map)());
-    var actualPrice = item.getIn(['good', 'actualPrice'], emptyPrice);
-    var isWeighted = item.getIn(['good', 'sellingByWeight'], false);
-    var koeff = isWeighted ? 1 / item.getIn(['good', 'weightOfPrice'], 1) : 1;
+  var prices = (0, _lodash.mapValues)(amounts, function (amount, itemId) {
+    var item = (0, _lodash.find)(cartItems, function (i) {
+      return String(i.id) === itemId;
+    }) || {};
+    var actualPrice = (0, _timm.getIn)(item, ['good', 'actualPrice']) || {};
+    var isWeighted = (0, _timm.getIn)(item, ['good', 'sellingByWeight']) || false;
+    var koeff = isWeighted ? 1 / ((0, _timm.getIn)(item, ['good', 'weightOfPrice']) || 1) : 1;
 
-    return actualPrice.set('cents', amount * koeff * actualPrice.get('cents', 0));
+    return (0, _timm.set)(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
   });
-  var selectedPackagePrice = selectedPackage ? packages.find(function (p) {
-    return p.get('globalId') === selectedPackage;
-  }, (0, _immutable.Map)()).getIn(['price', 'cents'], 0) : 0;
-  var packagePrice = !packageItem.isEmpty() ? packageItem.getIn(['good', 'actualPrice', 'cents']) : selectedPackagePrice;
-  var totalPrice = cart.getIn(['cart', 'totalPrice'], emptyPrice).set('cents', prices.reduce(function (acc, price) {
-    return acc + price.get('cents', 0);
+  var selectedPackagePrice = selectedPackage ? (0, _timm.getIn)((0, _lodash.find)(packages, function (p) {
+    return p.globalId === selectedPackage;
+  }), ['price', 'cents']) || 0 : 0;
+  var packagePrice = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.getIn)(packageItem, ['good', 'actualPrice', 'cents']) : selectedPackagePrice;
+  var totalPrice = (0, _timm.set)(cartTotalPrice, 'cents', (0, _lodash.reduce)(prices, function (acc, price) {
+    return acc + (price.cents || 0);
   }, packagePrice));
-  var isBelowMinimalPrice = !!minimalPrice && totalPrice.get('cents', 0) < minimalPrice.cents;
+  var isBelowMinimalPrice = !!minimalPrice && (totalPrice.cents || 0) < minimalPrice.cents;
 
   return {
     amounts: amounts,
@@ -3339,12 +3381,12 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     cartItems: cartItems,
     couponCode: couponCode,
     isBelowMinimalPrice: isBelowMinimalPrice,
-    packageItem: packageItem,
     packages: packages,
     packagesIsFetching: packagesIsFetching,
     prices: prices,
     selectedPackage: selectedPackage,
-    totalPrice: totalPrice
+    totalPrice: totalPrice,
+    packageItem: packageItem || {}
   };
 }, {
   changeAmount: _CartActions.setAmount,
@@ -3356,7 +3398,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(CartContainer)));
 module.exports = exports['default'];
 
-},{"../../actions/CartActions":4,"../../actions/PackagesActions":5,"../../helpers/dom":282,"../../reducers/cart":294,"../../reducers/packages":295,"../../schemas":308,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Cart":24,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"immutable":"immutable","react":"react","react-redux":602}],33:[function(require,module,exports){
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":5,"../../helpers/dom":282,"../../reducers/cart":294,"../../reducers/packages":295,"../../schemas":308,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Cart":24,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"lodash":"lodash","react":"react","react-redux":602,"timm":902}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5389,6 +5431,10 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -5474,7 +5520,7 @@ var CheckoutCoupon = function (_Component) {
     value: function checkCode(code) {
       if (this.pendingRequest) this.pendingRequest.abort();
 
-      this.pendingRequest = $.ajax({
+      this.pendingRequest = _jquery2.default.ajax({
         url: apiRoutes.checkCouponCode(),
         type: 'POST',
         data: { code: code }
@@ -5548,7 +5594,7 @@ CheckoutCoupon.defaultProps = {
 exports.default = CheckoutCoupon;
 module.exports = exports['default'];
 
-},{"../../../routes/api":331,"../common/TextInput":267,"./CheckoutAlert":52,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],54:[function(require,module,exports){
+},{"../../../routes/api":331,"../common/TextInput":267,"./CheckoutAlert":52,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"jquery":"jquery","react":"react"}],54:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5589,8 +5635,6 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
-var _immutable = require('immutable');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CheckoutDeliveries = function (_Component) {
@@ -5609,10 +5653,15 @@ var CheckoutDeliveries = function (_Component) {
       var itemFieldName = _props.itemFieldName;
       var _onChange = _props.onChange;
       var t = _props.t;
+      var itemId = item.id;
+      var _item$price = item.price;
+      var price = _item$price === undefined ? {} : _item$price;
+      var _item$title = item.title;
+      var title = _item$title === undefined ? '' : _item$title;
+      var description = item.description;
+      var _item$freeDeliveryThr = item.freeDeliveryThreshold;
+      var threshold = _item$freeDeliveryThr === undefined ? {} : _item$freeDeliveryThr;
 
-      var itemId = item.get('id');
-      var price = item.get('price', (0, _immutable.Map)());
-      var threshold = item.get('freeDeliveryThreshold') || (0, _immutable.Map)();
 
       return _react2.default.createElement(
         'div',
@@ -5624,7 +5673,7 @@ var CheckoutDeliveries = function (_Component) {
             'label',
             null,
             _react2.default.createElement('input', {
-              checked: current && itemId === current.get('id'),
+              checked: current && itemId === current.id,
               className: 'form-control radio_buttons',
               name: 'vendor_order[' + itemFieldName + ']',
               onChange: function onChange() {
@@ -5636,24 +5685,24 @@ var CheckoutDeliveries = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'b-cart__form__delivery-name' },
-              item.get('title', '')
+              title
             ),
             _react2.default.createElement(
               'div',
               { className: 'b-cart__form__delivery-price' },
-              _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(price.toJS()) })
+              _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(price) })
             ),
-            threshold.get('cents') ? _react2.default.createElement('div', {
+            threshold && threshold.cents ? _react2.default.createElement('div', {
               className: 'cart__form__delivery-address',
               dangerouslySetInnerHTML: {
                 __html: t('vendor.order.checkout_free_delivery_text_html', {
-                  free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(threshold.toJS()))
+                  free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(threshold))
                 })
               }
             }) : null,
             _react2.default.createElement('div', {
               className: 'cart__form__delivery-address',
-              dangerouslySetInnerHTML: { __html: (0, _text.simpleFormat)(item.get('description')) }
+              dangerouslySetInnerHTML: { __html: (0, _text.simpleFormat)(description) }
             })
           )
         )
@@ -5672,7 +5721,7 @@ var CheckoutDeliveries = function (_Component) {
         null,
         items.map(function (item) {
           return _this2.renderItem(item);
-        }).valueSeq()
+        })
       );
     }
   }]);
@@ -5682,7 +5731,7 @@ var CheckoutDeliveries = function (_Component) {
 CheckoutDeliveries.propTypes = {
   current: _react.PropTypes.object.isRequired,
   itemFieldName: _react.PropTypes.string,
-  items: _react.PropTypes.object.isRequired,
+  items: _react.PropTypes.array.isRequired,
   onChange: _react.PropTypes.func.isRequired,
   t: _react.PropTypes.func.isRequired
 };
@@ -5694,7 +5743,7 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
-},{"../../helpers/money":283,"../../helpers/text":287,"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"immutable":"immutable","react":"react"}],55:[function(require,module,exports){
+},{"../../helpers/money":283,"../../helpers/text":287,"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react"}],55:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5727,14 +5776,12 @@ var _react2 = _interopRequireDefault(_react);
 
 var _humps = require('humps');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _timm = require('timm');
 
-// import { Map, List } from 'immutable';
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var STRING_TYPE = 'string';
 var TEXTAREA_TYPE = 'textarea';
-
-// const emptyList = List();
 
 var CheckoutFields = function (_Component) {
   (0, _inherits3.default)(CheckoutFields, _Component);
@@ -5750,14 +5797,19 @@ var CheckoutFields = function (_Component) {
       var _props = this.props;
       var deliveryType = _props.deliveryType;
       var _onChange = _props.onChange;
-
-      var errorMessage = item.get('errorMessage', '');
-      var name = item.get('name', '');
-      var type = item.get('type', STRING_TYPE);
-      var placeholder = item.get('placeholder', '');
-      var title = item.get('title', '');
+      var _item$errorMessage = item.errorMessage;
+      var errorMessage = _item$errorMessage === undefined ? '' : _item$errorMessage;
+      var _item$name = item.name;
+      var name = _item$name === undefined ? '' : _item$name;
+      var _item$type = item.type;
+      var type = _item$type === undefined ? STRING_TYPE : _item$type;
+      var _item$placeholder = item.placeholder;
+      var placeholder = _item$placeholder === undefined ? '' : _item$placeholder;
+      var _item$title = item.title;
+      var title = _item$title === undefined ? '' : _item$title;
       // const isRequired = deliveryType.get('requiredFields', emptyList).includes(name);
-      var reservedValue = deliveryType.getIn(['reservedFieldValues', (0, _humps.camelize)(name)]);
+
+      var reservedValue = (0, _timm.getIn)(deliveryType, ['reservedFieldValues', (0, _humps.camelize)(name)]);
       var isDisabled = !!reservedValue;
       var itemId = 'vendor_order_' + name;
       var itemName = 'vendor_order[' + name + ']';
@@ -5841,10 +5893,10 @@ var CheckoutFields = function (_Component) {
         'span',
         null,
         items.map(function (item) {
-          var value = itemValues.getIn([item.get('name'), 'value'], null);
+          var value = (0, _timm.getIn)(itemValues, [item.name, 'value']);
 
           return _this2.renderItem(item, value);
-        }).valueSeq()
+        })
       );
     }
   }]);
@@ -5853,7 +5905,7 @@ var CheckoutFields = function (_Component) {
 
 CheckoutFields.propTypes = {
   deliveryType: _react.PropTypes.object.isRequired,
-  items: _react.PropTypes.object.isRequired,
+  items: _react.PropTypes.array.isRequired,
   itemValues: _react.PropTypes.object.isRequired,
   onChange: _react.PropTypes.func.isRequired
 };
@@ -5863,7 +5915,7 @@ CheckoutFields.defaultProps = {};
 exports.default = CheckoutFields;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react"}],56:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react","timm":902}],56:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5896,6 +5948,8 @@ var _react2 = _interopRequireDefault(_react);
 
 var _text = require('../../helpers/text');
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CheckoutPayments = function (_Component) {
@@ -5913,9 +5967,15 @@ var CheckoutPayments = function (_Component) {
       var current = _props.current;
       var itemFieldName = _props.itemFieldName;
       var _onChange = _props.onChange;
+      var itemId = item.id;
+      var _item$title = item.title;
+      var title = _item$title === undefined ? '' : _item$title;
+      var showIcon = item.showIcon;
+      var _item$iconUrl = item.iconUrl;
+      var iconUrl = _item$iconUrl === undefined ? '' : _item$iconUrl;
+      var description = item.description;
+      var currentId = current.id;
 
-      var itemId = item.get('id');
-      var currentId = current.get('id');
 
       return _react2.default.createElement(
         'div',
@@ -5927,7 +5987,7 @@ var CheckoutPayments = function (_Component) {
             'label',
             null,
             _react2.default.createElement('input', {
-              checked: !current.isEmpty() && itemId === currentId,
+              checked: !(0, _lodash.isEmpty)(current) && itemId === currentId,
               className: 'form-control radio_buttons',
               name: 'vendor_order[' + itemFieldName + ']',
               onChange: function onChange() {
@@ -5939,12 +5999,12 @@ var CheckoutPayments = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'b-cart__form__payment-name' },
-              item.get('title'),
-              !!item.get('showIcon') && _react2.default.createElement('img', { src: item.get('iconUrl', '') })
+              title,
+              !!showIcon && _react2.default.createElement('img', { src: iconUrl })
             ),
             _react2.default.createElement('div', {
               className: 'b-cart__form__payment-description',
-              dangerouslySetInnerHTML: { __html: (0, _text.simpleFormat)(item.get('description')) }
+              dangerouslySetInnerHTML: { __html: (0, _text.simpleFormat)(description) }
             })
           )
         )
@@ -5963,7 +6023,7 @@ var CheckoutPayments = function (_Component) {
         null,
         items.map(function (item) {
           return _this2.renderItem(item);
-        }).valueSeq()
+        })
       );
     }
   }]);
@@ -5973,7 +6033,7 @@ var CheckoutPayments = function (_Component) {
 CheckoutPayments.propTypes = {
   current: _react.PropTypes.object.isRequired,
   itemFieldName: _react.PropTypes.string,
-  items: _react.PropTypes.object.isRequired,
+  items: _react.PropTypes.array.isRequired,
   onChange: _react.PropTypes.func.isRequired
 };
 
@@ -5984,7 +6044,7 @@ CheckoutPayments.defaultProps = {
 exports.default = CheckoutPayments;
 module.exports = exports['default'];
 
-},{"../../helpers/text":287,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],57:[function(require,module,exports){
+},{"../../helpers/text":287,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"lodash":"lodash","react":"react"}],57:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6328,7 +6388,7 @@ var Checkout = function (_Component) {
                 items: fields,
                 onChange: onFieldChange
               }),
-              !!coupon.get('show') && _react2.default.createElement(_CheckoutCoupon2.default, { code: coupon.get('value'), t: t })
+              !!coupon.show && _react2.default.createElement(_CheckoutCoupon2.default, { code: coupon.value, t: t })
             ),
             _react2.default.createElement(
               _CheckoutStep2.default,
@@ -6360,16 +6420,16 @@ Checkout.propTypes = {
   backUrl: _react.PropTypes.string,
   coupon: _react.PropTypes.object.isRequired,
   deliveryType: _react.PropTypes.object.isRequired,
-  deliveryTypes: _react.PropTypes.object.isRequired,
+  deliveryTypes: _react.PropTypes.array.isRequired,
   errorMessage: _react.PropTypes.string,
   fieldValues: _react.PropTypes.object.isRequired,
-  fields: _react.PropTypes.object.isRequired,
+  fields: _react.PropTypes.array.isRequired,
   formAuthenticity: schemas.formAuthenticity,
   onDeliveryChange: _react.PropTypes.func.isRequired,
   onFieldChange: _react.PropTypes.func.isRequired,
   onPaymentChange: _react.PropTypes.func.isRequired,
   paymentType: _react.PropTypes.object.isRequired,
-  paymentTypes: _react.PropTypes.object.isRequired,
+  paymentTypes: _react.PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
   submitOrderUrl: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired
@@ -12558,16 +12618,16 @@ Order.propTypes = {
   backUrl: _react.PropTypes.string,
   coupon: _react.PropTypes.object.isRequired,
   deliveryType: _react.PropTypes.object.isRequired,
-  deliveryTypes: _react.PropTypes.object.isRequired,
+  deliveryTypes: _react.PropTypes.array.isRequired,
   errorMessage: _react.PropTypes.string,
   fieldValues: _react.PropTypes.object.isRequired,
-  fields: _react.PropTypes.object.isRequired,
+  fields: _react.PropTypes.array.isRequired,
   formAuthenticity: schemas.formAuthenticity,
   onDeliveryChange: _react.PropTypes.func.isRequired,
   onFieldChange: _react.PropTypes.func.isRequired,
   onPaymentChange: _react.PropTypes.func.isRequired,
   paymentType: _react.PropTypes.object.isRequired,
-  paymentTypes: _react.PropTypes.object.isRequired,
+  paymentTypes: _react.PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
   submitOrderUrl: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired,
@@ -12743,6 +12803,8 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var OrderTitle = function (_Component) {
@@ -12756,7 +12818,7 @@ var OrderTitle = function (_Component) {
   (0, _createClass3.default)(OrderTitle, [{
     key: 'componentWillUpdate',
     value: function componentWillUpdate(nextProps) {
-      if (this.props.totalPrice.get('cents') !== nextProps.totalPrice.get('cents')) {
+      if (this.props.totalPrice.cents !== nextProps.totalPrice.cents) {
         this.animatePriceChanges();
       }
     }
@@ -12785,7 +12847,7 @@ var OrderTitle = function (_Component) {
       var totalPrice = _props.totalPrice;
 
 
-      if (totalCount || !totalPrice.isEmpty()) {
+      if (totalCount || !(0, _lodash.isEmpty)(totalPrice)) {
         return _react2.default.createElement(
           'h1',
           { className: 'b-cart__title' },
@@ -12799,7 +12861,7 @@ var OrderTitle = function (_Component) {
           _react2.default.createElement(
             'strong',
             { className: 'b-cart__title-price', ref: 'price' },
-            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(totalPrice.toJS()) })
+            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(totalPrice) })
           )
         );
       }
@@ -12819,7 +12881,7 @@ OrderTitle.propTypes = {
 exports.default = OrderTitle;
 module.exports = exports['default'];
 
-},{"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"react":"react"}],120:[function(require,module,exports){
+},{"../common/Money/HumanizedMoneyWithCurrency":252,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"humps":467,"lodash":"lodash","react":"react"}],120:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12868,8 +12930,6 @@ var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
 var _reactRedux = require('react-redux');
 
-var _immutable = require('immutable');
-
 var _Order = require('./Order');
 
 var _Order2 = _interopRequireDefault(_Order);
@@ -12880,17 +12940,13 @@ var _cart = require('../../reducers/cart');
 
 var _dom = require('../../helpers/dom');
 
+var _lodash = require('lodash');
+
+var _timm = require('timm');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var emptyList = (0, _immutable.List)();
-var emptyCoupon = (0, _immutable.Map)();
-var emptyFields = (0, _immutable.List)();
-var emptyValues = (0, _immutable.Map)();
-var emptyDeliveryType = (0, _immutable.Map)();
-var emptyPaymentType = (0, _immutable.Map)();
-var emptyPrice = (0, _immutable.Map)();
 
 var storeInitialized = false;
 
@@ -12924,12 +12980,12 @@ var OrderContainer = function (_Component) {
   }, {
     key: 'selectDelivery',
     value: function selectDelivery(delivery) {
-      this.props.selectDelivery(delivery.get('id'));
+      this.props.selectDelivery(delivery.id);
     }
   }, {
     key: 'selectPayment',
     value: function selectPayment(payment) {
-      this.props.selectPayment(payment.get('id'));
+      this.props.selectPayment(payment.id);
     }
   }, {
     key: 'changeFieldValue',
@@ -12985,11 +13041,11 @@ var OrderContainer = function (_Component) {
 
 OrderContainer.propTypes = {
   coupon: _react.PropTypes.object.isRequired,
-  deliveryTypes: _react.PropTypes.object.isRequired,
+  deliveryTypes: _react.PropTypes.array.isRequired,
   selectedDeliveryType: _react.PropTypes.object.isRequired,
   fieldValues: _react.PropTypes.object.isRequired,
-  fields: _react.PropTypes.object.isRequired,
-  paymentTypes: _react.PropTypes.object.isRequired,
+  fields: _react.PropTypes.array.isRequired,
+  paymentTypes: _react.PropTypes.array.isRequired,
   initCheckout: _react.PropTypes.func.isRequired,
   selectedPaymentType: _react.PropTypes.object.isRequired,
   selectDelivery: _react.PropTypes.func.isRequired,
@@ -13024,37 +13080,46 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   };
 
   var cart = _ref.cart;
+  var _cart$coupon = cart.coupon;
+  var coupon = _cart$coupon === undefined ? {} : _cart$coupon;
+  var _cart$deliveryTypes = cart.deliveryTypes;
+  var deliveryTypes = _cart$deliveryTypes === undefined ? [] : _cart$deliveryTypes;
+  var _cart$totalCount = cart.totalCount;
+  var totalCount = _cart$totalCount === undefined ? 0 : _cart$totalCount;
+  var _cart$checkoutFields = cart.checkoutFields;
+  var checkoutFields = _cart$checkoutFields === undefined ? [] : _cart$checkoutFields;
+  var _cart$checkoutFieldVa = cart.checkoutFieldValues;
+  var fieldValues = _cart$checkoutFieldVa === undefined ? [] : _cart$checkoutFieldVa;
+  var selectedDeliveryTypeId = cart.selectedDeliveryType;
+  var selectedPaymentTypeId = cart.selectedPaymentType;
 
-  var coupon = cart.get('coupon', emptyCoupon);
-  var deliveryTypes = cart.get('deliveryTypes', emptyList);
-  var selectedDeliveryType = deliveryTypes.find(function (t) {
-    return t.get('id') === cart.get('selectedDeliveryType');
-  }, null, deliveryTypes.first() || emptyDeliveryType);
-  var availablePayments = selectedDeliveryType.get('availablePayments', emptyList);
-  var availableFields = selectedDeliveryType.get('fields', emptyList);
-  var paymentTypes = cart.get('paymentTypes', emptyList).filter(function (p) {
-    return availablePayments.includes(p.get('id'));
+  var selectedDeliveryType = (0, _lodash.find)(deliveryTypes, function (t) {
+    return t.id === selectedDeliveryTypeId;
+  }) || (0, _lodash.first)(deliveryTypes) || {};
+  var _selectedDeliveryType = selectedDeliveryType.availablePayments;
+  var availablePayments = _selectedDeliveryType === undefined ? [] : _selectedDeliveryType;
+  var _selectedDeliveryType2 = selectedDeliveryType.fields;
+  var availableFields = _selectedDeliveryType2 === undefined ? [] : _selectedDeliveryType2;
+
+  var paymentTypes = (cart.paymentTypes || []).filter(function (p) {
+    return (0, _lodash.includes)(availablePayments, p.id);
   });
-  var selectedPaymentType = paymentTypes.find(function (p) {
-    return p.get('id') === cart.get('selectedPaymentType');
-  }, null, paymentTypes.first() || emptyPaymentType);
-  var totalCount = cart.getIn(['cart', 'totalCount'], 0);
-  var totalPrice = cart.getIn(['cart', 'totalPrice'], emptyPrice).update(function (price) {
-
-    if (price.isEmpty()) {
-      return price;
+  var selectedPaymentType = (0, _lodash.find)(paymentTypes, function (p) {
+    return p.id === selectedPaymentTypeId;
+  }) || (0, _lodash.first)(paymentTypes) || {};
+  var totalPrice = (0, _timm.updateIn)(cart.totalPrice, ['cents'], function (cents) {
+    if (cents == null) {
+      return cents;
     }
 
-    var cents = price.get('cents', 0);
-    var threshold = selectedDeliveryType.getIn(['freeDeliveryThreshold', 'cents'], null);
-    var deliveryPrice = selectedDeliveryType.getIn(['price', 'cents'], 0);
+    var threshold = (0, _timm.getIn)(selectedDeliveryType, ['freeDeliveryThreshold', 'cents']);
+    var deliveryPrice = (0, _timm.getIn)(selectedDeliveryType, ['price', 'cents']) || 0;
 
-    return price.set('cents', cents + (threshold == null || threshold > cents ? deliveryPrice : 0));
+    return cents + (threshold == null || threshold > cents ? deliveryPrice : 0);
   });
-  var fields = cart.get('checkoutFields', emptyFields).filter(function (f) {
-    return availableFields.includes(f.get('name'));
+  var fields = checkoutFields.filter(function (f) {
+    return (0, _lodash.includes)(availableFields, f.name);
   });
-  var fieldValues = cart.get('checkoutFieldValues', emptyValues);
 
   return {
     coupon: coupon,
@@ -13079,7 +13144,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(OrderContainer)));
 module.exports = exports['default'];
 
-},{"../../actions/CartActions":4,"../../helpers/dom":282,"../../reducers/cart":294,"../../schemas":308,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Order":117,"babel-runtime/core-js/object/assign":337,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"immutable":"immutable","react":"react","react-redux":602}],121:[function(require,module,exports){
+},{"../../actions/CartActions":4,"../../helpers/dom":282,"../../reducers/cart":294,"../../schemas":308,"../HoC/connectToRedux":90,"../HoC/provideTranslations":91,"./Order":117,"babel-runtime/core-js/object/assign":337,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"lodash":"lodash","react":"react","react-redux":602,"timm":902}],121:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23843,7 +23908,7 @@ var AccordionItem = (_temp = _class = function (_Component) {
 exports.default = AccordionItem;
 module.exports = exports['default'];
 
-},{"./AccordionItemBody":230,"./AccordionItemTitle":231,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":906}],230:[function(require,module,exports){
+},{"./AccordionItemBody":230,"./AccordionItemTitle":231,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/extends":349,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":907}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28961,13 +29026,15 @@ var _createReducer = require('../utils/createReducer');
 
 var _createReducer2 = _interopRequireDefault(_createReducer);
 
-var _immutable = require('immutable');
-
 var _CartActions = require('../actions/CartActions');
+
+var _timm = require('timm');
+
+var _lodash = require('lodash');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var initialState = (0, _immutable.fromJS)({
+var initialState = {
   cart: {},
   coupon: {
     show: true,
@@ -28984,18 +29051,19 @@ var initialState = (0, _immutable.fromJS)({
   isFetching: false,
   error: null,
   isInitialized: false
-});
+};
 
 function initCartStore(state, _ref) {
   var response = _ref.response;
 
-  var amounts = (0, _immutable.fromJS)(response.items).toMap().mapKeys(function (key, val) {
-    return val.get('id');
-  }).map(function (item) {
-    return item.getIn(['good', 'sellingByWeight']) ? parseFloat(item.get('weight', 0)) : parseInt(item.get('count', 0), 10);
-  });
+  var amounts = (0, _lodash.reduce)(response.items, function (result, item) {
+    var isSellingByWeight = (0, _timm.getIn)(item, ['good', 'sellingByWeight']);
 
-  return state.merge({
+    result[item.id] = isSellingByWeight ? parseFloat(item.weight || 0) : parseInt(item.count || 0, 10);
+    return result;
+  }, {});
+
+  return (0, _timm.merge)(state, {
     amounts: amounts,
     coupon: {
       show: true,
@@ -29011,17 +29079,16 @@ function initCartStore(state, _ref) {
 function initCheckoutCartStore(state, _ref2) {
   var data = _ref2.data;
 
-  var checkoutFieldValues = (0, _immutable.fromJS)(data.checkoutFields).toMap().mapKeys(function (_, f) {
-    return f.get('name');
-  }).map(function (f) {
-    return (0, _immutable.Map)({ value: f.get('value', null) });
-  });
+  var checkoutFieldValues = (0, _lodash.reduce)(data.checkoutFields, function (result, field) {
+    result[field.name] = { value: field.value };
+    return result;
+  }, {});
 
-  return state.merge(data).set('checkoutFieldValues', checkoutFieldValues);
+  return (0, _timm.merge)(state, data, { checkoutFieldValues: checkoutFieldValues });
 }
 
 var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _CartActions.CART_REQUEST, function (state) {
-  return state.merge({
+  return (0, _timm.merge)(state, {
     isFetching: true,
     error: null
   });
@@ -29030,7 +29097,7 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_FAILURE, function (state, _ref3) {
   var error = _ref3.error;
 
-  return state.merge({
+  return (0, _timm.merge)(state, {
     isFetching: false,
     error: error
   });
@@ -29038,31 +29105,31 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
   var id = _ref4.id;
   var amount = _ref4.amount;
 
-  return state.setIn(['amounts', id], amount);
+  return (0, _timm.setIn)(state, ['amounts', id], amount);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE, function (state, _ref5) {
   var id = _ref5.id;
 
-  return state.set('selectedPackage', id);
+  return (0, _timm.set)(state, 'selectedPackage', id);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_INIT_CHECKOUT, function (state, action) {
   return initCheckoutCartStore(state, action);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref6) {
   var name = _ref6.name;
   var value = _ref6.value;
 
-  return state.setIn(['checkoutFieldValues', name, 'value'], value);
+  return (0, _timm.setIn)(state, ['checkoutFieldValues', name, 'value'], value);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref7) {
   var id = _ref7.id;
 
-  return state.set('selectedDeliveryType', id);
+  return (0, _timm.set)(state, 'selectedDeliveryType', id);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref8) {
   var id = _ref8.id;
 
-  return state.set('selectedPaymentType', id);
+  return (0, _timm.set)(state, 'selectedPaymentType', id);
 }), _actionMap);
 
 exports.default = (0, _createReducer2.default)(initialState, actionMap);
 
-},{"../actions/CartActions":4,"../utils/createReducer":330,"babel-runtime/helpers/defineProperty":348,"immutable":"immutable"}],295:[function(require,module,exports){
+},{"../actions/CartActions":4,"../utils/createReducer":330,"babel-runtime/helpers/defineProperty":348,"lodash":"lodash","timm":902}],295:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29081,22 +29148,22 @@ var _createReducer = require('../utils/createReducer');
 
 var _createReducer2 = _interopRequireDefault(_createReducer);
 
-var _immutable = require('immutable');
-
 var _PackagesActions = require('../actions/PackagesActions');
+
+var _timm = require('timm');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var initialState = (0, _immutable.fromJS)({
+var initialState = {
   packages: [],
   isFetching: false,
   error: null
-});
+};
 
 function initPackageStore(state, _ref) {
   var response = _ref.response;
 
-  return state.merge({
+  return (0, _timm.merge)(state, {
     packages: response,
     isFetching: false,
     error: null
@@ -29104,7 +29171,7 @@ function initPackageStore(state, _ref) {
 }
 
 var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _PackagesActions.PACKAGES_REQUEST, function (state) {
-  return state.merge({
+  return (0, _timm.merge)(state, {
     isFetching: true,
     error: null
   });
@@ -29113,7 +29180,7 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Pac
 }), (0, _defineProperty3.default)(_actionMap, _PackagesActions.PACKAGES_FAILURE, function (state, _ref2) {
   var error = _ref2.error;
 
-  return state.merge({
+  return (0, _timm.merge)(state, {
     isFetching: false,
     error: error
   });
@@ -29121,7 +29188,7 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Pac
 
 exports.default = (0, _createReducer2.default)(initialState, actionMap);
 
-},{"../actions/PackagesActions":5,"../utils/createReducer":330,"babel-runtime/helpers/defineProperty":348,"immutable":"immutable"}],296:[function(require,module,exports){
+},{"../actions/PackagesActions":5,"../utils/createReducer":330,"babel-runtime/helpers/defineProperty":348,"timm":902}],296:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30518,27 +30585,16 @@ function buildParams(prefix, obj, traditional, add) {
 module.exports = exports['default'];
 
 },{"babel-runtime/helpers/typeof":355,"lodash":"lodash"}],330:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = createReducer;
-
-var _immutable = require('immutable');
-
-var _immutable2 = _interopRequireDefault(_immutable);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function createReducer(initialState, handlers) {
   return function () {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
     var action = arguments[1];
-
-    if (!_immutable.Map.isMap(state) && !_immutable.List.isList(state)) {
-      state = _immutable2.default.fromJS(state);
-    }
 
     var handler = handlers[action.type];
 
@@ -30546,18 +30602,12 @@ function createReducer(initialState, handlers) {
       return state;
     }
 
-    state = handler(state, action);
-
-    if (!_immutable.Map.isMap(state) && !_immutable.List.isList(state)) {
-      throw new TypeError('Reducers must return Immutable objects.');
-    }
-
-    return state;
+    return handler(state, action);
   };
 }
-module.exports = exports['default'];
+module.exports = exports["default"];
 
-},{"immutable":"immutable"}],331:[function(require,module,exports){
+},{}],331:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -68310,6 +68360,521 @@ function symbolObservablePonyfill(root) {
 	return result;
 };
 },{}],902:[function(require,module,exports){
+(function (process){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.clone = clone;
+exports.addLast = addLast;
+exports.addFirst = addFirst;
+exports.insert = insert;
+exports.removeAt = removeAt;
+exports.replaceAt = replaceAt;
+exports.getIn = getIn;
+exports.set = set;
+exports.setIn = setIn;
+exports.updateIn = updateIn;
+exports.merge = merge;
+exports.mergeIn = mergeIn;
+exports.omit = omit;
+exports.addDefaults = addDefaults;
+
+
+/*!
+ * Timm
+ *
+ * Immutability helpers with fast reads and acceptable writes.
+ *
+ * @copyright Guillermo Grau Panea 2016
+ * @license MIT
+ */
+
+var INVALID_ARGS = 'INVALID_ARGS';
+
+// ===============================================
+// ### Helpers
+// ===============================================
+
+
+function throwStr(msg) {
+  throw new Error(msg);
+}
+
+var hasOwnProperty = {}.hasOwnProperty;
+
+function clone(obj) {
+  if (Array.isArray(obj)) return [].concat(obj);
+  var keys = Object.keys(obj);
+  var out = {};
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    out[key] = obj[key];
+  }
+  return out;
+}
+
+function doMerge(fAddDefaults) {
+  for (var _len = arguments.length, rest = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    rest[_key - 1] = arguments[_key];
+  }
+
+  var out = rest[0];
+  !(out != null) && throwStr(process.env.NODE_ENV !== 'production' ? 'At least one object should be provided to merge()' : INVALID_ARGS);
+  var fChanged = false;
+  for (var idx = 1; idx < rest.length; idx++) {
+    var obj = rest[idx];
+    if (obj == null) continue;
+    var keys = Object.keys(obj);
+    if (!keys.length) continue;
+    for (var j = 0; j <= keys.length; j++) {
+      var key = keys[j];
+      if (fAddDefaults && out[key] !== undefined) continue;
+      var nextVal = obj[key];
+      if (nextVal === undefined || nextVal === out[key]) continue;
+      if (!fChanged) {
+        fChanged = true;
+        out = clone(out);
+      }
+      out[key] = nextVal;
+    }
+  }
+  return out;
+}
+
+function isObject(o) {
+  var type = typeof o === 'undefined' ? 'undefined' : _typeof(o);
+  return o != null && (type === 'object' || type === 'function');
+}
+
+// _deepFreeze = (obj) ->
+//   Object.freeze obj
+//   for key in Object.getOwnPropertyNames obj
+//     val = obj[key]
+//     if isObject(val) and not Object.isFrozen val
+//       _deepFreeze val
+//   obj
+
+// ===============================================
+// -- ### Arrays
+// ===============================================
+
+// -- #### addLast()
+// -- Returns a new array with an appended item or items.
+// --
+// -- Usage: `addLast(array: Array<any>, val: Array<any>|any): Array<any>`
+// --
+// -- ```js
+// -- arr = ['a', 'b']
+// -- arr2 = addLast(arr, 'c')
+// -- // ['a', 'b', 'c']
+// -- arr2 === arr
+// -- // false
+// -- arr3 = addLast(arr, ['c', 'd'])
+// -- // ['a', 'b', 'c', 'd']
+// -- ```
+// `array.concat(val)` also handles the array case,
+// but is apparently very slow
+function addLast(array, val) {
+  if (Array.isArray(val)) return array.concat(val);
+  return array.concat([val]);
+}
+
+// -- #### addFirst()
+// -- Returns a new array with a prepended item or items.
+// --
+// -- Usage: `addFirst(array: Array<any>, val: Array<any>|any): Array<any>`
+// --
+// -- ```js
+// -- arr = ['a', 'b']
+// -- arr2 = addFirst(arr, 'c')
+// -- // ['c', 'a', 'b']
+// -- arr2 === arr
+// -- // false
+// -- arr3 = addFirst(arr, ['c', 'd'])
+// -- // ['c', 'd', 'a', 'b']
+// -- ```
+function addFirst(array, val) {
+  if (Array.isArray(val)) return val.concat(array);
+  return [val].concat(array);
+}
+
+// -- #### insert()
+// -- Returns a new array obtained by inserting an item or items
+// -- at a specified index.
+// --
+// -- Usage: `insert(array: Array<any>, idx: number, val: Array<any>|any): Array<any>`
+// --
+// -- ```js
+// -- arr = ['a', 'b', 'c']
+// -- arr2 = insert(arr, 1, 'd')
+// -- // ['a', 'd', 'b', 'c']
+// -- arr2 === arr
+// -- // false
+// -- insert(arr, 1, ['d', 'e'])
+// -- // ['a', 'd', 'e', 'b', 'c']
+// -- ```
+function insert(array, idx, val) {
+  return array.slice(0, idx).concat(Array.isArray(val) ? val : [val]).concat(array.slice(idx));
+}
+
+// -- #### removeAt()
+// -- Returns a new array obtained by removing an item at
+// -- a specified index.
+// --
+// -- Usage: `removeAt(array: Array<any>, idx: number): Array<any>`
+// --
+// -- ```js
+// -- arr = ['a', 'b', 'c']
+// -- arr2 = removeAt(arr, 1)
+// -- // ['a', 'c']
+// -- arr2 === arr
+// -- // false
+// -- ```
+function removeAt(array, idx) {
+  return array.slice(0, idx).concat(array.slice(idx + 1));
+}
+
+// -- #### replaceAt()
+// -- Returns a new array obtained by replacing an item at
+// -- a specified index. If the provided item is the same
+// -- (*referentially equal to*) the previous item at that position,
+// -- the original array is returned.
+// --
+// -- Usage: `replaceAt(array: Array<any>, idx: number, newItem: any): Array<any>`
+// --
+// -- ```js
+// -- arr = ['a', 'b', 'c']
+// -- arr2 = replaceAt(arr, 1, 'd')
+// -- // ['a', 'd', 'c']
+// -- arr2 === arr
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- replaceAt(arr, 1, 'b') === arr
+// -- // true
+// -- ```
+function replaceAt(array, idx, newItem) {
+  if (array[idx] === newItem) return array;
+  return array.slice(0, idx).concat([newItem]).concat(array.slice(idx + 1));
+}
+
+// ===============================================
+// -- ### Collections (objects and arrays)
+// ===============================================
+// -- The following types are used throughout this section
+// -- ```js
+// -- type ArrayOrObject = Array<any>|Object;
+// -- type Key = number|string;
+// -- ```
+
+// -- #### getIn()
+// -- Returns a value from an object at a given path. Works with
+// -- nested arrays and objects. If the path does not exist, it returns
+// -- `undefined`.
+// --
+// -- Usage: `getIn(obj: ?ArrayOrObject, path: Array<Key>): any`
+// --
+// -- ```js
+// -- obj = { a: 1, b: 2, d: { d1: 3, d2: 4 }, e: ['a', 'b', 'c'] }
+// -- getIn(obj, ['d', 'd1'])
+// -- // 3
+// -- getIn(obj, ['e', 1])
+// -- // 'b'
+// -- ```
+function getIn(obj, path) {
+  !Array.isArray(path) && throwStr(process.env.NODE_ENV !== 'production' ? 'A path array should be provided when calling getIn()' : INVALID_ARGS);
+  if (obj == null) return undefined;
+  var ptr = obj;
+  for (var i = 0; i < path.length; i++) {
+    var key = path[i];
+    ptr = ptr != null ? ptr[key] : undefined;
+    if (ptr === undefined) return ptr;
+  }
+  return ptr;
+}
+
+// -- #### set()
+// -- Returns a new object with a modified attribute.
+// -- If the provided value is the same (*referentially equal to*)
+// -- the previous value, the original object is returned.
+// --
+// -- Usage: `set(obj: any, key: Key, val: any): Object`
+// --
+// -- ```js
+// -- obj = { a: 1, b: 2, c: 3 }
+// -- obj2 = set(obj, 'b', 5)
+// -- // { a: 1, b: 5, c: 3 }
+// -- obj2 === obj
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- set(obj, 'b', 2) === obj
+// -- // true
+// -- ```
+function set(obj, key, val) {
+  var finalObj = obj == null ? {} : obj;
+  if (finalObj[key] === val) return finalObj;
+  var obj2 = clone(finalObj);
+  obj2[key] = val;
+  return obj2;
+}
+
+// -- #### setIn()
+// -- Returns a new object with a modified **nested** attribute.
+// --
+// -- Notes:
+// --
+// -- * If the provided value is the same (*referentially equal to*)
+// -- the previous value, the original object is returned.
+// -- * If the path does not exist, it will be created before setting
+// -- the new value.
+// --
+// -- Usage: `setIn(obj: ArrayOrObject, path: Array<Key>, val: any): ArrayOrObject`
+// --
+// -- ```js
+// -- obj = { a: 1, b: 2, d: { d1: 3, d2: 4 }, e: { e1: 'foo', e2: 'bar' } }
+// -- obj2 = setIn(obj, ['d', 'd1'], 4)
+// -- // { a: 1, b: 2, d: { d1: 4, d2: 4 }, e: { e1: 'foo', e2: 'bar' } }
+// -- obj2 === obj
+// -- // false
+// -- obj2.d === obj.d
+// -- // false
+// -- obj2.e === obj.e
+// -- // true
+// --
+// -- // The same object is returned if there are no changes:
+// -- obj3 = setIn(obj, ['d', 'd1'], 3)
+// -- // { a: 1, b: 2, d: { d1: 3, d2: 4 }, e: { e1: 'foo', e2: 'bar' } }
+// -- obj3 === obj
+// -- // true
+// -- obj3.d === obj.d
+// -- // true
+// -- obj3.e === obj.e
+// -- // true
+// --
+// -- // ... unknown paths create intermediate keys:
+// -- setIn({ a: 3 }, ['unknown', 'path'], 4)
+// -- // { a: 3, unknown: { path: 4 } }
+// -- ```
+function doSetIn(obj, path, val, idx) {
+  var newValue = void 0;
+  var key = path[idx];
+  if (idx === path.length - 1) {
+    newValue = val;
+  } else {
+    var nestedObj = isObject(obj) ? obj[key] : {};
+    newValue = doSetIn(nestedObj, path, val, idx + 1);
+  }
+  return set(obj, key, newValue);
+}
+
+function setIn(obj, path, val) {
+  if (!path.length) return val;
+  return doSetIn(obj, path, val, 0);
+}
+
+// -- #### updateIn()
+// -- Returns a new object with a modified **nested** attribute,
+// -- calculated via a user-provided callback based on the current value.
+// -- If the calculated value is the same (*referentially equal to*)
+// -- the previous value, the original object is returned.
+// --
+// -- Usage: `updateIn(obj: ArrayOrObject, path: Array<Key>,
+// -- fnUpdate: (prevValue: any) => any): Object`
+// --
+// -- ```js
+// -- obj = { a: 1, d: { d1: 3, d2: 4 } }
+// -- obj2 = updateIn(obj, ['d', 'd1'], (val) => val + 1)
+// -- // { a: 1, d: { d1: 4, d2: 4 } }
+// -- obj2 === obj
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- obj3 = updateIn(obj, ['d', 'd1'], (val) => val)
+// -- // { a: 1, d: { d1: 3, d2: 4 } }
+// -- obj3 === obj
+// -- // true
+// -- ```
+function updateIn(obj, path, fnUpdate) {
+  var prevVal = getIn(obj, path);
+  var nextVal = fnUpdate(prevVal);
+  return setIn(obj, path, nextVal);
+}
+
+// -- #### merge()
+// -- Returns a new object built as follows: the overlapping keys from the
+// -- second one overwrite the corresponding entries from the first one.
+// -- Similar to `Object.assign()`, but immutable.
+// --
+// -- Usage:
+// --
+// -- * `merge(obj1: ArrayOrObject, obj2: ?ArrayOrObject): ArrayOrObject`
+// -- * `merge(obj1: ArrayOrObject, ...objects: Array<?ArrayOrObject>): Object`
+// --
+// -- The unmodified `obj1` is returned if `obj2` does not *provide something
+// -- new to* `obj1`, i.e. if either of the following
+// -- conditions are true:
+// --
+// -- * `obj2` is `null` or `undefined`
+// -- * `obj2` is an object, but it is empty
+// -- * All attributes of `obj2` are referentially equal to the
+// --   corresponding attributes of `obj`
+// --
+// -- ```js
+// -- obj1 = { a: 1, b: 2, c: 3 }
+// -- obj2 = { c: 4, d: 5 }
+// -- obj3 = merge(obj1, obj2)
+// -- // { a: 1, b: 2, c: 4, d: 5 }
+// -- obj3 === obj1
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- merge(obj1, { c: 3 }) === obj1
+// -- // true
+// -- ```
+function merge(a, b, c, d, e, f) {
+  for (var _len2 = arguments.length, rest = Array(_len2 > 6 ? _len2 - 6 : 0), _key2 = 6; _key2 < _len2; _key2++) {
+    rest[_key2 - 6] = arguments[_key2];
+  }
+
+  return rest.length ? doMerge.call.apply(doMerge, [null, false, a, b, c, d, e, f].concat(rest)) : doMerge(false, a, b, c, d, e, f);
+}
+
+// -- #### mergeIn()
+// -- Similar to `merge()`, but merging the value at a given nested path.
+// --
+// -- Usage:
+// --
+// -- * `mergeIn(obj1: ArrayOrObject, path: Array<Key>, obj2: ArrayOrObject): ArrayOrObject`
+// -- * `mergeIn(obj1: ArrayOrObject, path: Array<Key>,
+// -- ...objects: Array<?ArrayOrObject>): Object`
+// --
+// -- ```js
+// -- obj1 = { a: 1, d: { b: { d1: 3, d2: 4 } } }
+// -- obj2 = { d3: 5 }
+// -- obj3 = mergeIn(obj1, ['d', 'b'], obj2)
+// -- // { a: 1, d: { b: { d1: 3, d2: 4, d3: 5 } } }
+// -- obj3 === obj1
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- mergeIn(obj1, ['d', 'b'], { d2: 4 }) === obj1
+// -- // true
+// -- ```
+function mergeIn(a, path, b, c, d, e, f) {
+  var prevVal = getIn(a, path);
+  if (prevVal == null) prevVal = {};
+  var nextVal = void 0;
+
+  for (var _len3 = arguments.length, rest = Array(_len3 > 7 ? _len3 - 7 : 0), _key3 = 7; _key3 < _len3; _key3++) {
+    rest[_key3 - 7] = arguments[_key3];
+  }
+
+  if (rest.length) {
+    nextVal = doMerge.call.apply(doMerge, [null, false, prevVal, b, c, d, e, f].concat(rest));
+  } else {
+    nextVal = doMerge(false, prevVal, b, c, d, e, f);
+  }
+  return setIn(a, path, nextVal);
+}
+
+// -- #### omit()
+// -- Returns an object excluding one or several attributes.
+// --
+// -- Usage: `omit(obj: Object, attrs: Array<string>|string): Object`
+//
+// -- ```js
+// -- obj = { a: 1, b: 2, c: 3, d: 4 }
+// -- omit(obj, 'a')
+// -- // { b: 2, c: 3, d: 4 }
+// -- omit(obj, ['b', 'c'])
+// -- // { a: 1, d: 4 }
+// --
+// -- // The same object is returned if there are no changes:
+// -- omit(obj, 'z') === obj1
+// -- // true
+// -- ```
+function omit(obj, attrs) {
+  var omitList = Array.isArray(attrs) ? attrs : [attrs];
+  var fDoSomething = false;
+  for (var i = 0; i < omitList.length; i++) {
+    if (hasOwnProperty.call(obj, omitList[i])) {
+      fDoSomething = true;
+      break;
+    }
+  }
+  if (!fDoSomething) return obj;
+  var out = {};
+  var keys = Object.keys(obj);
+  for (var _i = 0; _i < keys.length; _i++) {
+    var key = keys[_i];
+    if (omitList.indexOf(key) >= 0) continue;
+    out[key] = obj[key];
+  }
+  return out;
+}
+
+// -- #### addDefaults()
+// -- Returns a new object built as follows: `undefined` keys in the first one
+// -- are filled in with the corresponding values from the second one
+// -- (even if they are `null`).
+// --
+// -- Usage:
+// --
+// -- * `addDefaults(obj: ArrayOrObject, defaults: ArrayOrObject): Object`
+// -- * `addDefaults(obj: ArrayOrObject, ...defaultObjects: Array<?ArrayOrObject>): Object`
+// --
+// -- ```js
+// -- obj1 = { a: 1, b: 2, c: 3 }
+// -- obj2 = { c: 4, d: 5, e: null }
+// -- obj3 = addDefaults(obj1, obj2)
+// -- // { a: 1, b: 2, c: 3, d: 5, e: null }
+// -- obj3 === obj1
+// -- // false
+// --
+// -- // The same object is returned if there are no changes:
+// -- addDefaults(obj1, { c: 4 }) === obj1
+// -- // true
+// -- ```
+function addDefaults(a, b, c, d, e, f) {
+  for (var _len4 = arguments.length, rest = Array(_len4 > 6 ? _len4 - 6 : 0), _key4 = 6; _key4 < _len4; _key4++) {
+    rest[_key4 - 6] = arguments[_key4];
+  }
+
+  return rest.length ? doMerge.call.apply(doMerge, [null, true, a, b, c, d, e, f].concat(rest)) : doMerge(true, a, b, c, d, e, f);
+}
+
+// ===============================================
+// ### Public API
+// ===============================================
+var timm = {
+  clone: clone,
+  addLast: addLast,
+  addFirst: addFirst,
+  insert: insert,
+  removeAt: removeAt,
+  replaceAt: replaceAt,
+
+  getIn: getIn,
+  // eslint-disable-next-line object-shorthand
+  set: set, // so that flow doesn't complain
+  setIn: setIn,
+  updateIn: updateIn,
+  merge: merge,
+  mergeIn: mergeIn,
+  omit: omit,
+  addDefaults: addDefaults
+};
+
+exports.default = timm;
+
+}).call(this,require('_process'))
+},{"_process":593}],903:[function(require,module,exports){
 /*!
  * URI.js - Mutating URLs
  * IPv6 Support
@@ -68496,7 +69061,7 @@ function symbolObservablePonyfill(root) {
   };
 }));
 
-},{}],903:[function(require,module,exports){
+},{}],904:[function(require,module,exports){
 /*!
  * URI.js - Mutating URLs
  * Second Level Domain (SLD) Support
@@ -68738,7 +69303,7 @@ function symbolObservablePonyfill(root) {
   return SLD;
 }));
 
-},{}],904:[function(require,module,exports){
+},{}],905:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.0 by @mathias */
 ;(function(root) {
@@ -69275,7 +69840,7 @@ function symbolObservablePonyfill(root) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],905:[function(require,module,exports){
+},{}],906:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -69311,7 +69876,7 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],906:[function(require,module,exports){
+},{}],907:[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -69496,7 +70061,7 @@ uuid.unparse = unparse;
 
 module.exports = uuid;
 
-},{"./rng":905}],"accounting":[function(require,module,exports){
+},{"./rng":906}],"accounting":[function(require,module,exports){
 /*!
  * accounting.js v0.3.2
  * Copyright 2011, Joss Crowcroft
@@ -109888,4 +110453,4 @@ else {
   return URI;
 }));
 
-},{"./IPv6":902,"./SecondLevelDomains":903,"./punycode":904}]},{},[3]);
+},{"./IPv6":903,"./SecondLevelDomains":904,"./punycode":905}]},{},[3]);

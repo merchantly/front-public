@@ -8,6 +8,7 @@ import { decamelizeKeys } from 'humps';
 import Rodal from 'rodal';
 import Spinner from 'react-spinjs';
 import * as schemas from 'r/schemas';
+import { chain, size, omit } from 'lodash';
 
 class Cart extends Component {
   constructor(props) {
@@ -44,12 +45,12 @@ class Cart extends Component {
           minimal_price: humanizedMoneyWithCurrency(minimalPrice),
           currency: '',
         }), 'minimal-price')}
-        {cartErrors
-          .filterNot((_, key) => key === 'minimalPrice')
-          .toList()
-          .flatten(false)
+        {chain(cartErrors)
+          .omit('minimalPrice')
+          .toArray()
+          .flatten(true)
           .map(this.renderError)
-          .valueSeq()
+          .value()
         }
       </span>
     );
@@ -72,7 +73,8 @@ class Cart extends Component {
       t,
       totalPrice,
     } = this.props;
-    const hasErrors = isBelowMinimalPrice || cartErrors.count() > 0;
+    const hasErrors = isBelowMinimalPrice ||
+      size(omit(cartErrors, 'minimalPrice')) > 0;
     const {
       isProcessing,
     } = this.state;
@@ -95,7 +97,7 @@ class Cart extends Component {
           <h1 className="b-cart__title" title={t('vendor.cart.title')}>
             {t('vendor.cart.title')}
           </h1>
-          {cartItems.count() === 0
+          {size(cartItems) === 0
             ? (
               <div className="b-text b-text_center">
                 <p>
@@ -130,7 +132,7 @@ class Cart extends Component {
                 {' '}
                 <span>
                   <HumanizedMoneyWithCurrency
-                    money={decamelizeKeys(totalPrice.toJS())}
+                    money={decamelizeKeys(totalPrice)}
                   />
                 </span>
               </div>
@@ -179,13 +181,13 @@ Cart.propTypes = {
   cartDefaultUrl: PropTypes.string.isRequired,
   cartErrors: PropTypes.object.isRequired,
   cartIsFetching: PropTypes.bool.isRequired,
-  cartItems: PropTypes.object.isRequired,
+  cartItems: PropTypes.array.isRequired,
   changeAmount: PropTypes.func.isRequired,
   couponCode: PropTypes.string,
   formAuthenticity: PropTypes.object,
   isBelowMinimalPrice: PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
-  packages: PropTypes.object.isRequired,
+  packages: PropTypes.array.isRequired,
   packageItem: PropTypes.object.isRequired,
   prices: PropTypes.object.isRequired,
   selectPackage: PropTypes.func.isRequired,

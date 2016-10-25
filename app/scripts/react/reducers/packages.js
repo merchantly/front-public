@@ -1,19 +1,19 @@
 import createReducer from '../utils/createReducer';
-import { fromJS } from 'immutable';
 import {
   PACKAGES_REQUEST,
   PACKAGES_SUCCESS,
   PACKAGES_FAILURE,
 } from '../actions/PackagesActions';
+import { merge } from 'timm';
 
-const initialState = fromJS({
+const initialState = {
   packages: [],
   isFetching: false,
   error: null,
-});
+};
 
 export function initPackageStore(state, { response }) {
-  return state.merge({
+  return merge(state, {
     packages: response,
     isFetching: false,
     error: null,
@@ -22,7 +22,7 @@ export function initPackageStore(state, { response }) {
 
 const actionMap = {
   [PACKAGES_REQUEST](state) {
-    return state.merge({
+    return merge(state, {
       isFetching: true,
       error: null,
     });
@@ -33,7 +33,7 @@ const actionMap = {
   },
 
   [PACKAGES_FAILURE](state, { error }) {
-    return state.merge({
+    return merge(state, {
       isFetching: false,
       error,
     });

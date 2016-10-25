@@ -23,13 +23,8 @@ import {
   canUseDOM,
 } from '../../helpers/dom';
 import * as schemas from 'r/schemas';
-import { Map, List } from 'immutable';
-
-const emptyErrors = Map();
-const emptyAmounts = Map();
-const emptyItems = List();
-const emptyItem = Map();
-const emptyPrice = Map();
+import { getIn, set } from 'timm';
+import { reduce, mapValues, find, isEmpty } from 'lodash';
 
 let storeInitialized = false;
 
@@ -83,7 +78,7 @@ CartContainer.propTypes = {
   cartDefaultUrl: PropTypes.string.isRequired,
   cartErrors: PropTypes.object.isRequired,
   cartIsFetching: PropTypes.bool.isRequired,
-  cartItems: PropTypes.object.isRequired,
+  cartItems: PropTypes.array.isRequired,
   changeAmount: PropTypes.func.isRequired,
   couponCode: PropTypes.string,
   fetchCart: PropTypes.func.isRequired,
@@ -92,7 +87,7 @@ CartContainer.propTypes = {
   initPackages: PropTypes.func.isRequired,
   isBelowMinimalPrice: PropTypes.bool.isRequired,
   packageItem: PropTypes.object.isRequired,
-  packages: PropTypes.object.isRequired,
+  packages: PropTypes.array.isRequired,
   packagesIsFetching: PropTypes.bool.isRequired,
   prices: PropTypes.object.isRequired,
   selectPackage: PropTypes.func.isRequired,
@@ -125,35 +120,45 @@ export default provideTranslations(connectToRedux(connect(
         packages: initPackageStore(state.packages, initPackages(initialPackages)),
       });
 
-    const cartDefaultUrl = cart.getIn(['cart', 'defaultUrl'], '');
-    const cartErrors = cart.getIn(['cart', 'errors'], emptyErrors);
-    const cartItems = cart.getIn(['cart', 'items'], emptyItems);
-    const cartIsFetching = cart.get('isFetching', false);
-    const packageItem = cart.getIn(['cart', 'packageItem']) || emptyItem;
-    const packagesIsFetching = packagesStore.get('isFetching', false);
-    const packages = packagesStore.get('packages', emptyItems);
-    const selectedPackage = cart.get('selectedPackage', null);
-    const amounts = cart.get('amounts', emptyAmounts);
-    const couponCode = cart.getIn(['coupon', 'value'], '');
-    const prices = amounts
-      .map((amount, itemId) => {
-        const item = cartItems.find(((i) => i.get('id') === itemId), Map());
-        const actualPrice = item.getIn(['good', 'actualPrice'], emptyPrice);
-        const isWeighted = item.getIn(['good', 'sellingByWeight'], false);
-        const koeff = isWeighted ? (1 / item.getIn(['good', 'weightOfPrice'], 1)) : 1;
+    const {
+      cart: {
+        defaultUrl: cartDefaultUrl='',
+        errors: cartErrors={},
+        items: cartItems=[],
+        packageItem,
+        totalPrice: cartTotalPrice={},
+      },
+      isFetching: cartIsFetching=false,
+      amounts={},
+      coupon,
+      selectedPackage,
+    } = cart;
+    const {
+      packages=[],
+      isFetching: packagesIsFetching=false,
+    } = packagesStore;
+    const couponCode = coupon && coupon.value || '';
 
-        return actualPrice.set('cents', amount * koeff * actualPrice.get('cents', 0));
+    const prices = mapValues(amounts, (amount, itemId) => {
+        const item = find(cartItems, (i) => String(i.id) === itemId) || {};
+        const actualPrice = getIn(item, ['good', 'actualPrice']) || {};
+        const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
+        const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
+
+        return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
       });
     const selectedPackagePrice = selectedPackage
-      ? packages.find((p) => p.get('globalId') === selectedPackage, Map()).getIn(['price', 'cents'], 0)
+      ? (getIn(find(packages, (p) => p.globalId === selectedPackage), ['price', 'cents']) || 0)
       : 0;
-    const packagePrice = !packageItem.isEmpty()
-      ? packageItem.getIn(['good', 'actualPrice', 'cents'])
+    const packagePrice = !isEmpty(packageItem)
+      ? getIn(packageItem, ['good', 'actualPrice', 'cents'])
       : selectedPackagePrice;
-    const totalPrice = cart
-      .getIn(['cart', 'totalPrice'], emptyPrice)
-      .set('cents', prices.reduce(((acc, price) => acc + price.get('cents', 0)), packagePrice));
-    const isBelowMinimalPrice = !!minimalPrice && (totalPrice.get('cents', 0) < minimalPrice.cents);
+    const totalPrice = set(
+      cartTotalPrice,
+      'cents',
+      reduce(prices, (acc, price) => acc + (price.cents || 0), packagePrice)
+    );
+    const isBelowMinimalPrice = !!minimalPrice && ((totalPrice.cents || 0) < minimalPrice.cents);
 
     return {
       amounts,
@@ -163,12 +168,12 @@ export default provideTranslations(connectToRedux(connect(
       cartItems,
       couponCode,
       isBelowMinimalPrice,
-      packageItem,
       packages,
       packagesIsFetching,
       prices,
       selectedPackage,
       totalPrice,
+      packageItem: packageItem || {},
     };
   },
   {

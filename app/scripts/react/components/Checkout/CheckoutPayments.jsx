@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { simpleFormat } from '../../helpers/text';
+import { isEmpty } from 'lodash';
 
 class CheckoutPayments extends Component {
   renderItem(item) {
@@ -8,15 +9,21 @@ class CheckoutPayments extends Component {
       itemFieldName,
       onChange,
     } = this.props;
-    const itemId = item.get('id');
-    const currentId = current.get('id');
+    const {
+      id: itemId,
+      title='',
+      showIcon,
+      iconUrl='',
+      description,
+    } = item;
+    const { id: currentId } = current;
 
     return (
       <div className="b-form__row__widget" key={itemId}>
         <span className="b-form__radio">
           <label>
             <input
-              checked={!current.isEmpty() && itemId === currentId}
+              checked={!isEmpty(current) && itemId === currentId}
               className="form-control radio_buttons"
               name={`vendor_order[${itemFieldName}]`}
               onChange={() => onChange(item)}
@@ -24,12 +31,12 @@ class CheckoutPayments extends Component {
               value={itemId}
             />
             <div className="b-cart__form__payment-name">
-              {item.get('title')}
-              {!!item.get('showIcon') && <img src={item.get('iconUrl', '')} />}
+              {title}
+              {!!showIcon && <img src={iconUrl} />}
             </div>
             <div
               className="b-cart__form__payment-description"
-              dangerouslySetInnerHTML={{ __html: simpleFormat(item.get('description')) }}
+              dangerouslySetInnerHTML={{ __html: simpleFormat(description) }}
             />
           </label>
         </span>
@@ -43,7 +50,7 @@ class CheckoutPayments extends Component {
 
     return (
       <span>
-        {items.map(item => this.renderItem(item)).valueSeq()}
+        {items.map(item => this.renderItem(item))}
       </span>
     );
   }
@@ -52,7 +59,7 @@ class CheckoutPayments extends Component {
 CheckoutPayments.propTypes = {
   current: PropTypes.object.isRequired,
   itemFieldName: PropTypes.string,
-  items: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

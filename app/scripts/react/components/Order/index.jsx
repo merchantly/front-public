@@ -3,7 +3,6 @@ import * as schemas from '../../schemas';
 import connectToRedux from '../HoC/connectToRedux';
 import provideTranslations from '../HoC/provideTranslations';
 import { connect } from 'react-redux';
-import { Map, List } from 'immutable';
 import Order from './Order';
 import {
   changeFieldValue,
@@ -17,14 +16,8 @@ import {
 import {
   canUseDOM,
 } from '../../helpers/dom';
-
-const emptyList = List();
-const emptyCoupon = Map();
-const emptyFields = List();
-const emptyValues = Map();
-const emptyDeliveryType = Map();
-const emptyPaymentType = Map();
-const emptyPrice = Map();
+import { find, first, includes } from 'lodash';
+import { updateIn, getIn } from 'timm';
 
 let storeInitialized = false;
 
@@ -48,10 +41,10 @@ class OrderContainer extends Component {
     }
   }
   selectDelivery(delivery) {
-    this.props.selectDelivery(delivery.get('id'));
+    this.props.selectDelivery(delivery.id);
   }
   selectPayment(payment) {
-    this.props.selectPayment(payment.get('id'));
+    this.props.selectPayment(payment.id);
   }
   changeFieldValue(name, value) {
     this.props.changeFieldValue(name, value);
@@ -104,11 +97,11 @@ class OrderContainer extends Component {
 
 OrderContainer.propTypes = {
   coupon: PropTypes.object.isRequired,
-  deliveryTypes: PropTypes.object.isRequired,
+  deliveryTypes: PropTypes.array.isRequired,
   selectedDeliveryType: PropTypes.object.isRequired,
   fieldValues: PropTypes.object.isRequired,
-  fields: PropTypes.object.isRequired,
-  paymentTypes: PropTypes.object.isRequired,
+  fields: PropTypes.array.isRequired,
+  paymentTypes: PropTypes.array.isRequired,
   initCheckout: PropTypes.func.isRequired,
   selectedPaymentType: PropTypes.object.isRequired,
   selectDelivery: PropTypes.func.isRequired,
@@ -144,41 +137,41 @@ export default provideTranslations(connectToRedux(connect(
       : ({ // TODO: move to store initialization when/if root component created
         cart: initCheckoutCartStore(state.cart, initCheckout(ownProps)),
       });
-    const coupon = cart.get('coupon', emptyCoupon);
-    const deliveryTypes = cart.get('deliveryTypes', emptyList);
-    const selectedDeliveryType = deliveryTypes
-      .find(
-        (t) => t.get('id') === cart.get('selectedDeliveryType'),
-        null,
-        deliveryTypes.first() || emptyDeliveryType
-      );
-    const availablePayments = selectedDeliveryType.get('availablePayments', emptyList);
-    const availableFields = selectedDeliveryType.get('fields', emptyList);
-    const paymentTypes = cart.get('paymentTypes', emptyList)
-      .filter((p) => availablePayments.includes(p.get('id')));
-    const selectedPaymentType = paymentTypes
-      .find(
-        (p) => p.get('id') === cart.get('selectedPaymentType'),
-        null,
-        paymentTypes.first() || emptyPaymentType
-      );
-    const totalCount = cart.getIn(['cart', 'totalCount'], 0);
-    const totalPrice = cart.getIn(['cart', 'totalPrice'], emptyPrice)
-      .update((price) => {
-
-        if (price.isEmpty()) {
-          return price;
+    const {
+      coupon={},
+      deliveryTypes=[],
+      totalCount=0,
+      checkoutFields=[],
+      checkoutFieldValues: fieldValues=[],
+      selectedDeliveryType: selectedDeliveryTypeId,
+      selectedPaymentType: selectedPaymentTypeId,
+    } = cart;
+    const selectedDeliveryType = find(
+      deliveryTypes,
+      (t) => t.id === selectedDeliveryTypeId
+    ) || first(deliveryTypes) || {};
+    const {
+      availablePayments=[],
+      fields: availableFields=[],
+    } = selectedDeliveryType;
+    const paymentTypes = (cart.paymentTypes || [])
+      .filter((p) => includes(availablePayments, p.id));
+    const selectedPaymentType = find(
+      paymentTypes,
+      (p) => p.id === selectedPaymentTypeId
+    ) || first(paymentTypes) || {};
+    const totalPrice = updateIn(cart.totalPrice, ['cents'], (cents) => {
+        if (cents == null) {
+          return cents;
         }
 
-        const cents = price.get('cents', 0);
-        const threshold = selectedDeliveryType.getIn(['freeDeliveryThreshold', 'cents'], null);
-        const deliveryPrice = selectedDeliveryType.getIn(['price', 'cents'], 0);
+        const threshold = getIn(selectedDeliveryType, ['freeDeliveryThreshold', 'cents']);
+        const deliveryPrice = getIn(selectedDeliveryType, ['price', 'cents']) || 0;
 
-        return price.set('cents', cents + ((threshold == null || threshold > cents) ? deliveryPrice : 0));
+        return cents + ((threshold == null || threshold > cents) ? deliveryPrice : 0);
       });
-    const fields = cart.get('checkoutFields', emptyFields)
-      .filter((f) => availableFields.includes(f.get('name')));
-    const fieldValues = cart.get('checkoutFieldValues', emptyValues);
+    const fields = checkoutFields
+      .filter((f) => includes(availableFields, f.name));
 
 
     return {

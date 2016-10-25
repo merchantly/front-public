@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { decamelizeKeys } from 'humps';
-
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
+import { isEmpty } from 'lodash';
 
 class OrderTitle extends Component {
   componentWillUpdate(nextProps) {
-    if (this.props.totalPrice.get('cents') !== nextProps.totalPrice.get('cents')) {
+    if (this.props.totalPrice.cents !== nextProps.totalPrice.cents) {
       this.animatePriceChanges();
     }
   }
@@ -30,7 +30,7 @@ class OrderTitle extends Component {
       totalPrice,
     } = this.props;
 
-    if (totalCount || !totalPrice.isEmpty()) {
+    if (totalCount || !isEmpty(totalPrice)) {
       return (
         <h1 className="b-cart__title">
           {`${t('vendor.pages.titles.order')} `}
@@ -39,7 +39,7 @@ class OrderTitle extends Component {
           </strong>
           {` ${t('vendor.order.new.sum')} `}
           <strong className="b-cart__title-price" ref="price">
-            <HumanizedMoneyWithCurrency money={decamelizeKeys(totalPrice.toJS())} />
+            <HumanizedMoneyWithCurrency money={decamelizeKeys(totalPrice)} />
           </strong>
         </h1>
       );

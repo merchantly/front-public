@@ -90,7 +90,7 @@ export function initCheckout(params) {
 
 export function fetchCart() {
   return (dispatch, getState) => {
-    const isFetching = getState().cart.get('isFetching', false);
+    const isFetching = getState().cart.isFetching;
 
     if (isFetching) {
       return null;

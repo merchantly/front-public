@@ -69,8 +69,8 @@ class Checkout extends Component {
                 items={fields}
                 onChange={onFieldChange}
               />
-              {!!coupon.get('show') &&
-                <CheckoutCoupon code={coupon.get('value')} t={t} />
+              {!!coupon.show &&
+                <CheckoutCoupon code={coupon.value} t={t} />
               }
             </CheckoutStep>
             <CheckoutStep number={3} title={t('vendor.order.new.payment_title')}>
@@ -98,16 +98,16 @@ Checkout.propTypes = {
   backUrl: PropTypes.string,
   coupon: PropTypes.object.isRequired,
   deliveryType: PropTypes.object.isRequired,
-  deliveryTypes: PropTypes.object.isRequired,
+  deliveryTypes: PropTypes.array.isRequired,
   errorMessage: PropTypes.string,
   fieldValues: PropTypes.object.isRequired,
-  fields: PropTypes.object.isRequired,
+  fields: PropTypes.array.isRequired,
   formAuthenticity: schemas.formAuthenticity,
   onDeliveryChange: PropTypes.func.isRequired,
   onFieldChange: PropTypes.func.isRequired,
   onPaymentChange: PropTypes.func.isRequired,
   paymentType: PropTypes.object.isRequired,
-  paymentTypes: PropTypes.object.isRequired,
+  paymentTypes: PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
   submitOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,

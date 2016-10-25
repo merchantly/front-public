@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import * as apiRoutes from '../../../routes/api';
 

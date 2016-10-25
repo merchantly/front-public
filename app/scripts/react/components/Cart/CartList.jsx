@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import CartListItem from './CartListItem';
 import CartListPackageItem from './CartListPackageItem';
 import CartListPackages from './CartListPackages';
+import { map, isEmpty } from 'lodash';
 
 class CartList extends Component {
   render() {
@@ -19,21 +20,21 @@ class CartList extends Component {
 
     return (
       <ul className="b-cart__list">
-        {items.map((item, idx) => {
-          const itemId = item.get('id');
+        {map(items, (item, idx) => {
+          const { id: itemId } = item;
 
           return (
             <CartListItem
-              amount={amounts.get(itemId, 0)}
+              amount={amounts[itemId] || 0}
               changeAmount={changeAmount}
               item={item}
               key={`cart-item-${idx}`}
-              price={prices.get(itemId, 0)}
+              price={prices[itemId] || 0}
               t={t}
             />
           );
-        }).valueSeq()}
-        {!packageItem.isEmpty()
+        })}
+        {!isEmpty(packageItem)
           ? (
             <CartListPackageItem
               item={packageItem}
@@ -41,11 +42,11 @@ class CartList extends Component {
             />
           )
           : (
-            <CartListPackages 
+            <CartListPackages
               packages={packages}
               selectPackage={selectPackage}
-              selectedPackage={selectedPackage} 
-              t={t} 
+              selectedPackage={selectedPackage}
+              t={t}
             />
           )
         }
@@ -57,9 +58,9 @@ class CartList extends Component {
 CartList.propTypes = {
   amounts: PropTypes.object.isRequired,
   changeAmount: PropTypes.func.isRequired,
-  items: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
   packageItem: PropTypes.object.isRequired,
-  packages: PropTypes.object.isRequired,
+  packages: PropTypes.array.isRequired,
   prices: PropTypes.object.isRequired,
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
