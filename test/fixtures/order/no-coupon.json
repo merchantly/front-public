@@ -226,7 +226,7 @@
   "fields": [{
       "name": "name",
       "type": "string",
-      "value": "",
+      "value": "Test Name",
       "title": "Полное имя",
       "placeholder": "Имя",
       "errorMessage": ""

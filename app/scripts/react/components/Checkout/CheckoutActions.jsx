@@ -41,7 +41,7 @@ class CheckoutActions extends Component {
     return (
       <div className="b-cart__action">
         <Rodal
-          onClose={null}
+          onClose={() => {}}
           showCloseButton={false}
           visible={isProcessing || isRedirecting}
         >
