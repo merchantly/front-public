@@ -140,7 +140,7 @@ export default provideTranslations(connectToRedux(connect(
     const couponCode = coupon && coupon.value || '';
 
     const prices = mapValues(amounts, (amount, itemId) => {
-        const item = find(cartItems, (i) => i.id === itemId) || {};
+        const item = find(cartItems, (i) => String(i.id) === itemId) || {};
         const actualPrice = getIn(item, ['good', 'actualPrice']) || {};
         const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
         const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;

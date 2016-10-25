@@ -4,16 +4,17 @@ import { RelativeImage } from '../common/Image';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { Map } from 'immutable';
 import { decamelizeKeys } from 'humps';
 import {
   range,
+  map,
+  size,
 } from 'lodash';
+import { getIn } from 'timm';
 import {
   ORDER_IMG_SIZE,
 } from 'r/constants/OrderConstants';
 
-const emptyMap = Map();
 const WEIGHT_STEP = 0.01;
 
 class CartListItem extends Component {
@@ -23,9 +24,9 @@ class CartListItem extends Component {
       item,
     } = this.props;
     const floatVal = parseFloat(ev.target.value) ||
-      parseFloat(item.getIn(['good', 'weightOfPrice'], 0));
+      parseFloat(getIn(item, ['good', 'weightOfPrice']) || 0);
 
-    changeAmount(item.get('id'), floatVal);
+    changeAmount(item.id, floatVal);
   }
   changeCount(count) {
     const {
@@ -33,27 +34,27 @@ class CartListItem extends Component {
       item,
     } = this.props;
 
-    changeAmount(item.get('id'), count);
+    changeAmount(item.id, count);
   }
   renderGoodDetails() {
-    const customAttributes = this.props.item.getIn(['good', 'customAttributes'], emptyMap);
+    const customAttributes = getIn(this.props.item, ['good', 'customAttributes']) || {};
 
-    return customAttributes.map((val, key) => (
+    return map(customAttributes, (val, key) => (
       <div className="b-cart__item__option" key={`custom-attr-${key}`}>
         {`${key}: ${val}`}
       </div>
-    )).valueSeq();
+    ));
   }
   renderErrors() {
-    const errors = this.props.item.get('errors', emptyMap);
+    const errors = this.props.item.errors || {};
 
     return (
       <div className="b-alert b-alert_danger">
-        {errors.map((err, key) => (
+        {map(errors, (err, key) => (
           <p key={`cart-list-item-error-${key}`}>
             {err.join(', ')}
           </p>
-        )).valueSeq()}
+        ))}
       </div>
     );
   }
@@ -66,7 +67,7 @@ class CartListItem extends Component {
 
     return (
       <div className="b-cart__item__col-weight">
-        {item.getIn(['good', 'hasOrderingGoods'], false)
+        {getIn(item, ['good', 'hasOrderingGoods'])
           ? (
             <span>
               <span className="b-cart__item__weight__text">
@@ -76,7 +77,7 @@ class CartListItem extends Component {
                 <input
                   defaultValue={amount}
                   min={WEIGHT_STEP}
-                  name={`cart[items][${item.get('id')}][weight]`}
+                  name={`cart[items][${item.id}][weight]`}
                   onChange={this.changeWeight.bind(this)}
                   step={(WEIGHT_STEP).toString()}
                   type="number"
@@ -101,7 +102,7 @@ class CartListItem extends Component {
     } = this.props;
     const maxAvail = Math.min(
       gon.max_items_count,
-      item.getIn(['good', 'maxOrderableQuantity'], 0)
+      (getIn(item, ['good', 'maxOrderableQuantity']) || 0)
     );
     const options = range(0, Math.max(amount, maxAvail))
       .map((i) => ({
@@ -112,7 +113,7 @@ class CartListItem extends Component {
 
     return (
       <div className="b-cart__item__col-quantity">
-        {item.getIn(['good', 'hasOrderingGoods'], false)
+        {getIn(item, ['good', 'hasOrderingGoods'])
           ? (
             <span>
               <span className="b-cart__item__quantity__text">
@@ -120,7 +121,7 @@ class CartListItem extends Component {
               </span>
               <div className="b-cart__item__quantity__select">
                 <Select
-                  name={`cart[items][${item.get('id')}][count]`}
+                  name={`cart[items][${item.id}][count]`}
                   onChange={this.changeCount.bind(this)}
                   options={options}
                   value={amount}
@@ -142,14 +143,20 @@ class CartListItem extends Component {
       item,
       price,
     } = this.props;
-    const priceObj = decamelizeKeys(price.toJS());
+    const {
+      image,
+      defaultUrl='',
+      title='',
+      sellingByWeight=false,
+    } = (item.good || {});
+    const priceObj = decamelizeKeys(price);
 
     return (
       <li className="b-cart__item">
         <div className="b-cart__item__col-img">
           <RelativeImage
             className="b-cart__item__img"
-            image={item.getIn(['good', 'image'], Map()).toJS()}
+            image={image || {}}
             maxHeight={ORDER_IMG_SIZE}
             maxWidth={ORDER_IMG_SIZE}
           />
@@ -157,16 +164,16 @@ class CartListItem extends Component {
         <div className="b-cart__item__col-content">
           <h2 className="b-cart__item__title">
             <a
-              href={item.getIn(['good', 'defaultUrl'], '')}
+              href={defaultUrl}
               target="_blank"
             >
-              {item.getIn(['good', 'title'], '')}
+              {title}
             </a>
           </h2>
           {this.renderGoodDetails()}
-          {(item.get('errors', Map()).count() > 0) && this.renderErrors()}
+          {(size(item.errors) > 0) && this.renderErrors()}
         </div>
-        {item.getIn(['good', 'sellingByWeight'], false)
+        {sellingByWeight
           ? this.renderWeight()
           : this.renderQuantity()
         }
@@ -179,7 +186,7 @@ class CartListItem extends Component {
           <a
             className="b-cart__item__remove"
             data-method="delete"
-            href={item.get('destroyPath', '')}
+            href={item.destroyPath || ''}
           >
             <AssetImage src="images/cross_white.svg" />
           </a>

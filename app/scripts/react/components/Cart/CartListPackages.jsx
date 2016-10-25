@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { RelativeImage } from '../common/Image';
 import { humanizedMoneyWithCurrency } from '../../helpers/money';
-import { Map } from 'immutable';
 import { decamelizeKeys } from 'humps';
+import { size, map } from 'lodash';
+import { getIn } from 'timm';
 
 class CartListPackages extends Component {
   renderRadioButton({ value, title, checked, key }) {
@@ -31,12 +32,17 @@ class CartListPackages extends Component {
     );
   }
   renderTitle(item) {
+    const {
+      title='',
+      price,
+    } = item;
+
     return (
       <span>
-        {item.get('title', '')}
+        {title}
         {' - '}
         <b>
-          {humanizedMoneyWithCurrency(decamelizeKeys(item.get('price', Map()).toJS()))}
+          {humanizedMoneyWithCurrency(decamelizeKeys(price))}
         </b>
       </span>
     );
@@ -48,7 +54,7 @@ class CartListPackages extends Component {
       t,
     } = this.props;
 
-    if (packages.count() === 0) {
+    if (size(packages) === 0) {
       return <noscript />;
     }
 
@@ -58,7 +64,7 @@ class CartListPackages extends Component {
           <div className="b-cart__item__col-img">
             <RelativeImage
               className="b-cart__item__img"
-              image={packages.first().get('image').toJS()}
+              image={getIn(packages, [0, 'image'])}
               maxHeight={184}
               maxWidth={184}
             />
@@ -73,14 +79,14 @@ class CartListPackages extends Component {
               title: t('vendor.packaging.no_package'),
               checked: !selectedPackage,
             })}
-            {packages.map((item, idx) => (
+            {map(packages, (item, idx) => (
               this.renderRadioButton({
                 key: `radio-button-${idx}`,
                 title: this.renderTitle(item),
-                value: item.get('globalId', ''),
-                checked: selectedPackage === item.get('globalId'),
+                value: item.globalId || '',
+                checked: selectedPackage === item.globalId,
               })
-            )).valueSeq()}
+            ))}
           </div>
         </div>
       </li>
@@ -89,7 +95,7 @@ class CartListPackages extends Component {
 }
 
 CartListPackages.propTypes = {
-  packages: PropTypes.object.isRequired,
+  packages: PropTypes.array.isRequired,
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
   t: PropTypes.func.isRequired,
