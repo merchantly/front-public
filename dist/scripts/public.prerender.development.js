@@ -12480,7 +12480,14 @@ var NavBarContainer = function (_Component) {
   (0, _createClass3.default)(NavBarContainer, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      this.props.fetchUserState();
+      var _props = this.props,
+          fetchUserState = _props.fetchUserState,
+          checkCurrentClient = _props.checkCurrentClient;
+
+
+      if (checkCurrentClient) {
+        fetchUserState();
+      }
     }
   }, {
     key: 'render',

@@ -12,7 +12,14 @@ import {
 
 class NavBarContainer extends Component {
   componentWillMount() {
-    this.props.fetchUserState();
+    const {
+      fetchUserState,
+      checkCurrentClient,
+    } = this.props;
+
+    if (checkCurrentClient) {
+      fetchUserState();
+    }
   }
   render() {
     return <NavBar {...this.props} />;
