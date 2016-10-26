@@ -7,7 +7,7 @@ import {
 
 const initialState = {
   data: {
-    showClientBar: false,
+    isCurrentClientPresent: false,
   },
   notAsked: true,
   isFetching: false,

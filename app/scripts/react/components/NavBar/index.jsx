@@ -20,10 +20,12 @@ class NavBarContainer extends Component {
 }
 
 export const externalPropTypes = {
+  checkCurrentClient: PropTypes.bool,
   clientBarProps: PropTypes.shape(Clientbar.propTypes).isRequired,
   i18n: PropTypes.object,
   logoProps: PropTypes.shape(Logo.propTypes).isRequired,
   searchQuery: PropTypes.string,
+  showClientBar: PropTypes.bool,
   vendor: schemas.vendor.isRequired,
 };
 
@@ -32,11 +34,11 @@ NavBarContainer.propTypes = {
   t: PropTypes.func.isRequired,
 
   // redux props
-  showClientBar: PropTypes.bool,
   fetchUserState: PropTypes.func.isRequired,
 };
 
 NavBarContainer.defaultProps = {
+  checkCurrentClient: false,
   clientBarProps: {},
   logoProps: {},
   vendor: {
@@ -45,12 +47,14 @@ NavBarContainer.defaultProps = {
     search_products_path: '',
   },
   searchQuery: '',
-  showClientBar: false,
+  showClientBar: true,
 };
 
 export default provideTranslations(connectToRedux(connect(
-  (state, ownProps) => ({
-      showClientBar: ownProps.showClientBar || state.userState.data.showClientBar,
+  (state, { checkCurrentClient, showClientBar }) => ({
+      showClientBar: checkCurrentClient
+        ? state.userState.data.isCurrentClientPresent
+        : showClientBar,
   }),
   {
     fetchUserState,

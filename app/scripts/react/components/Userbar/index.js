@@ -11,29 +11,6 @@ import Userbar from './Userbar';
 import Cookies from 'cookies-js';
 import * as cookieKeys from 'r/constants/cookieKeys';
 
-@connect(
-  (state, ownProps) => {
-    const {
-      designMode,
-      hasDesign,
-      hasOperator,
-      hasWishlist,
-      wishlistItemsCount,
-    } = state.userState.data;
-
-    return Object.assign({}, ownProps, {
-      designMode,
-      hasDesign,
-      hasOperator,
-      hasWishlist,
-      wishlistItemsCount,
-    });
-  },
-  {
-    openDesignSettingsPopup,
-    fetchUserState,
-  }
-)
 class UserbarContainer extends Component {
   componentWillMount() {
     const {
@@ -99,4 +76,26 @@ UserbarContainer.propTypes = {
   wishlistItemsCount: PropTypes.number,
 };
 
-export default connectToRedux(UserbarContainer);
+export default connectToRedux(connect(
+  (state, ownProps) => {
+    const {
+      designMode,
+      hasDesign,
+      hasOperator,
+      hasWishlist,
+      wishlistItemsCount,
+    } = state.userState.data;
+
+    return Object.assign({}, ownProps, {
+      designMode,
+      hasDesign,
+      hasOperator,
+      hasWishlist,
+      wishlistItemsCount,
+    });
+  },
+  {
+    openDesignSettingsPopup,
+    fetchUserState,
+  }
+)(UserbarContainer));
