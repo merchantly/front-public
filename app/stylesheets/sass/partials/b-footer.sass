@@ -22,6 +22,18 @@
         margin-right: 15px
     &_main
       @extend %six-twelfths
+    &_middle
+      width: 0
+
+  &__content-wrapper--with-middle
+    .b-footer__nav_main
+      @extend %three-eighths
+    .b-footer__nav_middle
+      @extend %two-eighths
+      img
+        max-width: 100%
+    .b-footer__nav_soc
+      @extend %three-eighths
 
   &__link
     font-size: 1.143em
