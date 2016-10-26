@@ -4,6 +4,7 @@ import MenuBottomLink from './MenuBottomLink';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import CurrencySwitcher from 'rc/CurrencySwitcher';
 import LocaleSwitcher from 'rc/LocaleSwitcher';
+import classNames from 'classnames';
 
 class MenuBottom extends Component {
   isActive(item, activeItems) {
@@ -25,6 +26,7 @@ class MenuBottom extends Component {
       currenciesIsoCodes,
       currentCurrency,
       currentLocale,
+      footerMenuMiddleHtml,
       i18n,
       locales,
       isVendorLandingLinkDisabled,
@@ -35,12 +37,22 @@ class MenuBottom extends Component {
       t,
       vendorLandingLink,
     } = this.props;
+    const contentWrapperClasses = classNames({
+      'b-footer__content-wrapper': true,
+      'b-footer__content-wrapper--with-middle': footerMenuMiddleHtml,
+    });
 
     return (
-      <div>
+      <div className={contentWrapperClasses}>
         <div className="b-footer__nav b-footer__nav_main">
           {this.renderList(leftItems, leftActiveItems)}
         </div>
+        {footerMenuMiddleHtml && (
+          <div
+            className="b-footer__nav b-footer__nav_middle"
+            dangerouslySetInnerHTML={{ __html: footerMenuMiddleHtml }}
+          />
+        )}
         <div className="b-footer__nav b-footer__nav_soc">
           {this.renderList(rightItems, rightActiveItems)}
           {!isVendorLandingLinkDisabled && (
@@ -75,6 +87,7 @@ MenuBottom.propTypes = {
   currenciesIsoCodes: PropTypes.array,
   currentCurrency: PropTypes.string,
   currentLocale: PropTypes.string,
+  footerMenuMiddleHtml: PropTypes.string,
   i18n: PropTypes.object,
   isVendorLandingLinkDisabled: PropTypes.bool.isRequired,
   leftActiveItems: PropTypes.arrayOf(schemas.menuItem).isRequired,

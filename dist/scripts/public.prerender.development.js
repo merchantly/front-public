@@ -11027,6 +11027,10 @@ var _LocaleSwitcher = require('../LocaleSwitcher');
 
 var _LocaleSwitcher2 = _interopRequireDefault(_LocaleSwitcher);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -11066,6 +11070,7 @@ var MenuBottom = function (_Component) {
           currenciesIsoCodes = _props.currenciesIsoCodes,
           currentCurrency = _props.currentCurrency,
           currentLocale = _props.currentLocale,
+          footerMenuMiddleHtml = _props.footerMenuMiddleHtml,
           i18n = _props.i18n,
           locales = _props.locales,
           isVendorLandingLinkDisabled = _props.isVendorLandingLinkDisabled,
@@ -11076,15 +11081,23 @@ var MenuBottom = function (_Component) {
           t = _props.t,
           vendorLandingLink = _props.vendorLandingLink;
 
+      var contentWrapperClasses = (0, _classnames2.default)({
+        'b-footer__content-wrapper': true,
+        'b-footer__content-wrapper--with-middle': footerMenuMiddleHtml
+      });
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: contentWrapperClasses },
         _react2.default.createElement(
           'div',
           { className: 'b-footer__nav b-footer__nav_main' },
           this.renderList(leftItems, leftActiveItems)
         ),
+        footerMenuMiddleHtml && _react2.default.createElement('div', {
+          className: 'b-footer__nav b-footer__nav_middle',
+          dangerouslySetInnerHTML: { __html: footerMenuMiddleHtml }
+        }),
         _react2.default.createElement(
           'div',
           { className: 'b-footer__nav b-footer__nav_soc' },
@@ -11124,6 +11137,7 @@ MenuBottom.propTypes = {
   currenciesIsoCodes: _react.PropTypes.array,
   currentCurrency: _react.PropTypes.string,
   currentLocale: _react.PropTypes.string,
+  footerMenuMiddleHtml: _react.PropTypes.string,
   i18n: _react.PropTypes.object,
   isVendorLandingLinkDisabled: _react.PropTypes.bool.isRequired,
   leftActiveItems: _react.PropTypes.arrayOf(schemas.menuItem).isRequired,
@@ -11142,7 +11156,7 @@ MenuBottom.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuBottom);
 module.exports = exports['default'];
 
-},{"../../schemas":308,"../CurrencySwitcher":71,"../HoC/provideTranslations":91,"../LocaleSwitcher":98,"./MenuBottomLink":104,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],106:[function(require,module,exports){
+},{"../../schemas":308,"../CurrencySwitcher":71,"../HoC/provideTranslations":91,"../LocaleSwitcher":98,"./MenuBottomLink":104,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"classnames":"classnames","react":"react"}],106:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

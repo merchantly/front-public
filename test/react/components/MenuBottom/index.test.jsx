@@ -12,4 +12,17 @@ describe('[Component] MenuBottom', () => {
 
     expect(() => render(<MenuBottom {...props} />)).not.to.throw();
   });
+
+  it('should render middle div when provided footerMenuMiddleHtml', () => {
+    const props = {
+      ...menuBottomPropsSample,
+      t,
+      footerMenuMiddleHtml: '<p></p>',
+    };
+
+    expect(
+      render(<MenuBottom {...props} />)
+        .find('.b-footer__nav_middle')
+    ).to.have.length(1);
+  });
 });

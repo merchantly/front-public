@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { InstagramContainer } from 'rc/Instagram'
+import { InstagramContainer } from 'rc/Instagram';
 import MenuBottom from 'rc/MenuBottom';
 
 class Footer extends Component {
