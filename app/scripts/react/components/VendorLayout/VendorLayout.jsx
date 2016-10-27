@@ -18,7 +18,6 @@ import * as schemas from 'r/schemas';
 class VendorLayout extends Component {
   render() {
     const {
-      checkCurrentClient,
       children,
       flash,
       i18n,
@@ -53,7 +52,6 @@ class VendorLayout extends Component {
           {showTopBanner && <TopBanner {...topBannerProps} />}
           <div className="b-page__content__inner b-page__content__inner_navbar">
             <NavBar {...navBarProps}
-              checkCurrentClient={checkCurrentClient}
               showClientBar={showClientBar}
               t={t}
             />
@@ -80,7 +78,6 @@ class VendorLayout extends Component {
 }
 
 VendorLayout.propTypes = {
-  checkCurrentClient: PropTypes.bool,
   children: PropTypes.element,
   flash: LayoutMessages.propTypes.flash,
   i18n: PropTypes.object,
@@ -101,7 +98,6 @@ VendorLayout.propTypes = {
 };
 
 VendorLayout.defaultProps = {
-  checkCurrentClient: false,
   showClientBar: true,
   showInstagramContainer: false,
   showMenuTop: false,

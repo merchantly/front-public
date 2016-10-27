@@ -33,6 +33,10 @@ export function packages() {
   return `${pUrl}/v1/packages.json`;
 }
 
-export function userState() {
-  return `${pUrl}/v1/user_state.json`;
+export function clientState() {
+  return `${pUrl}/v1/client_state.json`;
+}
+
+export function operatorState() {
+  return `${oUrl}/v1/operator_state.json`;
 }

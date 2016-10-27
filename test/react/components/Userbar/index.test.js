@@ -6,7 +6,7 @@ import { expect } from 'chai';
 import UserbarContainer from 'rc/Userbar';
 import * as PopupActions from 'r/actions/popupActions';
 import {
-  userState,
+  operatorState,
 } from 'scripts/routes/api';
 import { initStore } from 'test/mocks/redux';
 
@@ -19,7 +19,7 @@ describe('[Component] UserbarContainer', function() {
     before('render and locate element', function() {
       global.redux = initStore();
       this.server = sinon.fakeServer.create();
-      this.server.respondWith('GET', userState(), [
+      this.server.respondWith('GET', operatorState(), [
         200,
         { 'Content-Type': 'application/json' },
         '{ "designMode": "open" }',
@@ -49,7 +49,7 @@ describe('[Component] UserbarContainer', function() {
     before('render and locate element', function() {
       global.redux = initStore();
       this.server = sinon.fakeServer.create();
-      this.server.respondWith('GET', userState(), [
+      this.server.respondWith('GET', operatorState(), [
         200,
         { 'Content-Type': 'application/json' },
         '{ "designMode": "close" }',

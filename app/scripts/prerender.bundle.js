@@ -11,7 +11,8 @@ DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
 CartReducer = require('./react/reducers/cart').default;
 PackagesReducer = require('./react/reducers/packages').default;
-userState = require('./react/reducers/userState');
+clientState = require('./react/reducers/clientState');
+operatorState = require('./react/reducers/operatorState');
 require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
@@ -20,6 +21,7 @@ var prerenderReducers = combineReducers({
   design: DesignReducer,
   popup: PopupReducer,
   userState: userState,
+  operatorState: operatorState,
 });
 
 global.redux = (applyMiddleware(thunk)(createStore))(prerenderReducers, {});

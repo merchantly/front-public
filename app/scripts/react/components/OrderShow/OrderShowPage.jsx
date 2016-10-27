@@ -13,8 +13,8 @@ class OrderShowPage extends Component {
 
     return (
       <VendorLayoutContainer {...layoutProps}
-        checkCurrentClient
         i18n={i18n}
+        showClientBar={false}
       >
         <OrderShowContainer {...{
           i18n,

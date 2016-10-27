@@ -4,8 +4,11 @@ import {
   openDesignSettingsPopup,
 } from 'r/actions/popupActions';
 import {
-  fetchUserState,
-} from 'r/actions/UserStateActions';
+  fetchClientState,
+} from 'r/actions/ClientStateActions';
+import {
+  fetchOperatorState,
+} from 'r/actions/OperatorStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import Userbar from './Userbar';
 import Cookies from 'cookies-js';
@@ -15,7 +18,8 @@ class UserbarContainer extends Component {
   componentWillMount() {
     const {
       designMode, // FIXME: remove when moved to api
-      fetchUserState,
+      fetchClientState,
+      fetchOperatorState,
       openDesignSettingsPopup,
     } = this.props;
 
@@ -23,19 +27,15 @@ class UserbarContainer extends Component {
       return;
     }
 
-    fetchUserState()
+    fetchClientState();
+    fetchOperatorState()
       .then(({ response: { designMode } }) => {
         switch(designMode) {
-        case 'auto':
-          if (Cookies.get(cookieKeys.DESIGN_IS_OPEN) === 'true') {
-            openDesignSettingsPopup();
-          }
-          break;
         case 'open':
           Cookies.set(cookieKeys.DESIGN_IS_OPEN, true);
           openDesignSettingsPopup();
           break;
-        case 'close':
+        case 'disable':
           Cookies.set(cookieKeys.DESIGN_IS_OPEN, false);
           break;
         }
@@ -69,7 +69,8 @@ UserbarContainer.propTypes = {
 
   // redux props
   openDesignSettingsPopup: PropTypes.func.isRequired,
-  fetchUserState: PropTypes.func.isRequired,
+  fetchClientState: PropTypes.func.isRequired,
+  fetchOperatorState: PropTypes.func.isRequired,
   hasDesign: PropTypes.bool,
   hasOperator: PropTypes.bool,
   hasWishlist: PropTypes.bool,
@@ -82,9 +83,11 @@ export default connectToRedux(connect(
       designMode,
       hasDesign,
       hasOperator,
+    } = state.clientState.data;
+    const {
       hasWishlist,
       wishlistItemsCount,
-    } = state.userState.data;
+    } = state.operatorState.data;
 
     return Object.assign({}, ownProps, {
       designMode,
@@ -96,6 +99,7 @@ export default connectToRedux(connect(
   },
   {
     openDesignSettingsPopup,
-    fetchUserState,
+    fetchClientState,
+    fetchOperatorState,
   }
 )(UserbarContainer));
