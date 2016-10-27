@@ -20,7 +20,7 @@ var prerenderReducers = combineReducers({
   packages: PackagesReducer,
   design: DesignReducer,
   popup: PopupReducer,
-  userState: userState,
+  clientState: clientState,
   operatorState: operatorState,
 });
 
