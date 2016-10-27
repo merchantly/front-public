@@ -11287,23 +11287,7 @@ MenuBottom.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuBottom);
 module.exports = exports['default'];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-},{"../../schemas":308,"../CurrencySwitcher":71,"../HoC/provideTranslations":91,"../LocaleSwitcher":98,"./MenuBottomLink":104,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"classnames":"classnames","react":"react"}],106:[function(require,module,exports){
-=======
-},{"../../schemas":309,"../CurrencySwitcher":72,"../HoC/provideTranslations":92,"../LocaleSwitcher":99,"./MenuBottomLink":105,"babel-runtime/core-js/object/get-prototype-of":341,"babel-runtime/helpers/classCallCheck":347,"babel-runtime/helpers/createClass":348,"babel-runtime/helpers/inherits":351,"babel-runtime/helpers/possibleConstructorReturn":353,"react":"react"}],107:[function(require,module,exports){
->>>>>>> fix prerender tests
-=======
-},{"../../schemas":308,"../CurrencySwitcher":71,"../HoC/provideTranslations":91,"../LocaleSwitcher":98,"./MenuBottomLink":104,"babel-runtime/core-js/object/get-prototype-of":340,"babel-runtime/helpers/classCallCheck":346,"babel-runtime/helpers/createClass":347,"babel-runtime/helpers/inherits":350,"babel-runtime/helpers/possibleConstructorReturn":352,"react":"react"}],106:[function(require,module,exports){
->>>>>>> ajax isCurrentClientPresent value
-=======
-},{"../../schemas":309,"../CurrencySwitcher":72,"../HoC/provideTranslations":92,"../LocaleSwitcher":99,"./MenuBottomLink":105,"babel-runtime/core-js/object/get-prototype-of":341,"babel-runtime/helpers/classCallCheck":347,"babel-runtime/helpers/createClass":348,"babel-runtime/helpers/inherits":351,"babel-runtime/helpers/possibleConstructorReturn":353,"react":"react"}],107:[function(require,module,exports){
->>>>>>> build
-=======
-},{"../../schemas":311,"../CurrencySwitcher":73,"../HoC/provideTranslations":93,"../LocaleSwitcher":100,"./MenuBottomLink":106,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],108:[function(require,module,exports){
->>>>>>> splited for operator state
+},{"../../schemas":311,"../CurrencySwitcher":73,"../HoC/provideTranslations":93,"../LocaleSwitcher":100,"./MenuBottomLink":106,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],108:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
