@@ -31,7 +31,7 @@ const baseDependencies = {
   'tinycolor2': './node_modules/tinycolor2',
   'timm': './node_modules/timm',
   'urijs': './node_modules/urijs/src/URI',
-  
+
   'jquery.mmenu': './app/bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all',
   'jquery.role': './app/bower_components/jquery.role/lib/jquery.role',
   'jquery.sticky-kit': './app/bower_components/sticky-kit/jquery.sticky-kit',

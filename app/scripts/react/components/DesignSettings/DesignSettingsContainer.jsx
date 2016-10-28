@@ -13,10 +13,6 @@ import { DOM_CHANGE } from '../../constants/globalEventKeys';
 import DesignSettings from './index';
 import { any } from 'lodash';
 
-@connect((state) => ({
-  design: state.design,
-  popups: state.popup.popups,
-}))
 class DesignSettingsContainer extends Component {
   static propTypes = {
     authUrl: PropTypes.string.isRequired,
@@ -83,4 +79,9 @@ class DesignSettingsContainer extends Component {
   }
 }
 
-export default connectToRedux(DesignSettingsContainer);
+export default connectToRedux(connect(
+  (state) => ({
+    design: state.design,
+    popups: state.popup.popups,
+  })
+)(DesignSettingsContainer));

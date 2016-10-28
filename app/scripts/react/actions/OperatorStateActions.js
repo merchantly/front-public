@@ -34,7 +34,7 @@ export function fetchOperatorState(force) {
             OPERATOR_STATE_SUCCESS,
             OPERATOR_STATE_FAILURE,
           ],
-          data: { design },
+          data: { design, suppressError: true },
         },
       })));
     } else if (operatorStatePromise) {

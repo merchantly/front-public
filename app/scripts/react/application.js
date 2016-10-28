@@ -7,7 +7,6 @@ import {
 import * as reducers from './reducers';
 import apiMiddleware from './middleware/api';
 import thunkMiddleware from 'redux-thunk';
-import { fromJS } from 'immutable';
 
 // Bootstraping serverside data
 let data = {};
@@ -15,12 +14,12 @@ if (global.gon.__data) {
   const { design } = global.gon.__data;
 
   data = {
-    design: fromJS({
+    design: {
       current: design,
       currentSaved: design,
       unsavedFields: {},
       isSaving: false,
-    }),
+    },
   };
 }
 

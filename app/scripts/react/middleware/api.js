@@ -16,7 +16,10 @@ function callApi(endpoint, data) {
       return camelizeKeys(json);
     }, (jqHXR) => {
       let json = jqHXR.responseJSON;
-      NoticeService.errorResponse(jqHXR);
+
+      if (!(data && data.suppressError)) {
+        NoticeService.errorResponse(jqHXR);
+      }
 
       if (typeof json !== 'object') {
         json = {};
