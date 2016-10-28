@@ -1,4 +1,5 @@
 // Polyfills & Shims
+import 'babel-polyfill';
 import './lib/console-polyfill';
 
 // Libs configuration
