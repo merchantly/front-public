@@ -23,7 +23,7 @@ import './shared/theme_switcher';
 
 // Exposing neccessary resources outside
 global.CatalogFilter = require('./react/components/CatalogFilter').CatalogFilter;
-global.Userbar = require('./react/components/Userbar').UserbarContainer;
+global.Userbar = require('./react/components/Userbar').default;
 global.Clientbar = require('./react/components/Clientbar').Clientbar;
 global.Logo = require('./react/components/Logo/LogoContainer');
 global.ProductBlock = require('./react/components/Product/ProductBlock');
@@ -42,7 +42,7 @@ global.Pagination = require('./react/components/Pagination');
 global.WishlistContainer = require('./react/components/Wishlist');
 global.MenuTop = require('rc/MenuTop');
 global.MenuBottom = require('rc/MenuBottom');
-global.NavBar = require('rc/NavBar');
+global.NavBar = require('rc/NavBar').default;
 global.ProductList = require('rc/ProductList');
 global.ProductGroup = require('rc/ProductGroup');
 global.ChildrenProducts = require('rc/ChildrenProducts');

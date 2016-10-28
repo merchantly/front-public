@@ -1,12 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import PublishShopButton from 'rc/common/PublishShopButton';
 import TopBanner from 'rc/TopBanner';
-import NavBar from 'rc/NavBar/NavBar';
+import NavBar, {
+  externalPropTypes as navBarPropTypes,
+} from 'rc/NavBar';
 import MenuTop from 'rc/MenuTop';
 import LayoutMessages from 'rc/common/LayoutMessages';
 import Footer from './Footer';
 import MenuBottom from 'rc/MenuBottom';
-import { UserbarContainer } from 'rc/Userbar';
+import Userbar, {
+  externalPropTypes as userbarPropTypes,
+} from 'rc/Userbar';
 import W1Widget from 'rc/common/W1Widget';
 import ScrollToTop from 'rc/ScrollToTop';
 import * as schemas from 'r/schemas';
@@ -22,6 +26,7 @@ class VendorLayout extends Component {
       navBarProps,
       publishShopPath,
       scrollToTopProps,
+      showClientBar,
       showInstagramContainer,
       showMenuTop,
       showTopBanner,
@@ -46,7 +51,10 @@ class VendorLayout extends Component {
           )}
           {showTopBanner && <TopBanner {...topBannerProps} />}
           <div className="b-page__content__inner b-page__content__inner_navbar">
-            <NavBar {...navBarProps} t={t} />
+            <NavBar {...navBarProps}
+              showClientBar={showClientBar}
+              t={t}
+            />
             {showMenuTop && <MenuTop {...menuTopProps} />}
           </div>
           <LayoutMessages flash={flash} />
@@ -59,7 +67,7 @@ class VendorLayout extends Component {
             menuBottomProps={menuBottomProps}
             showInstagramContainer={showInstagramContainer}
           />
-          <UserbarContainer {...userbarProps} />
+          <Userbar {...userbarProps} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />
@@ -75,20 +83,22 @@ VendorLayout.propTypes = {
   i18n: PropTypes.object,
   menuBottomProps: PropTypes.shape(...MenuBottom.wrapped.propTypes).isRequired,
   menuTopProps: PropTypes.shape(...MenuTop.wrapped.propTypes),
-  navBarProps: PropTypes.shape(...NavBar.propTypes).isRequired,
+  navBarProps: PropTypes.shape(navBarPropTypes).isRequired,
   publishShopPath: PropTypes.string.isRequired,
   scrollToTopProps: PropTypes.shape(...ScrollToTop.propTypes),
+  showClientBar: PropTypes.bool,
   showInstagramContainer: PropTypes.bool,
   showMenuTop: PropTypes.bool,
   showTopBanner: PropTypes.bool,
   t: PropTypes.func,
   topBannerProps: PropTypes.shape(...TopBanner.propTypes),
-  userbarProps: PropTypes.shape(...UserbarContainer.wrapped.propTypes).isRequired,
+  userbarProps: PropTypes.shape(userbarPropTypes).isRequired,
   vendor: schemas.vendor.isRequired,
   w1ptEnabled: PropTypes.string,
 };
 
 VendorLayout.defaultProps = {
+  showClientBar: true,
   showInstagramContainer: false,
   showMenuTop: false,
   showTopBanner: false,

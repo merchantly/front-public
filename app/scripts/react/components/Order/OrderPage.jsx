@@ -22,7 +22,10 @@ class OrderPage extends Component {
     } = this.props;
 
     return (
-      <VendorLayoutContainer {...layoutProps} i18n={i18n}>
+      <VendorLayoutContainer {...layoutProps}
+        i18n={i18n}
+        showClientBar={false}
+      >
         <OrderContainer {...{
           i18n,
           backUrl,

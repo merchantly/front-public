@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
-import _ from 'lodash';
 import Notice from '../components/Notice';
 
 const NoticeService = {
@@ -63,7 +62,7 @@ const NoticeService = {
       let { responseJSON: json } = response;
       message = json.message || json.long_message || json.error;
     } else {
-      message = i18n.t('network_error', {text: response.statusText});
+      message = `Network error: ${response.statusText}`;
     }
 
     this.notifyError(message, timeout);
@@ -72,8 +71,9 @@ const NoticeService = {
   close() {
     const container = this.getContainer();
     unmountComponentAtNode(container);
-  }
+  },
 };
-global.NoticeService = NoticeService
+
+global.NoticeService = NoticeService;
 
 export default NoticeService;

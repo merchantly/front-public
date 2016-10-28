@@ -11,13 +11,17 @@ class NavBarContainer extends Component {
   }
 }
 
-NavBarContainer.propTypes = {
+export const externalPropTypes = {
   clientBarProps: PropTypes.shape(Clientbar.propTypes).isRequired,
   i18n: PropTypes.object,
   logoProps: PropTypes.shape(Logo.propTypes).isRequired,
   searchQuery: PropTypes.string,
   showClientBar: PropTypes.bool,
   vendor: schemas.vendor.isRequired,
+};
+
+NavBarContainer.propTypes = {
+  ...externalPropTypes,
   t: PropTypes.func.isRequired,
 };
 
@@ -30,7 +34,7 @@ NavBarContainer.defaultProps = {
     search_products_path: '',
   },
   searchQuery: '',
-  showClientBar: false,
+  showClientBar: true,
 };
 
 export default provideTranslations(NavBarContainer);

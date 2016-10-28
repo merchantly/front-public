@@ -13,7 +13,10 @@ class OrderCreatedPage extends Component {
     } = this.props;
 
     return (
-      <VendorLayoutContainer {...layoutProps} i18n={i18n}>
+      <VendorLayoutContainer {...layoutProps}
+        i18n={i18n}
+        showClientBar={false}
+      >
         <OrderCreatedContainer {...{
           i18n,
           order,

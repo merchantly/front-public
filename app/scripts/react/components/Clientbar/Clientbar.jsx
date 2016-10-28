@@ -12,7 +12,6 @@ class Clientbar extends Component {
       showFullBasketCount,
       t,
       hasCabinet,
-      hasCart,
       hasWishlist,
       wishlistText,
       wishlistUrl,
@@ -32,7 +31,7 @@ class Clientbar extends Component {
             url={wishlistUrl}
           />
         }
-        {hasCart && cartUrl &&
+        {cartUrl &&
           <CartButtonController
             showFullBasketCount={showFullBasketCount}
             t={t}
@@ -49,7 +48,6 @@ Clientbar.propTypes = {
   cabinetUrl: PropTypes.string,
   cartUrl: PropTypes.string,
   hasCabinet: PropTypes.bool,
-  hasCart: PropTypes.bool,
   hasWishlist: PropTypes.bool,
   wishlistText: PropTypes.string,
   wishlistUrl: PropTypes.string,

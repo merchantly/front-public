@@ -4,12 +4,8 @@ import { expect } from 'chai';
 import { render } from 'enzyme';
 import t from '../../../mocks/t';
 import OrderContainer from '../../../../app/scripts/react/components/Order';
-import { createStore, combineReducers } from 'redux';
-import * as reducers from '../../../../app/scripts/react/reducers';
 import orderWithCoupon from '../../../fixtures/order/with-coupon';
 import orderNoCoupon from '../../../fixtures/order/no-coupon';
-
-global.redux = createStore(combineReducers(reducers));
 
 describe('[Component] OrderContainer', () => {
   it('should render valid component with correct props', () => {
@@ -25,5 +21,5 @@ describe('[Component] OrderContainer', () => {
       .find('input#vendor_order_coupon_code')
       .length
     ).to.equal(1);
-  })
+  });
 });

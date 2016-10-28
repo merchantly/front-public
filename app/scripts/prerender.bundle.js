@@ -4,11 +4,15 @@ ReactDOM = require('react-dom');
 ReactDOMServer = require('react-dom/server');
 createStore = require('redux').createStore;
 combineReducers = require('redux').combineReducers;
+applyMiddleware = require('redux').applyMiddleware;
+thunk = require('redux-thunk').default;
 Provider = require('react-redux').Provider;
 DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
 CartReducer = require('./react/reducers/cart').default;
 PackagesReducer = require('./react/reducers/packages').default;
+clientState = require('./react/reducers/clientState');
+operatorState = require('./react/reducers/operatorState');
 require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
@@ -16,9 +20,11 @@ var prerenderReducers = combineReducers({
   packages: PackagesReducer,
   design: DesignReducer,
   popup: PopupReducer,
+  clientState: clientState,
+  operatorState: operatorState,
 });
 
-global.redux = createStore(prerenderReducers, {});
+global.redux = (applyMiddleware(thunk)(createStore))(prerenderReducers, {});
 
 Logo = require('./react/components/Logo/LogoContainer');
 ProductBlock = require('./react/components/Product/ProductBlock');
@@ -37,7 +43,7 @@ Pagination = require('./react/components/Pagination').default;
 WishlistContainer = require('./react/components/Wishlist');
 MenuTop = require('./react/components/MenuTop');
 MenuBottom = require('./react/components/MenuBottom');
-NavBar = require('./react/components/NavBar');
+NavBar = require('./react/components/NavBar').default;
 ProductList = require('./react/components/ProductList');
 ProductGroup = require('./react/components/ProductGroup');
 ChildrenProducts = require('./react/components/ChildrenProducts');
