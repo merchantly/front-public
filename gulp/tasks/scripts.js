@@ -209,11 +209,15 @@ gulp.task('[Production] Scripts', () => {
     .transform('babelify', {
       ignore: /(node_modules|bower_components)/,
     })
+    .transform('loose-envify', {
+      'NODE_ENV': 'production',
+      'APP_VERSION': require('../../package.json').version,
+    })
     .transform('coffee-reactify')
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.bundle.outputName))
-    .pipe(streamify(uglify({ mangle: true })))
+    //.pipe(streamify(uglify({ mangle: true })))
     .pipe(gulp.dest(config.production.bundle.dest))
     .on('end', function() {
       bundleLogger.end(config.production.bundle.outputName);

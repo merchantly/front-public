@@ -2,7 +2,7 @@
 
 $(() => {
   $(document).ajaxError((event, jqxhr, settings, thrownError) => {
-    if (jqxhr.status === 0 || jqxhr.readyState === 0) { // abort & page unload
+    if (jqxhr.status === 0 || jqxhr.readyState === 0 || settings.suppressError) { // abort & page unload
       return;
     }
 
@@ -25,5 +25,5 @@ $(() => {
 
       Bugsnag.notify(error, message, null, 'warning');
     };
-  };
+  }
 });
