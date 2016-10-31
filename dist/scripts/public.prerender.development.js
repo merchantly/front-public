@@ -365,7 +365,7 @@ function fetchOperatorState(force) {
       return operatorStatePromise = _promise2.default.resolve(dispatch((0, _defineProperty3.default)({}, _api2.CALL_API, {
         endpoint: (0, _api.operatorState)(),
         types: [OPERATOR_STATE_REQUEST, OPERATOR_STATE_SUCCESS, OPERATOR_STATE_FAILURE],
-        data: { design: design }
+        data: { design: design, suppressError: true }
       })));
     } else if (operatorStatePromise) {
       return operatorStatePromise;
@@ -8316,7 +8316,7 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _dec, _class, _class2, _temp;
+var _class, _temp;
 
 var _jquery = require('jquery');
 
@@ -8370,12 +8370,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var DesignSettingsContainer = (_dec = (0, _reactRedux.connect)(function (state) {
-  return {
-    design: state.design,
-    popups: state.popup.popups
-  };
-}), _dec(_class = (_temp = _class2 = function (_Component) {
+var DesignSettingsContainer = (_temp = _class = function (_Component) {
   (0, _inherits3.default)(DesignSettingsContainer, _Component);
 
   function DesignSettingsContainer() {
@@ -8446,15 +8441,20 @@ var DesignSettingsContainer = (_dec = (0, _reactRedux.connect)(function (state) 
     }
   }]);
   return DesignSettingsContainer;
-}(_react.Component), _class2.propTypes = {
+}(_react.Component), _class.propTypes = {
   authUrl: _react.PropTypes.string.isRequired,
   categoryPageUrl: _react.PropTypes.string.isRequired,
   design: _react.PropTypes.object.isRequired,
   dispatch: _react.PropTypes.func.isRequired,
   pageType: _react.PropTypes.string.isRequired,
   productPageUrl: _react.PropTypes.string.isRequired
-}, _temp)) || _class);
-exports.default = (0, _connectToRedux2.default)(DesignSettingsContainer);
+}, _temp);
+exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
+  return {
+    design: state.design,
+    popups: state.popup.popups
+  };
+})(DesignSettingsContainer));
 module.exports = exports['default'];
 
 },{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":272,"../../constants/globalEventKeys":275,"../../constants/storageKeys":280,"../HoC/connectToRedux":92,"./index":83,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":780}],79:[function(require,module,exports){
@@ -21354,13 +21354,13 @@ UserbarContainer.propTypes = (0, _extends3.default)({}, externalPropTypes, {
 });
 
 exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
-  var _state$clientState$da = state.clientState.data,
-      designMode = _state$clientState$da.designMode,
-      hasDesign = _state$clientState$da.hasDesign,
-      hasOperator = _state$clientState$da.hasOperator;
   var _state$operatorState$ = state.operatorState.data,
-      hasWishlist = _state$operatorState$.hasWishlist,
-      wishlistItemsCount = _state$operatorState$.wishlistItemsCount;
+      designMode = _state$operatorState$.designMode,
+      hasDesign = _state$operatorState$.hasDesign,
+      hasOperator = _state$operatorState$.hasOperator;
+  var _state$clientState$da = state.clientState.data,
+      hasWishlist = _state$clientState$da.hasWishlist,
+      wishlistItemsCount = _state$clientState$da.wishlistItemsCount;
 
 
   return (0, _assign2.default)({}, ownProps, {
@@ -28703,7 +28703,10 @@ function callApi(endpoint, data) {
     return (0, _humps.camelizeKeys)(json);
   }, function (jqHXR) {
     var json = jqHXR.responseJSON;
-    _Notice2.default.errorResponse(jqHXR);
+
+    if (!(data && data.suppressError)) {
+      _Notice2.default.errorResponse(jqHXR);
+    }
 
     if ((typeof json === 'undefined' ? 'undefined' : (0, _typeof3.default)(json)) !== 'object') {
       json = {};

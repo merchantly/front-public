@@ -83,11 +83,11 @@ export default connectToRedux(connect(
       designMode,
       hasDesign,
       hasOperator,
-    } = state.clientState.data;
+    } = state.operatorState.data;
     const {
       hasWishlist,
       wishlistItemsCount,
-    } = state.operatorState.data;
+    } = state.clientState.data;
 
     return Object.assign({}, ownProps, {
       designMode,
