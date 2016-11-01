@@ -18,7 +18,7 @@ if (typeof Bugsnag !== 'undefined') {
   if (bugsnagScript) {
     const appVersion = bugsnagScript.getAttribute('data-appversion');
 
-    Bugsnag.appVersion = appVersion + '.frontend-' + process.env.APP_VERSION;
+    Bugsnag.appVersion = appVersion + process.env.APP_VERSION;
   }
   Bugsnag.releaseStage = gon.env;
   Bugsnag.notifyReleaseStages = ['production', 'reproduction', 'staging'];
