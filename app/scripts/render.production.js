@@ -13,7 +13,7 @@ import './lib/eventsHelper';
 import './lib/bugsnagAjax';
 
 if (typeof Bugsnag !== 'undefined') {
-  const bugsnagScript = document.querySelector('[src$=bugsnag-2.min.js]');
+  const bugsnagScript = document.querySelector('[src$="bugsnag-2.min.js"]');
 
   if (bugsnagScript) {
     const appVersion = bugsnagScript.getAttribute('data-appversion');

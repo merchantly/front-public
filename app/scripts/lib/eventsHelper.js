@@ -1,8 +1,10 @@
+import { addEvent } from 'r/helpers/dom'
+
 const EVENT_HELPER_SUBMIT_TIMEOUT = 300;
 
 window.event_helper_submit = (function (id, callback) {
   const form = document.getElementById(id);
-  form && form.addEventListener('submit', function (ev) {
+  form && addEvent(form, 'submit', function (ev) {
     if (callback && form.target !== '_blank') {
       if (ev.preventDefault) {
         ev.preventDefault();

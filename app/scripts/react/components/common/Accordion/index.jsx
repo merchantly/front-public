@@ -1,5 +1,7 @@
 import React, { Children, cloneElement, Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
+import $ from 'jquery';
+import { getTransitionEndEvent } from 'r/helpers/dom';
 
 export default class Accordion extends Component {
   static propTypes = {
@@ -40,11 +42,12 @@ export default class Accordion extends Component {
   }
   componentDidMount() {
     const { updateEvent } = this.props;
+    const transitionEndEvent = getTransitionEndEvent();
 
     this.allowOverflowByIndex(this.state.selectedIndex);
     // allow overflow for absolute positioned elements inside
     // the item body, but only after animation is complete
-    findDOMNode(this).addEventListener('transitionend', () => {
+    $(findDOMNode(this)).on(transitionEndEvent, () => {
       if (this.state.selectedIndex > -1) {
         this.allowOverflowByIndex(this.state.selectedIndex);
       }
