@@ -210,6 +210,7 @@ gulp.task('[Production] Scripts', () => {
       ignore: /(node_modules|bower_components)/,
     })
     .transform('loose-envify', {
+      'global': true,
       'NODE_ENV': 'production',
       'APP_VERSION': require('../../package.json').version,
     })

@@ -1,10 +1,11 @@
 /*global $, Bugsnag, gon */
 
 import 'es5-shim';
-import './lib/ReactRailsUJS';
 
 import './render.libs';
 import './render.bundle';
+
+import './lib/ReactRailsUJS';
 
 import 'jquery-ujs';
 import './lib/csrfToken';
