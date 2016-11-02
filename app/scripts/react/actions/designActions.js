@@ -50,6 +50,9 @@ export function saveChanges(authUrl) {
       cache: false,
       contentType: false,
       processData: false,
+      xhrFields: {
+        withCredentials: true,
+      },
     }).then((design) => {
         dispatch({
           type: actionTypes.DESIGN_SAVE_SUCCESS,
