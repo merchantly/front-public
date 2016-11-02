@@ -209,6 +209,11 @@ gulp.task('[Production] Scripts', () => {
     .transform('babelify', {
       ignore: /(node_modules|bower_components)/,
     })
+    .transform('loose-envify', {
+      'global': true,
+      'NODE_ENV': 'production',
+      'APP_VERSION': require('../../package.json').version,
+    })
     .transform('coffee-reactify')
     .bundle()
     .on('error', handleErrors)

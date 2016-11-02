@@ -34,7 +34,15 @@ export function fetchOperatorState(force) {
             OPERATOR_STATE_SUCCESS,
             OPERATOR_STATE_FAILURE,
           ],
-          data: { design, suppressError: true },
+          data: {
+            data: {
+              design,
+            },
+            xhrFields: {
+              withCredentials: true,
+            },
+            suppressError: true,
+          },
         },
       })));
     } else if (operatorStatePromise) {

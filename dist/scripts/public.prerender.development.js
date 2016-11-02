@@ -365,7 +365,15 @@ function fetchOperatorState(force) {
       return operatorStatePromise = _promise2.default.resolve(dispatch((0, _defineProperty3.default)({}, _api2.CALL_API, {
         endpoint: (0, _api.operatorState)(),
         types: [OPERATOR_STATE_REQUEST, OPERATOR_STATE_SUCCESS, OPERATOR_STATE_FAILURE],
-        data: { design: design, suppressError: true }
+        data: {
+          data: {
+            design: design
+          },
+          xhrFields: {
+            withCredentials: true
+          },
+          suppressError: true
+        }
       })));
     } else if (operatorStatePromise) {
       return operatorStatePromise;
@@ -24335,6 +24343,12 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _dom = require('../../../helpers/dom');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Accordion = (_temp = _class = function (_Component) {
@@ -24383,16 +24397,17 @@ var Accordion = (_temp = _class = function (_Component) {
 
       var updateEvent = this.props.updateEvent;
 
+      var transitionEndEvent = (0, _dom.getTransitionEndEvent)();
 
       this.allowOverflowByIndex(this.state.selectedIndex);
       // allow overflow for absolute positioned elements inside
       // the item body, but only after animation is complete
-      (0, _reactDom.findDOMNode)(this).addEventListener('transitionend', function () {
+      (0, _jquery2.default)((0, _reactDom.findDOMNode)(this)).on(transitionEndEvent, function () {
         if (_this2.state.selectedIndex > -1) {
           _this2.allowOverflowByIndex(_this2.state.selectedIndex);
         }
         if (updateEvent) {
-          $(document).trigger(updateEvent);
+          (0, _jquery2.default)(document).trigger(updateEvent);
         }
       });
     }
@@ -24480,7 +24495,7 @@ var Accordion = (_temp = _class = function (_Component) {
 exports.default = Accordion;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react","react-dom":"react-dom"}],234:[function(require,module,exports){
+},{"../../../helpers/dom":283,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"jquery":"jquery","react":"react","react-dom":"react-dom"}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28268,6 +28283,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.canUseDOM = canUseDOM;
+exports.addEvent = addEvent;
+exports.getTransitionEndEvent = getTransitionEndEvent;
 var getScrollTop = exports.getScrollTop = function getScrollTop(elt) {
   return elt.scrollY != null ? elt.scrollY : elt.scrollTop;
 };
@@ -28286,6 +28303,51 @@ var getElt = exports.getElt = function getElt(selector) {
 
 function canUseDOM() {
   return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+}
+
+function addEvent(el, eventName, callback, useCapture) {
+  if (el.addEventListener) {
+    el.addEventListener(eventName, callback, !!useCapture);
+    return true;
+  } else if (el.attachEvent) {
+    return el.attachEvent('on' + eventName, callback);
+  } else {
+    var eventType = 'on' + eventName;
+    var newCallback = el[eventType] ? function (fn1, fn2) {
+      fn1.apply(this, arguments);
+      fn2.apply(this, arguments);
+    }(el[eventType], callback) : callback;
+
+    el[eventType] = newCallback;
+    return true;
+  }
+}
+
+var transitionEndEvent = void 0;
+
+function getTransitionEndEvent() {
+  if (transitionEndEvent) {
+    return transitionEndEvent;
+  }
+
+  var el = document.createElement('fakeelement');
+  var transitions = {
+    'transition': 'transitionend',
+    'OTransition': 'oTransitionEnd',
+    'MozTransition': 'transitionend',
+    'WebkitTransition': 'webkitTransitionEnd'
+  };
+  var t = void 0;
+
+  for (t in transitions) {
+    if (el.style[t] !== void 0) {
+      transitionEndEvent = transitions[t];
+
+      return transitionEndEvent;
+    }
+  }
+
+  return false;
 }
 
 },{}],284:[function(require,module,exports){
