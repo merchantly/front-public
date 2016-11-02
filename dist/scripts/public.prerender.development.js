@@ -2023,6 +2023,7 @@ var Cart = function (_Component) {
   }, {
     key: 'renderErrors',
     value: function renderErrors() {
+      var suffix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
       var _props = this.props,
           cartErrors = _props.cartErrors,
           isBelowMinimalPrice = _props.isBelowMinimalPrice,
@@ -2036,8 +2037,10 @@ var Cart = function (_Component) {
         isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
           minimal_price: (0, _money.humanizedMoneyWithCurrency)(minimalPrice),
           currency: ''
-        }), 'minimal-price'),
-        (0, _lodash.chain)(cartErrors).omit('minimalPrice').toArray().flatten(true).map(this.renderError).value()
+        }), 'minimal-price-' + suffix),
+        (0, _lodash.chain)(cartErrors).omit('minimalPrice').toArray().flatten(true).mapKeys(function (_, k) {
+          return k + '-' + suffix;
+        }).map(this.renderError).value()
       );
     }
   }, {
@@ -2112,7 +2115,7 @@ var Cart = function (_Component) {
               noValidate: true
             },
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
-            hasErrors && this.renderErrors(),
+            hasErrors && this.renderErrors('top'),
             _react2.default.createElement(_CartList2.default, {
               amounts: amounts,
               changeAmount: changeAmount,
@@ -2137,6 +2140,7 @@ var Cart = function (_Component) {
                 })
               )
             ),
+            hasErrors && this.renderErrors('bottom'),
             _react2.default.createElement(
               'div',
               { className: 'b-cart__action' },
