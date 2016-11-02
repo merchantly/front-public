@@ -556,7 +556,10 @@ function saveChanges(authUrl) {
       data: formData,
       cache: false,
       contentType: false,
-      processData: false
+      processData: false,
+      xhrFields: {
+        withCredentials: true
+      }
     }).then(function (design) {
       dispatch({
         type: actionTypes.DESIGN_SAVE_SUCCESS,
