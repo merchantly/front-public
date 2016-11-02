@@ -41,8 +41,8 @@ describe('[Component] CartContainer', () => {
     ).to.exist;
 
     expect(render(<CartContainer {...props} />)
-      .find('.help-block #cart-error-minimal-price')
-    ).to.have.length(1);
+      .find('.help-block [id^="cart-error-minimal-price"]')
+    ).to.have.length(2);
   });
 
   it('should not disable submit button when there is no any minimal price', () => {
@@ -58,7 +58,7 @@ describe('[Component] CartContainer', () => {
     const props = { ...selectPackageCart, isTesting: true };
 
     expect (render(<CartContainer {...props} />)
-      .find('.help-block [id^=cart-error-]')
-    ).to.have.length(2);
+      .find('.help-block [id^="cart-error-"]')
+    ).to.have.length(4);
   });
 });

@@ -31,7 +31,7 @@ class Cart extends Component {
       </div>
     );
   }
-  renderErrors() {
+  renderErrors(suffix='') {
     const {
       cartErrors,
       isBelowMinimalPrice,
@@ -44,11 +44,12 @@ class Cart extends Component {
         {isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
           minimal_price: humanizedMoneyWithCurrency(minimalPrice),
           currency: '',
-        }), 'minimal-price')}
+        }), `minimal-price-${suffix}`)}
         {chain(cartErrors)
           .omit('minimalPrice')
           .toArray()
           .flatten(true)
+          .mapKeys((_, k) => `${k}-${suffix}`)
           .map(this.renderError)
           .value()
         }
@@ -115,7 +116,7 @@ class Cart extends Component {
               noValidate
             >
               <FormAuthenticity {...formAuthenticity} />
-              {hasErrors && this.renderErrors()}
+              {hasErrors && this.renderErrors('top')}
               <CartList
                 amounts={amounts}
                 changeAmount={changeAmount}
@@ -136,6 +137,7 @@ class Cart extends Component {
                   />
                 </span>
               </div>
+              {hasErrors && this.renderErrors('bottom')}
               <div className="b-cart__action">
                 <div className="b-cart__action__container">
                   <div className="b-cart__action__col-clear">
