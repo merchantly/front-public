@@ -12,12 +12,12 @@ class OrderCancelled extends Component {
       vendorRootPath,
     } = this.props;
     const {
-      external_id: externalId,
-      workflow_state: {
-        bg_style: bgStyle,
+      externalId,
+      workflowState: {
+        bgStyle,
         title,
       },
-      admin_comments: adminComments,
+      adminComments,
     } = order;
 
     return (

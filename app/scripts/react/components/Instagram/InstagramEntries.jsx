@@ -13,14 +13,14 @@ class InstagramEntries extends Component {
       <div className={classes}>
         {entries.length
           ? entries.map((entry, i) => (
-              <a
-                className="Instagram-entry"
-                href={profileUrl}
-                key={i}
-                rel="nofollow"
-                target="_blank"
-              >
-                <img src={entry.images.low_resolution.url} />
+            <a
+              className="Instagram-entry"
+              href={profileUrl}
+              key={i}
+              rel="nofollow"
+              target="_blank"
+            >
+              <img src={entry.images.lowResolution.url} />
               </a>
             ))
           : <span>Instagram не содержит фотографий</span>

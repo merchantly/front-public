@@ -1,7 +1,7 @@
 import { PropTypes } from 'react';
 
 export default PropTypes.shape({
-  current_href: PropTypes.string,
-  current_page: PropTypes.number.isRequired,
-  total_pages: PropTypes.number.isRequired,
+  currentHref: PropTypes.string,
+  currentPage: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
 });

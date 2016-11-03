@@ -40,7 +40,7 @@ class VendorLayout extends Component {
     return (
       <div>
         <div className="b-page__content">
-          {!vendor.is_published && (
+          {!vendor.isPublished && (
             <div className="b-publish-shop-button">
               <PublishShopButton
                 className="b-btn"
@@ -62,14 +62,14 @@ class VendorLayout extends Component {
             {children}
           </div>
           <Footer
-            customAfterContentHtml={vendor.custom_after_content_html}
+            customAfterContentHtml={vendor.customAfterContentHtml}
             i18n={i18n}
             menuBottomProps={menuBottomProps}
             showInstagramContainer={showInstagramContainer}
           />
           <Userbar {...userbarProps} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
+        <div dangerouslySetInnerHTML={{ __html: vendor.customAppendHtml }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />
         <ScrollToTop {...scrollToTopProps} />
       </div>

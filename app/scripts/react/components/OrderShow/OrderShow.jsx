@@ -11,23 +11,23 @@ class OrderShow extends Component {
       t,
     } = this.props;
     const {
-      external_id: externalId,
-      order_delivery: orderDelivery,
-      delivery_type: deliveryType={},
-      free_delivery: freeDelivery,
-      free_delivery_threshold: freeDeliveryThreshold,
-      must_be_paid_online: mustBePaidOnline,
-      payment_url: paymentUrl,
-      payment_type: paymentType={},
-      workflow_state: workflowState,
+      externalId,
+      orderDelivery,
+      deliveryType={},
+      freeDelivery,
+      freeDeliveryThreshold,
+      mustBePaidOnline,
+      paymentUrl,
+      paymentType={},
+      workflowState,
     } = order;
     const {
-      tracking_id: trackingId,
-      tracking_url: trackingUrl,
+      trackingId,
+      trackingUrl,
     } = (orderDelivery || {});
     const freeDeliveryMessage = freeDelivery
       ? t('vendor.order.free_delivery_text_html', {
-        free_delivery_threshold: humanizedMoneyWithCurrency(freeDeliveryThreshold),
+        'free_delivery_threshold': humanizedMoneyWithCurrency(freeDeliveryThreshold),
       })
       : null;
 

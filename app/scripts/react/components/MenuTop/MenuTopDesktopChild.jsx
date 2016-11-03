@@ -30,7 +30,7 @@ class MenuTopDesktopChild extends Component {
 
     const {
       id,
-      products_count,
+      productsCount,
       title,
     } = child;
     const childClasses = classNames({
@@ -46,7 +46,7 @@ class MenuTopDesktopChild extends Component {
       >
         <a
           className="b-nav__link"
-          data-count={products_count}
+          data-count={productsCount}
           href="#"
           onClick={this.handleClickLink}
         >
