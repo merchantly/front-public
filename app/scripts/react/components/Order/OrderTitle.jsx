@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { decamelizeKeys } from 'humps';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 import { isEmpty } from 'lodash';
 
@@ -39,7 +38,7 @@ class OrderTitle extends Component {
           </strong>
           {` ${t('vendor.order.new.sum')} `}
           <strong className="b-cart__title-price" ref="price">
-            <HumanizedMoneyWithCurrency money={decamelizeKeys(totalPrice)} />
+            <HumanizedMoneyWithCurrency money={totalPrice} />
           </strong>
         </h1>
       );

@@ -13,14 +13,14 @@ class OrderPaid extends Component {
       vendorRootPath,
     } = this.props;
     const {
-      external_id: externalId,
-      admin_comments: adminComments,
-      order_delivery: orderDelivery,
-      workflow_state: workflowState,
+      externalId,
+      adminComments,
+      orderDelivery,
+      workflowState,
     } = order;
     const {
-      tracking_url: trackingUrl,
-      tracking_id: trackingId,
+      trackingUrl,
+      trackingId,
     } = (orderDelivery || {});
 
     return (

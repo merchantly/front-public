@@ -17,15 +17,15 @@ export default class RadioColor extends Component {
     );
   }
   renderOption(option) {
-    const { value, title, color, image_url, disabled } = option;
+    const { value, title, color, imageUrl, disabled } = option;
     const optionClasses = classNames('radiobtn', 'radiobtn--color', {
       'radiobtn--light': tinycolor(color).isLight(),
       '__disabled': disabled
     });
 
     let indStyles;
-    if (image_url) {
-      indStyles = { backgroundImage: `url("${image_url}")` };
+    if (imageUrl) {
+      indStyles = { backgroundImage: `url("${imageUrl}")` };
     } else {
       indStyles = { backgroundColor: color };
     }

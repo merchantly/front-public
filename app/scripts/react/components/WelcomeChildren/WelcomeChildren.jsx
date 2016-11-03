@@ -10,9 +10,9 @@ class WelcomeChildren extends Component {
       childrenProducts,
       showWelcomeSlider,
       vendor: {
-        pre_products_text: preProductsText,
-        post_products_text: postProductsText,
-        slider_images: sliderImages,
+        preProductsText,
+        postProductsText,
+        sliderImages,
       },
     } = this.props;
 

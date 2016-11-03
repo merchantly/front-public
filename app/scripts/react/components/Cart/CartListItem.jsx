@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { decamelizeKeys } from 'humps';
 import {
   range,
   map,
@@ -151,7 +150,6 @@ class CartListItem extends Component {
       title='',
       sellingByWeight=false,
     } = (item.good || {});
-    const priceObj = decamelizeKeys(price);
 
     return (
       <li className="b-cart__item">
@@ -181,7 +179,7 @@ class CartListItem extends Component {
         }
         <div className="b-cart__item__col-price">
           <div className="b-cart__item__price">
-            <HumanizedMoneyWithCurrency money={priceObj} />
+            <HumanizedMoneyWithCurrency money={price} />
           </div>
         </div>
         <div className="b-cart__item__col-remove">

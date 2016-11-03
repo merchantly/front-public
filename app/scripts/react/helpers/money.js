@@ -8,7 +8,7 @@ function getCurrency(money) {
 }
 
 function getCurrencyID(money) {
-  return (typeof money === 'string' ? money : money.currency_iso_code).toLowerCase();
+  return (typeof money === 'string' ? money : money.currencyIsoCode).toLowerCase();
 }
 
 export function getHTMLName(money) {
@@ -36,8 +36,12 @@ export function isSymbolFirst(money) {
 }
 
 export function money(money) {
-  if (!money) return '-';
-  if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
+  if (!money) {
+    return '-';
+  }
+  if (!isCurrencyExists(money)) {
+    return unknownIsoCodeMessage(money);
+  }
 
   return numeral(getUnit(money)).format('0');
 }
@@ -49,9 +53,14 @@ export function humanizedMoney(money) {
   return numeral(getUnit(money)).format('0,0[.]00');
 }
 
-export function humanizedMoneyWithCurrency(money, null_value = '-') {
-  if (!money || money.cents === 0) return null_value;
-  if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
+export function humanizedMoneyWithCurrency(money, nullValue = '-') {
+  if (!money || money.cents === 0) {
+    return nullValue;
+  }
+
+  if (!isCurrencyExists(money)) {
+    return unknownIsoCodeMessage(money);
+  }
 
   return isSymbolFirst(money)
     ? `${getHTMLName(money)} ${humanizedMoney(money)}`

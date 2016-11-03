@@ -52,7 +52,7 @@ class VendorLayout extends Component {
             {children}
           </div>
           <Footer
-            customAfterContentHtml={vendor.custom_after_content_html}
+            customAfterContentHtml={vendor.customAfterContentHtml}
             i18n={i18n}
             menuBottomProps={menuBottomProps}
             showInstagramContainer={showInstagramContainer}
@@ -62,7 +62,7 @@ class VendorLayout extends Component {
             publishShopUrl={publishShopUrl}
           />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
+        <div dangerouslySetInnerHTML={{ __html: vendor.customAppendHtml }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />
         <ScrollToTop {...scrollToTopProps} />
       </div>

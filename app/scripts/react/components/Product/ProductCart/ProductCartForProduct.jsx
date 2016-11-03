@@ -6,7 +6,7 @@ import ProductAddToCartButton from '../ProductAddToCartButton';
 
 const ProductCartForProduct = (props) => (
   <span>
-    <HiddenInput name="cart_item[good_id]" value={props.good.global_id} />
+    <HiddenInput name="cart_item[good_id]" value={props.good.globalId} />
     <div className="b-item-full__form__row b-item-full__form__row_fixed">
       <div className="b-item-full__form__submit">
         <ProductAddToCartButton

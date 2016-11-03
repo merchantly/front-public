@@ -13,13 +13,13 @@ class OrderCreated extends Component {
     } = this.props;
     const {
       phone,
-      external_id: externalId,
-      default_url: defaultUrl, // vendor_order_path(order.external_id)
-      admin_comments: adminComments,
-      total_with_delivery_price: totalWithDeliveryPrice,
-      free_delivery: freeDelivery,
-      free_delivery_threshold: freeDeliveryThreshold,
-      delivery_type: deliveryType,
+      externalId,
+      defaultUrl, // vendor_order_path(order.external_id)
+      adminComments,
+      totalWithDeliveryPrice,
+      freeDelivery,
+      freeDeliveryThreshold,
+      deliveryType,
     } = order;
     const message = t('vendor.order.created.desc_html', {
       phone,
@@ -28,7 +28,7 @@ class OrderCreated extends Component {
     });
     const freeDeliveryMessage = freeDelivery
       ? t('vendor.order.free_delivery_text_html', {
-        free_delivery_threshold: humanizedMoneyWithCurrency(freeDeliveryThreshold),
+        'free_delivery_threshold': humanizedMoneyWithCurrency(freeDeliveryThreshold),
       })
       : null;
 

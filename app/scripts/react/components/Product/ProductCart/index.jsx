@@ -5,8 +5,7 @@ import HiddenInput from '../../common/HiddenInput';
 import ProductCartForProduct from './ProductCartForProduct';
 import ProductCartForProductItems from './ProductCartForProductItems';
 import ProductCartNotAvailable from './ProductCartNotAvailable';
-import ProductBulk from '../ProductBulk'
-import $ from 'jquery';
+import ProductBulk from '../ProductBulk';
 
 export default class ProductCart extends Component {
   static propTypes = {
@@ -23,7 +22,7 @@ export default class ProductCart extends Component {
     formAuthenticity: {},
   }
   renderContent(product, t) {
-    if (product.has_ordering_goods) {
+    if (product.hasOrderingGoods) {
       if (product.goods.length === 1) {
         return (
           <ProductCartForProduct
@@ -44,18 +43,27 @@ export default class ProductCart extends Component {
     }
   }
   renderProductBulkInput(product, good, t){
-    if (product.selling_by_weight && product.weight_of_price) {
+    if (product.sellingByWeight && product.weightOfPrice) {
       return (
         <div className="b-item-full__form__row b-item-full__form__row_fixed">
           <div className="b-item-full__weight">
-            <ProductBulk t={t} good={good} product={product} />
+            <ProductBulk
+              good={good}
+              product={product}
+              t={t}
+            />
           </div>
         </div>
       );
     }
   }
   render() {
-    const { onProductChange, product, t, good } = this.props;
+    const {
+      onProductChange,
+      product,
+      t,
+      good,
+    } = this.props;
     return (
       <form
         acceptCharset="UTF-8"

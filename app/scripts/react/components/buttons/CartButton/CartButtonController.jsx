@@ -47,15 +47,18 @@ class CartButtonController extends Component {
     }
   }
   render() {
-    const { url, t } = this.props;
+    const {
+      url,
+      t,
+    } = this.props;
     const itemsCount = this.getItemsCount();
 
     // выводим total_price, т.е. без учета стоимости доставки
-    const total_price = humanizedMoneyWithCurrency(this.state.basket.total_price, '');
+    const totalPrice = humanizedMoneyWithCurrency(this.state.basket.totalPrice, '');
 
     return (
       <CartButton
-        text={t('vendor.cart.basket_button', {total_price: total_price})}
+        text={t('vendor.cart.basket_button', {total_price: totalPrice})}
         url={url}
         itemsCount={itemsCount}
       />
