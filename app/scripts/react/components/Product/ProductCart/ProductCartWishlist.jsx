@@ -17,7 +17,7 @@ export default class ProductCartWishlist extends Component {
     const { addWishlistUrl, good, product } = this.props;
 
     return new URI(addWishlistUrl)
-      .addQuery('good_id', good ? good.global_id : product.global_id)
+      .addQuery('good_id', good ? good.globalId : product.globalId)
       .toString();
   }
   render() {

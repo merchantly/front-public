@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ProductBadge from './ProductBadge';
 
 const ProductBadgeNew = ({ product, t }) => (
-  product.is_label_new
+  product.isLabelNew
     ? <ProductBadge text={t('vendor.badges.new')} status="sold" />
     : <span />
 );

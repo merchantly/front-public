@@ -11,10 +11,10 @@ import {
 class OrderContents extends Component {
   renderPackageGood(packageGood, packagePrice) {
     const {
-      default_url: packageDefaultUrl,
-      image_url: packageImageUrl,
+      defaultUrl: packageDefaultUrl,
+      imageUrl: packageImageUrl,
       title: packageTitle,
-      quantity_unit: packageQuantityUnit,
+      quantityUnit: packageQuantityUnit,
     } = packageGood;
 
     return (
@@ -54,8 +54,8 @@ class OrderContents extends Component {
     const {
       discount,
       fixed: isFixed,
-      fixed_discount: fixedDiscount,
-      free_delivery: freeDelivery,
+      fixedDiscount,
+      freeDelivery,
     } = coupon;
 
     return (
@@ -83,10 +83,10 @@ class OrderContents extends Component {
       order: {
         items,
         coupon,
-        package_good: packageGood,
-        package_price: packagePrice,
-        total_with_delivery_price: totalWithDeliveryPrice,
-        delivery_price: deliveryPrice,
+        packageGood,
+        packagePrice,
+        totalWithDeliveryPrice,
+        deliveryPrice,
       },
       t,
     } = this.props;

@@ -66,17 +66,17 @@ class ProductList extends Component {
               {t('vendor.products.nothing_found_by_criteria')}
             </div>
           )}
-          {(showPagination && pagination.total_pages > 1) && (
+          {(showPagination && pagination.totalPages > 1) && (
             <div className="b-item-list__paginator">
               <Pagination {...pagination} />
             </div>
           )}
         </div>
-        {(container && container.bottom_text) && (
+        {(container && container.bottomText) && (
           <div className="b-item-list__description">
             <div
               className="b-page__content__inner_content"
-              dangerouslySetInnerHTML={{ __html: container.bottom_text }}
+              dangerouslySetInnerHTML={{ __html: container.bottomText }}
             />
           </div>
         )}
@@ -90,7 +90,7 @@ ProductList.propTypes = {
   container: PropTypes.shape({
     image: schemas.image,
     description: PropTypes.string,
-    bottom_text: PropTypes.string,
+    bottomText: PropTypes.string,
   }),
   i18n: PropTypes.object,
   products: PropTypes.shape({

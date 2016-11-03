@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import $ from 'jquery';
 
 import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import { goodOrderTitle } from '../../../helpers/product';
@@ -20,7 +21,7 @@ class ProductGoods extends Component {
     for (let i = 0; i < product.goods.length; i++) {
       const good = product.goods[i];
 
-      if (good.is_ordering) {
+      if (good.isOrdering) {
         if (onGoodChange) onGoodChange(good);
         break;
       }
@@ -38,19 +39,19 @@ class ProductGoods extends Component {
     for (let i = 0; i < goods.length; i++) {
       const good = goods[i];
 
-      if (good.global_id === value) {
+      if (good.globalId === value) {
         $(document).trigger(PHOTO_CHANGE, good.image);
         if (onGoodChange) onGoodChange(good);
         break;
       }
-    };
+    }
   }
   renderOption(good, product) {
     return (
       <option
-        disabled={!good.is_ordering}
-        key={good.global_id}
-        value={good.global_id}
+        disabled={!good.isOrdering}
+        key={good.globalId}
+        value={good.globalId}
       >
         {goodOrderTitle(product, good)}
       </option>
@@ -62,8 +63,8 @@ class ProductGoods extends Component {
     for (let i = 0; i < product.goods.length; i++) {
       const good = product.goods[i];
 
-      if (good.is_ordering) {
-        selectedValue = good.global_id;
+      if (good.isOrdering) {
+        selectedValue = good.globalId;
         break;
       }
     }
@@ -79,7 +80,11 @@ class ProductGoods extends Component {
     );
   }
   render() {
-    const { product, t, wishlistUrl } = this.props;
+    const {
+      product,
+      t,
+      wishlistUrl,
+    } = this.props;
 
     if (this.isTitlesValid(product)) {
       return (
@@ -90,8 +95,8 @@ class ProductGoods extends Component {
             </div>
             <div className="b-item-full__form__submit">
               <ProductAddToCartButton
-                text={t('vendor.button.to_cart', {title: product.title})}
                 t={t}
+                text={t('vendor.button.to_cart', {title: product.title})}
               />
             </div>
           </div>

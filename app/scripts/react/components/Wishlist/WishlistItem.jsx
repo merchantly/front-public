@@ -28,13 +28,13 @@ class WishlistItem extends Component {
         <div className="b-cart__item__col-content">
           <h2 className="b-cart__item__title">
             <a
-              href={item.good.default_url}
+              href={item.good.defaultUrl}
               target="_blank"
             >
               {item.product.title}
             </a>
           </h2>
-          <GoodDetails details={item.good.custom_attributes} />
+          <GoodDetails details={item.good.customAttributes} />
         </div>
         <div className="b-cart__item__col-quantity" />
         <div className="b-cart__item__col-price">
@@ -44,9 +44,9 @@ class WishlistItem extends Component {
               : t('vendor.wishlist.no_price')
             }
           </div>
-          {item.good.has_ordering_goods && (
+          {item.good.hasOrderingGoods && (
             <WishlistAddToCartButton
-              href={item.good.add_to_cart_url}
+              href={item.good.addToCartUrl}
               id={item.good.id}
               isInCart={isInCart}
               t={t}
@@ -59,7 +59,7 @@ class WishlistItem extends Component {
             <a
               className="b-cart__item__remove"
               data-method="delete"
-              href={item.destroy_url}
+              href={item.destroyUrl}
             >
               <AssetImage src="images/cross_white.svg" />
             </a>

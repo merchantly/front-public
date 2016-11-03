@@ -47,7 +47,7 @@ class CabinetOrder extends Component {
           </h2>
           {itemsCount > 0 && (
             <small className="text-muted">
-              {t('vendor.cabinet_order.items_count', {itemsCount: itemsCount})}
+              {t('vendor.cabinet_order.items_count', { itemsCount })}
             </small>
           )}
         </div>

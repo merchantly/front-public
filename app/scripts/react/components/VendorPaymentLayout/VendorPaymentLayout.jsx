@@ -34,7 +34,7 @@ class VendorPaymentLayout extends Component {
             {children}
           </div>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
+        <div dangerouslySetInnerHTML={{ __html: vendor.customAppendHtml }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />
       </div>
     );

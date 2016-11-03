@@ -16,16 +16,16 @@ export function schemaOrgProductCategory(category) {
 }
 
 export function schemaOrgCategoryName(category) {
-  if (!category || category.is_root) return;
+  if (!category || category.isRoot) return;
   return category.name;
 }
 
 export function schemaOrgGoodAvailability(good) {
-  if (!good.is_ordering && !good.is_run_out) {
+  if (!good.isOrdering && !good.isRunOut) {
     return 'SoldOut';
-  } else if (good.is_run_out) {
+  } else if (good.isRunOut) {
     return 'OutOfStock';
-  } else if (good.is_preorder) {
+  } else if (good.isPreorder) {
     return 'PreOrder';
   } else {
     return 'InStock';

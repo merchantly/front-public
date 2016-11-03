@@ -90,7 +90,7 @@ class ProductProperties extends Component {
     const hiddenInput = good && (
       <HiddenInput
         name="cart_item[good_id]"
-        value={good.global_id}
+        value={good.globalId}
       />
     );
     const addToCartButton = (

@@ -11,9 +11,9 @@ class ProductPrices extends Component {
     for (let i = 0; i < goods.length; i++) {
       const good = goods[i];
 
-      if (good.actual_price != null && typeof good.actual_price === 'object') {
-        if (good.actual_price.cents < minPrice.cents) {
-          minPrice = good.actual_price;
+      if (good.actualPrice != null && typeof good.actualPrice === 'object') {
+        if (good.actualPrice.cents < minPrice.cents) {
+          minPrice = good.actualPrice;
         }
       }
     }
@@ -26,9 +26,9 @@ class ProductPrices extends Component {
     for (let i = 0; i < goods.length; i++) {
       const good = goods[i];
 
-      if (good.actual_price != null && typeof good.actual_price === 'object') {
-        if (good.actual_price.cents > maxPrice.cents) {
-          maxPrice = good.actual_price;
+      if (good.actualPrice != null && typeof good.actualPrice === 'object') {
+        if (good.actualPrice.cents > maxPrice.cents) {
+          maxPrice = good.actualPrice;
         }
       }
     }
@@ -40,10 +40,10 @@ class ProductPrices extends Component {
 
     if (good) {
       return (
-        <ProductGoodPrice 
-          good={good} 
-          product={product} 
-          t={t} 
+        <ProductGoodPrice
+          good={good}
+          product={product}
+          t={t}
         />
       );
     } else if (Array.isArray(product.goods) && product.goods.length > 0) {
@@ -60,10 +60,10 @@ class ProductPrices extends Component {
         );
       }else {
         return (
-          <ProductGoodPrice 
-            good={product.goods[0]} 
-            product={product} 
-            t={t} 
+          <ProductGoodPrice
+            good={product.goods[0]}
+            product={product}
+            t={t}
           />
         );
       }

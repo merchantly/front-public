@@ -13,7 +13,7 @@ class OrderComments extends Component {
       <div className="feed-activity-list m-b">
         <table style={{ width: '100%' }}>
           <tbody>
-            {comments.map(({ body, author, created_at: createdAt }, idx) => (
+            {comments.map(({ body, author, createdAt }, idx) => (
               <tr className="feed-element" key={`order-comment-${idx}`}>
                 <td>
                   <div className="small text-muted">

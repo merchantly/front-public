@@ -3,19 +3,20 @@ import money from './money';
 import image from './image';
 
 /**
- * add_to_cart_url - урл для добавления товара в корзину. используется в WishlistAddToCartButton
- * default_url - урл для перехода на страницу товара
- * custom_attributes - описание товара в виде {'имя характеристики': 'характеристика'}
+ * addToCartUrl - урл для добавления товара в корзину. используется в WishlistAddToCartButton
+ * defaultUrl - урл для перехода на страницу товара
+ * customAttributes - описание товара в виде {'имя характеристики': 'характеристика'}
  */
 
 export default PropTypes.shape({
-  custom_attributes: PropTypes.object,
-  is_sale: PropTypes.bool.isRequired,
+  globalId: PropTypes.string,
+  customAttributes: PropTypes.object,
+  isSale: PropTypes.bool.isRequired,
   image: image,
   price: money,
-  actual_price: money,
-  add_to_cart_url: PropTypes.string,
-  default_url: PropTypes.string,
-  selling_by_weight: PropTypes.bool,
-  weight_of_price: PropTypes.number,
+  actualPrice: money,
+  addToCartUrl: PropTypes.string,
+  defaultUrl: PropTypes.string,
+  sellingByWeight: PropTypes.bool,
+  weightOfPrice: PropTypes.number,
 });

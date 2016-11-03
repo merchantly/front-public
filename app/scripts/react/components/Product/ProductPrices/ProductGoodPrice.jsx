@@ -9,10 +9,10 @@ class ProductGoodPrice extends Component {
     good: PropTypes.object.isRequired,
   }
   renderWeightOfPrice(product, t){
-    if (product.selling_by_weight && product.weight_of_price){
+    if (product.sellingByWeight && product.weightOfPrice){
       return (
         <span>
-          &nbsp;/&nbsp;{product.weight_of_price} {t('vendor.product.kg')}
+          &nbsp;/&nbsp;{product.weightOfPrice} {t('vendor.product.kg')}
         </span>
       );
     }else{
@@ -22,7 +22,7 @@ class ProductGoodPrice extends Component {
   render() {
     const { product, good, t } = this.props;
 
-    if (good.is_sale) {
+    if (good.isSale) {
       return (
         <span>
           <div className="b-item__price b_item_price_sale">
@@ -36,7 +36,7 @@ class ProductGoodPrice extends Component {
       );
     } else {
       const priceClasses = classNames('b-item__price', {
-        'b-item__price_unknown': good.actual_price && good.actual_price.cents === 0,
+        'b-item__price_unknown': good.actualPrice && good.actualPrice.cents === 0,
       });
 
       return (

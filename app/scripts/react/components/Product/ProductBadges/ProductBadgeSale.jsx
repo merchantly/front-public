@@ -2,11 +2,11 @@ import React, { PropTypes } from 'react';
 import ProductBadge from './ProductBadge';
 
 const ProductBadgeSale = ({ product, t }) => {
-  if (product.is_sale) {
+  if (product.isSale) {
     let title = t('vendor.badges.sale');
 
-    if (product.sale_percent) {
-      let salePercent = product.sale_percent;
+    if (product.salePercent) {
+      let salePercent = product.salePercent;
 
       if (parseInt(salePercent, 10) === salePercent) {
         salePercent = parseInt(salePercent, 10);

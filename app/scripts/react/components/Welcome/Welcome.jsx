@@ -21,9 +21,9 @@ class Welcome extends Component {
       t,
     } = this.props;
     const {
-      pre_products_text: preProductsText,
-      post_products_text: postProductsText,
-      slider_images: sliderImages,
+      preProductsText,
+      postProductsText,
+      sliderImages,
     } = vendor;
 
 

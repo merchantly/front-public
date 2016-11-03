@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import HumanizedMoneyWithCurrency from '../../common/Money/HumanizedMoneyWithCurrency';
 
 const ProductGoodActualPrice = ({ good, t }) => (
-  good.actual_price
-    ? <HumanizedMoneyWithCurrency money={good.actual_price} />
+  good.actualPrice
+    ? <HumanizedMoneyWithCurrency money={good.actualPrice} />
     : <span>{t('vendor.product.blank_price')}</span>
 );
 

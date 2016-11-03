@@ -25,7 +25,7 @@ class ProductSearch extends Component {
           showPagination
           showQuantity={showQuantity}
           t={t}
-          title={t('vendor.search.results_title', { count: products.total_count })}
+          title={t('vendor.search.results_title', { count: products.totalCount })}
         />
       )
       : (

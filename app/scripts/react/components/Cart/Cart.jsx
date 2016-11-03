@@ -4,7 +4,6 @@ import CartList from './CartList';
 import FormAuthenticity from '../common/FormAuthenticity';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
-import { decamelizeKeys } from 'humps';
 import Rodal from 'rodal';
 import Spinner from 'react-spinjs';
 import * as schemas from 'r/schemas';
@@ -131,7 +130,7 @@ class Cart extends Component {
                 {' '}
                 <span>
                   <HumanizedMoneyWithCurrency
-                    money={decamelizeKeys(totalPrice)}
+                    money={totalPrice}
                   />
                 </span>
               </div>

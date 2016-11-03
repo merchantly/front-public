@@ -9,8 +9,8 @@ const menuItem = PropTypes.shape({
   type: PropTypes.string.isRequired,
   title: PropTypes.string,
   url: PropTypes.string,
-  products_count: PropTypes.number,
-  link_target: PropTypes.string,
+  productsCount: PropTypes.number,
+  linkTarget: PropTypes.string,
 });
 
 function lazyMenuItem() {

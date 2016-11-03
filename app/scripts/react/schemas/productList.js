@@ -11,5 +11,5 @@ const {
 export default shape({
   items: arrayOf(product).isRequired,
   pagination: pagination.isRequired,
-  total_count: number,
+  totalCount: number,
 });

@@ -8,22 +8,22 @@ import ProductBlockCartFormButton from '../ProductBlockCartForm/ProductBlockCart
 const ProductBlock = ({ showCartButton, showQuantity, product, t }) => (
   <div className="b-item-list__item">
     <div className="b-item">
-      <a className="b-item__pic-wrap" href={product.public_url}>
+      <a className="b-item__pic-wrap" href={product.publicUrl}>
         <ProductBlockImage product={product} />
         <ProductBlockBadges product={product} t={t} />
       </a>
-      <a className="b-item__info" href={product.public_url}>
+      <a className="b-item__info" href={product.publicUrl}>
         <h3 className="b-item__name">
           {product.title}
         </h3>
-        {Boolean(product.short_details) &&
+        {Boolean(product.shortDetails) &&
           <div className="b-item__details">
-            {product.short_details}
+            {product.shortDetails}
           </div>
         }
         <ProductPrices product={product} t={t} />
       </a>
-      {(showCartButton && product.has_ordering_goods && product.goods.length > 0) && (
+      {(showCartButton && product.hasOrderingGoods && product.goods.length > 0) && (
         <div className="b-item__cart-form">
           <ProductBlockCartFormButton
             product={product}

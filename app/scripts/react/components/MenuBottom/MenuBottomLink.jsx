@@ -10,8 +10,8 @@ class MenuBottomLink extends Component {
         id,
         title,
         url,
-        link_target,
-        products_count,
+        linkTarget,
+        productsCount,
       },
     } = this.props;
     const aClasses = classNames({
@@ -22,11 +22,11 @@ class MenuBottomLink extends Component {
     return (
       <a
         className={aClasses}
-        data-count={products_count}
+        data-count={productsCount}
         href={url}
         id={`menu_item_link_${id}`}
         key={`bottom-menu-${id}`}
-        target={link_target}
+        target={linkTarget}
       >
         {title}
       </a>

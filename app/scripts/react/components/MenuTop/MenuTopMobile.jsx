@@ -62,7 +62,7 @@ class MenuTopMobile extends Component {
           {children.map((child) => (
             <li id={`mob_menu_item_li_${child.id}`} key={`mob-menu-item-${child.id}`}>
               <a
-                data-count={child.products_count}
+                data-count={child.productsCount}
                 href={child.url}
               >
                 {child.title}
@@ -91,10 +91,10 @@ class MenuTopMobile extends Component {
           <ul>
             <li className="b-search">
               <form action="/products/search">
-                <input 
-                  className="b-search__field" 
-                  name="query" 
-                  placeholder={t('vendor.placeholders.search')} 
+                <input
+                  className="b-search__field"
+                  name="query"
+                  placeholder={t('vendor.placeholders.search')}
                   type="text"
                 />
                 <button className="b-search__submit" type="submit" />

@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import AssetImage from '../common/AssetImage';
 import { RelativeImage } from '../common/Image';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { decamelizeKeys } from 'humps';
 import { getIn } from 'timm';
 import { map } from 'lodash';
 
@@ -52,7 +51,7 @@ class CartListPackageItem extends Component {
         <div className="b-cart__item__col-price">
           <div className="b-cart__item__price">
             <HumanizedMoneyWithCurrency
-              money={decamelizeKeys(actualPrice)}
+              money={actualPrice}
             />
           </div>
         </div>
