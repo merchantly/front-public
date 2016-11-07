@@ -7,7 +7,7 @@ class ImageSliderSlides extends Component {
     return (
       <div className="b-slider__item" key={idx}>
         {slide.url
-          ? <a href={slide.url} title={slide.title} target="_blank">
+          ? <a href={slide.url} title={slide.title} target={slide.target}>
               <RelativeImage image={slide.image} title={slide.title} />
             </a>
           : <RelativeImage image={slide.image} title={slide.title} />
