@@ -671,6 +671,10 @@ var _api = require('../../../routes/api');
 
 var apiRoutes = _interopRequireWildcard(_api);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -707,11 +711,11 @@ function addGood(good) {
 
   startItemRequest(good.id);
 
-  return $.ajax({
+  return _jquery2.default.ajax({
     dataType: 'json',
     method: 'post',
     data: {
-      'cart_item[good_id]': good.global_id,
+      'cart_item[good_id]': good.globalId,
       count: count,
       weight: weight
     },
@@ -731,7 +735,7 @@ function addGood(good) {
 }
 
 function initBasketState() {
-  return $.ajax({
+  return _jquery2.default.ajax({
     dataType: 'json',
     method: 'get',
     url: apiRoutes.cartsShow()
@@ -745,7 +749,11 @@ function initBasketState() {
   });
 }
 
+<<<<<<< HEAD
 },{"../../../routes/api":336,"../../stores/BasketDispatcher":332}],14:[function(require,module,exports){
+=======
+},{"../../../routes/api":334,"../../stores/BasketDispatcher":330,"jquery":"jquery"}],14:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
 var Api, TIMEOUT, abortPendingRequests, apiRoutes, deleteRequest, getRequest, postRequest, putRequest, request, vendorKey, _pendingRequests;
 
 apiRoutes = require('../../routes/api');
@@ -1974,8 +1982,6 @@ var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCur
 
 var _money = require('../../helpers/money');
 
-var _humps = require('humps');
-
 var _rodal = require('rodal');
 
 var _rodal2 = _interopRequireDefault(_rodal);
@@ -2137,7 +2143,7 @@ var Cart = function (_Component) {
                 'span',
                 null,
                 _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
-                  money: (0, _humps.decamelizeKeys)(totalPrice)
+                  money: totalPrice
                 })
               )
             ),
@@ -2216,7 +2222,19 @@ Cart.propTypes = {
 exports.default = Cart;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":286,"../../schemas":313,"../common/FormAuthenticity":242,"../common/Money/HumanizedMoneyWithCurrency":256,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":240,"../common/Money/HumanizedMoneyWithCurrency":254,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":239,"../common/Money/HumanizedMoneyWithCurrency":253,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+=======
+},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":239,"../common/Money/HumanizedMoneyWithCurrency":253,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2618,8 +2636,6 @@ var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCur
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
 
-var _humps = require('humps');
-
 var _lodash = require('lodash');
 
 var _timm = require('timm');
@@ -2628,7 +2644,8 @@ var _OrderConstants = require('../../constants/OrderConstants');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var WEIGHT_STEP = 0.01; /*global gon */
+/*global gon */
+var WEIGHT_STEP = 0.01;
 
 var CartListItem = function (_Component) {
   (0, _inherits3.default)(CartListItem, _Component);
@@ -2789,8 +2806,6 @@ var CartListItem = function (_Component) {
           _ref$sellingByWeight = _ref.sellingByWeight,
           sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
 
-      var priceObj = (0, _humps.decamelizeKeys)(price);
-
       return _react2.default.createElement(
         'li',
         { className: 'b-cart__item' },
@@ -2829,7 +2844,7 @@ var CartListItem = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'b-cart__item__price' },
-            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: priceObj })
+            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: price })
           )
         ),
         _react2.default.createElement(
@@ -2862,7 +2877,19 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/OrderConstants":272,"../common/AssetImage":238,"../common/Image":248,"../common/Money/HumanizedMoneyWithCurrency":256,"../common/Select":268,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../constants/OrderConstants":270,"../common/AssetImage":236,"../common/Image":246,"../common/Money/HumanizedMoneyWithCurrency":254,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../constants/OrderConstants":270,"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+=======
+},{"../../constants/OrderConstants":270,"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2902,8 +2929,6 @@ var _Image = require('../common/Image');
 var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
-
-var _humps = require('humps');
 
 var _timm = require('timm');
 
@@ -2985,7 +3010,7 @@ var CartListPackageItem = function (_Component) {
             'div',
             { className: 'b-cart__item__price' },
             _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
-              money: (0, _humps.decamelizeKeys)(actualPrice)
+              money: actualPrice
             })
           )
         ),
@@ -3015,7 +3040,19 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/AssetImage":238,"../common/Image":248,"../common/Money/HumanizedMoneyWithCurrency":256,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/AssetImage":236,"../common/Image":246,"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+=======
+},{"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3049,8 +3086,6 @@ var _react2 = _interopRequireDefault(_react);
 var _Image = require('../common/Image');
 
 var _money = require('../../helpers/money');
-
-var _humps = require('humps');
 
 var _lodash = require('lodash');
 
@@ -3120,7 +3155,7 @@ var CartListPackages = function (_Component) {
         _react2.default.createElement(
           'b',
           null,
-          (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(price))
+          (0, _money.humanizedMoneyWithCurrency)(price)
         )
       );
     }
@@ -3195,7 +3230,19 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":286,"../common/Image":248,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../common/Image":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+=======
+},{"../../helpers/money":284,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5774,8 +5821,6 @@ var _money = require('../../helpers/money');
 
 var _text = require('../../helpers/text');
 
-var _humps = require('humps');
-
 var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
@@ -5835,13 +5880,13 @@ var CheckoutDeliveries = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'b-cart__form__delivery-price' },
-              _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(price) })
+              _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: price })
             ),
             threshold && threshold.cents ? _react2.default.createElement('div', {
               className: 'cart__form__delivery-address',
               dangerouslySetInnerHTML: {
                 __html: t('vendor.order.checkout_free_delivery_text_html', {
-                  free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)((0, _humps.decamelizeKeys)(threshold))
+                  'free_delivery_threshold': (0, _money.humanizedMoneyWithCurrency)(threshold)
                 })
               }
             }) : null,
@@ -5888,7 +5933,19 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":286,"../../helpers/text":290,"../common/Money/HumanizedMoneyWithCurrency":256,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"react":"react"}],57:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"react":"react"}],57:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"react":"react"}],57:[function(require,module,exports){
+=======
+},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],57:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10590,7 +10647,11 @@ var InstagramEntries = function (_Component) {
               rel: 'nofollow',
               target: '_blank'
             },
+<<<<<<< HEAD
             _react2.default.createElement('img', { src: entry.thumbnail_src })
+=======
+            _react2.default.createElement('img', { src: entry.images.lowResolution.url })
+>>>>>>> fix fixtures/test/views
           );
         }) : _react2.default.createElement(
           'span',
@@ -11256,14 +11317,33 @@ var MenuBottomLink = function (_Component) {
   (0, _createClass3.default)(MenuBottomLink, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var isActive = _props.isActive;
+      var _props$item = _props.item;
+      var id = _props$item.id;
+      var title = _props$item.title;
+      var url = _props$item.url;
+      var link_target = _props$item.link_target;
+      var products_count = _props$item.products_count;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           isActive = _props.isActive,
           _props$item = _props.item,
           id = _props$item.id,
           title = _props$item.title,
           url = _props$item.url,
+<<<<<<< HEAD
           link_target = _props$item.link_target,
           products_count = _props$item.products_count;
+=======
+          linkTarget = _props$item.linkTarget,
+          productsCount = _props$item.productsCount;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
       var aClasses = (0, _classnames2.default)({
         'b-footer__link': true,
@@ -11274,11 +11354,11 @@ var MenuBottomLink = function (_Component) {
         'a',
         {
           className: aClasses,
-          'data-count': products_count,
+          'data-count': productsCount,
           href: url,
           id: 'menu_item_link_' + id,
           key: 'bottom-menu-' + id,
-          target: link_target
+          target: linkTarget
         },
         title
       );
@@ -11671,9 +11751,21 @@ var MenuTopDesktopChild = function (_Component) {
         return null;
       }
 
+<<<<<<< HEAD
       var id = child.id,
           products_count = child.products_count,
           title = child.title;
+=======
+<<<<<<< HEAD
+      var id = child.id;
+      var products_count = child.products_count;
+      var title = child.title;
+=======
+      var id = child.id,
+          productsCount = child.productsCount,
+          title = child.title;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
       var childClasses = (0, _classnames2.default)({
         'b-nav__item': true,
@@ -11691,7 +11783,7 @@ var MenuTopDesktopChild = function (_Component) {
           'a',
           {
             className: 'b-nav__link',
-            'data-count': products_count,
+            'data-count': productsCount,
             href: '#',
             onClick: this.handleClickLink
           },
@@ -12094,7 +12186,7 @@ var MenuTopMobile = function (_Component) {
               _react2.default.createElement(
                 'a',
                 {
-                  'data-count': child.products_count,
+                  'data-count': child.productsCount,
                   href: child.url
                 },
                 child.title
@@ -12474,7 +12566,7 @@ var NavBar = function (_Component) {
               'div',
               { className: 'b-header__search' },
               _react2.default.createElement(_ProductSearchForm2.default, {
-                searchProductsPath: vendor.search_products_path,
+                searchProductsPath: vendor.searchProductsPath,
                 searchQuery: searchQuery,
                 t: t
               })
@@ -12737,7 +12829,7 @@ NavBarContainer.defaultProps = {
   vendor: {
     contacts: [],
     title: '',
-    search_products_path: ''
+    searchProductsPath: ''
   },
   searchQuery: '',
   showClientBar: true
@@ -13150,8 +13242,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _humps = require('humps');
-
 var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
@@ -13214,7 +13304,7 @@ var OrderTitle = function (_Component) {
           _react2.default.createElement(
             'strong',
             { className: 'b-cart__title-price', ref: 'price' },
-            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: (0, _humps.decamelizeKeys)(totalPrice) })
+            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: totalPrice })
           )
         );
       }
@@ -13234,7 +13324,19 @@ OrderTitle.propTypes = {
 exports.default = OrderTitle;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Money/HumanizedMoneyWithCurrency":256,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"humps":470,"lodash":"lodash","react":"react"}],124:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
+=======
+},{"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13559,16 +13661,40 @@ var OrderCancelled = function (_Component) {
   (0, _createClass3.default)(OrderCancelled, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var isCurrentClientPresent = _props.isCurrentClientPresent;
+      var order = _props.order;
+      var t = _props.t;
+      var vendorRootPath = _props.vendorRootPath;
+      var externalId = order.external_id;
+      var _order$workflow_state = order.workflow_state;
+      var bgStyle = _order$workflow_state.bg_style;
+      var title = _order$workflow_state.title;
+      var adminComments = order.admin_comments;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           isCurrentClientPresent = _props.isCurrentClientPresent,
           order = _props.order,
           t = _props.t,
           vendorRootPath = _props.vendorRootPath;
+<<<<<<< HEAD
       var externalId = order.external_id,
           _order$workflow_state = order.workflow_state,
           bgStyle = _order$workflow_state.bg_style,
           title = _order$workflow_state.title,
           adminComments = order.admin_comments;
+=======
+      var externalId = order.externalId,
+          _order$workflowState = order.workflowState,
+          bgStyle = _order$workflowState.bgStyle,
+          title = _order$workflowState.title,
+          adminComments = order.adminComments;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -13861,11 +13987,29 @@ var OrderCreated = function (_Component) {
   (0, _createClass3.default)(OrderCreated, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var order = _props.order;
+      var t = _props.t;
+      var vendorRootPath = _props.vendorRootPath;
+      var phone = order.phone;
+      var externalId = order.external_id;
+      var defaultUrl = order.default_url;
+      var adminComments = order.admin_comments;
+      var totalWithDeliveryPrice = order.total_with_delivery_price;
+      var freeDelivery = order.free_delivery;
+      var freeDeliveryThreshold = order.free_delivery_threshold;
+      var deliveryType = order.delivery_type;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           order = _props.order,
           t = _props.t,
           vendorRootPath = _props.vendorRootPath;
       var phone = order.phone,
+<<<<<<< HEAD
           externalId = order.external_id,
           defaultUrl = order.default_url,
           adminComments = order.admin_comments,
@@ -13873,6 +14017,16 @@ var OrderCreated = function (_Component) {
           freeDelivery = order.free_delivery,
           freeDeliveryThreshold = order.free_delivery_threshold,
           deliveryType = order.delivery_type;
+=======
+          externalId = order.externalId,
+          defaultUrl = order.defaultUrl,
+          adminComments = order.adminComments,
+          totalWithDeliveryPrice = order.totalWithDeliveryPrice,
+          freeDelivery = order.freeDelivery,
+          freeDeliveryThreshold = order.freeDeliveryThreshold,
+          deliveryType = order.deliveryType;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
       var message = t('vendor.order.created.desc_html', {
         phone: phone,
@@ -13880,7 +14034,7 @@ var OrderCreated = function (_Component) {
         price: (0, _money.humanizedMoneyWithCurrency)(totalWithDeliveryPrice)
       });
       var freeDeliveryMessage = freeDelivery ? t('vendor.order.free_delivery_text_html', {
-        free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)(freeDeliveryThreshold)
+        'free_delivery_threshold': (0, _money.humanizedMoneyWithCurrency)(freeDeliveryThreshold)
       }) : null;
 
       return _react2.default.createElement(
@@ -14171,11 +14325,32 @@ var OrderPaid = function (_Component) {
   (0, _createClass3.default)(OrderPaid, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var isCurrentClientPresent = _props.isCurrentClientPresent;
+      var order = _props.order;
+      var t = _props.t;
+      var vendorRootPath = _props.vendorRootPath;
+      var externalId = order.external_id;
+      var adminComments = order.admin_comments;
+      var orderDelivery = order.order_delivery;
+      var workflowState = order.workflow_state;
+
+      var _ref = orderDelivery || {};
+
+      var trackingUrl = _ref.tracking_url;
+      var trackingId = _ref.tracking_id;
+
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           isCurrentClientPresent = _props.isCurrentClientPresent,
           order = _props.order,
           t = _props.t,
           vendorRootPath = _props.vendorRootPath;
+<<<<<<< HEAD
       var externalId = order.external_id,
           adminComments = order.admin_comments,
           orderDelivery = order.order_delivery,
@@ -14184,6 +14359,17 @@ var OrderPaid = function (_Component) {
       var _ref = orderDelivery || {},
           trackingUrl = _ref.tracking_url,
           trackingId = _ref.tracking_id;
+=======
+      var externalId = order.externalId,
+          adminComments = order.adminComments,
+          orderDelivery = order.orderDelivery,
+          workflowState = order.workflowState;
+
+      var _ref = orderDelivery || {},
+          trackingUrl = _ref.trackingUrl,
+          trackingId = _ref.trackingId;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
       return _react2.default.createElement(
         'section',
@@ -14780,6 +14966,7 @@ var OrderShow = function (_Component) {
   (0, _createClass3.default)(OrderShow, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
       var _props = this.props,
           order = _props.order,
           t = _props.t;
@@ -14798,9 +14985,51 @@ var OrderShow = function (_Component) {
       var _ref = orderDelivery || {},
           trackingId = _ref.tracking_id,
           trackingUrl = _ref.tracking_url;
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var order = _props.order;
+      var t = _props.t;
+      var externalId = order.external_id;
+      var orderDelivery = order.order_delivery;
+      var _order$delivery_type = order.delivery_type;
+      var deliveryType = _order$delivery_type === undefined ? {} : _order$delivery_type;
+      var freeDelivery = order.free_delivery;
+      var freeDeliveryThreshold = order.free_delivery_threshold;
+      var mustBePaidOnline = order.must_be_paid_online;
+      var paymentUrl = order.payment_url;
+      var _order$payment_type = order.payment_type;
+      var paymentType = _order$payment_type === undefined ? {} : _order$payment_type;
+      var workflowState = order.workflow_state;
+
+      var _ref = orderDelivery || {};
+
+      var trackingId = _ref.tracking_id;
+      var trackingUrl = _ref.tracking_url;
+=======
+      var _props = this.props,
+          order = _props.order,
+          t = _props.t;
+      var externalId = order.externalId,
+          orderDelivery = order.orderDelivery,
+          _order$deliveryType = order.deliveryType,
+          deliveryType = _order$deliveryType === undefined ? {} : _order$deliveryType,
+          freeDelivery = order.freeDelivery,
+          freeDeliveryThreshold = order.freeDeliveryThreshold,
+          mustBePaidOnline = order.mustBePaidOnline,
+          paymentUrl = order.paymentUrl,
+          _order$paymentType = order.paymentType,
+          paymentType = _order$paymentType === undefined ? {} : _order$paymentType,
+          workflowState = order.workflowState;
+
+      var _ref = orderDelivery || {},
+          trackingId = _ref.trackingId,
+          trackingUrl = _ref.trackingUrl;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
       var freeDeliveryMessage = freeDelivery ? t('vendor.order.free_delivery_text_html', {
-        free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)(freeDeliveryThreshold)
+        'free_delivery_threshold': (0, _money.humanizedMoneyWithCurrency)(freeDeliveryThreshold)
       }) : null;
 
       return _react2.default.createElement(
@@ -15627,9 +15856,20 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeNew = function ProductBadgeNew(_ref) {
+<<<<<<< HEAD
   var product = _ref.product,
       t = _ref.t;
+=======
+<<<<<<< HEAD
+  var product = _ref.product;
+  var t = _ref.t;
+>>>>>>> fix fixtures/test/views
   return product.is_label_new ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.new'), status: 'sold' }) : _react2.default.createElement('span', null);
+=======
+  var product = _ref.product,
+      t = _ref.t;
+  return product.isLabelNew ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.new'), status: 'sold' }) : _react2.default.createElement('span', null);
+>>>>>>> fix fixtures/test/views
 };
 
 ProductBadgeNew.propTypes = {
@@ -15660,11 +15900,11 @@ var ProductBadgeSale = function ProductBadgeSale(_ref) {
   var product = _ref.product,
       t = _ref.t;
 
-  if (product.is_sale) {
+  if (product.isSale) {
     var title = t('vendor.badges.sale');
 
-    if (product.sale_percent) {
-      var salePercent = product.sale_percent;
+    if (product.salePercent) {
+      var salePercent = product.salePercent;
 
       if (parseInt(salePercent, 10) === salePercent) {
         salePercent = parseInt(salePercent, 10);
@@ -15704,9 +15944,20 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeSoldOut = function ProductBadgeSoldOut(_ref) {
+<<<<<<< HEAD
   var product = _ref.product,
       t = _ref.t;
+=======
+<<<<<<< HEAD
+  var product = _ref.product;
+  var t = _ref.t;
+>>>>>>> fix fixtures/test/views
   return product.is_sold ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.sold'), status: 'sold' }) : _react2.default.createElement('span', null);
+=======
+  var product = _ref.product,
+      t = _ref.t;
+  return product.isSold ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.sold'), status: 'sold' }) : _react2.default.createElement('span', null);
+>>>>>>> fix fixtures/test/views
 };
 
 ProductBadgeSoldOut.propTypes = {
@@ -15734,13 +15985,25 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeUnavailable = function ProductBadgeUnavailable(_ref) {
+<<<<<<< HEAD
   var product = _ref.product,
       t = _ref.t;
+=======
+<<<<<<< HEAD
+  var product = _ref.product;
+  var t = _ref.t;
+>>>>>>> fix fixtures/test/views
   return !product.has_ordering_goods && !product.is_run_out ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.not_available'), status: 'sold' }) : _react2.default.createElement('span', null);
+=======
+  var product = _ref.product,
+      t = _ref.t;
+  return !product.hasOrderingGoods && !product.isRunOut ? _react2.default.createElement(_ProductBadge2.default, { status: 'sold', text: t('vendor.badges.not_available') }) : _react2.default.createElement('span', null);
+>>>>>>> fix fixtures/test/views
 };
 
 ProductBadgeUnavailable.propTypes = {
-  product: _react.PropTypes.object.isRequired
+  product: _react.PropTypes.object.isRequired,
+  t: _react.PropTypes.func.isRequired
 };
 
 exports.default = ProductBadgeUnavailable;
@@ -15850,13 +16113,25 @@ var ProductBlockImage = function (_Component) {
   (0, _createClass3.default)(ProductBlockImage, [{
     key: 'getCurrentImage',
     value: function getCurrentImage() {
+<<<<<<< HEAD
       var _props$product = this.props.product,
           index_image = _props$product.index_image,
           second_image = _props$product.second_image;
+=======
+<<<<<<< HEAD
+      var _props$product = this.props.product;
+      var index_image = _props$product.index_image;
+      var second_image = _props$product.second_image;
+=======
+      var _props$product = this.props.product,
+          indexImage = _props$product.indexImage,
+          secondImage = _props$product.secondImage;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
       var isHover = this.state.isHover;
 
 
-      return isHover && second_image ? second_image : index_image;
+      return isHover && secondImage ? secondImage : indexImage;
     }
   }, {
     key: 'handleMouseEnter',
@@ -15871,12 +16146,28 @@ var ProductBlockImage = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
       var _props = this.props,
           maxWidth = _props.maxWidth,
           _props$product2 = _props.product,
           second_image = _props$product2.second_image,
           title = _props$product2.title;
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var maxWidth = _props.maxWidth;
+      var _props$product2 = _props.product;
+      var second_image = _props$product2.second_image;
+      var title = _props$product2.title;
+>>>>>>> fix fixtures/test/views
       var currentImage = this.state.currentImage;
+=======
+      var _props = this.props,
+          maxWidth = _props.maxWidth,
+          _props$product2 = _props.product,
+          secondImage = _props$product2.secondImage,
+          title = _props$product2.title;
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -15891,12 +16182,12 @@ var ProductBlockImage = function (_Component) {
           maxWidth: maxWidth,
           title: title
         }),
-        second_image ? _react2.default.createElement(
+        secondImage ? _react2.default.createElement(
           'span',
           { style: { display: 'none!important' } },
           _react2.default.createElement(_Image.RelativeImage, {
             className: 'b-item__pic',
-            image: second_image,
+            image: secondImage,
             maxWidth: maxWidth,
             title: title
           })
@@ -15965,26 +16256,26 @@ var ProductBlock = function ProductBlock(_ref) {
       { className: 'b-item' },
       _react2.default.createElement(
         'a',
-        { className: 'b-item__pic-wrap', href: product.public_url },
+        { className: 'b-item__pic-wrap', href: product.publicUrl },
         _react2.default.createElement(_ProductBlockImage2.default, { product: product }),
         _react2.default.createElement(_ProductBlockBadges2.default, { product: product, t: t })
       ),
       _react2.default.createElement(
         'a',
-        { className: 'b-item__info', href: product.public_url },
+        { className: 'b-item__info', href: product.publicUrl },
         _react2.default.createElement(
           'h3',
           { className: 'b-item__name' },
           product.title
         ),
-        Boolean(product.short_details) && _react2.default.createElement(
+        Boolean(product.shortDetails) && _react2.default.createElement(
           'div',
           { className: 'b-item__details' },
-          product.short_details
+          product.shortDetails
         ),
         _react2.default.createElement(_ProductPrices2.default, { product: product, t: t })
       ),
-      showCartButton && product.has_ordering_goods && product.goods.length > 0 && _react2.default.createElement(
+      showCartButton && product.hasOrderingGoods && product.goods.length > 0 && _react2.default.createElement(
         'div',
         { className: 'b-item__cart-form' },
         _react2.default.createElement(_ProductBlockCartFormButton2.default, {
@@ -16073,7 +16364,7 @@ var ProductBlockCartFormButton = function (_Component) {
 
 
     _this.state = _this.getStateFromStore();
-    _this.state = (0, _extends3.default)({}, _this.getStateFromStore(), { amount: props.product.selling_by_weight ? parseFloat(props.product.weight_of_price) : 1 });
+    _this.state = (0, _extends3.default)({}, _this.getStateFromStore(), { amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1 });
     return _this;
   }
 
@@ -16111,7 +16402,7 @@ var ProductBlockCartFormButton = function (_Component) {
       var product = this.props.product;
 
 
-      return product.selling_by_weight ? (0, _BasketActions.addGood)(product.goods[0], 1, this.state.amount) : (0, _BasketActions.addGood)(product.goods[0], this.state.amount);
+      return product.sellingByWeight ? (0, _BasketActions.addGood)(product.goods[0], 1, this.state.amount) : (0, _BasketActions.addGood)(product.goods[0], this.state.amount);
     }
   }, {
     key: 'renderQuanity',
@@ -16122,10 +16413,10 @@ var ProductBlockCartFormButton = function (_Component) {
           defaultValue = void 0,
           min = void 0;
 
-      if (product.selling_by_weight) {
+      if (product.sellingByWeight) {
         step = 0.01;
         min = step;
-        defaultValue = parseFloat(product.weight_of_price);
+        defaultValue = parseFloat(product.weightOfPrice);
       } else {
         step = 1;
         defaultValue = 1;
@@ -16210,11 +16501,15 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
-
 var _HumanizedMoneyWithCurrency = require('../../common/Money/HumanizedMoneyWithCurrency');
 
 var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
+
+var _schemas = require('../../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16229,8 +16524,8 @@ var ProductBulk = function (_Component) {
     if (_this.good()) {
       _this.state = {
         price: {
-          cents: _this.getPrice(props.product.weight_of_price),
-          currency_iso_code: _this.good().actual_price.currency_iso_code
+          cents: _this.getPrice(props.product.weightOfPrice),
+          currencyIsoCode: _this.good().actualPrice.currencyIsoCode
         }
       };
     }
@@ -16242,7 +16537,7 @@ var ProductBulk = function (_Component) {
     value: function good() {
       if (this.props.good) {
         return this.props.good;
-      } else if (this.props.product.has_ordering_goods) {
+      } else if (this.props.product.hasOrderingGoods) {
         return this.props.product.goods[0];
       }
     }
@@ -16257,14 +16552,14 @@ var ProductBulk = function (_Component) {
       this.setState({
         price: {
           cents: this.getPrice(value),
-          currency_iso_code: this.good().actual_price.currency_iso_code
+          currencyIsoCode: this.good().actualPrice.currencyIsoCode
         }
       });
     }
   }, {
     key: 'getPrice',
     value: function getPrice(weight) {
-      return this.good().actual_price.cents * weight / parseFloat(this.props.product.weight_of_price);
+      return this.good().actualPrice.cents * weight / parseFloat(this.props.product.weightOfPrice);
     }
   }, {
     key: 'render',
@@ -16283,12 +16578,14 @@ var ProductBulk = function (_Component) {
               null,
               t('vendor.product.weight')
             ),
-            _react2.default.createElement('input', { ref: 'input', type: 'number',
+            _react2.default.createElement('input', {
               className: 'string form-control',
-              step: '0.01',
+              defaultValue: this.props.product.weightOfPrice,
               name: 'cart_item[weight]',
-              defaultValue: this.props.product.weight_of_price,
-              onChange: this.onWeightChange.bind(this)
+              onChange: this.onWeightChange.bind(this),
+              ref: 'input',
+              step: '0.01',
+              type: 'number'
             })
           ),
           _react2.default.createElement(
@@ -16310,13 +16607,22 @@ var ProductBulk = function (_Component) {
 }(_react.Component);
 
 ProductBulk.propTypes = {
+  good: schemas.good,
   product: _react.PropTypes.object.isRequired
 };
 
 exports.default = ProductBulk;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../common/Money/HumanizedMoneyWithCurrency":256,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"react":"react","react-dom":"react-dom"}],157:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-dom":"react-dom"}],155:[function(require,module,exports){
+=======
+},{"../../../schemas":311,"../../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],155:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16903,7 +17209,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
           product.attributes.map(function (attr, idx) {
             return _react2.default.createElement(
               'li',
-              { className: 'b-characteristics-li-property_' + attr.property_id, key: idx },
+              { className: 'b-characteristics-li-property_' + attr.propertyId, key: idx },
               (0, _product.attributeValue)(attr)
             );
           })
@@ -16927,11 +17233,11 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
   }, {
     key: 'renderTextBlocks',
     value: function renderTextBlocks(product) {
-      if (product.text_blocks && product.text_blocks.length) {
+      if (product.textBlocks && product.textBlocks.length) {
         return _react2.default.createElement(
           'span',
           { ref: 'textBlocks' },
-          product.text_blocks.map(function (block, idx) {
+          product.textBlocks.map(function (block, idx) {
             return _react2.default.createElement(
               'div',
               { className: 'b-item-full__text', key: idx },
@@ -16972,7 +17278,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
                 { key: product.id },
                 _react2.default.createElement(
                   'a',
-                  { href: product.public_url, title: product.title, alt: product.title },
+                  { href: product.publicUrl, title: product.title, alt: product.title },
                   _react2.default.createElement(_ProductBlockImage2.default, { product: product })
                 )
               );
@@ -16993,7 +17299,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
         return _react2.default.createElement(
           'span',
           null,
-          _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: product.custom_product_html } }),
+          _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: product.customProductHtml } }),
           this.renderDescription(product),
           this.renderAttributes(product),
           this.renderTextBlocks(product),
@@ -17876,10 +18182,10 @@ var ProductCardVideo = (_temp = _class = function (_Component) {
       var product = this.props.product;
 
 
-      if (product.video_embed_html) {
+      if (product.videoEmbedHtml) {
         return _react2.default.createElement("div", {
           className: "b-item-full__video",
-          dangerouslySetInnerHTML: { __html: product.video_embed_html }
+          dangerouslySetInnerHTML: { __html: product.videoEmbedHtml }
         });
       }
       return null;
@@ -17952,7 +18258,7 @@ var ProductCartForProduct = function ProductCartForProduct(props) {
   return _react2.default.createElement(
     'span',
     null,
-    _react2.default.createElement(_HiddenInput2.default, { name: 'cart_item[good_id]', value: props.good.global_id }),
+    _react2.default.createElement(_HiddenInput2.default, { name: 'cart_item[good_id]', value: props.good.globalId }),
     _react2.default.createElement(
       'div',
       { className: 'b-item-full__form__row b-item-full__form__row_fixed' },
@@ -18172,7 +18478,7 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
           product = _props.product;
 
 
-      return new _urijs2.default(addWishlistUrl).addQuery('good_id', good ? good.global_id : product.global_id).toString();
+      return new _urijs2.default(addWishlistUrl).addQuery('good_id', good ? good.globalId : product.globalId).toString();
     }
   }, {
     key: 'render',
@@ -18292,10 +18598,6 @@ var _ProductBulk = require('../ProductBulk');
 
 var _ProductBulk2 = _interopRequireDefault(_ProductBulk);
 
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductCart = (_temp = _class = function (_Component) {
@@ -18309,7 +18611,7 @@ var ProductCart = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductCart, [{
     key: 'renderContent',
     value: function renderContent(product, t) {
-      if (product.has_ordering_goods) {
+      if (product.hasOrderingGoods) {
         if (product.goods.length === 1) {
           return _react2.default.createElement(_ProductCartForProduct2.default, (0, _extends3.default)({}, this.props, {
             good: product.goods[0],
@@ -18325,14 +18627,18 @@ var ProductCart = (_temp = _class = function (_Component) {
   }, {
     key: 'renderProductBulkInput',
     value: function renderProductBulkInput(product, good, t) {
-      if (product.selling_by_weight && product.weight_of_price) {
+      if (product.sellingByWeight && product.weightOfPrice) {
         return _react2.default.createElement(
           'div',
           { className: 'b-item-full__form__row b-item-full__form__row_fixed' },
           _react2.default.createElement(
             'div',
             { className: 'b-item-full__weight' },
-            _react2.default.createElement(_ProductBulk2.default, { t: t, good: good, product: product })
+            _react2.default.createElement(_ProductBulk2.default, {
+              good: good,
+              product: product,
+              t: t
+            })
           )
         );
       }
@@ -18381,7 +18687,15 @@ var ProductCart = (_temp = _class = function (_Component) {
 exports.default = ProductCart;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../../routes/app":337,"../../common/CSRFToken":239,"../../common/HiddenInput":244,"../ProductBulk":156,"./ProductCartForProduct":173,"./ProductCartForProductItems":174,"./ProductCartNotAvailable":175,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/extends":354,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"jquery":"jquery","react":"react"}],178:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../../routes/app":335,"../../common/CSRFToken":237,"../../common/HiddenInput":242,"../ProductBulk":154,"./ProductCartForProduct":171,"./ProductCartForProductItems":172,"./ProductCartNotAvailable":173,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],176:[function(require,module,exports){
+=======
+},{"../../../../routes/app":335,"../../common/CSRFToken":236,"../../common/HiddenInput":241,"../ProductBulk":154,"./ProductCartForProduct":171,"./ProductCartForProductItems":172,"./ProductCartNotAvailable":173,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],176:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18418,6 +18732,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
 var _globalEventKeys = require('../../../constants/globalEventKeys');
 
 var _product = require('../../../helpers/product');
@@ -18451,7 +18769,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
       for (var i = 0; i < product.goods.length; i++) {
         var good = product.goods[i];
 
-        if (good.is_ordering) {
+        if (good.isOrdering) {
           if (onGoodChange) onGoodChange(good);
           break;
         }
@@ -18478,12 +18796,12 @@ var ProductGoods = (_temp = _class = function (_Component) {
       for (var i = 0; i < goods.length; i++) {
         var good = goods[i];
 
-        if (good.global_id === value) {
-          $(document).trigger(_globalEventKeys.PHOTO_CHANGE, good.image);
+        if (good.globalId === value) {
+          (0, _jquery2.default)(document).trigger(_globalEventKeys.PHOTO_CHANGE, good.image);
           if (onGoodChange) onGoodChange(good);
           break;
         }
-      };
+      }
     }
   }, {
     key: 'renderOption',
@@ -18491,9 +18809,9 @@ var ProductGoods = (_temp = _class = function (_Component) {
       return _react2.default.createElement(
         'option',
         {
-          disabled: !good.is_ordering,
-          key: good.global_id,
-          value: good.global_id
+          disabled: !good.isOrdering,
+          key: good.globalId,
+          value: good.globalId
         },
         (0, _product.goodOrderTitle)(product, good)
       );
@@ -18508,8 +18826,8 @@ var ProductGoods = (_temp = _class = function (_Component) {
       for (var i = 0; i < product.goods.length; i++) {
         var good = product.goods[i];
 
-        if (good.is_ordering) {
-          selectedValue = good.global_id;
+        if (good.isOrdering) {
+          selectedValue = good.globalId;
           break;
         }
       }
@@ -18551,8 +18869,8 @@ var ProductGoods = (_temp = _class = function (_Component) {
               'div',
               { className: 'b-item-full__form__submit' },
               _react2.default.createElement(_ProductAddToCartButton2.default, {
-                text: t('vendor.button.to_cart', { title: product.title }),
-                t: t
+                t: t,
+                text: t('vendor.button.to_cart', { title: product.title })
               })
             )
           ),
@@ -18601,7 +18919,11 @@ var ProductGoods = (_temp = _class = function (_Component) {
 exports.default = ProductGoods;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../constants/globalEventKeys":277,"../../../helpers/product":288,"../ProductAddToCartButton":146,"../ProductCart/ProductCartWishlist":176,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/extends":354,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"react":"react"}],179:[function(require,module,exports){
+=======
+},{"../../../constants/globalEventKeys":275,"../../../helpers/product":286,"../ProductAddToCartButton":144,"../ProductCart/ProductCartWishlist":174,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],177:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18619,9 +18941,20 @@ var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCur
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductGoodActualPrice = function ProductGoodActualPrice(_ref) {
+<<<<<<< HEAD
   var good = _ref.good,
       t = _ref.t;
+=======
+<<<<<<< HEAD
+  var good = _ref.good;
+  var t = _ref.t;
+>>>>>>> fix fixtures/test/views
   return good.actual_price ? _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: good.actual_price }) : _react2.default.createElement(
+=======
+  var good = _ref.good,
+      t = _ref.t;
+  return good.actualPrice ? _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: good.actualPrice }) : _react2.default.createElement(
+>>>>>>> fix fixtures/test/views
     'span',
     null,
     t('vendor.product.blank_price')
@@ -18693,12 +19026,21 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductGoodPrice, [{
     key: 'renderWeightOfPrice',
     value: function renderWeightOfPrice(product, t) {
-      if (product.selling_by_weight && product.weight_of_price) {
+      if (product.sellingByWeight && product.weightOfPrice) {
         return _react2.default.createElement(
           'span',
           null,
+<<<<<<< HEAD
           '\xA0/\xA0',
+=======
+<<<<<<< HEAD
+          ' / ',
+>>>>>>> fix fixtures/test/views
           product.weight_of_price,
+=======
+          '\xA0/\xA0',
+          product.weightOfPrice,
+>>>>>>> fix fixtures/test/views
           ' ',
           t('vendor.product.kg')
         );
@@ -18715,7 +19057,7 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
           t = _props.t;
 
 
-      if (good.is_sale) {
+      if (good.isSale) {
         return _react2.default.createElement(
           'span',
           null,
@@ -18733,7 +19075,7 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
         );
       } else {
         var priceClasses = (0, _classnames2.default)('b-item__price', {
-          'b-item__price_unknown': good.actual_price && good.actual_price.cents === 0
+          'b-item__price_unknown': good.actualPrice && good.actualPrice.cents === 0
         });
 
         return _react2.default.createElement(
@@ -18893,9 +19235,9 @@ var ProductPrices = function (_Component) {
       for (var i = 0; i < goods.length; i++) {
         var good = goods[i];
 
-        if (good.actual_price != null && (0, _typeof3.default)(good.actual_price) === 'object') {
-          if (good.actual_price.cents < minPrice.cents) {
-            minPrice = good.actual_price;
+        if (good.actualPrice != null && (0, _typeof3.default)(good.actualPrice) === 'object') {
+          if (good.actualPrice.cents < minPrice.cents) {
+            minPrice = good.actualPrice;
           }
         }
       }
@@ -18910,9 +19252,9 @@ var ProductPrices = function (_Component) {
       for (var i = 0; i < goods.length; i++) {
         var good = goods[i];
 
-        if (good.actual_price != null && (0, _typeof3.default)(good.actual_price) === 'object') {
-          if (good.actual_price.cents > maxPrice.cents) {
-            maxPrice = good.actual_price;
+        if (good.actualPrice != null && (0, _typeof3.default)(good.actualPrice) === 'object') {
+          if (good.actualPrice.cents > maxPrice.cents) {
+            maxPrice = good.actualPrice;
           }
         }
       }
@@ -19585,7 +19927,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
 
       var hiddenInput = good && _react2.default.createElement(_HiddenInput2.default, {
         name: 'cart_item[good_id]',
-        value: good.global_id
+        value: good.globalId
       });
       var addToCartButton = _react2.default.createElement(_ProductAddToCartButton2.default, {
         disabled: !good,
@@ -20510,18 +20852,18 @@ var ProductList = function (_Component) {
             { className: 'b-text b-text_center' },
             t('vendor.products.nothing_found_by_criteria')
           ),
-          showPagination && pagination.total_pages > 1 && _react2.default.createElement(
+          showPagination && pagination.totalPages > 1 && _react2.default.createElement(
             'div',
             { className: 'b-item-list__paginator' },
             _react2.default.createElement(_Pagination2.default, pagination)
           )
         ),
-        container && container.bottom_text && _react2.default.createElement(
+        container && container.bottomText && _react2.default.createElement(
           'div',
           { className: 'b-item-list__description' },
           _react2.default.createElement('div', {
             className: 'b-page__content__inner_content',
-            dangerouslySetInnerHTML: { __html: container.bottom_text }
+            dangerouslySetInnerHTML: { __html: container.bottomText }
           })
         )
       );
@@ -20535,7 +20877,7 @@ ProductList.propTypes = {
   container: _react.PropTypes.shape({
     image: schemas.image,
     description: _react.PropTypes.string,
-    bottom_text: _react.PropTypes.string
+    bottomText: _react.PropTypes.string
   }),
   i18n: _react.PropTypes.object,
   products: _react.PropTypes.shape({
@@ -20630,7 +20972,7 @@ ProductListContainer.propTypes = {
   container: _react.PropTypes.shape({
     image: schemas.image,
     description: _react.PropTypes.string,
-    bottom_text: _react.PropTypes.string
+    bottomText: _react.PropTypes.string
   }),
   i18n: _react.PropTypes.object,
   products: schemas.productList.isRequired,
@@ -20736,7 +21078,7 @@ var ProductSearch = function (_Component) {
         showPagination: true,
         showQuantity: showQuantity,
         t: t,
-        title: t('vendor.search.results_title', { count: products.total_count })
+        title: t('vendor.search.results_title', { count: products.totalCount })
       }) : _react2.default.createElement(
         'section',
         { className: 'b-item-list b-item-list_catalog' },
@@ -21899,6 +22241,18 @@ var VendorLayout = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-page__content' },
+<<<<<<< HEAD
+=======
+          !vendor.isPublished && _react2.default.createElement(
+            'div',
+            { className: 'b-publish-shop-button' },
+            _react2.default.createElement(_PublishShopButton2.default, {
+              className: 'b-btn',
+              publishShopPath: publishShopPath,
+              t: t
+            })
+          ),
+>>>>>>> fix fixtures/test/views
           showTopBanner && _react2.default.createElement(_TopBanner2.default, topBannerProps),
           _react2.default.createElement(
             'div',
@@ -21916,7 +22270,7 @@ var VendorLayout = function (_Component) {
             children
           ),
           _react2.default.createElement(_Footer2.default, {
-            customAfterContentHtml: vendor.custom_after_content_html,
+            customAfterContentHtml: vendor.customAfterContentHtml,
             i18n: i18n,
             menuBottomProps: menuBottomProps,
             showInstagramContainer: showInstagramContainer
@@ -21926,7 +22280,7 @@ var VendorLayout = function (_Component) {
             publishShopUrl: publishShopUrl
           }))
         ),
-        _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: vendor.custom_append_html } }),
+        _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: vendor.customAppendHtml } }),
         _react2.default.createElement(_W1Widget2.default, { w1ptEnabled: w1ptEnabled }),
         _react2.default.createElement(_ScrollToTop2.default, scrollToTopProps)
       );
@@ -22133,7 +22487,7 @@ var VendorPaymentLayout = function (_Component) {
             children
           )
         ),
-        _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: vendor.custom_append_html } }),
+        _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: vendor.customAppendHtml } }),
         _react2.default.createElement(_W1Widget2.default, { w1ptEnabled: w1ptEnabled })
       );
     }
@@ -22284,6 +22638,25 @@ var Welcome = function (_Component) {
   (0, _createClass3.default)(Welcome, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var catalogFilterProps = _props.catalogFilterProps;
+      var isFilterDirty = _props.isFilterDirty;
+      var products = _props.products;
+      var showCartButton = _props.showCartButton;
+      var showCatalogFilter = _props.showCatalogFilter;
+      var showPaginationOnWelcome = _props.showPaginationOnWelcome;
+      var showQuantity = _props.showQuantity;
+      var showWelcomeSlider = _props.showWelcomeSlider;
+      var vendor = _props.vendor;
+      var t = _props.t;
+      var preProductsText = vendor.pre_products_text;
+      var postProductsText = vendor.post_products_text;
+      var sliderImages = vendor.slider_images;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           catalogFilterProps = _props.catalogFilterProps,
           isFilterDirty = _props.isFilterDirty,
@@ -22295,9 +22668,16 @@ var Welcome = function (_Component) {
           showWelcomeSlider = _props.showWelcomeSlider,
           vendor = _props.vendor,
           t = _props.t;
+<<<<<<< HEAD
       var preProductsText = vendor.pre_products_text,
           postProductsText = vendor.post_products_text,
           sliderImages = vendor.slider_images;
+=======
+      var preProductsText = vendor.preProductsText,
+          postProductsText = vendor.postProductsText,
+          sliderImages = vendor.sliderImages;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -22656,13 +23036,32 @@ var WelcomeChildren = function (_Component) {
   (0, _createClass3.default)(WelcomeChildren, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var childrenProducts = _props.childrenProducts;
+      var showWelcomeSlider = _props.showWelcomeSlider;
+      var _props$vendor = _props.vendor;
+      var preProductsText = _props$vendor.pre_products_text;
+      var postProductsText = _props$vendor.post_products_text;
+      var sliderImages = _props$vendor.slider_images;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           childrenProducts = _props.childrenProducts,
           showWelcomeSlider = _props.showWelcomeSlider,
           _props$vendor = _props.vendor,
+<<<<<<< HEAD
           preProductsText = _props$vendor.pre_products_text,
           postProductsText = _props$vendor.post_products_text,
           sliderImages = _props$vendor.slider_images;
+=======
+          preProductsText = _props$vendor.preProductsText,
+          postProductsText = _props$vendor.postProductsText,
+          sliderImages = _props$vendor.sliderImages;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -23173,13 +23572,13 @@ var WishlistItem = function (_Component) {
             _react2.default.createElement(
               'a',
               {
-                href: item.good.default_url,
+                href: item.good.defaultUrl,
                 target: '_blank'
               },
               item.product.title
             )
           ),
-          _react2.default.createElement(_GoodDetails2.default, { details: item.good.custom_attributes })
+          _react2.default.createElement(_GoodDetails2.default, { details: item.good.customAttributes })
         ),
         _react2.default.createElement('div', { className: 'b-cart__item__col-quantity' }),
         _react2.default.createElement(
@@ -23190,8 +23589,8 @@ var WishlistItem = function (_Component) {
             { className: 'b-cart__item__price' },
             item.good.price != null ? (0, _money.humanizedMoneyWithCurrency)(item.good.price) : t('vendor.wishlist.no_price')
           ),
-          item.good.has_ordering_goods && _react2.default.createElement(_WishlistAddToCartButton2.default, {
-            href: item.good.add_to_cart_url,
+          item.good.hasOrderingGoods && _react2.default.createElement(_WishlistAddToCartButton2.default, {
+            href: item.good.addToCartUrl,
             id: item.good.id,
             isInCart: isInCart,
             t: t,
@@ -23206,7 +23605,7 @@ var WishlistItem = function (_Component) {
             {
               className: 'b-cart__item__remove',
               'data-method': 'delete',
-              href: item.destroy_url
+              href: item.destroyUrl
             },
             _react2.default.createElement(_AssetImage2.default, { src: 'images/cross_white.svg' })
           )
@@ -23502,9 +23901,9 @@ WishlistContainer.defaultProps = {
   wishlistItems: [],
   initialCart: {
     items: [],
-    total_price: {},
+    totalPrice: {},
     errors: {},
-    default_url: ''
+    defaultUrl: ''
   },
   isPrivate: true
 };
@@ -23904,10 +24303,10 @@ var CartButtonController = function (_Component) {
       var itemsCount = this.getItemsCount();
 
       // выводим total_price, т.е. без учета стоимости доставки
-      var total_price = (0, _money.humanizedMoneyWithCurrency)(this.state.basket.total_price, '');
+      var totalPrice = (0, _money.humanizedMoneyWithCurrency)(this.state.basket.totalPrice, '');
 
       return _react2.default.createElement(_CartButton2.default, {
-        text: t('vendor.cart.basket_button', { total_price: total_price }),
+        text: t('vendor.cart.basket_button', { total_price: totalPrice }),
         url: url,
         itemsCount: itemsCount
       });
@@ -26701,9 +27100,21 @@ var OrderComments = function (_Component) {
             'tbody',
             null,
             comments.map(function (_ref, idx) {
+<<<<<<< HEAD
               var body = _ref.body,
                   author = _ref.author,
                   createdAt = _ref.created_at;
+=======
+<<<<<<< HEAD
+              var body = _ref.body;
+              var author = _ref.author;
+              var createdAt = _ref.created_at;
+=======
+              var body = _ref.body,
+                  author = _ref.author,
+                  createdAt = _ref.createdAt;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
               return _react2.default.createElement(
                 'tr',
                 { className: 'feed-element', key: 'order-comment-' + idx },
@@ -26823,10 +27234,24 @@ var OrderContents = function (_Component) {
   (0, _createClass3.default)(OrderContents, [{
     key: 'renderPackageGood',
     value: function renderPackageGood(packageGood, packagePrice) {
+<<<<<<< HEAD
       var packageDefaultUrl = packageGood.default_url,
           packageImageUrl = packageGood.image_url,
           packageTitle = packageGood.title,
           packageQuantityUnit = packageGood.quantity_unit;
+=======
+<<<<<<< HEAD
+      var packageDefaultUrl = packageGood.default_url;
+      var packageImageUrl = packageGood.image_url;
+      var packageTitle = packageGood.title;
+      var packageQuantityUnit = packageGood.quantity_unit;
+=======
+      var packageDefaultUrl = packageGood.defaultUrl,
+          packageImageUrl = packageGood.imageUrl,
+          packageTitle = packageGood.title,
+          packageQuantityUnit = packageGood.quantityUnit;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -26879,10 +27304,24 @@ var OrderContents = function (_Component) {
     key: 'renderCouponDiscount',
     value: function renderCouponDiscount(coupon) {
       var t = this.props.t;
+<<<<<<< HEAD
       var discount = coupon.discount,
           isFixed = coupon.fixed,
           fixedDiscount = coupon.fixed_discount,
           freeDelivery = coupon.free_delivery;
+=======
+<<<<<<< HEAD
+      var discount = coupon.discount;
+      var isFixed = coupon.fixed;
+      var fixedDiscount = coupon.fixed_discount;
+      var freeDelivery = coupon.free_delivery;
+=======
+      var discount = coupon.discount,
+          isFixed = coupon.fixed,
+          fixedDiscount = coupon.fixedDiscount,
+          freeDelivery = coupon.freeDelivery;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -26905,15 +27344,38 @@ var OrderContents = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var _props$order = _props.order;
+      var items = _props$order.items;
+      var coupon = _props$order.coupon;
+      var packageGood = _props$order.package_good;
+      var packagePrice = _props$order.package_price;
+      var totalWithDeliveryPrice = _props$order.total_with_delivery_price;
+      var deliveryPrice = _props$order.delivery_price;
+      var t = _props.t;
+=======
+>>>>>>> fix fixtures/test/views
       var _props = this.props,
           _props$order = _props.order,
           items = _props$order.items,
           coupon = _props$order.coupon,
+<<<<<<< HEAD
           packageGood = _props$order.package_good,
           packagePrice = _props$order.package_price,
           totalWithDeliveryPrice = _props$order.total_with_delivery_price,
           deliveryPrice = _props$order.delivery_price,
           t = _props.t;
+=======
+          packageGood = _props$order.packageGood,
+          packagePrice = _props$order.packagePrice,
+          totalWithDeliveryPrice = _props$order.totalWithDeliveryPrice,
+          deliveryPrice = _props$order.deliveryPrice,
+          t = _props.t;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -27190,15 +27652,38 @@ var OrderItem = function (_Component) {
   (0, _createClass3.default)(OrderItem, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      var _props$item = this.props.item;
+      var count = _props$item.count;
+      var title = _props$item.title;
+      var _props$item$good = _props$item.good;
+      var defaultUrl = _props$item$good.default_url;
+      var article = _props$item$good.article;
+      var imageUrl = _props$item.image_url;
+      var totalPrice = _props$item.total_price;
+      var quantityUnit = _props$item.quantity_unit;
+=======
+>>>>>>> fix fixtures/test/views
       var _props$item = this.props.item,
           count = _props$item.count,
           title = _props$item.title,
           _props$item$good = _props$item.good,
+<<<<<<< HEAD
           defaultUrl = _props$item$good.default_url,
           article = _props$item$good.article,
           imageUrl = _props$item.image_url,
           totalPrice = _props$item.total_price,
           quantityUnit = _props$item.quantity_unit;
+=======
+          defaultUrl = _props$item$good.defaultUrl,
+          article = _props$item$good.article,
+          imageUrl = _props$item.imageUrl,
+          totalPrice = _props$item.totalPrice,
+          quantityUnit = _props$item.quantityUnit;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return _react2.default.createElement(
@@ -27393,11 +27878,27 @@ var OrderSelfDeliveryMessage = function (_Component) {
   (0, _createClass3.default)(OrderSelfDeliveryMessage, [{
     key: 'render',
     value: function render() {
+<<<<<<< HEAD
       var _props = this.props,
           _props$deliveryType = _props.deliveryType,
           selfdelivery = _props$deliveryType.selfdelivery,
           pickupAdress = _props$deliveryType.pickup_address,
           t = _props.t;
+=======
+<<<<<<< HEAD
+      var _props = this.props;
+      var _props$deliveryType = _props.deliveryType;
+      var selfdelivery = _props$deliveryType.selfdelivery;
+      var pickupAdress = _props$deliveryType.pickup_address;
+      var t = _props.t;
+=======
+      var _props = this.props,
+          _props$deliveryType = _props.deliveryType,
+          selfdelivery = _props$deliveryType.selfdelivery,
+          pickupAdress = _props$deliveryType.pickupAdress,
+          t = _props.t;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
       return selfdelivery && pickupAdress != null ? _react2.default.createElement(
@@ -27414,7 +27915,7 @@ var OrderSelfDeliveryMessage = function (_Component) {
 OrderSelfDeliveryMessage.propTypes = {
   deliveryType: _react.PropTypes.shape({
     selfdelivery: _react.PropTypes.bool,
-    pickup_address: _react.PropTypes.string
+    pickupAddress: _react.PropTypes.string
   }).isRequired,
   t: _react.PropTypes.func.isRequired
 };
@@ -28001,7 +28502,350 @@ var Select = (_temp = _class = function (_Component) {
 exports.default = Select;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/extends":354,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"react":"react"}],269:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],264:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _class, _temp;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _tinycolor = require('tinycolor2');
+
+var _tinycolor2 = _interopRequireDefault(_tinycolor);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var RadioColor = (_temp = _class = function (_Component) {
+  (0, _inherits3.default)(RadioColor, _Component);
+
+  function RadioColor() {
+    (0, _classCallCheck3.default)(this, RadioColor);
+    return (0, _possibleConstructorReturn3.default)(this, (RadioColor.__proto__ || (0, _getPrototypeOf2.default)(RadioColor)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(RadioColor, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'span',
+        null,
+        this.props.options.map(this.renderOption.bind(this))
+      );
+    }
+  }, {
+    key: 'renderOption',
+    value: function renderOption(option) {
+<<<<<<< HEAD
+      var value = option.value;
+      var title = option.title;
+      var color = option.color;
+      var image_url = option.image_url;
+      var disabled = option.disabled;
+=======
+      var value = option.value,
+          title = option.title,
+          color = option.color,
+          imageUrl = option.imageUrl,
+          disabled = option.disabled;
+>>>>>>> fix fixtures/test/views
+
+      var optionClasses = (0, _classnames2.default)('radiobtn', 'radiobtn--color', {
+        'radiobtn--light': (0, _tinycolor2.default)(color).isLight(),
+        '__disabled': disabled
+      });
+
+      var indStyles = void 0;
+      if (imageUrl) {
+        indStyles = { backgroundImage: 'url("' + imageUrl + '")' };
+      } else {
+        indStyles = { backgroundColor: color };
+      }
+
+      return _react2.default.createElement(
+        'label',
+        {
+          key: value,
+          'data-tooltip': title,
+          className: optionClasses
+        },
+        _react2.default.createElement('input', {
+          type: 'radio',
+          name: this.props.name,
+          value: value,
+          checked: value === this.props.value,
+          disabled: disabled,
+          className: 'radiobtn__input',
+          onChange: this.handleChange.bind(this, value)
+        }),
+        _react2.default.createElement('span', { style: indStyles, className: 'radiobtn__ind' })
+      );
+    }
+  }, {
+    key: 'handleChange',
+    value: function handleChange(value) {
+      if (this.props.onChange) {
+        this.props.onChange(value);
+      }
+    }
+  }]);
+  return RadioColor;
+}(_react.Component), _class.propTypes = {
+  name: _react.PropTypes.string,
+  value: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
+  options: _react.PropTypes.array.isRequired,
+  onChange: _react.PropTypes.func
+}, _temp);
+exports.default = RadioColor;
+module.exports = exports['default'];
+
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react","tinycolor2":"tinycolor2"}],265:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _class, _temp;
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Ps = void 0;
+
+var Scroller = (_temp = _class = function (_Component) {
+  (0, _inherits3.default)(Scroller, _Component);
+
+  function Scroller(props) {
+    (0, _classCallCheck3.default)(this, Scroller);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Scroller.__proto__ || (0, _getPrototypeOf2.default)(Scroller)).call(this, props));
+
+    _this.updateScroller = _this.updateScroller.bind(_this);
+    return _this;
+  }
+
+  (0, _createClass3.default)(Scroller, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      Ps = require('perfect-scrollbar'); // FIXME: replace with something that doesn't crash during SSR
+      Ps.initialize((0, _reactDom.findDOMNode)(this), { suppressScrollX: true });
+
+      if (this.props.updateEvent) {
+        $(document).on(this.props.updateEvent, this.updateScroller);
+      }
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
+      this.updateScroller();
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      Ps.destroy((0, _reactDom.findDOMNode)(this));
+
+      if (this.props.updateEvent) {
+        $(document).off(this.props.updateEvent, this.updateScroller);
+      }
+    }
+  }, {
+    key: 'updateScroller',
+    value: function updateScroller() {
+      Ps.update((0, _reactDom.findDOMNode)(this));
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var scrollerClasses = (0, _classnames2.default)('b-scroller', this.props.className);
+
+      return _react2.default.createElement(
+        'div',
+        { className: scrollerClasses, onScroll: this.props.onScroll },
+        this.props.children
+      );
+    }
+  }]);
+  return Scroller;
+}(_react.Component), _class.propTypes = {
+  className: _react.PropTypes.string,
+  onScroll: _react.PropTypes.func,
+  updateEvent: _react.PropTypes.string
+}, _temp);
+exports.default = Scroller;
+module.exports = exports['default'];
+
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","perfect-scrollbar":"perfect-scrollbar","react":"react","react-dom":"react-dom"}],266:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _class, _temp;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Select = (_temp = _class = function (_Component) {
+  (0, _inherits3.default)(Select, _Component);
+
+  function Select() {
+    (0, _classCallCheck3.default)(this, Select);
+    return (0, _possibleConstructorReturn3.default)(this, (Select.__proto__ || (0, _getPrototypeOf2.default)(Select)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(Select, [{
+    key: 'hasOptionWithValue',
+    value: function hasOptionWithValue(value) {
+      return this.props.options.some(function (o) {
+        return o.value === value;
+      });
+    }
+  }, {
+    key: 'handleChange',
+    value: function handleChange(e) {
+      if (this.props.onChange) {
+        var srcValue = e.target.value;
+        // Могут быть значения опций "333", 333, "17.5".
+        // Сначала ищем как строку, если не нашли то это числовой идентификатор и приводим
+        // с parseInt
+        var value = this.hasOptionWithValue(srcValue) ? srcValue : parseInt(srcValue, 10);
+        this.props.onChange(value);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props;
+      var name = _props.name;
+      var options = _props.options;
+      var value = _props.value;
+
+
+      return _react2.default.createElement(
+        'select',
+        {
+          name: name,
+          onChange: this.handleChange.bind(this),
+          value: value
+        },
+        options.map(function (option) {
+          return _react2.default.createElement(
+            'option',
+            (0, _extends3.default)({}, option, { key: option.value }),
+            option.title
+          );
+        })
+      );
+    }
+  }]);
+  return Select;
+}(_react.Component), _class.propTypes = {
+  name: _react.PropTypes.string,
+  value: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
+  options: _react.PropTypes.array.isRequired,
+  onChange: _react.PropTypes.func
+}, _temp);
+exports.default = Select;
+module.exports = exports['default'];
+
+>>>>>>> fix fixtures/test/views
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],267:[function(require,module,exports){
+>>>>>>> fix fixtures/test/views
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28589,7 +29433,7 @@ function getCurrency(money) {
 }
 
 function getCurrencyID(money) {
-  return (typeof money === 'string' ? money : money.currency_iso_code).toLowerCase();
+  return (typeof money === 'string' ? money : money.currencyIsoCode).toLowerCase();
 }
 
 function getHTMLName(money) {
@@ -28617,8 +29461,12 @@ function isSymbolFirst(money) {
 }
 
 function money(money) {
-  if (!money) return '-';
-  if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
+  if (!money) {
+    return '-';
+  }
+  if (!isCurrencyExists(money)) {
+    return unknownIsoCodeMessage(money);
+  }
 
   return (0, _numeral2.default)(getUnit(money)).format('0');
 }
@@ -28631,10 +29479,23 @@ function humanizedMoney(money) {
 }
 
 function humanizedMoneyWithCurrency(money) {
+<<<<<<< HEAD
   var null_value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';
+=======
+<<<<<<< HEAD
+  var null_value = arguments.length <= 1 || arguments[1] === undefined ? '-' : arguments[1];
+=======
+  var nullValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
-  if (!money || money.cents === 0) return null_value;
-  if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
+  if (!money || money.cents === 0) {
+    return nullValue;
+  }
+
+  if (!isCurrencyExists(money)) {
+    return unknownIsoCodeMessage(money);
+  }
 
   return isSymbolFirst(money) ? getHTMLName(money) + ' ' + humanizedMoney(money) : humanizedMoney(money) + ' ' + getHTMLName(money);
 }
@@ -28694,7 +29555,7 @@ function schemaOrgMarkup(product) {
     _react2.default.createElement('meta', { itemProp: 'name', content: (0, _seo.h1)(product) }),
     product.article && _react2.default.createElement('span', { itemProp: 'productID', content: (0, _seo.schemaOrgProductArticle)(product) }),
     product.goods && product.goods.length && product.goods.map(function (el) {
-      return schemaOrgGoodPrice(el, product.main_category);
+      return schemaOrgGoodPrice(el, product.mainCategory);
     })
   );
 }
@@ -28706,20 +29567,20 @@ function schemaOrgGoodPrice(good, category) {
       itemProp: 'offers',
       itemScope: true,
       itemType: 'http://schema.org/Offer',
-      key: good.global_id
+      key: good.globalId
     },
     _react2.default.createElement('meta', { itemProp: 'name', content: good.title }),
     _react2.default.createElement('meta', { itemProp: 'sku', content: good.article }),
     _react2.default.createElement('meta', { itemProp: 'category', content: (0, _seo.schemaOrgProductCategory)(category) }),
     _react2.default.createElement('meta', { itemProp: 'availability', content: (0, _seo.schemaOrgGoodAvailability)(good) }),
-    good.actual_price && _react2.default.createElement(
+    good.actualPrice && _react2.default.createElement(
       'div',
       { itemProp: 'price' },
-      _react2.default.createElement('meta', { itemProp: 'priceCurrency', content: good.actual_price.currency_iso_code }),
+      _react2.default.createElement('meta', { itemProp: 'priceCurrency', content: good.actualPrice.currencyIsoCode }),
       _react2.default.createElement(
         'div',
         null,
-        (0, _money.money)(good.actual_price)
+        (0, _money.money)(good.actualPrice)
       )
     )
   );
@@ -28729,10 +29590,10 @@ function goodOrderTitle(product, good) {
   var title = good.title;
 
   if (hasDifferentPrices(product)) {
-    title += ' (' + (0, _money.humanizedMoneyWithCurrency)(good.actual_price) + ')';
+    title += ' (' + (0, _money.humanizedMoneyWithCurrency)(good.actualPrice) + ')';
   }
 
-  if (good.is_run_out) {
+  if (good.isRunOut) {
     title += ' - нет в наличии';
   }
 
@@ -28740,19 +29601,31 @@ function goodOrderTitle(product, good) {
 }
 
 function goodActualPrice(_ref) {
-  var actual_price = _ref.actual_price;
+  var actualPrice = _ref.actualPrice;
 
-  if (actual_price) {
-    return (0, _money.humanizedMoneyWithCurrency)(actual_price);
+  if (actualPrice) {
+    return (0, _money.humanizedMoneyWithCurrency)(actualPrice);
   } else {
     return 'Цена неизвестна';
   }
 }
 
 function attributeValue(attribute) {
+<<<<<<< HEAD
   var products_url = attribute.products_url,
       title = attribute.title,
       value = attribute.value;
+=======
+<<<<<<< HEAD
+  var products_url = attribute.products_url;
+  var title = attribute.title;
+  var value = attribute.value;
+=======
+  var productsUrl = attribute.productsUrl,
+      title = attribute.title,
+      value = attribute.value;
+>>>>>>> fix fixtures/test/views
+>>>>>>> fix fixtures/test/views
 
 
   switch (attribute.type) {
@@ -28781,7 +29654,7 @@ function attributeValue(attribute) {
         ),
         _react2.default.createElement(
           'a',
-          { href: products_url },
+          { href: productsUrl },
           value
         )
       );
@@ -28792,8 +29665,8 @@ function attributeValue(attribute) {
 
 function hasDifferentPrices(product) {
   var diffCents = product.goods.reduce(function (prev, good) {
-    if (good.actual_price) {
-      var actualCents = good.actual_price.cents;
+    if (good.actualPrice) {
+      var actualCents = good.actualPrice.cents;
 
       if (prev.indexOf(actualCents) === -1) {
         return prev.concat([actualCents]);
@@ -28834,16 +29707,16 @@ function schemaOrgProductCategory(category) {
 }
 
 function schemaOrgCategoryName(category) {
-  if (!category || category.is_root) return;
+  if (!category || category.isRoot) return;
   return category.name;
 }
 
 function schemaOrgGoodAvailability(good) {
-  if (!good.is_ordering && !good.is_run_out) {
+  if (!good.isOrdering && !good.isRunOut) {
     return 'SoldOut';
-  } else if (good.is_run_out) {
+  } else if (good.isRunOut) {
     return 'OutOfStock';
-  } else if (good.is_preorder) {
+  } else if (good.isPreorder) {
     return 'PreOrder';
   } else {
     return 'InStock';
@@ -28889,7 +29762,7 @@ function productCategoryPath(_ref) {
   var categories = _ref.categories;
 
   var notRootCategories = categories.filter(function (el) {
-    return el.is_root === false;
+    return el.isRoot === false;
   });
   var category = notRootCategories[0];
 
@@ -28897,7 +29770,7 @@ function productCategoryPath(_ref) {
 
   var path = [];
 
-  if (category.parent && !category.parent.is_root) {
+  if (category.parent && !category.parent.isRoot) {
     path.push(categoryLink(category.parent));
     path.push(_react2.default.createElement(
       "span",
@@ -28912,11 +29785,11 @@ function productCategoryPath(_ref) {
 }
 
 function categoryLink(category) {
-  if (!category || category.is_root) return;
+  if (!category || category.isRoot) return;
 
   return _react2.default.createElement(
     "a",
-    { href: category.public_url, key: category.id },
+    { href: category.publicUrl, key: category.id },
     category.name
   );
 }
@@ -29827,30 +30700,30 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Схема которую возвращает бэкенд /v1/carts/show.json
- * 
+ *
  * Используется в компонентах: WishlistContainer, CartContainer
- * 
+ *
  * totalCount - кол-во позиций в корзине (WishlistContainer)
  * totalPrice - полная цена корзины без учета доставки (WishlistContainer)
- * default_url - урл для сабмита/очистки корзины (CartContainer)
+ * defaultUrl - урл для сабмита/очистки корзины (CartContainer)
  */
 
 exports.default = _react.PropTypes.shape({
-  total_count: _react.PropTypes.number,
-  total_price: _money2.default.isRequired,
+  totalCount: _react.PropTypes.number,
+  totalPrice: _money2.default.isRequired,
   items: _react.PropTypes.arrayOf(_react.PropTypes.shape({
     good: _good2.default.isRequired,
-    destroy_path: _react.PropTypes.string.isRequired,
+    destroyPath: _react.PropTypes.string.isRequired,
     count: _react.PropTypes.number,
     weight: _react.PropTypes.number
   })).isRequired,
-  package_item: _react.PropTypes.shape({
+  packageItem: _react.PropTypes.shape({
     good: _good2.default.isRequired,
-    destroy_url: _react.PropTypes.string.isRequired
+    destroyUrl: _react.PropTypes.string.isRequired
   }),
-  coupon_code: _react.PropTypes.string,
+  couponCode: _react.PropTypes.string,
   errors: _react.PropTypes.object.isRequired,
-  default_url: _react.PropTypes.string.isRequired
+  defaultUrl: _react.PropTypes.string.isRequired
 });
 module.exports = exports['default'];
 
@@ -30012,7 +30885,7 @@ var shape = _react.PropTypes.shape,
 exports.default = shape({
   body: string.isRequired,
   author: string,
-  created_at: string.isRequired
+  createdAt: string.isRequired
 });
 module.exports = exports['default'];
 
@@ -30079,21 +30952,22 @@ var _image2 = _interopRequireDefault(_image);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * add_to_cart_url - урл для добавления товара в корзину. используется в WishlistAddToCartButton
- * default_url - урл для перехода на страницу товара
- * custom_attributes - описание товара в виде {'имя характеристики': 'характеристика'}
+ * addToCartUrl - урл для добавления товара в корзину. используется в WishlistAddToCartButton
+ * defaultUrl - урл для перехода на страницу товара
+ * customAttributes - описание товара в виде {'имя характеристики': 'характеристика'}
  */
 
 exports.default = _react.PropTypes.shape({
-  custom_attributes: _react.PropTypes.object,
-  is_sale: _react.PropTypes.bool.isRequired,
+  globalId: _react.PropTypes.string,
+  customAttributes: _react.PropTypes.object,
+  isSale: _react.PropTypes.bool.isRequired,
   image: _image2.default,
   price: _money2.default,
-  actual_price: _money2.default,
-  add_to_cart_url: _react.PropTypes.string,
-  default_url: _react.PropTypes.string,
-  selling_by_weight: _react.PropTypes.bool,
-  weight_of_price: _react.PropTypes.number
+  actualPrice: _money2.default,
+  addToCartUrl: _react.PropTypes.string,
+  defaultUrl: _react.PropTypes.string,
+  sellingByWeight: _react.PropTypes.bool,
+  weightOfPrice: _react.PropTypes.number
 });
 module.exports = exports['default'];
 
@@ -30386,8 +31260,8 @@ var menuItem = _react.PropTypes.shape({
   type: _react.PropTypes.string.isRequired,
   title: _react.PropTypes.string,
   url: _react.PropTypes.string,
-  products_count: _react.PropTypes.number,
-  link_target: _react.PropTypes.string
+  productsCount: _react.PropTypes.number,
+  linkTarget: _react.PropTypes.string
 });
 
 function lazyMenuItem() {
@@ -30408,7 +31282,7 @@ var _react = require('react');
 
 exports.default = _react.PropTypes.shape({
   cents: _react.PropTypes.number,
-  currency_iso_code: _react.PropTypes.string
+  currencyIsoCode: _react.PropTypes.string
 });
 module.exports = exports['default'];
 
@@ -30446,42 +31320,42 @@ var shape = _react.PropTypes.shape,
     number = _react.PropTypes.number,
     object = _react.PropTypes.object;
 exports.default = shape({
-  external_id: number,
-  default_url: string.isRequired, // vendor_order_path(order.external_id)
-  free_delivery: bool,
-  free_delivery_threshold: _money2.default,
-  order_delivery: shape({
-    tracking_id: string,
-    tracking_url: string
+  externalId: number,
+  defaultUrl: string.isRequired, // vendor_order_path(order.external_id)
+  freeDelivery: bool,
+  freeDeliveryThreshold: _money2.default,
+  orderDelivery: shape({
+    trackingId: string,
+    trackingUrl: string
   }),
-  delivery_price: _money2.default,
-  delivery_type: shape({
+  deliveryPrice: _money2.default,
+  deliveryType: shape({
     title: string,
     selfdelivery: bool,
-    pickup_address: string
+    pickupAddress: string
   }),
-  must_be_paid_online: bool,
-  payment_url: string,
-  payment_type: shape({
+  mustBePaidOnline: bool,
+  paymentUrl: string,
+  paymentType: shape({
     title: string,
     type: string.isRequired
   }),
-  workflow_state: shape({
-    bg_style: object.isRequired,
+  workflowState: shape({
+    bgStyle: object.isRequired,
     title: string,
     color: string
   }),
-  admin_comments: arrayOf(_comment2.default),
+  adminComments: arrayOf(_comment2.default),
   items: arrayOf(_orderItem2.default).isRequired,
-  package_good: _good2.default,
-  package_price: _money2.default,
-  total_with_delivery_price: _money2.default.isRequired,
+  packageGood: _good2.default,
+  packagePrice: _money2.default,
+  totalWithDeliveryPrice: _money2.default.isRequired,
   phone: string,
   coupon: shape({
     discount: number,
     fixed: bool,
-    fixed_discount: _money2.default,
-    free_delivery: bool
+    fixedDiscount: _money2.default,
+    freeDelivery: bool
   })
 });
 module.exports = exports['default'];
@@ -30511,11 +31385,11 @@ var shape = _react.PropTypes.shape,
 exports.default = shape({
   count: number.isRequired,
   title: string.isRequired,
-  total_price: _money2.default.isRequired,
-  quantity_unit: shape({
+  totalPrice: _money2.default.isRequired,
+  quantityUnit: shape({
     short: string.isRequired
   }).isRequired,
-  image_url: string.isRequired,
+  imageUrl: string.isRequired,
   good: _good2.default.isRequired
 });
 module.exports = exports['default'];
@@ -30541,14 +31415,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Схему возвращает бэкенд /v1/packages.json
- * 
+ *
  * Используется в компоненте CartContainer
  */
 
 exports.default = _react.PropTypes.arrayOf(_react.PropTypes.shape({
   id: _react.PropTypes.number.isRequired,
-  global_id: _react.PropTypes.string.isRequired,
-  has_ordering_goods: _react.PropTypes.bool.isRequired,
+  globalId: _react.PropTypes.string.isRequired,
+  hasOrderingGoods: _react.PropTypes.bool.isRequired,
   title: _react.PropTypes.string.isRequired,
   description: _react.PropTypes.string.isRequired,
   price: _money2.default.isRequired,
@@ -30566,9 +31440,9 @@ Object.defineProperty(exports, "__esModule", {
 var _react = require('react');
 
 exports.default = _react.PropTypes.shape({
-  current_href: _react.PropTypes.string,
-  current_page: _react.PropTypes.number.isRequired,
-  total_pages: _react.PropTypes.number.isRequired
+  currentHref: _react.PropTypes.string,
+  currentPage: _react.PropTypes.number.isRequired,
+  totalPages: _react.PropTypes.number.isRequired
 });
 module.exports = exports['default'];
 
@@ -30613,18 +31487,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = _react.PropTypes.shape({
   id: _react.PropTypes.number.isRequired,
-  has_ordering_goods: _react.PropTypes.bool.isRequired,
-  index_image: _image2.default,
-  second_image: _image2.default,
-  is_label_new: _react.PropTypes.bool.isRequired,
-  is_run_out: _react.PropTypes.bool.isRequired,
-  is_sale: _react.PropTypes.bool.isRequired,
-  is_sold: _react.PropTypes.bool.isRequired,
-  public_url: _react.PropTypes.string.isRequired,
+  hasOrderingGoods: _react.PropTypes.bool.isRequired,
+  indexImage: _image2.default,
+  secondImage: _image2.default,
+  isLabelNew: _react.PropTypes.bool.isRequired,
+  isRunOut: _react.PropTypes.bool.isRequired,
+  isSale: _react.PropTypes.bool.isRequired,
+  isSold: _react.PropTypes.bool.isRequired,
+  publicUrl: _react.PropTypes.string.isRequired,
   title: _react.PropTypes.string.isRequired,
   prices: _react.PropTypes.shape({
-    min_price: _money2.default.isRequired,
-    max_price: _money2.default.isRequired
+    minPrice: _money2.default.isRequired,
+    maxPrice: _money2.default.isRequired
   }),
   goods: _react.PropTypes.arrayOf(_good2.default).isRequired
 });
@@ -30655,7 +31529,7 @@ var arrayOf = _react.PropTypes.arrayOf,
 exports.default = shape({
   items: arrayOf(_product2.default).isRequired,
   pagination: _pagination2.default.isRequired,
-  total_count: number
+  totalCount: number
 });
 module.exports = exports['default'];
 
@@ -30706,13 +31580,13 @@ var arrayOf = _react.PropTypes.arrayOf,
     string = _react.PropTypes.string;
 exports.default = shape({
   contacts: arrayOf(_vendorContact2.default),
-  custom_after_content_html: _react.PropTypes.string,
-  custom_append_html: _react.PropTypes.string,
+  customAfterContentHtml: _react.PropTypes.string,
+  customAppendHtml: _react.PropTypes.string,
   title: string,
-  search_products_path: string,
-  pre_products_text: string,
-  post_products_text: string,
-  slider_images: arrayOf(_slide2.default)
+  searchProductsPath: string,
+  preProductsText: string,
+  postProductsText: string,
+  sliderImages: arrayOf(_slide2.default)
 });
 module.exports = exports['default'];
 
@@ -30753,14 +31627,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * Схема используется в компоненте WishlistContainer
- * 
- * destroy_url: урл для удаления товара из "списка желаний"
+ *
+ * destroyUrl: урл для удаления товара из "списка желаний"
  */
 
 exports.default = _react.PropTypes.shape({
   good: _good2.default.isRequired,
   product: _product2.default.isRequired,
-  destroy_url: _react.PropTypes.string.isRequired
+  destroyUrl: _react.PropTypes.string.isRequired
 });
 module.exports = exports['default'];
 

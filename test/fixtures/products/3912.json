@@ -3,25 +3,25 @@
     "locale": "ru",
     "translations": {
       "vendor": {
-        "not_published": "Магазин временно не работает",
-        "made_in_kiiiosk": "Сделано на «Киоске»",
+        "notPublished": "Магазин временно не работает",
+        "madeInKiiiosk": "Сделано на «Киоске»",
         "badges": {
           "new": "Новинка",
-          "sale_percent": "SALE - %{percent}%",
-          "not_available": "Не продается",
+          "salePercent": "SALE - %{percent}%",
+          "notAvailable": "Не продается",
           "sale": "SALE",
           "sold": "Продано"
         },
         "search": {
-          "results_title": "Результаты поиска (%{count})",
-          "nothing_found": "К сожалению, ничего не найдено."
+          "resultsTitle": "Результаты поиска (%{count})",
+          "nothingFound": "К сожалению, ничего не найдено."
         },
         "errors": {
           "cart": {
             "empty": "В корзине нет товаров"
           },
           "coupon": {
-            "not_found": "Несуществующий промокод %{code}",
+            "notFound": "Несуществующий промокод %{code}",
             "expired": "Промокод просрочен %{code}"
           }
         },
@@ -33,53 +33,53 @@
           "confirm": "Точно очистить?"
         },
         "flashes": {
-          "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину"
+          "goodAddedToBasket": "Товар \"%{title}\" добавлен в корзину"
         },
         "mails": {
           "signature": "С уважением, интернет-магазин \"%{name}\""
         },
-        "auto_menu_items": {
+        "autoMenuItems": {
           "blog": "Блог"
         },
-        "top_banner": {
-          "default_content": "Мы открылись!"
+        "topBanner": {
+          "defaultContent": "Мы открылись!"
         },
         "order": {
           "fields": {
             "phone": "Телефон",
             "name": "Полное имя",
             "email": "Email",
-            "city_title": "Город доставки",
+            "cityTitle": "Город доставки",
             "address": "Адрес доставки",
             "comment": "Комментарий",
-            "coupon_code": "Промокод"
+            "couponCode": "Промокод"
           },
           "submit": "Оформить заказ",
-          "pickup_address": "Адрес самовывоза:",
+          "pickupAddress": "Адрес самовывоза:",
           "title": "Заказ №%{number}",
-          "payment_type": "Способ оплаты: %{title}",
-          "delivery_type": "Способ доставки: %{title}",
-          "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
-          "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
-          "go_back": "Вернуться назад",
+          "paymentType": "Способ оплаты: %{title}",
+          "deliveryType": "Способ доставки: %{title}",
+          "freeDeliveryTextHtml": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+          "checkoutFreeDeliveryTextHtml": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+          "goBack": "Вернуться назад",
           "next": "Продолжить",
-          "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
-          "check_state": "Проверить статус доставки",
-          "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+          "deliveryTrackingId": "Трекинг-номер доставки: %{number}",
+          "checkState": "Проверить статус доставки",
+          "publicOfferAcceptedHtml": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
           "created": {
             "title": "Спасибо за заказ",
-            "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+            "descHtml": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
           },
           "new": {
-            "delivery_title": "Выберите тип доставки.",
-            "payment_title": "Способы оплаты",
-            "contacts_title": "Введите данные",
+            "deliveryTitle": "Выберите тип доставки.",
+            "paymentTitle": "Способы оплаты",
+            "contactsTitle": "Введите данные",
             "sum": "на сумму"
           },
           "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
           "redirecting": "Переправляю на сайт оплаты",
-          "go_to_payment": "Перейти к оплате",
-          "continue_shopping": "Продолжить покупки"
+          "goToPayment": "Перейти к оплате",
+          "continueShopping": "Продолжить покупки"
         },
         "coupon": {
           "discount": "Скидка - %{discount}",
@@ -88,25 +88,25 @@
           "error": "Ошибка при проверке купона. Попробуйте еще раз"
         },
         "cart": {
-          "basket_button": "Корзина",
+          "basketButton": "Корзина",
           "amount": "Количество",
           "overall": "Итого:",
           "title": "Корзина",
           "clear": "Очистить корзину",
-          "not_available": "Больше не продается",
+          "notAvailable": "Больше не продается",
           "empty": "Пока тут ничего нет"
         },
         "wishlist": {
-          "add_item": "Добавить в избранное",
-          "wishlist_button": "Избранное",
-          "private_title": "Ваше избранное",
-          "foreign_title": "Чужое избранное",
+          "addItem": "Добавить в избранное",
+          "wishlistButton": "Избранное",
+          "privateTitle": "Ваше избранное",
+          "foreignTitle": "Чужое избранное",
           "empty": "Пока тут ничего нет"
         },
         "packaging": {
           "add": "Добавить",
-          "add_gift_package": "Добавить к заказу",
-          "no_package": "Не добавлять"
+          "addGiftPackage": "Добавить к заказу",
+          "noPackage": "Не добавлять"
         },
         "payment": {
           "w1": {
@@ -121,33 +121,33 @@
           }
         },
         "category": {
-          "continue_shopping": "Продолжить покупки",
+          "continueShopping": "Продолжить покупки",
           "empty": "Ой, а здесь ничего нет. Пока."
         },
-        "dictionary_entity": {
-          "continue_shopping": "Продолжить покупки",
+        "dictionaryEntity": {
+          "continueShopping": "Продолжить покупки",
           "empty": "Ой, а здесь ничего нет. Пока."
         },
-        "similar_product": {
+        "similarProduct": {
           "title": "С этим товаром покупают также"
         },
         "product": {
           "title": "Товар",
-          "blank_price": "Цена неизвестна",
-          "run_out": "Нет в наличии",
-          "not_available": "Не продается",
+          "blankPrice": "Цена неизвестна",
+          "runOut": "Нет в наличии",
+          "notAvailable": "Не продается",
           "available": "Можно купить",
-          "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
-          "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
-          "category_title": "Категория",
-          "show_other_products": "Посмотреть другие товары",
-          "show_all": "Показать все"
+          "soldOutMessageHtml": "&laquo;%{title}&raquo; сейчас не продается",
+          "nothingFoundByCriteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+          "categoryTitle": "Категория",
+          "showOtherProducts": "Посмотреть другие товары",
+          "showAll": "Показать все"
         },
         "properties": {
           "empty": "Нет характеристик для вывода"
         },
         "property": {
-          "unknown_type": "Неизвестный тип характеристики",
+          "unknownType": "Неизвестный тип характеристики",
           "defaults": {
             "size": "Размер",
             "color": "Цвет"
@@ -158,29 +158,29 @@
             "cart": "Корзина",
             "order": "Оформление заказа",
             "payment": "Оплата",
-            "payment_success": "Успешная оплата",
-            "payment_error": "Ошибка оплаты"
+            "paymentSuccess": "Успешная оплата",
+            "paymentError": "Ошибка оплаты"
           }
         },
         "filter": {
           "availability": "Доступность",
-          "price_range": "Ценовой диапазон",
-          "selected_options": {
+          "priceRange": "Ценовой диапазон",
+          "selectedOptions": {
             "availability": "Доступность",
-            "price_range": "Цена от %{from} до %{to} %{currency}"
+            "priceRange": "Цена от %{from} до %{to} %{currency}"
           },
-          "selected_availability": {
+          "selectedAvailability": {
             "all": "Все",
             "available": "В наличии",
-            "run_out": "Под заказ",
+            "runOut": "Под заказ",
             "sale": "Распродажа",
             "unknown": "unknown"
           }
         },
         "button": {
-          "to_cart": "В корзину",
-          "select_good": "Выберите характеристику",
-          "disable_with": {
+          "toCart": "В корзину",
+          "selectGood": "Выберите характеристику",
+          "disableWith": {
             "sending": "Отправляем...",
             "saving": "Сохраняем...",
             "waiting": "Подождите...",
@@ -192,31 +192,31 @@
   },
   "product": {
     "id": 3912,
-    "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTI",
+    "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTI",
     "title": "Миникольцо Цепочка золоченая с цирконом б",
     "article": "MR019-13",
-    "has_ordering_goods": true,
-    "is_sale": false,
-    "is_label_new": false,
-    "is_run_out": false,
-    "is_sold": false,
+    "hasOrderingGoods": true,
+    "isSale": false,
+    "isLabelNew": false,
+    "isRunOut": false,
+    "isSold": false,
     "description": "<p></p>",
-    "sale_percent": null,
-    "main_category": {
+    "salePercent": null,
+    "mainCategory": {
       "id": 628,
       "name": "Миникольцо",
-      "is_root": false,
-      "public_url": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
+      "isRoot": false,
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
       "parent": {
         "id": 636,
         "name": "Кольца",
-        "is_root": false,
-        "public_url": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
+        "isRoot": false,
+        "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
         "parent": {
           "id": 612,
           "name": "Корневая категория",
-          "is_root": true,
-          "public_url": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
+          "isRoot": true,
+          "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
           "parent": null
         }
       }
@@ -225,18 +225,18 @@
       {
         "id": 628,
         "name": "Миникольцо",
-        "is_root": false,
-        "public_url": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
+        "isRoot": false,
+        "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
         "parent": {
           "id": 636,
           "name": "Кольца",
-          "is_root": false,
-          "public_url": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
+          "isRoot": false,
+          "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
           "parent": {
             "id": 612,
             "name": "Корневая категория",
-            "is_root": true,
-            "public_url": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
+            "isRoot": true,
+            "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
             "parent": null
           }
         }
@@ -246,11 +246,11 @@
       {
         "title": "Размер: 13",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -262,51 +262,51 @@
         "quantity": 1,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       },
       {
         "title": "Размер: 14",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzNw",
-        "is_ordering": false,
-        "is_run_out": true,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzNw",
+        "isOrdering": false,
+        "isRunOut": true,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -318,51 +318,51 @@
         "quantity": 0,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       },
       {
         "title": "Размер: 15",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOA",
-        "is_ordering": false,
-        "is_run_out": true,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOA",
+        "isOrdering": false,
+        "isRunOut": true,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -374,51 +374,51 @@
         "quantity": 0,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       },
       {
         "title": "Размер: 16",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOQ",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOQ",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -430,51 +430,51 @@
         "quantity": 1,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       },
       {
         "title": "Размер: 17",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDI0MA",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDI0MA",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -486,41 +486,41 @@
         "quantity": 2,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       }
     ],
@@ -539,301 +539,301 @@
     "properties": [],
     "attributes": [
       {
-        "property_id": 89,
+        "propertyId": 89,
         "type": "AttributeDictionary",
         "title": "Цвет покрытия",
         "value": "золочение",
-        "products_path": "/entities/45-zolochenie"
+        "productsPath": "/entities/45-zolochenie"
       },
       {
-        "property_id": 91,
+        "propertyId": 91,
         "type": "AttributeDictionary",
         "title": "Цвет вставок",
         "value": "белый",
-        "products_path": "/entities/38-belyy"
+        "productsPath": "/entities/38-belyy"
       },
       {
-        "property_id": 93,
+        "propertyId": 93,
         "type": "AttributeDictionary",
         "title": "Металл, проба",
         "value": "Серебро 925",
-        "products_path": "/entities/37-serebro-925"
+        "productsPath": "/entities/37-serebro-925"
       },
       {
-        "property_id": 99,
+        "propertyId": 99,
         "type": "AttributeDictionary",
         "title": "Вставки",
         "value": "куб. циркон",
-        "products_path": "/entities/65-kub-tsirkon"
+        "productsPath": "/entities/65-kub-tsirkon"
       }
     ],
-    "custom_product_html": "",
-    "text_blocks": [],
-    "video_embed_html": null
+    "customProductHtml": "",
+    "textBlocks": [],
+    "videoEmbedHtml": null
   },
   "similarProducts": [
     {
       "id": 35770,
       "title": "Кольцо Шибари 5 шнуров роз. золочение",
-      "is_sale": false,
-      "has_ordering_goods": false,
-      "is_label_new": false,
-      "is_run_out": true,
-      "is_sold": true,
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": false,
+      "isLabelNew": false,
+      "isRunOut": true,
+      "isSold": true,
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "second_image": {
+      "secondImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "public_url": "http://wannabe.3001.vkontraste.ru/products/35770-koltso-shibari-5-shnurov-roz-zolochenie",
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/products/35770-koltso-shibari-5-shnurov-roz-zolochenie",
       "goods": [
         {
           "id": 35770,
           "type": "Product",
-          "is_sale": false,
+          "isSale": false,
           "price": null,
-          "actual_price": null
+          "actualPrice": null
         }
       ]
     },
     {
       "id": 19319,
       "title": "Миникольцо Marge без камней черненое",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "second_image": {
+      "secondImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "public_url": "http://wannabe.3001.vkontraste.ru/products/19319-minikoltso-marge-bez-kamney-chernenoe",
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/products/19319-minikoltso-marge-bez-kamney-chernenoe",
       "goods": [
         {
           "id": 14235,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 14236,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 14237,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 14238,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 14239,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 250000,
-            "to_f": 2500,
+            "toF": 2500,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         }
       ]
@@ -841,150 +841,150 @@
     {
       "id": 24198,
       "title": "Миникольцо Morganna с цирконами черненое",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "second_image": {
+      "secondImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "public_url": "http://wannabe.3001.vkontraste.ru/products/24198-minikoltso-morganna-s-tsirkonami-chernenoe",
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/products/24198-minikoltso-morganna-s-tsirkonami-chernenoe",
       "goods": [
         {
           "id": 27367,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 27368,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         },
         {
           "id": 27369,
           "type": "ProductItem",
-          "is_sale": false,
+          "isSale": false,
           "price": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           },
-          "actual_price": {
+          "actualPrice": {
             "cents": 430000,
-            "to_f": 4300,
+            "toF": 4300,
             "currency": {
-              "iso_code": "RUB",
-              "iso_numeric": "643",
+              "isoCode": "RUB",
+              "isoNumeric": "643",
               "name": "Russian Ruble",
               "symbol": "₽",
-              "html_name": "руб.",
-              "human_name": "Российские рубли",
-              "symbol_first": false,
-              "thousands_separator": " ",
-              "decimal_mark": ",",
-              "subunit_to_unit": 100,
-              "smallest_denomination": 1,
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
               "exponent": 2
             },
-            "currency_iso_code": "RUB"
+            "currencyIsoCode": "RUB"
           }
         }
       ]
@@ -992,29 +992,29 @@
     {
       "id": 35752,
       "title": "Кольцо Шибари простой узел чернение",
-      "is_sale": false,
-      "has_ordering_goods": false,
-      "is_label_new": false,
-      "is_run_out": true,
-      "is_sold": true,
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": false,
+      "isLabelNew": false,
+      "isRunOut": true,
+      "isSold": true,
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "second_image": {
+      "secondImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
         "width": 1500,
-        "height": 1500,
+        "height": 1500
       },
-      "public_url": "http://wannabe.3001.vkontraste.ru/products/35752-koltso-shibari-prostoy-uzel-chernenie",
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/products/35752-koltso-shibari-prostoy-uzel-chernenie",
       "goods": [
         {
           "id": 35752,
           "type": "Product",
-          "is_sale": false,
+          "isSale": false,
           "price": null,
-          "actual_price": null
+          "actualPrice": null
         }
       ]
     }

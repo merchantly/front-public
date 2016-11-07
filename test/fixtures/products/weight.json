@@ -1,254 +1,268 @@
 {
   "product": {
     "id": 48022,
-    "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
+    "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
     "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
     "article": null,
-    "has_ordering_goods": true,
-    "is_sale": false,
-    "is_label_new": false,
-    "is_run_out": false,
-    "is_sold": false,
-    "selling_by_weight": true,
-    "weight_of_price": "1.0",
+    "hasOrderingGoods": true,
+    "isSale": false,
+    "isLabelNew": false,
+    "isRunOut": false,
+    "isSold": false,
+    "sellingByWeight": true,
+    "weightOfPrice": "1.0",
     "description": "<p>Грудки нашей фермерской индейки – диетический продукт. Идеально подходят для жарки, запекания и как ингредиент для салатов и других сложных блюд.</p><p>Индейка выращена на вольном выпасе в нашем собственном хозяйстве «Честная ферма» в экологически чистом Спасском районе Рязанской области в деревне Выжелес.</p><p>Для прокорма птицы использовались только натуральные корма – собственная травка, собственное сено, зерно, и никакой химии! Наши птицы получают хороший уход, они здоровы, поэтому нам не нужно использовать антибиотики, как это делают на крупных промышленных птицефабриках.</p><p>В течении суток после забоя индейка попадает на склад в Москву в охлажденном виде, где в тот же день происходит разделка тушек и отправка продукта по нашим клиентам. Упаковка - компактный пластиковый контейнер, который очень удобен для хранения и домашней заморозки.</p>",
-    "sale_percent": 16,
-    "main_category": {
+    "salePercent": 16,
+    "mainCategory": {
       "id": 6087,
       "name": "Индейка",
-      "is_root": false,
-      "public_url": "http://chestnayaferma.ru/categories/indeyka",
+      "isRoot": false,
+      "publicUrl": "http://chestnayaferma.ru/categories/indeyka",
       "parent": {
         "id": 5709,
         "name": "ПТИЦА",
-        "is_root": false,
-        "public_url": "http://chestnayaferma.ru/categories/5709-ptitsa",
+        "isRoot": false,
+        "publicUrl": "http://chestnayaferma.ru/categories/5709-ptitsa",
         "parent": {
           "id": 5707,
           "name": "Корневая категория",
-          "is_root": true,
-          "public_url": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
+          "isRoot": true,
+          "publicUrl": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
           "parent": null
         }
       }
     },
-    "categories": [{
+    "categories": [
+      {
         "id": 5709,
         "name": "ПТИЦА",
-        "is_root": false,
-        "public_url": "http://chestnayaferma.ru/categories/5709-ptitsa",
+        "isRoot": false,
+        "publicUrl": "http://chestnayaferma.ru/categories/5709-ptitsa",
         "parent": {
           "id": 5707,
           "name": "Корневая категория",
-          "is_root": true,
-          "public_url": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
+          "isRoot": true,
+          "publicUrl": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
           "parent": null
         }
       },
       {
         "id": 6087,
         "name": "Индейка",
-        "is_root": false,
-        "public_url": "http://chestnayaferma.ru/categories/indeyka",
+        "isRoot": false,
+        "publicUrl": "http://chestnayaferma.ru/categories/indeyka",
         "parent": {
           "id": 5709,
           "name": "ПТИЦА",
-          "is_root": false,
-          "public_url": "http://chestnayaferma.ru/categories/5709-ptitsa",
+          "isRoot": false,
+          "publicUrl": "http://chestnayaferma.ru/categories/5709-ptitsa",
           "parent": {
             "id": 5707,
             "name": "Корневая категория",
-            "is_root": true,
-            "public_url": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
+            "isRoot": true,
+            "publicUrl": "http://chestnayaferma.ru/categories/5707-kornevaya-kategoriya",
             "parent": null
           }
         }
       }
     ],
-    "goods": [{
-      "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
-      "article": null,
-      "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
-      "is_ordering": true,
-      "is_run_out": false,
-      "is_sale": false,
-      "is_preorder": false,
-      "image": {
+    "goods": [
+      {
+        "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
+        "article": null,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
+        "image": {
+          "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
+          "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/57113/ae318ffe-6dde-4499-ab50-a54288fef2a4.jpg",
+          "uid": "afa0c4bee19e8abc48910e7a978fe4dc0e40393e77d530f9c1b1780bb998b071"
+        },
+        "attributes": {},
+        "quantity": null,
+        "price": {
+          "cents": 69000,
+          "currencyIsoCode": "RUB"
+        },
+        "actualPrice": {
+          "cents": 69000,
+          "currencyIsoCode": "RUB"
+        }
+      }
+    ],
+    "images": [
+      {
         "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
         "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/57113/ae318ffe-6dde-4499-ab50-a54288fef2a4.jpg",
         "uid": "afa0c4bee19e8abc48910e7a978fe4dc0e40393e77d530f9c1b1780bb998b071"
-      },
-      "attributes": {},
-      "quantity": null,
-      "price": {
-        "cents": 69000,
-        "currency_iso_code": "RUB"
-      },
-      "actual_price": {
-        "cents": 69000,
-        "currency_iso_code": "RUB"
       }
-    }],
-    "images": [{
-      "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
-      "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/57113/ae318ffe-6dde-4499-ab50-a54288fef2a4.jpg",
-      "uid": "afa0c4bee19e8abc48910e7a978fe4dc0e40393e77d530f9c1b1780bb998b071"
-    }],
+    ],
     "properties": [],
     "attributes": [],
-    "custom_product_html": null,
-    "text_blocks": [],
-    "video_embed_html": null
+    "customProductHtml": null,
+    "textBlocks": [],
+    "videoEmbedHtml": null
   },
-  "similarProducts": [{
+  "similarProducts": [
+    {
       "id": 48690,
       "title": "Салат (100 г, Азербайджан)",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "selling_by_weight": true,
-      "weight_of_price": "0.1",
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "sellingByWeight": true,
+      "weightOfPrice": "0.1",
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/54963/6547e4ed-6b33-4a25-9dd2-7a51c5f58932.jpg",
         "width": 5184,
         "height": 3456
       },
-      "second_image": null,
-      "public_url": "http://chestnayaferma.ru/products/48690-salat-100-g-azerbaydzhan",
-      "short_details": null,
-      "goods": [{
-        "id": 48690,
-        "type": "Product",
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4Njkw",
-        "is_sale": false,
-        "price": {
-          "cents": 7000,
-          "currency_iso_code": "RUB"
-        },
-        "actual_price": {
-          "cents": 7000,
-          "currency_iso_code": "RUB"
+      "secondImage": null,
+      "publicUrl": "http://chestnayaferma.ru/products/48690-salat-100-g-azerbaydzhan",
+      "shortDetails": null,
+      "goods": [
+        {
+          "id": 48690,
+          "type": "Product",
+          "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4Njkw",
+          "isSale": false,
+          "price": {
+            "cents": 7000,
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "cents": 7000,
+            "currencyIsoCode": "RUB"
+          }
         }
-      }]
+      ]
     },
     {
       "id": 48773,
       "title": "Картофель розовый (0,5 кг, Россия)",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "selling_by_weight": true,
-      "weight_of_price": "0.5",
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "sellingByWeight": true,
+      "weightOfPrice": "0.5",
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/57685/9d5288dd-0393-421f-a30d-cf42d61c81cc.jpg",
         "width": 1200,
         "height": 797
       },
-      "second_image": null,
-      "public_url": "http://chestnayaferma.ru/products/48773-kartofel-rozovyy-0-5-kg-rossiya",
-      "short_details": null,
-      "goods": [{
-        "id": 48773,
-        "type": "Product",
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4Nzcz",
-        "is_sale": false,
-        "price": {
-          "cents": 3000,
-          "currency_iso_code": "RUB"
-        },
-        "actual_price": {
-          "cents": 3000,
-          "currency_iso_code": "RUB"
+      "secondImage": null,
+      "publicUrl": "http://chestnayaferma.ru/products/48773-kartofel-rozovyy-0-5-kg-rossiya",
+      "shortDetails": null,
+      "goods": [
+        {
+          "id": 48773,
+          "type": "Product",
+          "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4Nzcz",
+          "isSale": false,
+          "price": {
+            "cents": 3000,
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "cents": 3000,
+            "currencyIsoCode": "RUB"
+          }
         }
-      }]
+      ]
     },
     {
       "id": 51852,
       "title": "Огурцы (1 кг, Луховицы)",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "selling_by_weight": true,
-      "weight_of_price": "1.0",
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "sellingByWeight": true,
+      "weightOfPrice": "1.0",
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/61766/fb0afb21-af86-45e5-bee7-94772d373094.jpg",
         "width": 2500,
         "height": 1661
       },
-      "second_image": null,
-      "public_url": "http://chestnayaferma.ru/products/51852-ogurtsy-1-kg-luhovitsy",
-      "short_details": null,
-      "goods": [{
-        "id": 51852,
-        "type": "Product",
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzUxODUy",
-        "is_sale": false,
-        "price": {
-          "cents": 20000,
-          "currency_iso_code": "RUB"
-        },
-        "actual_price": {
-          "cents": 20000,
-          "currency_iso_code": "RUB"
+      "secondImage": null,
+      "publicUrl": "http://chestnayaferma.ru/products/51852-ogurtsy-1-kg-luhovitsy",
+      "shortDetails": null,
+      "goods": [
+        {
+          "id": 51852,
+          "type": "Product",
+          "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzUxODUy",
+          "isSale": false,
+          "price": {
+            "cents": 20000,
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "cents": 20000,
+            "currencyIsoCode": "RUB"
+          }
         }
-      }]
+      ]
     },
     {
       "id": 52706,
       "title": "Помидоры розовые (1 кг, Дагестан)",
-      "is_sale": false,
-      "has_ordering_goods": true,
-      "is_label_new": false,
-      "is_run_out": false,
-      "is_sold": false,
-      "selling_by_weight": true,
-      "weight_of_price": "1.0",
-      "index_image": {
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "sellingByWeight": true,
+      "weightOfPrice": "1.0",
+      "indexImage": {
         "url": "http://assets.kiiiosk.ru/uploads/shop/1233/uploads/product_image/image/63436/38604e6b-81e3-4b12-bef0-959dadd82ce1.jpg",
         "width": 600,
         "height": 479
       },
-      "second_image": null,
-      "public_url": "http://chestnayaferma.ru/products/52706-pomidory-rozovye-1-kg-dagestan",
-      "short_details": null,
-      "goods": [{
-        "id": 52706,
-        "type": "Product",
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzUyNzA2",
-        "is_sale": false,
-        "price": {
-          "cents": 40000,
-          "currency_iso_code": "RUB"
-        },
-        "actual_price": {
-          "cents": 40000,
-          "currency_iso_code": "RUB"
+      "secondImage": null,
+      "publicUrl": "http://chestnayaferma.ru/products/52706-pomidory-rozovye-1-kg-dagestan",
+      "shortDetails": null,
+      "goods": [
+        {
+          "id": 52706,
+          "type": "Product",
+          "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzUyNzA2",
+          "isSale": false,
+          "price": {
+            "cents": 40000,
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "cents": 40000,
+            "currencyIsoCode": "RUB"
+          }
         }
-      }]
+      ]
     }
   ],
   "i18n": {
     "locale": "ru",
     "translations": {
       "vendor": {
-        "not_published": "Магазин временно не работает",
-        "made_in_kiiiosk": "Сделано на «Киоске»",
-        "tasty_product_button_text": "Купить",
+        "notPublished": "Магазин временно не работает",
+        "madeInKiiiosk": "Сделано на «Киоске»",
+        "tastyProductButtonText": "Купить",
         "entities": {
           "product": "%{count} товар",
-          "product_2": "%{count} товара",
-          "product_5": "%{count} товаров"
+          "product2": "%{count} товара",
+          "product5": "%{count} товаров"
         },
         "badges": {
           "new": "Новинка",
-          "sale_percent": "SALE - %{percent}%",
-          "not_available": "Не продается",
+          "salePercent": "SALE - %{percent}%",
+          "notAvailable": "Не продается",
           "sale": "SALE",
           "sold": "Продано"
         },
@@ -258,12 +272,12 @@
           "prev": "Назад"
         },
         "search": {
-          "results_title": "Результаты поиска (%{count})",
-          "nothing_found": "К сожалению, ничего не найдено."
+          "resultsTitle": "Результаты поиска (%{count})",
+          "nothingFound": "К сожалению, ничего не найдено."
         },
-        "seconds_count": "%{count} секунду",
-        "seconds_count_2": "%{count} секунды",
-        "seconds_count_5": "%{count} секунд",
+        "secondsCount": "%{count} секунду",
+        "secondsCount2": "%{count} секунды",
+        "secondsCount5": "%{count} секунд",
         "locales": {
           "ru": "Русский",
           "en": "English"
@@ -271,8 +285,8 @@
         "activemodel": {
           "errors": {
             "models": {
-              "vendor_order_form": {
-                "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+              "vendorOrderForm": {
+                "invalidPhone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
                 "attributes": {
                   "address": {
                     "blank": "не может быть пустым"
@@ -280,7 +294,7 @@
                   "email": {
                     "email": "не является email адресом"
                   },
-                  "city_title": {
+                  "cityTitle": {
                     "blank": "не может быть пустым"
                   },
                   "phone": {
@@ -289,7 +303,7 @@
                   "name": {
                     "blank": "не может быть пустым"
                   },
-                  "public_offer_accepted": {
+                  "publicOfferAccepted": {
                     "blank": "Необходимо принять условия публичной оферты"
                   }
                 }
@@ -302,14 +316,14 @@
             "empty": "В корзине нет товаров"
           },
           "coupon": {
-            "not_found": "Несуществующий промокод %{code}",
+            "notFound": "Несуществующий промокод %{code}",
             "expired": "Промокод просрочен %{code}"
           },
           "order": {
-            "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
-            "has_unorderable_goods": "В заказе лежат недоступные товары",
-            "no_items": "В заказе нет товаров",
-            "unavailable_currency": "Невозможно сделать заказ в выбранной валюте"
+            "invalidForm": "Заказ еще не принят, исправьте ошибки в форме",
+            "hasUnorderableGoods": "В заказе лежат недоступные товары",
+            "noItems": "В заказе нет товаров",
+            "unavailableCurrency": "Невозможно сделать заказ в выбранной валюте"
           }
         },
         "placeholders": {
@@ -320,29 +334,29 @@
           "confirm": "Точно очистить?"
         },
         "flashes": {
-          "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину"
+          "goodAddedToBasket": "Товар \"%{title}\" добавлен в корзину"
         },
         "mails": {
           "signature": "С уважением, интернет-магазин \"%{name}\""
         },
-        "auto_menu_items": {
+        "autoMenuItems": {
           "blog": "Блог"
         },
-        "top_banner": {
-          "default_content": "Мы открылись!"
+        "topBanner": {
+          "defaultContent": "Мы открылись!"
         },
         "order": {
           "fields": {
             "phone": "Телефон",
             "name": "Полное имя",
             "email": "Email",
-            "city_title": "Город доставки",
+            "cityTitle": "Город доставки",
             "address": "Адрес доставки",
             "comment": "Комментарий",
-            "coupon_code": "Промокод"
+            "couponCode": "Промокод"
           },
           "placeholders": {
-            "city_title": "Москва",
+            "cityTitle": "Москва",
             "phone": "Например, +7 913 123 32 10",
             "name": "Ф.И.О.",
             "address": "Например, Академика Вавилова 12-10",
@@ -350,74 +364,74 @@
             "email": "Email"
           },
           "submit": "Оформить заказ",
-          "pickup_address": "Адрес самовывоза:",
+          "pickupAddress": "Адрес самовывоза:",
           "title": "Заказ №%{number}",
-          "payment_type": "Способ оплаты: %{title}",
-          "delivery_type": "Способ доставки: %{title}",
-          "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
-          "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
-          "go_back": "Вернуться назад",
+          "paymentType": "Способ оплаты: %{title}",
+          "deliveryType": "Способ доставки: %{title}",
+          "freeDeliveryTextHtml": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+          "checkoutFreeDeliveryTextHtml": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+          "goBack": "Вернуться назад",
           "next": "Продолжить",
-          "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
-          "check_state": "Проверить статус доставки",
-          "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+          "deliveryTrackingId": "Трекинг-номер доставки: %{number}",
+          "checkState": "Проверить статус доставки",
+          "publicOfferAcceptedHtml": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
           "created": {
             "title": "Спасибо за заказ",
-            "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+            "descHtml": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
           },
           "new": {
-            "delivery_title": "Выберите тип доставки.",
-            "payment_title": "Способы оплаты",
-            "contacts_title": "Введите данные",
+            "deliveryTitle": "Выберите тип доставки.",
+            "paymentTitle": "Способы оплаты",
+            "contactsTitle": "Введите данные",
             "sum": "на сумму"
           },
           "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
           "redirecting": "Переправляю на сайт оплаты",
-          "go_to_payment": "Перейти к оплате",
-          "continue_shopping": "Продолжить покупки",
+          "goToPayment": "Перейти к оплате",
+          "continueShopping": "Продолжить покупки",
           "contents": "Состав заказа:",
-          "delivery_price": "Стоимость доставки",
+          "deliveryPrice": "Стоимость доставки",
           "pay": "Оплатить"
         },
         "blog": {
-          "read_more": "Читать далее.."
+          "readMore": "Читать далее.."
         },
         "notice": {
-          "catalog_filter": {
-            "selected_products": "Выбрано вариантов",
-            "show_products": "Показать"
+          "catalogFilter": {
+            "selectedProducts": "Выбрано вариантов",
+            "showProducts": "Показать"
           }
         },
         "coupon": {
           "discount": "Скидка - %{discount}",
-          "discount_products": "на товары: %{products}",
-          "discount_categories": "на категории: %{categories}",
+          "discountProducts": "на товары: %{products}",
+          "discountCategories": "на категории: %{categories}",
           "invalid": "Купон \"%{value}\" НЕ действующий",
           "checking": "Проверяю купон..",
           "error": "Ошибка при проверке купона. Попробуйте еще раз"
         },
         "cart": {
-          "basket_button": "Корзина %{total_price}",
+          "basketButton": "Корзина %{total_price}",
           "amount": "Количество",
           "weight": "Вес",
           "overall": "Итого:",
           "title": "Корзина",
           "clear": "Очистить корзину",
-          "not_available": "Больше не продается",
+          "notAvailable": "Больше не продается",
           "empty": "Пока тут ничего нет"
         },
         "wishlist": {
-          "add_item": "Добавить в список желаний",
-          "wishlist_button": "Список желаний",
-          "private_title": "Ваш список желаний",
-          "foreign_title": "Чей-то список желаний",
+          "addItem": "Добавить в список желаний",
+          "wishlistButton": "Список желаний",
+          "privateTitle": "Ваш список желаний",
+          "foreignTitle": "Чей-то список желаний",
           "empty": "Пока тут ничего нет",
-          "no_price": "Не продается"
+          "noPrice": "Не продается"
         },
         "packaging": {
           "add": "Добавить",
-          "add_gift_package": "Добавить к заказу",
-          "no_package": "Не добавлять"
+          "addGiftPackage": "Добавить к заказу",
+          "noPackage": "Не добавлять"
         },
         "payment": {
           "w1": {
@@ -432,27 +446,27 @@
           }
         },
         "category": {
-          "continue_shopping": "Продолжить покупки",
+          "continueShopping": "Продолжить покупки",
           "empty": "Ой, а здесь ничего нет. Пока."
         },
-        "dictionary_entity": {
-          "continue_shopping": "Продолжить покупки",
+        "dictionaryEntity": {
+          "continueShopping": "Продолжить покупки",
           "empty": "Ой, а здесь ничего нет. Пока."
         },
-        "similar_product": {
+        "similarProduct": {
           "title": "С этим товаром покупают также"
         },
         "product": {
           "title": "Товар",
-          "blank_price": "Цена неизвестна",
-          "run_out": "Нет в наличии",
-          "not_available": "Не продается",
+          "blankPrice": "Цена неизвестна",
+          "runOut": "Нет в наличии",
+          "notAvailable": "Не продается",
           "available": "Можно купить",
-          "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
-          "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
-          "category_title": "Категория",
-          "show_other_products": "Посмотреть другие товары",
-          "show_all": "Показать все",
+          "soldOutMessageHtml": "&laquo;%{title}&raquo; сейчас не продается",
+          "nothingFoundByCriteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+          "categoryTitle": "Категория",
+          "showOtherProducts": "Посмотреть другие товары",
+          "showAll": "Показать все",
           "weight": "Вес",
           "kg": "кг."
         },
@@ -460,7 +474,7 @@
           "empty": "Нет характеристик для вывода"
         },
         "property": {
-          "unknown_type": "Неизвестный тип характеристики",
+          "unknownType": "Неизвестный тип характеристики",
           "defaults": {
             "size": "Размер",
             "color": "Цвет"
@@ -471,36 +485,36 @@
             "cart": "Корзина",
             "order": "Оформление заказа",
             "payment": "Оплата",
-            "payment_success": "Успешная оплата",
-            "payment_error": "Ошибка оплаты"
+            "paymentSuccess": "Успешная оплата",
+            "paymentError": "Ошибка оплаты"
           }
         },
         "filter": {
           "availability": "Доступность",
-          "price_range": "Ценовой диапазон",
-          "expand_button": {
+          "priceRange": "Ценовой диапазон",
+          "expandButton": {
             "expand": "Развернуть список",
             "turn": "Свернуть список"
           },
-          "selected_options": {
+          "selectedOptions": {
             "availability": "Доступность",
-            "price_range": "Цена от %{from} до %{to} %{currency}"
+            "priceRange": "Цена от %{from} до %{to} %{currency}"
           },
-          "selected_availability": {
+          "selectedAvailability": {
             "all": "Все",
             "available": "В наличии",
-            "run_out": "Под заказ",
+            "runOut": "Под заказ",
             "sale": "Распродажа",
             "unknown": "unknown"
           }
         },
         "button": {
-          "to_cart": "В корзину",
-          "select_good": "Выберите характеристику",
-          "go_wishlist": "Перейти в \"Список желаний\"",
-          "to_wishlist": "Добавить в \"Список желаний\"",
+          "toCart": "В корзину",
+          "selectGood": "Выберите характеристику",
+          "goWishlist": "Перейти в \"Список желаний\"",
+          "toWishlist": "Добавить в \"Список желаний\"",
           "already": "Уже в корзине",
-          "disable_with": {
+          "disableWith": {
             "sending": "Отправляем...",
             "saving": "Сохраняем...",
             "waiting": "Подождите...",
@@ -509,25 +523,25 @@
         },
         "products": {
           "others": "Остальные",
-          "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+          "nothingFoundByCriteria": "По данным критериям ничего не найдено"
         },
         "client": {
           "auth": "Личный кабинет",
-          "no_account": "Нет аккаунта?",
-          "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
-          "continue_logged": "Продолжить под этим именем..",
-          "create_account": "Создать",
+          "noAccount": "Нет аккаунта?",
+          "loggedInWith": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+          "continueLogged": "Продолжить под этим именем..",
+          "createAccount": "Создать",
           "logout": "Выйти",
           "cabinet": {
             "title": "Личный кабинет",
             "button": "Кабинет",
             "create": "Создаем личный кабинет",
-            "send_pin_code": "Выслать пин-код",
-            "disable_with": "Высылаем..."
+            "sendPinCode": "Выслать пин-код",
+            "disableWith": "Высылаем..."
           }
         },
         "money": {
-          "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+          "unknownIsoCode": "Неизвестный тип валюты %{isoCode}"
         }
       }
     }

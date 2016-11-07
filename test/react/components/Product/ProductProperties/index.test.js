@@ -19,11 +19,11 @@ describe('[Component] ProductProperties', () => {
     const nextGood = {
       title: 'Размер: 13',
       article: null,
-      global_id: 'Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3',
-      is_ordering: true,
-      is_run_out: false,
-      is_sale: false,
-      is_preorder: false,
+      globalId: 'Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3',
+      isOrdering: true,
+      isRunOut: false,
+      isSale: false,
+      isPreorder: false,
       image: {
         title: 'Миникольцо Цепочка золоченая с цирконом б',
         url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
@@ -35,11 +35,11 @@ describe('[Component] ProductProperties', () => {
       quantity: 1,
       price: {
         cents: 120000,
-        currency_iso_code: 'RUB',
+        currencyIsoCode: 'RUB',
       },
-      actual_price: {
+      actualPrice: {
         cents: 120000,
-        currency_iso_code: 'RUB',
+        currencyIsoCode: 'RUB',
       },
     };
     const props = { t };

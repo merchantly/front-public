@@ -5,413 +5,438 @@
         {
           "id": 20943,
           "title": "Кольцо ANNA.M.OBJECTS",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
             "width": 750,
             "height": 936
           },
-          "public_url": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
-          "short_details": "Серебро",
+          "publicUrl": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
+          "shortDetails": "Серебро",
           "goods": [
             {
               "id": 45116,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42791,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42792,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15370,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15378,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15366,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15367,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15369,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15371,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15372,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15373,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15374,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15375,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15376,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15377,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15379,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15368,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 22172,
           "title": "Кольцо NATALIA BRYANTSEVA",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8053/6e993711-5a58-482b-b411-84648172aa32.jpg",
             "width": 1500,
             "height": 1501
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78537/e4fc4d8a-3aaf-467b-87f2-e40263949dcd.jpg",
             "width": 2000,
             "height": 2000
           },
-          "public_url": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
-          "short_details": "Серебро, эмаль",
+          "publicUrl": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
+          "shortDetails": "Серебро, эмаль",
           "goods": [
             {
               "id": 27025,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27689,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27690,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27691,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28474,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28503,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 31854,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42665,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 33644,
           "title": "Браслет HIMÈRE",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/29886/f6c04ba9-cd53-432f-a187-87529e2e7204.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
             "width": 640,
             "height": 640
           },
-          "public_url": "http://saharokstore.ru/products/33644-braslet-him-re",
-          "short_details": "Шелковая нить, Серебро, Серебро",
+          "publicUrl": "http://saharokstore.ru/products/33644-braslet-him-re",
+          "shortDetails": "Шелковая нить, Серебро, Серебро",
           "goods": [
             {
               "id": 29992,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
+              "isSale": false,
               "price": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
@@ -419,418 +444,444 @@
       ],
       "title": "category 1 title",
       "vendorCategoryPath": "/vendor1"
-    }, {
+    },
+    {
       "products": [
         {
           "id": 20943,
           "title": "Кольцо ANNA.M.OBJECTS",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
             "width": 750,
             "height": 936
           },
-          "public_url": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
-          "short_details": "Серебро",
+          "publicUrl": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
+          "shortDetails": "Серебро",
           "goods": [
             {
               "id": 45116,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42791,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42792,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15370,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15378,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15366,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15367,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15369,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15371,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15372,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15373,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15374,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15375,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15376,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15377,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15379,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15368,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 22172,
           "title": "Кольцо NATALIA BRYANTSEVA",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8053/6e993711-5a58-482b-b411-84648172aa32.jpg",
             "width": 1500,
             "height": 1501
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78537/e4fc4d8a-3aaf-467b-87f2-e40263949dcd.jpg",
             "width": 2000,
             "height": 2000
           },
-          "public_url": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
-          "short_details": "Серебро, эмаль",
+          "publicUrl": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
+          "shortDetails": "Серебро, эмаль",
           "goods": [
             {
               "id": 27025,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27689,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27690,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27691,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28474,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28503,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 31854,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42665,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 33644,
           "title": "Браслет HIMÈRE",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/29886/f6c04ba9-cd53-432f-a187-87529e2e7204.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
             "width": 640,
             "height": 640
           },
-          "public_url": "http://saharokstore.ru/products/33644-braslet-him-re",
-          "short_details": "Шелковая нить, Серебро, Серебро",
+          "publicUrl": "http://saharokstore.ru/products/33644-braslet-him-re",
+          "shortDetails": "Шелковая нить, Серебро, Серебро",
           "goods": [
             {
               "id": 29992,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
+              "isSale": false,
               "price": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
@@ -838,418 +889,444 @@
       ],
       "title": "category 2 title",
       "vendorCategoryPath": "/vendor2"
-    }, {
+    },
+    {
       "products": [
         {
           "id": 20943,
           "title": "Кольцо ANNA.M.OBJECTS",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
             "width": 750,
             "height": 936
           },
-          "public_url": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
-          "short_details": "Серебро",
+          "publicUrl": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
+          "shortDetails": "Серебро",
           "goods": [
             {
               "id": 45116,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42791,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42792,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15370,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15378,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15366,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15367,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15369,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15371,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15372,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15373,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15374,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15375,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15376,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15377,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15379,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 15368,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
+              "isSale": false,
               "price": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 100000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 22172,
           "title": "Кольцо NATALIA BRYANTSEVA",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8053/6e993711-5a58-482b-b411-84648172aa32.jpg",
             "width": 1500,
             "height": 1501
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78537/e4fc4d8a-3aaf-467b-87f2-e40263949dcd.jpg",
             "width": 2000,
             "height": 2000
           },
-          "public_url": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
-          "short_details": "Серебро, эмаль",
+          "publicUrl": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
+          "shortDetails": "Серебро, эмаль",
           "goods": [
             {
               "id": 27025,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27689,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27690,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 27691,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28474,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 28503,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 31854,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
-            }, {
+            },
+            {
               "id": 42665,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
+              "isSale": false,
               "price": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 450000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
-        }, {
+        },
+        {
           "id": 33644,
           "title": "Браслет HIMÈRE",
-          "is_sale": false,
-          "has_ordering_goods": true,
-          "is_label_new": false,
-          "is_run_out": false,
-          "is_sold": false,
-          "selling_by_weight": false,
-          "weight_of_price": null,
-          "index_image": {
+          "isSale": false,
+          "hasOrderingGoods": true,
+          "isLabelNew": false,
+          "isRunOut": false,
+          "isSold": false,
+          "sellingByWeight": false,
+          "weightOfPrice": null,
+          "indexImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/29886/f6c04ba9-cd53-432f-a187-87529e2e7204.jpg",
             "width": 1500,
             "height": 1500
           },
-          "second_image": {
+          "secondImage": {
             "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
             "width": 640,
             "height": 640
           },
-          "public_url": "http://saharokstore.ru/products/33644-braslet-him-re",
-          "short_details": "Шелковая нить, Серебро, Серебро",
+          "publicUrl": "http://saharokstore.ru/products/33644-braslet-him-re",
+          "shortDetails": "Шелковая нить, Серебро, Серебро",
           "goods": [
             {
               "id": 29992,
               "type": "ProductItem",
-              "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
-              "is_sale": false,
+              "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
+              "isSale": false,
               "price": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               },
-              "actual_price": {
+              "actualPrice": {
                 "cents": 200000,
-                "currency_iso_code": "RUB"
+                "currencyIsoCode": "RUB"
               }
             }
           ]
@@ -1261,9 +1338,9 @@
   ],
   "showWelcomeSlider": true,
   "vendor": {
-    "pre_products_text": "<p><em>Pre</em> products text</p>",
-    "post_products_text": "<p><em>Post</em> products text</p>",
-    "slider_images": [
+    "preProductsText": "<p><em>Pre</em> products text</p>",
+    "postProductsText": "<p><em>Post</em> products text</p>",
+    "sliderImages": [
       {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1666/ee8dac29-6bc0-49a8-8cff-93851718ed12.jpg",
@@ -1271,14 +1348,16 @@
           "width": 1000
         },
         "url": "http://wanna-be.ru/categories/8538-kastomnye-kollektsii-masti"
-      }, {
+      },
+      {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1296/f1333e5a-99cc-4f84-b168-bc2e2739cac2.jpg",
           "height": 800,
           "width": 2000
         },
         "url": "http://wanna-be.ru/categories/7499-krasota-v-prostote"
-      }, {
+      },
+      {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/8/e442e950-49b4-40a5-9cd6-4711fcb72b2d.jpg",
           "height": 600,

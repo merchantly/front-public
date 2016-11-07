@@ -12,7 +12,8 @@
         "valueFrom": null,
         "valueTo": null,
         "step": 500
-      }, {
+      },
+      {
         "title": "Вставки",
         "type": "checkbox",
         "paramName": "attr_99",
@@ -21,13 +22,15 @@
             "name": "куб. циркон",
             "paramValue": "65",
             "checked": false
-          }, {
+          },
+          {
             "name": "эмаль",
             "paramValue": "14144",
             "checked": false
           }
         ]
-      }, {
+      },
+      {
         "title": "Цвет нити",
         "type": "checkbox",
         "paramName": "attr_92",
@@ -36,25 +39,30 @@
             "name": "серый",
             "paramValue": "26",
             "checked": false
-          }, {
+          },
+          {
             "name": "синий",
             "paramValue": "25",
             "checked": false
-          }, {
+          },
+          {
             "name": "зеленый",
             "paramValue": "33326",
             "checked": false
-          }, {
+          },
+          {
             "name": "черный",
             "paramValue": "23",
             "checked": false
-          }, {
+          },
+          {
             "name": "красный",
             "paramValue": "22",
             "checked": false
           }
         ]
-      }, {
+      },
+      {
         "title": "Цвет покрытия",
         "type": "checkbox",
         "paramName": "attr_89",
@@ -63,35 +71,43 @@
             "name": "золочение",
             "paramValue": "45",
             "checked": false
-          }, {
+          },
+          {
             "name": "фиолетовый",
             "paramValue": "38044",
             "checked": false
-          }, {
+          },
+          {
             "name": "розовый",
             "paramValue": "38043",
             "checked": false
-          }, {
+          },
+          {
             "name": "красный",
             "paramValue": "38042",
             "checked": false
-          }, {
+          },
+          {
             "name": "черный",
             "paramValue": "38041",
             "checked": false
-          }, {
+          },
+          {
             "name": "розовое золочение",
             "paramValue": "12220",
             "checked": false
-          }, {
+          },
+          {
             "name": "чернение золочение родий",
             "paramValue": "12198",
             "checked": false
-          }, {
+          },
+          {
             "name": "родий",
             "paramValue": "44",
             "checked": false
-          }, {
+          },
+          {
             "name": "чернение",
             "paramValue": "46",
             "checked": false
@@ -106,10 +122,10 @@
   "products": {
     "items": [],
     "pagination": {
-      "current_page": 1,
-      "total_pages": 0
+      "currentPage": 1,
+      "totalPages": 0
     },
-    "total_count": 123
+    "totalCount": 123
   },
   "showCartButton": false,
   "showQuantity": false,

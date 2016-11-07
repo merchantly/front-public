@@ -4,44 +4,47 @@
       "id": 1,
       "title": "Доставка",
       "url": "/dostavka",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
-    }, {
+      "linkTarget": ""
+    },
+    {
       "id": 2,
       "title": "Оплата",
       "url": "/oplata",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
-    }, {
+      "linkTarget": ""
+    },
+    {
       "id": 3,
       "title": "Контакты",
       "url": "/contacts",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
-    }, {
+      "linkTarget": ""
+    },
+    {
       "id": 4,
       "title": "Новости",
       "url": "/news",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
+      "linkTarget": ""
     }
   ],
   "leftActiveItems": [
     {
       "id": 2,
       "url": "/oplata",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
+      "linkTarget": ""
     }
   ],
   "rightItems": [
@@ -49,30 +52,34 @@
       "id": 10,
       "title": "Facebook",
       "url": "/facebook",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
-    }, {
+      "linkTarget": ""
+    },
+    {
       "id": 11,
       "title": "Хиты продаж",
       "url": "/instagramm",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
-    }, {
+      "linkTarget": ""
+    },
+    {
       "id": 12,
       "title": "Вконтакте",
       "url": "/vk",
-      "products_count": null,
+      "productsCount": null,
       "children": [],
       "type": "MenuItemPage",
-      "link_target": ""
+      "linkTarget": ""
     }
   ],
   "rightActiveItems": [],
-  "currenciesIsoCodes": ["RUB"],
+  "currenciesIsoCodes": [
+    "RUB"
+  ],
   "currentCurrency": "RUB",
   "locales": [
     {
