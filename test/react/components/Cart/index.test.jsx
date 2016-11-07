@@ -23,8 +23,8 @@ describe('[Component] CartContainer', () => {
   it('should consider `good.weight_of_price` for weighted goods', () => {
     const props = { ...weightOfPriceCart, t, isTesting: true };
     const [ item ] = weightOfPriceCart.initialCart.items;
-    const itemSum = item.weight / item.good.weight_of_price * item.good.actual_price.cents;
-    const itemPrice = Object.assign({}, item.good.actual_price, { cents: itemSum });
+    const itemSum = item.weight / item.good.weightOfPrice * item.good.actualPrice.cents;
+    const itemPrice = Object.assign({}, item.good.actualPrice, { cents: itemSum });
 
     expect(render(<CartContainer {...props} />)
       .find('.b-cart__item__price > span > span').eq(0)
