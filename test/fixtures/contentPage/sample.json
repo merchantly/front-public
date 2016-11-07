@@ -2,15 +2,15 @@
   "text": "text example",
   "title": "title example",
   "images": [
-    {"image":
-      {
-       "url": "http://assets.stage.kiiiosk.ru/uploads/shop/1817/uploads/lookbook_image/image/1243/1cd7d73e-b33c-41ff-9345-3e6aca1756d3.JPG",
+    {
+      "image": {
+        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/1817/uploads/lookbook_image/image/1243/1cd7d73e-b33c-41ff-9345-3e6aca1756d3.JPG"
       }
     },
-    {"image":
-      {
-        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/1817/uploads/lookbook_image/image/1243/1cd7d73e-b33c-41ff-9345-3e6aca1756d3.JPG",
+    {
+      "image": {
+        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/1817/uploads/lookbook_image/image/1243/1cd7d73e-b33c-41ff-9345-3e6aca1756d3.JPG"
       }
-    },
-  ],
+    }
+  ]
 }

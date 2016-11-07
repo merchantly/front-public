@@ -1,8 +1,14 @@
 {
   "client": {
     "name": "example name",
-    "phones": ["666666", "666666"],
-    "emails": ["example@example", "example@example"],
+    "phones": [
+      "666666",
+      "666666"
+    ],
+    "emails": [
+      "example@example",
+      "example@example"
+    ],
     "logoutUrl": "/vendor/logout"
   },
   "orders": {

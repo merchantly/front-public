@@ -68,7 +68,7 @@ describe('[Component] CatalogFilter', function() {
       <CatalogFilter
         options={options}
         selectedOptions={[]}
-        params={{'category_id': 5}}
+        params={{'categoryId': 5}}
       />
     );
 

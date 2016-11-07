@@ -1,35 +1,35 @@
 {
   "product": {
     "id": 3912,
-    "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTI",
+    "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTI",
     "title": "Миникольцо Цепочка золоченая с цирконом б",
     "article": "MR019-13",
-    "has_ordering_goods": true,
-    "is_sale": false,
-    "is_label_new": false,
-    "is_run_out": false,
-    "is_sold": false,
+    "hasOrderingGoods": true,
+    "isSale": false,
+    "isLabelNew": false,
+    "isRunOut": false,
+    "isSold": false,
     "description": "<p></p>",
-    "sale_percent": null,
-    "public_url": "/public/url",
+    "salePercent": null,
+    "publicUrl": "/public/url",
     "category": {
       "title": "Миникольцо"
     },
-    "main_category": {
+    "mainCategory": {
       "id": 628,
       "name": "Миникольцо",
-      "is_root": false,
-      "public_url": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
+      "isRoot": false,
+      "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
       "parent": {
         "id": 636,
         "name": "Кольца",
-        "is_root": false,
-        "public_url": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
+        "isRoot": false,
+        "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
         "parent": {
           "id": 612,
           "name": "Корневая категория",
-          "is_root": true,
-          "public_url": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
+          "isRoot": true,
+          "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
           "parent": null
         }
       }
@@ -38,18 +38,18 @@
       {
         "id": 628,
         "name": "Миникольцо",
-        "is_root": false,
-        "public_url": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
+        "isRoot": false,
+        "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/628-koltsa-minikoltso",
         "parent": {
           "id": 636,
           "name": "Кольца",
-          "is_root": false,
-          "public_url": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
+          "isRoot": false,
+          "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/636-koltsa",
           "parent": {
             "id": 612,
             "name": "Корневая категория",
-            "is_root": true,
-            "public_url": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
+            "isRoot": true,
+            "publicUrl": "http://wannabe.3001.vkontraste.ru/categories/612-kornevaya-kategoriya",
             "parent": null
           }
         }
@@ -59,11 +59,11 @@
       {
         "title": "Размер: 13",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -75,50 +75,51 @@
         "quantity": 1,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
-      }, {
+      },
+      {
         "title": "Размер: 14",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzNw",
-        "is_ordering": false,
-        "is_run_out": true,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzNw",
+        "isOrdering": false,
+        "isRunOut": true,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -130,50 +131,51 @@
         "quantity": 0,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
-      }, {
+      },
+      {
         "title": "Размер: 15",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOA",
-        "is_ordering": false,
-        "is_run_out": true,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOA",
+        "isOrdering": false,
+        "isRunOut": true,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -185,50 +187,51 @@
         "quantity": 0,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
-      }, {
+      },
+      {
         "title": "Размер: 16",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOQ",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzOQ",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -240,50 +243,51 @@
         "quantity": 1,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
-      }, {
+      },
+      {
         "title": "Размер: 17",
         "article": null,
-        "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDI0MA",
-        "is_ordering": true,
-        "is_run_out": false,
-        "is_sale": false,
-        "is_preorder": false,
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDI0MA",
+        "isOrdering": true,
+        "isRunOut": false,
+        "isSale": false,
+        "isPreorder": false,
         "image": {
           "title": "Миникольцо Цепочка золоченая с цирконом б",
           "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
@@ -295,41 +299,41 @@
         "quantity": 2,
         "price": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "actual_price": {
+        "actualPrice": {
           "cents": 120000,
-          "to_f": 1200,
+          "toF": 1200,
           "currency": {
-            "iso_code": "RUB",
-            "iso_numeric": "643",
+            "isoCode": "RUB",
+            "isoNumeric": "643",
             "name": "Russian Ruble",
             "symbol": "₽",
-            "html_name": "руб.",
-            "human_name": "Российские рубли",
-            "symbol_first": false,
-            "thousands_separator": " ",
-            "decimal_mark": ",",
-            "subunit_to_unit": 100,
-            "smallest_denomination": 1,
+            "htmlName": "руб.",
+            "humanName": "Российские рубли",
+            "symbolFirst": false,
+            "thousandsSeparator": " ",
+            "decimalMark": ",",
+            "subunitToUnit": 100,
+            "smallestDenomination": 1,
             "exponent": 2
           },
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         }
       }
     ],
@@ -338,7 +342,8 @@
         "title": "Миникольцо Цепочка золоченая с цирконом б",
         "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/5172/image.png",
         "uid": "37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7"
-      }, {
+      },
+      {
         "title": "Миникольцо Цепочка золоченая с цирконом б",
         "url": "http://3001.vkontraste.ru/uploads/shop/5/uploads/product_image/image/26256/045df60c-ebea-4813-be29-75590835c0b9.jpg",
         "uid": "aa7455b69929a301ed05db299a0a30d7a9f0811136a963b1446d5fa19e7ec909"
@@ -347,34 +352,37 @@
     "properties": [],
     "attributes": [
       {
-        "property_id": 89,
+        "propertyId": 89,
         "type": "AttributeDictionary",
         "title": "Цвет покрытия",
         "value": "золочение",
-        "products_path": "/entities/45-zolochenie"
-      }, {
-        "property_id": 91,
+        "productsPath": "/entities/45-zolochenie"
+      },
+      {
+        "propertyId": 91,
         "type": "AttributeDictionary",
         "title": "Цвет вставок",
         "value": "белый",
-        "products_path": "/entities/38-belyy"
-      }, {
-        "property_id": 93,
+        "productsPath": "/entities/38-belyy"
+      },
+      {
+        "propertyId": 93,
         "type": "AttributeDictionary",
         "title": "Металл, проба",
         "value": "Серебро 925",
-        "products_path": "/entities/37-serebro-925"
-      }, {
-        "property_id": 99,
+        "productsPath": "/entities/37-serebro-925"
+      },
+      {
+        "propertyId": 99,
         "type": "AttributeDictionary",
         "title": "Вставки",
         "value": "куб. циркон",
-        "products_path": "/entities/65-kub-tsirkon"
+        "productsPath": "/entities/65-kub-tsirkon"
       }
     ],
-    "custom_product_html": "",
-    "text_blocks": [],
-    "video_embed_html": null
+    "customProductHtml": "",
+    "textBlocks": [],
+    "videoEmbedHtml": null
   },
   "vendorCategoryPath": "/vendor/category",
   "searchProductsPath": "/search/products"

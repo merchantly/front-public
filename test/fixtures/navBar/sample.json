@@ -16,17 +16,19 @@
         "type": "email",
         "value": "saharokstore@gmail.com",
         "link": "mailto:saharokstore@gmail.com"
-      }, {
+      },
+      {
         "type": "phone",
         "value": "+7 666 555 44 33",
         "link": "tel:+76665554433"
-      }, {
+      },
+      {
         "type": "text",
         "value": "plain text contact"
       }
     ],
     "title": "Магазин мебели ручной работы",
-    "search_products_path": "/products/search"
+    "searchProductsPath": "/products/search"
   },
   "searchQuery": "query"
 }
