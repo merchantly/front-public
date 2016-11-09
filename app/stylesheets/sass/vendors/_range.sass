@@ -15,7 +15,7 @@
     -moz-user-select: none
     -moz-box-sizing: border-box
     box-sizing: border-box
-  
+
 
 .noUi-base
   width: 100%
@@ -31,13 +31,13 @@
 
 .noUi-handle
   position: relative
-  z-index: 1
+  z-index: $nouiHandleZindex
 
 .noUi-stacking
   .noUi-handle
-    z-index: 10
+    z-index: $nouiStackingHandleZindex
   + .noUi-origin
-    *z-index: -1
+    *z-index: $nouiStackingOriginZindex
 
 .noUi-state-tap .noUi-origin
   -webkit-transition: left 0.3s, top 0.3s

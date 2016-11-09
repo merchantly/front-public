@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _numeral2.default.language('ru', _ru2.default);
 _numeral2.default.language('ru');
 
-},{"numeral":571,"numeral/languages/ru":570}],2:[function(require,module,exports){
+},{"numeral":572,"numeral/languages/ru":571}],2:[function(require,module,exports){
 (function (global){
 window = undefined; // React-rails set window to this, it's unexpected behavior
 React = require('react');
@@ -113,7 +113,7 @@ LookbookPage = require('./react/components/Lookbook/LookbookPage');
 PaymentPage = require('./react/components/Payment/PaymentPage');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":71,"./react/components/CurrencySwitcher":73,"./react/components/Dictionary":86,"./react/components/Dictionary/DictionaryPage":85,"./react/components/DictionaryEntitiesShow":89,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":88,"./react/components/ErrorPage":91,"./react/components/LocaleSwitcher":100,"./react/components/Logo/LogoContainer":101,"./react/components/Lookbook":105,"./react/components/Lookbook/LookbookPage":104,"./react/components/MenuBottom":107,"./react/components/MenuTop":114,"./react/components/NavBar":117,"./react/components/Order":122,"./react/components/Order/OrderPage":120,"./react/components/OrderCancelled":125,"./react/components/OrderCancelled/OrderCancelledPage":124,"./react/components/OrderCreated":128,"./react/components/OrderCreated/OrderCreatedPage":127,"./react/components/OrderPaid":131,"./react/components/OrderPaid/OrderPaidPage":130,"./react/components/OrderPayment":134,"./react/components/OrderPayment/OrderPaymentPage":133,"./react/components/OrderShow":137,"./react/components/OrderShow/OrderShowPage":136,"./react/components/Pagination":140,"./react/components/Payment":143,"./react/components/Payment/PaymentPage":142,"./react/components/Product/ProductBlock":152,"./react/components/Product/ProductCard":170,"./react/components/Product/ProductCard/ProductCardPage":165,"./react/components/ProductArchived":190,"./react/components/ProductArchived/ProductArchivedPage":189,"./react/components/ProductGroup":192,"./react/components/ProductList":194,"./react/components/ProductSearch":197,"./react/components/ProductSearch/ProductSearchPage":196,"./react/components/ScrollToTop":198,"./react/components/TopBanner":199,"./react/components/Welcome":209,"./react/components/Welcome/WelcomePage":208,"./react/components/WelcomeChildren":212,"./react/components/WelcomeChildren/WelcomeChildrenPage":211,"./react/components/Wishlist":218,"./react/components/Wishlist/WishlistPage":217,"./react/components/common/ImageSlider":246,"./react/components/common/PostProducts":261,"./react/reducers/Design.prerender":293,"./react/reducers/cart":294,"./react/reducers/clientState":295,"./react/reducers/operatorState":296,"./react/reducers/packages":297,"./react/reducers/popup":298,"react":"react","react-dom":"react-dom","react-dom/server":600,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":71,"./react/components/CurrencySwitcher":73,"./react/components/Dictionary":86,"./react/components/Dictionary/DictionaryPage":85,"./react/components/DictionaryEntitiesShow":89,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":88,"./react/components/ErrorPage":91,"./react/components/LocaleSwitcher":100,"./react/components/Logo/LogoContainer":101,"./react/components/Lookbook":105,"./react/components/Lookbook/LookbookPage":104,"./react/components/MenuBottom":107,"./react/components/MenuTop":114,"./react/components/NavBar":117,"./react/components/Order":122,"./react/components/Order/OrderPage":120,"./react/components/OrderCancelled":125,"./react/components/OrderCancelled/OrderCancelledPage":124,"./react/components/OrderCreated":128,"./react/components/OrderCreated/OrderCreatedPage":127,"./react/components/OrderPaid":131,"./react/components/OrderPaid/OrderPaidPage":130,"./react/components/OrderPayment":134,"./react/components/OrderPayment/OrderPaymentPage":133,"./react/components/OrderShow":137,"./react/components/OrderShow/OrderShowPage":136,"./react/components/Pagination":140,"./react/components/Payment":143,"./react/components/Payment/PaymentPage":142,"./react/components/Product/ProductBlock":152,"./react/components/Product/ProductCard":170,"./react/components/Product/ProductCard/ProductCardPage":165,"./react/components/ProductArchived":190,"./react/components/ProductArchived/ProductArchivedPage":189,"./react/components/ProductGroup":192,"./react/components/ProductList":194,"./react/components/ProductSearch":197,"./react/components/ProductSearch/ProductSearchPage":196,"./react/components/ScrollToTop":198,"./react/components/TopBanner":199,"./react/components/Welcome":209,"./react/components/Welcome/WelcomePage":208,"./react/components/WelcomeChildren":212,"./react/components/WelcomeChildren/WelcomeChildrenPage":211,"./react/components/Wishlist":218,"./react/components/Wishlist/WishlistPage":217,"./react/components/common/ImageSlider":246,"./react/components/common/PostProducts":261,"./react/reducers/Design.prerender":293,"./react/reducers/cart":294,"./react/reducers/clientState":295,"./react/reducers/operatorState":296,"./react/reducers/packages":297,"./react/reducers/popup":298,"react":"react","react-dom":"react-dom","react-dom/server":601,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -215,16 +215,14 @@ function changeFieldValue(name, value) {
 }
 
 function initCheckout(params) {
-  var _camelizeKeys = (0, _humps.camelizeKeys)(params);
-
-  var deliveryTypes = _camelizeKeys.deliveryTypes;
-  var deliveryTypeId = _camelizeKeys.deliveryTypeId;
-  var paymentTypes = _camelizeKeys.paymentTypes;
-  var paymentTypeId = _camelizeKeys.paymentTypeId;
-  var cart = _camelizeKeys.cart;
-  var coupon = _camelizeKeys.coupon;
-  var fields = _camelizeKeys.fields;
-
+  var _camelizeKeys = (0, _humps.camelizeKeys)(params),
+      deliveryTypes = _camelizeKeys.deliveryTypes,
+      deliveryTypeId = _camelizeKeys.deliveryTypeId,
+      paymentTypes = _camelizeKeys.paymentTypes,
+      paymentTypeId = _camelizeKeys.paymentTypeId,
+      cart = _camelizeKeys.cart,
+      coupon = _camelizeKeys.coupon,
+      fields = _camelizeKeys.fields;
 
   return {
     type: CART_INIT_CHECKOUT,
@@ -255,7 +253,7 @@ function fetchCart() {
   };
 }
 
-},{"../../routes/api":334,"../middleware/api":290,"babel-runtime/helpers/defineProperty":351,"humps":467}],5:[function(require,module,exports){
+},{"../../routes/api":334,"../middleware/api":290,"babel-runtime/helpers/defineProperty":351,"humps":468}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -360,10 +358,8 @@ function fetchOperatorState(force) {
 
     var state = getState().operatorState;
 
-    var _ref = _queryString2.default.parse(window.location.search) || {};
-
-    var design = _ref.design;
-
+    var _ref = _queryString2.default.parse(window.location.search) || {},
+        design = _ref.design;
 
     if (state.notAsked || force) {
       return operatorStatePromise = _promise2.default.resolve(dispatch((0, _defineProperty3.default)({}, _api2.CALL_API, {
@@ -389,7 +385,7 @@ function fetchOperatorState(force) {
   };
 }
 
-},{"../../routes/api":334,"../helpers/dom":283,"../middleware/api":290,"babel-runtime/core-js/promise":346,"babel-runtime/helpers/defineProperty":351,"query-string":595}],7:[function(require,module,exports){
+},{"../../routes/api":334,"../helpers/dom":283,"../middleware/api":290,"babel-runtime/core-js/promise":346,"babel-runtime/helpers/defineProperty":351,"query-string":596}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -438,7 +434,7 @@ function fetchPackages() {
   };
 }
 
-},{"../../routes/api":334,"../middleware/api":290,"babel-runtime/helpers/defineProperty":351,"humps":467}],8:[function(require,module,exports){
+},{"../../routes/api":334,"../middleware/api":290,"babel-runtime/helpers/defineProperty":351,"humps":468}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -704,8 +700,8 @@ function updateBasketState(cartItems) {
 }
 
 function addGood(good) {
-  var count = arguments.length <= 1 || arguments[1] === undefined ? 1 : arguments[1];
-  var weight = arguments.length <= 2 || arguments[2] === undefined ? null : arguments[2];
+  var count = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var weight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
   startItemRequest(good.id);
 
@@ -879,13 +875,13 @@ var BlogPost = function (_Component) {
   (0, _createClass3.default)(BlogPost, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var date = _props.date;
-      var title = _props.title;
-      var text = _props.text;
-      var prev = _props.prev;
-      var next = _props.next;
-      var t = _props.t;
+      var _props = this.props,
+          date = _props.date,
+          title = _props.title,
+          text = _props.text,
+          prev = _props.prev,
+          next = _props.next,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -1026,14 +1022,14 @@ var BlogPostPage = function (_Component) {
   (0, _createClass3.default)(BlogPostPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var date = _props.date;
-      var title = _props.title;
-      var text = _props.text;
-      var prev = _props.prev;
-      var next = _props.next;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          date = _props.date,
+          title = _props.title,
+          text = _props.text,
+          prev = _props.prev,
+          next = _props.next;
 
 
       return _react2.default.createElement(
@@ -1160,9 +1156,9 @@ var BlogPostList = function (_Component) {
   (0, _createClass3.default)(BlogPostList, [{
     key: 'render',
     value: function render() {
-      var _props$blogPosts = this.props.blogPosts;
-      var posts = _props$blogPosts.posts;
-      var pagination = _props$blogPosts.pagination;
+      var _props$blogPosts = this.props.blogPosts,
+          posts = _props$blogPosts.posts,
+          pagination = _props$blogPosts.pagination;
 
 
       return _react2.default.createElement(
@@ -1244,16 +1240,16 @@ var BlogPostListItem = function (_Component) {
   (0, _createClass3.default)(BlogPostListItem, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var hasLink = _props.hasLink;
-      var title = _props.title;
-      var text = _props.text;
-      var publicUrl = _props.publicUrl;
-      var date = _props.date;
-      var headerUrl = _props.headerUrl;
-      var linkTarget = _props.linkTarget;
-      var imageUrl = _props.imageUrl;
-      var t = _props.t;
+      var _props = this.props,
+          hasLink = _props.hasLink,
+          title = _props.title,
+          text = _props.text,
+          publicUrl = _props.publicUrl,
+          date = _props.date,
+          headerUrl = _props.headerUrl,
+          linkTarget = _props.linkTarget,
+          imageUrl = _props.imageUrl,
+          t = _props.t;
 
 
       var imagePart = '';
@@ -1403,10 +1399,10 @@ var BlogPostListPage = function (_Component) {
   (0, _createClass3.default)(BlogPostListPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var blogPosts = _props.blogPosts;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          blogPosts = _props.blogPosts;
 
 
       return _react2.default.createElement(
@@ -1454,7 +1450,7 @@ function BlogPostListContainer(props) {
 exports.default = BlogPostListContainer;
 module.exports = exports['default'];
 
-},{"./BlogPostList":18,"humps":467,"react":"react"}],22:[function(require,module,exports){
+},{"./BlogPostList":18,"humps":468,"react":"react"}],22:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1514,17 +1510,17 @@ var Cabinet = function (_Component) {
   (0, _createClass3.default)(Cabinet, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var _props$client = _props.client;
-      var name = _props$client.name;
-      var phones = _props$client.phones;
-      var emails = _props$client.emails;
-      var logoutUrl = _props$client.logoutUrl;
-      var _props$orders = _props.orders;
-      var currentPage = _props$orders.currentPage;
-      var totalPages = _props$orders.totalPages;
-      var items = _props$orders.items;
-      var t = _props.t;
+      var _props = this.props,
+          _props$client = _props.client,
+          name = _props$client.name,
+          phones = _props$client.phones,
+          emails = _props$client.emails,
+          logoutUrl = _props$client.logoutUrl,
+          _props$orders = _props.orders,
+          currentPage = _props$orders.currentPage,
+          totalPages = _props$orders.totalPages,
+          items = _props$orders.items,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -1559,7 +1555,7 @@ var Cabinet = function (_Component) {
               _react2.default.createElement(
                 'h3',
                 null,
-                ' Список заказов '
+                ' \u0421\u043F\u0438\u0441\u043E\u043A \u0437\u0430\u043A\u0430\u0437\u043E\u0432 '
               ),
               _react2.default.createElement(
                 'ul',
@@ -1663,23 +1659,23 @@ var CabinetOrder = function (_Component) {
   (0, _createClass3.default)(CabinetOrder, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var localId = _props.localId;
-      var workflowState = _props.workflowState;
-      var createdDate = _props.createdDate;
-      var title = _props.title;
-      var clientOrderUrl = _props.clientOrderUrl;
-      var totalWithDeliveryPrice = _props.totalWithDeliveryPrice;
-      var cityTitle = _props.cityTitle;
-      var deliveryName = _props.deliveryName;
-      var itemsCount = _props.itemsCount;
-      var payment = _props.payment;
-      var paymentType = _props.paymentType;
-      var paymentState = _props.paymentState;
-      var reservation = _props.reservation;
-      var delivery = _props.delivery;
-      var deliveryState = _props.deliveryState;
-      var t = _props.t;
+      var _props = this.props,
+          localId = _props.localId,
+          workflowState = _props.workflowState,
+          createdDate = _props.createdDate,
+          title = _props.title,
+          clientOrderUrl = _props.clientOrderUrl,
+          totalWithDeliveryPrice = _props.totalWithDeliveryPrice,
+          cityTitle = _props.cityTitle,
+          deliveryName = _props.deliveryName,
+          itemsCount = _props.itemsCount,
+          payment = _props.payment,
+          paymentType = _props.paymentType,
+          paymentState = _props.paymentState,
+          reservation = _props.reservation,
+          delivery = _props.delivery,
+          deliveryState = _props.deliveryState,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -1852,11 +1848,11 @@ var CabinetPage = function (_Component) {
   (0, _createClass3.default)(CabinetPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var client = _props.client;
-      var orders = _props.orders;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          client = _props.client,
+          orders = _props.orders;
 
 
       return _react2.default.createElement(
@@ -1929,7 +1925,7 @@ CabinetContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetContainer);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":93,"./Cabinet":22,"babel-runtime/helpers/extends":352,"humps":467,"react":"react"}],26:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"./Cabinet":22,"babel-runtime/helpers/extends":352,"humps":468,"react":"react"}],26:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2030,12 +2026,12 @@ var Cart = function (_Component) {
   }, {
     key: 'renderErrors',
     value: function renderErrors() {
-      var suffix = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
-      var _props = this.props;
-      var cartErrors = _props.cartErrors;
-      var isBelowMinimalPrice = _props.isBelowMinimalPrice;
-      var minimalPrice = _props.minimalPrice;
-      var t = _props.t;
+      var suffix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+      var _props = this.props,
+          cartErrors = _props.cartErrors,
+          isBelowMinimalPrice = _props.isBelowMinimalPrice,
+          minimalPrice = _props.minimalPrice,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -2053,22 +2049,22 @@ var Cart = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var amounts = _props2.amounts;
-      var cartDefaultUrl = _props2.cartDefaultUrl;
-      var cartErrors = _props2.cartErrors;
-      var cartItems = _props2.cartItems;
-      var changeAmount = _props2.changeAmount;
-      var couponCode = _props2.couponCode;
-      var formAuthenticity = _props2.formAuthenticity;
-      var isBelowMinimalPrice = _props2.isBelowMinimalPrice;
-      var packageItem = _props2.packageItem;
-      var packages = _props2.packages;
-      var prices = _props2.prices;
-      var selectPackage = _props2.selectPackage;
-      var selectedPackage = _props2.selectedPackage;
-      var t = _props2.t;
-      var totalPrice = _props2.totalPrice;
+      var _props2 = this.props,
+          amounts = _props2.amounts,
+          cartDefaultUrl = _props2.cartDefaultUrl,
+          cartErrors = _props2.cartErrors,
+          cartItems = _props2.cartItems,
+          changeAmount = _props2.changeAmount,
+          couponCode = _props2.couponCode,
+          formAuthenticity = _props2.formAuthenticity,
+          isBelowMinimalPrice = _props2.isBelowMinimalPrice,
+          packageItem = _props2.packageItem,
+          packages = _props2.packages,
+          prices = _props2.prices,
+          selectPackage = _props2.selectPackage,
+          selectedPackage = _props2.selectedPackage,
+          t = _props2.t,
+          totalPrice = _props2.totalPrice;
 
       var hasErrors = isBelowMinimalPrice || (0, _lodash.size)((0, _lodash.omit)(cartErrors, 'minimalPrice')) > 0;
       var isProcessing = this.state.isProcessing;
@@ -2222,7 +2218,7 @@ Cart.propTypes = {
 exports.default = Cart;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":239,"../common/Money/HumanizedMoneyWithCurrency":253,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":239,"../common/Money/HumanizedMoneyWithCurrency":253,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2427,9 +2423,9 @@ var CartCoupon = exports.CartCoupon = function (_Component) {
       var _this3 = this;
 
       var t = this.props.t;
-      var _state = this.state;
-      var code = _state.code;
-      var message = _state.message;
+      var _state = this.state,
+          code = _state.code,
+          message = _state.message;
 
 
       return _react2.default.createElement(
@@ -2521,16 +2517,16 @@ var CartList = function (_Component) {
   (0, _createClass3.default)(CartList, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var amounts = _props.amounts;
-      var changeAmount = _props.changeAmount;
-      var items = _props.items;
-      var packageItem = _props.packageItem;
-      var packages = _props.packages;
-      var prices = _props.prices;
-      var selectPackage = _props.selectPackage;
-      var selectedPackage = _props.selectedPackage;
-      var t = _props.t;
+      var _props = this.props,
+          amounts = _props.amounts,
+          changeAmount = _props.changeAmount,
+          items = _props.items,
+          packageItem = _props.packageItem,
+          packages = _props.packages,
+          prices = _props.prices,
+          selectPackage = _props.selectPackage,
+          selectedPackage = _props.selectedPackage,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -2647,9 +2643,9 @@ var CartListItem = function (_Component) {
   (0, _createClass3.default)(CartListItem, [{
     key: 'changeWeight',
     value: function changeWeight(ev) {
-      var _props = this.props;
-      var changeAmount = _props.changeAmount;
-      var item = _props.item;
+      var _props = this.props,
+          changeAmount = _props.changeAmount,
+          item = _props.item;
 
       var floatVal = parseFloat(ev.target.value) || parseFloat((0, _timm.getIn)(item, ['good', 'weightOfPrice']) || 0);
 
@@ -2658,9 +2654,9 @@ var CartListItem = function (_Component) {
   }, {
     key: 'changeCount',
     value: function changeCount(count) {
-      var _props2 = this.props;
-      var changeAmount = _props2.changeAmount;
-      var item = _props2.item;
+      var _props2 = this.props,
+          changeAmount = _props2.changeAmount,
+          item = _props2.item;
 
 
       changeAmount(item.id, count);
@@ -2698,10 +2694,10 @@ var CartListItem = function (_Component) {
   }, {
     key: 'renderWeight',
     value: function renderWeight() {
-      var _props3 = this.props;
-      var amount = _props3.amount;
-      var item = _props3.item;
-      var t = _props3.t;
+      var _props3 = this.props,
+          amount = _props3.amount,
+          item = _props3.item,
+          t = _props3.t;
 
 
       return _react2.default.createElement(
@@ -2737,10 +2733,10 @@ var CartListItem = function (_Component) {
   }, {
     key: 'renderQuantity',
     value: function renderQuantity() {
-      var _props4 = this.props;
-      var amount = _props4.amount;
-      var item = _props4.item;
-      var t = _props4.t;
+      var _props4 = this.props,
+          amount = _props4.amount,
+          item = _props4.item,
+          t = _props4.t;
 
       var maxAvail = Math.min(gon.max_items_count, (0, _timm.getIn)(item, ['good', 'maxOrderableQuantity']) || 0);
       var options = (0, _lodash.range)(0, Math.max(amount, maxAvail)).map(function (i) {
@@ -2782,19 +2778,18 @@ var CartListItem = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props5 = this.props;
-      var item = _props5.item;
-      var price = _props5.price;
+      var _props5 = this.props,
+          item = _props5.item,
+          price = _props5.price;
 
-      var _ref = item.good || {};
-
-      var image = _ref.image;
-      var _ref$defaultUrl = _ref.defaultUrl;
-      var defaultUrl = _ref$defaultUrl === undefined ? '' : _ref$defaultUrl;
-      var _ref$title = _ref.title;
-      var title = _ref$title === undefined ? '' : _ref$title;
-      var _ref$sellingByWeight = _ref.sellingByWeight;
-      var sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
+      var _ref = item.good || {},
+          image = _ref.image,
+          _ref$defaultUrl = _ref.defaultUrl,
+          defaultUrl = _ref$defaultUrl === undefined ? '' : _ref$defaultUrl,
+          _ref$title = _ref.title,
+          title = _ref$title === undefined ? '' : _ref$title,
+          _ref$sellingByWeight = _ref.sellingByWeight,
+          sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
 
       var priceObj = (0, _humps.decamelizeKeys)(price);
 
@@ -2869,7 +2864,7 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":270,"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+},{"../../constants/OrderConstants":270,"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2942,19 +2937,17 @@ var CartListPackageItem = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _ref = this.props.item || {};
-
-      var _ref$destroyUrl = _ref.destroyUrl;
-      var destroyUrl = _ref$destroyUrl === undefined ? '' : _ref$destroyUrl;
-      var _ref$good = _ref.good;
-      var image = _ref$good.image;
-      var _ref$good$defaultUrl = _ref$good.defaultUrl;
-      var defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl;
-      var _ref$good$title = _ref$good.title;
-      var title = _ref$good$title === undefined ? '' : _ref$good$title;
-      var _ref$good$actualPrice = _ref$good.actualPrice;
-      var actualPrice = _ref$good$actualPrice === undefined ? {} : _ref$good$actualPrice;
-
+      var _ref = this.props.item || {},
+          _ref$destroyUrl = _ref.destroyUrl,
+          destroyUrl = _ref$destroyUrl === undefined ? '' : _ref$destroyUrl,
+          _ref$good = _ref.good,
+          image = _ref$good.image,
+          _ref$good$defaultUrl = _ref$good.defaultUrl,
+          defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl,
+          _ref$good$title = _ref$good.title,
+          title = _ref$good$title === undefined ? '' : _ref$good$title,
+          _ref$good$actualPrice = _ref$good.actualPrice,
+          actualPrice = _ref$good$actualPrice === undefined ? {} : _ref$good$actualPrice;
 
       return _react2.default.createElement(
         'li',
@@ -3024,7 +3017,7 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
-},{"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+},{"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3078,10 +3071,10 @@ var CartListPackages = function (_Component) {
   (0, _createClass3.default)(CartListPackages, [{
     key: 'renderRadioButton',
     value: function renderRadioButton(_ref) {
-      var value = _ref.value;
-      var title = _ref.title;
-      var checked = _ref.checked;
-      var key = _ref.key;
+      var value = _ref.value,
+          title = _ref.title,
+          checked = _ref.checked,
+          key = _ref.key;
 
       var id = 'cart_package_good_global_id_' + value;
 
@@ -3116,9 +3109,9 @@ var CartListPackages = function (_Component) {
   }, {
     key: 'renderTitle',
     value: function renderTitle(item) {
-      var _item$title = item.title;
-      var title = _item$title === undefined ? '' : _item$title;
-      var price = item.price;
+      var _item$title = item.title,
+          title = _item$title === undefined ? '' : _item$title,
+          price = item.price;
 
 
       return _react2.default.createElement(
@@ -3138,10 +3131,10 @@ var CartListPackages = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props;
-      var packages = _props.packages;
-      var selectedPackage = _props.selectedPackage;
-      var t = _props.t;
+      var _props = this.props,
+          packages = _props.packages,
+          selectedPackage = _props.selectedPackage,
+          t = _props.t;
 
 
       if ((0, _lodash.size)(packages) === 0) {
@@ -3204,7 +3197,7 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+},{"../../helpers/money":284,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3270,13 +3263,13 @@ var CartPage = function (_Component) {
   (0, _createClass3.default)(CartPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var formAuthenticity = _props.formAuthenticity;
-      var i18n = _props.i18n;
-      var initialCart = _props.initialCart;
-      var initialPackages = _props.initialPackages;
-      var isTesting = _props.isTesting;
-      var layoutProps = _props.layoutProps;
+      var _props = this.props,
+          formAuthenticity = _props.formAuthenticity,
+          i18n = _props.i18n,
+          initialCart = _props.initialCart,
+          initialPackages = _props.initialPackages,
+          isTesting = _props.isTesting,
+          layoutProps = _props.layoutProps;
 
 
       return _react2.default.createElement(
@@ -3401,11 +3394,11 @@ var CartContainer = function (_Component) {
   (0, _createClass3.default)(CartContainer, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      var _props = this.props;
-      var initCart = _props.initCart;
-      var initialCart = _props.initialCart;
-      var initPackages = _props.initPackages;
-      var initialPackages = _props.initialPackages;
+      var _props = this.props,
+          initCart = _props.initCart,
+          initialCart = _props.initialCart,
+          initPackages = _props.initPackages,
+          initialPackages = _props.initialPackages;
 
 
       if (!storeInitialized && (0, _dom.canUseDOM)()) {
@@ -3474,38 +3467,38 @@ CartContainer.defaultProps = {
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
-  var initialCart = ownProps.initialCart;
-  var initialPackages = ownProps.initialPackages;
-  var isTesting = ownProps.isTesting;
-  var minimalPrice = ownProps.minimalPrice;
+  var initialCart = ownProps.initialCart,
+      initialPackages = ownProps.initialPackages,
+      isTesting = ownProps.isTesting,
+      minimalPrice = ownProps.minimalPrice;
 
   var _ref = storeInitialized && !isTesting ? state : {
     cart: (0, _cart.initCartStore)(state.cart, (0, _CartActions.initCart)(initialCart)),
     packages: (0, _packages.initPackageStore)(state.packages, (0, _PackagesActions.initPackages)(initialPackages))
-  };
+  },
+      cart = _ref.cart,
+      packagesStore = _ref.packages;
 
-  var cart = _ref.cart;
-  var packagesStore = _ref.packages;
-  var _cart$cart = cart.cart;
-  var _cart$cart$defaultUrl = _cart$cart.defaultUrl;
-  var cartDefaultUrl = _cart$cart$defaultUrl === undefined ? '' : _cart$cart$defaultUrl;
-  var _cart$cart$errors = _cart$cart.errors;
-  var cartErrors = _cart$cart$errors === undefined ? {} : _cart$cart$errors;
-  var _cart$cart$items = _cart$cart.items;
-  var cartItems = _cart$cart$items === undefined ? [] : _cart$cart$items;
-  var packageItem = _cart$cart.packageItem;
-  var _cart$cart$totalPrice = _cart$cart.totalPrice;
-  var cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice;
-  var _cart$isFetching = cart.isFetching;
-  var cartIsFetching = _cart$isFetching === undefined ? false : _cart$isFetching;
-  var _cart$amounts = cart.amounts;
-  var amounts = _cart$amounts === undefined ? {} : _cart$amounts;
-  var coupon = cart.coupon;
-  var selectedPackage = cart.selectedPackage;
-  var _packagesStore$packag = packagesStore.packages;
-  var packages = _packagesStore$packag === undefined ? [] : _packagesStore$packag;
-  var _packagesStore$isFetc = packagesStore.isFetching;
-  var packagesIsFetching = _packagesStore$isFetc === undefined ? false : _packagesStore$isFetc;
+  var _cart$cart = cart.cart,
+      _cart$cart$defaultUrl = _cart$cart.defaultUrl,
+      cartDefaultUrl = _cart$cart$defaultUrl === undefined ? '' : _cart$cart$defaultUrl,
+      _cart$cart$errors = _cart$cart.errors,
+      cartErrors = _cart$cart$errors === undefined ? {} : _cart$cart$errors,
+      _cart$cart$items = _cart$cart.items,
+      cartItems = _cart$cart$items === undefined ? [] : _cart$cart$items,
+      packageItem = _cart$cart.packageItem,
+      _cart$cart$totalPrice = _cart$cart.totalPrice,
+      cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice,
+      _cart$isFetching = cart.isFetching,
+      cartIsFetching = _cart$isFetching === undefined ? false : _cart$isFetching,
+      _cart$amounts = cart.amounts,
+      amounts = _cart$amounts === undefined ? {} : _cart$amounts,
+      coupon = cart.coupon,
+      selectedPackage = cart.selectedPackage;
+  var _packagesStore$packag = packagesStore.packages,
+      packages = _packagesStore$packag === undefined ? [] : _packagesStore$packag,
+      _packagesStore$isFetc = packagesStore.isFetching,
+      packagesIsFetching = _packagesStore$isFetc === undefined ? false : _packagesStore$isFetc;
 
   var couponCode = coupon && coupon.value || '';
 
@@ -3626,12 +3619,12 @@ var CatalogFilter = function (_Component) {
           _react2.default.createElement(
             'span',
             { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_open' },
-            'Показать фильтр'
+            '\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
           ),
           _react2.default.createElement(
             'span',
             { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_close' },
-            'Скрыть фильтр'
+            '\u0421\u043A\u0440\u044B\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
           )
         ),
         _react2.default.createElement(_CatalogFilterOptions2.default, this.props)
@@ -3930,9 +3923,9 @@ var CatalogFilterColor = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props;
-      var items = _props.items;
-      var title = _props.title;
+      var _props = this.props,
+          items = _props.items,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -4147,11 +4140,11 @@ var CatalogFilterOptions = function (_Component) {
   (0, _createClass3.default)(CatalogFilterOptions, [{
     key: 'renderOptions',
     value: function renderOptions() {
-      var _props = this.props;
-      var filterName = _props.filterName;
-      var options = _props.options;
-      var params = _props.params;
-      var t = _props.t;
+      var _props = this.props,
+          filterName = _props.filterName,
+          options = _props.options,
+          params = _props.params,
+          t = _props.t;
 
 
       return options.map(function (item, i) {
@@ -4281,9 +4274,9 @@ var CatalogFilterRadio = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props;
-      var items = _props.items;
-      var title = _props.title;
+      var _props = this.props,
+          items = _props.items,
+          title = _props.title;
       var currentIndex = this.state.currentIndex;
 
 
@@ -4406,10 +4399,9 @@ var CatalogFilterRange = function (_Component) {
   (0, _createClass3.default)(CatalogFilterRange, [{
     key: 'handleSlide',
     value: function handleSlide(_ref) {
-      var _ref2 = (0, _slicedToArray3.default)(_ref, 2);
-
-      var from = _ref2[0];
-      var to = _ref2[1];
+      var _ref2 = (0, _slicedToArray3.default)(_ref, 2),
+          from = _ref2[0],
+          to = _ref2[1];
 
       this.setState({
         from: parseInt(from),
@@ -4424,14 +4416,14 @@ var CatalogFilterRange = function (_Component) {
   }, {
     key: 'renderHiddenRange',
     value: function renderHiddenRange() {
-      var _props = this.props;
-      var filterName = _props.filterName;
-      var paramName = _props.paramName;
-      var pFrom = _props.from;
-      var pTo = _props.to;
-      var _state = this.state;
-      var sFrom = _state.from;
-      var sTo = _state.to;
+      var _props = this.props,
+          filterName = _props.filterName,
+          paramName = _props.paramName,
+          pFrom = _props.from,
+          pTo = _props.to;
+      var _state = this.state,
+          sFrom = _state.from,
+          sTo = _state.to;
 
       var parName = filterName ? filterName + '[' + paramName + ']' : paramName;
 
@@ -4455,15 +4447,15 @@ var CatalogFilterRange = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var initFrom = _props2.from;
-      var initTo = _props2.to;
-      var step = _props2.step;
-      var title = _props2.title;
-      var units = _props2.units;
-      var _state2 = this.state;
-      var from = _state2.from;
-      var to = _state2.to;
+      var _props2 = this.props,
+          initFrom = _props2.from,
+          initTo = _props2.to,
+          step = _props2.step,
+          title = _props2.title,
+          units = _props2.units;
+      var _state2 = this.state,
+          from = _state2.from,
+          to = _state2.to;
 
 
       return _react2.default.createElement(
@@ -4487,7 +4479,7 @@ var CatalogFilterRange = function (_Component) {
               _react2.default.createElement(
                 'span',
                 { className: 'slider-divider' },
-                ' – '
+                ' \u2013 '
               ),
               (0, _numeral2.default)(to).format('0,0[.]00'),
               ' ',
@@ -4536,7 +4528,7 @@ CatalogFilterRange.defaultProps = {
 exports.default = CatalogFilterRange;
 module.exports = exports['default'];
 
-},{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/slicedToArray":356,"numeral":571,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
+},{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/slicedToArray":356,"numeral":572,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4589,7 +4581,7 @@ var CatalogFilterSelectedOptions = function (_Component) {
         _react2.default.createElement(
           "div",
           { className: "b-full-filter__item__title" },
-          "Текущий выбор"
+          "\u0422\u0435\u043A\u0443\u0449\u0438\u0439 \u0432\u044B\u0431\u043E\u0440"
         ),
         _react2.default.createElement(
           "div",
@@ -4732,12 +4724,12 @@ var _reactDom = require('react-dom');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function getFilter(instance) {
-  var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+  var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
   var filter = (0, _jquery2.default)((0, _reactDom.findDOMNode)(instance)).closest('form').serializeArray();
   var data = filter.reduce(function (result, _ref) {
-    var name = _ref.name;
-    var value = _ref.value;
+    var name = _ref.name,
+        value = _ref.value;
 
     result[name] = value;
     return result;
@@ -4813,13 +4805,13 @@ var CategoriesShow = function (_Component) {
   (0, _createClass3.default)(CategoriesShow, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var container = _props.container;
-      var isFilterDirty = _props.isFilterDirty;
-      var products = _props.products;
-      var t = _props.t;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          container = _props.container,
+          isFilterDirty = _props.isFilterDirty,
+          products = _props.products,
+          t = _props.t,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return products.items.length > 0 || isFilterDirty ? _react2.default.createElement(_ProductList2.default, {
@@ -4923,14 +4915,14 @@ var CategoriesShowPage = function (_Component) {
   (0, _createClass3.default)(CategoriesShowPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var container = _props.container;
-      var i18n = _props.i18n;
-      var isFilterDirty = _props.isFilterDirty;
-      var layoutProps = _props.layoutProps;
-      var products = _props.products;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          container = _props.container,
+          i18n = _props.i18n,
+          isFilterDirty = _props.isFilterDirty,
+          layoutProps = _props.layoutProps,
+          products = _props.products,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -5097,13 +5089,13 @@ var CategoriesShowChildren = function (_Component) {
   (0, _createClass3.default)(CategoriesShowChildren, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var childrenProducts = _props.childrenProducts;
-      var showCartButton = _props.showCartButton;
-      var showQuantity = _props.showQuantity;
-      var t = _props.t;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          childrenProducts = _props.childrenProducts,
+          showCartButton = _props.showCartButton,
+          showQuantity = _props.showQuantity,
+          t = _props.t,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return childrenProducts.length ? _react2.default.createElement(_ChildrenProducts2.default, {
@@ -5206,14 +5198,14 @@ var CategoriesShowChildrenPage = function (_Component) {
   (0, _createClass3.default)(CategoriesShowChildrenPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var childrenProducts = _props.childrenProducts;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var showCartButton = _props.showCartButton;
-      var showQuantity = _props.showQuantity;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          childrenProducts = _props.childrenProducts,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          showCartButton = _props.showCartButton,
+          showQuantity = _props.showQuantity,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -5419,13 +5411,13 @@ var CheckoutActions = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var backUrl = _props.backUrl;
-      var publicOffer = _props.publicOffer;
-      var t = _props.t;
-      var _state = this.state;
-      var isProcessing = _state.isProcessing;
-      var isRedirecting = _state.isRedirecting;
+      var _props = this.props,
+          backUrl = _props.backUrl,
+          publicOffer = _props.publicOffer,
+          t = _props.t;
+      var _state = this.state,
+          isProcessing = _state.isProcessing,
+          isRedirecting = _state.isRedirecting;
 
 
       return _react2.default.createElement(
@@ -5693,12 +5685,12 @@ var CheckoutCoupon = function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      var _props = this.props;
-      var fieldName = _props.fieldName;
-      var t = _props.t;
-      var _state = this.state;
-      var code = _state.code;
-      var message = _state.message;
+      var _props = this.props,
+          fieldName = _props.fieldName,
+          t = _props.t;
+      var _state = this.state,
+          code = _state.code,
+          message = _state.message;
 
       var id = 'vendor_order_' + fieldName;
       var name = 'vendor_order[' + fieldName + ']';
@@ -5803,19 +5795,19 @@ var CheckoutDeliveries = function (_Component) {
   (0, _createClass3.default)(CheckoutDeliveries, [{
     key: 'renderItem',
     value: function renderItem(item) {
-      var _props = this.props;
-      var current = _props.current;
-      var itemFieldName = _props.itemFieldName;
-      var _onChange = _props.onChange;
-      var t = _props.t;
-      var itemId = item.id;
-      var _item$price = item.price;
-      var price = _item$price === undefined ? {} : _item$price;
-      var _item$title = item.title;
-      var title = _item$title === undefined ? '' : _item$title;
-      var description = item.description;
-      var _item$freeDeliveryThr = item.freeDeliveryThreshold;
-      var threshold = _item$freeDeliveryThr === undefined ? {} : _item$freeDeliveryThr;
+      var _props = this.props,
+          current = _props.current,
+          itemFieldName = _props.itemFieldName,
+          _onChange = _props.onChange,
+          t = _props.t;
+      var itemId = item.id,
+          _item$price = item.price,
+          price = _item$price === undefined ? {} : _item$price,
+          _item$title = item.title,
+          title = _item$title === undefined ? '' : _item$title,
+          description = item.description,
+          _item$freeDeliveryThr = item.freeDeliveryThreshold,
+          threshold = _item$freeDeliveryThr === undefined ? {} : _item$freeDeliveryThr;
 
 
       return _react2.default.createElement(
@@ -5898,7 +5890,7 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"react":"react"}],57:[function(require,module,exports){
+},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"react":"react"}],57:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5949,19 +5941,19 @@ var CheckoutFields = function (_Component) {
   (0, _createClass3.default)(CheckoutFields, [{
     key: 'renderItem',
     value: function renderItem(item, value) {
-      var _props = this.props;
-      var deliveryType = _props.deliveryType;
-      var _onChange = _props.onChange;
-      var _item$errorMessage = item.errorMessage;
-      var errorMessage = _item$errorMessage === undefined ? '' : _item$errorMessage;
-      var _item$name = item.name;
-      var name = _item$name === undefined ? '' : _item$name;
-      var _item$type = item.type;
-      var type = _item$type === undefined ? STRING_TYPE : _item$type;
-      var _item$placeholder = item.placeholder;
-      var placeholder = _item$placeholder === undefined ? '' : _item$placeholder;
-      var _item$title = item.title;
-      var title = _item$title === undefined ? '' : _item$title;
+      var _props = this.props,
+          deliveryType = _props.deliveryType,
+          _onChange = _props.onChange;
+      var _item$errorMessage = item.errorMessage,
+          errorMessage = _item$errorMessage === undefined ? '' : _item$errorMessage,
+          _item$name = item.name,
+          name = _item$name === undefined ? '' : _item$name,
+          _item$type = item.type,
+          type = _item$type === undefined ? STRING_TYPE : _item$type,
+          _item$placeholder = item.placeholder,
+          placeholder = _item$placeholder === undefined ? '' : _item$placeholder,
+          _item$title = item.title,
+          title = _item$title === undefined ? '' : _item$title;
       // const isRequired = includes(deliveryType.requiredFields || [], name);
 
       var reservedValue = (0, _timm.getIn)(deliveryType, ['reservedFieldValues', (0, _humps.camelize)(name)]);
@@ -6039,9 +6031,9 @@ var CheckoutFields = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props2 = this.props;
-      var items = _props2.items;
-      var itemValues = _props2.itemValues;
+      var _props2 = this.props,
+          items = _props2.items,
+          itemValues = _props2.itemValues;
 
 
       return _react2.default.createElement(
@@ -6070,7 +6062,7 @@ CheckoutFields.defaultProps = {};
 exports.default = CheckoutFields;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"react":"react","timm":"timm"}],58:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"react":"react","timm":"timm"}],58:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6118,17 +6110,17 @@ var CheckoutPayments = function (_Component) {
   (0, _createClass3.default)(CheckoutPayments, [{
     key: 'renderItem',
     value: function renderItem(item) {
-      var _props = this.props;
-      var current = _props.current;
-      var itemFieldName = _props.itemFieldName;
-      var _onChange = _props.onChange;
-      var itemId = item.id;
-      var _item$title = item.title;
-      var title = _item$title === undefined ? '' : _item$title;
-      var showIcon = item.showIcon;
-      var _item$iconUrl = item.iconUrl;
-      var iconUrl = _item$iconUrl === undefined ? '' : _item$iconUrl;
-      var description = item.description;
+      var _props = this.props,
+          current = _props.current,
+          itemFieldName = _props.itemFieldName,
+          _onChange = _props.onChange;
+      var itemId = item.id,
+          _item$title = item.title,
+          title = _item$title === undefined ? '' : _item$title,
+          showIcon = item.showIcon,
+          _item$iconUrl = item.iconUrl,
+          iconUrl = _item$iconUrl === undefined ? '' : _item$iconUrl,
+          description = item.description;
       var currentId = current.id;
 
 
@@ -6251,11 +6243,11 @@ var CheckoutPublicOffer = function (_Component) {
   (0, _createClass3.default)(CheckoutPublicOffer, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var errorMessage = _props.errorMessage;
-      var t = _props.t;
-      var value = _props.value;
-      var url = _props.url;
+      var _props = this.props,
+          errorMessage = _props.errorMessage,
+          t = _props.t,
+          value = _props.value,
+          url = _props.url;
 
 
       return _react2.default.createElement(
@@ -6356,10 +6348,10 @@ var CheckoutStep = function (_Component) {
   (0, _createClass3.default)(CheckoutStep, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var children = _props.children;
-      var number = _props.number;
-      var title = _props.title;
+      var _props = this.props,
+          children = _props.children,
+          number = _props.number,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -6483,23 +6475,23 @@ var Checkout = function (_Component) {
   (0, _createClass3.default)(Checkout, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var backUrl = _props.backUrl;
-      var coupon = _props.coupon;
-      var deliveryType = _props.deliveryType;
-      var deliveryTypes = _props.deliveryTypes;
-      var errorMessage = _props.errorMessage;
-      var fields = _props.fields;
-      var fieldValues = _props.fieldValues;
-      var formAuthenticity = _props.formAuthenticity;
-      var onDeliveryChange = _props.onDeliveryChange;
-      var onFieldChange = _props.onFieldChange;
-      var onPaymentChange = _props.onPaymentChange;
-      var paymentType = _props.paymentType;
-      var paymentTypes = _props.paymentTypes;
-      var publicOffer = _props.publicOffer;
-      var submitOrderUrl = _props.submitOrderUrl;
-      var t = _props.t;
+      var _props = this.props,
+          backUrl = _props.backUrl,
+          coupon = _props.coupon,
+          deliveryType = _props.deliveryType,
+          deliveryTypes = _props.deliveryTypes,
+          errorMessage = _props.errorMessage,
+          fields = _props.fields,
+          fieldValues = _props.fieldValues,
+          formAuthenticity = _props.formAuthenticity,
+          onDeliveryChange = _props.onDeliveryChange,
+          onFieldChange = _props.onFieldChange,
+          onPaymentChange = _props.onPaymentChange,
+          paymentType = _props.paymentType,
+          paymentTypes = _props.paymentTypes,
+          publicOffer = _props.publicOffer,
+          submitOrderUrl = _props.submitOrderUrl,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -6659,14 +6651,14 @@ var ChildrenProducts = function (_Component) {
   (0, _createClass3.default)(ChildrenProducts, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var childrenProducts = _props.childrenProducts;
-      var i18n = _props.i18n;
-      var showCartButton = _props.showCartButton;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showQuantity = _props.showQuantity;
-      var title = _props.title;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          childrenProducts = _props.childrenProducts,
+          i18n = _props.i18n,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showQuantity = _props.showQuantity,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -6678,9 +6670,9 @@ var ChildrenProducts = function (_Component) {
           title
         ),
         childrenProducts.map(function (_ref, idx) {
-          var products = _ref.products;
-          var title = _ref.title;
-          var vendorCategoryPath = _ref.vendorCategoryPath;
+          var products = _ref.products,
+              title = _ref.title,
+              vendorCategoryPath = _ref.vendorCategoryPath;
           return _react2.default.createElement(_ProductGroup2.default, {
             catalogFilterProps: catalogFilterProps,
             i18n: i18n,
@@ -6865,11 +6857,11 @@ var ClientSessionNew = function (_Component) {
   (0, _createClass3.default)(ClientSessionNew, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var formAuthenticity = _props.formAuthenticity;
-      var t = _props.t;
-      var timeout = _props.timeout;
-      var vendorClientSessionsPath = _props.vendorClientSessionsPath;
+      var _props = this.props,
+          formAuthenticity = _props.formAuthenticity,
+          t = _props.t,
+          timeout = _props.timeout,
+          vendorClientSessionsPath = _props.vendorClientSessionsPath;
 
 
       return _react2.default.createElement(
@@ -7011,12 +7003,12 @@ var ClientSessionNewPage = function (_Component) {
   (0, _createClass3.default)(ClientSessionNewPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var formAuthenticity = _props.formAuthenticity;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var timeout = _props.timeout;
-      var vendorClientSessionsPath = _props.vendorClientSessionsPath;
+      var _props = this.props,
+          formAuthenticity = _props.formAuthenticity,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          timeout = _props.timeout,
+          vendorClientSessionsPath = _props.vendorClientSessionsPath;
 
 
       return _react2.default.createElement(
@@ -7288,16 +7280,16 @@ var Clientbar = function (_Component) {
   (0, _createClass3.default)(Clientbar, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var cabinetText = _props.cabinetText;
-      var cabinetUrl = _props.cabinetUrl;
-      var cartUrl = _props.cartUrl;
-      var showFullBasketCount = _props.showFullBasketCount;
-      var t = _props.t;
-      var hasCabinet = _props.hasCabinet;
-      var hasWishlist = _props.hasWishlist;
-      var wishlistText = _props.wishlistText;
-      var wishlistUrl = _props.wishlistUrl;
+      var _props = this.props,
+          cabinetText = _props.cabinetText,
+          cabinetUrl = _props.cabinetUrl,
+          cartUrl = _props.cartUrl,
+          showFullBasketCount = _props.showFullBasketCount,
+          t = _props.t,
+          hasCabinet = _props.hasCabinet,
+          hasWishlist = _props.hasWishlist,
+          wishlistText = _props.wishlistText,
+          wishlistUrl = _props.wishlistUrl;
 
 
       return _react2.default.createElement(
@@ -7410,10 +7402,10 @@ var ContentPage = function (_Component) {
   (0, _createClass3.default)(ContentPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var title = _props.title;
-      var text = _props.text;
-      var images = _props.images;
+      var _props = this.props,
+          title = _props.title,
+          text = _props.text,
+          images = _props.images;
 
 
       return _react2.default.createElement(
@@ -7491,7 +7483,7 @@ function ContentPageContainer(props) {
 exports.default = ContentPageContainer;
 module.exports = exports['default'];
 
-},{"./ContentPage":70,"humps":467,"react":"react"}],72:[function(require,module,exports){
+},{"./ContentPage":70,"humps":468,"react":"react"}],72:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7562,9 +7554,9 @@ var CurrencySwitcher = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var currenciesIsoCodes = _props.currenciesIsoCodes;
-      var current = _props.current;
+      var _props = this.props,
+          currenciesIsoCodes = _props.currenciesIsoCodes,
+          current = _props.current;
 
 
       if ((0, _size2.default)(currenciesIsoCodes) < 2) {
@@ -7599,7 +7591,7 @@ CurrencySwitcher.propTypes = {
 exports.default = CurrencySwitcher;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash/collection/map":494,"lodash/collection/size":495,"lodash/function/bind":497,"lodash/object/get":563,"react":"react"}],73:[function(require,module,exports){
+},{"../../helpers/money":284,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash/collection/map":495,"lodash/collection/size":496,"lodash/function/bind":498,"lodash/object/get":564,"react":"react"}],73:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8020,7 +8012,7 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(DesignPreview);
 module.exports = exports['default'];
 
-},{"../HoC/connectToRedux":92,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/core-js/object/keys":344,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","jss":"jss","jss-nested":484,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],75:[function(require,module,exports){
+},{"../HoC/connectToRedux":92,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/core-js/object/keys":344,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","jss":"jss","jss-nested":485,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],75:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8145,9 +8137,9 @@ var DesignSettingsAttach = (_temp2 = _class2 = function (_Component2) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var name = _props.name;
-      var children = _props.children;
+      var _props = this.props,
+          name = _props.name,
+          children = _props.children;
 
       var selectText = this.getSelectText();
 
@@ -8442,13 +8434,13 @@ var DesignSettingsContainer = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var authUrl = _props.authUrl;
-      var categoryPageUrl = _props.categoryPageUrl;
-      var design = _props.design;
-      var dispatch = _props.dispatch;
-      var pageType = _props.pageType;
-      var productPageUrl = _props.productPageUrl;
+      var _props = this.props,
+          authUrl = _props.authUrl,
+          categoryPageUrl = _props.categoryPageUrl,
+          design = _props.design,
+          dispatch = _props.dispatch,
+          pageType = _props.pageType,
+          productPageUrl = _props.productPageUrl;
 
 
       if (this.isOpened(this.props)) {
@@ -8480,7 +8472,7 @@ exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(functio
 })(DesignSettingsContainer));
 module.exports = exports['default'];
 
-},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":272,"../../constants/globalEventKeys":275,"../../constants/storageKeys":280,"../HoC/connectToRedux":92,"./index":83,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":779}],79:[function(require,module,exports){
+},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":272,"../../constants/globalEventKeys":275,"../../constants/storageKeys":280,"../HoC/connectToRedux":92,"./index":83,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":780}],79:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8531,11 +8523,11 @@ var DesignSettingsOption = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(DesignSettingsOption, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var children = _props.children;
-      var className = _props.className;
-      var inRow = _props.inRow;
-      var title = _props.title;
+      var _props = this.props,
+          children = _props.children,
+          className = _props.className,
+          inRow = _props.inRow,
+          title = _props.title;
 
       var optionClasses = (0, _classnames2.default)(className, {
         'design-settings__option': true,
@@ -8635,10 +8627,10 @@ var DesignSettingsRadioList = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(DesignSettingsRadioList, [{
     key: 'getItemProps',
     value: function getItemProps(item) {
-      var _props = this.props;
-      var name = _props.name;
-      var type = _props.type;
-      var value = _props.value;
+      var _props = this.props,
+          name = _props.name,
+          type = _props.type,
+          value = _props.value;
 
       var props = {
         name: name,
@@ -8905,9 +8897,9 @@ var DesignSettingsSlider = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var displayValue = _props.displayValue;
-      var value = _props.value;
+      var _props = this.props,
+          displayValue = _props.displayValue,
+          value = _props.value;
 
       var sliderClasses = (0, _classnames2.default)({
         'design-settings__slider--with-value': displayValue
@@ -9035,9 +9027,9 @@ var DesignSettings = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(DesignSettings, [{
     key: 'getProps',
     value: function getProps(property) {
-      var _props = this.props;
-      var current = _props.current;
-      var changeOption = _props.changeOption;
+      var _props = this.props,
+          current = _props.current,
+          changeOption = _props.changeOption;
 
       return (0, _extends3.default)({}, _designOptions2.default[property], {
         value: current[property],
@@ -9047,9 +9039,9 @@ var DesignSettings = (_temp = _class = function (_Component) {
   }, {
     key: 'getAttachProps',
     value: function getAttachProps(property) {
-      var _props2 = this.props;
-      var current = _props2.current;
-      var changeImage = _props2.changeImage;
+      var _props2 = this.props,
+          current = _props2.current,
+          changeImage = _props2.changeImage;
 
       return (0, _extends3.default)({}, _designOptions2.default[property + 'Url'], {
         value: current[property + 'Url'],
@@ -9069,23 +9061,23 @@ var DesignSettings = (_temp = _class = function (_Component) {
   }, {
     key: 'onItemClick',
     value: function onItemClick(idx, _ref) {
-      var itemKey = _ref.itemKey;
-      var redirectUrl = _ref.redirectUrl;
+      var itemKey = _ref.itemKey,
+          redirectUrl = _ref.redirectUrl;
 
       this.props.onItemClick(itemKey, redirectUrl);
     }
   }, {
     key: 'render',
     value: function render() {
-      var _props3 = this.props;
-      var authUrl = _props3.authUrl;
-      var categoryPageUrl = _props3.categoryPageUrl;
-      var closeDesignSettingsPopup = _props3.closeDesignSettingsPopup;
-      var isSaving = _props3.isSaving;
-      var pageType = _props3.pageType;
-      var productPageUrl = _props3.productPageUrl;
-      var saveChanges = _props3.saveChanges;
-      var unsavedFields = _props3.unsavedFields;
+      var _props3 = this.props,
+          authUrl = _props3.authUrl,
+          categoryPageUrl = _props3.categoryPageUrl,
+          closeDesignSettingsPopup = _props3.closeDesignSettingsPopup,
+          isSaving = _props3.isSaving,
+          pageType = _props3.pageType,
+          productPageUrl = _props3.productPageUrl,
+          saveChanges = _props3.saveChanges,
+          unsavedFields = _props3.unsavedFields;
 
 
       return _react2.default.createElement(
@@ -9097,7 +9089,7 @@ var DesignSettings = (_temp = _class = function (_Component) {
           _react2.default.createElement(
             'span',
             null,
-            'Управление дизайном'
+            '\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0434\u0438\u0437\u0430\u0439\u043D\u043E\u043C'
           ),
           _react2.default.createElement(_DesignSettingsCloseButton2.default, { onClick: closeDesignSettingsPopup })
         ),
@@ -9123,27 +9115,27 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 }),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Товаров в ряд' },
+                  { title: '\u0422\u043E\u0432\u0430\u0440\u043E\u0432 \u0432 \u0440\u044F\u0434' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('mainPageProductsInRow'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Строк товаров' },
+                  { title: '\u0421\u0442\u0440\u043E\u043A \u0442\u043E\u0432\u0430\u0440\u043E\u0432' },
                   _react2.default.createElement(_DesignSettingsSlider2.default, (0, _extends3.default)({}, this.getProps('mainPageRows'), { displayValue: true }))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Фильтр товаров слева' },
+                  { inRow: true, title: '\u0424\u0438\u043B\u044C\u0442\u0440 \u0442\u043E\u0432\u0430\u0440\u043E\u0432 \u0441\u043B\u0435\u0432\u0430' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('mainPageFilter'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Слайдер посередине' },
+                  { inRow: true, title: '\u0421\u043B\u0430\u0439\u0434\u0435\u0440 \u043F\u043E\u0441\u0435\u0440\u0435\u0434\u0438\u043D\u0435' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('mainPageSlider'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Товары в порядке установки' },
+                  { inRow: true, title: '\u0422\u043E\u0432\u0430\u0440\u044B \u0432 \u043F\u043E\u0440\u044F\u0434\u043A\u0435 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('mainPageOrdered'))
                 )
               ),
@@ -9155,17 +9147,17 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 }),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Товаров в ряд' },
+                  { title: '\u0422\u043E\u0432\u0430\u0440\u043E\u0432 \u0432 \u0440\u044F\u0434' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('categoryPageProductsInRow'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Строк товаров' },
+                  { title: '\u0421\u0442\u0440\u043E\u043A \u0442\u043E\u0432\u0430\u0440\u043E\u0432' },
                   _react2.default.createElement(_DesignSettingsSlider2.default, (0, _extends3.default)({}, this.getProps('categoryPageRows'), { displayValue: true }))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Фильтр товаров слева' },
+                  { inRow: true, title: '\u0424\u0438\u043B\u044C\u0442\u0440 \u0442\u043E\u0432\u0430\u0440\u043E\u0432 \u0441\u043B\u0435\u0432\u0430' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('categoryPageFilter'))
                 )
               ),
@@ -9177,12 +9169,12 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 }),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Расположение фото' },
+                  { title: '\u0420\u0430\u0441\u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u0444\u043E\u0442\u043E' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('productPagePhoto'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Подобные товары снизу' },
+                  { inRow: true, title: '\u041F\u043E\u0434\u043E\u0431\u043D\u044B\u0435 \u0442\u043E\u0432\u0430\u0440\u044B \u0441\u043D\u0438\u0437\u0443' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('showSimilarProducts'))
                 )
               ),
@@ -9193,17 +9185,17 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 }),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Галерея Instagram снизу' },
+                  { inRow: true, title: '\u0413\u0430\u043B\u0435\u0440\u0435\u044F Instagram \u0441\u043D\u0438\u0437\u0443' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('mainPageInstagram'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Баннер сверху' },
+                  { inRow: true, title: '\u0411\u0430\u043D\u043D\u0435\u0440 \u0441\u0432\u0435\u0440\u0445\u0443' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('mainPageBanner'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { inRow: true, title: 'Виджет W1 снизу' },
+                  { inRow: true, title: '\u0412\u0438\u0434\u0436\u0435\u0442 W1 \u0441\u043D\u0438\u0437\u0443' },
                   _react2.default.createElement(_DesignSettingsCheckbox2.default, this.getProps('w1Widget'))
                 )
               ),
@@ -9212,7 +9204,7 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 this.getAccordionItemProps('Стиль'),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Логотип (желательно .SVG)' },
+                  { title: '\u041B\u043E\u0433\u043E\u0442\u0438\u043F (\u0436\u0435\u043B\u0430\u0442\u0435\u043B\u044C\u043D\u043E .SVG)' },
                   _react2.default.createElement(
                     _DesignSettingsAttach2.default,
                     (0, _extends3.default)({}, this.getAttachProps('logo'), {
@@ -9225,7 +9217,7 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Фон страницы' },
+                  { title: '\u0424\u043E\u043D \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B' },
                   _react2.default.createElement(
                     _DesignSettingsAttach2.default,
                     (0, _extends3.default)({}, this.getAttachProps('pageBg'), {
@@ -9238,37 +9230,37 @@ var DesignSettings = (_temp = _class = function (_Component) {
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Цвет страницы' },
+                  { title: '\u0426\u0432\u0435\u0442 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u044B' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('pageBgColor'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Цвет контента' },
+                  { title: '\u0426\u0432\u0435\u0442 \u043A\u043E\u043D\u0442\u0435\u043D\u0442\u0430' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('feedBgColor'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Прозрачность ленты' },
+                  { title: '\u041F\u0440\u043E\u0437\u0440\u0430\u0447\u043D\u043E\u0441\u0442\u044C \u043B\u0435\u043D\u0442\u044B' },
                   _react2.default.createElement(_DesignSettingsSlider2.default, this.getProps('feedTransparency'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Цвет текста' },
+                  { title: '\u0426\u0432\u0435\u0442 \u0442\u0435\u043A\u0441\u0442\u0430' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('fontColor'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Шрифт' },
+                  { title: '\u0428\u0440\u0438\u0444\u0442' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('fontFamily'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Размер шрифта' },
+                  { title: '\u0420\u0430\u0437\u043C\u0435\u0440 \u0448\u0440\u0438\u0444\u0442\u0430' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('fontSize'))
                 ),
                 _react2.default.createElement(
                   _DesignSettingsOption2.default,
-                  { title: 'Цвет активных элементов' },
+                  { title: '\u0426\u0432\u0435\u0442 \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u0445 \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432' },
                   _react2.default.createElement(_DesignSettingsRadioList2.default, this.getProps('activeElementsColor'))
                 )
               )
@@ -9438,10 +9430,10 @@ var DictionaryPage = function (_Component) {
   (0, _createClass3.default)(DictionaryPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var title = _props.title;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -9489,7 +9481,7 @@ function DictionaryContainer(props) {
 exports.default = DictionaryContainer;
 module.exports = exports['default'];
 
-},{"./Dictionary":84,"humps":467,"react":"react"}],87:[function(require,module,exports){
+},{"./Dictionary":84,"humps":468,"react":"react"}],87:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9537,12 +9529,12 @@ var DictionaryEntitiesShow = function (_Component) {
   (0, _createClass3.default)(DictionaryEntitiesShow, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var entity = _props.entity;
-      var products = _props.products;
-      var t = _props.t;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          entity = _props.entity,
+          products = _props.products,
+          t = _props.t,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return products.items.length ? _react2.default.createElement(_ProductList2.default, {
@@ -9644,13 +9636,13 @@ var DictionaryEntitiesShowPage = function (_Component) {
   (0, _createClass3.default)(DictionaryEntitiesShowPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var entity = _props.entity;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var products = _props.products;
-      var title = _props.title;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          entity = _props.entity,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          products = _props.products,
+          title = _props.title,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -9809,11 +9801,11 @@ var ErrorPage = function (_Component) {
   (0, _createClass3.default)(ErrorPage, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var subject = _props.subject;
-      var content = _props.content;
-      var phone = _props.phone;
-      var email = _props.email;
+      var _props = this.props,
+          subject = _props.subject,
+          content = _props.content,
+          phone = _props.phone,
+          email = _props.email;
 
 
       return _react2.default.createElement(
@@ -9846,7 +9838,7 @@ var ErrorPage = function (_Component) {
             _react2.default.createElement(
               "span",
               { className: "middot" },
-              "⋅"
+              "\u22C5"
             ),
             _react2.default.createElement(
               "a",
@@ -9902,7 +9894,7 @@ function ErrorPageContainter(props) {
 exports.default = ErrorPageContainter;
 module.exports = exports['default'];
 
-},{"./ErrorPage":90,"humps":467,"react":"react"}],92:[function(require,module,exports){
+},{"./ErrorPage":90,"humps":468,"react":"react"}],92:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -10151,12 +10143,12 @@ var Instagram = function (_Component) {
   (0, _createClass3.default)(Instagram, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var entries = _props.entries;
-      var hashtag = _props.hashtag;
-      var isError = _props.isError;
-      var isLoading = _props.isLoading;
-      var profileUrl = _props.profileUrl;
+      var _props = this.props,
+          entries = _props.entries,
+          hashtag = _props.hashtag,
+          isError = _props.isError,
+          isLoading = _props.isLoading,
+          profileUrl = _props.profileUrl;
 
       var instagramClasses = (0, _classnames2.default)({
         'Instagram': true,
@@ -10170,7 +10162,7 @@ var Instagram = function (_Component) {
         isError && _react2.default.createElement(
           'div',
           { className: 'Instagram-message' },
-          'Ошибка при загрузке фотографий в компоненте Instagram'
+          '\u041E\u0448\u0438\u0431\u043A\u0430 \u043F\u0440\u0438 \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u0435 \u0444\u043E\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u0439 \u0432 \u043A\u043E\u043C\u043F\u043E\u043D\u0435\u043D\u0442\u0435 Instagram'
         ),
         isLoading && _react2.default.createElement(
           'div',
@@ -10295,9 +10287,9 @@ var InstagramContainer = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var _props = this.props;
-      var entriesLimit = _props.entriesLimit;
-      var isVisible = _props.isVisible;
+      var _props = this.props,
+          entriesLimit = _props.entriesLimit,
+          isVisible = _props.isVisible;
 
 
       if (!isVisible) return;
@@ -10399,9 +10391,9 @@ var InstagramEntries = function (_Component) {
   (0, _createClass3.default)(InstagramEntries, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var entries = _props.entries;
-      var profileUrl = _props.profileUrl;
+      var _props = this.props,
+          entries = _props.entries,
+          profileUrl = _props.profileUrl;
 
       var classes = (0, _classnames2.default)({
         'Instagram-entries': true,
@@ -10426,7 +10418,7 @@ var InstagramEntries = function (_Component) {
         }) : _react2.default.createElement(
           'span',
           null,
-          'Instagram не содержит фотографий'
+          'Instagram \u043D\u0435 \u0441\u043E\u0434\u0435\u0440\u0436\u0438\u0442 \u0444\u043E\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u0439'
         )
       );
     }
@@ -10538,10 +10530,10 @@ var LocaleSwitcher = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var locales = _props.locales;
-      var current = _props.current;
-      var t = _props.t;
+      var _props = this.props,
+          locales = _props.locales,
+          current = _props.current,
+          t = _props.t;
 
 
       if ((0, _size2.default)(locales) < 2) {
@@ -10579,7 +10571,7 @@ LocaleSwitcher.propTypes = {
 exports.default = (0, _provideTranslations2.default)(LocaleSwitcher);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":93,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash/collection/map":494,"lodash/collection/size":495,"lodash/function/bind":497,"react":"react"}],100:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash/collection/map":495,"lodash/collection/size":496,"lodash/function/bind":498,"react":"react"}],100:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10881,9 +10873,9 @@ var Lookbook = function (_Component) {
   (0, _createClass3.default)(Lookbook, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var title = _props.title;
-      var images = _props.images;
+      var _props = this.props,
+          title = _props.title,
+          images = _props.images;
 
 
       return _react2.default.createElement(
@@ -10977,11 +10969,11 @@ var LookbookPage = function (_Component) {
   (0, _createClass3.default)(LookbookPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var title = _props.title;
-      var images = _props.images;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          title = _props.title,
+          images = _props.images;
 
 
       return _react2.default.createElement(
@@ -11033,7 +11025,7 @@ function LookbookContainer(props) {
 exports.default = LookbookContainer;
 module.exports = exports['default'];
 
-},{"./Lookbook":103,"humps":467,"react":"react"}],106:[function(require,module,exports){
+},{"./Lookbook":103,"humps":468,"react":"react"}],106:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11087,14 +11079,14 @@ var MenuBottomLink = function (_Component) {
   (0, _createClass3.default)(MenuBottomLink, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var isActive = _props.isActive;
-      var _props$item = _props.item;
-      var id = _props$item.id;
-      var title = _props$item.title;
-      var url = _props$item.url;
-      var link_target = _props$item.link_target;
-      var products_count = _props$item.products_count;
+      var _props = this.props,
+          isActive = _props.isActive,
+          _props$item = _props.item,
+          id = _props$item.id,
+          title = _props$item.title,
+          url = _props$item.url,
+          link_target = _props$item.link_target,
+          products_count = _props$item.products_count;
 
       var aClasses = (0, _classnames2.default)({
         'b-footer__link': true,
@@ -11220,20 +11212,20 @@ var MenuBottom = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var currenciesIsoCodes = _props.currenciesIsoCodes;
-      var currentCurrency = _props.currentCurrency;
-      var currentLocale = _props.currentLocale;
-      var footerMenuMiddleHtml = _props.footerMenuMiddleHtml;
-      var i18n = _props.i18n;
-      var locales = _props.locales;
-      var isVendorLandingLinkDisabled = _props.isVendorLandingLinkDisabled;
-      var leftActiveItems = _props.leftActiveItems;
-      var leftItems = _props.leftItems;
-      var rightActiveItems = _props.rightActiveItems;
-      var rightItems = _props.rightItems;
-      var t = _props.t;
-      var vendorLandingLink = _props.vendorLandingLink;
+      var _props = this.props,
+          currenciesIsoCodes = _props.currenciesIsoCodes,
+          currentCurrency = _props.currentCurrency,
+          currentLocale = _props.currentLocale,
+          footerMenuMiddleHtml = _props.footerMenuMiddleHtml,
+          i18n = _props.i18n,
+          locales = _props.locales,
+          isVendorLandingLinkDisabled = _props.isVendorLandingLinkDisabled,
+          leftActiveItems = _props.leftActiveItems,
+          leftItems = _props.leftItems,
+          rightActiveItems = _props.rightActiveItems,
+          rightItems = _props.rightItems,
+          t = _props.t,
+          vendorLandingLink = _props.vendorLandingLink;
 
       var contentWrapperClasses = (0, _classnames2.default)({
         'b-footer__content-wrapper': true,
@@ -11493,18 +11485,18 @@ var MenuTopDesktopChild = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var checkIfActive = _props.checkIfActive;
-      var child = _props.child;
+      var _props = this.props,
+          checkIfActive = _props.checkIfActive,
+          child = _props.child;
 
 
       if (!child) {
         return null;
       }
 
-      var id = child.id;
-      var products_count = child.products_count;
-      var title = child.title;
+      var id = child.id,
+          products_count = child.products_count,
+          title = child.title;
 
       var childClasses = (0, _classnames2.default)({
         'b-nav__item': true,
@@ -11596,12 +11588,12 @@ var MenuTopDesktopSingle = function (_Component) {
   (0, _createClass3.default)(MenuTopDesktopSingle, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var checkIfActive = _props.checkIfActive;
-      var item = _props.item;
-      var id = item.id;
-      var title = item.title;
-      var url = item.url;
+      var _props = this.props,
+          checkIfActive = _props.checkIfActive,
+          item = _props.item;
+      var id = item.id,
+          title = item.title,
+          url = item.url;
 
       var liClasses = (0, _classnames2.default)({
         'b-nav__item': true,
@@ -11746,14 +11738,14 @@ var MenuTopDeskTopWithChildren = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var checkIfActive = _props.checkIfActive;
-      var isLast = _props.isLast;
-      var item = _props.item;
-      var id = item.id;
-      var children = item.children;
-      var title = item.title;
-      var url = item.url;
+      var _props = this.props,
+          checkIfActive = _props.checkIfActive,
+          isLast = _props.isLast,
+          item = _props.item;
+      var id = item.id,
+          children = item.children,
+          title = item.title,
+          url = item.url;
 
       var liClasses = (0, _classnames2.default)({
         'b-nav__item': true,
@@ -11884,9 +11876,9 @@ var MenuTopMobile = function (_Component) {
   }, {
     key: 'renderSingle',
     value: function renderSingle(item) {
-      var id = item.id;
-      var title = item.title;
-      var url = item.url;
+      var id = item.id,
+          title = item.title,
+          url = item.url;
 
 
       return _react2.default.createElement(
@@ -11902,9 +11894,9 @@ var MenuTopMobile = function (_Component) {
   }, {
     key: 'renderWithChildren',
     value: function renderWithChildren(item) {
-      var id = item.id;
-      var title = item.title;
-      var children = item.children;
+      var id = item.id,
+          title = item.title,
+          children = item.children;
 
 
       return _react2.default.createElement(
@@ -11940,11 +11932,11 @@ var MenuTopMobile = function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      var _props = this.props;
-      var hasClientCabinet = _props.hasClientCabinet;
-      var items = _props.items;
-      var t = _props.t;
-      var vendorCabinetPath = _props.vendorCabinetPath;
+      var _props = this.props,
+          hasClientCabinet = _props.hasClientCabinet,
+          items = _props.items,
+          t = _props.t,
+          vendorCabinetPath = _props.vendorCabinetPath;
       var isActive = this.state.isActive;
 
 
@@ -12149,13 +12141,13 @@ var MenuTop = function (_Component) {
   (0, _createClass3.default)(MenuTop, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var activeItems = _props.activeItems;
-      var hasClientCabinet = _props.hasClientCabinet;
-      var items = _props.items;
-      var t = _props.t;
-      var vendorCabinetPath = _props.vendorCabinetPath;
-      var isMenuTopDesktopSticky = _props.isMenuTopDesktopSticky;
+      var _props = this.props,
+          activeItems = _props.activeItems,
+          hasClientCabinet = _props.hasClientCabinet,
+          items = _props.items,
+          t = _props.t,
+          vendorCabinetPath = _props.vendorCabinetPath,
+          isMenuTopDesktopSticky = _props.isMenuTopDesktopSticky;
 
 
       return _react2.default.createElement(
@@ -12270,13 +12262,13 @@ var NavBar = function (_Component) {
   (0, _createClass3.default)(NavBar, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var clientBarProps = _props.clientBarProps;
-      var logoProps = _props.logoProps;
-      var vendor = _props.vendor;
-      var searchQuery = _props.searchQuery;
-      var showClientBar = _props.showClientBar;
-      var t = _props.t;
+      var _props = this.props,
+          clientBarProps = _props.clientBarProps,
+          logoProps = _props.logoProps,
+          vendor = _props.vendor,
+          searchQuery = _props.searchQuery,
+          showClientBar = _props.showClientBar,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -12394,9 +12386,9 @@ var NavBarContacts = function (_Component) {
   (0, _createClass3.default)(NavBarContacts, [{
     key: 'renderContact',
     value: function renderContact(contact, idx) {
-      var type = contact.type;
-      var value = contact.value;
-      var link = contact.link;
+      var type = contact.type,
+          value = contact.value,
+          link = contact.link;
 
 
       if (type === CONTACT_TYPE_TEXT) {
@@ -12433,7 +12425,7 @@ var NavBarContacts = function (_Component) {
         );
       } else {
         if ((typeof Bugsnag === 'undefined' ? 'undefined' : (0, _typeof3.default)(Bugsnag)) === 'object' && typeof Bugsnag.warn === 'function') {
-          Bugsnag.warn('Неизвестный тип контакта', 'Содержимое объекта: ' + (0, _stringify2.default)());
+          Bugsnag.warn('Неизвестный тип контакта', '\u0421\u043E\u0434\u0435\u0440\u0436\u0438\u043C\u043E\u0435 \u043E\u0431\u044A\u0435\u043A\u0442\u0430: ' + (0, _stringify2.default)());
         }
         return null;
       }
@@ -12441,9 +12433,9 @@ var NavBarContacts = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var vendorContacts = _props.vendorContacts;
-      var vendorTitle = _props.vendorTitle;
+      var _props = this.props,
+          vendorContacts = _props.vendorContacts,
+          vendorTitle = _props.vendorTitle;
 
 
       return _react2.default.createElement(
@@ -12738,25 +12730,25 @@ var Order = function (_Component) {
   (0, _createClass3.default)(Order, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var backUrl = _props.backUrl;
-      var coupon = _props.coupon;
-      var deliveryType = _props.deliveryType;
-      var deliveryTypes = _props.deliveryTypes;
-      var errorMessage = _props.errorMessage;
-      var fieldValues = _props.fieldValues;
-      var fields = _props.fields;
-      var formAuthenticity = _props.formAuthenticity;
-      var onDeliveryChange = _props.onDeliveryChange;
-      var onFieldChange = _props.onFieldChange;
-      var onPaymentChange = _props.onPaymentChange;
-      var paymentType = _props.paymentType;
-      var paymentTypes = _props.paymentTypes;
-      var publicOffer = _props.publicOffer;
-      var submitOrderUrl = _props.submitOrderUrl;
-      var t = _props.t;
-      var totalCount = _props.totalCount;
-      var totalPrice = _props.totalPrice;
+      var _props = this.props,
+          backUrl = _props.backUrl,
+          coupon = _props.coupon,
+          deliveryType = _props.deliveryType,
+          deliveryTypes = _props.deliveryTypes,
+          errorMessage = _props.errorMessage,
+          fieldValues = _props.fieldValues,
+          fields = _props.fields,
+          formAuthenticity = _props.formAuthenticity,
+          onDeliveryChange = _props.onDeliveryChange,
+          onFieldChange = _props.onFieldChange,
+          onPaymentChange = _props.onPaymentChange,
+          paymentType = _props.paymentType,
+          paymentTypes = _props.paymentTypes,
+          publicOffer = _props.publicOffer,
+          submitOrderUrl = _props.submitOrderUrl,
+          t = _props.t,
+          totalCount = _props.totalCount,
+          totalPrice = _props.totalPrice;
 
 
       return _react2.default.createElement(
@@ -12885,20 +12877,20 @@ var OrderPage = function (_Component) {
   (0, _createClass3.default)(OrderPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var backUrl = _props.backUrl;
-      var coupon = _props.coupon;
-      var deliveryTypeId = _props.deliveryTypeId;
-      var deliveryTypes = _props.deliveryTypes;
-      var errorMessage = _props.errorMessage;
-      var fields = _props.fields;
-      var formAuthenticity = _props.formAuthenticity;
-      var paymentTypeId = _props.paymentTypeId;
-      var paymentTypes = _props.paymentTypes;
-      var publicOffer = _props.publicOffer;
-      var submitOrderUrl = _props.submitOrderUrl;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          backUrl = _props.backUrl,
+          coupon = _props.coupon,
+          deliveryTypeId = _props.deliveryTypeId,
+          deliveryTypes = _props.deliveryTypes,
+          errorMessage = _props.errorMessage,
+          fields = _props.fields,
+          formAuthenticity = _props.formAuthenticity,
+          paymentTypeId = _props.paymentTypeId,
+          paymentTypes = _props.paymentTypes,
+          publicOffer = _props.publicOffer,
+          submitOrderUrl = _props.submitOrderUrl;
 
 
       return _react2.default.createElement(
@@ -13025,10 +13017,10 @@ var OrderTitle = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var t = _props.t;
-      var totalCount = _props.totalCount;
-      var totalPrice = _props.totalPrice;
+      var _props = this.props,
+          t = _props.t,
+          totalCount = _props.totalCount,
+          totalPrice = _props.totalPrice;
 
 
       if (totalCount || !(0, _lodash.isEmpty)(totalPrice)) {
@@ -13065,7 +13057,7 @@ OrderTitle.propTypes = {
 exports.default = OrderTitle;
 module.exports = exports['default'];
 
-},{"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":467,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
+},{"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13151,9 +13143,9 @@ var OrderContainer = function (_Component) {
   (0, _createClass3.default)(OrderContainer, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      var _props = this.props;
-      var initCheckout = _props.initCheckout;
-      var initialProps = _props.initialProps;
+      var _props = this.props,
+          initCheckout = _props.initCheckout,
+          initialProps = _props.initialProps;
 
 
       if (!storeInitialized && (0, _dom.canUseDOM)()) {
@@ -13179,23 +13171,23 @@ var OrderContainer = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var coupon = _props2.coupon;
-      var fields = _props2.fields;
-      var fieldValues = _props2.fieldValues;
-      var deliveryTypes = _props2.deliveryTypes;
-      var selectedDeliveryType = _props2.selectedDeliveryType;
-      var paymentTypes = _props2.paymentTypes;
-      var selectedPaymentType = _props2.selectedPaymentType;
-      var _props2$initialProps = _props2.initialProps;
-      var backUrl = _props2$initialProps.backUrl;
-      var errorMessage = _props2$initialProps.errorMessage;
-      var formAuthenticity = _props2$initialProps.formAuthenticity;
-      var publicOffer = _props2$initialProps.publicOffer;
-      var submitOrderUrl = _props2$initialProps.submitOrderUrl;
-      var t = _props2$initialProps.t;
-      var totalCount = _props2.totalCount;
-      var totalPrice = _props2.totalPrice;
+      var _props2 = this.props,
+          coupon = _props2.coupon,
+          fields = _props2.fields,
+          fieldValues = _props2.fieldValues,
+          deliveryTypes = _props2.deliveryTypes,
+          selectedDeliveryType = _props2.selectedDeliveryType,
+          paymentTypes = _props2.paymentTypes,
+          selectedPaymentType = _props2.selectedPaymentType,
+          _props2$initialProps = _props2.initialProps,
+          backUrl = _props2$initialProps.backUrl,
+          errorMessage = _props2$initialProps.errorMessage,
+          formAuthenticity = _props2$initialProps.formAuthenticity,
+          publicOffer = _props2$initialProps.publicOffer,
+          submitOrderUrl = _props2$initialProps.submitOrderUrl,
+          t = _props2$initialProps.t,
+          totalCount = _props2.totalCount,
+          totalPrice = _props2.totalPrice;
 
 
       return _react2.default.createElement(_Order2.default, {
@@ -13261,33 +13253,33 @@ OrderContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
   var _ref = storeInitialized ? state : { // TODO: move to store initialization when/if root component created
     cart: (0, _cart.initCheckoutCartStore)(state.cart, (0, _CartActions.initCheckout)(ownProps))
-  };
+  },
+      cart = _ref.cart;
 
-  var cart = _ref.cart;
-  var _cart$coupon = cart.coupon;
-  var coupon = _cart$coupon === undefined ? {} : _cart$coupon;
-  var _cart$deliveryTypes = cart.deliveryTypes;
-  var deliveryTypes = _cart$deliveryTypes === undefined ? [] : _cart$deliveryTypes;
-  var _cart$cart = cart.cart;
+  var _cart$coupon = cart.coupon,
+      coupon = _cart$coupon === undefined ? {} : _cart$coupon,
+      _cart$deliveryTypes = cart.deliveryTypes,
+      deliveryTypes = _cart$deliveryTypes === undefined ? [] : _cart$deliveryTypes,
+      _cart$cart = cart.cart;
   _cart$cart = _cart$cart === undefined ? {} : _cart$cart;
-  var _cart$cart$totalCount = _cart$cart.totalCount;
-  var totalCount = _cart$cart$totalCount === undefined ? 0 : _cart$cart$totalCount;
-  var _cart$cart$totalPrice = _cart$cart.totalPrice;
-  var cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice;
-  var _cart$checkoutFields = cart.checkoutFields;
-  var checkoutFields = _cart$checkoutFields === undefined ? [] : _cart$checkoutFields;
-  var _cart$checkoutFieldVa = cart.checkoutFieldValues;
-  var fieldValues = _cart$checkoutFieldVa === undefined ? [] : _cart$checkoutFieldVa;
-  var selectedDeliveryTypeId = cart.selectedDeliveryType;
-  var selectedPaymentTypeId = cart.selectedPaymentType;
+  var _cart$cart$totalCount = _cart$cart.totalCount,
+      totalCount = _cart$cart$totalCount === undefined ? 0 : _cart$cart$totalCount,
+      _cart$cart$totalPrice = _cart$cart.totalPrice,
+      cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice,
+      _cart$checkoutFields = cart.checkoutFields,
+      checkoutFields = _cart$checkoutFields === undefined ? [] : _cart$checkoutFields,
+      _cart$checkoutFieldVa = cart.checkoutFieldValues,
+      fieldValues = _cart$checkoutFieldVa === undefined ? [] : _cart$checkoutFieldVa,
+      selectedDeliveryTypeId = cart.selectedDeliveryType,
+      selectedPaymentTypeId = cart.selectedPaymentType;
 
   var selectedDeliveryType = (0, _lodash.find)(deliveryTypes, function (t) {
     return t.id === selectedDeliveryTypeId;
   }) || (0, _lodash.first)(deliveryTypes) || {};
-  var _selectedDeliveryType = selectedDeliveryType.availablePayments;
-  var availablePayments = _selectedDeliveryType === undefined ? [] : _selectedDeliveryType;
-  var _selectedDeliveryType2 = selectedDeliveryType.fields;
-  var availableFields = _selectedDeliveryType2 === undefined ? [] : _selectedDeliveryType2;
+  var _selectedDeliveryType = selectedDeliveryType.availablePayments,
+      availablePayments = _selectedDeliveryType === undefined ? [] : _selectedDeliveryType,
+      _selectedDeliveryType2 = selectedDeliveryType.fields,
+      availableFields = _selectedDeliveryType2 === undefined ? [] : _selectedDeliveryType2;
 
   var paymentTypes = (cart.paymentTypes || []).filter(function (p) {
     return (0, _lodash.includes)(availablePayments, p.id);
@@ -13390,16 +13382,16 @@ var OrderCancelled = function (_Component) {
   (0, _createClass3.default)(OrderCancelled, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var isCurrentClientPresent = _props.isCurrentClientPresent;
-      var order = _props.order;
-      var t = _props.t;
-      var vendorRootPath = _props.vendorRootPath;
-      var externalId = order.external_id;
-      var _order$workflow_state = order.workflow_state;
-      var bgStyle = _order$workflow_state.bg_style;
-      var title = _order$workflow_state.title;
-      var adminComments = order.admin_comments;
+      var _props = this.props,
+          isCurrentClientPresent = _props.isCurrentClientPresent,
+          order = _props.order,
+          t = _props.t,
+          vendorRootPath = _props.vendorRootPath;
+      var externalId = order.external_id,
+          _order$workflow_state = order.workflow_state,
+          bgStyle = _order$workflow_state.bg_style,
+          title = _order$workflow_state.title,
+          adminComments = order.admin_comments;
 
 
       return _react2.default.createElement(
@@ -13516,12 +13508,12 @@ var OrderCancelledPage = function (_Component) {
   (0, _createClass3.default)(OrderCancelledPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var isCurrentClientPresent = _props.isCurrentClientPresent;
-      var layoutProps = _props.layoutProps;
-      var order = _props.order;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          i18n = _props.i18n,
+          isCurrentClientPresent = _props.isCurrentClientPresent,
+          layoutProps = _props.layoutProps,
+          order = _props.order,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -13692,18 +13684,18 @@ var OrderCreated = function (_Component) {
   (0, _createClass3.default)(OrderCreated, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var order = _props.order;
-      var t = _props.t;
-      var vendorRootPath = _props.vendorRootPath;
-      var phone = order.phone;
-      var externalId = order.external_id;
-      var defaultUrl = order.default_url;
-      var adminComments = order.admin_comments;
-      var totalWithDeliveryPrice = order.total_with_delivery_price;
-      var freeDelivery = order.free_delivery;
-      var freeDeliveryThreshold = order.free_delivery_threshold;
-      var deliveryType = order.delivery_type;
+      var _props = this.props,
+          order = _props.order,
+          t = _props.t,
+          vendorRootPath = _props.vendorRootPath;
+      var phone = order.phone,
+          externalId = order.external_id,
+          defaultUrl = order.default_url,
+          adminComments = order.admin_comments,
+          totalWithDeliveryPrice = order.total_with_delivery_price,
+          freeDelivery = order.free_delivery,
+          freeDeliveryThreshold = order.free_delivery_threshold,
+          deliveryType = order.delivery_type;
 
       var message = t('vendor.order.created.desc_html', {
         phone: phone,
@@ -13833,11 +13825,11 @@ var OrderCreatedPage = function (_Component) {
   (0, _createClass3.default)(OrderCreatedPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var order = _props.order;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          order = _props.order,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -14002,21 +13994,19 @@ var OrderPaid = function (_Component) {
   (0, _createClass3.default)(OrderPaid, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var isCurrentClientPresent = _props.isCurrentClientPresent;
-      var order = _props.order;
-      var t = _props.t;
-      var vendorRootPath = _props.vendorRootPath;
-      var externalId = order.external_id;
-      var adminComments = order.admin_comments;
-      var orderDelivery = order.order_delivery;
-      var workflowState = order.workflow_state;
+      var _props = this.props,
+          isCurrentClientPresent = _props.isCurrentClientPresent,
+          order = _props.order,
+          t = _props.t,
+          vendorRootPath = _props.vendorRootPath;
+      var externalId = order.external_id,
+          adminComments = order.admin_comments,
+          orderDelivery = order.order_delivery,
+          workflowState = order.workflow_state;
 
-      var _ref = orderDelivery || {};
-
-      var trackingUrl = _ref.tracking_url;
-      var trackingId = _ref.tracking_id;
-
+      var _ref = orderDelivery || {},
+          trackingUrl = _ref.tracking_url,
+          trackingId = _ref.tracking_id;
 
       return _react2.default.createElement(
         'section',
@@ -14147,12 +14137,12 @@ var OrderPaidPage = function (_Component) {
   (0, _createClass3.default)(OrderPaidPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var isCurrentClientPresent = _props.isCurrentClientPresent;
-      var layoutProps = _props.layoutProps;
-      var order = _props.order;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          i18n = _props.i18n,
+          isCurrentClientPresent = _props.isCurrentClientPresent,
+          layoutProps = _props.layoutProps,
+          order = _props.order,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -14310,9 +14300,9 @@ var OrderPayment = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var _props = this.props;
-      var autosubmitTimeout = _props.autosubmitTimeout;
-      var shouldAutosubmit = _props.shouldAutosubmit;
+      var _props = this.props,
+          autosubmitTimeout = _props.autosubmitTimeout,
+          shouldAutosubmit = _props.shouldAutosubmit;
 
 
       if (shouldAutosubmit && (0, _dom.canUseDOM)()) {
@@ -14324,10 +14314,10 @@ var OrderPayment = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var fields = _props2.fields;
-      var orderPaymentUrl = _props2.orderPaymentUrl;
-      var t = _props2.t;
+      var _props2 = this.props,
+          fields = _props2.fields,
+          orderPaymentUrl = _props2.orderPaymentUrl,
+          t = _props2.t;
 
 
       return _react2.default.createElement(
@@ -14341,8 +14331,8 @@ var OrderPayment = function (_Component) {
             'form',
             { action: orderPaymentUrl, ref: 'form' },
             fields.map(function (_ref) {
-              var name = _ref.name;
-              var value = _ref.value;
+              var name = _ref.name,
+                  value = _ref.value;
               return _react2.default.createElement('input', {
                 key: 'form-input-' + name,
                 name: name,
@@ -14435,13 +14425,13 @@ var OrderPaymentPage = function (_Component) {
   (0, _createClass3.default)(OrderPaymentPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var autosubmitTimeout = _props.autosubmitTimeout;
-      var fields = _props.fields;
-      var orderPaymentUrl = _props.orderPaymentUrl;
-      var shouldAutosubmit = _props.shouldAutosubmit;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          autosubmitTimeout = _props.autosubmitTimeout,
+          fields = _props.fields,
+          orderPaymentUrl = _props.orderPaymentUrl,
+          shouldAutosubmit = _props.shouldAutosubmit;
 
 
       return _react2.default.createElement(
@@ -14613,25 +14603,24 @@ var OrderShow = function (_Component) {
   (0, _createClass3.default)(OrderShow, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var order = _props.order;
-      var t = _props.t;
-      var externalId = order.external_id;
-      var orderDelivery = order.order_delivery;
-      var _order$delivery_type = order.delivery_type;
-      var deliveryType = _order$delivery_type === undefined ? {} : _order$delivery_type;
-      var freeDelivery = order.free_delivery;
-      var freeDeliveryThreshold = order.free_delivery_threshold;
-      var mustBePaidOnline = order.must_be_paid_online;
-      var paymentUrl = order.payment_url;
-      var _order$payment_type = order.payment_type;
-      var paymentType = _order$payment_type === undefined ? {} : _order$payment_type;
-      var workflowState = order.workflow_state;
+      var _props = this.props,
+          order = _props.order,
+          t = _props.t;
+      var externalId = order.external_id,
+          orderDelivery = order.order_delivery,
+          _order$delivery_type = order.delivery_type,
+          deliveryType = _order$delivery_type === undefined ? {} : _order$delivery_type,
+          freeDelivery = order.free_delivery,
+          freeDeliveryThreshold = order.free_delivery_threshold,
+          mustBePaidOnline = order.must_be_paid_online,
+          paymentUrl = order.payment_url,
+          _order$payment_type = order.payment_type,
+          paymentType = _order$payment_type === undefined ? {} : _order$payment_type,
+          workflowState = order.workflow_state;
 
-      var _ref = orderDelivery || {};
-
-      var trackingId = _ref.tracking_id;
-      var trackingUrl = _ref.tracking_url;
+      var _ref = orderDelivery || {},
+          trackingId = _ref.tracking_id,
+          trackingUrl = _ref.tracking_url;
 
       var freeDeliveryMessage = freeDelivery ? t('vendor.order.free_delivery_text_html', {
         free_delivery_threshold: (0, _money.humanizedMoneyWithCurrency)(freeDeliveryThreshold)
@@ -14772,10 +14761,10 @@ var OrderShowPage = function (_Component) {
   (0, _createClass3.default)(OrderShowPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var order = _props.order;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          order = _props.order;
 
 
       return _react2.default.createElement(
@@ -14943,9 +14932,9 @@ var Pagination = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var currentPage = _props.currentPage;
-      var totalPages = _props.totalPages;
+      var _props = this.props,
+          currentPage = _props.currentPage,
+          totalPages = _props.totalPages;
 
 
       var showArrows = totalPages >= WINDOW_SIZE;
@@ -14976,7 +14965,7 @@ var Pagination = function (_Component) {
         currentPage > WINDOW_SIZE + 1 && _react2.default.createElement(
           'span',
           { className: 'page gap' },
-          '…'
+          '\u2026'
         ),
         ' ',
         _react2.default.createElement(_PaginationCurrentWindow2.default, {
@@ -14988,7 +14977,7 @@ var Pagination = function (_Component) {
         currentPage + WINDOW_SIZE < totalPages && _react2.default.createElement(
           'span',
           { className: 'page gap' },
-          '…'
+          '\u2026'
         ),
         ' ',
         showArrows && currentPage + 1 <= totalPages && _react2.default.createElement(
@@ -15050,9 +15039,9 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function PaginationCurrentWindow(props) {
-  var currentPage = props.currentPage;
-  var totalPages = props.totalPages;
-  var getPageHref = props.getPageHref;
+  var currentPage = props.currentPage,
+      totalPages = props.totalPages,
+      getPageHref = props.getPageHref;
 
   var startPage = Math.max(currentPage - _Pagination.WINDOW_SIZE, 1);
   var endPage = Math.min(currentPage + _Pagination.WINDOW_SIZE, totalPages) + 1;
@@ -15124,7 +15113,7 @@ PaginationContainer.propTypes = schemas.pagination.isRequired;
 exports.default = PaginationContainer;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"./Pagination":138,"humps":467,"react":"react"}],141:[function(require,module,exports){
+},{"../../schemas":311,"./Pagination":138,"humps":468,"react":"react"}],141:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15172,10 +15161,10 @@ var Payment = function (_Component) {
   (0, _createClass3.default)(Payment, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var state = _props.state;
-      var vendorUrl = _props.vendorUrl;
-      var t = _props.t;
+      var _props = this.props,
+          state = _props.state,
+          vendorUrl = _props.vendorUrl,
+          t = _props.t;
 
 
       var cartTitle = state === PAYMENT_SUCCESS ? t('payment.w1.success.title') : t('payment.w1.failure.title');
@@ -15285,11 +15274,11 @@ var PaymentPage = function (_Component) {
   (0, _createClass3.default)(PaymentPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var state = _props.state;
-      var vendorUrl = _props.vendorUrl;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          state = _props.state,
+          vendorUrl = _props.vendorUrl;
 
 
       return _react2.default.createElement(
@@ -15370,7 +15359,7 @@ PaymentContainer.propTypes = {
 
 exports.default = (0, _provideTranslations2.default)(PaymentContainer);
 
-},{"../HoC/provideTranslations":93,"./Payment":141,"babel-runtime/helpers/extends":352,"humps":467,"react":"react"}],144:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"./Payment":141,"babel-runtime/helpers/extends":352,"humps":468,"react":"react"}],144:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15384,9 +15373,9 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductAddToCartButton = function ProductAddToCartButton(_ref) {
-  var disabled = _ref.disabled;
-  var t = _ref.t;
-  var text = _ref.text;
+  var disabled = _ref.disabled,
+      t = _ref.t,
+      text = _ref.text;
   return _react2.default.createElement(
     'button',
     {
@@ -15426,8 +15415,8 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadge = function ProductBadge(_ref) {
-  var status = _ref.status;
-  var text = _ref.text;
+  var status = _ref.status,
+      text = _ref.text;
   return _react2.default.createElement(
     'span',
     { className: (0, _classnames2.default)('b-status', 'b-status_' + status) },
@@ -15461,8 +15450,8 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeNew = function ProductBadgeNew(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
   return product.is_label_new ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.new'), status: 'sold' }) : _react2.default.createElement('span', null);
 };
 
@@ -15491,8 +15480,8 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeSale = function ProductBadgeSale(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
 
   if (product.is_sale) {
     var title = t('vendor.badges.sale');
@@ -15538,8 +15527,8 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeSoldOut = function ProductBadgeSoldOut(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
   return product.is_sold ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.sold'), status: 'sold' }) : _react2.default.createElement('span', null);
 };
 
@@ -15568,8 +15557,8 @@ var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadgeUnavailable = function ProductBadgeUnavailable(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
   return !product.has_ordering_goods && !product.is_run_out ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.not_available'), status: 'sold' }) : _react2.default.createElement('span', null);
 };
 
@@ -15610,8 +15599,8 @@ var _ProductBadgeUnavailable2 = _interopRequireDefault(_ProductBadgeUnavailable)
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBlockBadges = function ProductBlockBadges(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
   return _react2.default.createElement(
     'div',
     { className: 'b-item__status' },
@@ -15684,9 +15673,9 @@ var ProductBlockImage = function (_Component) {
   (0, _createClass3.default)(ProductBlockImage, [{
     key: 'getCurrentImage',
     value: function getCurrentImage() {
-      var _props$product = this.props.product;
-      var index_image = _props$product.index_image;
-      var second_image = _props$product.second_image;
+      var _props$product = this.props.product,
+          index_image = _props$product.index_image,
+          second_image = _props$product.second_image;
       var isHover = this.state.isHover;
 
 
@@ -15705,11 +15694,11 @@ var ProductBlockImage = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var maxWidth = _props.maxWidth;
-      var _props$product2 = _props.product;
-      var second_image = _props$product2.second_image;
-      var title = _props$product2.title;
+      var _props = this.props,
+          maxWidth = _props.maxWidth,
+          _props$product2 = _props.product,
+          second_image = _props$product2.second_image,
+          title = _props$product2.title;
       var currentImage = this.state.currentImage;
 
 
@@ -15787,10 +15776,10 @@ var _ProductBlockCartFormButton2 = _interopRequireDefault(_ProductBlockCartFormB
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBlock = function ProductBlock(_ref) {
-  var showCartButton = _ref.showCartButton;
-  var showQuantity = _ref.showQuantity;
-  var product = _ref.product;
-  var t = _ref.t;
+  var showCartButton = _ref.showCartButton,
+      showQuantity = _ref.showQuantity,
+      product = _ref.product,
+      t = _ref.t;
   return _react2.default.createElement(
     'div',
     { className: 'b-item-list__item' },
@@ -15975,9 +15964,9 @@ var ProductBlockCartFormButton = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var t = _props.t;
-      var showQuantity = _props.showQuantity;
+      var _props = this.props,
+          t = _props.t,
+          showQuantity = _props.showQuantity;
       var itemState = this.state.itemState;
 
       var text = itemState.isRequestProcessing ? t('vendor.button.disable_with.adding') : t('vendor.button.to_cart');
@@ -16304,13 +16293,13 @@ var ProductCard = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var similarProducts = _props.similarProducts;
-      var otherProducts = _props.otherProducts;
-      var t = _props.t;
-      var _state = this.state;
-      var good = _state.good;
-      var product = _state.product;
+      var _props = this.props,
+          similarProducts = _props.similarProducts,
+          otherProducts = _props.otherProducts,
+          t = _props.t;
+      var _state = this.state,
+          good = _state.good,
+          product = _state.product;
 
 
       return _react2.default.createElement(
@@ -16417,7 +16406,7 @@ exports.default = (0, _provideTranslations2.default)(ProductCard);
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../../schemas":311,"../../HoC/provideTranslations":93,"../ProductCart":175,"../ProductPrices":180,"./ProductCard.constants":155,"./ProductCardBadges":157,"./ProductCardBreadcrumbs":158,"./ProductCardDetails":161,"./ProductCardGallery":162,"./ProductCardSchema":166,"./ProductCardSimilarProducts":167,"./ProductCardTitle":168,"./ProductCardVideo":169,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-disqus-thread":599}],157:[function(require,module,exports){
+},{"../../../schemas":311,"../../HoC/provideTranslations":93,"../ProductCart":175,"../ProductPrices":180,"./ProductCard.constants":155,"./ProductCardBadges":157,"./ProductCardBreadcrumbs":158,"./ProductCardDetails":161,"./ProductCardGallery":162,"./ProductCardSchema":166,"./ProductCardSimilarProducts":167,"./ProductCardTitle":168,"./ProductCardVideo":169,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-disqus-thread":600}],157:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16439,8 +16428,8 @@ var _ProductBadgeSale2 = _interopRequireDefault(_ProductBadgeSale);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductCardBadges = function ProductCardBadges(_ref) {
-  var product = _ref.product;
-  var t = _ref.t;
+  var product = _ref.product,
+      t = _ref.t;
   return _react2.default.createElement(
     'span',
     null,
@@ -16509,9 +16498,9 @@ var ProductCardBreadcrumbs = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductCardBreadcrumbs, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var product = _props.product;
+      var _props = this.props,
+          className = _props.className,
+          product = _props.product;
 
 
       if (product.categories && product.categories.length) {
@@ -16609,9 +16598,9 @@ var ProductCardContainer = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      var _props = this.props;
-      var productCardID = _props.productCardID;
-      var vendorID = _props.vendorID;
+      var _props = this.props,
+          productCardID = _props.productCardID,
+          vendorID = _props.vendorID;
 
 
       if (this.isLoadingNeeded(this.props)) {
@@ -16635,9 +16624,9 @@ var ProductCardContainer = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _state = this.state;
-      var currentState = _state.currentState;
-      var productCard = _state.productCard;
+      var _state = this.state,
+          currentState = _state.currentState,
+          productCard = _state.productCard;
 
 
       switch (currentState) {
@@ -16783,9 +16772,9 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
   }, {
     key: 'renderOtherProducts',
     value: function renderOtherProducts() {
-      var _props = this.props;
-      var otherProducts = _props.otherProducts;
-      var t = _props.t;
+      var _props = this.props,
+          otherProducts = _props.otherProducts,
+          t = _props.t;
 
 
       if (otherProducts.length > 0) {
@@ -16996,9 +16985,9 @@ var ProductCardGalleryImage = function (_Component) {
   (0, _createClass3.default)(ProductCardGalleryImage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var images = _props.images;
-      var previewWidth = _props.previewWidth;
+      var _props = this.props,
+          images = _props.images,
+          previewWidth = _props.previewWidth;
 
       var image = images[0];
 
@@ -17192,8 +17181,8 @@ var ProductCardGallerySlider = function (_Component) {
   }, {
     key: 'initFancybox',
     value: function initFancybox() {
-      var _props$t = this.props.t;
-      var t = _props$t === undefined ? function () {} : _props$t;
+      var _props$t = this.props.t,
+          t = _props$t === undefined ? function () {} : _props$t;
 
       var $productPhoto = (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productPhoto));
 
@@ -17280,9 +17269,9 @@ var ProductCardGallerySlider = function (_Component) {
   }, {
     key: 'renderThumb',
     value: function renderThumb(elt, idx) {
-      var _props = this.props;
-      var thumbHeight = _props.thumbHeight;
-      var thumbWidth = _props.thumbWidth;
+      var _props = this.props,
+          thumbHeight = _props.thumbHeight,
+          thumbWidth = _props.thumbWidth;
 
 
       return _react2.default.createElement(
@@ -17412,19 +17401,19 @@ var ProductCardPage = function (_Component) {
   (0, _createClass3.default)(ProductCardPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var addWishlistUrl = _props.addWishlistUrl;
-      var formAuthenticity = _props.formAuthenticity;
-      var hasWishlist = _props.hasWishlist;
-      var hasComments = _props.hasComments;
-      var disqusUrl = _props.disqusUrl;
-      var isWishlisted = _props.isWishlisted;
-      var product = _props.product;
-      var similarProducts = _props.similarProducts;
-      var otherProducts = _props.otherProducts;
-      var wishlistUrl = _props.wishlistUrl;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          addWishlistUrl = _props.addWishlistUrl,
+          formAuthenticity = _props.formAuthenticity,
+          hasWishlist = _props.hasWishlist,
+          hasComments = _props.hasComments,
+          disqusUrl = _props.disqusUrl,
+          isWishlisted = _props.isWishlisted,
+          product = _props.product,
+          similarProducts = _props.similarProducts,
+          otherProducts = _props.otherProducts,
+          wishlistUrl = _props.wishlistUrl;
 
 
       return _react2.default.createElement(
@@ -17550,8 +17539,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductCardSimilarProducts = function ProductCardSimilarProducts(_ref) {
-  var products = _ref.products;
-  var t = _ref.t;
+  var products = _ref.products,
+      t = _ref.t;
   return products && products.length ? _react2.default.createElement(
     'section',
     { className: 'b-item-list b-item-list_additional' },
@@ -17634,9 +17623,9 @@ var ProductCardTitle = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductCardTitle, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var product = _props.product;
+      var _props = this.props,
+          className = _props.className,
+          product = _props.product;
 
 
       return _react2.default.createElement(
@@ -17868,11 +17857,11 @@ var ProductCartForProductItems = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductCartForProductItems, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var _props$product = _props.product;
-      var goods = _props$product.goods;
-      var properties = _props$product.properties;
-      var t = _props.t;
+      var _props = this.props,
+          _props$product = _props.product,
+          goods = _props$product.goods,
+          properties = _props$product.properties,
+          t = _props.t;
 
 
       if (properties.length) {
@@ -18000,10 +17989,10 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductCartWishlist, [{
     key: 'getAddWishlistUrl',
     value: function getAddWishlistUrl() {
-      var _props = this.props;
-      var addWishlistUrl = _props.addWishlistUrl;
-      var good = _props.good;
-      var product = _props.product;
+      var _props = this.props,
+          addWishlistUrl = _props.addWishlistUrl,
+          good = _props.good,
+          product = _props.product;
 
 
       return new _urijs2.default(addWishlistUrl).addQuery('good_id', good ? good.global_id : product.global_id).toString();
@@ -18011,13 +18000,13 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var addWishlistText = _props2.addWishlistText;
-      var addWishlistUrl = _props2.addWishlistUrl;
-      var goWishlistText = _props2.goWishlistText;
-      var hasWishlist = _props2.hasWishlist;
-      var isWishlisted = _props2.isWishlisted;
-      var wishlistUrl = _props2.wishlistUrl;
+      var _props2 = this.props,
+          addWishlistText = _props2.addWishlistText,
+          addWishlistUrl = _props2.addWishlistUrl,
+          goWishlistText = _props2.goWishlistText,
+          hasWishlist = _props2.hasWishlist,
+          isWishlisted = _props2.isWishlisted,
+          wishlistUrl = _props2.wishlistUrl;
 
 
       if (hasWishlist && (wishlistUrl || addWishlistUrl)) {
@@ -18174,11 +18163,11 @@ var ProductCart = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var onProductChange = _props.onProductChange;
-      var product = _props.product;
-      var t = _props.t;
-      var good = _props.good;
+      var _props = this.props,
+          onProductChange = _props.onProductChange,
+          product = _props.product,
+          t = _props.t,
+          good = _props.good;
 
       return _react2.default.createElement(
         'form',
@@ -18191,7 +18180,7 @@ var ProductCart = (_temp = _class = function (_Component) {
         _react2.default.createElement(
           'div',
           { style: { display: 'none' } },
-          _react2.default.createElement(_HiddenInput2.default, { name: 'utf8', value: '✓' }),
+          _react2.default.createElement(_HiddenInput2.default, { name: 'utf8', value: '\u2713' }),
           _react2.default.createElement(_CSRFToken2.default, this.props.formAuthenticity)
         ),
         this.renderProductBulkInput(product, good, t),
@@ -18277,9 +18266,9 @@ var ProductGoods = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductGoods, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var _props = this.props;
-      var product = _props.product;
-      var onGoodChange = _props.onGoodChange;
+      var _props = this.props,
+          product = _props.product,
+          onGoodChange = _props.onGoodChange;
 
 
       for (var i = 0; i < product.goods.length; i++) {
@@ -18294,7 +18283,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
   }, {
     key: 'isTitlesValid',
     value: function isTitlesValid(product) {
-      var maxLength = arguments.length <= 1 || arguments[1] === undefined ? 30 : arguments[1];
+      var maxLength = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 30;
 
       return !product.goods.some(function (el) {
         return (0, _product.goodOrderTitle)(product, el).length > maxLength;
@@ -18304,9 +18293,9 @@ var ProductGoods = (_temp = _class = function (_Component) {
     key: 'handleSelectChange',
     value: function handleSelectChange(e) {
       var value = e.target.value;
-      var _props2 = this.props;
-      var onGoodChange = _props2.onGoodChange;
-      var goods = _props2.product.goods;
+      var _props2 = this.props,
+          onGoodChange = _props2.onGoodChange,
+          goods = _props2.product.goods;
 
 
       for (var i = 0; i < goods.length; i++) {
@@ -18363,10 +18352,10 @@ var ProductGoods = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props3 = this.props;
-      var product = _props3.product;
-      var t = _props3.t;
-      var wishlistUrl = _props3.wishlistUrl;
+      var _props3 = this.props,
+          product = _props3.product,
+          t = _props3.t,
+          wishlistUrl = _props3.wishlistUrl;
 
 
       if (this.isTitlesValid(product)) {
@@ -18453,8 +18442,8 @@ var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCur
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductGoodActualPrice = function ProductGoodActualPrice(_ref) {
-  var good = _ref.good;
-  var t = _ref.t;
+  var good = _ref.good,
+      t = _ref.t;
   return good.actual_price ? _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: good.actual_price }) : _react2.default.createElement(
     'span',
     null,
@@ -18531,7 +18520,7 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
         return _react2.default.createElement(
           'span',
           null,
-          ' / ',
+          '\xA0/\xA0',
           product.weight_of_price,
           ' ',
           t('vendor.product.kg')
@@ -18543,10 +18532,10 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var product = _props.product;
-      var good = _props.good;
-      var t = _props.t;
+      var _props = this.props,
+          product = _props.product,
+          good = _props.good,
+          t = _props.t;
 
 
       if (good.is_sale) {
@@ -18641,9 +18630,9 @@ var ProductGoodPrices = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(ProductGoodPrices, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var minPrice = _props.minPrice;
-      var maxPrice = _props.maxPrice;
+      var _props = this.props,
+          minPrice = _props.minPrice,
+          maxPrice = _props.maxPrice;
 
 
       return _react2.default.createElement(
@@ -18756,10 +18745,10 @@ var ProductPrices = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var good = _props.good;
-      var product = _props.product;
-      var t = _props.t;
+      var _props = this.props,
+          good = _props.good,
+          product = _props.product,
+          t = _props.t;
 
 
       if (good) {
@@ -18787,7 +18776,7 @@ var ProductPrices = function (_Component) {
         }
       } else {
         if ((typeof Bugsnag === 'undefined' ? 'undefined' : (0, _typeof3.default)(Bugsnag)) === 'object' && typeof Bugsnag.warn === 'function') {
-          Bugsnag.warn('Ошибка ProductPrices', 'Product:id[' + product.id + '] не имеет ни одного элемента goods');
+          Bugsnag.warn('Ошибка ProductPrices', 'Product:id[' + product.id + '] \u043D\u0435 \u0438\u043C\u0435\u0435\u0442 \u043D\u0438 \u043E\u0434\u043D\u043E\u0433\u043E \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430 goods');
         }
 
         return null;
@@ -18830,11 +18819,11 @@ var _PropertyListItem2 = _interopRequireDefault(_PropertyListItem);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PropertyList = function PropertyList(_ref) {
-  var goods = _ref.goods;
-  var onChange = _ref.onChange;
-  var properties = _ref.properties;
-  var t = _ref.t;
-  var values = _ref.values;
+  var goods = _ref.goods,
+      onChange = _ref.onChange,
+      properties = _ref.properties,
+      t = _ref.t,
+      values = _ref.values;
 
   if (properties.length) {
     var _ret = function () {
@@ -18940,12 +18929,12 @@ var PropertyListItem = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(PropertyListItem, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var value = _props.value;
-      var options = _props.options;
-      var property = _props.property;
-      var onChange = _props.onChange;
-      var t = _props.t;
+      var _props = this.props,
+          value = _props.value,
+          options = _props.options,
+          property = _props.property,
+          onChange = _props.onChange,
+          t = _props.t;
 
       var Component = this.getComponentByType(property.type);
 
@@ -19215,11 +19204,11 @@ var PropertySingle = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var goods = _props.goods;
-      var onChange = _props.onChange;
-      var properties = _props.properties;
-      var values = _props.values;
+      var _props = this.props,
+          goods = _props.goods,
+          onChange = _props.onChange,
+          properties = _props.properties,
+          values = _props.values;
 
       var options = (0, _utils.getOptions)(properties, goods, values);
       var property = properties[0];
@@ -19335,8 +19324,8 @@ var ProductProperties = (_temp = _class = function (_Component) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (ProductProperties.__proto__ || (0, _getPrototypeOf2.default)(ProductProperties)).call(this, props));
 
-    var goods = props.goods;
-    var properties = props.properties;
+    var goods = props.goods,
+        properties = props.properties;
 
 
     _this.state = {
@@ -19372,8 +19361,8 @@ var ProductProperties = (_temp = _class = function (_Component) {
     key: 'validateProps',
     value: function validateProps(props) {
       // Number of attributes in every good equals number of product properties
-      var goods = props.goods;
-      var properties = props.properties;
+      var goods = props.goods,
+          properties = props.properties;
 
 
       if (properties && properties.length && goods && goods.length) {
@@ -19395,9 +19384,9 @@ var ProductProperties = (_temp = _class = function (_Component) {
   }, {
     key: 'updateValues',
     value: function updateValues(property, value) {
-      var _props = this.props;
-      var properties = _props.properties;
-      var goods = _props.goods;
+      var _props = this.props,
+          properties = _props.properties,
+          goods = _props.goods;
       var values = this.state.values;
 
 
@@ -19412,9 +19401,9 @@ var ProductProperties = (_temp = _class = function (_Component) {
     key: 'render',
     value: function render() {
       var t = this.props.t;
-      var _state = this.state;
-      var good = _state.good;
-      var values = _state.values;
+      var _state = this.state,
+          good = _state.good,
+          values = _state.values;
 
 
       var hiddenInput = good && _react2.default.createElement(_HiddenInput2.default, {
@@ -19727,13 +19716,13 @@ var ProductArchived = function (_Component) {
   (0, _createClass3.default)(ProductArchived, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var product = _props.product;
-      var searchProductsPath = _props.searchProductsPath;
-      var t = _props.t;
-      var vendorCategoryPath = _props.vendorCategoryPath;
-      var category = product.category;
-      var title = product.title;
+      var _props = this.props,
+          product = _props.product,
+          searchProductsPath = _props.searchProductsPath,
+          t = _props.t,
+          vendorCategoryPath = _props.vendorCategoryPath;
+      var category = product.category,
+          title = product.title;
 
 
       return _react2.default.createElement(
@@ -19866,12 +19855,12 @@ var ProductArchivedPage = function (_Component) {
   (0, _createClass3.default)(ProductArchivedPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var product = _props.product;
-      var searchProductsPath = _props.searchProductsPath;
-      var vendorCategoryPath = _props.vendorCategoryPath;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          product = _props.product,
+          searchProductsPath = _props.searchProductsPath,
+          vendorCategoryPath = _props.vendorCategoryPath;
 
 
       return _react2.default.createElement(
@@ -20045,15 +20034,15 @@ var ProductGroup = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var i18n = _props.i18n;
-      var items = _props.products.items;
-      var showCartButton = _props.showCartButton;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showQuantity = _props.showQuantity;
-      var t = _props.t;
-      var title = _props.title;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          i18n = _props.i18n,
+          items = _props.products.items,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showQuantity = _props.showQuantity,
+          t = _props.t,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -20283,19 +20272,19 @@ var ProductList = function (_Component) {
   (0, _createClass3.default)(ProductList, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var container = _props.container;
-      var i18n = _props.i18n;
-      var _props$products = _props.products;
-      var items = _props$products.items;
-      var pagination = _props$products.pagination;
-      var showCartButton = _props.showCartButton;
-      var showPagination = _props.showPagination;
-      var showQuantity = _props.showQuantity;
-      var t = _props.t;
-      var title = _props.title;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          showCatalogFilter = _props.showCatalogFilter,
+          container = _props.container,
+          i18n = _props.i18n,
+          _props$products = _props.products,
+          items = _props$products.items,
+          pagination = _props$products.pagination,
+          showCartButton = _props.showCartButton,
+          showPagination = _props.showPagination,
+          showQuantity = _props.showQuantity,
+          t = _props.t,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -20552,14 +20541,14 @@ var ProductSearch = function (_Component) {
   (0, _createClass3.default)(ProductSearch, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var products = _props.products;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showCartButton = _props.showCartButton;
-      var showQuantity = _props.showQuantity;
-      var t = _props.t;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          products = _props.products,
+          showCatalogFilter = _props.showCatalogFilter,
+          showCartButton = _props.showCartButton,
+          showQuantity = _props.showQuantity,
+          t = _props.t,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return products.items.length ? _react2.default.createElement(_ProductList2.default, {
@@ -20681,15 +20670,15 @@ var ProductSearchPage = function (_Component) {
   (0, _createClass3.default)(ProductSearchPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var products = _props.products;
-      var showCartButton = _props.showCartButton;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showQuantity = _props.showQuantity;
-      var vendorRootPath = _props.vendorRootPath;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          products = _props.products,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showQuantity = _props.showQuantity,
+          vendorRootPath = _props.vendorRootPath;
 
 
       return _react2.default.createElement(
@@ -21044,9 +21033,9 @@ var TopBanner = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var content = _props.content;
-      var url = _props.url;
+      var _props = this.props,
+          content = _props.content,
+          url = _props.url;
 
 
       return _react2.default.createElement(
@@ -21143,24 +21132,24 @@ var Userbar = function (_Component) {
   (0, _createClass3.default)(Userbar, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var authUrl = _props.authUrl;
-      var categoryPageUrl = _props.categoryPageUrl;
-      var pageType = _props.pageType;
-      var productPageUrl = _props.productPageUrl;
-      var cabinetText = _props.cabinetText;
-      var cabinetUrl = _props.cabinetUrl;
-      var designText = _props.designText;
-      var hasCabinet = _props.hasCabinet;
-      var hasDesign = _props.hasDesign;
-      var hasOperator = _props.hasOperator;
-      var hasWishlist = _props.hasWishlist;
-      var openDesignSettingsPopup = _props.openDesignSettingsPopup;
-      var operatorText = _props.operatorText;
-      var operatorUrl = _props.operatorUrl;
-      var wishlistItemsCount = _props.wishlistItemsCount;
-      var wishlistText = _props.wishlistText;
-      var wishlistUrl = _props.wishlistUrl;
+      var _props = this.props,
+          authUrl = _props.authUrl,
+          categoryPageUrl = _props.categoryPageUrl,
+          pageType = _props.pageType,
+          productPageUrl = _props.productPageUrl,
+          cabinetText = _props.cabinetText,
+          cabinetUrl = _props.cabinetUrl,
+          designText = _props.designText,
+          hasCabinet = _props.hasCabinet,
+          hasDesign = _props.hasDesign,
+          hasOperator = _props.hasOperator,
+          hasWishlist = _props.hasWishlist,
+          openDesignSettingsPopup = _props.openDesignSettingsPopup,
+          operatorText = _props.operatorText,
+          operatorUrl = _props.operatorUrl,
+          wishlistItemsCount = _props.wishlistItemsCount,
+          wishlistText = _props.wishlistText,
+          wishlistUrl = _props.wishlistUrl;
 
 
       return _react2.default.createElement(
@@ -21314,11 +21303,11 @@ var UserbarContainer = function (_Component) {
   (0, _createClass3.default)(UserbarContainer, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-      var _props = this.props;
-      var designMode = _props.designMode;
-      var fetchClientState = _props.fetchClientState;
-      var fetchOperatorState = _props.fetchOperatorState;
-      var openDesignSettingsPopup = _props.openDesignSettingsPopup;
+      var _props = this.props,
+          designMode = _props.designMode,
+          fetchClientState = _props.fetchClientState,
+          fetchOperatorState = _props.fetchOperatorState,
+          openDesignSettingsPopup = _props.openDesignSettingsPopup;
 
 
       if (designMode) {
@@ -21380,13 +21369,13 @@ UserbarContainer.propTypes = (0, _extends3.default)({}, externalPropTypes, {
 });
 
 exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
-  var _state$operatorState$ = state.operatorState.data;
-  var designMode = _state$operatorState$.designMode;
-  var hasDesign = _state$operatorState$.hasDesign;
-  var hasOperator = _state$operatorState$.hasOperator;
-  var _state$clientState$da = state.clientState.data;
-  var hasWishlist = _state$clientState$da.hasWishlist;
-  var wishlistItemsCount = _state$clientState$da.wishlistItemsCount;
+  var _state$operatorState$ = state.operatorState.data,
+      designMode = _state$operatorState$.designMode,
+      hasDesign = _state$operatorState$.hasDesign,
+      hasOperator = _state$operatorState$.hasOperator;
+  var _state$clientState$da = state.clientState.data,
+      hasWishlist = _state$clientState$da.hasWishlist,
+      wishlistItemsCount = _state$clientState$da.wishlistItemsCount;
 
 
   return (0, _assign2.default)({}, ownProps, {
@@ -21460,11 +21449,11 @@ var Footer = function (_Component) {
   (0, _createClass3.default)(Footer, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var customAfterContentHtml = _props.customAfterContentHtml;
-      var i18n = _props.i18n;
-      var menuBottomProps = _props.menuBottomProps;
-      var showInstagramContainer = _props.showInstagramContainer;
+      var _props = this.props,
+          customAfterContentHtml = _props.customAfterContentHtml,
+          i18n = _props.i18n,
+          menuBottomProps = _props.menuBottomProps,
+          showInstagramContainer = _props.showInstagramContainer;
 
 
       return _react2.default.createElement(
@@ -21607,24 +21596,24 @@ var VendorLayout = function (_Component) {
   (0, _createClass3.default)(VendorLayout, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var children = _props.children;
-      var flash = _props.flash;
-      var i18n = _props.i18n;
-      var menuBottomProps = _props.menuBottomProps;
-      var menuTopProps = _props.menuTopProps;
-      var navBarProps = _props.navBarProps;
-      var publishShopPath = _props.publishShopPath;
-      var scrollToTopProps = _props.scrollToTopProps;
-      var showClientBar = _props.showClientBar;
-      var showInstagramContainer = _props.showInstagramContainer;
-      var showMenuTop = _props.showMenuTop;
-      var showTopBanner = _props.showTopBanner;
-      var t = _props.t;
-      var topBannerProps = _props.topBannerProps;
-      var userbarProps = _props.userbarProps;
-      var vendor = _props.vendor;
-      var w1ptEnabled = _props.w1ptEnabled;
+      var _props = this.props,
+          children = _props.children,
+          flash = _props.flash,
+          i18n = _props.i18n,
+          menuBottomProps = _props.menuBottomProps,
+          menuTopProps = _props.menuTopProps,
+          navBarProps = _props.navBarProps,
+          publishShopPath = _props.publishShopPath,
+          scrollToTopProps = _props.scrollToTopProps,
+          showClientBar = _props.showClientBar,
+          showInstagramContainer = _props.showInstagramContainer,
+          showMenuTop = _props.showMenuTop,
+          showTopBanner = _props.showTopBanner,
+          t = _props.t,
+          topBannerProps = _props.topBannerProps,
+          userbarProps = _props.userbarProps,
+          vendor = _props.vendor,
+          w1ptEnabled = _props.w1ptEnabled;
 
 
       return _react2.default.createElement(
@@ -21830,12 +21819,12 @@ var VendorPaymentLayout = function (_Component) {
   (0, _createClass3.default)(VendorPaymentLayout, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var children = _props.children;
-      var flash = _props.flash;
-      var logoProps = _props.logoProps;
-      var vendor = _props.vendor;
-      var w1ptEnabled = _props.w1ptEnabled;
+      var _props = this.props,
+          children = _props.children,
+          flash = _props.flash,
+          logoProps = _props.logoProps,
+          vendor = _props.vendor,
+          w1ptEnabled = _props.w1ptEnabled;
 
 
       return _react2.default.createElement(
@@ -21856,7 +21845,7 @@ var VendorPaymentLayout = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'b-header__desc' },
-                  ' '
+                  '\xA0'
                 ),
                 _react2.default.createElement(
                   'div',
@@ -22024,20 +22013,20 @@ var Welcome = function (_Component) {
   (0, _createClass3.default)(Welcome, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var isFilterDirty = _props.isFilterDirty;
-      var products = _props.products;
-      var showCartButton = _props.showCartButton;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showPaginationOnWelcome = _props.showPaginationOnWelcome;
-      var showQuantity = _props.showQuantity;
-      var showWelcomeSlider = _props.showWelcomeSlider;
-      var vendor = _props.vendor;
-      var t = _props.t;
-      var preProductsText = vendor.pre_products_text;
-      var postProductsText = vendor.post_products_text;
-      var sliderImages = vendor.slider_images;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          isFilterDirty = _props.isFilterDirty,
+          products = _props.products,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showPaginationOnWelcome = _props.showPaginationOnWelcome,
+          showQuantity = _props.showQuantity,
+          showWelcomeSlider = _props.showWelcomeSlider,
+          vendor = _props.vendor,
+          t = _props.t;
+      var preProductsText = vendor.pre_products_text,
+          postProductsText = vendor.post_products_text,
+          sliderImages = vendor.slider_images;
 
 
       return _react2.default.createElement(
@@ -22179,18 +22168,18 @@ var WelcomePage = function (_Component) {
   (0, _createClass3.default)(WelcomePage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var catalogFilterProps = _props.catalogFilterProps;
-      var i18n = _props.i18n;
-      var isFilterDirty = _props.isFilterDirty;
-      var layoutProps = _props.layoutProps;
-      var products = _props.products;
-      var showCartButton = _props.showCartButton;
-      var showCatalogFilter = _props.showCatalogFilter;
-      var showPaginationOnWelcome = _props.showPaginationOnWelcome;
-      var showQuantity = _props.showQuantity;
-      var showWelcomeSlider = _props.showWelcomeSlider;
-      var vendor = _props.vendor;
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          i18n = _props.i18n,
+          isFilterDirty = _props.isFilterDirty,
+          layoutProps = _props.layoutProps,
+          products = _props.products,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showPaginationOnWelcome = _props.showPaginationOnWelcome,
+          showQuantity = _props.showQuantity,
+          showWelcomeSlider = _props.showWelcomeSlider,
+          vendor = _props.vendor;
 
 
       return _react2.default.createElement(
@@ -22396,13 +22385,13 @@ var WelcomeChildren = function (_Component) {
   (0, _createClass3.default)(WelcomeChildren, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var childrenProducts = _props.childrenProducts;
-      var showWelcomeSlider = _props.showWelcomeSlider;
-      var _props$vendor = _props.vendor;
-      var preProductsText = _props$vendor.pre_products_text;
-      var postProductsText = _props$vendor.post_products_text;
-      var sliderImages = _props$vendor.slider_images;
+      var _props = this.props,
+          childrenProducts = _props.childrenProducts,
+          showWelcomeSlider = _props.showWelcomeSlider,
+          _props$vendor = _props.vendor,
+          preProductsText = _props$vendor.pre_products_text,
+          postProductsText = _props$vendor.post_products_text,
+          sliderImages = _props$vendor.slider_images;
 
 
       return _react2.default.createElement(
@@ -22520,12 +22509,12 @@ var WelcomeChildrenPage = function (_Component) {
   (0, _createClass3.default)(WelcomeChildrenPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var childrenProducts = _props.childrenProducts;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var showWelcomeSlider = _props.showWelcomeSlider;
-      var vendor = _props.vendor;
+      var _props = this.props,
+          childrenProducts = _props.childrenProducts,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          showWelcomeSlider = _props.showWelcomeSlider,
+          vendor = _props.vendor;
 
 
       return _react2.default.createElement(
@@ -22681,11 +22670,11 @@ var Wishlist = function (_Component) {
   (0, _createClass3.default)(Wishlist, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var wishlistItems = _props.wishlistItems;
-      var initialCart = _props.initialCart;
-      var isPrivate = _props.isPrivate;
-      var t = _props.t;
+      var _props = this.props,
+          wishlistItems = _props.wishlistItems,
+          initialCart = _props.initialCart,
+          isPrivate = _props.isPrivate,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -22774,12 +22763,12 @@ var WishlistAddToCartButton = function (_Component) {
   (0, _createClass3.default)(WishlistAddToCartButton, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var id = _props.id;
-      var href = _props.href;
-      var title = _props.title;
-      var isInCart = _props.isInCart;
-      var t = _props.t;
+      var _props = this.props,
+          id = _props.id,
+          href = _props.href,
+          title = _props.title,
+          isInCart = _props.isInCart,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -22884,11 +22873,11 @@ var WishlistItem = function (_Component) {
   (0, _createClass3.default)(WishlistItem, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var item = _props.item;
-      var isInCart = _props.isInCart;
-      var isPrivate = _props.isPrivate;
-      var t = _props.t;
+      var _props = this.props,
+          item = _props.item,
+          isInCart = _props.isInCart,
+          isPrivate = _props.isPrivate,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -23033,10 +23022,10 @@ var WishlistList = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props = this.props;
-      var wishlistItems = _props.wishlistItems;
-      var isPrivate = _props.isPrivate;
-      var t = _props.t;
+      var _props = this.props,
+          wishlistItems = _props.wishlistItems,
+          isPrivate = _props.isPrivate,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -23133,12 +23122,12 @@ var WishlistPage = function (_Component) {
   (0, _createClass3.default)(WishlistPage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var i18n = _props.i18n;
-      var layoutProps = _props.layoutProps;
-      var isPrivate = _props.isPrivate;
-      var initialCart = _props.initialCart;
-      var wishlistItems = _props.wishlistItems;
+      var _props = this.props,
+          i18n = _props.i18n,
+          layoutProps = _props.layoutProps,
+          isPrivate = _props.isPrivate,
+          initialCart = _props.initialCart,
+          wishlistItems = _props.wishlistItems;
 
 
       return _react2.default.createElement(
@@ -23325,12 +23314,12 @@ var Bubble = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var count = _props.count;
-      var data = _props.data;
-      var text = _props.text;
-      var url = _props.url;
+      var _props = this.props,
+          className = _props.className,
+          count = _props.count,
+          data = _props.data,
+          text = _props.text,
+          url = _props.url;
 
       var bubbleClasses = (0, _classnames2.default)({
         'Bubble': true,
@@ -23506,10 +23495,10 @@ var CartButton = function (_Component) {
   (0, _createClass3.default)(CartButton, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var itemsCount = _props.itemsCount;
-      var text = _props.text;
-      var url = _props.url;
+      var _props = this.props,
+          itemsCount = _props.itemsCount,
+          text = _props.text,
+          url = _props.url;
 
 
       return _react2.default.createElement(_Bubble2.default, {
@@ -23633,9 +23622,9 @@ var CartButtonController = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var url = _props.url;
-      var t = _props.t;
+      var _props = this.props,
+          url = _props.url,
+          t = _props.t;
 
       var itemsCount = this.getItemsCount();
 
@@ -23715,9 +23704,9 @@ var DesignButton = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(DesignButton, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var onClick = _props.onClick;
-      var text = _props.text;
+      var _props = this.props,
+          onClick = _props.onClick,
+          text = _props.text;
 
 
       return _react2.default.createElement(_Bubble2.default, {
@@ -23804,9 +23793,9 @@ var OperatorButton = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(OperatorButton, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var text = _props.text;
-      var url = _props.url;
+      var _props = this.props,
+          text = _props.text,
+          url = _props.url;
 
 
       return _react2.default.createElement(_Bubble2.default, {
@@ -23893,10 +23882,10 @@ var WishlistButton = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(WishlistButton, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var itemsCount = _props.itemsCount;
-      var text = _props.text;
-      var url = _props.url;
+      var _props = this.props,
+          itemsCount = _props.itemsCount,
+          text = _props.text,
+          url = _props.url;
 
 
       return _react2.default.createElement(_Bubble2.default, {
@@ -24073,9 +24062,9 @@ var AccordionItem = (_temp = _class = function (_Component) {
   }, {
     key: 'getProps',
     value: function getProps() {
-      var _props = this.props;
-      var className = _props.className;
-      var expanded = _props.expanded;
+      var _props = this.props,
+          className = _props.className,
+          expanded = _props.expanded;
 
       var props = {
         className: (0, _classnames2.default)('react-sanfona-item', className, {
@@ -24095,16 +24084,16 @@ var AccordionItem = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var bodyClassName = _props2.bodyClassName;
-      var children = _props2.children;
-      var onClick = _props2.onClick;
-      var title = _props2.title;
-      var titleColor = _props2.titleColor;
-      var titleClassName = _props2.titleClassName;
-      var _state = this.state;
-      var maxHeight = _state.maxHeight;
-      var overflow = _state.overflow;
+      var _props2 = this.props,
+          bodyClassName = _props2.bodyClassName,
+          children = _props2.children,
+          onClick = _props2.onClick,
+          title = _props2.title,
+          titleColor = _props2.titleColor,
+          titleClassName = _props2.titleClassName;
+      var _state = this.state,
+          maxHeight = _state.maxHeight,
+          overflow = _state.overflow;
 
 
       return _react2.default.createElement(
@@ -24143,7 +24132,7 @@ var AccordionItem = (_temp = _class = function (_Component) {
 exports.default = AccordionItem;
 module.exports = exports['default'];
 
-},{"./AccordionItemBody":231,"./AccordionItemTitle":232,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":900}],231:[function(require,module,exports){
+},{"./AccordionItemBody":231,"./AccordionItemTitle":232,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":905}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24194,12 +24183,12 @@ var AccordionItemBody = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(AccordionItemBody, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var bodyClassName = _props.bodyClassName;
-      var children = _props.children;
-      var maxHeight = _props.maxHeight;
-      var overflow = _props.overflow;
-      var uuid = _props.uuid;
+      var _props = this.props,
+          bodyClassName = _props.bodyClassName,
+          children = _props.children,
+          maxHeight = _props.maxHeight,
+          overflow = _props.overflow,
+          uuid = _props.uuid;
 
       var style = {
         maxHeight: maxHeight,
@@ -24284,12 +24273,12 @@ var AccordionItemTitle = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(AccordionItemTitle, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var onClick = _props.onClick;
-      var title = _props.title;
-      var titleClassName = _props.titleClassName;
-      var titleColor = _props.titleColor;
-      var uuid = _props.uuid;
+      var _props = this.props,
+          onClick = _props.onClick,
+          title = _props.title,
+          titleClassName = _props.titleClassName,
+          titleColor = _props.titleColor,
+          uuid = _props.uuid;
 
       var style = {
         color: titleColor,
@@ -24468,12 +24457,12 @@ var Accordion = (_temp = _class = function (_Component) {
     value: function renderItems() {
       var _this3 = this;
 
-      var _props = this.props;
-      var allowMultiple = _props.allowMultiple;
-      var children = _props.children;
-      var _state = this.state;
-      var activeItems = _state.activeItems;
-      var selectedIndex = _state.selectedIndex;
+      var _props = this.props,
+          allowMultiple = _props.allowMultiple,
+          children = _props.children;
+      var _state = this.state,
+          activeItems = _state.activeItems,
+          selectedIndex = _state.selectedIndex;
 
 
       if (!children) {
@@ -24561,11 +24550,11 @@ var Alert = function (_Component) {
   (0, _createClass3.default)(Alert, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var danger = _props.danger;
-      var info = _props.info;
-      var text = _props.text;
+      var _props = this.props,
+          className = _props.className,
+          danger = _props.danger,
+          info = _props.info,
+          text = _props.text;
 
       var alertClasses = (0, _classnames2.default)(className, {
         'alert': true,
@@ -24822,9 +24811,9 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FaIcon(_ref) {
-  var name = _ref.name;
-  var addClass = _ref.addClass;
-  var opts = (0, _objectWithoutProperties3.default)(_ref, ['name', 'addClass']);
+  var name = _ref.name,
+      addClass = _ref.addClass,
+      opts = (0, _objectWithoutProperties3.default)(_ref, ['name', 'addClass']);
 
   var extraClasses = name.split(' ').map(function (c) {
     return 'fa-' + c;
@@ -24892,16 +24881,16 @@ var FormAuthenticity = function (_Component) {
   (0, _createClass3.default)(FormAuthenticity, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var field = _props.field;
-      var token = _props.token;
-      var method = _props.method;
+      var _props = this.props,
+          field = _props.field,
+          token = _props.token,
+          method = _props.method;
 
 
       return _react2.default.createElement(
         'div',
         { style: { display: 'none!important' } },
-        _react2.default.createElement(_HiddenInput2.default, { name: 'utf8', value: '✓' }),
+        _react2.default.createElement(_HiddenInput2.default, { name: 'utf8', value: '\u2713' }),
         method && _react2.default.createElement(_HiddenInput2.default, { name: '_method', value: method }),
         _react2.default.createElement(_CSRFToken2.default, { field: field, token: token })
       );
@@ -25117,9 +25106,9 @@ var Icon = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(Icon, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var active = _props.active;
-      var name = _props.name;
+      var _props = this.props,
+          active = _props.active,
+          name = _props.name;
 
 
       if (name) {
@@ -25196,8 +25185,8 @@ var curry = function curry() {
   };
 };
 var getSize = function getSize(image, maxHeight, maxWidth) {
-  var height = image.height;
-  var width = image.width;
+  var height = image.height,
+      width = image.width;
 
 
   if (height && width) {
@@ -25253,14 +25242,14 @@ var Image = function (_Component) {
   (0, _createClass3.default)(Image, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var hasFixedSize = _props.hasFixedSize;
-      var hasRawUrl = _props.hasRawUrl;
-      var image = _props.image;
-      var maxHeight = _props.maxHeight;
-      var maxWidth = _props.maxWidth;
-      var title = _props.title;
+      var _props = this.props,
+          className = _props.className,
+          hasFixedSize = _props.hasFixedSize,
+          hasRawUrl = _props.hasRawUrl,
+          image = _props.image,
+          maxHeight = _props.maxHeight,
+          maxWidth = _props.maxWidth,
+          title = _props.title;
 
       var imageArguments = curry(image, maxHeight, maxWidth);
 
@@ -25409,9 +25398,9 @@ var RelativeImage = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _state = this.state;
-      var height = _state.height;
-      var width = _state.width;
+      var _state = this.state,
+          height = _state.height,
+          width = _state.width;
       var image = this.props.image;
 
 
@@ -25558,9 +25547,9 @@ var ImageSlider = function (_Component) {
   }, {
     key: 'initSlider',
     value: function initSlider() {
-      var _props = this.props;
-      var className = _props.className;
-      var slides = _props.slides;
+      var _props = this.props,
+          className = _props.className,
+          slides = _props.slides;
 
       var $elt = $((0, _reactDom.findDOMNode)(this.refs.slides));
       var options = SLIDER_OPTIONS;
@@ -25610,12 +25599,12 @@ var ImageSlider = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var className = _props2.className;
-      var hasThumbs = _props2.hasThumbs;
-      var slides = _props2.slides;
-      var thumbHeight = _props2.thumbHeight;
-      var thumbWidth = _props2.thumbWidth;
+      var _props2 = this.props,
+          className = _props2.className,
+          hasThumbs = _props2.hasThumbs,
+          slides = _props2.slides,
+          thumbHeight = _props2.thumbHeight,
+          thumbWidth = _props2.thumbWidth;
 
       var sliderClasses = (0, _classnames2.default)('b-slider', className);
       var filtered = slides.filter(function (slide) {
@@ -25659,7 +25648,7 @@ ImageSlider.defaultProps = {
 exports.default = ImageSlider;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"./ImageSliderSlides":247,"./ImageSliderThumbs":248,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","lodash/collection/size":495,"react":"react","react-dom":"react-dom"}],247:[function(require,module,exports){
+},{"../../../schemas":311,"./ImageSliderSlides":247,"./ImageSliderThumbs":248,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","lodash/collection/size":496,"react":"react","react-dom":"react-dom"}],247:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25811,9 +25800,9 @@ var ImageSliderThumbs = function (_Component) {
   }, {
     key: 'renderThumb',
     value: function renderThumb(thumb, idx) {
-      var _props = this.props;
-      var thumbHeight = _props.thumbHeight;
-      var thumbWidth = _props.thumbWidth;
+      var _props = this.props,
+          thumbHeight = _props.thumbHeight,
+          thumbWidth = _props.thumbWidth;
 
 
       return _react2.default.createElement(
@@ -25920,10 +25909,10 @@ var InputNumberSpinner = (_temp = _class = function (_Component) {
   }, {
     key: 'setValue',
     value: function setValue(value) {
-      var _props = this.props;
-      var step = _props.step;
-      var min = _props.min;
-      var max = _props.max;
+      var _props = this.props,
+          step = _props.step,
+          min = _props.min,
+          max = _props.max;
 
 
       if (!_jquery2.default.isNumeric(value)) {
@@ -25947,11 +25936,11 @@ var InputNumberSpinner = (_temp = _class = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _props2 = this.props;
-      var step = _props2.step;
-      var min = _props2.min;
-      var max = _props2.max;
-      var value = _props2.value;
+      var _props2 = this.props,
+          step = _props2.step,
+          min = _props2.min,
+          max = _props2.max,
+          value = _props2.value;
 
 
       return _react2.default.createElement(
@@ -26060,15 +26049,15 @@ var LayoutMessages = function (_Component) {
         "div",
         null,
         flash.map(function (_ref) {
-          var name = _ref.name;
-          var msg = _ref.msg;
+          var name = _ref.name,
+              msg = _ref.msg;
           return _react2.default.createElement(
             "div",
             { className: "alert alert-" + name },
             _react2.default.createElement(
               "a",
               { className: "close", "data-dismiss": "alert" },
-              "×"
+              "\xD7"
             ),
             _react2.default.createElement(
               "div",
@@ -26156,9 +26145,9 @@ var Link = function (_Component) {
   }, {
     key: 'handleClick',
     value: function handleClick(ev) {
-      var _props = this.props;
-      var href = _props.href;
-      var method = _props.method;
+      var _props = this.props,
+          href = _props.href,
+          method = _props.method;
 
 
       if (method !== 'GET') {
@@ -26169,9 +26158,9 @@ var Link = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props2 = this.props;
-      var children = _props2.children;
-      var href = _props2.href;
+      var _props2 = this.props,
+          children = _props2.children,
+          href = _props2.href;
 
 
       return _react2.default.createElement(
@@ -26437,9 +26426,9 @@ var OrderComments = function (_Component) {
             'tbody',
             null,
             comments.map(function (_ref, idx) {
-              var body = _ref.body;
-              var author = _ref.author;
-              var createdAt = _ref.created_at;
+              var body = _ref.body,
+                  author = _ref.author,
+                  createdAt = _ref.created_at;
               return _react2.default.createElement(
                 'tr',
                 { className: 'feed-element', key: 'order-comment-' + idx },
@@ -26463,7 +26452,7 @@ var OrderComments = function (_Component) {
                     author && _react2.default.createElement(
                       'span',
                       null,
-                      '—',
+                      '\u2014',
                       _react2.default.createElement(
                         'strong',
                         null,
@@ -26559,10 +26548,10 @@ var OrderContents = function (_Component) {
   (0, _createClass3.default)(OrderContents, [{
     key: 'renderPackageGood',
     value: function renderPackageGood(packageGood, packagePrice) {
-      var packageDefaultUrl = packageGood.default_url;
-      var packageImageUrl = packageGood.image_url;
-      var packageTitle = packageGood.title;
-      var packageQuantityUnit = packageGood.quantity_unit;
+      var packageDefaultUrl = packageGood.default_url,
+          packageImageUrl = packageGood.image_url,
+          packageTitle = packageGood.title,
+          packageQuantityUnit = packageGood.quantity_unit;
 
 
       return _react2.default.createElement(
@@ -26615,10 +26604,10 @@ var OrderContents = function (_Component) {
     key: 'renderCouponDiscount',
     value: function renderCouponDiscount(coupon) {
       var t = this.props.t;
-      var discount = coupon.discount;
-      var isFixed = coupon.fixed;
-      var fixedDiscount = coupon.fixed_discount;
-      var freeDelivery = coupon.free_delivery;
+      var discount = coupon.discount,
+          isFixed = coupon.fixed,
+          fixedDiscount = coupon.fixed_discount,
+          freeDelivery = coupon.free_delivery;
 
 
       return _react2.default.createElement(
@@ -26628,7 +26617,7 @@ var OrderContents = function (_Component) {
           'span',
           null,
           _react2.default.createElement(_FaIcon2.default, { name: 'level-down' }),
-          '—',
+          '\u2014',
           isFixed ? _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, { money: fixedDiscount }) : discount + ' %'
         ),
         freeDelivery && _react2.default.createElement(
@@ -26641,15 +26630,15 @@ var OrderContents = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var _props$order = _props.order;
-      var items = _props$order.items;
-      var coupon = _props$order.coupon;
-      var packageGood = _props$order.package_good;
-      var packagePrice = _props$order.package_price;
-      var totalWithDeliveryPrice = _props$order.total_with_delivery_price;
-      var deliveryPrice = _props$order.delivery_price;
-      var t = _props.t;
+      var _props = this.props,
+          _props$order = _props.order,
+          items = _props$order.items,
+          coupon = _props$order.coupon,
+          packageGood = _props$order.package_good,
+          packagePrice = _props$order.package_price,
+          totalWithDeliveryPrice = _props$order.total_with_delivery_price,
+          deliveryPrice = _props$order.delivery_price,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -26776,8 +26765,8 @@ var _OrderLabels = require('./OrderLabels');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function OrderPaymentIcon(_ref) {
-  var type = _ref.type;
-  var orderPaymentType = _ref.orderPaymentType;
+  var type = _ref.type,
+      orderPaymentType = _ref.orderPaymentType;
 
   if (type == 'OrderPaymentDirect') {
     return _react2.default.createElement(_FaIcon2.default, { name: 'money', tooltip: 'true', title: orderPaymentType });
@@ -26787,8 +26776,8 @@ function OrderPaymentIcon(_ref) {
 };
 
 function OrderDeliveryIcon(_ref2) {
-  var state = _ref2.state;
-  var orderDeliveryState = _ref2.orderDeliveryState;
+  var state = _ref2.state,
+      orderDeliveryState = _ref2.orderDeliveryState;
 
   switch (state) {
     case _deliveryConstants.DELIVERY_STATE_NEW:
@@ -26807,11 +26796,11 @@ function OrderDeliveryIcon(_ref2) {
 };
 
 var OrderPaymentStateIcon = (0, _provideTranslations2.default)(function (_ref3) {
-  var state = _ref3.state;
-  var updatedAt = _ref3.updatedAt;
-  var orderPaymentType = _ref3.orderPaymentType;
-  var orderPaymentState = _ref3.orderPaymentState;
-  var t = _ref3.t;
+  var state = _ref3.state,
+      updatedAt = _ref3.updatedAt,
+      orderPaymentType = _ref3.orderPaymentType,
+      orderPaymentState = _ref3.orderPaymentState,
+      t = _ref3.t;
 
   switch (state) {
     case _paymentConstants.PAYMENT_STATE_AWAIT:
@@ -26827,9 +26816,9 @@ var OrderPaymentStateIcon = (0, _provideTranslations2.default)(function (_ref3) 
 });
 
 var OrderReserveStateIcon = (0, _provideTranslations2.default)(function (_ref4) {
-  var type = _ref4.type;
-  var reservedAt = _ref4.reservedAt;
-  var t = _ref4.t;
+  var type = _ref4.type,
+      reservedAt = _ref4.reservedAt,
+      t = _ref4.t;
 
   switch (type) {
     case _reservationConstants.RESERVATION_TYPE_BOTH:
@@ -26926,15 +26915,15 @@ var OrderItem = function (_Component) {
   (0, _createClass3.default)(OrderItem, [{
     key: 'render',
     value: function render() {
-      var _props$item = this.props.item;
-      var count = _props$item.count;
-      var title = _props$item.title;
-      var _props$item$good = _props$item.good;
-      var defaultUrl = _props$item$good.default_url;
-      var article = _props$item$good.article;
-      var imageUrl = _props$item.image_url;
-      var totalPrice = _props$item.total_price;
-      var quantityUnit = _props$item.quantity_unit;
+      var _props$item = this.props.item,
+          count = _props$item.count,
+          title = _props$item.title,
+          _props$item$good = _props$item.good,
+          defaultUrl = _props$item$good.default_url,
+          article = _props$item$good.article,
+          imageUrl = _props$item.image_url,
+          totalPrice = _props$item.total_price,
+          quantityUnit = _props$item.quantity_unit;
 
 
       return _react2.default.createElement(
@@ -27020,8 +27009,8 @@ var _paymentConstants = require('../../../constants/paymentConstants');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function OrderDeliveryStateLabel(_ref) {
-  var state = _ref.state;
-  var orderDeliveryState = _ref.orderDeliveryState;
+  var state = _ref.state,
+      orderDeliveryState = _ref.orderDeliveryState;
 
   var cssClass = 'label label-danger';
 
@@ -27053,10 +27042,10 @@ function OrderDeliveryStateLabel(_ref) {
 }
 
 function OrderPaymentStateLabel(_ref2) {
-  var state = _ref2.state;
-  var updatedAt = _ref2.updatedAt;
-  var orderPaymentType = _ref2.orderPaymentType;
-  var orderPaymentState = _ref2.orderPaymentState;
+  var state = _ref2.state,
+      updatedAt = _ref2.updatedAt,
+      orderPaymentType = _ref2.orderPaymentType,
+      orderPaymentState = _ref2.orderPaymentState;
 
   var cssClass = 'label label-danger';
 
@@ -27129,11 +27118,11 @@ var OrderSelfDeliveryMessage = function (_Component) {
   (0, _createClass3.default)(OrderSelfDeliveryMessage, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var _props$deliveryType = _props.deliveryType;
-      var selfdelivery = _props$deliveryType.selfdelivery;
-      var pickupAdress = _props$deliveryType.pickup_address;
-      var t = _props.t;
+      var _props = this.props,
+          _props$deliveryType = _props.deliveryType,
+          selfdelivery = _props$deliveryType.selfdelivery,
+          pickupAdress = _props$deliveryType.pickup_address,
+          t = _props.t;
 
 
       return selfdelivery && pickupAdress != null ? _react2.default.createElement(
@@ -27212,9 +27201,9 @@ var OrderState = function (_Component) {
   (0, _createClass3.default)(OrderState, [{
     key: 'render',
     value: function render() {
-      var _props$state = this.props.state;
-      var color = _props$state.color;
-      var title = _props$state.title;
+      var _props$state = this.props.state,
+          color = _props$state.color,
+          title = _props$state.title;
 
 
       if (!color) {
@@ -27297,9 +27286,9 @@ var PostProducts = function (_Component) {
   (0, _createClass3.default)(PostProducts, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var postProductsText = _props.postProductsText;
-      var title = _props.title;
+      var _props = this.props,
+          postProductsText = _props.postProductsText,
+          title = _props.title;
 
 
       return _react2.default.createElement(
@@ -27369,10 +27358,10 @@ var ProductSearchForm = function (_Component) {
   (0, _createClass3.default)(ProductSearchForm, [{
     key: "render",
     value: function render() {
-      var _props = this.props;
-      var searchProductsPath = _props.searchProductsPath;
-      var searchQuery = _props.searchQuery;
-      var t = _props.t;
+      var _props = this.props,
+          searchProductsPath = _props.searchProductsPath,
+          searchQuery = _props.searchQuery,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -27453,10 +27442,10 @@ var PublishShopButton = function (_Component) {
   (0, _createClass3.default)(PublishShopButton, [{
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var className = _props.className;
-      var publishShopPath = _props.publishShopPath;
-      var t = _props.t;
+      var _props = this.props,
+          className = _props.className,
+          publishShopPath = _props.publishShopPath,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -27549,11 +27538,11 @@ var RadioColor = (_temp = _class = function (_Component) {
   }, {
     key: 'renderOption',
     value: function renderOption(option) {
-      var value = option.value;
-      var title = option.title;
-      var color = option.color;
-      var image_url = option.image_url;
-      var disabled = option.disabled;
+      var value = option.value,
+          title = option.title,
+          color = option.color,
+          image_url = option.image_url,
+          disabled = option.disabled;
 
       var optionClasses = (0, _classnames2.default)('radiobtn', 'radiobtn--color', {
         'radiobtn--light': (0, _tinycolor2.default)(color).isLight(),
@@ -27780,10 +27769,10 @@ var Select = (_temp = _class = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props;
-      var name = _props.name;
-      var options = _props.options;
-      var value = _props.value;
+      var _props = this.props,
+          name = _props.name,
+          options = _props.options,
+          value = _props.value;
 
 
       return _react2.default.createElement(
@@ -28257,7 +28246,7 @@ var BaseDispatcher = function (_Flux$Dispatcher) {
 exports.default = BaseDispatcher;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"flux":463}],282:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"flux":464}],282:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28443,7 +28432,7 @@ function humanizedMoney(money) {
 }
 
 function humanizedMoneyWithCurrency(money) {
-  var null_value = arguments.length <= 1 || arguments[1] === undefined ? '-' : arguments[1];
+  var null_value = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '-';
 
   if (!money || money.cents === 0) return null_value;
   if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
@@ -28457,7 +28446,7 @@ function unknownIsoCodeMessage(money) {
   });
 }
 
-},{"../models/currencies":291,"i18next":"i18next","numeral":571}],285:[function(require,module,exports){
+},{"../models/currencies":291,"i18next":"i18next","numeral":572}],285:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28475,7 +28464,7 @@ function numberToHumanSize(number) {
   return (0, _numeral2.default)(number).format('0.00 b');
 }
 
-},{"numeral":571}],286:[function(require,module,exports){
+},{"numeral":572}],286:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28562,9 +28551,9 @@ function goodActualPrice(_ref) {
 }
 
 function attributeValue(attribute) {
-  var products_url = attribute.products_url;
-  var title = attribute.title;
-  var value = attribute.value;
+  var products_url = attribute.products_url,
+      title = attribute.title,
+      value = attribute.value;
 
 
   switch (attribute.type) {
@@ -28669,7 +28658,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var simpleFormat = exports.simpleFormat = function simpleFormat() {
-  var str = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+  var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
 
   var newStr = str.trim();
 
@@ -28804,8 +28793,8 @@ exports.default = function (store) {
         return next(action);
       }
 
-      var endpoint = callAPI.endpoint;
-      var data = callAPI.data;
+      var endpoint = callAPI.endpoint,
+          data = callAPI.data;
       var types = callAPI.types;
 
 
@@ -28841,11 +28830,10 @@ exports.default = function (store) {
         return finalAction;
       }
 
-      var _types = (0, _slicedToArray3.default)(types, 3);
-
-      var requestType = _types[0];
-      var successType = _types[1];
-      var failureType = _types[2];
+      var _types = (0, _slicedToArray3.default)(types, 3),
+          requestType = _types[0],
+          successType = _types[1],
+          failureType = _types[2];
 
       next(actionWith({ type: requestType }));
 
@@ -28864,7 +28852,7 @@ exports.default = function (store) {
   };
 };
 
-},{"../services/Notice":327,"babel-runtime/core-js/object/assign":340,"babel-runtime/core-js/promise":346,"babel-runtime/core-js/symbol":347,"babel-runtime/helpers/slicedToArray":356,"babel-runtime/helpers/typeof":358,"humps":467}],291:[function(require,module,exports){
+},{"../services/Notice":327,"babel-runtime/core-js/object/assign":340,"babel-runtime/core-js/promise":346,"babel-runtime/core-js/symbol":347,"babel-runtime/helpers/slicedToArray":356,"babel-runtime/helpers/typeof":358,"humps":468}],291:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29339,8 +29327,8 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
     error: error
   });
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_AMOUNT, function (state, _ref4) {
-  var id = _ref4.id;
-  var amount = _ref4.amount;
+  var id = _ref4.id,
+      amount = _ref4.amount;
 
   return (0, _timm.setIn)(state, ['amounts', id], amount);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE, function (state, _ref5) {
@@ -29350,8 +29338,8 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_INIT_CHECKOUT, function (state, action) {
   return initCheckoutCartStore(state, action);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref6) {
-  var name = _ref6.name;
-  var value = _ref6.value;
+  var name = _ref6.name,
+      value = _ref6.value;
 
   return (0, _timm.setIn)(state, ['checkoutFieldValues', name, 'value'], value);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref7) {
@@ -29575,8 +29563,8 @@ var initialState = {
 };
 
 exports.default = (0, _createReducer3.default)(initialState, (_createReducer = {}, (0, _defineProperty3.default)(_createReducer, actionTypes.POPUP_OPEN, function (state, _ref) {
-  var style = _ref.style;
-  var props = _ref.props;
+  var style = _ref.style,
+      props = _ref.props;
 
   return (0, _timm.updateIn)(state, ['popups'], function (ps) {
     var idx = (0, _lodash.findIndex)(ps, function (p) {
@@ -29682,14 +29670,14 @@ var _react = require('react');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var array = _react.PropTypes.array;
-var arrayOf = _react.PropTypes.arrayOf;
-var bool = _react.PropTypes.bool;
-var oneOf = _react.PropTypes.oneOf;
-var oneOfType = _react.PropTypes.oneOfType;
-var shape = _react.PropTypes.shape;
-var string = _react.PropTypes.string;
-var number = _react.PropTypes.number;
+var array = _react.PropTypes.array,
+    arrayOf = _react.PropTypes.arrayOf,
+    bool = _react.PropTypes.bool,
+    oneOf = _react.PropTypes.oneOf,
+    oneOfType = _react.PropTypes.oneOfType,
+    shape = _react.PropTypes.shape,
+    string = _react.PropTypes.string,
+    number = _react.PropTypes.number;
 
 
 var baseFields = {
@@ -29802,9 +29790,9 @@ var _product2 = _interopRequireDefault(_product);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var arrayOf = _react.PropTypes.arrayOf;
-var shape = _react.PropTypes.shape;
-var string = _react.PropTypes.string;
+var arrayOf = _react.PropTypes.arrayOf,
+    shape = _react.PropTypes.shape,
+    string = _react.PropTypes.string;
 exports.default = arrayOf(shape({
   products: arrayOf(_product2.default).isRequired,
   title: string
@@ -29820,8 +29808,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _react = require('react');
 
-var shape = _react.PropTypes.shape;
-var string = _react.PropTypes.string;
+var shape = _react.PropTypes.shape,
+    string = _react.PropTypes.string;
 exports.default = shape({
   body: string.isRequired,
   author: string,
@@ -30252,12 +30240,12 @@ var _good2 = _interopRequireDefault(_good);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var shape = _react.PropTypes.shape;
-var arrayOf = _react.PropTypes.arrayOf;
-var string = _react.PropTypes.string;
-var bool = _react.PropTypes.bool;
-var number = _react.PropTypes.number;
-var object = _react.PropTypes.object;
+var shape = _react.PropTypes.shape,
+    arrayOf = _react.PropTypes.arrayOf,
+    string = _react.PropTypes.string,
+    bool = _react.PropTypes.bool,
+    number = _react.PropTypes.number,
+    object = _react.PropTypes.object;
 exports.default = shape({
   external_id: number,
   default_url: string.isRequired, // vendor_order_path(order.external_id)
@@ -30318,9 +30306,9 @@ var _money2 = _interopRequireDefault(_money);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var shape = _react.PropTypes.shape;
-var string = _react.PropTypes.string;
-var number = _react.PropTypes.number;
+var shape = _react.PropTypes.shape,
+    string = _react.PropTypes.string,
+    number = _react.PropTypes.number;
 exports.default = shape({
   count: number.isRequired,
   title: string.isRequired,
@@ -30462,9 +30450,9 @@ var _pagination2 = _interopRequireDefault(_pagination);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var arrayOf = _react.PropTypes.arrayOf;
-var shape = _react.PropTypes.shape;
-var number = _react.PropTypes.number;
+var arrayOf = _react.PropTypes.arrayOf,
+    shape = _react.PropTypes.shape,
+    number = _react.PropTypes.number;
 exports.default = shape({
   items: arrayOf(_product2.default).isRequired,
   pagination: _pagination2.default.isRequired,
@@ -30514,9 +30502,9 @@ var _slide2 = _interopRequireDefault(_slide);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var arrayOf = _react.PropTypes.arrayOf;
-var shape = _react.PropTypes.shape;
-var string = _react.PropTypes.string;
+var arrayOf = _react.PropTypes.arrayOf,
+    shape = _react.PropTypes.shape,
+    string = _react.PropTypes.string;
 exports.default = shape({
   contacts: arrayOf(_vendorContact2.default),
   custom_after_content_html: _react.PropTypes.string,
@@ -30604,12 +30592,12 @@ exports.default = {
     // }
   },
   notifyError: function notifyError(name) {
-    var metaData = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+    var metaData = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     this.notify(name, '', metaData, 'error');
   },
   notifyWarning: function notifyWarning(name) {
-    var metaData = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+    var metaData = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     this.notify(name, '', metaData, 'warning');
   },
@@ -30619,12 +30607,12 @@ exports.default = {
     }
   },
   notifyErrorProps: function notifyErrorProps(name) {
-    var metaData = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+    var metaData = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     this.notifyError('[Props] ' + name, metaData);
   },
   notifyErrorResponse: function notifyErrorResponse(name) {
-    var metaData = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+    var metaData = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     if (metaData.response) {
       this.notifyError('[AJAX] ' + name, metaData);
@@ -30675,7 +30663,7 @@ var NoticeService = {
     return container;
   },
   getTimeoutForText: function getTimeoutForText() {
-    var text = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+    var text = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
 
     if ((typeof text === 'undefined' ? 'undefined' : (0, _typeof3.default)(text)) === 'object') return 3000;
 
@@ -30757,7 +30745,7 @@ function normalizeUrl(url) {
 }
 
 function normalizeFilters() {
-  var additional = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
+  var additional = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
   var common = []; //['no_upscale()'];
   var fx = [].concat(common, (0, _toConsumableArray3.default)(additional));
@@ -30851,7 +30839,7 @@ var BaseStore = function (_EventEmitter) {
 exports.default = BaseStore;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"events":462}],330:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"events":463}],330:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31001,7 +30989,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = createReducer;
 function createReducer(initialState, handlers) {
   return function () {
-    var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
     var action = arguments[1];
 
     var handler = handlers[action.type];
@@ -31360,14 +31348,14 @@ var _symbol = require("../core-js/symbol");
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
-var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj; };
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
   return typeof obj === "undefined" ? "undefined" : _typeof(obj);
 } : function (obj) {
-  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 };
 },{"../core-js/symbol":347,"../core-js/symbol/iterator":348}],359:[function(require,module,exports){
 require('../../modules/es6.string.iterator');
@@ -33180,6 +33168,319 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
   Iterators[NAME] = Iterators.Array;
 }
 },{"./_global":390,"./_hide":392,"./_iterators":405,"./_wks":443,"./es6.array.iterator":448}],462:[function(require,module,exports){
+'use strict';
+
+var has = Object.prototype.hasOwnProperty
+  , prefix = '~';
+
+/**
+ * Constructor to create a storage for our `EE` objects.
+ * An `Events` instance is a plain object whose properties are event names.
+ *
+ * @constructor
+ * @api private
+ */
+function Events() {}
+
+//
+// We try to not inherit from `Object.prototype`. In some engines creating an
+// instance in this way is faster than calling `Object.create(null)` directly.
+// If `Object.create(null)` is not supported we prefix the event names with a
+// character to make sure that the built-in object properties are not
+// overridden or used as an attack vector.
+//
+if (Object.create) {
+  Events.prototype = Object.create(null);
+
+  //
+  // This hack is needed because the `__proto__` property is still inherited in
+  // some old browsers like Android 4, iPhone 5.1, Opera 11 and Safari 5.
+  //
+  if (!new Events().__proto__) prefix = false;
+}
+
+/**
+ * Representation of a single event listener.
+ *
+ * @param {Function} fn The listener function.
+ * @param {Mixed} context The context to invoke the listener with.
+ * @param {Boolean} [once=false] Specify if the listener is a one-time listener.
+ * @constructor
+ * @api private
+ */
+function EE(fn, context, once) {
+  this.fn = fn;
+  this.context = context;
+  this.once = once || false;
+}
+
+/**
+ * Minimal `EventEmitter` interface that is molded against the Node.js
+ * `EventEmitter` interface.
+ *
+ * @constructor
+ * @api public
+ */
+function EventEmitter() {
+  this._events = new Events();
+  this._eventsCount = 0;
+}
+
+/**
+ * Return an array listing the events for which the emitter has registered
+ * listeners.
+ *
+ * @returns {Array}
+ * @api public
+ */
+EventEmitter.prototype.eventNames = function eventNames() {
+  var names = []
+    , events
+    , name;
+
+  if (this._eventsCount === 0) return names;
+
+  for (name in (events = this._events)) {
+    if (has.call(events, name)) names.push(prefix ? name.slice(1) : name);
+  }
+
+  if (Object.getOwnPropertySymbols) {
+    return names.concat(Object.getOwnPropertySymbols(events));
+  }
+
+  return names;
+};
+
+/**
+ * Return the listeners registered for a given event.
+ *
+ * @param {String|Symbol} event The event name.
+ * @param {Boolean} exists Only check if there are listeners.
+ * @returns {Array|Boolean}
+ * @api public
+ */
+EventEmitter.prototype.listeners = function listeners(event, exists) {
+  var evt = prefix ? prefix + event : event
+    , available = this._events[evt];
+
+  if (exists) return !!available;
+  if (!available) return [];
+  if (available.fn) return [available.fn];
+
+  for (var i = 0, l = available.length, ee = new Array(l); i < l; i++) {
+    ee[i] = available[i].fn;
+  }
+
+  return ee;
+};
+
+/**
+ * Calls each of the listeners registered for a given event.
+ *
+ * @param {String|Symbol} event The event name.
+ * @returns {Boolean} `true` if the event had listeners, else `false`.
+ * @api public
+ */
+EventEmitter.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
+  var evt = prefix ? prefix + event : event;
+
+  if (!this._events[evt]) return false;
+
+  var listeners = this._events[evt]
+    , len = arguments.length
+    , args
+    , i;
+
+  if (listeners.fn) {
+    if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
+
+    switch (len) {
+      case 1: return listeners.fn.call(listeners.context), true;
+      case 2: return listeners.fn.call(listeners.context, a1), true;
+      case 3: return listeners.fn.call(listeners.context, a1, a2), true;
+      case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
+      case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
+      case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
+    }
+
+    for (i = 1, args = new Array(len -1); i < len; i++) {
+      args[i - 1] = arguments[i];
+    }
+
+    listeners.fn.apply(listeners.context, args);
+  } else {
+    var length = listeners.length
+      , j;
+
+    for (i = 0; i < length; i++) {
+      if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
+
+      switch (len) {
+        case 1: listeners[i].fn.call(listeners[i].context); break;
+        case 2: listeners[i].fn.call(listeners[i].context, a1); break;
+        case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
+        case 4: listeners[i].fn.call(listeners[i].context, a1, a2, a3); break;
+        default:
+          if (!args) for (j = 1, args = new Array(len -1); j < len; j++) {
+            args[j - 1] = arguments[j];
+          }
+
+          listeners[i].fn.apply(listeners[i].context, args);
+      }
+    }
+  }
+
+  return true;
+};
+
+/**
+ * Add a listener for a given event.
+ *
+ * @param {String|Symbol} event The event name.
+ * @param {Function} fn The listener function.
+ * @param {Mixed} [context=this] The context to invoke the listener with.
+ * @returns {EventEmitter} `this`.
+ * @api public
+ */
+EventEmitter.prototype.on = function on(event, fn, context) {
+  var listener = new EE(fn, context || this)
+    , evt = prefix ? prefix + event : event;
+
+  if (!this._events[evt]) this._events[evt] = listener, this._eventsCount++;
+  else if (!this._events[evt].fn) this._events[evt].push(listener);
+  else this._events[evt] = [this._events[evt], listener];
+
+  return this;
+};
+
+/**
+ * Add a one-time listener for a given event.
+ *
+ * @param {String|Symbol} event The event name.
+ * @param {Function} fn The listener function.
+ * @param {Mixed} [context=this] The context to invoke the listener with.
+ * @returns {EventEmitter} `this`.
+ * @api public
+ */
+EventEmitter.prototype.once = function once(event, fn, context) {
+  var listener = new EE(fn, context || this, true)
+    , evt = prefix ? prefix + event : event;
+
+  if (!this._events[evt]) this._events[evt] = listener, this._eventsCount++;
+  else if (!this._events[evt].fn) this._events[evt].push(listener);
+  else this._events[evt] = [this._events[evt], listener];
+
+  return this;
+};
+
+/**
+ * Remove the listeners of a given event.
+ *
+ * @param {String|Symbol} event The event name.
+ * @param {Function} fn Only remove the listeners that match this function.
+ * @param {Mixed} context Only remove the listeners that have this context.
+ * @param {Boolean} once Only remove one-time listeners.
+ * @returns {EventEmitter} `this`.
+ * @api public
+ */
+EventEmitter.prototype.removeListener = function removeListener(event, fn, context, once) {
+  var evt = prefix ? prefix + event : event;
+
+  if (!this._events[evt]) return this;
+  if (!fn) {
+    if (--this._eventsCount === 0) this._events = new Events();
+    else delete this._events[evt];
+    return this;
+  }
+
+  var listeners = this._events[evt];
+
+  if (listeners.fn) {
+    if (
+         listeners.fn === fn
+      && (!once || listeners.once)
+      && (!context || listeners.context === context)
+    ) {
+      if (--this._eventsCount === 0) this._events = new Events();
+      else delete this._events[evt];
+    }
+  } else {
+    for (var i = 0, events = [], length = listeners.length; i < length; i++) {
+      if (
+           listeners[i].fn !== fn
+        || (once && !listeners[i].once)
+        || (context && listeners[i].context !== context)
+      ) {
+        events.push(listeners[i]);
+      }
+    }
+
+    //
+    // Reset the array, or remove it completely if we have no more listeners.
+    //
+    if (events.length) this._events[evt] = events.length === 1 ? events[0] : events;
+    else if (--this._eventsCount === 0) this._events = new Events();
+    else delete this._events[evt];
+  }
+
+  return this;
+};
+
+/**
+ * Remove all listeners, or those of the specified event.
+ *
+ * @param {String|Symbol} [event] The event name.
+ * @returns {EventEmitter} `this`.
+ * @api public
+ */
+EventEmitter.prototype.removeAllListeners = function removeAllListeners(event) {
+  var evt;
+
+  if (event) {
+    evt = prefix ? prefix + event : event;
+    if (this._events[evt]) {
+      if (--this._eventsCount === 0) this._events = new Events();
+      else delete this._events[evt];
+    }
+  } else {
+    this._events = new Events();
+    this._eventsCount = 0;
+  }
+
+  return this;
+};
+
+//
+// Alias methods names because people roll like that.
+//
+EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
+EventEmitter.prototype.addListener = EventEmitter.prototype.on;
+
+//
+// This function doesn't apply anymore.
+//
+EventEmitter.prototype.setMaxListeners = function setMaxListeners() {
+  return this;
+};
+
+//
+// Expose the prefix.
+//
+EventEmitter.prefixed = prefix;
+
+//
+// Allow `EventEmitter` to be imported as module namespace.
+//
+EventEmitter.EventEmitter = EventEmitter;
+
+//
+// Expose the module.
+//
+if ('undefined' !== typeof module) {
+  module.exports = EventEmitter;
+}
+
+},{}],463:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -33483,7 +33784,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],463:[function(require,module,exports){
+},{}],464:[function(require,module,exports){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -33495,7 +33796,7 @@ function isUndefined(arg) {
 
 module.exports.Dispatcher = require('./lib/Dispatcher');
 
-},{"./lib/Dispatcher":464}],464:[function(require,module,exports){
+},{"./lib/Dispatcher":465}],465:[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
@@ -33729,7 +34030,7 @@ var Dispatcher = (function () {
 
 module.exports = Dispatcher;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":465}],465:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":466}],466:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -33781,7 +34082,7 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":594}],466:[function(require,module,exports){
+},{"_process":595}],467:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -33833,7 +34134,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
     return targetComponent;
 };
 
-},{}],467:[function(require,module,exports){
+},{}],468:[function(require,module,exports){
 // =========
 // = humps =
 // =========
@@ -33972,7 +34273,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
   }
 
 })(this);
-},{}],468:[function(require,module,exports){
+},{}],469:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34236,7 +34537,7 @@ var Connector = function (_EventEmitter) {
 }(_EventEmitter3.default);
 
 exports.default = Connector;
-},{"./EventEmitter":470,"./logger":480,"./utils":482}],469:[function(require,module,exports){
+},{"./EventEmitter":471,"./logger":481,"./utils":483}],470:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34325,7 +34626,7 @@ var Connector = function (_EventEmitter) {
 }(_EventEmitter3.default);
 
 exports.default = Connector;
-},{"./EventEmitter":470,"./logger":480,"./utils":482}],470:[function(require,module,exports){
+},{"./EventEmitter":471,"./logger":481,"./utils":483}],471:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34393,7 +34694,7 @@ var EventEmitter = function () {
 }();
 
 exports.default = EventEmitter;
-},{}],471:[function(require,module,exports){
+},{}],472:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34539,7 +34840,7 @@ var Interpolator = function () {
 }();
 
 exports.default = Interpolator;
-},{"./logger":480,"./utils":482}],472:[function(require,module,exports){
+},{"./logger":481,"./utils":483}],473:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34648,7 +34949,7 @@ var LanguageUtil = function () {
 ;
 
 exports.default = LanguageUtil;
-},{"./logger":480}],473:[function(require,module,exports){
+},{"./logger":481}],474:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34813,7 +35114,7 @@ var PluralResolver = function () {
 ;
 
 exports.default = PluralResolver;
-},{"./logger":480}],474:[function(require,module,exports){
+},{"./logger":481}],475:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34971,7 +35272,7 @@ var ResourceStore = function (_EventEmitter) {
 }(_EventEmitter3.default);
 
 exports.default = ResourceStore;
-},{"./EventEmitter":470,"./utils":482}],475:[function(require,module,exports){
+},{"./EventEmitter":471,"./utils":483}],476:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35280,7 +35581,7 @@ var Translator = function (_EventEmitter) {
 }(_EventEmitter3.default);
 
 exports.default = Translator;
-},{"./EventEmitter":470,"./compatibility/v1":476,"./logger":480,"./postProcessor":481,"./utils":482}],476:[function(require,module,exports){
+},{"./EventEmitter":471,"./compatibility/v1":477,"./logger":481,"./postProcessor":482,"./utils":483}],477:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35435,7 +35736,7 @@ function appendBackwardsAPI(i18n) {
     });
   };
 }
-},{"../logger":480}],477:[function(require,module,exports){
+},{"../logger":481}],478:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35507,7 +35808,7 @@ function transformOptions(options) {
 
   return options;
 }
-},{}],478:[function(require,module,exports){
+},{}],479:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35894,7 +36195,7 @@ var I18n = function (_EventEmitter) {
 }(_EventEmitter3.default);
 
 exports.default = new I18n();
-},{"./BackendConnector":468,"./CacheConnector":469,"./EventEmitter":470,"./Interpolator":471,"./LanguageUtils":472,"./PluralResolver":473,"./ResourceStore":474,"./Translator":475,"./compatibility/v1":476,"./defaults":477,"./logger":480,"./postProcessor":481}],479:[function(require,module,exports){
+},{"./BackendConnector":469,"./CacheConnector":470,"./EventEmitter":471,"./Interpolator":472,"./LanguageUtils":473,"./PluralResolver":474,"./ResourceStore":475,"./Translator":476,"./compatibility/v1":477,"./defaults":478,"./logger":481,"./postProcessor":482}],480:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -35908,7 +36209,7 @@ var _i18next2 = _interopRequireDefault(_i18next);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _i18next2.default;
-},{"./i18next":478}],480:[function(require,module,exports){
+},{"./i18next":479}],481:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36001,7 +36302,7 @@ var Logger = function () {
 ;
 
 exports.default = new Logger();
-},{}],481:[function(require,module,exports){
+},{}],482:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36024,7 +36325,7 @@ exports.default = {
     return value;
   }
 };
-},{}],482:[function(require,module,exports){
+},{}],483:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -36142,7 +36443,7 @@ function escape(data) {
     return data;
   }
 }
-},{}],483:[function(require,module,exports){
+},{}],484:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -36197,7 +36498,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":594}],484:[function(require,module,exports){
+},{"_process":595}],485:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36225,7 +36526,7 @@ function jssNested(rule) {
 }
 
 module.exports = exports['default'];
-},{}],485:[function(require,module,exports){
+},{}],486:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36332,7 +36633,7 @@ var Jss = (function () {
 
 exports['default'] = Jss;
 module.exports = exports['default'];
-},{"./PluginsRegistry":486,"./Rule":487,"./StyleSheet":488,"./uid":491}],486:[function(require,module,exports){
+},{"./PluginsRegistry":487,"./Rule":488,"./StyleSheet":489,"./uid":492}],487:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -36375,7 +36676,7 @@ var PluginsRegistry = (function () {
 
 exports["default"] = PluginsRegistry;
 module.exports = exports["default"];
-},{}],487:[function(require,module,exports){
+},{}],488:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -36645,7 +36946,7 @@ function indent(level, str) {
   }return indentStr + str;
 }
 module.exports = exports['default'];
-},{"./clone":489,"./defaults":490,"./uid":491}],488:[function(require,module,exports){
+},{"./clone":490,"./defaults":491,"./uid":492}],489:[function(require,module,exports){
 /**
  * StyleSheet abstraction, contains rules, injects stylesheet into dom.
  *
@@ -36916,7 +37217,7 @@ var StyleSheet = (function () {
 
 exports['default'] = StyleSheet;
 module.exports = exports['default'];
-},{}],489:[function(require,module,exports){
+},{}],490:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -36939,7 +37240,7 @@ function clone(obj) {
 }
 
 module.exports = exports["default"];
-},{}],490:[function(require,module,exports){
+},{}],491:[function(require,module,exports){
 /**
  * Merges second object with first one only if value is undefined.
  * It expects both objects to be plain.
@@ -36961,7 +37262,7 @@ function defaults(obj1, obj2) {
 }
 
 module.exports = exports["default"];
-},{}],491:[function(require,module,exports){
+},{}],492:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -36997,7 +37298,7 @@ function reset() {
   counter = 0;
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],492:[function(require,module,exports){
+},{}],493:[function(require,module,exports){
 /**
  * Gets the last element of `array`.
  *
@@ -37018,7 +37319,7 @@ function last(array) {
 
 module.exports = last;
 
-},{}],493:[function(require,module,exports){
+},{}],494:[function(require,module,exports){
 var LazyWrapper = require('../internal/LazyWrapper'),
     LodashWrapper = require('../internal/LodashWrapper'),
     baseLodash = require('../internal/baseLodash'),
@@ -37145,7 +37446,7 @@ lodash.prototype = baseLodash.prototype;
 
 module.exports = lodash;
 
-},{"../internal/LazyWrapper":499,"../internal/LodashWrapper":500,"../internal/baseLodash":513,"../internal/isObjectLike":545,"../internal/wrapperClone":556,"../lang/isArray":558}],494:[function(require,module,exports){
+},{"../internal/LazyWrapper":500,"../internal/LodashWrapper":501,"../internal/baseLodash":514,"../internal/isObjectLike":546,"../internal/wrapperClone":557,"../lang/isArray":559}],495:[function(require,module,exports){
 var arrayMap = require('../internal/arrayMap'),
     baseCallback = require('../internal/baseCallback'),
     baseMap = require('../internal/baseMap'),
@@ -37215,7 +37516,7 @@ function map(collection, iteratee, thisArg) {
 
 module.exports = map;
 
-},{"../internal/arrayMap":502,"../internal/baseCallback":504,"../internal/baseMap":514,"../lang/isArray":558}],495:[function(require,module,exports){
+},{"../internal/arrayMap":503,"../internal/baseCallback":505,"../internal/baseMap":515,"../lang/isArray":559}],496:[function(require,module,exports){
 var getLength = require('../internal/getLength'),
     isLength = require('../internal/isLength'),
     keys = require('../object/keys');
@@ -37247,7 +37548,7 @@ function size(collection) {
 
 module.exports = size;
 
-},{"../internal/getLength":537,"../internal/isLength":544,"../object/keys":564}],496:[function(require,module,exports){
+},{"../internal/getLength":538,"../internal/isLength":545,"../object/keys":565}],497:[function(require,module,exports){
 var getNative = require('../internal/getNative');
 
 /* Native method references for those with the same name as other `lodash` methods. */
@@ -37273,7 +37574,7 @@ var now = nativeNow || function() {
 
 module.exports = now;
 
-},{"../internal/getNative":539}],497:[function(require,module,exports){
+},{"../internal/getNative":540}],498:[function(require,module,exports){
 var createWrapper = require('../internal/createWrapper'),
     replaceHolders = require('../internal/replaceHolders'),
     restParam = require('./restParam');
@@ -37331,7 +37632,7 @@ bind.placeholder = {};
 
 module.exports = bind;
 
-},{"../internal/createWrapper":531,"../internal/replaceHolders":551,"./restParam":498}],498:[function(require,module,exports){
+},{"../internal/createWrapper":532,"../internal/replaceHolders":552,"./restParam":499}],499:[function(require,module,exports){
 /** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -37391,7 +37692,7 @@ function restParam(func, start) {
 
 module.exports = restParam;
 
-},{}],499:[function(require,module,exports){
+},{}],500:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -37419,7 +37720,7 @@ LazyWrapper.prototype.constructor = LazyWrapper;
 
 module.exports = LazyWrapper;
 
-},{"./baseCreate":505,"./baseLodash":513}],500:[function(require,module,exports){
+},{"./baseCreate":506,"./baseLodash":514}],501:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -37442,7 +37743,7 @@ LodashWrapper.prototype.constructor = LodashWrapper;
 
 module.exports = LodashWrapper;
 
-},{"./baseCreate":505,"./baseLodash":513}],501:[function(require,module,exports){
+},{"./baseCreate":506,"./baseLodash":514}],502:[function(require,module,exports){
 /**
  * Copies the values of `source` to `array`.
  *
@@ -37464,7 +37765,7 @@ function arrayCopy(source, array) {
 
 module.exports = arrayCopy;
 
-},{}],502:[function(require,module,exports){
+},{}],503:[function(require,module,exports){
 /**
  * A specialized version of `_.map` for arrays without support for callback
  * shorthands and `this` binding.
@@ -37487,7 +37788,7 @@ function arrayMap(array, iteratee) {
 
 module.exports = arrayMap;
 
-},{}],503:[function(require,module,exports){
+},{}],504:[function(require,module,exports){
 /**
  * A specialized version of `_.some` for arrays without support for callback
  * shorthands and `this` binding.
@@ -37512,7 +37813,7 @@ function arraySome(array, predicate) {
 
 module.exports = arraySome;
 
-},{}],504:[function(require,module,exports){
+},{}],505:[function(require,module,exports){
 var baseMatches = require('./baseMatches'),
     baseMatchesProperty = require('./baseMatchesProperty'),
     bindCallback = require('./bindCallback'),
@@ -37549,7 +37850,7 @@ function baseCallback(func, thisArg, argCount) {
 
 module.exports = baseCallback;
 
-},{"../utility/identity":567,"../utility/property":569,"./baseMatches":515,"./baseMatchesProperty":516,"./bindCallback":522}],505:[function(require,module,exports){
+},{"../utility/identity":568,"../utility/property":570,"./baseMatches":516,"./baseMatchesProperty":517,"./bindCallback":523}],506:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -37574,7 +37875,7 @@ var baseCreate = (function() {
 
 module.exports = baseCreate;
 
-},{"../lang/isObject":561}],506:[function(require,module,exports){
+},{"../lang/isObject":562}],507:[function(require,module,exports){
 var baseForOwn = require('./baseForOwn'),
     createBaseEach = require('./createBaseEach');
 
@@ -37591,7 +37892,7 @@ var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
-},{"./baseForOwn":508,"./createBaseEach":525}],507:[function(require,module,exports){
+},{"./baseForOwn":509,"./createBaseEach":526}],508:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -37610,7 +37911,7 @@ var baseFor = createBaseFor();
 
 module.exports = baseFor;
 
-},{"./createBaseFor":526}],508:[function(require,module,exports){
+},{"./createBaseFor":527}],509:[function(require,module,exports){
 var baseFor = require('./baseFor'),
     keys = require('../object/keys');
 
@@ -37629,7 +37930,7 @@ function baseForOwn(object, iteratee) {
 
 module.exports = baseForOwn;
 
-},{"../object/keys":564,"./baseFor":507}],509:[function(require,module,exports){
+},{"../object/keys":565,"./baseFor":508}],510:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -37660,7 +37961,7 @@ function baseGet(object, path, pathKey) {
 
 module.exports = baseGet;
 
-},{"./toObject":554}],510:[function(require,module,exports){
+},{"./toObject":555}],511:[function(require,module,exports){
 var baseIsEqualDeep = require('./baseIsEqualDeep'),
     isObject = require('../lang/isObject'),
     isObjectLike = require('./isObjectLike');
@@ -37690,7 +37991,7 @@ function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
 
 module.exports = baseIsEqual;
 
-},{"../lang/isObject":561,"./baseIsEqualDeep":511,"./isObjectLike":545}],511:[function(require,module,exports){
+},{"../lang/isObject":562,"./baseIsEqualDeep":512,"./isObjectLike":546}],512:[function(require,module,exports){
 var equalArrays = require('./equalArrays'),
     equalByTag = require('./equalByTag'),
     equalObjects = require('./equalObjects'),
@@ -37794,7 +38095,7 @@ function baseIsEqualDeep(object, other, equalFunc, customizer, isLoose, stackA, 
 
 module.exports = baseIsEqualDeep;
 
-},{"../lang/isArray":558,"../lang/isTypedArray":562,"./equalArrays":532,"./equalByTag":533,"./equalObjects":534}],512:[function(require,module,exports){
+},{"../lang/isArray":559,"../lang/isTypedArray":563,"./equalArrays":533,"./equalByTag":534,"./equalObjects":535}],513:[function(require,module,exports){
 var baseIsEqual = require('./baseIsEqual'),
     toObject = require('./toObject');
 
@@ -37848,7 +38149,7 @@ function baseIsMatch(object, matchData, customizer) {
 
 module.exports = baseIsMatch;
 
-},{"./baseIsEqual":510,"./toObject":554}],513:[function(require,module,exports){
+},{"./baseIsEqual":511,"./toObject":555}],514:[function(require,module,exports){
 /**
  * The function whose prototype all chaining wrappers inherit from.
  *
@@ -37860,7 +38161,7 @@ function baseLodash() {
 
 module.exports = baseLodash;
 
-},{}],514:[function(require,module,exports){
+},{}],515:[function(require,module,exports){
 var baseEach = require('./baseEach'),
     isArrayLike = require('./isArrayLike');
 
@@ -37885,7 +38186,7 @@ function baseMap(collection, iteratee) {
 
 module.exports = baseMap;
 
-},{"./baseEach":506,"./isArrayLike":540}],515:[function(require,module,exports){
+},{"./baseEach":507,"./isArrayLike":541}],516:[function(require,module,exports){
 var baseIsMatch = require('./baseIsMatch'),
     getMatchData = require('./getMatchData'),
     toObject = require('./toObject');
@@ -37917,7 +38218,7 @@ function baseMatches(source) {
 
 module.exports = baseMatches;
 
-},{"./baseIsMatch":512,"./getMatchData":538,"./toObject":554}],516:[function(require,module,exports){
+},{"./baseIsMatch":513,"./getMatchData":539,"./toObject":555}],517:[function(require,module,exports){
 var baseGet = require('./baseGet'),
     baseIsEqual = require('./baseIsEqual'),
     baseSlice = require('./baseSlice'),
@@ -37964,7 +38265,7 @@ function baseMatchesProperty(path, srcValue) {
 
 module.exports = baseMatchesProperty;
 
-},{"../array/last":492,"../lang/isArray":558,"./baseGet":509,"./baseIsEqual":510,"./baseSlice":520,"./isKey":542,"./isStrictComparable":546,"./toObject":554,"./toPath":555}],517:[function(require,module,exports){
+},{"../array/last":493,"../lang/isArray":559,"./baseGet":510,"./baseIsEqual":511,"./baseSlice":521,"./isKey":543,"./isStrictComparable":547,"./toObject":555,"./toPath":556}],518:[function(require,module,exports){
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -37980,7 +38281,7 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-},{}],518:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 var baseGet = require('./baseGet'),
     toPath = require('./toPath');
 
@@ -38001,7 +38302,7 @@ function basePropertyDeep(path) {
 
 module.exports = basePropertyDeep;
 
-},{"./baseGet":509,"./toPath":555}],519:[function(require,module,exports){
+},{"./baseGet":510,"./toPath":556}],520:[function(require,module,exports){
 var identity = require('../utility/identity'),
     metaMap = require('./metaMap');
 
@@ -38020,7 +38321,7 @@ var baseSetData = !metaMap ? identity : function(func, data) {
 
 module.exports = baseSetData;
 
-},{"../utility/identity":567,"./metaMap":548}],520:[function(require,module,exports){
+},{"../utility/identity":568,"./metaMap":549}],521:[function(require,module,exports){
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
  *
@@ -38054,7 +38355,7 @@ function baseSlice(array, start, end) {
 
 module.exports = baseSlice;
 
-},{}],521:[function(require,module,exports){
+},{}],522:[function(require,module,exports){
 /**
  * Converts `value` to a string if it's not one. An empty string is returned
  * for `null` or `undefined` values.
@@ -38069,7 +38370,7 @@ function baseToString(value) {
 
 module.exports = baseToString;
 
-},{}],522:[function(require,module,exports){
+},{}],523:[function(require,module,exports){
 var identity = require('../utility/identity');
 
 /**
@@ -38110,7 +38411,7 @@ function bindCallback(func, thisArg, argCount) {
 
 module.exports = bindCallback;
 
-},{"../utility/identity":567}],523:[function(require,module,exports){
+},{"../utility/identity":568}],524:[function(require,module,exports){
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -38146,7 +38447,7 @@ function composeArgs(args, partials, holders) {
 
 module.exports = composeArgs;
 
-},{}],524:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -38184,7 +38485,7 @@ function composeArgsRight(args, partials, holders) {
 
 module.exports = composeArgsRight;
 
-},{}],525:[function(require,module,exports){
+},{}],526:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength'),
     toObject = require('./toObject');
@@ -38217,7 +38518,7 @@ function createBaseEach(eachFunc, fromRight) {
 
 module.exports = createBaseEach;
 
-},{"./getLength":537,"./isLength":544,"./toObject":554}],526:[function(require,module,exports){
+},{"./getLength":538,"./isLength":545,"./toObject":555}],527:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -38246,7 +38547,7 @@ function createBaseFor(fromRight) {
 
 module.exports = createBaseFor;
 
-},{"./toObject":554}],527:[function(require,module,exports){
+},{"./toObject":555}],528:[function(require,module,exports){
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -38272,7 +38573,7 @@ function createBindWrapper(func, thisArg) {
 module.exports = createBindWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":528}],528:[function(require,module,exports){
+},{"./createCtorWrapper":529}],529:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     isObject = require('../lang/isObject');
 
@@ -38311,7 +38612,7 @@ function createCtorWrapper(Ctor) {
 
 module.exports = createCtorWrapper;
 
-},{"../lang/isObject":561,"./baseCreate":505}],529:[function(require,module,exports){
+},{"../lang/isObject":562,"./baseCreate":506}],530:[function(require,module,exports){
 (function (global){
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
@@ -38426,7 +38727,7 @@ function createHybridWrapper(func, bitmask, thisArg, partials, holders, partials
 module.exports = createHybridWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./arrayCopy":501,"./composeArgs":523,"./composeArgsRight":524,"./createCtorWrapper":528,"./isLaziable":543,"./reorder":550,"./replaceHolders":551,"./setData":552}],530:[function(require,module,exports){
+},{"./arrayCopy":502,"./composeArgs":524,"./composeArgsRight":525,"./createCtorWrapper":529,"./isLaziable":544,"./reorder":551,"./replaceHolders":552,"./setData":553}],531:[function(require,module,exports){
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -38473,7 +38774,7 @@ function createPartialWrapper(func, bitmask, thisArg, partials) {
 module.exports = createPartialWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":528}],531:[function(require,module,exports){
+},{"./createCtorWrapper":529}],532:[function(require,module,exports){
 var baseSetData = require('./baseSetData'),
     createBindWrapper = require('./createBindWrapper'),
     createHybridWrapper = require('./createHybridWrapper'),
@@ -38561,7 +38862,7 @@ function createWrapper(func, bitmask, thisArg, partials, holders, argPos, ary, a
 
 module.exports = createWrapper;
 
-},{"./baseSetData":519,"./createBindWrapper":527,"./createHybridWrapper":529,"./createPartialWrapper":530,"./getData":535,"./mergeData":547,"./setData":552}],532:[function(require,module,exports){
+},{"./baseSetData":520,"./createBindWrapper":528,"./createHybridWrapper":530,"./createPartialWrapper":531,"./getData":536,"./mergeData":548,"./setData":553}],533:[function(require,module,exports){
 var arraySome = require('./arraySome');
 
 /**
@@ -38614,7 +38915,7 @@ function equalArrays(array, other, equalFunc, customizer, isLoose, stackA, stack
 
 module.exports = equalArrays;
 
-},{"./arraySome":503}],533:[function(require,module,exports){
+},{"./arraySome":504}],534:[function(require,module,exports){
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
     dateTag = '[object Date]',
@@ -38664,7 +38965,7 @@ function equalByTag(object, other, tag) {
 
 module.exports = equalByTag;
 
-},{}],534:[function(require,module,exports){
+},{}],535:[function(require,module,exports){
 var keys = require('../object/keys');
 
 /** Used for native method references. */
@@ -38733,7 +39034,7 @@ function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, sta
 
 module.exports = equalObjects;
 
-},{"../object/keys":564}],535:[function(require,module,exports){
+},{"../object/keys":565}],536:[function(require,module,exports){
 var metaMap = require('./metaMap'),
     noop = require('../utility/noop');
 
@@ -38750,7 +39051,7 @@ var getData = !metaMap ? noop : function(func) {
 
 module.exports = getData;
 
-},{"../utility/noop":568,"./metaMap":548}],536:[function(require,module,exports){
+},{"../utility/noop":569,"./metaMap":549}],537:[function(require,module,exports){
 var realNames = require('./realNames');
 
 /**
@@ -38777,7 +39078,7 @@ function getFuncName(func) {
 
 module.exports = getFuncName;
 
-},{"./realNames":549}],537:[function(require,module,exports){
+},{"./realNames":550}],538:[function(require,module,exports){
 var baseProperty = require('./baseProperty');
 
 /**
@@ -38794,7 +39095,7 @@ var getLength = baseProperty('length');
 
 module.exports = getLength;
 
-},{"./baseProperty":517}],538:[function(require,module,exports){
+},{"./baseProperty":518}],539:[function(require,module,exports){
 var isStrictComparable = require('./isStrictComparable'),
     pairs = require('../object/pairs');
 
@@ -38817,7 +39118,7 @@ function getMatchData(object) {
 
 module.exports = getMatchData;
 
-},{"../object/pairs":566,"./isStrictComparable":546}],539:[function(require,module,exports){
+},{"../object/pairs":567,"./isStrictComparable":547}],540:[function(require,module,exports){
 var isNative = require('../lang/isNative');
 
 /**
@@ -38835,7 +39136,7 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"../lang/isNative":560}],540:[function(require,module,exports){
+},{"../lang/isNative":561}],541:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength');
 
@@ -38852,7 +39153,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./getLength":537,"./isLength":544}],541:[function(require,module,exports){
+},{"./getLength":538,"./isLength":545}],542:[function(require,module,exports){
 /** Used to detect unsigned integer values. */
 var reIsUint = /^\d+$/;
 
@@ -38878,7 +39179,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],542:[function(require,module,exports){
+},{}],543:[function(require,module,exports){
 var isArray = require('../lang/isArray'),
     toObject = require('./toObject');
 
@@ -38908,7 +39209,7 @@ function isKey(value, object) {
 
 module.exports = isKey;
 
-},{"../lang/isArray":558,"./toObject":554}],543:[function(require,module,exports){
+},{"../lang/isArray":559,"./toObject":555}],544:[function(require,module,exports){
 var LazyWrapper = require('./LazyWrapper'),
     getData = require('./getData'),
     getFuncName = require('./getFuncName'),
@@ -38937,7 +39238,7 @@ function isLaziable(func) {
 
 module.exports = isLaziable;
 
-},{"../chain/lodash":493,"./LazyWrapper":499,"./getData":535,"./getFuncName":536}],544:[function(require,module,exports){
+},{"../chain/lodash":494,"./LazyWrapper":500,"./getData":536,"./getFuncName":537}],545:[function(require,module,exports){
 /**
  * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
  * of an array-like value.
@@ -38959,7 +39260,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],545:[function(require,module,exports){
+},{}],546:[function(require,module,exports){
 /**
  * Checks if `value` is object-like.
  *
@@ -38973,7 +39274,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],546:[function(require,module,exports){
+},{}],547:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -38990,7 +39291,7 @@ function isStrictComparable(value) {
 
 module.exports = isStrictComparable;
 
-},{"../lang/isObject":561}],547:[function(require,module,exports){
+},{"../lang/isObject":562}],548:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
     composeArgsRight = require('./composeArgsRight'),
@@ -39081,7 +39382,7 @@ function mergeData(data, source) {
 
 module.exports = mergeData;
 
-},{"./arrayCopy":501,"./composeArgs":523,"./composeArgsRight":524,"./replaceHolders":551}],548:[function(require,module,exports){
+},{"./arrayCopy":502,"./composeArgs":524,"./composeArgsRight":525,"./replaceHolders":552}],549:[function(require,module,exports){
 (function (global){
 var getNative = require('./getNative');
 
@@ -39094,13 +39395,13 @@ var metaMap = WeakMap && new WeakMap;
 module.exports = metaMap;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./getNative":539}],549:[function(require,module,exports){
+},{"./getNative":540}],550:[function(require,module,exports){
 /** Used to lookup unminified function names. */
 var realNames = {};
 
 module.exports = realNames;
 
-},{}],550:[function(require,module,exports){
+},{}],551:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     isIndex = require('./isIndex');
 
@@ -39131,7 +39432,7 @@ function reorder(array, indexes) {
 
 module.exports = reorder;
 
-},{"./arrayCopy":501,"./isIndex":541}],551:[function(require,module,exports){
+},{"./arrayCopy":502,"./isIndex":542}],552:[function(require,module,exports){
 /** Used as the internal argument placeholder. */
 var PLACEHOLDER = '__lodash_placeholder__';
 
@@ -39161,7 +39462,7 @@ function replaceHolders(array, placeholder) {
 
 module.exports = replaceHolders;
 
-},{}],552:[function(require,module,exports){
+},{}],553:[function(require,module,exports){
 var baseSetData = require('./baseSetData'),
     now = require('../date/now');
 
@@ -39204,7 +39505,7 @@ var setData = (function() {
 
 module.exports = setData;
 
-},{"../date/now":496,"./baseSetData":519}],553:[function(require,module,exports){
+},{"../date/now":497,"./baseSetData":520}],554:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('./isIndex'),
@@ -39247,7 +39548,7 @@ function shimKeys(object) {
 
 module.exports = shimKeys;
 
-},{"../lang/isArguments":557,"../lang/isArray":558,"../object/keysIn":565,"./isIndex":541,"./isLength":544}],554:[function(require,module,exports){
+},{"../lang/isArguments":558,"../lang/isArray":559,"../object/keysIn":566,"./isIndex":542,"./isLength":545}],555:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -39263,7 +39564,7 @@ function toObject(value) {
 
 module.exports = toObject;
 
-},{"../lang/isObject":561}],555:[function(require,module,exports){
+},{"../lang/isObject":562}],556:[function(require,module,exports){
 var baseToString = require('./baseToString'),
     isArray = require('../lang/isArray');
 
@@ -39293,7 +39594,7 @@ function toPath(value) {
 
 module.exports = toPath;
 
-},{"../lang/isArray":558,"./baseToString":521}],556:[function(require,module,exports){
+},{"../lang/isArray":559,"./baseToString":522}],557:[function(require,module,exports){
 var LazyWrapper = require('./LazyWrapper'),
     LodashWrapper = require('./LodashWrapper'),
     arrayCopy = require('./arrayCopy');
@@ -39313,7 +39614,7 @@ function wrapperClone(wrapper) {
 
 module.exports = wrapperClone;
 
-},{"./LazyWrapper":499,"./LodashWrapper":500,"./arrayCopy":501}],557:[function(require,module,exports){
+},{"./LazyWrapper":500,"./LodashWrapper":501,"./arrayCopy":502}],558:[function(require,module,exports){
 var isArrayLike = require('../internal/isArrayLike'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -39349,7 +39650,7 @@ function isArguments(value) {
 
 module.exports = isArguments;
 
-},{"../internal/isArrayLike":540,"../internal/isObjectLike":545}],558:[function(require,module,exports){
+},{"../internal/isArrayLike":541,"../internal/isObjectLike":546}],559:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
@@ -39391,7 +39692,7 @@ var isArray = nativeIsArray || function(value) {
 
 module.exports = isArray;
 
-},{"../internal/getNative":539,"../internal/isLength":544,"../internal/isObjectLike":545}],559:[function(require,module,exports){
+},{"../internal/getNative":540,"../internal/isLength":545,"../internal/isObjectLike":546}],560:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
@@ -39431,7 +39732,7 @@ function isFunction(value) {
 
 module.exports = isFunction;
 
-},{"./isObject":561}],560:[function(require,module,exports){
+},{"./isObject":562}],561:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -39481,7 +39782,7 @@ function isNative(value) {
 
 module.exports = isNative;
 
-},{"../internal/isObjectLike":545,"./isFunction":559}],561:[function(require,module,exports){
+},{"../internal/isObjectLike":546,"./isFunction":560}],562:[function(require,module,exports){
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -39511,7 +39812,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],562:[function(require,module,exports){
+},{}],563:[function(require,module,exports){
 var isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -39587,7 +39888,7 @@ function isTypedArray(value) {
 
 module.exports = isTypedArray;
 
-},{"../internal/isLength":544,"../internal/isObjectLike":545}],563:[function(require,module,exports){
+},{"../internal/isLength":545,"../internal/isObjectLike":546}],564:[function(require,module,exports){
 var baseGet = require('../internal/baseGet'),
     toPath = require('../internal/toPath');
 
@@ -39622,7 +39923,7 @@ function get(object, path, defaultValue) {
 
 module.exports = get;
 
-},{"../internal/baseGet":509,"../internal/toPath":555}],564:[function(require,module,exports){
+},{"../internal/baseGet":510,"../internal/toPath":556}],565:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isArrayLike = require('../internal/isArrayLike'),
     isObject = require('../lang/isObject'),
@@ -39669,7 +39970,7 @@ var keys = !nativeKeys ? shimKeys : function(object) {
 
 module.exports = keys;
 
-},{"../internal/getNative":539,"../internal/isArrayLike":540,"../internal/shimKeys":553,"../lang/isObject":561}],565:[function(require,module,exports){
+},{"../internal/getNative":540,"../internal/isArrayLike":541,"../internal/shimKeys":554,"../lang/isObject":562}],566:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('../internal/isIndex'),
@@ -39735,7 +40036,7 @@ function keysIn(object) {
 
 module.exports = keysIn;
 
-},{"../internal/isIndex":541,"../internal/isLength":544,"../lang/isArguments":557,"../lang/isArray":558,"../lang/isObject":561}],566:[function(require,module,exports){
+},{"../internal/isIndex":542,"../internal/isLength":545,"../lang/isArguments":558,"../lang/isArray":559,"../lang/isObject":562}],567:[function(require,module,exports){
 var keys = require('./keys'),
     toObject = require('../internal/toObject');
 
@@ -39770,7 +40071,7 @@ function pairs(object) {
 
 module.exports = pairs;
 
-},{"../internal/toObject":554,"./keys":564}],567:[function(require,module,exports){
+},{"../internal/toObject":555,"./keys":565}],568:[function(require,module,exports){
 /**
  * This method returns the first argument provided to it.
  *
@@ -39792,7 +40093,7 @@ function identity(value) {
 
 module.exports = identity;
 
-},{}],568:[function(require,module,exports){
+},{}],569:[function(require,module,exports){
 /**
  * A no-operation function that returns `undefined` regardless of the
  * arguments it receives.
@@ -39813,7 +40114,7 @@ function noop() {
 
 module.exports = noop;
 
-},{}],569:[function(require,module,exports){
+},{}],570:[function(require,module,exports){
 var baseProperty = require('../internal/baseProperty'),
     basePropertyDeep = require('../internal/basePropertyDeep'),
     isKey = require('../internal/isKey');
@@ -39846,7 +40147,7 @@ function property(path) {
 
 module.exports = property;
 
-},{"../internal/baseProperty":517,"../internal/basePropertyDeep":518,"../internal/isKey":542}],570:[function(require,module,exports){
+},{"../internal/baseProperty":518,"../internal/basePropertyDeep":519,"../internal/isKey":543}],571:[function(require,module,exports){
 /*! 
  * numeral.js language configuration
  * language : russian (ru)
@@ -39885,7 +40186,7 @@ module.exports = property;
     }
 }());
 
-},{}],571:[function(require,module,exports){
+},{}],572:[function(require,module,exports){
 /*!
  * numeral.js
  * version : 1.5.3
@@ -40566,7 +40867,7 @@ module.exports = property;
     }
 }).call(this);
 
-},{}],572:[function(require,module,exports){
+},{}],573:[function(require,module,exports){
 'use strict';
 /* eslint-disable no-unused-vars */
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -40651,7 +40952,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],573:[function(require,module,exports){
+},{}],574:[function(require,module,exports){
 'use strict';
 
 function oldAdd(element, className) {
@@ -40695,7 +40996,7 @@ exports.list = function (element) {
   }
 };
 
-},{}],574:[function(require,module,exports){
+},{}],575:[function(require,module,exports){
 'use strict';
 
 var DOM = {};
@@ -40781,7 +41082,7 @@ DOM.queryChildren = function (element, selector) {
 
 module.exports = DOM;
 
-},{}],575:[function(require,module,exports){
+},{}],576:[function(require,module,exports){
 'use strict';
 
 var EventElement = function (element) {
@@ -40854,7 +41155,7 @@ EventManager.prototype.once = function (element, eventName, handler) {
 
 module.exports = EventManager;
 
-},{}],576:[function(require,module,exports){
+},{}],577:[function(require,module,exports){
 'use strict';
 
 module.exports = (function () {
@@ -40869,7 +41170,7 @@ module.exports = (function () {
   };
 })();
 
-},{}],577:[function(require,module,exports){
+},{}],578:[function(require,module,exports){
 'use strict';
 
 var cls = require('./class');
@@ -40880,7 +41181,7 @@ var toInt = exports.toInt = function (x) {
 };
 
 var clone = exports.clone = function (obj) {
-  if (obj === null) {
+  if (!obj) {
     return null;
   } else if (obj.constructor === Array) {
     return obj.map(clone);
@@ -40954,7 +41255,7 @@ exports.env = {
   supportsIePointer: window.navigator.msMaxTouchPoints !== null
 };
 
-},{"./class":573,"./dom":574}],578:[function(require,module,exports){
+},{"./class":574,"./dom":575}],579:[function(require,module,exports){
 'use strict';
 
 var destroy = require('./plugin/destroy');
@@ -40967,7 +41268,7 @@ module.exports = {
   destroy: destroy
 };
 
-},{"./plugin/destroy":580,"./plugin/initialize":588,"./plugin/update":592}],579:[function(require,module,exports){
+},{"./plugin/destroy":581,"./plugin/initialize":589,"./plugin/update":593}],580:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -40976,7 +41277,6 @@ module.exports = {
   minScrollbarLength: null,
   scrollXMarginOffset: 0,
   scrollYMarginOffset: 0,
-  stopPropagationOnClick: true,
   suppressScrollX: false,
   suppressScrollY: false,
   swipePropagation: true,
@@ -40986,7 +41286,7 @@ module.exports = {
   theme: 'default'
 };
 
-},{}],580:[function(require,module,exports){
+},{}],581:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -41010,10 +41310,9 @@ module.exports = function (element) {
   instances.remove(element);
 };
 
-},{"../lib/dom":574,"../lib/helper":577,"./instances":589}],581:[function(require,module,exports){
+},{"../lib/dom":575,"../lib/helper":578,"./instances":590}],582:[function(require,module,exports){
 'use strict';
 
-var _ = require('../../lib/helper');
 var instances = require('../instances');
 var updateGeometry = require('../update-geometry');
 var updateScroll = require('../update-scroll');
@@ -41024,43 +41323,23 @@ function bindClickRailHandler(element, i) {
   }
   var stopPropagation = function (e) { e.stopPropagation(); };
 
-  if (i.settings.stopPropagationOnClick) {
-    i.event.bind(i.scrollbarY, 'click', stopPropagation);
-  }
+  i.event.bind(i.scrollbarY, 'click', stopPropagation);
   i.event.bind(i.scrollbarYRail, 'click', function (e) {
-    var halfOfScrollbarLength = _.toInt(i.scrollbarYHeight / 2);
-    var positionTop = i.railYRatio * (e.pageY - window.pageYOffset - pageOffset(i.scrollbarYRail).top - halfOfScrollbarLength);
-    var maxPositionTop = i.railYRatio * (i.railYHeight - i.scrollbarYHeight);
-    var positionRatio = positionTop / maxPositionTop;
+    var positionTop = e.pageY - window.pageYOffset - pageOffset(i.scrollbarYRail).top;
+    var direction = positionTop > i.scrollbarYTop ? 1 : -1;
 
-    if (positionRatio < 0) {
-      positionRatio = 0;
-    } else if (positionRatio > 1) {
-      positionRatio = 1;
-    }
-
-    updateScroll(element, 'top', (i.contentHeight - i.containerHeight) * positionRatio);
+    updateScroll(element, 'top', element.scrollTop + direction * i.containerHeight);
     updateGeometry(element);
 
     e.stopPropagation();
   });
 
-  if (i.settings.stopPropagationOnClick) {
-    i.event.bind(i.scrollbarX, 'click', stopPropagation);
-  }
+  i.event.bind(i.scrollbarX, 'click', stopPropagation);
   i.event.bind(i.scrollbarXRail, 'click', function (e) {
-    var halfOfScrollbarLength = _.toInt(i.scrollbarXWidth / 2);
-    var positionLeft = i.railXRatio * (e.pageX - window.pageXOffset - pageOffset(i.scrollbarXRail).left - halfOfScrollbarLength);
-    var maxPositionLeft = i.railXRatio * (i.railXWidth - i.scrollbarXWidth);
-    var positionRatio = positionLeft / maxPositionLeft;
+    var positionLeft = e.pageX - window.pageXOffset - pageOffset(i.scrollbarXRail).left;
+    var direction = positionLeft > i.scrollbarXLeft ? 1 : -1;
 
-    if (positionRatio < 0) {
-      positionRatio = 0;
-    } else if (positionRatio > 1) {
-      positionRatio = 1;
-    }
-
-    updateScroll(element, 'left', ((i.contentWidth - i.containerWidth) * positionRatio) - i.negativeScrollAdjustment);
+    updateScroll(element, 'left', element.scrollLeft + direction * i.containerWidth);
     updateGeometry(element);
 
     e.stopPropagation();
@@ -41072,7 +41351,7 @@ module.exports = function (element) {
   bindClickRailHandler(element, i);
 };
 
-},{"../../lib/helper":577,"../instances":589,"../update-geometry":590,"../update-scroll":591}],582:[function(require,module,exports){
+},{"../instances":590,"../update-geometry":591,"../update-scroll":592}],583:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -41177,7 +41456,7 @@ module.exports = function (element) {
   bindMouseScrollYHandler(element, i);
 };
 
-},{"../../lib/dom":574,"../../lib/helper":577,"../instances":589,"../update-geometry":590,"../update-scroll":591}],583:[function(require,module,exports){
+},{"../../lib/dom":575,"../../lib/helper":578,"../instances":590,"../update-geometry":591,"../update-scroll":592}],584:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -41251,16 +41530,40 @@ function bindKeyboardHandler(element, i) {
 
     switch (e.which) {
     case 37: // left
-      deltaX = -30;
+      if (e.metaKey) {
+        deltaX = -i.contentWidth;
+      } else if (e.altKey) {
+        deltaX = -i.containerWidth;
+      } else {
+        deltaX = -30;
+      }
       break;
     case 38: // up
-      deltaY = 30;
+      if (e.metaKey) {
+        deltaY = i.contentHeight;
+      } else if (e.altKey) {
+        deltaY = i.containerHeight;
+      } else {
+        deltaY = 30;
+      }
       break;
     case 39: // right
-      deltaX = 30;
+      if (e.metaKey) {
+        deltaX = i.contentWidth;
+      } else if (e.altKey) {
+        deltaX = i.containerWidth;
+      } else {
+        deltaX = 30;
+      }
       break;
     case 40: // down
-      deltaY = -30;
+      if (e.metaKey) {
+        deltaY = -i.contentHeight;
+      } else if (e.altKey) {
+        deltaY = -i.containerHeight;
+      } else {
+        deltaY = -30;
+      }
       break;
     case 33: // page up
       deltaY = 90;
@@ -41309,7 +41612,7 @@ module.exports = function (element) {
   bindKeyboardHandler(element, i);
 };
 
-},{"../../lib/dom":574,"../../lib/helper":577,"../instances":589,"../update-geometry":590,"../update-scroll":591}],584:[function(require,module,exports){
+},{"../../lib/dom":575,"../../lib/helper":578,"../instances":590,"../update-geometry":591,"../update-scroll":592}],585:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -41364,13 +41667,18 @@ function bindMouseWheelHandler(element, i) {
       deltaY = e.wheelDelta;
     }
 
+    if (e.shiftKey) {
+      // reverse axis with shift key
+      return [-deltaY, -deltaX];
+    }
     return [deltaX, deltaY];
   }
 
   function shouldBeConsumedByChild(deltaX, deltaY) {
     var child = element.querySelector('textarea:hover, select[multiple]:hover, .ps-child:hover');
     if (child) {
-      if (child.tagName !== 'TEXTAREA' && !window.getComputedStyle(child).overflow.match(/(scroll|auto)/)) {
+      if (!window.getComputedStyle(child).overflow.match(/(scroll|auto)/)) {
+        // if not scrollable
         return false;
       }
 
@@ -41447,7 +41755,7 @@ module.exports = function (element) {
   bindMouseWheelHandler(element, i);
 };
 
-},{"../instances":589,"../update-geometry":590,"../update-scroll":591}],585:[function(require,module,exports){
+},{"../instances":590,"../update-geometry":591,"../update-scroll":592}],586:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -41464,7 +41772,7 @@ module.exports = function (element) {
   bindNativeScrollHandler(element, i);
 };
 
-},{"../instances":589,"../update-geometry":590}],586:[function(require,module,exports){
+},{"../instances":590,"../update-geometry":591}],587:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -41517,6 +41825,12 @@ function bindSelectionHandler(element, i) {
     }
   });
   i.event.bind(window, 'mouseup', function () {
+    if (isSelected) {
+      isSelected = false;
+      stopScrolling();
+    }
+  });
+  i.event.bind(window, 'keyup', function () {
     if (isSelected) {
       isSelected = false;
       stopScrolling();
@@ -41575,7 +41889,7 @@ module.exports = function (element) {
   bindSelectionHandler(element, i);
 };
 
-},{"../../lib/helper":577,"../instances":589,"../update-geometry":590,"../update-scroll":591}],587:[function(require,module,exports){
+},{"../../lib/helper":578,"../instances":590,"../update-geometry":591,"../update-scroll":592}],588:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -41706,6 +42020,11 @@ function bindTouchHandler(element, i, supportsTouch, supportsIePointer) {
           return;
         }
 
+        if (!speed.x && !speed.y) {
+          clearInterval(easingLoop);
+          return;
+        }
+
         if (Math.abs(speed.x) < 0.01 && Math.abs(speed.y) < 0.01) {
           clearInterval(easingLoop);
           return;
@@ -41753,7 +42072,7 @@ module.exports = function (element) {
   bindTouchHandler(element, i, _.env.supportsTouch, _.env.supportsIePointer);
 };
 
-},{"../../lib/helper":577,"../instances":589,"../update-geometry":590,"../update-scroll":591}],588:[function(require,module,exports){
+},{"../../lib/helper":578,"../instances":590,"../update-geometry":591,"../update-scroll":592}],589:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -41792,7 +42111,7 @@ module.exports = function (element, userSettings) {
   updateGeometry(element);
 };
 
-},{"../lib/class":573,"../lib/helper":577,"./handler/click-rail":581,"./handler/drag-scrollbar":582,"./handler/keyboard":583,"./handler/mouse-wheel":584,"./handler/native-scroll":585,"./handler/selection":586,"./handler/touch":587,"./instances":589,"./update-geometry":590}],589:[function(require,module,exports){
+},{"../lib/class":574,"../lib/helper":578,"./handler/click-rail":582,"./handler/drag-scrollbar":583,"./handler/keyboard":584,"./handler/mouse-wheel":585,"./handler/native-scroll":586,"./handler/selection":587,"./handler/touch":588,"./instances":590,"./update-geometry":591}],590:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -41901,7 +42220,7 @@ exports.get = function (element) {
   return instances[getId(element)];
 };
 
-},{"../lib/class":573,"../lib/dom":574,"../lib/event-manager":575,"../lib/guid":576,"../lib/helper":577,"./default-setting":579}],590:[function(require,module,exports){
+},{"../lib/class":574,"../lib/dom":575,"../lib/event-manager":576,"../lib/guid":577,"../lib/helper":578,"./default-setting":580}],591:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -42029,34 +42348,19 @@ module.exports = function (element) {
   }
 };
 
-},{"../lib/class":573,"../lib/dom":574,"../lib/helper":577,"./instances":589,"./update-scroll":591}],591:[function(require,module,exports){
+},{"../lib/class":574,"../lib/dom":575,"../lib/helper":578,"./instances":590,"./update-scroll":592}],592:[function(require,module,exports){
 'use strict';
 
 var instances = require('./instances');
 
-var upEvent = document.createEvent('Event');
-var downEvent = document.createEvent('Event');
-var leftEvent = document.createEvent('Event');
-var rightEvent = document.createEvent('Event');
-var yEvent = document.createEvent('Event');
-var xEvent = document.createEvent('Event');
-var xStartEvent = document.createEvent('Event');
-var xEndEvent = document.createEvent('Event');
-var yStartEvent = document.createEvent('Event');
-var yEndEvent = document.createEvent('Event');
 var lastTop;
 var lastLeft;
 
-upEvent.initEvent('ps-scroll-up', true, true);
-downEvent.initEvent('ps-scroll-down', true, true);
-leftEvent.initEvent('ps-scroll-left', true, true);
-rightEvent.initEvent('ps-scroll-right', true, true);
-yEvent.initEvent('ps-scroll-y', true, true);
-xEvent.initEvent('ps-scroll-x', true, true);
-xStartEvent.initEvent('ps-x-reach-start', true, true);
-xEndEvent.initEvent('ps-x-reach-end', true, true);
-yStartEvent.initEvent('ps-y-reach-start', true, true);
-yEndEvent.initEvent('ps-y-reach-end', true, true);
+var createDOMEvent = function (name) {
+  var event = document.createEvent("Event");
+  event.initEvent(name, true, true);
+  return event;
+};
 
 module.exports = function (element, axis, value) {
   if (typeof element === 'undefined') {
@@ -42073,12 +42377,12 @@ module.exports = function (element, axis, value) {
 
   if (axis === 'top' && value <= 0) {
     element.scrollTop = value = 0; // don't allow negative scroll
-    element.dispatchEvent(yStartEvent);
+    element.dispatchEvent(createDOMEvent('ps-y-reach-start'));
   }
 
   if (axis === 'left' && value <= 0) {
     element.scrollLeft = value = 0; // don't allow negative scroll
-    element.dispatchEvent(xStartEvent);
+    element.dispatchEvent(createDOMEvent('ps-x-reach-start'));
   }
 
   var i = instances.get(element);
@@ -42092,7 +42396,7 @@ module.exports = function (element, axis, value) {
     } else {
       element.scrollTop = value;
     }
-    element.dispatchEvent(yEndEvent);
+    element.dispatchEvent(createDOMEvent('ps-y-reach-end'));
   }
 
   if (axis === 'left' && value >= i.contentWidth - i.containerWidth) {
@@ -42104,7 +42408,7 @@ module.exports = function (element, axis, value) {
     } else {
       element.scrollLeft = value;
     }
-    element.dispatchEvent(xEndEvent);
+    element.dispatchEvent(createDOMEvent('ps-x-reach-end'));
   }
 
   if (!lastTop) {
@@ -42116,34 +42420,34 @@ module.exports = function (element, axis, value) {
   }
 
   if (axis === 'top' && value < lastTop) {
-    element.dispatchEvent(upEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-up'));
   }
 
   if (axis === 'top' && value > lastTop) {
-    element.dispatchEvent(downEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-down'));
   }
 
   if (axis === 'left' && value < lastLeft) {
-    element.dispatchEvent(leftEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-left'));
   }
 
   if (axis === 'left' && value > lastLeft) {
-    element.dispatchEvent(rightEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-right'));
   }
 
   if (axis === 'top') {
     element.scrollTop = lastTop = value;
-    element.dispatchEvent(yEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-y'));
   }
 
   if (axis === 'left') {
     element.scrollLeft = lastLeft = value;
-    element.dispatchEvent(xEvent);
+    element.dispatchEvent(createDOMEvent('ps-scroll-x'));
   }
 
 };
 
-},{"./instances":589}],592:[function(require,module,exports){
+},{"./instances":590}],593:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -42182,7 +42486,7 @@ module.exports = function (element) {
   dom.css(i.scrollbarYRail, 'display', '');
 };
 
-},{"../lib/dom":574,"../lib/helper":577,"./instances":589,"./update-geometry":590,"./update-scroll":591}],593:[function(require,module,exports){
+},{"../lib/dom":575,"../lib/helper":578,"./instances":590,"./update-geometry":591,"./update-scroll":592}],594:[function(require,module,exports){
 (function (process){
 // Generated by CoffeeScript 1.7.1
 (function() {
@@ -42218,7 +42522,7 @@ module.exports = function (element) {
 }).call(this);
 
 }).call(this,require('_process'))
-},{"_process":594}],594:[function(require,module,exports){
+},{"_process":595}],595:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -42400,7 +42704,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],595:[function(require,module,exports){
+},{}],596:[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -42500,7 +42804,7 @@ exports.stringify = function (obj, opts) {
 	}).join('&') : '';
 };
 
-},{"object-assign":572,"strict-uri-encode":780}],596:[function(require,module,exports){
+},{"object-assign":573,"strict-uri-encode":781}],597:[function(require,module,exports){
 (function (global){
 var now = require('performance-now')
   , root = typeof window === 'undefined' ? global : window
@@ -42576,9 +42880,9 @@ module.exports.polyfill = function() {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"performance-now":593}],597:[function(require,module,exports){
+},{"performance-now":594}],598:[function(require,module,exports){
 module.exports = require('react/lib/shallowCompare');
-},{"react/lib/shallowCompare":737}],598:[function(require,module,exports){
+},{"react/lib/shallowCompare":738}],599:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -42768,16 +43072,16 @@ module.exports = _react2['default'].createClass({
     }
   }
 });
-},{"react":"react"}],599:[function(require,module,exports){
+},{"react":"react"}],600:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./components/DisqusThread');
-},{"./components/DisqusThread":598}],600:[function(require,module,exports){
+},{"./components/DisqusThread":599}],601:[function(require,module,exports){
 'use strict';
 
 module.exports = require('react/lib/ReactDOMServer');
 
-},{"react/lib/ReactDOMServer":656}],601:[function(require,module,exports){
+},{"react/lib/ReactDOMServer":657}],602:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -42858,7 +43162,7 @@ Provider.childContextTypes = {
   store: _storeShape2["default"].isRequired
 };
 }).call(this,require('_process'))
-},{"../utils/storeShape":604,"../utils/warning":605,"_process":594,"react":"react"}],602:[function(require,module,exports){
+},{"../utils/storeShape":605,"../utils/warning":606,"_process":595,"react":"react"}],603:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -43254,7 +43558,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
   };
 }
 }).call(this,require('_process'))
-},{"../utils/shallowEqual":603,"../utils/storeShape":604,"../utils/warning":605,"../utils/wrapActionCreators":606,"_process":594,"hoist-non-react-statics":466,"invariant":483,"lodash/isPlainObject":610,"react":"react"}],603:[function(require,module,exports){
+},{"../utils/shallowEqual":604,"../utils/storeShape":605,"../utils/warning":606,"../utils/wrapActionCreators":607,"_process":595,"hoist-non-react-statics":467,"invariant":484,"lodash/isPlainObject":611,"react":"react"}],604:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -43281,7 +43585,7 @@ function shallowEqual(objA, objB) {
 
   return true;
 }
-},{}],604:[function(require,module,exports){
+},{}],605:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -43293,7 +43597,7 @@ exports["default"] = _react.PropTypes.shape({
   dispatch: _react.PropTypes.func.isRequired,
   getState: _react.PropTypes.func.isRequired
 });
-},{"react":"react"}],605:[function(require,module,exports){
+},{"react":"react"}],606:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -43318,7 +43622,7 @@ function warning(message) {
   } catch (e) {}
   /* eslint-enable no-empty */
 }
-},{}],606:[function(require,module,exports){
+},{}],607:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -43331,7 +43635,7 @@ function wrapActionCreators(actionCreators) {
     return (0, _redux.bindActionCreators)(actionCreators, dispatch);
   };
 }
-},{"redux":"redux"}],607:[function(require,module,exports){
+},{"redux":"redux"}],608:[function(require,module,exports){
 var overArg = require('./_overArg');
 
 /** Built-in value references. */
@@ -43339,7 +43643,7 @@ var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 module.exports = getPrototype;
 
-},{"./_overArg":608}],608:[function(require,module,exports){
+},{"./_overArg":609}],609:[function(require,module,exports){
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -43356,7 +43660,7 @@ function overArg(func, transform) {
 
 module.exports = overArg;
 
-},{}],609:[function(require,module,exports){
+},{}],610:[function(require,module,exports){
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -43387,7 +43691,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],610:[function(require,module,exports){
+},{}],611:[function(require,module,exports){
 var getPrototype = require('./_getPrototype'),
     isObjectLike = require('./isObjectLike');
 
@@ -43457,7 +43761,7 @@ function isPlainObject(value) {
 
 module.exports = isPlainObject;
 
-},{"./_getPrototype":607,"./isObjectLike":609}],611:[function(require,module,exports){
+},{"./_getPrototype":608,"./isObjectLike":610}],612:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -43945,7 +44249,7 @@ Sticky.STATUS_FIXED = STATUS_FIXED;
 
 module.exports = Sticky;
 
-},{"classnames":"classnames","react":"react","react-addons-shallow-compare":597,"subscribe-ui-event":790}],612:[function(require,module,exports){
+},{"classnames":"classnames","react":"react","react-addons-shallow-compare":598,"subscribe-ui-event":791}],613:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -43982,7 +44286,7 @@ var AutoFocusUtils = {
 };
 
 module.exports = AutoFocusUtils;
-},{"./ReactMount":676,"./findDOMNode":719,"fbjs/lib/focusNode":750}],613:[function(require,module,exports){
+},{"./ReactMount":677,"./findDOMNode":720,"fbjs/lib/focusNode":751}],614:[function(require,module,exports){
 /**
  * Copyright 2013-2015 Facebook, Inc.
  * All rights reserved.
@@ -44388,7 +44692,7 @@ var BeforeInputEventPlugin = {
 };
 
 module.exports = BeforeInputEventPlugin;
-},{"./EventConstants":625,"./EventPropagators":629,"./FallbackCompositionState":630,"./SyntheticCompositionEvent":701,"./SyntheticInputEvent":705,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/keyOf":760}],614:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPropagators":630,"./FallbackCompositionState":631,"./SyntheticCompositionEvent":702,"./SyntheticInputEvent":706,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/keyOf":761}],615:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -44528,7 +44832,7 @@ var CSSProperty = {
 };
 
 module.exports = CSSProperty;
-},{}],615:[function(require,module,exports){
+},{}],616:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -44706,7 +45010,7 @@ ReactPerf.measureMethods(CSSPropertyOperations, 'CSSPropertyOperations', {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":614,"./ReactPerf":682,"./dangerousStyleValue":716,"_process":594,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/camelizeStyleName":744,"fbjs/lib/hyphenateStyleName":755,"fbjs/lib/memoizeStringOnly":762,"fbjs/lib/warning":767}],616:[function(require,module,exports){
+},{"./CSSProperty":615,"./ReactPerf":683,"./dangerousStyleValue":717,"_process":595,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/camelizeStyleName":745,"fbjs/lib/hyphenateStyleName":756,"fbjs/lib/memoizeStringOnly":763,"fbjs/lib/warning":768}],617:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -44802,7 +45106,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 
 module.exports = CallbackQueue;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./PooledClass":634,"_process":594,"fbjs/lib/invariant":756}],617:[function(require,module,exports){
+},{"./Object.assign":634,"./PooledClass":635,"_process":595,"fbjs/lib/invariant":757}],618:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45124,7 +45428,7 @@ var ChangeEventPlugin = {
 };
 
 module.exports = ChangeEventPlugin;
-},{"./EventConstants":625,"./EventPluginHub":626,"./EventPropagators":629,"./ReactUpdates":694,"./SyntheticEvent":703,"./getEventTarget":725,"./isEventSupported":730,"./isTextInputElement":731,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/keyOf":760}],618:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPluginHub":627,"./EventPropagators":630,"./ReactUpdates":695,"./SyntheticEvent":704,"./getEventTarget":726,"./isEventSupported":731,"./isTextInputElement":732,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/keyOf":761}],619:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45148,7 +45452,7 @@ var ClientReactRootIndex = {
 };
 
 module.exports = ClientReactRootIndex;
-},{}],619:[function(require,module,exports){
+},{}],620:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -45280,7 +45584,7 @@ ReactPerf.measureMethods(DOMChildrenOperations, 'DOMChildrenOperations', {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./Danger":622,"./ReactMultiChildUpdateTypes":678,"./ReactPerf":682,"./setInnerHTML":735,"./setTextContent":736,"_process":594,"fbjs/lib/invariant":756}],620:[function(require,module,exports){
+},{"./Danger":623,"./ReactMultiChildUpdateTypes":679,"./ReactPerf":683,"./setInnerHTML":736,"./setTextContent":737,"_process":595,"fbjs/lib/invariant":757}],621:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -45517,7 +45821,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],621:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],622:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -45745,7 +46049,7 @@ ReactPerf.measureMethods(DOMPropertyOperations, 'DOMPropertyOperations', {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":620,"./ReactPerf":682,"./quoteAttributeValueForBrowser":733,"_process":594,"fbjs/lib/warning":767}],622:[function(require,module,exports){
+},{"./DOMProperty":621,"./ReactPerf":683,"./quoteAttributeValueForBrowser":734,"_process":595,"fbjs/lib/warning":768}],623:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -45893,7 +46197,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/createNodesFromMarkup":747,"fbjs/lib/emptyFunction":748,"fbjs/lib/getMarkupWrap":752,"fbjs/lib/invariant":756}],623:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/createNodesFromMarkup":748,"fbjs/lib/emptyFunction":749,"fbjs/lib/getMarkupWrap":753,"fbjs/lib/invariant":757}],624:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -45921,7 +46225,7 @@ var keyOf = require('fbjs/lib/keyOf');
 var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ SimpleEventPlugin: null }), keyOf({ TapEventPlugin: null }), keyOf({ EnterLeaveEventPlugin: null }), keyOf({ ChangeEventPlugin: null }), keyOf({ SelectEventPlugin: null }), keyOf({ BeforeInputEventPlugin: null })];
 
 module.exports = DefaultEventPluginOrder;
-},{"fbjs/lib/keyOf":760}],624:[function(require,module,exports){
+},{"fbjs/lib/keyOf":761}],625:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -46046,7 +46350,7 @@ var EnterLeaveEventPlugin = {
 };
 
 module.exports = EnterLeaveEventPlugin;
-},{"./EventConstants":625,"./EventPropagators":629,"./ReactMount":676,"./SyntheticMouseEvent":707,"fbjs/lib/keyOf":760}],625:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPropagators":630,"./ReactMount":677,"./SyntheticMouseEvent":708,"fbjs/lib/keyOf":761}],626:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -46139,7 +46443,7 @@ var EventConstants = {
 };
 
 module.exports = EventConstants;
-},{"fbjs/lib/keyMirror":759}],626:[function(require,module,exports){
+},{"fbjs/lib/keyMirror":760}],627:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46421,7 +46725,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":627,"./EventPluginUtils":628,"./ReactErrorUtils":667,"./accumulateInto":713,"./forEachAccumulated":721,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],627:[function(require,module,exports){
+},{"./EventPluginRegistry":628,"./EventPluginUtils":629,"./ReactErrorUtils":668,"./accumulateInto":714,"./forEachAccumulated":722,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],628:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46644,7 +46948,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],628:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],629:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46849,7 +47153,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./EventConstants":625,"./ReactErrorUtils":667,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],629:[function(require,module,exports){
+},{"./EventConstants":626,"./ReactErrorUtils":668,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],630:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -46987,7 +47291,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventConstants":625,"./EventPluginHub":626,"./accumulateInto":713,"./forEachAccumulated":721,"_process":594,"fbjs/lib/warning":767}],630:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPluginHub":627,"./accumulateInto":714,"./forEachAccumulated":722,"_process":595,"fbjs/lib/warning":768}],631:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47083,7 +47387,7 @@ assign(FallbackCompositionState.prototype, {
 PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
-},{"./Object.assign":633,"./PooledClass":634,"./getTextContentAccessor":728}],631:[function(require,module,exports){
+},{"./Object.assign":634,"./PooledClass":635,"./getTextContentAccessor":729}],632:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47314,7 +47618,7 @@ var HTMLDOMPropertyConfig = {
 };
 
 module.exports = HTMLDOMPropertyConfig;
-},{"./DOMProperty":620,"fbjs/lib/ExecutionEnvironment":742}],632:[function(require,module,exports){
+},{"./DOMProperty":621,"fbjs/lib/ExecutionEnvironment":743}],633:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -47451,7 +47755,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocations":684,"./ReactPropTypes":685,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],633:[function(require,module,exports){
+},{"./ReactPropTypeLocations":685,"./ReactPropTypes":686,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],634:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -47499,7 +47803,7 @@ function assign(target, sources) {
 }
 
 module.exports = assign;
-},{}],634:[function(require,module,exports){
+},{}],635:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -47621,7 +47925,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],635:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],636:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -47662,7 +47966,7 @@ React.__SECRET_DOM_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOM;
 React.__SECRET_DOM_SERVER_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOMServer;
 
 module.exports = React;
-},{"./Object.assign":633,"./ReactDOM":646,"./ReactDOMServer":656,"./ReactIsomorphic":674,"./deprecated":717}],636:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactDOM":647,"./ReactDOMServer":657,"./ReactIsomorphic":675,"./deprecated":718}],637:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -47701,7 +48005,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":673,"./findDOMNode":719,"_process":594,"fbjs/lib/warning":767}],637:[function(require,module,exports){
+},{"./ReactInstanceMap":674,"./findDOMNode":720,"_process":595,"fbjs/lib/warning":768}],638:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -48026,7 +48330,7 @@ ReactPerf.measureMethods(ReactBrowserEventEmitter, 'ReactBrowserEventEmitter', {
 });
 
 module.exports = ReactBrowserEventEmitter;
-},{"./EventConstants":625,"./EventPluginHub":626,"./EventPluginRegistry":627,"./Object.assign":633,"./ReactEventEmitterMixin":668,"./ReactPerf":682,"./ViewportMetrics":712,"./isEventSupported":730}],638:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPluginHub":627,"./EventPluginRegistry":628,"./Object.assign":634,"./ReactEventEmitterMixin":669,"./ReactPerf":683,"./ViewportMetrics":713,"./isEventSupported":731}],639:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -48151,7 +48455,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./ReactReconciler":687,"./instantiateReactComponent":729,"./shouldUpdateReactComponent":738,"./traverseAllChildren":739,"_process":594,"fbjs/lib/warning":767}],639:[function(require,module,exports){
+},{"./ReactReconciler":688,"./instantiateReactComponent":730,"./shouldUpdateReactComponent":739,"./traverseAllChildren":740,"_process":595,"fbjs/lib/warning":768}],640:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -48334,7 +48638,7 @@ var ReactChildren = {
 };
 
 module.exports = ReactChildren;
-},{"./PooledClass":634,"./ReactElement":663,"./traverseAllChildren":739,"fbjs/lib/emptyFunction":748}],640:[function(require,module,exports){
+},{"./PooledClass":635,"./ReactElement":664,"./traverseAllChildren":740,"fbjs/lib/emptyFunction":749}],641:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49108,7 +49412,7 @@ var ReactClass = {
 
 module.exports = ReactClass;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactComponent":641,"./ReactElement":663,"./ReactNoopUpdateQueue":680,"./ReactPropTypeLocationNames":683,"./ReactPropTypeLocations":684,"_process":594,"fbjs/lib/emptyObject":749,"fbjs/lib/invariant":756,"fbjs/lib/keyMirror":759,"fbjs/lib/keyOf":760,"fbjs/lib/warning":767}],641:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactComponent":642,"./ReactElement":664,"./ReactNoopUpdateQueue":681,"./ReactPropTypeLocationNames":684,"./ReactPropTypeLocations":685,"_process":595,"fbjs/lib/emptyObject":750,"fbjs/lib/invariant":757,"fbjs/lib/keyMirror":760,"fbjs/lib/keyOf":761,"fbjs/lib/warning":768}],642:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49233,7 +49537,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactComponent;
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":680,"./canDefineProperty":715,"_process":594,"fbjs/lib/emptyObject":749,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],642:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":681,"./canDefineProperty":716,"_process":595,"fbjs/lib/emptyObject":750,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],643:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -49275,7 +49579,7 @@ var ReactComponentBrowserEnvironment = {
 };
 
 module.exports = ReactComponentBrowserEnvironment;
-},{"./ReactDOMIDOperations":651,"./ReactMount":676}],643:[function(require,module,exports){
+},{"./ReactDOMIDOperations":652,"./ReactMount":677}],644:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -49329,7 +49633,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],644:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],645:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -50026,7 +50330,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactComponentEnvironment":643,"./ReactCurrentOwner":645,"./ReactElement":663,"./ReactInstanceMap":673,"./ReactPerf":682,"./ReactPropTypeLocationNames":683,"./ReactPropTypeLocations":684,"./ReactReconciler":687,"./ReactUpdateQueue":693,"./shouldUpdateReactComponent":738,"_process":594,"fbjs/lib/emptyObject":749,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],645:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactComponentEnvironment":644,"./ReactCurrentOwner":646,"./ReactElement":664,"./ReactInstanceMap":674,"./ReactPerf":683,"./ReactPropTypeLocationNames":684,"./ReactPropTypeLocations":685,"./ReactReconciler":688,"./ReactUpdateQueue":694,"./shouldUpdateReactComponent":739,"_process":595,"fbjs/lib/emptyObject":750,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],646:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -50057,7 +50361,7 @@ var ReactCurrentOwner = {
 };
 
 module.exports = ReactCurrentOwner;
-},{}],646:[function(require,module,exports){
+},{}],647:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -50152,7 +50456,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":645,"./ReactDOMTextComponent":657,"./ReactDefaultInjection":660,"./ReactInstanceHandles":672,"./ReactMount":676,"./ReactPerf":682,"./ReactReconciler":687,"./ReactUpdates":694,"./ReactVersion":695,"./findDOMNode":719,"./renderSubtreeIntoContainer":734,"_process":594,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/warning":767}],647:[function(require,module,exports){
+},{"./ReactCurrentOwner":646,"./ReactDOMTextComponent":658,"./ReactDefaultInjection":661,"./ReactInstanceHandles":673,"./ReactMount":677,"./ReactPerf":683,"./ReactReconciler":688,"./ReactUpdates":695,"./ReactVersion":696,"./findDOMNode":720,"./renderSubtreeIntoContainer":735,"_process":595,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/warning":768}],648:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -50203,7 +50507,7 @@ var ReactDOMButton = {
 };
 
 module.exports = ReactDOMButton;
-},{}],648:[function(require,module,exports){
+},{}],649:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51168,7 +51472,7 @@ assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mix
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":612,"./CSSPropertyOperations":615,"./DOMProperty":620,"./DOMPropertyOperations":621,"./EventConstants":625,"./Object.assign":633,"./ReactBrowserEventEmitter":637,"./ReactComponentBrowserEnvironment":642,"./ReactDOMButton":647,"./ReactDOMInput":652,"./ReactDOMOption":653,"./ReactDOMSelect":654,"./ReactDOMTextarea":658,"./ReactMount":676,"./ReactMultiChild":677,"./ReactPerf":682,"./ReactUpdateQueue":693,"./canDefineProperty":715,"./escapeTextContentForBrowser":718,"./isEventSupported":730,"./setInnerHTML":735,"./setTextContent":736,"./validateDOMNesting":740,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/keyOf":760,"fbjs/lib/shallowEqual":765,"fbjs/lib/warning":767}],649:[function(require,module,exports){
+},{"./AutoFocusUtils":613,"./CSSPropertyOperations":616,"./DOMProperty":621,"./DOMPropertyOperations":622,"./EventConstants":626,"./Object.assign":634,"./ReactBrowserEventEmitter":638,"./ReactComponentBrowserEnvironment":643,"./ReactDOMButton":648,"./ReactDOMInput":653,"./ReactDOMOption":654,"./ReactDOMSelect":655,"./ReactDOMTextarea":659,"./ReactMount":677,"./ReactMultiChild":678,"./ReactPerf":683,"./ReactUpdateQueue":694,"./canDefineProperty":716,"./escapeTextContentForBrowser":719,"./isEventSupported":731,"./setInnerHTML":736,"./setTextContent":737,"./validateDOMNesting":741,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/keyOf":761,"fbjs/lib/shallowEqual":766,"fbjs/lib/warning":768}],650:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51348,7 +51652,7 @@ var ReactDOMFactories = mapObject({
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":663,"./ReactElementValidator":664,"_process":594,"fbjs/lib/mapObject":761}],650:[function(require,module,exports){
+},{"./ReactElement":664,"./ReactElementValidator":665,"_process":595,"fbjs/lib/mapObject":762}],651:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51367,7 +51671,7 @@ var ReactDOMFeatureFlags = {
 };
 
 module.exports = ReactDOMFeatureFlags;
-},{}],651:[function(require,module,exports){
+},{}],652:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51464,7 +51768,7 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 
 module.exports = ReactDOMIDOperations;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":619,"./DOMPropertyOperations":621,"./ReactMount":676,"./ReactPerf":682,"_process":594,"fbjs/lib/invariant":756}],652:[function(require,module,exports){
+},{"./DOMChildrenOperations":620,"./DOMPropertyOperations":622,"./ReactMount":677,"./ReactPerf":683,"_process":595,"fbjs/lib/invariant":757}],653:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51620,7 +51924,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":632,"./Object.assign":633,"./ReactDOMIDOperations":651,"./ReactMount":676,"./ReactUpdates":694,"_process":594,"fbjs/lib/invariant":756}],653:[function(require,module,exports){
+},{"./LinkedValueUtils":633,"./Object.assign":634,"./ReactDOMIDOperations":652,"./ReactMount":677,"./ReactUpdates":695,"_process":595,"fbjs/lib/invariant":757}],654:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51712,7 +52016,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactChildren":639,"./ReactDOMSelect":654,"_process":594,"fbjs/lib/warning":767}],654:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactChildren":640,"./ReactDOMSelect":655,"_process":595,"fbjs/lib/warning":768}],655:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -51903,7 +52207,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":632,"./Object.assign":633,"./ReactMount":676,"./ReactUpdates":694,"_process":594,"fbjs/lib/warning":767}],655:[function(require,module,exports){
+},{"./LinkedValueUtils":633,"./Object.assign":634,"./ReactMount":677,"./ReactUpdates":695,"_process":595,"fbjs/lib/warning":768}],656:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52116,7 +52420,7 @@ var ReactDOMSelection = {
 };
 
 module.exports = ReactDOMSelection;
-},{"./getNodeForCharacterOffset":727,"./getTextContentAccessor":728,"fbjs/lib/ExecutionEnvironment":742}],656:[function(require,module,exports){
+},{"./getNodeForCharacterOffset":728,"./getTextContentAccessor":729,"fbjs/lib/ExecutionEnvironment":743}],657:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52143,7 +52447,7 @@ var ReactDOMServer = {
 };
 
 module.exports = ReactDOMServer;
-},{"./ReactDefaultInjection":660,"./ReactServerRendering":691,"./ReactVersion":695}],657:[function(require,module,exports){
+},{"./ReactDefaultInjection":661,"./ReactServerRendering":692,"./ReactVersion":696}],658:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52273,7 +52577,7 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":619,"./DOMPropertyOperations":621,"./Object.assign":633,"./ReactComponentBrowserEnvironment":642,"./ReactMount":676,"./escapeTextContentForBrowser":718,"./setTextContent":736,"./validateDOMNesting":740,"_process":594}],658:[function(require,module,exports){
+},{"./DOMChildrenOperations":620,"./DOMPropertyOperations":622,"./Object.assign":634,"./ReactComponentBrowserEnvironment":643,"./ReactMount":677,"./escapeTextContentForBrowser":719,"./setTextContent":737,"./validateDOMNesting":741,"_process":595}],659:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52389,7 +52693,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":632,"./Object.assign":633,"./ReactDOMIDOperations":651,"./ReactUpdates":694,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],659:[function(require,module,exports){
+},{"./LinkedValueUtils":633,"./Object.assign":634,"./ReactDOMIDOperations":652,"./ReactUpdates":695,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],660:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52457,7 +52761,7 @@ var ReactDefaultBatchingStrategy = {
 };
 
 module.exports = ReactDefaultBatchingStrategy;
-},{"./Object.assign":633,"./ReactUpdates":694,"./Transaction":711,"fbjs/lib/emptyFunction":748}],660:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactUpdates":695,"./Transaction":712,"fbjs/lib/emptyFunction":749}],661:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52557,7 +52861,7 @@ module.exports = {
   inject: inject
 };
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":613,"./ChangeEventPlugin":617,"./ClientReactRootIndex":618,"./DefaultEventPluginOrder":623,"./EnterLeaveEventPlugin":624,"./HTMLDOMPropertyConfig":631,"./ReactBrowserComponentMixin":636,"./ReactComponentBrowserEnvironment":642,"./ReactDOMComponent":648,"./ReactDOMTextComponent":657,"./ReactDefaultBatchingStrategy":659,"./ReactDefaultPerf":661,"./ReactEventListener":669,"./ReactInjection":670,"./ReactInstanceHandles":672,"./ReactMount":676,"./ReactReconcileTransaction":686,"./SVGDOMPropertyConfig":696,"./SelectEventPlugin":697,"./ServerReactRootIndex":698,"./SimpleEventPlugin":699,"_process":594,"fbjs/lib/ExecutionEnvironment":742}],661:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":614,"./ChangeEventPlugin":618,"./ClientReactRootIndex":619,"./DefaultEventPluginOrder":624,"./EnterLeaveEventPlugin":625,"./HTMLDOMPropertyConfig":632,"./ReactBrowserComponentMixin":637,"./ReactComponentBrowserEnvironment":643,"./ReactDOMComponent":649,"./ReactDOMTextComponent":658,"./ReactDefaultBatchingStrategy":660,"./ReactDefaultPerf":662,"./ReactEventListener":670,"./ReactInjection":671,"./ReactInstanceHandles":673,"./ReactMount":677,"./ReactReconcileTransaction":687,"./SVGDOMPropertyConfig":697,"./SelectEventPlugin":698,"./ServerReactRootIndex":699,"./SimpleEventPlugin":700,"_process":595,"fbjs/lib/ExecutionEnvironment":743}],662:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52795,7 +53099,7 @@ var ReactDefaultPerf = {
 };
 
 module.exports = ReactDefaultPerf;
-},{"./DOMProperty":620,"./ReactDefaultPerfAnalysis":662,"./ReactMount":676,"./ReactPerf":682,"fbjs/lib/performanceNow":764}],662:[function(require,module,exports){
+},{"./DOMProperty":621,"./ReactDefaultPerfAnalysis":663,"./ReactMount":677,"./ReactPerf":683,"fbjs/lib/performanceNow":765}],663:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52997,7 +53301,7 @@ var ReactDefaultPerfAnalysis = {
 };
 
 module.exports = ReactDefaultPerfAnalysis;
-},{"./Object.assign":633}],663:[function(require,module,exports){
+},{"./Object.assign":634}],664:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -53247,7 +53551,7 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactCurrentOwner":645,"./canDefineProperty":715,"_process":594}],664:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactCurrentOwner":646,"./canDefineProperty":716,"_process":595}],665:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -53531,7 +53835,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":645,"./ReactElement":663,"./ReactPropTypeLocationNames":683,"./ReactPropTypeLocations":684,"./canDefineProperty":715,"./getIteratorFn":726,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],665:[function(require,module,exports){
+},{"./ReactCurrentOwner":646,"./ReactElement":664,"./ReactPropTypeLocationNames":684,"./ReactPropTypeLocations":685,"./canDefineProperty":716,"./getIteratorFn":727,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],666:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -53587,7 +53891,7 @@ assign(ReactEmptyComponent.prototype, {
 ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 
 module.exports = ReactEmptyComponent;
-},{"./Object.assign":633,"./ReactElement":663,"./ReactEmptyComponentRegistry":666,"./ReactReconciler":687}],666:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactElement":664,"./ReactEmptyComponentRegistry":667,"./ReactReconciler":688}],667:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -53636,7 +53940,7 @@ var ReactEmptyComponentRegistry = {
 };
 
 module.exports = ReactEmptyComponentRegistry;
-},{}],667:[function(require,module,exports){
+},{}],668:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -53716,7 +54020,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":594}],668:[function(require,module,exports){
+},{"_process":595}],669:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53755,7 +54059,7 @@ var ReactEventEmitterMixin = {
 };
 
 module.exports = ReactEventEmitterMixin;
-},{"./EventPluginHub":626}],669:[function(require,module,exports){
+},{"./EventPluginHub":627}],670:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53967,7 +54271,7 @@ var ReactEventListener = {
 };
 
 module.exports = ReactEventListener;
-},{"./Object.assign":633,"./PooledClass":634,"./ReactInstanceHandles":672,"./ReactMount":676,"./ReactUpdates":694,"./getEventTarget":725,"fbjs/lib/EventListener":741,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/getUnboundedScrollPosition":753}],670:[function(require,module,exports){
+},{"./Object.assign":634,"./PooledClass":635,"./ReactInstanceHandles":673,"./ReactMount":677,"./ReactUpdates":695,"./getEventTarget":726,"fbjs/lib/EventListener":742,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/getUnboundedScrollPosition":754}],671:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54006,7 +54310,7 @@ var ReactInjection = {
 };
 
 module.exports = ReactInjection;
-},{"./DOMProperty":620,"./EventPluginHub":626,"./ReactBrowserEventEmitter":637,"./ReactClass":640,"./ReactComponentEnvironment":643,"./ReactEmptyComponent":665,"./ReactNativeComponent":679,"./ReactPerf":682,"./ReactRootIndex":689,"./ReactUpdates":694}],671:[function(require,module,exports){
+},{"./DOMProperty":621,"./EventPluginHub":627,"./ReactBrowserEventEmitter":638,"./ReactClass":641,"./ReactComponentEnvironment":644,"./ReactEmptyComponent":666,"./ReactNativeComponent":680,"./ReactPerf":683,"./ReactRootIndex":690,"./ReactUpdates":695}],672:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54131,7 +54435,7 @@ var ReactInputSelection = {
 };
 
 module.exports = ReactInputSelection;
-},{"./ReactDOMSelection":655,"fbjs/lib/containsNode":745,"fbjs/lib/focusNode":750,"fbjs/lib/getActiveElement":751}],672:[function(require,module,exports){
+},{"./ReactDOMSelection":656,"fbjs/lib/containsNode":746,"fbjs/lib/focusNode":751,"fbjs/lib/getActiveElement":752}],673:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54436,7 +54740,7 @@ var ReactInstanceHandles = {
 
 module.exports = ReactInstanceHandles;
 }).call(this,require('_process'))
-},{"./ReactRootIndex":689,"_process":594,"fbjs/lib/invariant":756}],673:[function(require,module,exports){
+},{"./ReactRootIndex":690,"_process":595,"fbjs/lib/invariant":757}],674:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54484,7 +54788,7 @@ var ReactInstanceMap = {
 };
 
 module.exports = ReactInstanceMap;
-},{}],674:[function(require,module,exports){
+},{}],675:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54561,7 +54865,7 @@ var React = {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactChildren":639,"./ReactClass":640,"./ReactComponent":641,"./ReactDOMFactories":649,"./ReactElement":663,"./ReactElementValidator":664,"./ReactPropTypes":685,"./ReactVersion":695,"./onlyChild":732,"_process":594}],675:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactChildren":640,"./ReactClass":641,"./ReactComponent":642,"./ReactDOMFactories":650,"./ReactElement":664,"./ReactElementValidator":665,"./ReactPropTypes":686,"./ReactVersion":696,"./onlyChild":733,"_process":595}],676:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54607,7 +54911,7 @@ var ReactMarkupChecksum = {
 };
 
 module.exports = ReactMarkupChecksum;
-},{"./adler32":714}],676:[function(require,module,exports){
+},{"./adler32":715}],677:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55460,7 +55764,7 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMProperty":620,"./Object.assign":633,"./ReactBrowserEventEmitter":637,"./ReactCurrentOwner":645,"./ReactDOMFeatureFlags":650,"./ReactElement":663,"./ReactEmptyComponentRegistry":666,"./ReactInstanceHandles":672,"./ReactInstanceMap":673,"./ReactMarkupChecksum":675,"./ReactPerf":682,"./ReactReconciler":687,"./ReactUpdateQueue":693,"./ReactUpdates":694,"./instantiateReactComponent":729,"./setInnerHTML":735,"./shouldUpdateReactComponent":738,"./validateDOMNesting":740,"_process":594,"fbjs/lib/containsNode":745,"fbjs/lib/emptyObject":749,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],677:[function(require,module,exports){
+},{"./DOMProperty":621,"./Object.assign":634,"./ReactBrowserEventEmitter":638,"./ReactCurrentOwner":646,"./ReactDOMFeatureFlags":651,"./ReactElement":664,"./ReactEmptyComponentRegistry":667,"./ReactInstanceHandles":673,"./ReactInstanceMap":674,"./ReactMarkupChecksum":676,"./ReactPerf":683,"./ReactReconciler":688,"./ReactUpdateQueue":694,"./ReactUpdates":695,"./instantiateReactComponent":730,"./setInnerHTML":736,"./shouldUpdateReactComponent":739,"./validateDOMNesting":741,"_process":595,"fbjs/lib/containsNode":746,"fbjs/lib/emptyObject":750,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],678:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55959,7 +56263,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":638,"./ReactComponentEnvironment":643,"./ReactCurrentOwner":645,"./ReactMultiChildUpdateTypes":678,"./ReactReconciler":687,"./flattenChildren":720,"_process":594}],678:[function(require,module,exports){
+},{"./ReactChildReconciler":639,"./ReactComponentEnvironment":644,"./ReactCurrentOwner":646,"./ReactMultiChildUpdateTypes":679,"./ReactReconciler":688,"./flattenChildren":721,"_process":595}],679:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55992,7 +56296,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 });
 
 module.exports = ReactMultiChildUpdateTypes;
-},{"fbjs/lib/keyMirror":759}],679:[function(require,module,exports){
+},{"fbjs/lib/keyMirror":760}],680:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -56089,7 +56393,7 @@ var ReactNativeComponent = {
 
 module.exports = ReactNativeComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"_process":594,"fbjs/lib/invariant":756}],680:[function(require,module,exports){
+},{"./Object.assign":634,"_process":595,"fbjs/lib/invariant":757}],681:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -56210,7 +56514,7 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/warning":767}],681:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/warning":768}],682:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -56304,7 +56608,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],682:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],683:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -56403,7 +56707,7 @@ function _noMeasure(objName, fnName, func) {
 
 module.exports = ReactPerf;
 }).call(this,require('_process'))
-},{"_process":594}],683:[function(require,module,exports){
+},{"_process":595}],684:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -56430,7 +56734,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":594}],684:[function(require,module,exports){
+},{"_process":595}],685:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56453,7 +56757,7 @@ var ReactPropTypeLocations = keyMirror({
 });
 
 module.exports = ReactPropTypeLocations;
-},{"fbjs/lib/keyMirror":759}],685:[function(require,module,exports){
+},{"fbjs/lib/keyMirror":760}],686:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56810,7 +57114,7 @@ function getClassName(propValue) {
 }
 
 module.exports = ReactPropTypes;
-},{"./ReactElement":663,"./ReactPropTypeLocationNames":683,"./getIteratorFn":726,"fbjs/lib/emptyFunction":748}],686:[function(require,module,exports){
+},{"./ReactElement":664,"./ReactPropTypeLocationNames":684,"./getIteratorFn":727,"fbjs/lib/emptyFunction":749}],687:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56962,7 +57266,7 @@ assign(ReactReconcileTransaction.prototype, Transaction.Mixin, Mixin);
 PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
-},{"./CallbackQueue":616,"./Object.assign":633,"./PooledClass":634,"./ReactBrowserEventEmitter":637,"./ReactDOMFeatureFlags":650,"./ReactInputSelection":671,"./Transaction":711}],687:[function(require,module,exports){
+},{"./CallbackQueue":617,"./Object.assign":634,"./PooledClass":635,"./ReactBrowserEventEmitter":638,"./ReactDOMFeatureFlags":651,"./ReactInputSelection":672,"./Transaction":712}],688:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57070,7 +57374,7 @@ var ReactReconciler = {
 };
 
 module.exports = ReactReconciler;
-},{"./ReactRef":688}],688:[function(require,module,exports){
+},{"./ReactRef":689}],689:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57149,7 +57453,7 @@ ReactRef.detachRefs = function (instance, element) {
 };
 
 module.exports = ReactRef;
-},{"./ReactOwner":681}],689:[function(require,module,exports){
+},{"./ReactOwner":682}],690:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57179,7 +57483,7 @@ var ReactRootIndex = {
 };
 
 module.exports = ReactRootIndex;
-},{}],690:[function(require,module,exports){
+},{}],691:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -57203,7 +57507,7 @@ var ReactServerBatchingStrategy = {
 };
 
 module.exports = ReactServerBatchingStrategy;
-},{}],691:[function(require,module,exports){
+},{}],692:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -57289,7 +57593,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
-},{"./ReactDefaultBatchingStrategy":659,"./ReactElement":663,"./ReactInstanceHandles":672,"./ReactMarkupChecksum":675,"./ReactServerBatchingStrategy":690,"./ReactServerRenderingTransaction":692,"./ReactUpdates":694,"./instantiateReactComponent":729,"_process":594,"fbjs/lib/emptyObject":749,"fbjs/lib/invariant":756}],692:[function(require,module,exports){
+},{"./ReactDefaultBatchingStrategy":660,"./ReactElement":664,"./ReactInstanceHandles":673,"./ReactMarkupChecksum":676,"./ReactServerBatchingStrategy":691,"./ReactServerRenderingTransaction":693,"./ReactUpdates":695,"./instantiateReactComponent":730,"_process":595,"fbjs/lib/emptyObject":750,"fbjs/lib/invariant":757}],693:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -57377,7 +57681,7 @@ assign(ReactServerRenderingTransaction.prototype, Transaction.Mixin, Mixin);
 PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
-},{"./CallbackQueue":616,"./Object.assign":633,"./PooledClass":634,"./Transaction":711,"fbjs/lib/emptyFunction":748}],693:[function(require,module,exports){
+},{"./CallbackQueue":617,"./Object.assign":634,"./PooledClass":635,"./Transaction":712,"fbjs/lib/emptyFunction":749}],694:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -57637,7 +57941,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactCurrentOwner":645,"./ReactElement":663,"./ReactInstanceMap":673,"./ReactUpdates":694,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],694:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactCurrentOwner":646,"./ReactElement":664,"./ReactInstanceMap":674,"./ReactUpdates":695,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],695:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -57863,7 +58167,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":616,"./Object.assign":633,"./PooledClass":634,"./ReactPerf":682,"./ReactReconciler":687,"./Transaction":711,"_process":594,"fbjs/lib/invariant":756}],695:[function(require,module,exports){
+},{"./CallbackQueue":617,"./Object.assign":634,"./PooledClass":635,"./ReactPerf":683,"./ReactReconciler":688,"./Transaction":712,"_process":595,"fbjs/lib/invariant":757}],696:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57878,7 +58182,7 @@ module.exports = ReactUpdates;
 'use strict';
 
 module.exports = '0.14.8';
-},{}],696:[function(require,module,exports){
+},{}],697:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58006,7 +58310,7 @@ var SVGDOMPropertyConfig = {
 };
 
 module.exports = SVGDOMPropertyConfig;
-},{"./DOMProperty":620}],697:[function(require,module,exports){
+},{"./DOMProperty":621}],698:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58208,7 +58512,7 @@ var SelectEventPlugin = {
 };
 
 module.exports = SelectEventPlugin;
-},{"./EventConstants":625,"./EventPropagators":629,"./ReactInputSelection":671,"./SyntheticEvent":703,"./isTextInputElement":731,"fbjs/lib/ExecutionEnvironment":742,"fbjs/lib/getActiveElement":751,"fbjs/lib/keyOf":760,"fbjs/lib/shallowEqual":765}],698:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPropagators":630,"./ReactInputSelection":672,"./SyntheticEvent":704,"./isTextInputElement":732,"fbjs/lib/ExecutionEnvironment":743,"fbjs/lib/getActiveElement":752,"fbjs/lib/keyOf":761,"fbjs/lib/shallowEqual":766}],699:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58238,7 +58542,7 @@ var ServerReactRootIndex = {
 };
 
 module.exports = ServerReactRootIndex;
-},{}],699:[function(require,module,exports){
+},{}],700:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -58828,7 +59132,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventConstants":625,"./EventPropagators":629,"./ReactMount":676,"./SyntheticClipboardEvent":700,"./SyntheticDragEvent":702,"./SyntheticEvent":703,"./SyntheticFocusEvent":704,"./SyntheticKeyboardEvent":706,"./SyntheticMouseEvent":707,"./SyntheticTouchEvent":708,"./SyntheticUIEvent":709,"./SyntheticWheelEvent":710,"./getEventCharCode":722,"_process":594,"fbjs/lib/EventListener":741,"fbjs/lib/emptyFunction":748,"fbjs/lib/invariant":756,"fbjs/lib/keyOf":760}],700:[function(require,module,exports){
+},{"./EventConstants":626,"./EventPropagators":630,"./ReactMount":677,"./SyntheticClipboardEvent":701,"./SyntheticDragEvent":703,"./SyntheticEvent":704,"./SyntheticFocusEvent":705,"./SyntheticKeyboardEvent":707,"./SyntheticMouseEvent":708,"./SyntheticTouchEvent":709,"./SyntheticUIEvent":710,"./SyntheticWheelEvent":711,"./getEventCharCode":723,"_process":595,"fbjs/lib/EventListener":742,"fbjs/lib/emptyFunction":749,"fbjs/lib/invariant":757,"fbjs/lib/keyOf":761}],701:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58868,7 +59172,7 @@ function SyntheticClipboardEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
-},{"./SyntheticEvent":703}],701:[function(require,module,exports){
+},{"./SyntheticEvent":704}],702:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58906,7 +59210,7 @@ function SyntheticCompositionEvent(dispatchConfig, dispatchMarker, nativeEvent, 
 SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface);
 
 module.exports = SyntheticCompositionEvent;
-},{"./SyntheticEvent":703}],702:[function(require,module,exports){
+},{"./SyntheticEvent":704}],703:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58944,7 +59248,7 @@ function SyntheticDragEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeE
 SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
-},{"./SyntheticMouseEvent":707}],703:[function(require,module,exports){
+},{"./SyntheticMouseEvent":708}],704:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59127,7 +59431,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 
 module.exports = SyntheticEvent;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./PooledClass":634,"_process":594,"fbjs/lib/emptyFunction":748,"fbjs/lib/warning":767}],704:[function(require,module,exports){
+},{"./Object.assign":634,"./PooledClass":635,"_process":595,"fbjs/lib/emptyFunction":749,"fbjs/lib/warning":768}],705:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59165,7 +59469,7 @@ function SyntheticFocusEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
-},{"./SyntheticUIEvent":709}],705:[function(require,module,exports){
+},{"./SyntheticUIEvent":710}],706:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59204,7 +59508,7 @@ function SyntheticInputEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 
 module.exports = SyntheticInputEvent;
-},{"./SyntheticEvent":703}],706:[function(require,module,exports){
+},{"./SyntheticEvent":704}],707:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59290,7 +59594,7 @@ function SyntheticKeyboardEvent(dispatchConfig, dispatchMarker, nativeEvent, nat
 SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
-},{"./SyntheticUIEvent":709,"./getEventCharCode":722,"./getEventKey":723,"./getEventModifierState":724}],707:[function(require,module,exports){
+},{"./SyntheticUIEvent":710,"./getEventCharCode":723,"./getEventKey":724,"./getEventModifierState":725}],708:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59364,7 +59668,7 @@ function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
-},{"./SyntheticUIEvent":709,"./ViewportMetrics":712,"./getEventModifierState":724}],708:[function(require,module,exports){
+},{"./SyntheticUIEvent":710,"./ViewportMetrics":713,"./getEventModifierState":725}],709:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59411,7 +59715,7 @@ function SyntheticTouchEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
-},{"./SyntheticUIEvent":709,"./getEventModifierState":724}],709:[function(require,module,exports){
+},{"./SyntheticUIEvent":710,"./getEventModifierState":725}],710:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59472,7 +59776,7 @@ function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEve
 SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
-},{"./SyntheticEvent":703,"./getEventTarget":725}],710:[function(require,module,exports){
+},{"./SyntheticEvent":704,"./getEventTarget":726}],711:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59528,7 +59832,7 @@ function SyntheticWheelEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
-},{"./SyntheticMouseEvent":707}],711:[function(require,module,exports){
+},{"./SyntheticMouseEvent":708}],712:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59762,7 +60066,7 @@ var Transaction = {
 
 module.exports = Transaction;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],712:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],713:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59790,7 +60094,7 @@ var ViewportMetrics = {
 };
 
 module.exports = ViewportMetrics;
-},{}],713:[function(require,module,exports){
+},{}],714:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -59852,7 +60156,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"_process":594,"fbjs/lib/invariant":756}],714:[function(require,module,exports){
+},{"_process":595,"fbjs/lib/invariant":757}],715:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59895,7 +60199,7 @@ function adler32(data) {
 }
 
 module.exports = adler32;
-},{}],715:[function(require,module,exports){
+},{}],716:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59922,7 +60226,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":594}],716:[function(require,module,exports){
+},{"_process":595}],717:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59978,7 +60282,7 @@ function dangerousStyleValue(name, value) {
 }
 
 module.exports = dangerousStyleValue;
-},{"./CSSProperty":614}],717:[function(require,module,exports){
+},{"./CSSProperty":615}],718:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60029,7 +60333,7 @@ function deprecated(fnName, newModule, newPackage, ctx, fn) {
 
 module.exports = deprecated;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"_process":594,"fbjs/lib/warning":767}],718:[function(require,module,exports){
+},{"./Object.assign":634,"_process":595,"fbjs/lib/warning":768}],719:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60068,7 +60372,7 @@ function escapeTextContentForBrowser(text) {
 }
 
 module.exports = escapeTextContentForBrowser;
-},{}],719:[function(require,module,exports){
+},{}],720:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60120,7 +60424,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":645,"./ReactInstanceMap":673,"./ReactMount":676,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],720:[function(require,module,exports){
+},{"./ReactCurrentOwner":646,"./ReactInstanceMap":674,"./ReactMount":677,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],721:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60171,7 +60475,7 @@ function flattenChildren(children) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./traverseAllChildren":739,"_process":594,"fbjs/lib/warning":767}],721:[function(require,module,exports){
+},{"./traverseAllChildren":740,"_process":595,"fbjs/lib/warning":768}],722:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60201,7 +60505,7 @@ var forEachAccumulated = function (arr, cb, scope) {
 };
 
 module.exports = forEachAccumulated;
-},{}],722:[function(require,module,exports){
+},{}],723:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60252,7 +60556,7 @@ function getEventCharCode(nativeEvent) {
 }
 
 module.exports = getEventCharCode;
-},{}],723:[function(require,module,exports){
+},{}],724:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60356,7 +60660,7 @@ function getEventKey(nativeEvent) {
 }
 
 module.exports = getEventKey;
-},{"./getEventCharCode":722}],724:[function(require,module,exports){
+},{"./getEventCharCode":723}],725:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60401,7 +60705,7 @@ function getEventModifierState(nativeEvent) {
 }
 
 module.exports = getEventModifierState;
-},{}],725:[function(require,module,exports){
+},{}],726:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60431,7 +60735,7 @@ function getEventTarget(nativeEvent) {
 }
 
 module.exports = getEventTarget;
-},{}],726:[function(require,module,exports){
+},{}],727:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60472,7 +60776,7 @@ function getIteratorFn(maybeIterable) {
 }
 
 module.exports = getIteratorFn;
-},{}],727:[function(require,module,exports){
+},{}],728:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60546,7 +60850,7 @@ function getNodeForCharacterOffset(root, offset) {
 }
 
 module.exports = getNodeForCharacterOffset;
-},{}],728:[function(require,module,exports){
+},{}],729:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60580,7 +60884,7 @@ function getTextContentAccessor() {
 }
 
 module.exports = getTextContentAccessor;
-},{"fbjs/lib/ExecutionEnvironment":742}],729:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":743}],730:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60695,7 +60999,7 @@ function instantiateReactComponent(node) {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"./ReactCompositeComponent":644,"./ReactEmptyComponent":665,"./ReactNativeComponent":679,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],730:[function(require,module,exports){
+},{"./Object.assign":634,"./ReactCompositeComponent":645,"./ReactEmptyComponent":666,"./ReactNativeComponent":680,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],731:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60756,7 +61060,7 @@ function isEventSupported(eventNameSuffix, capture) {
 }
 
 module.exports = isEventSupported;
-},{"fbjs/lib/ExecutionEnvironment":742}],731:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":743}],732:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60797,7 +61101,7 @@ function isTextInputElement(elem) {
 }
 
 module.exports = isTextInputElement;
-},{}],732:[function(require,module,exports){
+},{}],733:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60833,7 +61137,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":663,"_process":594,"fbjs/lib/invariant":756}],733:[function(require,module,exports){
+},{"./ReactElement":664,"_process":595,"fbjs/lib/invariant":757}],734:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60860,7 +61164,7 @@ function quoteAttributeValueForBrowser(value) {
 }
 
 module.exports = quoteAttributeValueForBrowser;
-},{"./escapeTextContentForBrowser":718}],734:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":719}],735:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60877,7 +61181,7 @@ module.exports = quoteAttributeValueForBrowser;
 var ReactMount = require('./ReactMount');
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
-},{"./ReactMount":676}],735:[function(require,module,exports){
+},{"./ReactMount":677}],736:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60968,7 +61272,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setInnerHTML;
-},{"fbjs/lib/ExecutionEnvironment":742}],736:[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":743}],737:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61009,7 +61313,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setTextContent;
-},{"./escapeTextContentForBrowser":718,"./setInnerHTML":735,"fbjs/lib/ExecutionEnvironment":742}],737:[function(require,module,exports){
+},{"./escapeTextContentForBrowser":719,"./setInnerHTML":736,"fbjs/lib/ExecutionEnvironment":743}],738:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61034,7 +61338,7 @@ function shallowCompare(instance, nextProps, nextState) {
 }
 
 module.exports = shallowCompare;
-},{"fbjs/lib/shallowEqual":765}],738:[function(require,module,exports){
+},{"fbjs/lib/shallowEqual":766}],739:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61078,7 +61382,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 }
 
 module.exports = shouldUpdateReactComponent;
-},{}],739:[function(require,module,exports){
+},{}],740:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -61270,7 +61574,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":645,"./ReactElement":663,"./ReactInstanceHandles":672,"./getIteratorFn":726,"_process":594,"fbjs/lib/invariant":756,"fbjs/lib/warning":767}],740:[function(require,module,exports){
+},{"./ReactCurrentOwner":646,"./ReactElement":664,"./ReactInstanceHandles":673,"./getIteratorFn":727,"_process":595,"fbjs/lib/invariant":757,"fbjs/lib/warning":768}],741:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -61636,7 +61940,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"./Object.assign":633,"_process":594,"fbjs/lib/emptyFunction":748,"fbjs/lib/warning":767}],741:[function(require,module,exports){
+},{"./Object.assign":634,"_process":595,"fbjs/lib/emptyFunction":749,"fbjs/lib/warning":768}],742:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -61723,7 +62027,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":748,"_process":594}],742:[function(require,module,exports){
+},{"./emptyFunction":749,"_process":595}],743:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61760,7 +62064,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],743:[function(require,module,exports){
+},{}],744:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61793,7 +62097,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],744:[function(require,module,exports){
+},{}],745:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61834,7 +62138,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":743}],745:[function(require,module,exports){
+},{"./camelize":744}],746:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61890,7 +62194,7 @@ function containsNode(_x, _x2) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":758}],746:[function(require,module,exports){
+},{"./isTextNode":759}],747:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61976,7 +62280,7 @@ function createArrayFromMixed(obj) {
 }
 
 module.exports = createArrayFromMixed;
-},{"./toArray":766}],747:[function(require,module,exports){
+},{"./toArray":767}],748:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62063,7 +62367,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":742,"./createArrayFromMixed":746,"./getMarkupWrap":752,"./invariant":756,"_process":594}],748:[function(require,module,exports){
+},{"./ExecutionEnvironment":743,"./createArrayFromMixed":747,"./getMarkupWrap":753,"./invariant":757,"_process":595}],749:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62102,7 +62406,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],749:[function(require,module,exports){
+},{}],750:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62125,7 +62429,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":594}],750:[function(require,module,exports){
+},{"_process":595}],751:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62152,7 +62456,7 @@ function focusNode(node) {
 }
 
 module.exports = focusNode;
-},{}],751:[function(require,module,exports){
+},{}],752:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62188,7 +62492,7 @@ function getActiveElement() /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],752:[function(require,module,exports){
+},{}],753:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62286,7 +62590,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":742,"./invariant":756,"_process":594}],753:[function(require,module,exports){
+},{"./ExecutionEnvironment":743,"./invariant":757,"_process":595}],754:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62325,7 +62629,7 @@ function getUnboundedScrollPosition(scrollable) {
 }
 
 module.exports = getUnboundedScrollPosition;
-},{}],754:[function(require,module,exports){
+},{}],755:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62359,7 +62663,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],755:[function(require,module,exports){
+},{}],756:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62399,7 +62703,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":754}],756:[function(require,module,exports){
+},{"./hyphenate":755}],757:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62452,7 +62756,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":594}],757:[function(require,module,exports){
+},{"_process":595}],758:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62476,7 +62780,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],758:[function(require,module,exports){
+},{}],759:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62502,7 +62806,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":757}],759:[function(require,module,exports){
+},{"./isNode":758}],760:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62553,7 +62857,7 @@ var keyMirror = function (obj) {
 
 module.exports = keyMirror;
 }).call(this,require('_process'))
-},{"./invariant":756,"_process":594}],760:[function(require,module,exports){
+},{"./invariant":757,"_process":595}],761:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62589,7 +62893,7 @@ var keyOf = function (oneKeyObj) {
 };
 
 module.exports = keyOf;
-},{}],761:[function(require,module,exports){
+},{}],762:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62641,7 +62945,7 @@ function mapObject(object, callback, context) {
 }
 
 module.exports = mapObject;
-},{}],762:[function(require,module,exports){
+},{}],763:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62673,7 +62977,7 @@ function memoizeStringOnly(callback) {
 }
 
 module.exports = memoizeStringOnly;
-},{}],763:[function(require,module,exports){
+},{}],764:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62697,7 +63001,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = performance || {};
-},{"./ExecutionEnvironment":742}],764:[function(require,module,exports){
+},{"./ExecutionEnvironment":743}],765:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62732,7 +63036,7 @@ if (performance.now) {
 }
 
 module.exports = performanceNow;
-},{"./performance":763}],765:[function(require,module,exports){
+},{"./performance":764}],766:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62783,7 +63087,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],766:[function(require,module,exports){
+},{}],767:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62843,7 +63147,7 @@ function toArray(obj) {
 
 module.exports = toArray;
 }).call(this,require('_process'))
-},{"./invariant":756,"_process":594}],767:[function(require,module,exports){
+},{"./invariant":757,"_process":595}],768:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -62903,7 +63207,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":748,"_process":594}],768:[function(require,module,exports){
+},{"./emptyFunction":749,"_process":595}],769:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -62962,7 +63266,7 @@ function applyMiddleware() {
     };
   };
 }
-},{"./compose":771}],769:[function(require,module,exports){
+},{"./compose":772}],770:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -63014,7 +63318,7 @@ function bindActionCreators(actionCreators, dispatch) {
   }
   return boundActionCreators;
 }
-},{}],770:[function(require,module,exports){
+},{}],771:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -63159,7 +63463,7 @@ function combineReducers(reducers) {
   };
 }
 }).call(this,require('_process'))
-},{"./createStore":772,"./utils/warning":773,"_process":594,"lodash/isPlainObject":777}],771:[function(require,module,exports){
+},{"./createStore":773,"./utils/warning":774,"_process":595,"lodash/isPlainObject":778}],772:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -63198,7 +63502,7 @@ function compose() {
     }, last.apply(undefined, arguments));
   };
 }
-},{}],772:[function(require,module,exports){
+},{}],773:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -63460,7 +63764,7 @@ function createStore(reducer, preloadedState, enhancer) {
     replaceReducer: replaceReducer
   }, _ref2[_symbolObservable2['default']] = observable, _ref2;
 }
-},{"lodash/isPlainObject":777,"symbol-observable":893}],773:[function(require,module,exports){
+},{"lodash/isPlainObject":778,"symbol-observable":898}],774:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -63486,15 +63790,15 @@ function warning(message) {
   } catch (e) {}
   /* eslint-enable no-empty */
 }
-},{}],774:[function(require,module,exports){
-arguments[4][607][0].apply(exports,arguments)
-},{"./_overArg":775,"dup":607}],775:[function(require,module,exports){
+},{}],775:[function(require,module,exports){
 arguments[4][608][0].apply(exports,arguments)
-},{"dup":608}],776:[function(require,module,exports){
+},{"./_overArg":776,"dup":608}],776:[function(require,module,exports){
 arguments[4][609][0].apply(exports,arguments)
 },{"dup":609}],777:[function(require,module,exports){
 arguments[4][610][0].apply(exports,arguments)
-},{"./_getPrototype":774,"./isObjectLike":776,"dup":610}],778:[function(require,module,exports){
+},{"dup":610}],778:[function(require,module,exports){
+arguments[4][611][0].apply(exports,arguments)
+},{"./_getPrototype":775,"./isObjectLike":777,"dup":611}],779:[function(require,module,exports){
 /**
  * Copyright (c) 2011-2014 Felix Gnass
  * Licensed under the MIT license
@@ -63873,7 +64177,7 @@ arguments[4][610][0].apply(exports,arguments)
 
 }));
 
-},{}],779:[function(require,module,exports){
+},{}],780:[function(require,module,exports){
 (function (global){
 "use strict"
 // Module export pattern from
@@ -64068,7 +64372,7 @@ arguments[4][610][0].apply(exports,arguments)
 }));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],780:[function(require,module,exports){
+},{}],781:[function(require,module,exports){
 'use strict';
 module.exports = function (str) {
 	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
@@ -64076,7 +64380,7 @@ module.exports = function (str) {
 	});
 };
 
-},{}],781:[function(require,module,exports){
+},{}],782:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64187,7 +64491,7 @@ ArgmentedEvent.prototype = {
 
 module.exports = ArgmentedEvent;
 
-},{"./globalVars":783}],782:[function(require,module,exports){
+},{"./globalVars":784}],783:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64199,7 +64503,7 @@ module.exports = {
   DEFAULT_THROTTLE_RATE: 50
 };
 
-},{}],783:[function(require,module,exports){
+},{}],784:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64217,7 +64521,7 @@ module.exports = {
     removers: []
 };
 
-},{"eventemitter3":791}],784:[function(require,module,exports){
+},{"eventemitter3":462}],785:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64236,7 +64540,7 @@ if (typeof navigator !== 'undefined') {
 
 module.exports = leIE8;
 
-},{}],785:[function(require,module,exports){
+},{}],786:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64271,7 +64575,7 @@ function listen(target, eventType, handler) {
 
 module.exports = listen;
 
-},{}],786:[function(require,module,exports){
+},{}],787:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64315,7 +64619,7 @@ function rAFThrottle(func, throttle) {
 
 module.exports = rAFThrottle;
 
-},{"raf":596}],787:[function(require,module,exports){
+},{"raf":597}],788:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64516,7 +64820,7 @@ module.exports = {
     touchend: connectDiscreteEvent(body, 'touchend')
 };
 
-},{"./AugmentedEvent":781,"./constants":782,"./globalVars":783,"./lib/leIE8":784,"./lib/listen":785,"./lib/rAFThrottle":786,"lodash/clone":874,"lodash/throttle":891}],788:[function(require,module,exports){
+},{"./AugmentedEvent":782,"./constants":783,"./globalVars":784,"./lib/leIE8":785,"./lib/listen":786,"./lib/rAFThrottle":787,"lodash/clone":879,"lodash/throttle":896}],789:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64570,7 +64874,7 @@ function subscribe(type, cb, options) {
 
 module.exports = subscribe;
 
-},{"./constants":782,"./globalVars":783,"./lib/leIE8":784,"./mainEventConnectors":787}],789:[function(require,module,exports){
+},{"./constants":783,"./globalVars":784,"./lib/leIE8":785,"./mainEventConnectors":788}],790:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -64598,7 +64902,7 @@ function unsubscribe(type, cb, options) {
 
 module.exports = unsubscribe;
 
-},{"./globalVars":783}],790:[function(require,module,exports){
+},{"./globalVars":784}],791:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -64627,320 +64931,7 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require('_process'))
-},{"./dist/lib/listen":785,"./dist/subscribe":788,"./dist/unsubscribe":789,"_process":594}],791:[function(require,module,exports){
-'use strict';
-
-var has = Object.prototype.hasOwnProperty
-  , prefix = '~';
-
-/**
- * Constructor to create a storage for our `EE` objects.
- * An `Events` instance is a plain object whose properties are event names.
- *
- * @constructor
- * @api private
- */
-function Events() {}
-
-//
-// We try to not inherit from `Object.prototype`. In some engines creating an
-// instance in this way is faster than calling `Object.create(null)` directly.
-// If `Object.create(null)` is not supported we prefix the event names with a
-// character to make sure that the built-in object properties are not
-// overridden or used as an attack vector.
-//
-if (Object.create) {
-  Events.prototype = Object.create(null);
-
-  //
-  // This hack is needed because the `__proto__` property is still inherited in
-  // some old browsers like Android 4, iPhone 5.1, Opera 11 and Safari 5.
-  //
-  if (!new Events().__proto__) prefix = false;
-}
-
-/**
- * Representation of a single event listener.
- *
- * @param {Function} fn The listener function.
- * @param {Mixed} context The context to invoke the listener with.
- * @param {Boolean} [once=false] Specify if the listener is a one-time listener.
- * @constructor
- * @api private
- */
-function EE(fn, context, once) {
-  this.fn = fn;
-  this.context = context;
-  this.once = once || false;
-}
-
-/**
- * Minimal `EventEmitter` interface that is molded against the Node.js
- * `EventEmitter` interface.
- *
- * @constructor
- * @api public
- */
-function EventEmitter() {
-  this._events = new Events();
-  this._eventsCount = 0;
-}
-
-/**
- * Return an array listing the events for which the emitter has registered
- * listeners.
- *
- * @returns {Array}
- * @api public
- */
-EventEmitter.prototype.eventNames = function eventNames() {
-  var names = []
-    , events
-    , name;
-
-  if (this._eventsCount === 0) return names;
-
-  for (name in (events = this._events)) {
-    if (has.call(events, name)) names.push(prefix ? name.slice(1) : name);
-  }
-
-  if (Object.getOwnPropertySymbols) {
-    return names.concat(Object.getOwnPropertySymbols(events));
-  }
-
-  return names;
-};
-
-/**
- * Return the listeners registered for a given event.
- *
- * @param {String|Symbol} event The event name.
- * @param {Boolean} exists Only check if there are listeners.
- * @returns {Array|Boolean}
- * @api public
- */
-EventEmitter.prototype.listeners = function listeners(event, exists) {
-  var evt = prefix ? prefix + event : event
-    , available = this._events[evt];
-
-  if (exists) return !!available;
-  if (!available) return [];
-  if (available.fn) return [available.fn];
-
-  for (var i = 0, l = available.length, ee = new Array(l); i < l; i++) {
-    ee[i] = available[i].fn;
-  }
-
-  return ee;
-};
-
-/**
- * Calls each of the listeners registered for a given event.
- *
- * @param {String|Symbol} event The event name.
- * @returns {Boolean} `true` if the event had listeners, else `false`.
- * @api public
- */
-EventEmitter.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
-  var evt = prefix ? prefix + event : event;
-
-  if (!this._events[evt]) return false;
-
-  var listeners = this._events[evt]
-    , len = arguments.length
-    , args
-    , i;
-
-  if (listeners.fn) {
-    if (listeners.once) this.removeListener(event, listeners.fn, undefined, true);
-
-    switch (len) {
-      case 1: return listeners.fn.call(listeners.context), true;
-      case 2: return listeners.fn.call(listeners.context, a1), true;
-      case 3: return listeners.fn.call(listeners.context, a1, a2), true;
-      case 4: return listeners.fn.call(listeners.context, a1, a2, a3), true;
-      case 5: return listeners.fn.call(listeners.context, a1, a2, a3, a4), true;
-      case 6: return listeners.fn.call(listeners.context, a1, a2, a3, a4, a5), true;
-    }
-
-    for (i = 1, args = new Array(len -1); i < len; i++) {
-      args[i - 1] = arguments[i];
-    }
-
-    listeners.fn.apply(listeners.context, args);
-  } else {
-    var length = listeners.length
-      , j;
-
-    for (i = 0; i < length; i++) {
-      if (listeners[i].once) this.removeListener(event, listeners[i].fn, undefined, true);
-
-      switch (len) {
-        case 1: listeners[i].fn.call(listeners[i].context); break;
-        case 2: listeners[i].fn.call(listeners[i].context, a1); break;
-        case 3: listeners[i].fn.call(listeners[i].context, a1, a2); break;
-        case 4: listeners[i].fn.call(listeners[i].context, a1, a2, a3); break;
-        default:
-          if (!args) for (j = 1, args = new Array(len -1); j < len; j++) {
-            args[j - 1] = arguments[j];
-          }
-
-          listeners[i].fn.apply(listeners[i].context, args);
-      }
-    }
-  }
-
-  return true;
-};
-
-/**
- * Add a listener for a given event.
- *
- * @param {String|Symbol} event The event name.
- * @param {Function} fn The listener function.
- * @param {Mixed} [context=this] The context to invoke the listener with.
- * @returns {EventEmitter} `this`.
- * @api public
- */
-EventEmitter.prototype.on = function on(event, fn, context) {
-  var listener = new EE(fn, context || this)
-    , evt = prefix ? prefix + event : event;
-
-  if (!this._events[evt]) this._events[evt] = listener, this._eventsCount++;
-  else if (!this._events[evt].fn) this._events[evt].push(listener);
-  else this._events[evt] = [this._events[evt], listener];
-
-  return this;
-};
-
-/**
- * Add a one-time listener for a given event.
- *
- * @param {String|Symbol} event The event name.
- * @param {Function} fn The listener function.
- * @param {Mixed} [context=this] The context to invoke the listener with.
- * @returns {EventEmitter} `this`.
- * @api public
- */
-EventEmitter.prototype.once = function once(event, fn, context) {
-  var listener = new EE(fn, context || this, true)
-    , evt = prefix ? prefix + event : event;
-
-  if (!this._events[evt]) this._events[evt] = listener, this._eventsCount++;
-  else if (!this._events[evt].fn) this._events[evt].push(listener);
-  else this._events[evt] = [this._events[evt], listener];
-
-  return this;
-};
-
-/**
- * Remove the listeners of a given event.
- *
- * @param {String|Symbol} event The event name.
- * @param {Function} fn Only remove the listeners that match this function.
- * @param {Mixed} context Only remove the listeners that have this context.
- * @param {Boolean} once Only remove one-time listeners.
- * @returns {EventEmitter} `this`.
- * @api public
- */
-EventEmitter.prototype.removeListener = function removeListener(event, fn, context, once) {
-  var evt = prefix ? prefix + event : event;
-
-  if (!this._events[evt]) return this;
-  if (!fn) {
-    if (--this._eventsCount === 0) this._events = new Events();
-    else delete this._events[evt];
-    return this;
-  }
-
-  var listeners = this._events[evt];
-
-  if (listeners.fn) {
-    if (
-         listeners.fn === fn
-      && (!once || listeners.once)
-      && (!context || listeners.context === context)
-    ) {
-      if (--this._eventsCount === 0) this._events = new Events();
-      else delete this._events[evt];
-    }
-  } else {
-    for (var i = 0, events = [], length = listeners.length; i < length; i++) {
-      if (
-           listeners[i].fn !== fn
-        || (once && !listeners[i].once)
-        || (context && listeners[i].context !== context)
-      ) {
-        events.push(listeners[i]);
-      }
-    }
-
-    //
-    // Reset the array, or remove it completely if we have no more listeners.
-    //
-    if (events.length) this._events[evt] = events.length === 1 ? events[0] : events;
-    else if (--this._eventsCount === 0) this._events = new Events();
-    else delete this._events[evt];
-  }
-
-  return this;
-};
-
-/**
- * Remove all listeners, or those of the specified event.
- *
- * @param {String|Symbol} [event] The event name.
- * @returns {EventEmitter} `this`.
- * @api public
- */
-EventEmitter.prototype.removeAllListeners = function removeAllListeners(event) {
-  var evt;
-
-  if (event) {
-    evt = prefix ? prefix + event : event;
-    if (this._events[evt]) {
-      if (--this._eventsCount === 0) this._events = new Events();
-      else delete this._events[evt];
-    }
-  } else {
-    this._events = new Events();
-    this._eventsCount = 0;
-  }
-
-  return this;
-};
-
-//
-// Alias methods names because people roll like that.
-//
-EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
-EventEmitter.prototype.addListener = EventEmitter.prototype.on;
-
-//
-// This function doesn't apply anymore.
-//
-EventEmitter.prototype.setMaxListeners = function setMaxListeners() {
-  return this;
-};
-
-//
-// Expose the prefix.
-//
-EventEmitter.prefixed = prefix;
-
-//
-// Allow `EventEmitter` to be imported as module namespace.
-//
-EventEmitter.EventEmitter = EventEmitter;
-
-//
-// Expose the module.
-//
-if ('undefined' !== typeof module) {
-  module.exports = EventEmitter;
-}
-
-},{}],792:[function(require,module,exports){
+},{"./dist/lib/listen":786,"./dist/subscribe":789,"./dist/unsubscribe":790,"_process":595}],792:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -64949,7 +64940,7 @@ var DataView = getNative(root, 'DataView');
 
 module.exports = DataView;
 
-},{"./_getNative":835,"./_root":866}],793:[function(require,module,exports){
+},{"./_getNative":839,"./_root":871}],793:[function(require,module,exports){
 var hashClear = require('./_hashClear'),
     hashDelete = require('./_hashDelete'),
     hashGet = require('./_hashGet'),
@@ -64983,7 +64974,7 @@ Hash.prototype.set = hashSet;
 
 module.exports = Hash;
 
-},{"./_hashClear":840,"./_hashDelete":841,"./_hashGet":842,"./_hashHas":843,"./_hashSet":844}],794:[function(require,module,exports){
+},{"./_hashClear":844,"./_hashDelete":845,"./_hashGet":846,"./_hashHas":847,"./_hashSet":848}],794:[function(require,module,exports){
 var listCacheClear = require('./_listCacheClear'),
     listCacheDelete = require('./_listCacheDelete'),
     listCacheGet = require('./_listCacheGet'),
@@ -65017,7 +65008,7 @@ ListCache.prototype.set = listCacheSet;
 
 module.exports = ListCache;
 
-},{"./_listCacheClear":852,"./_listCacheDelete":853,"./_listCacheGet":854,"./_listCacheHas":855,"./_listCacheSet":856}],795:[function(require,module,exports){
+},{"./_listCacheClear":856,"./_listCacheDelete":857,"./_listCacheGet":858,"./_listCacheHas":859,"./_listCacheSet":860}],795:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -65026,7 +65017,7 @@ var Map = getNative(root, 'Map');
 
 module.exports = Map;
 
-},{"./_getNative":835,"./_root":866}],796:[function(require,module,exports){
+},{"./_getNative":839,"./_root":871}],796:[function(require,module,exports){
 var mapCacheClear = require('./_mapCacheClear'),
     mapCacheDelete = require('./_mapCacheDelete'),
     mapCacheGet = require('./_mapCacheGet'),
@@ -65060,7 +65051,7 @@ MapCache.prototype.set = mapCacheSet;
 
 module.exports = MapCache;
 
-},{"./_mapCacheClear":857,"./_mapCacheDelete":858,"./_mapCacheGet":859,"./_mapCacheHas":860,"./_mapCacheSet":861}],797:[function(require,module,exports){
+},{"./_mapCacheClear":861,"./_mapCacheDelete":862,"./_mapCacheGet":863,"./_mapCacheHas":864,"./_mapCacheSet":865}],797:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -65069,7 +65060,7 @@ var Promise = getNative(root, 'Promise');
 
 module.exports = Promise;
 
-},{"./_getNative":835,"./_root":866}],798:[function(require,module,exports){
+},{"./_getNative":839,"./_root":871}],798:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -65078,7 +65069,7 @@ var Set = getNative(root, 'Set');
 
 module.exports = Set;
 
-},{"./_getNative":835,"./_root":866}],799:[function(require,module,exports){
+},{"./_getNative":839,"./_root":871}],799:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     stackClear = require('./_stackClear'),
     stackDelete = require('./_stackDelete'),
@@ -65107,7 +65098,7 @@ Stack.prototype.set = stackSet;
 
 module.exports = Stack;
 
-},{"./_ListCache":794,"./_stackClear":868,"./_stackDelete":869,"./_stackGet":870,"./_stackHas":871,"./_stackSet":872}],800:[function(require,module,exports){
+},{"./_ListCache":794,"./_stackClear":873,"./_stackDelete":874,"./_stackGet":875,"./_stackHas":876,"./_stackSet":877}],800:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -65115,7 +65106,7 @@ var Symbol = root.Symbol;
 
 module.exports = Symbol;
 
-},{"./_root":866}],801:[function(require,module,exports){
+},{"./_root":871}],801:[function(require,module,exports){
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -65123,7 +65114,7 @@ var Uint8Array = root.Uint8Array;
 
 module.exports = Uint8Array;
 
-},{"./_root":866}],802:[function(require,module,exports){
+},{"./_root":871}],802:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -65132,7 +65123,7 @@ var WeakMap = getNative(root, 'WeakMap');
 
 module.exports = WeakMap;
 
-},{"./_getNative":835,"./_root":866}],803:[function(require,module,exports){
+},{"./_getNative":839,"./_root":871}],803:[function(require,module,exports){
 /**
  * Adds the key-value `pair` to `map`.
  *
@@ -65194,7 +65185,9 @@ module.exports = arrayEach;
 var baseTimes = require('./_baseTimes'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
-    isIndex = require('./_isIndex');
+    isBuffer = require('./isBuffer'),
+    isIndex = require('./_isIndex'),
+    isTypedArray = require('./isTypedArray');
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -65211,18 +65204,26 @@ var hasOwnProperty = objectProto.hasOwnProperty;
  * @returns {Array} Returns the array of property names.
  */
 function arrayLikeKeys(value, inherited) {
-  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
-  // Safari 9 makes `arguments.length` enumerable in strict mode.
-  var result = (isArray(value) || isArguments(value))
-    ? baseTimes(value.length, String)
-    : [];
-
-  var length = result.length,
-      skipIndexes = !!length;
+  var isArr = isArray(value),
+      isArg = !isArr && isArguments(value),
+      isBuff = !isArr && !isArg && isBuffer(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes(value.length, String) : [],
+      length = result.length;
 
   for (var key in value) {
     if ((inherited || hasOwnProperty.call(value, key)) &&
-        !(skipIndexes && (key == 'length' || isIndex(key, length)))) {
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           isIndex(key, length)
+        ))) {
       result.push(key);
     }
   }
@@ -65231,7 +65232,7 @@ function arrayLikeKeys(value, inherited) {
 
 module.exports = arrayLikeKeys;
 
-},{"./_baseTimes":819,"./_isIndex":848,"./isArguments":877,"./isArray":878}],807:[function(require,module,exports){
+},{"./_baseTimes":821,"./_isIndex":852,"./isArguments":882,"./isArray":883,"./isBuffer":885,"./isTypedArray":891}],807:[function(require,module,exports){
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -65311,7 +65312,7 @@ function assignValue(object, key, value) {
 
 module.exports = assignValue;
 
-},{"./_baseAssignValue":812,"./eq":876}],810:[function(require,module,exports){
+},{"./_baseAssignValue":812,"./eq":881}],810:[function(require,module,exports){
 var eq = require('./eq');
 
 /**
@@ -65334,7 +65335,7 @@ function assocIndexOf(array, key) {
 
 module.exports = assocIndexOf;
 
-},{"./eq":876}],811:[function(require,module,exports){
+},{"./eq":881}],811:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     keys = require('./keys');
 
@@ -65353,9 +65354,8 @@ function baseAssign(object, source) {
 
 module.exports = baseAssign;
 
-},{"./_copyObject":829,"./keys":887}],812:[function(require,module,exports){
-/** Built-in value references. */
-var defineProperty = Object.defineProperty;
+},{"./_copyObject":832,"./keys":892}],812:[function(require,module,exports){
+var defineProperty = require('./_defineProperty');
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -65381,7 +65381,7 @@ function baseAssignValue(object, key, value) {
 
 module.exports = baseAssignValue;
 
-},{}],813:[function(require,module,exports){
+},{"./_defineProperty":835}],813:[function(require,module,exports){
 var Stack = require('./_Stack'),
     arrayEach = require('./_arrayEach'),
     assignValue = require('./_assignValue'),
@@ -65502,9 +65502,7 @@ function baseClone(value, isDeep, isFull, customizer, key, object, stack) {
   }
   stack.set(value, result);
 
-  if (!isArr) {
-    var props = isFull ? getAllKeys(value) : keys(value);
-  }
+  var props = isArr ? undefined : (isFull ? getAllKeys : keys)(value);
   arrayEach(props || value, function(subValue, key) {
     if (props) {
       key = subValue;
@@ -65518,7 +65516,7 @@ function baseClone(value, isDeep, isFull, customizer, key, object, stack) {
 
 module.exports = baseClone;
 
-},{"./_Stack":799,"./_arrayEach":805,"./_assignValue":809,"./_baseAssign":811,"./_cloneBuffer":821,"./_copyArray":828,"./_copySymbols":830,"./_getAllKeys":833,"./_getTag":838,"./_initCloneArray":845,"./_initCloneByTag":846,"./_initCloneObject":847,"./isArray":878,"./isBuffer":881,"./isObject":884,"./keys":887}],814:[function(require,module,exports){
+},{"./_Stack":799,"./_arrayEach":805,"./_assignValue":809,"./_baseAssign":811,"./_cloneBuffer":824,"./_copyArray":831,"./_copySymbols":833,"./_getAllKeys":837,"./_getTag":842,"./_initCloneArray":849,"./_initCloneByTag":850,"./_initCloneObject":851,"./isArray":883,"./isBuffer":885,"./isObject":888,"./keys":892}],814:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** Built-in value references. */
@@ -65541,7 +65539,7 @@ var baseCreate = (function() {
     if (objectCreate) {
       return objectCreate(proto);
     }
-    object.prototype = prototype;
+    object.prototype = proto;
     var result = new object;
     object.prototype = undefined;
     return result;
@@ -65550,7 +65548,7 @@ var baseCreate = (function() {
 
 module.exports = baseCreate;
 
-},{"./isObject":884}],815:[function(require,module,exports){
+},{"./isObject":888}],815:[function(require,module,exports){
 var arrayPush = require('./_arrayPush'),
     isArray = require('./isArray');
 
@@ -65572,7 +65570,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 
 module.exports = baseGetAllKeys;
 
-},{"./_arrayPush":807,"./isArray":878}],816:[function(require,module,exports){
+},{"./_arrayPush":807,"./isArray":883}],816:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -65597,6 +65595,35 @@ function baseGetTag(value) {
 module.exports = baseGetTag;
 
 },{}],817:[function(require,module,exports){
+var isObjectLike = require('./isObjectLike');
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]';
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike(value) && objectToString.call(value) == argsTag;
+}
+
+module.exports = baseIsArguments;
+
+},{"./isObjectLike":889}],818:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isMasked = require('./_isMasked'),
     isObject = require('./isObject'),
@@ -65645,7 +65672,78 @@ function baseIsNative(value) {
 
 module.exports = baseIsNative;
 
-},{"./_isMasked":850,"./_toSource":873,"./isFunction":882,"./isObject":884}],818:[function(require,module,exports){
+},{"./_isMasked":854,"./_toSource":878,"./isFunction":886,"./isObject":888}],819:[function(require,module,exports){
+var isLength = require('./isLength'),
+    isObjectLike = require('./isObjectLike');
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[objectToString.call(value)];
+}
+
+module.exports = baseIsTypedArray;
+
+},{"./isLength":887,"./isObjectLike":889}],820:[function(require,module,exports){
 var isPrototype = require('./_isPrototype'),
     nativeKeys = require('./_nativeKeys');
 
@@ -65677,7 +65775,7 @@ function baseKeys(object) {
 
 module.exports = baseKeys;
 
-},{"./_isPrototype":851,"./_nativeKeys":864}],819:[function(require,module,exports){
+},{"./_isPrototype":855,"./_nativeKeys":868}],821:[function(require,module,exports){
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -65699,7 +65797,23 @@ function baseTimes(n, iteratee) {
 
 module.exports = baseTimes;
 
-},{}],820:[function(require,module,exports){
+},{}],822:[function(require,module,exports){
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+module.exports = baseUnary;
+
+},{}],823:[function(require,module,exports){
 var Uint8Array = require('./_Uint8Array');
 
 /**
@@ -65717,7 +65831,7 @@ function cloneArrayBuffer(arrayBuffer) {
 
 module.exports = cloneArrayBuffer;
 
-},{"./_Uint8Array":801}],821:[function(require,module,exports){
+},{"./_Uint8Array":801}],824:[function(require,module,exports){
 var root = require('./_root');
 
 /** Detect free variable `exports`. */
@@ -65754,7 +65868,7 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-},{"./_root":866}],822:[function(require,module,exports){
+},{"./_root":871}],825:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -65772,7 +65886,7 @@ function cloneDataView(dataView, isDeep) {
 
 module.exports = cloneDataView;
 
-},{"./_cloneArrayBuffer":820}],823:[function(require,module,exports){
+},{"./_cloneArrayBuffer":823}],826:[function(require,module,exports){
 var addMapEntry = require('./_addMapEntry'),
     arrayReduce = require('./_arrayReduce'),
     mapToArray = require('./_mapToArray');
@@ -65793,7 +65907,7 @@ function cloneMap(map, isDeep, cloneFunc) {
 
 module.exports = cloneMap;
 
-},{"./_addMapEntry":803,"./_arrayReduce":808,"./_mapToArray":862}],824:[function(require,module,exports){
+},{"./_addMapEntry":803,"./_arrayReduce":808,"./_mapToArray":866}],827:[function(require,module,exports){
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -65812,7 +65926,7 @@ function cloneRegExp(regexp) {
 
 module.exports = cloneRegExp;
 
-},{}],825:[function(require,module,exports){
+},{}],828:[function(require,module,exports){
 var addSetEntry = require('./_addSetEntry'),
     arrayReduce = require('./_arrayReduce'),
     setToArray = require('./_setToArray');
@@ -65833,7 +65947,7 @@ function cloneSet(set, isDeep, cloneFunc) {
 
 module.exports = cloneSet;
 
-},{"./_addSetEntry":804,"./_arrayReduce":808,"./_setToArray":867}],826:[function(require,module,exports){
+},{"./_addSetEntry":804,"./_arrayReduce":808,"./_setToArray":872}],829:[function(require,module,exports){
 var Symbol = require('./_Symbol');
 
 /** Used to convert symbols to primitives and strings. */
@@ -65853,7 +65967,7 @@ function cloneSymbol(symbol) {
 
 module.exports = cloneSymbol;
 
-},{"./_Symbol":800}],827:[function(require,module,exports){
+},{"./_Symbol":800}],830:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -65871,7 +65985,7 @@ function cloneTypedArray(typedArray, isDeep) {
 
 module.exports = cloneTypedArray;
 
-},{"./_cloneArrayBuffer":820}],828:[function(require,module,exports){
+},{"./_cloneArrayBuffer":823}],831:[function(require,module,exports){
 /**
  * Copies the values of `source` to `array`.
  *
@@ -65893,7 +66007,7 @@ function copyArray(source, array) {
 
 module.exports = copyArray;
 
-},{}],829:[function(require,module,exports){
+},{}],832:[function(require,module,exports){
 var assignValue = require('./_assignValue'),
     baseAssignValue = require('./_baseAssignValue');
 
@@ -65935,7 +66049,7 @@ function copyObject(source, props, object, customizer) {
 
 module.exports = copyObject;
 
-},{"./_assignValue":809,"./_baseAssignValue":812}],830:[function(require,module,exports){
+},{"./_assignValue":809,"./_baseAssignValue":812}],833:[function(require,module,exports){
 var copyObject = require('./_copyObject'),
     getSymbols = require('./_getSymbols');
 
@@ -65953,7 +66067,7 @@ function copySymbols(source, object) {
 
 module.exports = copySymbols;
 
-},{"./_copyObject":829,"./_getSymbols":837}],831:[function(require,module,exports){
+},{"./_copyObject":832,"./_getSymbols":841}],834:[function(require,module,exports){
 var root = require('./_root');
 
 /** Used to detect overreaching core-js shims. */
@@ -65961,7 +66075,20 @@ var coreJsData = root['__core-js_shared__'];
 
 module.exports = coreJsData;
 
-},{"./_root":866}],832:[function(require,module,exports){
+},{"./_root":871}],835:[function(require,module,exports){
+var getNative = require('./_getNative');
+
+var defineProperty = (function() {
+  try {
+    var func = getNative(Object, 'defineProperty');
+    func({}, '', {});
+    return func;
+  } catch (e) {}
+}());
+
+module.exports = defineProperty;
+
+},{"./_getNative":839}],836:[function(require,module,exports){
 (function (global){
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
@@ -65969,7 +66096,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 module.exports = freeGlobal;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],833:[function(require,module,exports){
+},{}],837:[function(require,module,exports){
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbols = require('./_getSymbols'),
     keys = require('./keys');
@@ -65987,7 +66114,7 @@ function getAllKeys(object) {
 
 module.exports = getAllKeys;
 
-},{"./_baseGetAllKeys":815,"./_getSymbols":837,"./keys":887}],834:[function(require,module,exports){
+},{"./_baseGetAllKeys":815,"./_getSymbols":841,"./keys":892}],838:[function(require,module,exports){
 var isKeyable = require('./_isKeyable');
 
 /**
@@ -66007,7 +66134,7 @@ function getMapData(map, key) {
 
 module.exports = getMapData;
 
-},{"./_isKeyable":849}],835:[function(require,module,exports){
+},{"./_isKeyable":853}],839:[function(require,module,exports){
 var baseIsNative = require('./_baseIsNative'),
     getValue = require('./_getValue');
 
@@ -66026,9 +66153,9 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"./_baseIsNative":817,"./_getValue":839}],836:[function(require,module,exports){
-arguments[4][607][0].apply(exports,arguments)
-},{"./_overArg":865,"dup":607}],837:[function(require,module,exports){
+},{"./_baseIsNative":818,"./_getValue":843}],840:[function(require,module,exports){
+arguments[4][608][0].apply(exports,arguments)
+},{"./_overArg":870,"dup":608}],841:[function(require,module,exports){
 var overArg = require('./_overArg'),
     stubArray = require('./stubArray');
 
@@ -66046,7 +66173,7 @@ var getSymbols = nativeGetSymbols ? overArg(nativeGetSymbols, Object) : stubArra
 
 module.exports = getSymbols;
 
-},{"./_overArg":865,"./stubArray":889}],838:[function(require,module,exports){
+},{"./_overArg":870,"./stubArray":894}],842:[function(require,module,exports){
 var DataView = require('./_DataView'),
     Map = require('./_Map'),
     Promise = require('./_Promise'),
@@ -66116,7 +66243,7 @@ if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
 
 module.exports = getTag;
 
-},{"./_DataView":792,"./_Map":795,"./_Promise":797,"./_Set":798,"./_WeakMap":802,"./_baseGetTag":816,"./_toSource":873}],839:[function(require,module,exports){
+},{"./_DataView":792,"./_Map":795,"./_Promise":797,"./_Set":798,"./_WeakMap":802,"./_baseGetTag":816,"./_toSource":878}],843:[function(require,module,exports){
 /**
  * Gets the value at `key` of `object`.
  *
@@ -66131,7 +66258,7 @@ function getValue(object, key) {
 
 module.exports = getValue;
 
-},{}],840:[function(require,module,exports){
+},{}],844:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /**
@@ -66148,7 +66275,7 @@ function hashClear() {
 
 module.exports = hashClear;
 
-},{"./_nativeCreate":863}],841:[function(require,module,exports){
+},{"./_nativeCreate":867}],845:[function(require,module,exports){
 /**
  * Removes `key` and its value from the hash.
  *
@@ -66167,7 +66294,7 @@ function hashDelete(key) {
 
 module.exports = hashDelete;
 
-},{}],842:[function(require,module,exports){
+},{}],846:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -66199,7 +66326,7 @@ function hashGet(key) {
 
 module.exports = hashGet;
 
-},{"./_nativeCreate":863}],843:[function(require,module,exports){
+},{"./_nativeCreate":867}],847:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used for built-in method references. */
@@ -66224,7 +66351,7 @@ function hashHas(key) {
 
 module.exports = hashHas;
 
-},{"./_nativeCreate":863}],844:[function(require,module,exports){
+},{"./_nativeCreate":867}],848:[function(require,module,exports){
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -66249,7 +66376,7 @@ function hashSet(key, value) {
 
 module.exports = hashSet;
 
-},{"./_nativeCreate":863}],845:[function(require,module,exports){
+},{"./_nativeCreate":867}],849:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -66277,7 +66404,7 @@ function initCloneArray(array) {
 
 module.exports = initCloneArray;
 
-},{}],846:[function(require,module,exports){
+},{}],850:[function(require,module,exports){
 var cloneArrayBuffer = require('./_cloneArrayBuffer'),
     cloneDataView = require('./_cloneDataView'),
     cloneMap = require('./_cloneMap'),
@@ -66359,7 +66486,7 @@ function initCloneByTag(object, tag, cloneFunc, isDeep) {
 
 module.exports = initCloneByTag;
 
-},{"./_cloneArrayBuffer":820,"./_cloneDataView":822,"./_cloneMap":823,"./_cloneRegExp":824,"./_cloneSet":825,"./_cloneSymbol":826,"./_cloneTypedArray":827}],847:[function(require,module,exports){
+},{"./_cloneArrayBuffer":823,"./_cloneDataView":825,"./_cloneMap":826,"./_cloneRegExp":827,"./_cloneSet":828,"./_cloneSymbol":829,"./_cloneTypedArray":830}],851:[function(require,module,exports){
 var baseCreate = require('./_baseCreate'),
     getPrototype = require('./_getPrototype'),
     isPrototype = require('./_isPrototype');
@@ -66379,7 +66506,7 @@ function initCloneObject(object) {
 
 module.exports = initCloneObject;
 
-},{"./_baseCreate":814,"./_getPrototype":836,"./_isPrototype":851}],848:[function(require,module,exports){
+},{"./_baseCreate":814,"./_getPrototype":840,"./_isPrototype":855}],852:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -66403,7 +66530,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],849:[function(require,module,exports){
+},{}],853:[function(require,module,exports){
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -66420,7 +66547,7 @@ function isKeyable(value) {
 
 module.exports = isKeyable;
 
-},{}],850:[function(require,module,exports){
+},{}],854:[function(require,module,exports){
 var coreJsData = require('./_coreJsData');
 
 /** Used to detect methods masquerading as native. */
@@ -66442,7 +66569,7 @@ function isMasked(func) {
 
 module.exports = isMasked;
 
-},{"./_coreJsData":831}],851:[function(require,module,exports){
+},{"./_coreJsData":834}],855:[function(require,module,exports){
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -66462,7 +66589,7 @@ function isPrototype(value) {
 
 module.exports = isPrototype;
 
-},{}],852:[function(require,module,exports){
+},{}],856:[function(require,module,exports){
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -66477,7 +66604,7 @@ function listCacheClear() {
 
 module.exports = listCacheClear;
 
-},{}],853:[function(require,module,exports){
+},{}],857:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /** Used for built-in method references. */
@@ -66514,7 +66641,7 @@ function listCacheDelete(key) {
 
 module.exports = listCacheDelete;
 
-},{"./_assocIndexOf":810}],854:[function(require,module,exports){
+},{"./_assocIndexOf":810}],858:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -66535,7 +66662,7 @@ function listCacheGet(key) {
 
 module.exports = listCacheGet;
 
-},{"./_assocIndexOf":810}],855:[function(require,module,exports){
+},{"./_assocIndexOf":810}],859:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -66553,7 +66680,7 @@ function listCacheHas(key) {
 
 module.exports = listCacheHas;
 
-},{"./_assocIndexOf":810}],856:[function(require,module,exports){
+},{"./_assocIndexOf":810}],860:[function(require,module,exports){
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -66581,7 +66708,7 @@ function listCacheSet(key, value) {
 
 module.exports = listCacheSet;
 
-},{"./_assocIndexOf":810}],857:[function(require,module,exports){
+},{"./_assocIndexOf":810}],861:[function(require,module,exports){
 var Hash = require('./_Hash'),
     ListCache = require('./_ListCache'),
     Map = require('./_Map');
@@ -66604,7 +66731,7 @@ function mapCacheClear() {
 
 module.exports = mapCacheClear;
 
-},{"./_Hash":793,"./_ListCache":794,"./_Map":795}],858:[function(require,module,exports){
+},{"./_Hash":793,"./_ListCache":794,"./_Map":795}],862:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -66624,7 +66751,7 @@ function mapCacheDelete(key) {
 
 module.exports = mapCacheDelete;
 
-},{"./_getMapData":834}],859:[function(require,module,exports){
+},{"./_getMapData":838}],863:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -66642,7 +66769,7 @@ function mapCacheGet(key) {
 
 module.exports = mapCacheGet;
 
-},{"./_getMapData":834}],860:[function(require,module,exports){
+},{"./_getMapData":838}],864:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -66660,7 +66787,7 @@ function mapCacheHas(key) {
 
 module.exports = mapCacheHas;
 
-},{"./_getMapData":834}],861:[function(require,module,exports){
+},{"./_getMapData":838}],865:[function(require,module,exports){
 var getMapData = require('./_getMapData');
 
 /**
@@ -66684,7 +66811,7 @@ function mapCacheSet(key, value) {
 
 module.exports = mapCacheSet;
 
-},{"./_getMapData":834}],862:[function(require,module,exports){
+},{"./_getMapData":838}],866:[function(require,module,exports){
 /**
  * Converts `map` to its key-value pairs.
  *
@@ -66704,7 +66831,7 @@ function mapToArray(map) {
 
 module.exports = mapToArray;
 
-},{}],863:[function(require,module,exports){
+},{}],867:[function(require,module,exports){
 var getNative = require('./_getNative');
 
 /* Built-in method references that are verified to be native. */
@@ -66712,7 +66839,7 @@ var nativeCreate = getNative(Object, 'create');
 
 module.exports = nativeCreate;
 
-},{"./_getNative":835}],864:[function(require,module,exports){
+},{"./_getNative":839}],868:[function(require,module,exports){
 var overArg = require('./_overArg');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -66720,9 +66847,33 @@ var nativeKeys = overArg(Object.keys, Object);
 
 module.exports = nativeKeys;
 
-},{"./_overArg":865}],865:[function(require,module,exports){
-arguments[4][608][0].apply(exports,arguments)
-},{"dup":608}],866:[function(require,module,exports){
+},{"./_overArg":870}],869:[function(require,module,exports){
+var freeGlobal = require('./_freeGlobal');
+
+/** Detect free variable `exports`. */
+var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+module.exports = nodeUtil;
+
+},{"./_freeGlobal":836}],870:[function(require,module,exports){
+arguments[4][609][0].apply(exports,arguments)
+},{"dup":609}],871:[function(require,module,exports){
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -66733,7 +66884,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 
 module.exports = root;
 
-},{"./_freeGlobal":832}],867:[function(require,module,exports){
+},{"./_freeGlobal":836}],872:[function(require,module,exports){
 /**
  * Converts `set` to an array of its values.
  *
@@ -66753,7 +66904,7 @@ function setToArray(set) {
 
 module.exports = setToArray;
 
-},{}],868:[function(require,module,exports){
+},{}],873:[function(require,module,exports){
 var ListCache = require('./_ListCache');
 
 /**
@@ -66770,7 +66921,7 @@ function stackClear() {
 
 module.exports = stackClear;
 
-},{"./_ListCache":794}],869:[function(require,module,exports){
+},{"./_ListCache":794}],874:[function(require,module,exports){
 /**
  * Removes `key` and its value from the stack.
  *
@@ -66790,7 +66941,7 @@ function stackDelete(key) {
 
 module.exports = stackDelete;
 
-},{}],870:[function(require,module,exports){
+},{}],875:[function(require,module,exports){
 /**
  * Gets the stack value for `key`.
  *
@@ -66806,7 +66957,7 @@ function stackGet(key) {
 
 module.exports = stackGet;
 
-},{}],871:[function(require,module,exports){
+},{}],876:[function(require,module,exports){
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -66822,7 +66973,7 @@ function stackHas(key) {
 
 module.exports = stackHas;
 
-},{}],872:[function(require,module,exports){
+},{}],877:[function(require,module,exports){
 var ListCache = require('./_ListCache'),
     Map = require('./_Map'),
     MapCache = require('./_MapCache');
@@ -66858,7 +67009,7 @@ function stackSet(key, value) {
 
 module.exports = stackSet;
 
-},{"./_ListCache":794,"./_Map":795,"./_MapCache":796}],873:[function(require,module,exports){
+},{"./_ListCache":794,"./_Map":795,"./_MapCache":796}],878:[function(require,module,exports){
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -66886,7 +67037,7 @@ function toSource(func) {
 
 module.exports = toSource;
 
-},{}],874:[function(require,module,exports){
+},{}],879:[function(require,module,exports){
 var baseClone = require('./_baseClone');
 
 /**
@@ -66921,7 +67072,7 @@ function clone(value) {
 
 module.exports = clone;
 
-},{"./_baseClone":813}],875:[function(require,module,exports){
+},{"./_baseClone":813}],880:[function(require,module,exports){
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
@@ -67111,7 +67262,7 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"./isObject":884,"./now":888,"./toNumber":892}],876:[function(require,module,exports){
+},{"./isObject":888,"./now":893,"./toNumber":897}],881:[function(require,module,exports){
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -67150,24 +67301,15 @@ function eq(value, other) {
 
 module.exports = eq;
 
-},{}],877:[function(require,module,exports){
-var isArrayLikeObject = require('./isArrayLikeObject');
-
-/** `Object#toString` result references. */
-var argsTag = '[object Arguments]';
+},{}],882:[function(require,module,exports){
+var baseIsArguments = require('./_baseIsArguments'),
+    isObjectLike = require('./isObjectLike');
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
 /** Used to check objects for own properties. */
 var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var objectToString = objectProto.toString;
 
 /** Built-in value references. */
 var propertyIsEnumerable = objectProto.propertyIsEnumerable;
@@ -67190,15 +67332,14 @@ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
  * _.isArguments([1, 2, 3]);
  * // => false
  */
-function isArguments(value) {
-  // Safari 8.1 makes `arguments.callee` enumerable in strict mode.
-  return isArrayLikeObject(value) && hasOwnProperty.call(value, 'callee') &&
-    (!propertyIsEnumerable.call(value, 'callee') || objectToString.call(value) == argsTag);
-}
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
 
 module.exports = isArguments;
 
-},{"./isArrayLikeObject":880}],878:[function(require,module,exports){
+},{"./_baseIsArguments":817,"./isObjectLike":889}],883:[function(require,module,exports){
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -67226,7 +67367,7 @@ var isArray = Array.isArray;
 
 module.exports = isArray;
 
-},{}],879:[function(require,module,exports){
+},{}],884:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isLength = require('./isLength');
 
@@ -67261,42 +67402,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./isFunction":882,"./isLength":883}],880:[function(require,module,exports){
-var isArrayLike = require('./isArrayLike'),
-    isObjectLike = require('./isObjectLike');
-
-/**
- * This method is like `_.isArrayLike` except that it also checks if `value`
- * is an object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array-like object,
- *  else `false`.
- * @example
- *
- * _.isArrayLikeObject([1, 2, 3]);
- * // => true
- *
- * _.isArrayLikeObject(document.body.children);
- * // => true
- *
- * _.isArrayLikeObject('abc');
- * // => false
- *
- * _.isArrayLikeObject(_.noop);
- * // => false
- */
-function isArrayLikeObject(value) {
-  return isObjectLike(value) && isArrayLike(value);
-}
-
-module.exports = isArrayLikeObject;
-
-},{"./isArrayLike":879,"./isObjectLike":885}],881:[function(require,module,exports){
+},{"./isFunction":886,"./isLength":887}],885:[function(require,module,exports){
 var root = require('./_root'),
     stubFalse = require('./stubFalse');
 
@@ -67336,12 +67442,13 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-},{"./_root":866,"./stubFalse":890}],882:[function(require,module,exports){
+},{"./_root":871,"./stubFalse":895}],886:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
 var funcTag = '[object Function]',
-    genTag = '[object GeneratorFunction]';
+    genTag = '[object GeneratorFunction]',
+    proxyTag = '[object Proxy]';
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -67372,14 +67479,14 @@ var objectToString = objectProto.toString;
  */
 function isFunction(value) {
   // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 8-9 which returns 'object' for typed array and other constructors.
+  // in Safari 9 which returns 'object' for typed array and other constructors.
   var tag = isObject(value) ? objectToString.call(value) : '';
-  return tag == funcTag || tag == genTag;
+  return tag == funcTag || tag == genTag || tag == proxyTag;
 }
 
 module.exports = isFunction;
 
-},{"./isObject":884}],883:[function(require,module,exports){
+},{"./isObject":888}],887:[function(require,module,exports){
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -67416,7 +67523,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],884:[function(require,module,exports){
+},{}],888:[function(require,module,exports){
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -67449,9 +67556,9 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],885:[function(require,module,exports){
-arguments[4][609][0].apply(exports,arguments)
-},{"dup":609}],886:[function(require,module,exports){
+},{}],889:[function(require,module,exports){
+arguments[4][610][0].apply(exports,arguments)
+},{"dup":610}],890:[function(require,module,exports){
 var isObjectLike = require('./isObjectLike');
 
 /** `Object#toString` result references. */
@@ -67491,7 +67598,36 @@ function isSymbol(value) {
 
 module.exports = isSymbol;
 
-},{"./isObjectLike":885}],887:[function(require,module,exports){
+},{"./isObjectLike":889}],891:[function(require,module,exports){
+var baseIsTypedArray = require('./_baseIsTypedArray'),
+    baseUnary = require('./_baseUnary'),
+    nodeUtil = require('./_nodeUtil');
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+module.exports = isTypedArray;
+
+},{"./_baseIsTypedArray":819,"./_baseUnary":822,"./_nodeUtil":869}],892:[function(require,module,exports){
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeys = require('./_baseKeys'),
     isArrayLike = require('./isArrayLike');
@@ -67530,7 +67666,7 @@ function keys(object) {
 
 module.exports = keys;
 
-},{"./_arrayLikeKeys":806,"./_baseKeys":818,"./isArrayLike":879}],888:[function(require,module,exports){
+},{"./_arrayLikeKeys":806,"./_baseKeys":820,"./isArrayLike":884}],893:[function(require,module,exports){
 var root = require('./_root');
 
 /**
@@ -67555,7 +67691,7 @@ var now = function() {
 
 module.exports = now;
 
-},{"./_root":866}],889:[function(require,module,exports){
+},{"./_root":871}],894:[function(require,module,exports){
 /**
  * This method returns a new empty array.
  *
@@ -67580,7 +67716,7 @@ function stubArray() {
 
 module.exports = stubArray;
 
-},{}],890:[function(require,module,exports){
+},{}],895:[function(require,module,exports){
 /**
  * This method returns `false`.
  *
@@ -67600,7 +67736,7 @@ function stubFalse() {
 
 module.exports = stubFalse;
 
-},{}],891:[function(require,module,exports){
+},{}],896:[function(require,module,exports){
 var debounce = require('./debounce'),
     isObject = require('./isObject');
 
@@ -67671,7 +67807,7 @@ function throttle(func, wait, options) {
 
 module.exports = throttle;
 
-},{"./debounce":875,"./isObject":884}],892:[function(require,module,exports){
+},{"./debounce":880,"./isObject":888}],897:[function(require,module,exports){
 var isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
@@ -67739,15 +67875,15 @@ function toNumber(value) {
 
 module.exports = toNumber;
 
-},{"./isObject":884,"./isSymbol":886}],893:[function(require,module,exports){
+},{"./isObject":888,"./isSymbol":890}],898:[function(require,module,exports){
 module.exports = require('./lib/index');
 
-},{"./lib/index":894}],894:[function(require,module,exports){
+},{"./lib/index":899}],899:[function(require,module,exports){
 (function (global){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
 
 var _ponyfill = require('./ponyfill');
@@ -67756,18 +67892,25 @@ var _ponyfill2 = _interopRequireDefault(_ponyfill);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var root = undefined; /* global window */
+var root; /* global window */
 
-if (typeof global !== 'undefined') {
-	root = global;
+
+if (typeof self !== 'undefined') {
+  root = self;
 } else if (typeof window !== 'undefined') {
-	root = window;
+  root = window;
+} else if (typeof global !== 'undefined') {
+  root = global;
+} else if (typeof module !== 'undefined') {
+  root = module;
+} else {
+  root = Function('return this')();
 }
 
 var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./ponyfill":895}],895:[function(require,module,exports){
+},{"./ponyfill":900}],900:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -67791,12 +67934,12 @@ function symbolObservablePonyfill(root) {
 
 	return result;
 };
-},{}],896:[function(require,module,exports){
+},{}],901:[function(require,module,exports){
 /*!
  * URI.js - Mutating URLs
  * IPv6 Support
  *
- * Version: 1.18.1
+ * Version: 1.18.2
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -67978,12 +68121,12 @@ function symbolObservablePonyfill(root) {
   };
 }));
 
-},{}],897:[function(require,module,exports){
+},{}],902:[function(require,module,exports){
 /*!
  * URI.js - Mutating URLs
  * Second Level Domain (SLD) Support
  *
- * Version: 1.18.1
+ * Version: 1.18.2
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -68220,7 +68363,7 @@ function symbolObservablePonyfill(root) {
   return SLD;
 }));
 
-},{}],898:[function(require,module,exports){
+},{}],903:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.0 by @mathias */
 ;(function(root) {
@@ -68757,7 +68900,7 @@ function symbolObservablePonyfill(root) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],899:[function(require,module,exports){
+},{}],904:[function(require,module,exports){
 (function (global){
 
 var rng;
@@ -68793,7 +68936,7 @@ module.exports = rng;
 
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],900:[function(require,module,exports){
+},{}],905:[function(require,module,exports){
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -68978,7 +69121,7 @@ uuid.unparse = unparse;
 
 module.exports = uuid;
 
-},{"./rng":899}],"accounting":[function(require,module,exports){
+},{"./rng":904}],"accounting":[function(require,module,exports){
 /*!
  * accounting.js v0.3.2
  * Copyright 2011, Joss Crowcroft
@@ -74814,7 +74957,7 @@ module.exports = uuid;
 },{}],"i18next":[function(require,module,exports){
 module.exports = require('./dist/commonjs/index.js').default;
 
-},{"./dist/commonjs/index.js":479}],"jquery.mmenu":[function(require,module,exports){
+},{"./dist/commonjs/index.js":480}],"jquery.mmenu":[function(require,module,exports){
 /*	
  * jQuery mmenu v4.5.7
  * @requires jQuery 1.7.0 or later
@@ -85057,7 +85200,7 @@ var _Jss2 = _interopRequireDefault(_Jss);
 
 exports['default'] = new _Jss2['default']();
 module.exports = exports['default'];
-},{"./Jss":485}],"lodash":[function(require,module,exports){
+},{"./Jss":486}],"lodash":[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -100897,12 +101040,12 @@ if (typeof Object.create !== "function") {
 
 module.exports = require('./src/js/main');
 
-},{"./src/js/main":578}],"react-dom":[function(require,module,exports){
+},{"./src/js/main":579}],"react-dom":[function(require,module,exports){
 'use strict';
 
 module.exports = require('react/lib/ReactDOM');
 
-},{"react/lib/ReactDOM":646}],"react-nouislider":[function(require,module,exports){
+},{"react/lib/ReactDOM":647}],"react-nouislider":[function(require,module,exports){
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -101060,7 +101203,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 exports.Provider = _Provider2["default"];
 exports.connect = _connect2["default"];
-},{"./components/Provider":601,"./components/connect":602}],"react-spinjs":[function(require,module,exports){
+},{"./components/Provider":602,"./components/connect":603}],"react-spinjs":[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -101149,15 +101292,15 @@ var ReactSpinner = (function (_React$Component) {
 exports['default'] = ReactSpinner;
 module.exports = exports['default'];
 // config will overwrite anything else
-},{"react":"react","spin.js":778}],"react-stickynode":[function(require,module,exports){
+},{"react":"react","spin.js":779}],"react-stickynode":[function(require,module,exports){
 module.exports = require('./dist/Sticky');
 
-},{"./dist/Sticky":611}],"react":[function(require,module,exports){
+},{"./dist/Sticky":612}],"react":[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":635}],"redux-thunk":[function(require,module,exports){
+},{"./lib/React":636}],"redux-thunk":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -101230,7 +101373,7 @@ exports.bindActionCreators = _bindActionCreators2['default'];
 exports.applyMiddleware = _applyMiddleware2['default'];
 exports.compose = _compose2['default'];
 }).call(this,require('_process'))
-},{"./applyMiddleware":768,"./bindActionCreators":769,"./combineReducers":770,"./compose":771,"./createStore":772,"./utils/warning":773,"_process":594}],"reqwest":[function(require,module,exports){
+},{"./applyMiddleware":769,"./bindActionCreators":770,"./combineReducers":771,"./compose":772,"./createStore":773,"./utils/warning":774,"_process":595}],"reqwest":[function(require,module,exports){
 /*!
   * Reqwest! A general purpose XHR connection manager
   * license MIT (c) Dustin Diaz 2014
@@ -102593,7 +102736,7 @@ var timm = {
 exports.default = timm;
 
 }).call(this,require('_process'))
-},{"_process":594}],"tinycolor2":[function(require,module,exports){
+},{"_process":595}],"tinycolor2":[function(require,module,exports){
 // TinyColor v1.4.1
 // https://github.com/bgrins/TinyColor
 // Brian Grinstead, MIT License
@@ -103794,7 +103937,7 @@ else {
 /*!
  * URI.js - Mutating URLs
  *
- * Version: 1.18.1
+ * Version: 1.18.2
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -103864,7 +104007,7 @@ else {
     return this;
   }
 
-  URI.version = '1.18.1';
+  URI.version = '1.18.2';
 
   var p = URI.prototype;
   var hasOwn = Object.prototype.hasOwnProperty;
@@ -104761,6 +104904,12 @@ else {
 
       end = start + slice.length;
       var result = callback(slice, start, end, string);
+      if (result === undefined) {
+        _start.lastIndex = end;
+        continue;
+      }
+
+      result = String(result);
       string = string.slice(0, start) + result + string.slice(end);
       _start.lastIndex = start + result.length;
     }
@@ -105848,15 +105997,17 @@ else {
       if (!resolved._parts.query) {
         resolved._parts.query = base._parts.query;
       }
-    } else if (resolved._parts.path.substring(-2) === '..') {
-      resolved._parts.path += '/';
-    }
+    } else {
+      if (resolved._parts.path.substring(-2) === '..') {
+        resolved._parts.path += '/';
+      }
 
-    if (resolved.path().charAt(0) !== '/') {
-      basedir = base.directory();
-      basedir = basedir ? basedir : base.path().indexOf('/') === 0 ? '/' : '';
-      resolved._parts.path = (basedir ? (basedir + '/') : '') + resolved._parts.path;
-      resolved.normalizePath();
+      if (resolved.path().charAt(0) !== '/') {
+        basedir = base.directory();
+        basedir = basedir ? basedir : base.path().indexOf('/') === 0 ? '/' : '';
+        resolved._parts.path = (basedir ? (basedir + '/') : '') + resolved._parts.path;
+        resolved.normalizePath();
+      }
     }
 
     resolved.build();
@@ -106002,4 +106153,4 @@ else {
   return URI;
 }));
 
-},{"./IPv6":896,"./SecondLevelDomains":897,"./punycode":898}]},{},[3]);
+},{"./IPv6":901,"./SecondLevelDomains":902,"./punycode":903}]},{},[3]);

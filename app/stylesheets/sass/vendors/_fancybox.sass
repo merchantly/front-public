@@ -26,13 +26,13 @@
   cursor: pointer
   text-decoration: none
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-  z-index: 8040
+  z-index: $fancyboxNavZindex
   span
     position: absolute
     top: 50%
     margin-top: -18px
     cursor: pointer
-    z-index: 8040
+    z-index: $fancyboxNavZindex
     visibility: hidden
     width: 60px
     height: 60px
@@ -59,7 +59,7 @@
   position: absolute
   top: 0
   left: 0
-  z-index: 8020
+  z-index: $fancyboxWrapZindex
 
 .fancybox-skin
   position: relative
@@ -68,7 +68,7 @@
   text-shadow: none
 
 .fancybox-opened
-  z-index: 8030
+  z-index: $fancyboxOpenedZindex
 
 .fancybox-outer
   position: relative
@@ -104,7 +104,7 @@
   margin-left: -10px
   opacity: 0.8
   cursor: pointer
-  z-index: 8060
+  z-index: $fancyboxLoadingZindex
   div
     width: 40px
     height: 40px
@@ -119,7 +119,7 @@
   width: 68px
   height: 68px
   cursor: pointer
-  z-index: 8040
+  z-index: $fancyboxCloseZindex
   i
     display: block
     height: 68px
@@ -196,7 +196,7 @@
   left: 0
   overflow: hidden
   display: none
-  z-index: 8010
+  z-index: $fancyboxOverlayZindex
   background: rgba(0,0,0,.9)
 
 .fancybox-overlay-fixed
@@ -213,7 +213,7 @@
   font: normal 13px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif
   position: relative
   text-shadow: none
-  z-index: 8050
+  z-index: $fancyboxTitleZindex
 
 .fancybox-opened .fancybox-title
   visibility: visible
@@ -223,7 +223,7 @@
   bottom: 0
   right: 50%
   margin-bottom: -35px
-  z-index: 8050
+  z-index: $fancyboxTitleFloatZindex
   text-align: center
   .child
     display: inline-block
@@ -262,7 +262,7 @@
   left: 0
   width: 100%
   overflow: hidden
-  z-index: 8050
+  z-index: $fancyboxThumbsZindex
   &.bottom
     bottom: 2px
   &.top
