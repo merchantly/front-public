@@ -14,10 +14,10 @@
 
   .b-header
     position: relative
-    z-index: 2
+    z-index: $headerZindex
     &__content
       padding-top: 13px
-    
+
     &__top-line
       background-color: $ccBar
       color: $ccBarText
@@ -40,7 +40,7 @@
             display: none
           @include grid-media-query("lap")
             display: none
-      
+
       .b-site-description
           padding: 9px 0
           a
@@ -126,13 +126,13 @@
       font-size: 1em
 
   .b-tooltip
-    font-size: 1em      
+    font-size: 1em
 
   .owl-pagination
     display: inline-block
     background: none
     // margin-bottom: 5px
-  
+
   .owl-theme .owl-controls .owl-page span
     width: 6px
     height: 6px
@@ -148,11 +148,11 @@
       width: 100%
 
     &__gallery
-      margin-bottom: 20px  
+      margin-bottom: 20px
 
     &__header
       text-align: center
-      
+
     &__title
       margin: 12px 20px 8px
       font-size: 3.214em
@@ -202,7 +202,7 @@
   .b-cart
     &__title
       border: none
-    
+
     &__action
       &__code
         border-color: #cbcbcb
@@ -224,4 +224,3 @@
       padding: 0 6px
       min-width: 22px
       border-radius: 0
-
