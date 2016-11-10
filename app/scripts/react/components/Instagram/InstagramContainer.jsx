@@ -16,13 +16,13 @@ class InstagramContainer extends Component {
     if (!isVisible) return;
 
     loadEntries(entriesLimit)
-      .then(({ data }) => {
-        const username = data.length ? data[0].user.username : null;
+      .then((data) => {
+        const username = data.username;
         const newState = {
           currentState: READY_STATE,
-          entries: data,
+          entries: data.images,
           hashtag: username ? '@' + username : null,
-          profileUrl: username ? 'http://instagram.com/' + username : null,
+          profileUrl: username ? 'https://www.instagram.com/' + username : null,
         };
 
         this.setState(newState);
