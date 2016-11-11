@@ -9,11 +9,11 @@
   "scripts": {
     "build": "npm run build:snippet && npm run build:widgets",
     "build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
-    "build:widgets": "webpack --config webpack.config.development.js --watch",
+    "build:widget": "webpack --config webpack.config.development.js --watch",
     "dist": "ENV=production gulp dist && npm run dist:widgets && npm run dist:snippet && npm run dist:test",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
     "dist:test": "node ./dist_tests/prerender",
-    "dist:widgets": "webpack --config webpack.config.production.js",
+    "dist:widget": "webpack --config webpack.config.production.js",
     "deploy": "gulp deploy",
     "start": "gulp server"
   },
@@ -41,6 +41,7 @@
     "react-dom": "^0.14.5",
     "react-nouislider": "^1.14.0",
     "react-redux": "^4.4.5",
+    "react-router": "^3.0.0",
     "react-spinjs": "^3.0.0",
     "react-stickynode": "^1.2.1",
     "redux": "^3.6.0",
