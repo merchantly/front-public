@@ -1,10 +1,10 @@
 
 import React, { Component, PropTypes } from 'react';
 
-import map from 'lodash/collection/map';
-import size from 'lodash/collection/size';
-import get from 'lodash/object/get';
-import bind from 'lodash/function/bind';
+import map from 'lodash/map';
+import size from 'lodash/size';
+import get from 'lodash/get';
+import bind from 'lodash/bind';
 
 import { getHTMLName } from '../../helpers/money';
 

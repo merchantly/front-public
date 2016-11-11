@@ -16,7 +16,7 @@ import {
 import {
   canUseDOM,
 } from '../../helpers/dom';
-import { find, first, includes } from 'lodash';
+import { find, head, includes } from 'lodash';
 import { updateIn, getIn } from 'timm';
 
 let storeInitialized = false;
@@ -152,7 +152,7 @@ export default provideTranslations(connectToRedux(connect(
     const selectedDeliveryType = find(
       deliveryTypes,
       (t) => t.id === selectedDeliveryTypeId
-    ) || first(deliveryTypes) || {};
+    ) || head(deliveryTypes) || {};
     const {
       availablePayments=[],
       fields: availableFields=[],
@@ -162,7 +162,7 @@ export default provideTranslations(connectToRedux(connect(
     const selectedPaymentType = find(
       paymentTypes,
       (p) => p.id === selectedPaymentTypeId
-    ) || first(paymentTypes) || {};
+    ) || head(paymentTypes) || {};
     const totalPrice = updateIn(cartTotalPrice, ['cents'], (cents) => {
         if (cents == null) {
           return cents;
