@@ -1,22 +1,25 @@
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
-var widgetsPath = './app/scripts/embeddable/widgets';
-var preLoaders = [{
-  test: /\.(sass|scss)$/,
-  loader: 'string-replace',
-  query: {
-    multiple: [{
-        search: 'IMAGES_PATH',
-        replace: process.env.ENV === 'production' ? "'/shop/images'" : "'../images'",
-      },
-      {
-        search: 'FONTS_PATH',
-        replace: process.env.ENV === 'production' ? "'/shop/fonts'" : "'../fonts'",
-      },
-    ]
+var widgetPath = './app/scripts/react/components/Widget';
+var preLoaders = [
+  {
+    test: /\.(sass|scss)$/,
+    loader: 'string-replace',
+    query: {
+      multiple: [
+        {
+          search: 'IMAGES_PATH',
+          replace: process.env.ENV === 'production' ? "'/shop/images'" : "'../images'",
+        },
+        {
+          search: 'FONTS_PATH',
+          replace: process.env.ENV === 'production' ? "'/shop/fonts'" : "'../fonts'",
+        },
+      ],
+    },
   },
-}, ];
+];
 var loaders = [{
     test: /\.jsx?$/,
     loader: 'babel',
@@ -31,7 +34,7 @@ var loaders = [{
 
 module.exports = {
   entry: {
-    'widgets/ProductCard': widgetsPath + '/ProductCard',
+    'widget': widgetPath,
   },
   module: {
     preLoaders: preLoaders,
