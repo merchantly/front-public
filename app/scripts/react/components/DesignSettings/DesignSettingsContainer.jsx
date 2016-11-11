@@ -11,7 +11,7 @@ import * as storageKeys from '../../constants/storageKeys';
 import * as cookieKeys from '../../constants/cookieKeys';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
 import DesignSettings from './index';
-import { any } from 'lodash';
+import { some } from 'lodash';
 
 class DesignSettingsContainer extends Component {
   static propTypes = {
@@ -35,7 +35,7 @@ class DesignSettingsContainer extends Component {
     Cookies.set(cookieKeys.DESIGN_IS_OPEN, isOpened.toString());
   }
   isOpened(props) {
-    return any(props.popups, (popup) => (
+    return some(props.popups, (popup) => (
       popup.style === 'DesignSettings'
     ));
   }

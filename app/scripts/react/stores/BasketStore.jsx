@@ -1,10 +1,10 @@
 import BaseStore from './BaseStore';
-import _ from 'lodash';
+import { extend } from 'lodash';
 
 let _basket = {}
 const _basketItemsState = {}
 
-const BasketStore = _.extend(new BaseStore(), {
+const BasketStore = extend(new BaseStore(), {
   getBasket() {
     return _basket;
   },
