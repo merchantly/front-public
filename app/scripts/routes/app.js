@@ -9,3 +9,7 @@ export function vendorOrder() {
 export function productRoute(productId) {
   return `product/${productId}`;
 }
+
+export function categoryRoute(categoryId) {
+  return `category/${categoryId}`;
+}

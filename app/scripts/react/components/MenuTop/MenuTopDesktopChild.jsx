@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import * as schemas from 'r/schemas';
 import classNames from 'classnames';
+import { categoryRoute } from 'scripts/routes/app';
+import { hashHistory } from 'react-router';
 
 class MenuTopDesktopChild extends Component {
   constructor(props) {
@@ -12,10 +14,17 @@ class MenuTopDesktopChild extends Component {
     const {
       child,
     } = this.props;
+    const {
+      isWidget,
+    } = this.context;
 
     ev.preventDefault();
     if (child && child.url) {
-      window.location.href = child.url;
+      if (isWidget) {
+        hashHistory.push(categoryRoute(child.id));
+      } else {
+        window.location.href = child.url;
+      }
     }
   }
   render() {
@@ -60,6 +69,10 @@ class MenuTopDesktopChild extends Component {
 MenuTopDesktopChild.propTypes = {
   checkIfActive: PropTypes.func.isRequired,
   child: schemas.menuItem.isRequired,
+};
+
+MenuTopDesktopChild.contextTypes = {
+  isWidget: PropTypes.bool,
 };
 
 export default MenuTopDesktopChild;

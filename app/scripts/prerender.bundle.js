@@ -1,4 +1,4 @@
-window = undefined; // React-rails set window to this, it's unexpected behavior
+delete this['window']; // React-rails set window to this, it's unexpected behavior
 React = require('react');
 ReactDOM = require('react-dom');
 ReactDOMServer = require('react-dom/server');
