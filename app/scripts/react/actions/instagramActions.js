@@ -1,4 +1,5 @@
 import { instagram } from '../../routes/api';
+import reqwest from 'reqwest';
 
 export function loadEntries(entriesLimit) {
   return reqwest({

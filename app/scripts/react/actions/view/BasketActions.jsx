@@ -1,5 +1,6 @@
 import BasketDispatcher from '../../stores/BasketDispatcher';
 import * as apiRoutes from '../../../routes/api';
+import $ from 'jquery';
 
 function startItemRequest(id) {
   return BasketDispatcher.handleServerAction({

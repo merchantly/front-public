@@ -9,10 +9,12 @@ class ProductCardContainer extends Component {
     productCard: null,
   }
   componentDidMount() {
-    const { productCardID, vendorID } = this.props;
+    const {
+      productId,
+    } = this.props;
 
     if (this.isLoadingNeeded(this.props)) {
-      load(vendorID, productCardID)
+      load(productId)
         .then((productCard) => {
           this.setState({
             productCard,
@@ -21,16 +23,19 @@ class ProductCardContainer extends Component {
         })
         .fail(() => {
           this.setState({
-            currentState: ERROR_STATE
+            currentState: ERROR_STATE,
           });
         });
     }
   }
   isLoadingNeeded(props) {
-    return !!(props.productCardID && props.vendorID);
+    return !!props.productId;
   }
   render() {
-    const { currentState, productCard } = this.state;
+    const {
+      currentState,
+      productCard,
+    } = this.state;
 
     switch(currentState) {
       case READY_STATE:
@@ -46,8 +51,7 @@ class ProductCardContainer extends Component {
 }
 
 ProductCardContainer.propTypes = {
-  productCardID: PropTypes.number,
-  vendorID: PropTypes.number,
+  productId: PropTypes.number,
 };
 
 export default ProductCardContainer;

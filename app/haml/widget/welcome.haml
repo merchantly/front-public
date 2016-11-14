@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+    :css
+      .header, .footer {
+        text-align: center;
+        height: 150px;
+        background-color: rgba(0,0,0,.1);
+      }
+
+      .header:before, .footer:before {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .header h2, .footer h2 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+  %body
+    .header
+      %h2 Header
+
+    #kiosk-widget
+
+    .footer
+      %h2 Footer
+
+    :javascript
+      (function (window, document, target) {
+        function load(src, cb) {
+          var head = document.getElementsByTagName('head')[0];
+          var script = document.createElement('script');
+
+          cb = cb || function() {};
+
+          script.async = true;
+          script.src = src;
+          script.onload = function () {
+            this.onload = null;
+            cb();
+          };
+
+          head.appendChild(script);
+        }
+
+        window.mrch = {
+          widgetContainer: document.getElementById(target),
+          config: {
+            operator_api_url: 'http://saharok.kiiiosk.ru/operator/api',
+            public_api_url: 'http://saharokstore.ru/api'
+          },
+        };
+
+        load('../scripts/widget.js');
+      })(window, document, 'kiosk-widget')

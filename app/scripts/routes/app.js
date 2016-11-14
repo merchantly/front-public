@@ -5,3 +5,7 @@ export function vendorCartItems() {
 export function vendorOrder() {
   return '/orders';
 }
+
+export function productRoute(productId) {
+  return `product/${productId}`;
+}

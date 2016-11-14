@@ -1,17 +1,17 @@
 import React, { Component, PropTypes } from 'react';
-import NavBar, {
-  externalPropTypes as navBarPropTypes,
-} from 'rc/NavBar';
+import provideTranslations from 'rc/HoC/provideTranslations';
 import MenuTop from 'rc/MenuTop';
 import Userbar, {
   externalPropTypes as userbarPropTypes,
 } from 'rc/Userbar';
+import { Clientbar } from 'rc/Clientbar';
 
 class WidgetLayout extends Component {
   render() {
     const {
       children,
-      navBarProps,
+      i18n,
+      clientBarProps,
       menuTopProps,
       showClientBar,
       showMenuTop,
@@ -22,16 +22,13 @@ class WidgetLayout extends Component {
     return (
       <div className="b-page__content b-page--widget">
         <div className="b-page__content__inner b-page__content__inner_navbar">
-          <NavBar {...navBarProps}
-            showClientBar={showClientBar}
-            t={t}
-          />
-          {showMenuTop && <MenuTop {...menuTopProps} />}
+          {showClientBar && <Clientbar {...clientBarProps} t={t} />}
+          {showMenuTop && <MenuTop {...menuTopProps} i18n={i18n} />}
         </div>
         <div className="b-page__content__inner b-page__content__inner_content">
           {children}
         </div>
-        <Userbar {...userbarProps} />
+        <Userbar {...userbarProps} i18n={i18n} />
       </div>
     );
   }
@@ -39,11 +36,12 @@ class WidgetLayout extends Component {
 
 WidgetLayout.propTypes = {
   children: PropTypes.element,
+  clientBarProps: PropTypes.shape(Clientbar.propTypes),
+  i18n: PropTypes.object,
   menuTopProps: PropTypes.shape(...MenuTop.wrapped.propTypes),
-  navBarProps: PropTypes.shape(navBarPropTypes).isRequired,
   showClientBar: PropTypes.bool,
   showMenuTop: PropTypes.bool,
-  t: PropTypes.func,
+  t: PropTypes.func.isRequired,
   userbarProps: PropTypes.shape(userbarPropTypes).isRequired,
 };
 
@@ -51,4 +49,4 @@ WidgetLayout.defaultProps = {
 
 };
 
-export default WidgetLayout;
+export default provideTranslations(WidgetLayout);
