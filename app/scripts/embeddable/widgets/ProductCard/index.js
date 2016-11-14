@@ -7,7 +7,6 @@ window.mrch.config.public_api_url = window.mrch.config.public_api_url || process
 if (!window.jQuery) {
   window.$ = window.jQuery = require('jquery');
 }
-window.reqwest = require('reqwest');
 require('owlCarousel');
 require('fancybox');
 require('fancybox.wannabe');

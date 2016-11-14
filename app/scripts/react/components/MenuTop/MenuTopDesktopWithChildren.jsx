@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import * as schemas from 'r/schemas';
 import MenuTopDesktopChild from './MenuTopDesktopChild';
+import AppLink from 'rc/common/AppLink';
+import { categoryRoute } from 'scripts/routes/app';
 
 class MenuTopDeskTopWithChildren extends Component {
   renderChildrenSingleColumn(id, children) {
@@ -69,9 +71,13 @@ class MenuTopDeskTopWithChildren extends Component {
         id={`menu_item_li_${id}`}
         key={`menu-item-with-children-${id}`}
       >
-        <a className="b-nav__link" href={url}>
+        <AppLink
+          className="b-nav__link"
+          hash={categoryRoute(id)}
+          href={url}
+        >
           {title}
-        </a>
+        </AppLink>
         <ul className="b-nav__list b-nav__list_sub">
           {children.length < 6 ?
             this.renderChildrenSingleColumn(id, children) :

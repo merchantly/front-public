@@ -8,16 +8,17 @@ class AppLink extends Component {
       href,
       hash,
       state,
+      ...rest
     } = this.props;
 
     return this.context.isWidget
       ? (
-        <Link to={{ pathname: hash, state }}>
+        <Link {...rest} to={{ pathname: hash, state }}>
           {children}
         </Link>
       )
       : (
-        <a {...this.props} href={href}>
+        <a {...rest} href={href}>
           {children}
         </a>
       );

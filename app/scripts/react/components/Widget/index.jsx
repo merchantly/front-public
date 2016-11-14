@@ -18,6 +18,7 @@ jQuery.noConflict(true);
 
 import WelcomeWidget from 'rc/Welcome/WelcomeWidget';
 import ProductCardWidget from 'rc/Product/ProductCard/ProductCardWidget';
+import CategoriesShowWidget from 'rc/CategoriesShow/CategoriesShowWidget';
 
 class Widget extends Component {
   render() {
@@ -26,6 +27,7 @@ class Widget extends Component {
         <Route path="/" component={WidgetLayoutContainer}>
           <IndexRoute component={WelcomeWidget} />
           <Route path="product/:productId" component={ProductCardWidget} />
+          <Route path="category/:categoryId" component={CategoriesShowWidget} />
         </Route>
       </Router>
     );
