@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+  %body
+    .navbar-transparent
+      .container
+        %h1.text-center Widget
+    .login__content.login__content--fullscreen
+      .login__block
+        -#.alert.alert-danger
+        .login__form
+          - pages = ['welcome.html']
+          - for page of pages
+            - page = pages[page]
+            %h3
+              %a{href: "#{page}"}
+                = page

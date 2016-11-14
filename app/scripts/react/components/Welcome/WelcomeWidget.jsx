@@ -2,10 +2,19 @@ import React, { Component, PropTypes } from 'react';
 import WelcomeContainer from './index';
 import CatalogFilterContainer from 'rc/CatalogFilter';
 import * as schemas from 'r/schemas';
+import props from 'test/fixtures/welcome/widget-sample.json';
 
 class WelcomeWidget extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: {},
+      isFetching: true,
+    };
+  }
   componentWillMount() {
-    
+    this.setState({ data: props, isFetching: false });
   }
   render() {
     const {
@@ -19,22 +28,26 @@ class WelcomeWidget extends Component {
       showQuantity,
       showWelcomeSlider,
       vendor,
-    } = this.props;
+    } = this.state.data;
 
-    return (
-      <WelcomeContainer
-        catalogFilterProps={catalogFilterProps}
-        i18n={i18n}
-        isFilterDirty={isFilterDirty}
-        products={products}
-        showCartButton={showCartButton}
-        showCatalogFilter={showCatalogFilter}
-        showPaginationOnWelcome={showPaginationOnWelcome}
-        showQuantity={showQuantity}
-        showWelcomeSlider={showWelcomeSlider}
-        vendor={vendor}
-      />
-    );
+    return this.state.isFetching
+      ? (
+        'Загружается...'
+      )
+      : (
+        <WelcomeContainer
+          catalogFilterProps={catalogFilterProps}
+          i18n={i18n}
+          isFilterDirty={isFilterDirty}
+          products={products}
+          showCartButton={showCartButton}
+          showCatalogFilter={showCatalogFilter}
+          showPaginationOnWelcome={showPaginationOnWelcome}
+          showQuantity={showQuantity}
+          showWelcomeSlider={showWelcomeSlider}
+          vendor={vendor}
+        />
+      );
   }
 }
 

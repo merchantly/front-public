@@ -1,6 +1,6 @@
-/*global $ */
 import { camelizeKeys } from 'humps';
 import NoticeService from '../services/Notice';
+import $ from 'jquery';
 
 export const CALL_API = Symbol('Call API');
 

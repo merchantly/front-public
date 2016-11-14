@@ -13,7 +13,8 @@
         "scripts": "./app/scripts",
         "r": "./app/scripts/react",
         "rc": "./app/scripts/react/components",
-        "test": "./test"
+        "test": "./test",
+        "styles": "./app/stylesheets"
       }
     }]
   ]

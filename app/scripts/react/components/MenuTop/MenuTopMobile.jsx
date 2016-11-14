@@ -1,7 +1,7 @@
-/*global $ */
 import React, { Component, PropTypes } from 'react';
 import * as schemas from 'r/schemas';
 import MenuTopToggleButton from './MenuTopToggleButton';
+import $ from 'jquery';
 
 class MenuTopMobile extends Component {
   constructor(props) {

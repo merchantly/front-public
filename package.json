@@ -10,12 +10,12 @@
     "build": "npm run build:snippet && npm run build:widget",
     "build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
     "build:widget": "webpack --config webpack.config.development.js --watch",
-    "dist": "ENV=production gulp dist && npm run dist:widget && npm run dist:snippet && npm run dist:test",
+    "dist": "ENV=production gulp dist && npm run dist:widget && npm run dist:test",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
     "dist:test": "node ./dist_tests/prerender",
     "dist:widget": "webpack --config webpack.config.production.js",
     "deploy": "gulp deploy",
-    "start": "gulp server"
+    "start": "npm run build:widget & gulp server"
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
@@ -99,6 +99,7 @@
     "gulp-streamify": "1.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.1",
+    "json-loader": "^0.5.4",
     "loose-envify": "^1.3.0",
     "mocha": "^2.2.5",
     "node-sass": "^3.4.2",
