@@ -15,8 +15,8 @@ class ProductBulk extends Component {
       };
     }
   }
-  good(){
-    if (this.props.good){
+  good() {
+    if (this.props.good) {
       return this.props.good;
     } else if (this.props.product.hasOrderingGoods){
       return this.props.product.goods[0];
@@ -28,6 +28,7 @@ class ProductBulk extends Component {
       value = 0;
     }
 
+    this.props.onChangeAmount(value);
     this.setState({
       price: {
         cents: this.getPrice(value),
@@ -39,7 +40,11 @@ class ProductBulk extends Component {
     return this.good().actualPrice.cents * weight / parseFloat(this.props.product.weightOfPrice);
   }
   render() {
-    const { t } = this.props;
+    const {
+      amount,
+      t,
+    } = this.props;
+
     if (this.good()){
       return (
         <div>
@@ -53,6 +58,7 @@ class ProductBulk extends Component {
               ref="input"
               step="0.01"
               type="number"
+              value={amount}
             />
           </span>
           <div className="b-item-full__price p-price">
@@ -70,7 +76,10 @@ class ProductBulk extends Component {
 
 ProductBulk.propTypes = {
   good: schemas.good,
+  amount: PropTypes.number.isRequired,
+  onChangeAmount: PropTypes.func.isRequired,
   product: PropTypes.object.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default ProductBulk;

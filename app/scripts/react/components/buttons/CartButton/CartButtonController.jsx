@@ -1,55 +1,38 @@
 import React, { Component, PropTypes } from 'react';
-import BasketStore from '../../../stores/BasketStore';
 import CartButton from './CartButton';
-import { updateBasketState, initBasketState } from '../../../actions/view/BasketActions';
-import { humanizedMoneyWithCurrency } from '../../../helpers/money';
+import {
+  initBasket,
+} from 'r/actions/BasketActions';
+import { humanizedMoneyWithCurrency } from 'r/helpers/money';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
+import { canUseDOM } from 'r/helpers/dom';
 
 class CartButtonController extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = this.getStateFromStore();
-  }
-
-  componentDidMount() {
-    initBasketState();
-
-    this.syncWithStore = () => {
-      this.setState(this.getStateFromStore());
+  componentWillMount() {
+    if (canUseDOM()) {
+      this.props.initBasket();
     }
-
-    BasketStore.addChangeListener(this.syncWithStore);
-  }
-  componentWillUnmount() {
-    BasketStore.removeChangeListener(this.syncWithStore)
-  }
-  getStateFromStore() {
-    return {
-      basket: BasketStore.getBasket()
-    };
   }
   getItemsCount() {
-    const { showFullBasketCount } = this.props;
-    const { basket } = this.state;
+    const {
+      basket,
+      showFullBasketCount,
+    } = this.props;
 
     if (!(basket && basket.items)) {
       return 0;
     }
 
-    if (showFullBasketCount) {
-      let total = 0;
-      this.state.basket.items.forEach((cartItem) => {
-        total += cartItem['count'];
-      });
-      return total;
-    }else{
-      return this.state.basket.items.length;
-    }
+    return showFullBasketCount
+      ? basket.items.reduce((total, cartItem) => total += cartItem['count'], 0)
+      : basket.items.length;
   }
   render() {
     const {
-      url,
+      basket,
       t,
+      url,
     } = this.props;
     const itemsCount = this.getItemsCount();
 
@@ -58,21 +41,32 @@ class CartButtonController extends Component {
 
     return (
       <CartButton
-        text={t('vendor.cart.basket_button', {total_price: totalPrice})}
-        url={url}
         itemsCount={itemsCount}
+        text={t('vendor.cart.basket_button', { totalPrice })}
+        url={url}
       />
     );
   }
 }
 
 CartButtonController.propTypes = {
+  basket: PropTypes.object.isRequired,
+  initBasket: PropTypes.func.isRequired,
+  showFullBasketCount: PropTypes.bool,
+  t: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
-  showFullBasketCount: PropTypes.bool
 };
-CartButtonController.defaultProps = {
-  url: PropTypes.string.isRequired,
-  showFullBasketCount: false
-}
 
-export default CartButtonController;
+CartButtonController.defaultProps = {
+  showFullBasketCount: false,
+  url: PropTypes.string.isRequired,
+};
+
+export default connectToRedux(connect(
+  (state) => ({
+    basket: state.basket.basket,
+  }),
+  {
+    initBasket,
+  }
+)(CartButtonController));

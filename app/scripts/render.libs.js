@@ -3,7 +3,6 @@ window.I18n = require('i18next'); // Fallback for rails I18n
 window.$ = window.jQuery = require('jquery');
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-window.Dispatcher = require('flux').Dispatcher;
 window.EventEmitter = require('eventEmitter');
 window.accounting = require('accounting');
 

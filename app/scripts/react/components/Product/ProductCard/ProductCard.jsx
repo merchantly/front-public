@@ -13,11 +13,26 @@ import ProductCardVideo from './ProductCardVideo';
 import ReactDisqusThread from 'react-disqus-thread';
 import { DISQUS_IDENTIFIER } from './ProductCard.constants';
 import * as schemas from 'r/schemas';
+import {
+  addGood,
+} from 'r/actions/BasketActions';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
+import { getIn } from 'timm';
 
 class ProductCard extends Component {
-  state = {
-    good: null,
-    product: this.props.product,
+  constructor(props) {
+    super(props);
+
+    this.handleGoodChange = this.handleGoodChange.bind(this);
+    this.handleChangeAmount = this.handleChangeAmount.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
+    this.state = {
+      amount: props.product.selling_by_weight ? props.product.weight_of_price : 1 ,
+      good: getIn(props.product, ['goods', 0]),
+      product: props.product,
+    };
   }
   isKioskEnvironment() {
     return !!(global.gon && global.gon.kiiiosk);
@@ -30,6 +45,25 @@ class ProductCard extends Component {
     };
 
     this.setState({ good, product });
+  }
+  handleChangeAmount(amount) {
+    this.setState({ amount });
+  }
+  handleFormSubmit(ev) {
+    const {
+      addGood,
+    } = this.props;
+    const {
+      amount,
+      good,
+      product,
+    } = this.state;
+
+    ev.preventDefault();
+
+    return product.selling_by_weight
+      ? addGood(good, 1, amount)
+      : addGood(good, amount);
   }
   renderDisqus(product) {
     let disqusIdentifier = DISQUS_IDENTIFIER + product.id;
@@ -96,7 +130,9 @@ class ProductCard extends Component {
                   <ProductCart
                     {...this.props}
                     {...this.state}
-                    onGoodChange={this.handleGoodChange.bind(this)}
+                    onChangeAmount={this.handleChangeAmount}
+                    onGoodChange={this.handleGoodChange}
+                    onSubmit={this.handleFormSubmit}
                     t={t}
                   />
                 </div>
@@ -118,6 +154,7 @@ class ProductCard extends Component {
 }
 
 ProductCard.propTypes = {
+  addGood: PropTypes.func.isRequired,
   addWishlistUrl: PropTypes.string,
   formAuthenticity: schemas.formAuthenticity,
   hasWishlist: PropTypes.bool,
@@ -130,6 +167,7 @@ ProductCard.propTypes = {
   wishlistUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
 };
+
 ProductCard.defaultProps = {
   formAuthenticity: {},
   hasComments: false,
@@ -139,4 +177,9 @@ ProductCard.defaultProps = {
   otherProducts: [],
 };
 
-export default provideTranslations(ProductCard);
+export default provideTranslations(connectToRedux(connect(
+  () => ({}),
+  {
+    addGood,
+  }
+)(ProductCard)));

@@ -14,6 +14,8 @@ const ProductAddToCartButton = ({ disabled, t, text }) => (
 
 ProductAddToCartButton.propTypes = {
   disabled: PropTypes.bool,
+  onSubmit: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
 };
 

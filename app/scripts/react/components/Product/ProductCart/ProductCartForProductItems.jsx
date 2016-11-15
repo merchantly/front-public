@@ -8,6 +8,7 @@ export default class ProductCartForProductItems extends Component {
     isWishlisted: PropTypes.bool,
     onGoodChange: PropTypes.func,
     product: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
   }
   render() {
