@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import $ from 'jquery';
 
 import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import { goodOrderTitle } from '../../../helpers/product';
@@ -12,6 +13,7 @@ class ProductGoods extends Component {
     isWishlisted: PropTypes.bool,
     onGoodChange: PropTypes.func,
     product: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
   }
   componentDidMount() {
@@ -43,7 +45,7 @@ class ProductGoods extends Component {
         if (onGoodChange) onGoodChange(good);
         break;
       }
-    };
+    }
   }
   renderOption(good, product) {
     return (
@@ -79,7 +81,10 @@ class ProductGoods extends Component {
     );
   }
   render() {
-    const { product, t, wishlistUrl } = this.props;
+    const {
+      product,
+      t,
+    } = this.props;
 
     if (this.isTitlesValid(product)) {
       return (
@@ -90,8 +95,8 @@ class ProductGoods extends Component {
             </div>
             <div className="b-item-full__form__submit">
               <ProductAddToCartButton
-                text={t('vendor.button.to_cart', {title: product.title})}
                 t={t}
+                text={t('vendor.button.to_cart', {title: product.title})}
               />
             </div>
           </div>
@@ -117,8 +122,8 @@ class ProductGoods extends Component {
           </div>
           <div className="b-item-full__form__row b-item-full__form__submit">
             <ProductAddToCartButton
-              text={t('vendor.button.to_cart', {title: product.title})}
               t={t}
+              text={t('vendor.button.to_cart', {title: product.title})}
             />
           </div>
         </span>

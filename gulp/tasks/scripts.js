@@ -218,7 +218,7 @@ gulp.task('[Production] Scripts', () => {
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.bundle.outputName))
-    .pipe(streamify(uglify({ mangle: true })))
+    //.pipe(streamify(uglify({ mangle: true })))
     .pipe(gulp.dest(config.production.bundle.dest))
     .on('end', function() {
       bundleLogger.end(config.production.bundle.outputName);

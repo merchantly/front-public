@@ -5,24 +5,32 @@ import HiddenInput from '../../common/HiddenInput';
 import ProductCartForProduct from './ProductCartForProduct';
 import ProductCartForProductItems from './ProductCartForProductItems';
 import ProductCartNotAvailable from './ProductCartNotAvailable';
-import ProductBulk from '../ProductBulk'
-import $ from 'jquery';
+import ProductBulk from '../ProductBulk';
 
 export default class ProductCart extends Component {
   static propTypes = {
+    amount: PropTypes.number,
     addWishlistUrl: PropTypes.string,
     formAuthenticity: PropTypes.object,
     good: PropTypes.object,
     hasWishlist: PropTypes.bool,
     isWishlisted: PropTypes.bool,
-    product: PropTypes.object.isRequired,
+    onChangeAmount: PropTypes.func.isRequired,
     onGoodChange: PropTypes.func,
+    onSubmit: PropTypes.func.isRequired,
+    product: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
   }
   static defaultProps = {
     formAuthenticity: {},
   }
-  renderContent(product, t) {
+  renderContent() {
+    const {
+      product,
+      t,
+    } = this.props;
+
     if (product.has_ordering_goods) {
       if (product.goods.length === 1) {
         return (
@@ -43,32 +51,50 @@ export default class ProductCart extends Component {
       );
     }
   }
-  renderProductBulkInput(product, good, t){
+  renderProductBulkInput(){
+    const {
+      amount,
+      onChangeAmount,
+      product,
+      good,
+      t,
+    } = this.props;
+
     if (product.selling_by_weight && product.weight_of_price) {
       return (
         <div className="b-item-full__form__row b-item-full__form__row_fixed">
           <div className="b-item-full__weight">
-            <ProductBulk t={t} good={good} product={product} />
+            <ProductBulk {...{
+              amount,
+              good,
+              onChangeAmount,
+              product,
+              t,
+            }} />
           </div>
         </div>
       );
     }
   }
   render() {
-    const { onProductChange, product, t, good } = this.props;
+    const {
+      formAuthenticity,
+    } = this.props;
+
     return (
       <form
         acceptCharset="UTF-8"
         action={vendorCartItems()}
         className="simple_form cart_item"
         method="POST"
+        onSubmit={this.onSubmit}
       >
         <div style={{ display: 'none'}}>
           <HiddenInput name="utf8" value="✓" />
-          <CSRFToken {...this.props.formAuthenticity} />
+          <CSRFToken {...formAuthenticity} />
         </div>
-        {this.renderProductBulkInput(product, good, t)}
-        {this.renderContent(product, t)}
+        {this.renderProductBulkInput()}
+        {this.renderContent()}
       </form>
     );
   }

@@ -1,17 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 import { h1 } from '../../../helpers/seo';
 import { attributeValue } from '../../../helpers/product';
-import classNames from 'classnames';
 import ProductBlockImage from '../ProductBlock/ProductBlockImage';
+import AppLink from 'rc/common/AppLink';
+import { productRoute } from 'scripts/routes/app';
 
 export default class ProductCardDetails extends Component {
   static propTypes = {
     product: PropTypes.object.isRequired,
-    otherProducts: PropTypes.array
-  }
+    otherProducts: PropTypes.array,
+    t: PropTypes.func,
+  };
   static defaultProps = {
-    otherProducts: []
-  }
+    otherProducts: [],
+  };
   renderAttributes(product) {
     if (product.attributes && product.attributes.length) {
       return (
@@ -38,7 +40,7 @@ export default class ProductCardDetails extends Component {
         />
       );
     } else {
-      return <meta itemProp="description" content={h1(product)} />;
+      return <meta content={h1(product)} itemProp="description" />;
     }
   }
   renderTextBlocks(product) {
@@ -59,7 +61,10 @@ export default class ProductCardDetails extends Component {
   }
 
   renderOtherProducts() {
-    const { otherProducts, t } = this.props;
+    const {
+      otherProducts,
+      t,
+    } = this.props;
 
     if (otherProducts.length > 0) {
       return (
@@ -67,11 +72,16 @@ export default class ProductCardDetails extends Component {
           <h3>{t('vendor.other_product.title')}</h3>
           <ul className="b-item-full__other-products">
             {
-              otherProducts.map((product, _idx) => (
+              otherProducts.map((product) => (
                 <li key={product.id}>
-                  <a href={product.public_url} title={product.title} alt={product.title}>
+                  <AppLink
+                    alt={product.title}
+                    hash={productRoute(product.id)}
+                    href={product.public_url}
+                    title={product.title}
+                  >
                     <ProductBlockImage product={product} />
-                  </a>
+                  </AppLink>
                 </li>
               ))
             }

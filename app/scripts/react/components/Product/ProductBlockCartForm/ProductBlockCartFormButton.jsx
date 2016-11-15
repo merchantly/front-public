@@ -1,43 +1,49 @@
 import React, { Component, PropTypes } from 'react';
-import { addGood } from '../../../actions/view/BasketActions';
-import BasketStore from '../../../stores/BasketStore';
+import {
+  addGood,
+  resetGoodState,
+} from 'r/actions/BasketActions';
 import InputNumberSpinner from '../../common/InputNumberSpinner';
-import { extend } from 'lodash';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
+import { getIn } from 'timm';
 
 class ProductBlockCartFormButton extends Component {
   constructor(props) {
     super(props);
 
-    const { t } = this.props;
-
-    this.state = this.getStateFromStore();
-    this.state = { ...this.getStateFromStore(), amount: props.product.selling_by_weight ? parseFloat(props.product.weight_of_price) : 1 }
-  }
-  componentDidMount() {
-    this.syncWithStore = () => {
-      this.setState(this.getStateFromStore());
-    }
-
-    BasketStore.addChangeListener(this.syncWithStore);
-  }
-  componentWillUnmount() {
-    BasketStore.removeChangeListener(this.syncWithStore)
-  }
-  getStateFromStore() {
-    return {
-      itemState: BasketStore.getCartItemState(this.props.product.goods[0].id)
+    this.state = {
+      amount: props.product.selling_by_weight ? parseFloat(props.product.weight_of_price) : 1,
     };
+  }
+  componentWillMount() {
+    const {
+      goodId,
+      resetGoodState,
+    } = this.props;
+
+    resetGoodState(goodId);
   }
   onChangeAmount(value) {
     this.setState({ amount: value });
   }
   addToBasket() {
-    const { product } = this.props;
+    const {
+      addGood,
+      product,
+    } = this.props;
+    const {
+      amount,
+    } = this.state;
 
-    return product.selling_by_weight ? addGood(product.goods[0], 1, this.state.amount) : addGood(product.goods[0], this.state.amount);
+    return product.selling_by_weight
+      ? addGood(product.goods[0], 1, amount)
+      : addGood(product.goods[0], amount);
   }
   renderQuanity() {
-    const { product } = this.props;
+    const {
+      product,
+    } = this.props;
     let step, defaultValue, min;
 
     if (product.selling_by_weight) {
@@ -59,16 +65,21 @@ class ProductBlockCartFormButton extends Component {
     );
   }
   render() {
-    const { t, showQuantity } = this.props;
-    const { itemState } = this.state;
-    const text = itemState.isRequestProcessing ? t('vendor.button.disable_with.adding') : t('vendor.button.to_cart');
+    const {
+      isFetching,
+      showQuantity,
+      t,
+    } = this.props;
+    const text = isFetching
+      ? t('vendor.button.disable_with.adding')
+      : t('vendor.button.to_cart');
 
     return (
       <div>
         {showQuantity && this.renderQuanity()}
         <button
           className="b-btn element--active"
-          disabled={itemState.isRequestProcessing}
+          disabled={isFetching}
           onClick={this.addToBasket.bind(this)}
         >
           {text}
@@ -78,12 +89,30 @@ class ProductBlockCartFormButton extends Component {
   }
 }
 ProductBlockCartFormButton.propTypes = {
+  addGood: PropTypes.func.isRequired,
+  isFetching: PropTypes.bool.isRequired,
+  goodId: PropTypes.number.isRequired,
   product: PropTypes.object.isRequired,
+  resetGoodState: PropTypes.func.isRequired,
   showQuantity: PropTypes.bool,
   t: PropTypes.func,
 };
+
 ProductBlockCartFormButton.defaultProps = {
   showQuantity: false,
 };
 
-export default ProductBlockCartFormButton;
+export default connectToRedux(connect(
+  (state, { product }) => {
+    const goodId = product.goods[0].id;
+
+    return {
+      goodId,
+      isFetching: !!getIn(state.basket.goodState, [goodId, 'isFetching']),
+    };
+  },
+  {
+    addGood,
+    resetGoodState,
+  }
+)(ProductBlockCartFormButton));
