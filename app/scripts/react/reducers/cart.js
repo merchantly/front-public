@@ -1,4 +1,4 @@
-import createReducer from '../utils/createReducer';
+import createReducer from 'r/utils/createReducer';
 import {
   CART_REQUEST,
   CART_SUCCESS,
@@ -9,7 +9,10 @@ import {
   CART_SET_FIELD_VALUE,
   CART_SELECT_DELIVERY,
   CART_SELECT_PAYMENT,
-} from '../actions/CartActions';
+} from 'r/actions/CartActions';
+import {
+  GOOD_ADD_SUCCESS,
+} from 'r/actions/GoodStateActions';
 import { merge, set, setIn, getIn } from 'timm';
 import { reduce } from 'lodash';
 
@@ -71,6 +74,10 @@ const actionMap = {
   },
 
   [CART_SUCCESS](state, action) {
+    return initCartStore(state, action);
+  },
+
+  [GOOD_ADD_SUCCESS](state, action) {
     return initCartStore(state, action);
   },
 
