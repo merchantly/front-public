@@ -26,9 +26,7 @@ class Cart extends Component {
     const id = `cart-error-${key}`;
 
     return (
-      <div id={id} key={id}>
-        {err}
-      </div>
+      <div id={id} key={id} dangerouslySetInnerHTML={{__html: err}} />
     );
   }
   renderErrors(suffix='') {

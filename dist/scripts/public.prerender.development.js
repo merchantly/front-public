@@ -2021,11 +2021,7 @@ var Cart = function (_Component) {
     value: function renderError(err, key) {
       var id = 'cart-error-' + key;
 
-      return _react2.default.createElement(
-        'div',
-        { id: id, key: id },
-        err
-      );
+      return _react2.default.createElement('div', { id: id, key: id, dangerouslySetInnerHTML: { __html: err } });
     }
   }, {
     key: 'renderErrors',
