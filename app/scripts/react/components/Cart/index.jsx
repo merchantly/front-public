@@ -41,11 +41,22 @@ class CartContainer extends Component {
       initialCart,
       initPackages,
       initialPackages,
+      fetchCart,
+      fetchPackages,
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
-      initCart(initialCart);
-      initPackages(initialPackages);
+      if (initialCart) {
+        initCart(initialCart);
+      } else {
+        fetchCart();
+      }
+
+      if (initialPackages) {
+        initPackages(initialPackages);
+      } else {
+        fetchPackages();
+      }
       storeInitialized = true;
     }
   }
@@ -116,8 +127,8 @@ export default provideTranslations(connectToRedux(connect(
     } = storeInitialized && !isTesting
       ? state
       : ({
-        cart: initCartStore(state.cart, initCart(initialCart)),
-        packages: initPackageStore(state.packages, initPackages(initialPackages)),
+        cart: initCartStore(state.cart, initCart(initialCart || {})),
+        packages: initPackageStore(state.packages, initPackages(initialPackages ||{})),
       });
 
     const {

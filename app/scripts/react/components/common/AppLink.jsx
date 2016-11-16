@@ -11,7 +11,7 @@ class AppLink extends Component {
       ...rest
     } = this.props;
 
-    return this.context.isWidget
+    return this.context.isWidget && hash
       ? (
         <Link {...rest} to={{ pathname: hash, state }}>
           {children}

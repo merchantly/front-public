@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import provideTranslations from 'rc/HoC/provideTranslations';
 import MenuTop from 'rc/MenuTop';
 import Userbar, {
   externalPropTypes as userbarPropTypes,
 } from 'rc/Userbar';
 import { Clientbar } from 'rc/Clientbar';
+import provideTranslations from 'rc/HoC/provideTranslations';
+import { connect } from 'react-redux';
 
 class WidgetLayout extends Component {
   render() {
@@ -46,7 +47,14 @@ WidgetLayout.propTypes = {
 };
 
 WidgetLayout.defaultProps = {
-
+  clientBarProps: {
+    cartUrl: '/cart',
+    showFullBasketCount: false,
+    hasCart: true,
+  },
+  showClientBar: true,
 };
 
-export default provideTranslations(WidgetLayout);
+export default provideTranslations(connect(
+  (state, ownProps) => Object.assign({}, state.layout, ownProps)
+)(WidgetLayout));

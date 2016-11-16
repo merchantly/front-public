@@ -13,3 +13,11 @@ export function productRoute(productId) {
 export function categoryRoute(categoryId) {
   return `category/${categoryId}`;
 }
+
+export function cartRoute() {
+  return 'cart';
+}
+
+export function checkoutRoute() {
+  return 'checkout';
+}
