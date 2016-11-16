@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import {
   addGood,
   resetGoodState,
-} from 'r/actions/BasketActions';
+} from 'r/actions/GoodStateActions';
 import InputNumberSpinner from '../../common/InputNumberSpinner';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
@@ -109,7 +109,7 @@ export default connectToRedux(connect(
 
     return {
       goodId,
-      isFetching: !!getIn(state.basket.goodState, [goodId, 'isFetching']),
+      isFetching: !!getIn(state.goodState, [goodId, 'isFetching']),
     };
   },
   {

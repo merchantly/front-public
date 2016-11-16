@@ -11,7 +11,7 @@ DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
 cartReducer = require('./react/reducers/cart').default;
 packagesReducer = require('./react/reducers/packages').default;
-basketReducer = require('./react/reducers/basket');
+goodStateReducer = require('./react/reducers/goodState');
 layoutReducer = require('./react/reducers/layout');
 clientState = require('./react/reducers/clientState');
 operatorState = require('./react/reducers/operatorState');
@@ -19,7 +19,7 @@ require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
   cart: cartReducer,
-  basket: basketReducer,
+  goodState: goodStateReducer,
   packages: packagesReducer,
   design: DesignReducer,
   popup: PopupReducer,

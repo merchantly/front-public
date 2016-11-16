@@ -15,7 +15,7 @@ import { DISQUS_IDENTIFIER } from './ProductCard.constants';
 import * as schemas from 'r/schemas';
 import {
   addGood,
-} from 'r/actions/BasketActions';
+} from 'r/actions/GoodStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
@@ -183,7 +183,7 @@ ProductCard.defaultProps = {
 
 export default provideTranslations(connectToRedux(connect(
   (state) => ({
-    goodState: state.basket.goodState,
+    goodState: state.goodState,
   }),
   {
     addGood,
