@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import WidgetLayout from 'rc/Widget/WidgetLayout';
 import ProductCardContainer from './ProductCardContainer';
 
 class ProductCardWidget extends Component {
@@ -8,7 +9,9 @@ class ProductCardWidget extends Component {
     } = this.props.routeParams;
 
     return (
-      <ProductCardContainer productId={parseInt(productId, 10)} />
+      <WidgetLayout>
+        <ProductCardContainer productId={parseInt(productId, 10)} />
+      </WidgetLayout>
     );
   }
 }

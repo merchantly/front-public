@@ -31,7 +31,6 @@ const initialState = {
   checkoutFieldValues: {},
   isFetching: false,
   error: null,
-  isInitialized: false,
 };
 
 export function initCartStore(state, { response }) {
@@ -55,7 +54,6 @@ export function initCartStore(state, { response }) {
     cart: response,
     isFetching: false,
     error: null,
-    isInitialized: true,
   });
 }
 

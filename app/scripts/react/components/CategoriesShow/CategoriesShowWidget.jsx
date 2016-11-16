@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import WidgetLayout from 'rc/Widget/WidgetLayout';
 import CategoriesShow from './CategoriesShow';
 import props from 'test/fixtures/categoriesShow/sample.json';
 
@@ -19,7 +20,9 @@ class CategoriesShowWidget extends Component {
     } = this.props.routeParams;
 
     return (
-      <CategoriesShow {...this.state.data} />
+      <WidgetLayout>
+        <CategoriesShow {...this.state.data} />
+      </WidgetLayout>
     );
   }
 }

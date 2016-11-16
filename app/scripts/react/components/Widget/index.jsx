@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Router, IndexRoute, Route, hashHistory } from 'react-router';
-import WidgetLayoutContainer from './WidgetLayoutContainer';
+import WidgetRoot from './WidgetRoot';
 import 'r/application';
 
 import jQuery from 'jquery';
@@ -15,19 +15,20 @@ require('fancybox');
 require('fancybox.wannabe');
 jQuery.noConflict(true);
 
-
 import WelcomeWidget from 'rc/Welcome/WelcomeWidget';
 import ProductCardWidget from 'rc/Product/ProductCard/ProductCardWidget';
 import CategoriesShowWidget from 'rc/CategoriesShow/CategoriesShowWidget';
+import CartWidget from 'rc/Cart/CartWidget';
 
 class Widget extends Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={WidgetLayoutContainer}>
+        <Route path="/" component={WidgetRoot}>
           <IndexRoute component={WelcomeWidget} />
           <Route path="product/:productId" component={ProductCardWidget} />
           <Route path="category/:categoryId" component={CategoriesShowWidget} />
+          <Route path="cart" component={CartWidget} />
         </Route>
       </Router>
     );

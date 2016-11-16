@@ -9,21 +9,23 @@ thunk = require('redux-thunk').default;
 Provider = require('react-redux').Provider;
 DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
-CartReducer = require('./react/reducers/cart').default;
-PackagesReducer = require('./react/reducers/packages').default;
-BasketReducer = require('./react/reducers/basket');
+cartReducer = require('./react/reducers/cart').default;
+packagesReducer = require('./react/reducers/packages').default;
+basketReducer = require('./react/reducers/basket');
+layoutReducer = require('./react/reducers/layout');
 clientState = require('./react/reducers/clientState');
 operatorState = require('./react/reducers/operatorState');
 require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
-  cart: CartReducer,
-  basket: BasketReducer,
-  packages: PackagesReducer,
+  cart: cartReducer,
+  basket: basketReducer,
+  packages: packagesReducer,
   design: DesignReducer,
   popup: PopupReducer,
   clientState: clientState,
   operatorState: operatorState,
+  widget: layoutReducer,
 });
 
 global.redux = (applyMiddleware(thunk)(createStore))(prerenderReducers, {});
