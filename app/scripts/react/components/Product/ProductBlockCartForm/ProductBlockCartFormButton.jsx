@@ -105,7 +105,7 @@ ProductBlockCartFormButton.defaultProps = {
 
 export default connectToRedux(connect(
   (state, { product }) => {
-    const goodId = product.goods[0].id;
+    const goodId = product.goods[0].global_id;
 
     return {
       goodId,

@@ -14,6 +14,7 @@ export default class ProductCart extends Component {
     formAuthenticity: PropTypes.object,
     good: PropTypes.object,
     hasWishlist: PropTypes.bool,
+    isAddingGood: PropTypes.bool.isRequired,
     isWishlisted: PropTypes.bool,
     onChangeAmount: PropTypes.func.isRequired,
     onGoodChange: PropTypes.func,
@@ -67,14 +68,16 @@ export default class ProductCart extends Component {
       product,
       t,
       good,
+      onSubmit
     } = this.props;
+
     return (
       <form
         acceptCharset="UTF-8"
         action={vendorCartItems()}
         className="simple_form cart_item"
         method="POST"
-        onSubmit={this.onSubmit}
+        onSubmit={onSubmit}
       >
         <div style={{ display: 'none'}}>
           <HiddenInput name="utf8" value="✓" />
