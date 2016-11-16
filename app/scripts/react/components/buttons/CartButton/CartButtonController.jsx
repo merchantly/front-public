@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import CartButton from './CartButton';
 import {
-  initBasket,
-} from 'r/actions/BasketActions';
+  fetchCart,
+} from 'r/actions/CartActions';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
+import { decamelizeKeys } from 'humps';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { canUseDOM } from 'r/helpers/dom';
@@ -11,33 +12,33 @@ import { canUseDOM } from 'r/helpers/dom';
 class CartButtonController extends Component {
   componentWillMount() {
     if (canUseDOM()) {
-      this.props.initBasket();
+      this.props.fetchCart();
     }
   }
   getItemsCount() {
     const {
-      basket,
+      cart,
       showFullBasketCount,
     } = this.props;
 
-    if (!(basket && basket.items)) {
+    if (!(cart && cart.items)) {
       return 0;
     }
 
     return showFullBasketCount
-      ? basket.items.reduce((total, cartItem) => total += cartItem['count'], 0)
-      : basket.items.length;
+      ? cart.items.reduce((total, cartItem) => total += cartItem['count'], 0)
+      : cart.items.length;
   }
   render() {
     const {
-      basket,
+      cart,
       t,
       url,
     } = this.props;
     const itemsCount = this.getItemsCount();
 
     // выводим total_price, т.е. без учета стоимости доставки
-    const total_price = humanizedMoneyWithCurrency(basket.total_price, '');
+    const total_price = humanizedMoneyWithCurrency(decamelizeKeys(cart.totalPrice), '');
 
     return (
       <CartButton
@@ -50,8 +51,8 @@ class CartButtonController extends Component {
 }
 
 CartButtonController.propTypes = {
-  basket: PropTypes.object.isRequired,
-  initBasket: PropTypes.func.isRequired,
+  cart: PropTypes.object.isRequired,
+  fetchCart: PropTypes.func.isRequired,
   showFullBasketCount: PropTypes.bool,
   t: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
@@ -64,9 +65,9 @@ CartButtonController.defaultProps = {
 
 export default connectToRedux(connect(
   (state) => ({
-    basket: state.basket.basket,
+    cart: state.cart.cart,
   }),
   {
-    initBasket,
+    fetchCart,
   }
 )(CartButtonController));
