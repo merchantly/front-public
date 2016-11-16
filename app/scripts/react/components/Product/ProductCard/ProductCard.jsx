@@ -81,6 +81,7 @@ class ProductCard extends Component {
   }
   render() {
     const {
+      goodState,
       similarProducts,
       otherProducts,
       t,
@@ -89,6 +90,7 @@ class ProductCard extends Component {
       good,
       product,
     } = this.state;
+    const isAddingGood = !!getIn(goodState, [good && good.global_id, 'isFetching']);
 
     return (
       <div className="mrch-ProductCard cleanslate">
@@ -130,6 +132,7 @@ class ProductCard extends Component {
                   <ProductCart
                     {...this.props}
                     {...this.state}
+                    isAddingGood={isAddingGood}
                     onChangeAmount={this.handleChangeAmount}
                     onGoodChange={this.handleGoodChange}
                     onSubmit={this.handleFormSubmit}
@@ -157,6 +160,7 @@ ProductCard.propTypes = {
   addGood: PropTypes.func.isRequired,
   addWishlistUrl: PropTypes.string,
   formAuthenticity: schemas.formAuthenticity,
+  goodState: PropTypes.object.isRequired,
   hasWishlist: PropTypes.bool,
   hasComments: PropTypes.bool,
   disqusUrl: PropTypes.string,
@@ -178,7 +182,9 @@ ProductCard.defaultProps = {
 };
 
 export default provideTranslations(connectToRedux(connect(
-  () => ({}),
+  (state) => ({
+    goodState: state.basket.goodState,
+  }),
   {
     addGood,
   }

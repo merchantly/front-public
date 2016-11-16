@@ -15,6 +15,7 @@ class ProductProperties extends Component {
   static propTypes = {
     addWishlistUrl: PropTypes.string,
     goods: PropTypes.array.isRequired,
+    isAddingGood: PropTypes.bool.isRequired,
     isWishlisted: PropTypes.bool,
     onGoodChange: PropTypes.func,
     properties: PropTypes.array.isRequired,
@@ -84,8 +85,14 @@ class ProductProperties extends Component {
     });
   }
   render() {
-    const { t } = this.props;
-    const { good, values } = this.state;
+    const {
+      isAddingGood,
+      t,
+    } = this.props;
+    const {
+      good,
+      values,
+    } = this.state;
 
     const hiddenInput = good && (
       <HiddenInput
@@ -95,6 +102,7 @@ class ProductProperties extends Component {
     );
     const addToCartButton = (
       <ProductAddToCartButton
+        isAddingGood={isAddingGood}
         disabled={!good}
         t={t}
         text={good ? t('vendor.button.to_cart') : t('vendor.button.select_good')}

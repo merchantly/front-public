@@ -54,6 +54,6 @@ export function addGood(good, count=1, weight=null) {
         },
       },
     },
-    goodId: good.id,
+    goodId: good.global_id,
   };
 }
