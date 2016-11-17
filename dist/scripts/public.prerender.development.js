@@ -113,7 +113,7 @@ LookbookPage = require('./react/components/Lookbook/LookbookPage');
 PaymentPage = require('./react/components/Payment/PaymentPage');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":71,"./react/components/CurrencySwitcher":73,"./react/components/Dictionary":86,"./react/components/Dictionary/DictionaryPage":85,"./react/components/DictionaryEntitiesShow":89,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":88,"./react/components/ErrorPage":91,"./react/components/LocaleSwitcher":100,"./react/components/Logo/LogoContainer":101,"./react/components/Lookbook":105,"./react/components/Lookbook/LookbookPage":104,"./react/components/MenuBottom":107,"./react/components/MenuTop":114,"./react/components/NavBar":117,"./react/components/Order":122,"./react/components/Order/OrderPage":120,"./react/components/OrderCancelled":125,"./react/components/OrderCancelled/OrderCancelledPage":124,"./react/components/OrderCreated":128,"./react/components/OrderCreated/OrderCreatedPage":127,"./react/components/OrderPaid":131,"./react/components/OrderPaid/OrderPaidPage":130,"./react/components/OrderPayment":134,"./react/components/OrderPayment/OrderPaymentPage":133,"./react/components/OrderShow":137,"./react/components/OrderShow/OrderShowPage":136,"./react/components/Pagination":140,"./react/components/Payment":143,"./react/components/Payment/PaymentPage":142,"./react/components/Product/ProductBlock":152,"./react/components/Product/ProductCard":170,"./react/components/Product/ProductCard/ProductCardPage":165,"./react/components/ProductArchived":190,"./react/components/ProductArchived/ProductArchivedPage":189,"./react/components/ProductGroup":192,"./react/components/ProductList":194,"./react/components/ProductSearch":197,"./react/components/ProductSearch/ProductSearchPage":196,"./react/components/ScrollToTop":198,"./react/components/TopBanner":199,"./react/components/Welcome":209,"./react/components/Welcome/WelcomePage":208,"./react/components/WelcomeChildren":212,"./react/components/WelcomeChildren/WelcomeChildrenPage":211,"./react/components/Wishlist":218,"./react/components/Wishlist/WishlistPage":217,"./react/components/common/ImageSlider":246,"./react/components/common/PostProducts":261,"./react/reducers/Design.prerender":293,"./react/reducers/cart":294,"./react/reducers/clientState":295,"./react/reducers/operatorState":296,"./react/reducers/packages":297,"./react/reducers/popup":298,"react":"react","react-dom":"react-dom","react-dom/server":602,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":71,"./react/components/CurrencySwitcher":73,"./react/components/Dictionary":86,"./react/components/Dictionary/DictionaryPage":85,"./react/components/DictionaryEntitiesShow":89,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":88,"./react/components/ErrorPage":91,"./react/components/LocaleSwitcher":100,"./react/components/Logo/LogoContainer":101,"./react/components/Lookbook":105,"./react/components/Lookbook/LookbookPage":104,"./react/components/MenuBottom":107,"./react/components/MenuTop":114,"./react/components/NavBar":117,"./react/components/Order":122,"./react/components/Order/OrderPage":120,"./react/components/OrderCancelled":125,"./react/components/OrderCancelled/OrderCancelledPage":124,"./react/components/OrderCreated":128,"./react/components/OrderCreated/OrderCreatedPage":127,"./react/components/OrderPaid":131,"./react/components/OrderPaid/OrderPaidPage":130,"./react/components/OrderPayment":134,"./react/components/OrderPayment/OrderPaymentPage":133,"./react/components/OrderShow":137,"./react/components/OrderShow/OrderShowPage":136,"./react/components/Pagination":140,"./react/components/Payment":143,"./react/components/Payment/PaymentPage":142,"./react/components/Product/ProductBlock":152,"./react/components/Product/ProductCard":170,"./react/components/Product/ProductCard/ProductCardPage":165,"./react/components/ProductArchived":190,"./react/components/ProductArchived/ProductArchivedPage":189,"./react/components/ProductGroup":192,"./react/components/ProductList":194,"./react/components/ProductSearch":197,"./react/components/ProductSearch/ProductSearchPage":196,"./react/components/ScrollToTop":198,"./react/components/TopBanner":199,"./react/components/Welcome":210,"./react/components/Welcome/WelcomePage":209,"./react/components/WelcomeChildren":213,"./react/components/WelcomeChildren/WelcomeChildrenPage":212,"./react/components/Wishlist":219,"./react/components/Wishlist/WishlistPage":218,"./react/components/common/ImageSlider":247,"./react/components/common/PostProducts":262,"./react/reducers/Design.prerender":293,"./react/reducers/cart":294,"./react/reducers/clientState":295,"./react/reducers/operatorState":296,"./react/reducers/packages":297,"./react/reducers/popup":298,"react":"react","react-dom":"react-dom","react-dom/server":602,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -1068,7 +1068,7 @@ BlogPostPage.propTypes = {
 exports.default = BlogPostPage;
 module.exports = exports['default'];
 
-},{"../VendorLayout":204,"./index":17,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],17:[function(require,module,exports){
+},{"../VendorLayout":205,"./index":17,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1424,7 +1424,7 @@ BlogPostListPage.propTypes = {
 exports.default = BlogPostListPage;
 module.exports = exports['default'];
 
-},{"../VendorLayout":204,"./BlogPostList":18,"./index":21,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],21:[function(require,module,exports){
+},{"../VendorLayout":205,"./BlogPostList":18,"./index":21,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1780,7 +1780,7 @@ CabinetOrder.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetOrder);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":93,"../common/Order/OrderIcons":256,"../common/Order/OrderState":260,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],24:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"../common/Order/OrderIcons":257,"../common/Order/OrderState":261,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],24:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1887,7 +1887,7 @@ CabinetPage.propTypes = {
 exports.default = CabinetPage;
 module.exports = exports['default'];
 
-},{"../Pagination":140,"../VendorLayout":204,"./CabinetOrder":23,"./index":25,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],25:[function(require,module,exports){
+},{"../Pagination":140,"../VendorLayout":205,"./CabinetOrder":23,"./index":25,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],25:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2214,7 +2214,7 @@ Cart.propTypes = {
 exports.default = Cart;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":239,"../common/Money/HumanizedMoneyWithCurrency":253,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+},{"../../helpers/money":284,"../../schemas":311,"../common/FormAuthenticity":240,"../common/Money/HumanizedMoneyWithCurrency":254,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2279,7 +2279,7 @@ var CartAlert = (_temp = _class = function (_Component) {
 exports.default = CartAlert;
 module.exports = exports['default'];
 
-},{"../common/Alert":234,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],28:[function(require,module,exports){
+},{"../common/Alert":235,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],28:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2860,7 +2860,7 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":270,"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+},{"../../constants/OrderConstants":270,"../common/AssetImage":236,"../common/Image":246,"../common/Money/HumanizedMoneyWithCurrency":254,"../common/Select":266,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3013,7 +3013,7 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
-},{"../common/AssetImage":235,"../common/Image":245,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+},{"../common/AssetImage":236,"../common/Image":246,"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3193,7 +3193,7 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+},{"../../helpers/money":284,"../common/Image":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3301,7 +3301,7 @@ CartPage.defaultProps = {};
 exports.default = CartPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":34,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],34:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":34,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3640,7 +3640,7 @@ CatalogFilter.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CatalogFilter);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":93,"../common/Checkbox":237,"./CatalogFilterOptions":40,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],36:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"../common/Checkbox":238,"./CatalogFilterOptions":40,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],36:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4953,7 +4953,7 @@ CategoriesShowPage.defaultProps = {};
 exports.default = CategoriesShowPage;
 module.exports = exports['default'];
 
-},{"../ProductList":194,"../VendorLayout":204,"./index":49,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],49:[function(require,module,exports){
+},{"../ProductList":194,"../VendorLayout":205,"./index":49,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],49:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5234,7 +5234,7 @@ CategoriesShowChildrenPage.propTypes = {
 exports.default = CategoriesShowChildrenPage;
 module.exports = exports['default'];
 
-},{"../ChildrenProducts":63,"../VendorLayout":204,"./index":52,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],52:[function(require,module,exports){
+},{"../ChildrenProducts":63,"../VendorLayout":205,"./index":52,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],52:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5547,7 +5547,7 @@ CheckoutAlert.propTypes = {
 exports.default = CheckoutAlert;
 module.exports = exports['default'];
 
-},{"../common/Alert":234,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],55:[function(require,module,exports){
+},{"../common/Alert":235,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],55:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5886,7 +5886,7 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"react":"react"}],57:[function(require,module,exports){
+},{"../../helpers/money":284,"../../helpers/text":288,"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"react":"react"}],57:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6300,7 +6300,7 @@ CheckoutPublicOffer.defaultProps = {
 exports.default = CheckoutPublicOffer;
 module.exports = exports['default'];
 
-},{"../common/Checkbox":237,"../common/HiddenInput":241,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],60:[function(require,module,exports){
+},{"../common/Checkbox":238,"../common/HiddenInput":242,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],60:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6585,7 +6585,7 @@ Checkout.defaultProps = {
 exports.default = Checkout;
 module.exports = exports['default'];
 
-},{"../../../routes/app":335,"../../schemas":311,"../common/Alert":234,"../common/FormAuthenticity":239,"./CheckoutActions":53,"./CheckoutCoupon":55,"./CheckoutDeliveries":56,"./CheckoutFields":57,"./CheckoutPayments":58,"./CheckoutStep":60,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],62:[function(require,module,exports){
+},{"../../../routes/app":335,"../../schemas":311,"../common/Alert":235,"../common/FormAuthenticity":240,"./CheckoutActions":53,"./CheckoutCoupon":55,"./CheckoutDeliveries":56,"./CheckoutFields":57,"./CheckoutPayments":58,"./CheckoutStep":60,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],62:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6933,7 +6933,7 @@ ClientSessionNew.defaultProps = {
 exports.default = ClientSessionNew;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../common/FormAuthenticity":239,"./PinAlert":66,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],65:[function(require,module,exports){
+},{"../../schemas":311,"../common/FormAuthenticity":240,"./PinAlert":66,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],65:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7033,7 +7033,7 @@ ClientSessionNewPage.propTypes = {
 exports.default = ClientSessionNewPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":67,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],66:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":67,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],66:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7332,7 +7332,7 @@ Clientbar.defaultProps = {
 exports.default = Clientbar;
 module.exports = exports['default'];
 
-},{"../buttons/CabinetButton":221,"../buttons/CartButton/CartButtonController":223,"../buttons/WishlistButton":229,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],69:[function(require,module,exports){
+},{"../buttons/CabinetButton":222,"../buttons/CartButton/CartButtonController":224,"../buttons/WishlistButton":230,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],69:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7453,7 +7453,7 @@ ContentPage.propTypes = {
 exports.default = ContentPage;
 module.exports = exports['default'];
 
-},{"../common/ImageSlider":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],71:[function(require,module,exports){
+},{"../common/ImageSlider":247,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],71:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9293,7 +9293,7 @@ var DesignSettings = (_temp = _class = function (_Component) {
 exports.default = DesignSettings;
 module.exports = exports['default'];
 
-},{"../../models/designOptions":292,"../common/Accordion":233,"../common/Accordion/AccordionItem":230,"../common/Scroller":265,"./DesignSettingsAttach":75,"./DesignSettingsCheckbox":76,"./DesignSettingsCloseButton":77,"./DesignSettingsOption":79,"./DesignSettingsRadioList":80,"./DesignSettingsSaveButton":81,"./DesignSettingsSlider":82,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],84:[function(require,module,exports){
+},{"../../models/designOptions":292,"../common/Accordion":234,"../common/Accordion/AccordionItem":231,"../common/Scroller":265,"./DesignSettingsAttach":75,"./DesignSettingsCheckbox":76,"./DesignSettingsCloseButton":77,"./DesignSettingsOption":79,"./DesignSettingsRadioList":80,"./DesignSettingsSaveButton":81,"./DesignSettingsSlider":82,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],84:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9451,7 +9451,7 @@ DictionaryPage.propTypes = {
 exports.default = DictionaryPage;
 module.exports = exports['default'];
 
-},{"../VendorLayout":204,"./index":86,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],86:[function(require,module,exports){
+},{"../VendorLayout":205,"./index":86,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],86:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9671,7 +9671,7 @@ DictionaryEntitiesShowPage.defaultProps = {};
 exports.default = DictionaryEntitiesShowPage;
 module.exports = exports['default'];
 
-},{"../ProductList":194,"../VendorLayout":204,"./index":89,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],89:[function(require,module,exports){
+},{"../ProductList":194,"../VendorLayout":205,"./index":89,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],89:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10899,7 +10899,7 @@ Lookbook.propTypes = {
 exports.default = Lookbook;
 module.exports = exports['default'];
 
-},{"../common/ImageSlider":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],104:[function(require,module,exports){
+},{"../common/ImageSlider":247,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],104:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10993,7 +10993,7 @@ LookbookPage.propTypes = {
 exports.default = LookbookPage;
 module.exports = exports['default'];
 
-},{"../VendorLayout":204,"../common/ImageSlider":246,"./index":105,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],105:[function(require,module,exports){
+},{"../VendorLayout":205,"../common/ImageSlider":247,"./index":105,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],105:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12317,7 +12317,7 @@ NavBar.propTypes = {
 exports.default = NavBar;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../Clientbar":69,"../Logo":102,"../common/ProductSearchForm":262,"./NavBarContacts":116,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],116:[function(require,module,exports){
+},{"../../schemas":311,"../Clientbar":69,"../Logo":102,"../common/ProductSearchForm":263,"./NavBarContacts":116,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],116:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12936,7 +12936,7 @@ OrderPage.defaultProps = {};
 exports.default = OrderPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":122,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],121:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":122,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],121:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13051,7 +13051,7 @@ OrderTitle.propTypes = {
 exports.default = OrderTitle;
 module.exports = exports['default'];
 
-},{"../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
+},{"../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"humps":468,"lodash":"lodash","react":"react"}],122:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13436,7 +13436,7 @@ OrderCancelled.defaultProps = {
 exports.default = OrderCancelled;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../common/Order/OrderComments":254,"../common/Order/OrderContents":255,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],124:[function(require,module,exports){
+},{"../../schemas":311,"../common/Order/OrderComments":255,"../common/Order/OrderContents":256,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],124:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13540,7 +13540,7 @@ OrderCancelledPage.propTypes = {
 exports.default = OrderCancelledPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":125,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],125:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":125,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],125:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13753,7 +13753,7 @@ OrderCreated.propTypes = {
 exports.default = OrderCreated;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../schemas":311,"../common/Order/OrderComments":254,"../common/Order/OrderSelfDeliveryMessage":259,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],127:[function(require,module,exports){
+},{"../../helpers/money":284,"../../schemas":311,"../common/Order/OrderComments":255,"../common/Order/OrderSelfDeliveryMessage":260,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],127:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13853,7 +13853,7 @@ OrderCreatedPage.propTypes = {
 exports.default = OrderCreatedPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":128,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],128:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":128,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],128:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14065,7 +14065,7 @@ OrderPaid.defaultProps = {
 exports.default = OrderPaid;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../common/Order/OrderComments":254,"../common/Order/OrderContents":255,"../common/Order/OrderState":260,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],130:[function(require,module,exports){
+},{"../../schemas":311,"../common/Order/OrderComments":255,"../common/Order/OrderContents":256,"../common/Order/OrderState":261,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],130:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14168,7 +14168,7 @@ OrderPaidPage.propTypes = {
 exports.default = OrderPaidPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":131,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],131:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":131,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],131:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14459,7 +14459,7 @@ OrderPaymentPage.propTypes = {
 exports.default = OrderPaymentPage;
 module.exports = exports['default'];
 
-},{"../VendorPaymentLayout":206,"./index":134,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],134:[function(require,module,exports){
+},{"../VendorPaymentLayout":207,"./index":134,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],134:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14689,7 +14689,7 @@ OrderShow.propTypes = {
 exports.default = OrderShow;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../schemas":311,"../common/Order/OrderContents":255,"../common/Order/OrderState":260,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],136:[function(require,module,exports){
+},{"../../helpers/money":284,"../../schemas":311,"../common/Order/OrderContents":256,"../common/Order/OrderState":261,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],136:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14786,7 +14786,7 @@ OrderShowPage.propTypes = {
 exports.default = OrderShowPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":137,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],137:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":137,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],137:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15302,7 +15302,7 @@ PaymentPage.propTypes = {
 exports.default = PaymentPage;
 module.exports = exports['default'];
 
-},{"../VendorLayout":204,"./index":143,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],143:[function(require,module,exports){
+},{"../VendorLayout":205,"./index":143,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],143:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15736,7 +15736,7 @@ ProductBlockImage.defaultProps = {
 exports.default = ProductBlockImage;
 module.exports = exports['default'];
 
-},{"../../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],152:[function(require,module,exports){
+},{"../../common/Image":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],152:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15996,7 +15996,7 @@ ProductBlockCartFormButton.defaultProps = {
 exports.default = ProductBlockCartFormButton;
 module.exports = exports['default'];
 
-},{"../../../actions/view/BasketActions":13,"../../../stores/BasketStore":331,"../../common/InputNumberSpinner":249,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react"}],154:[function(require,module,exports){
+},{"../../../actions/view/BasketActions":13,"../../../stores/BasketStore":331,"../../common/InputNumberSpinner":250,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react"}],154:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16133,7 +16133,7 @@ ProductBulk.propTypes = {
 exports.default = ProductBulk;
 module.exports = exports['default'];
 
-},{"../../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-dom":"react-dom"}],155:[function(require,module,exports){
+},{"../../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-dom":"react-dom"}],155:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17022,7 +17022,7 @@ ProductCardGalleryImage.propTypes = {
 exports.default = ProductCardGalleryImage;
 module.exports = exports['default'];
 
-},{"../../common/Image/RelativeImage":244,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","jquery":"jquery","react":"react"}],164:[function(require,module,exports){
+},{"../../common/Image/RelativeImage":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","jquery":"jquery","react":"react"}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17329,7 +17329,7 @@ ProductCardGallerySlider.defaultProps = {
 exports.default = ProductCardGallerySlider;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":275,"../../common/Image/RelativeImage":244,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react","react-dom":"react-dom"}],165:[function(require,module,exports){
+},{"../../../constants/globalEventKeys":275,"../../common/Image/RelativeImage":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react","react-dom":"react-dom"}],165:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17450,7 +17450,7 @@ ProductCardPage.propTypes = {
 exports.default = ProductCardPage;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"../../VendorLayout":204,"./ProductCard":156,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],166:[function(require,module,exports){
+},{"../../../schemas":311,"../../VendorLayout":205,"./ProductCard":156,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],166:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17792,7 +17792,7 @@ var ProductCartForProduct = function ProductCartForProduct(props) {
 exports.default = ProductCartForProduct;
 module.exports = exports['default'];
 
-},{"../../common/HiddenInput":241,"../ProductAddToCartButton":144,"./ProductCartWishlist":174,"babel-runtime/helpers/extends":352,"react":"react"}],172:[function(require,module,exports){
+},{"../../common/HiddenInput":242,"../ProductAddToCartButton":144,"./ProductCartWishlist":174,"babel-runtime/helpers/extends":352,"react":"react"}],172:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18045,7 +18045,7 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
 exports.default = ProductCartWishlist;
 module.exports = exports['default'];
 
-},{"../../common/Icon":242,"../../common/Link":251,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","urijs":"urijs"}],175:[function(require,module,exports){
+},{"../../common/Icon":243,"../../common/Link":252,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","urijs":"urijs"}],175:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18198,7 +18198,7 @@ var ProductCart = (_temp = _class = function (_Component) {
 exports.default = ProductCart;
 module.exports = exports['default'];
 
-},{"../../../../routes/app":335,"../../common/CSRFToken":236,"../../common/HiddenInput":241,"../ProductBulk":154,"./ProductCartForProduct":171,"./ProductCartForProductItems":172,"./ProductCartNotAvailable":173,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],176:[function(require,module,exports){
+},{"../../../../routes/app":335,"../../common/CSRFToken":237,"../../common/HiddenInput":242,"../ProductBulk":154,"./ProductCartForProduct":171,"./ProductCartForProductItems":172,"./ProductCartNotAvailable":173,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],176:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18452,7 +18452,7 @@ ProductGoodActualPrice.propTypes = {
 exports.default = ProductGoodActualPrice;
 module.exports = exports['default'];
 
-},{"../../common/Money/HumanizedMoneyWithCurrency":253,"react":"react"}],178:[function(require,module,exports){
+},{"../../common/Money/HumanizedMoneyWithCurrency":254,"react":"react"}],178:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18569,7 +18569,7 @@ var ProductGoodPrice = (_temp = _class = function (_Component) {
 exports.default = ProductGoodPrice;
 module.exports = exports['default'];
 
-},{"../../common/Money/HumanizedMoneyWithCurrency":253,"./ProductGoodActualPrice":177,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],179:[function(require,module,exports){
+},{"../../common/Money/HumanizedMoneyWithCurrency":254,"./ProductGoodActualPrice":177,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],179:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18646,7 +18646,7 @@ var ProductGoodPrices = (_temp = _class = function (_Component) {
 exports.default = ProductGoodPrices;
 module.exports = exports['default'];
 
-},{"../../common/Money/HumanizedMoney":252,"../../common/Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],180:[function(require,module,exports){
+},{"../../common/Money/HumanizedMoney":253,"../../common/Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],180:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19476,7 +19476,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
 exports.default = ProductProperties;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":275,"../../../services/Error":326,"../../common/HiddenInput":241,"../ProductAddToCartButton":144,"../ProductCart/ProductCartWishlist":174,"./PropertyList":181,"./PropertySingle":185,"./utils":187,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/core-js/object/keys":344,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],187:[function(require,module,exports){
+},{"../../../constants/globalEventKeys":275,"../../../services/Error":326,"../../common/HiddenInput":242,"../ProductAddToCartButton":144,"../ProductCart/ProductCartWishlist":174,"./PropertyList":181,"./PropertySingle":185,"./utils":187,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/core-js/object/keys":344,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19783,7 +19783,7 @@ ProductArchived.propTypes = {
 exports.default = ProductArchived;
 module.exports = exports['default'];
 
-},{"../../helpers/product":286,"../../helpers/seo":287,"../common/ProductSearchForm":262,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],189:[function(require,module,exports){
+},{"../../helpers/product":286,"../../helpers/seo":287,"../common/ProductSearchForm":263,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19883,7 +19883,7 @@ ProductArchivedPage.propTypes = {
 exports.default = ProductArchivedPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":190,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],190:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":190,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],190:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20370,7 +20370,7 @@ ProductList.propTypes = {
 exports.default = ProductList;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../CatalogFilter":44,"../Pagination":140,"../Product/ProductBlock":152,"../common/Image":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],194:[function(require,module,exports){
+},{"../../schemas":311,"../CatalogFilter":44,"../Pagination":140,"../Product/ProductBlock":152,"../common/Image":246,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],194:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20707,7 +20707,7 @@ ProductSearchPage.propTypes = {
 exports.default = ProductSearchPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../CatalogFilter":44,"../VendorLayout":204,"./index":197,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],197:[function(require,module,exports){
+},{"../../schemas":311,"../CatalogFilter":44,"../VendorLayout":205,"./index":197,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],197:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20945,7 +20945,7 @@ ScrollToTop.defaultProps = {
 exports.default = ScrollToTop;
 module.exports = exports['default'];
 
-},{"../../helpers/dom":283,"../common/Icon":242,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],199:[function(require,module,exports){
+},{"../../helpers/dom":283,"../common/Icon":243,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],199:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21097,6 +21097,79 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Bubble = require('../buttons/Bubble');
+
+var _Bubble2 = _interopRequireDefault(_Bubble);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PublishShopButton = function (_Component) {
+  (0, _inherits3.default)(PublishShopButton, _Component);
+
+  function PublishShopButton() {
+    (0, _classCallCheck3.default)(this, PublishShopButton);
+    return (0, _possibleConstructorReturn3.default)(this, (PublishShopButton.__proto__ || (0, _getPrototypeOf2.default)(PublishShopButton)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(PublishShopButton, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          publishShopPath = _props.publishShopPath,
+          t = _props.t;
+
+
+      return _react2.default.createElement(_Bubble2.default, {
+        className: 'Bubble--publish',
+        data: { method: 'post' },
+        text: t('vendor.button.publish_shop.text'),
+        url: publishShopPath
+      });
+    }
+  }]);
+  return PublishShopButton;
+}(_react.Component);
+
+PublishShopButton.propTypes = {
+  className: _react.PropTypes.string,
+  publishShopPath: _react.PropTypes.string.isRequired,
+  t: _react.PropTypes.func.isRequired
+};
+
+exports.default = PublishShopButton;
+module.exports = exports['default'];
+
+},{"../buttons/Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],201:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
 var _CabinetButton = require('../buttons/CabinetButton');
 
 var _DesignButton = require('../buttons/DesignButton');
@@ -21104,6 +21177,10 @@ var _DesignButton = require('../buttons/DesignButton');
 var _OperatorButton = require('../buttons/OperatorButton');
 
 var _WishlistButton = require('../buttons/WishlistButton');
+
+var _PublishShopButton = require('./PublishShopButton');
+
+var _PublishShopButton2 = _interopRequireDefault(_PublishShopButton);
 
 var _DesignSettingsContainer = require('../DesignSettings/DesignSettingsContainer');
 
@@ -21141,6 +21218,9 @@ var Userbar = function (_Component) {
           openDesignSettingsPopup = _props.openDesignSettingsPopup,
           operatorText = _props.operatorText,
           operatorUrl = _props.operatorUrl,
+          publishShopPath = _props.publishShopPath,
+          t = _props.t,
+          vendorIsPublished = _props.vendorIsPublished,
           wishlistItemsCount = _props.wishlistItemsCount,
           wishlistText = _props.wishlistText,
           wishlistUrl = _props.wishlistUrl;
@@ -21168,7 +21248,8 @@ var Userbar = function (_Component) {
             itemsCount: wishlistItemsCount,
             text: wishlistText,
             url: wishlistUrl
-          })
+          }),
+          vendorIsPublished === false && _react2.default.createElement(_PublishShopButton2.default, { t: t, url: publishShopPath })
         ),
         _react2.default.createElement(_DesignSettingsContainer2.default, {
           authUrl: authUrl,
@@ -21197,14 +21278,18 @@ Userbar.propTypes = {
   hasCabinet: _react.PropTypes.bool,
   operatorText: _react.PropTypes.string,
   operatorUrl: _react.PropTypes.string,
+  publishShopPath: _react.PropTypes.string,
   wishlistText: _react.PropTypes.string,
   wishlistUrl: _react.PropTypes.string,
+
+  t: _react.PropTypes.func.isRequired,
 
   // redux props
   openDesignSettingsPopup: _react.PropTypes.func.isRequired,
   hasDesign: _react.PropTypes.bool,
   hasOperator: _react.PropTypes.bool,
   hasWishlist: _react.PropTypes.bool,
+  vendorIsPublished: _react.PropTypes.bool,
   wishlistItemsCount: _react.PropTypes.number
 };
 
@@ -21218,7 +21303,7 @@ Userbar.defaultProps = {
 exports.default = Userbar;
 module.exports = exports['default'];
 
-},{"../DesignPreview":74,"../DesignSettings/DesignSettingsContainer":78,"../buttons/CabinetButton":221,"../buttons/DesignButton":225,"../buttons/OperatorButton":227,"../buttons/WishlistButton":229,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],201:[function(require,module,exports){
+},{"../DesignPreview":74,"../DesignSettings/DesignSettingsContainer":78,"../buttons/CabinetButton":222,"../buttons/DesignButton":226,"../buttons/OperatorButton":228,"../buttons/WishlistButton":230,"./PublishShopButton":200,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21281,6 +21366,10 @@ var _cookiesJs2 = _interopRequireDefault(_cookiesJs);
 var _cookieKeys = require('../../constants/cookieKeys');
 
 var cookieKeys = _interopRequireWildcard(_cookieKeys);
+
+var _provideTranslations = require('../HoC/provideTranslations');
+
+var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -21362,6 +21451,7 @@ var externalPropTypes = exports.externalPropTypes = {
 };
 
 UserbarContainer.propTypes = (0, _extends3.default)({}, externalPropTypes, {
+  i18n: _react.PropTypes.object,
 
   // redux props
   openDesignSettingsPopup: _react.PropTypes.func.isRequired,
@@ -21370,14 +21460,16 @@ UserbarContainer.propTypes = (0, _extends3.default)({}, externalPropTypes, {
   hasDesign: _react.PropTypes.bool,
   hasOperator: _react.PropTypes.bool,
   hasWishlist: _react.PropTypes.bool,
+  vendorIsPublished: _react.PropTypes.bool,
   wishlistItemsCount: _react.PropTypes.number
 });
 
-exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
+exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
   var _state$operatorState$ = state.operatorState.data,
       designMode = _state$operatorState$.designMode,
       hasDesign = _state$operatorState$.hasDesign,
-      hasOperator = _state$operatorState$.hasOperator;
+      hasOperator = _state$operatorState$.hasOperator,
+      vendorIsPublished = _state$operatorState$.vendorIsPublished;
   var _state$clientState$da = state.clientState.data,
       hasWishlist = _state$clientState$da.hasWishlist,
       wishlistItemsCount = _state$clientState$da.wishlistItemsCount;
@@ -21388,15 +21480,16 @@ exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(functio
     hasDesign: hasDesign,
     hasOperator: hasOperator,
     hasWishlist: hasWishlist,
-    wishlistItemsCount: wishlistItemsCount
+    wishlistItemsCount: wishlistItemsCount,
+    vendorIsPublished: vendorIsPublished
   });
 }, {
   openDesignSettingsPopup: _popupActions.openDesignSettingsPopup,
   fetchClientState: _ClientStateActions.fetchClientState,
   fetchOperatorState: _OperatorStateActions.fetchOperatorState
-})(UserbarContainer));
+})(UserbarContainer)));
 
-},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":272,"../HoC/connectToRedux":92,"./Userbar":200,"babel-runtime/core-js/object/assign":340,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],202:[function(require,module,exports){
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":272,"../HoC/connectToRedux":92,"../HoC/provideTranslations":93,"./Userbar":201,"babel-runtime/core-js/object/assign":340,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],203:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21503,7 +21596,7 @@ Footer.defaultProps = {
 exports.default = Footer;
 module.exports = exports['default'];
 
-},{"../Instagram":98,"../MenuBottom":107,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],203:[function(require,module,exports){
+},{"../Instagram":98,"../MenuBottom":107,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],204:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21541,10 +21634,6 @@ var _inherits3 = _interopRequireDefault(_inherits2);
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _PublishShopButton = require('../common/PublishShopButton');
-
-var _PublishShopButton2 = _interopRequireDefault(_PublishShopButton);
 
 var _TopBanner = require('../TopBanner');
 
@@ -21627,15 +21716,6 @@ var VendorLayout = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-page__content' },
-          !vendor.is_published && _react2.default.createElement(
-            'div',
-            { className: 'b-publish-shop-button' },
-            _react2.default.createElement(_PublishShopButton2.default, {
-              className: 'b-btn',
-              publishShopPath: publishShopPath,
-              t: t
-            })
-          ),
           showTopBanner && _react2.default.createElement(_TopBanner2.default, topBannerProps),
           _react2.default.createElement(
             'div',
@@ -21658,7 +21738,10 @@ var VendorLayout = function (_Component) {
             menuBottomProps: menuBottomProps,
             showInstagramContainer: showInstagramContainer
           }),
-          _react2.default.createElement(_Userbar2.default, userbarProps)
+          _react2.default.createElement(_Userbar2.default, (0, _extends3.default)({}, userbarProps, {
+            i18n: i18n,
+            publishShopPath: publishShopPath
+          }))
         ),
         _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: vendor.custom_append_html } }),
         _react2.default.createElement(_W1Widget2.default, { w1ptEnabled: w1ptEnabled }),
@@ -21699,7 +21782,7 @@ VendorLayout.defaultProps = {
 exports.default = VendorLayout;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../MenuBottom":107,"../MenuTop":114,"../NavBar":117,"../ScrollToTop":198,"../TopBanner":199,"../Userbar":201,"../common/LayoutMessages":250,"../common/PublishShopButton":263,"../common/W1Widget":269,"./Footer":202,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],204:[function(require,module,exports){
+},{"../../schemas":311,"../MenuBottom":107,"../MenuTop":114,"../NavBar":117,"../ScrollToTop":198,"../TopBanner":199,"../Userbar":202,"../common/LayoutMessages":251,"../common/W1Widget":269,"./Footer":203,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],205:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21762,7 +21845,7 @@ VendorLayoutContainer.propTypes = _VendorLayout2.default.propTypes;
 exports.default = (0, _provideTranslations2.default)(VendorLayoutContainer);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":93,"./VendorLayout":203,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],205:[function(require,module,exports){
+},{"../HoC/provideTranslations":93,"./VendorLayout":204,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],206:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21887,7 +21970,7 @@ VendorPaymentLayout.propTypes = {
 exports.default = VendorPaymentLayout;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../Logo":102,"../common/LayoutMessages":250,"../common/W1Widget":269,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],206:[function(require,module,exports){
+},{"../../schemas":311,"../Logo":102,"../common/LayoutMessages":251,"../common/W1Widget":269,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],207:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21946,7 +22029,7 @@ VendorPaymentLayoutContainer.propTypes = _VendorPaymentLayout2.default.propTypes
 exports.default = VendorPaymentLayoutContainer;
 module.exports = exports['default'];
 
-},{"./VendorPaymentLayout":205,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],207:[function(require,module,exports){
+},{"./VendorPaymentLayout":206,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],208:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22103,7 +22186,7 @@ Welcome.defaultProps = {};
 exports.default = Welcome;
 module.exports = exports['default'];
 
-},{"../../helpers/seo":287,"../../schemas":311,"../CatalogFilter":44,"../ProductList/ProductList":193,"../common/ImageSlider":246,"../common/PostProducts":261,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],208:[function(require,module,exports){
+},{"../../helpers/seo":287,"../../schemas":311,"../CatalogFilter":44,"../ProductList/ProductList":193,"../common/ImageSlider":247,"../common/PostProducts":262,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],209:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22225,7 +22308,7 @@ WelcomePage.propTypes = {
 exports.default = WelcomePage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../CatalogFilter":44,"../VendorLayout":204,"./index":209,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],209:[function(require,module,exports){
+},{"../../schemas":311,"../CatalogFilter":44,"../VendorLayout":205,"./index":210,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],210:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22328,7 +22411,7 @@ WelcomeContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WelcomeContainer);
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../CatalogFilter":44,"../HoC/provideTranslations":93,"./Welcome":207,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],210:[function(require,module,exports){
+},{"../../schemas":311,"../CatalogFilter":44,"../HoC/provideTranslations":93,"./Welcome":208,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],211:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22448,7 +22531,7 @@ WelcomeChildren.propTypes = {
 exports.default = WelcomeChildren;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../ChildrenProducts/ChildrenProducts":62,"../common/ImageSlider":246,"../common/PostProducts":261,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],211:[function(require,module,exports){
+},{"../../schemas":311,"../ChildrenProducts/ChildrenProducts":62,"../common/ImageSlider":247,"../common/PostProducts":262,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],212:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22547,7 +22630,7 @@ WelcomeChildrenPage.propTypes = {
 exports.default = WelcomeChildrenPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":212,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],212:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":213,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],213:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22621,7 +22704,7 @@ WelcomeChildrenContainer.defaultProps = {
 exports.default = WelcomeChildrenContainer;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"./WelcomeChildren":210,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],213:[function(require,module,exports){
+},{"../../schemas":311,"./WelcomeChildren":211,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],214:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22724,7 +22807,7 @@ Wishlist.propTypes = {
 exports.default = Wishlist;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"./WishlistList":216,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],214:[function(require,module,exports){
+},{"../../schemas":311,"./WishlistList":217,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],215:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -22810,7 +22893,7 @@ WishlistAddToCartButton.propTypes = {
 exports.default = WishlistAddToCartButton;
 module.exports = exports["default"];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],215:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],216:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22961,7 +23044,7 @@ WishlistItem.propTypes = {
 exports.default = WishlistItem;
 module.exports = exports['default'];
 
-},{"../../helpers/money":284,"../../schemas":311,"../common/AssetImage":235,"../common/GoodDetails":240,"../common/Image/Image":243,"./WishlistAddToCartButton":214,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],216:[function(require,module,exports){
+},{"../../helpers/money":284,"../../schemas":311,"../common/AssetImage":236,"../common/GoodDetails":241,"../common/Image/Image":244,"./WishlistAddToCartButton":215,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],217:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23061,7 +23144,7 @@ WishlistList.propTypes = {
 exports.default = WishlistList;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"./WishlistItem":215,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],217:[function(require,module,exports){
+},{"../../schemas":311,"./WishlistItem":216,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],218:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23161,7 +23244,7 @@ WishlistPage.propTypes = {
 exports.default = WishlistPage;
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../VendorLayout":204,"./index":218,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],218:[function(require,module,exports){
+},{"../../schemas":311,"../VendorLayout":205,"./index":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"react":"react"}],219:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23246,7 +23329,7 @@ WishlistContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WishlistContainer);
 module.exports = exports['default'];
 
-},{"../../schemas":311,"../HoC/provideTranslations":93,"./Wishlist":213,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],219:[function(require,module,exports){
+},{"../../schemas":311,"../HoC/provideTranslations":93,"./Wishlist":214,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],220:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23289,6 +23372,8 @@ var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Bubble = function (_Component) {
@@ -23303,9 +23388,11 @@ var Bubble = function (_Component) {
     key: 'getDataAttributes',
     value: function getDataAttributes(data) {
       if (data) {
-        return data.reduce(function (acc, attr) {
-          return (0, _extends4.default)({}, acc, (0, _defineProperty3.default)({}, 'data-' + attr, true));
+        return (0, _lodash.reduce)(data, function (acc, val, attr) {
+          return (0, _extends4.default)({}, acc, (0, _defineProperty3.default)({}, 'data-' + attr, val));
         }, {});
+      } else {
+        return {};
       }
     }
   }, {
@@ -23357,7 +23444,7 @@ var Bubble = function (_Component) {
 Bubble.propTypes = {
   className: _react.PropTypes.string,
   count: _react.PropTypes.number,
-  data: _react.PropTypes.array,
+  data: _react.PropTypes.object,
   onClick: _react.PropTypes.func,
   text: _react.PropTypes.string,
   url: _react.PropTypes.string
@@ -23366,7 +23453,7 @@ Bubble.propTypes = {
 exports.default = Bubble;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],220:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","lodash":"lodash","react":"react"}],221:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23434,7 +23521,7 @@ var CabinetButton = (_temp = _class = function (_Component) {
 exports.default = CabinetButton;
 module.exports = exports['default'];
 
-},{"../Bubble":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],221:[function(require,module,exports){
+},{"../Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],222:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23452,7 +23539,7 @@ Object.defineProperty(exports, 'CabinetButton', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./CabinetButton":220}],222:[function(require,module,exports){
+},{"./CabinetButton":221}],223:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23509,7 +23596,7 @@ var CartButton = function (_Component) {
       return _react2.default.createElement(_Bubble2.default, {
         className: 'Bubble--cart element--active-opacity',
         count: itemsCount,
-        data: ['cart-button'],
+        data: { 'cart-button': true },
         text: text,
         url: url
       });
@@ -23521,7 +23608,7 @@ var CartButton = function (_Component) {
 exports.default = CartButton;
 module.exports = exports['default'];
 
-},{"../Bubble":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],223:[function(require,module,exports){
+},{"../Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],224:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23658,7 +23745,7 @@ CartButtonController.defaultProps = {
 exports.default = CartButtonController;
 module.exports = exports['default'];
 
-},{"../../../actions/view/BasketActions":13,"../../../helpers/money":284,"../../../stores/BasketStore":331,"./CartButton":222,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],224:[function(require,module,exports){
+},{"../../../actions/view/BasketActions":13,"../../../helpers/money":284,"../../../stores/BasketStore":331,"./CartButton":223,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],225:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23729,7 +23816,7 @@ var DesignButton = (_temp = _class = function (_Component) {
 exports.default = DesignButton;
 module.exports = exports['default'];
 
-},{"../Bubble":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],225:[function(require,module,exports){
+},{"../Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],226:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23747,7 +23834,7 @@ Object.defineProperty(exports, 'DesignButton', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./DesignButton":224}],226:[function(require,module,exports){
+},{"./DesignButton":225}],227:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23818,7 +23905,7 @@ var OperatorButton = (_temp = _class = function (_Component) {
 exports.default = OperatorButton;
 module.exports = exports['default'];
 
-},{"../Bubble":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],227:[function(require,module,exports){
+},{"../Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],228:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23836,7 +23923,7 @@ Object.defineProperty(exports, 'OperatorButton', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./OperatorButton":226}],228:[function(require,module,exports){
+},{"./OperatorButton":227}],229:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23910,7 +23997,7 @@ var WishlistButton = (_temp = _class = function (_Component) {
 exports.default = WishlistButton;
 module.exports = exports['default'];
 
-},{"../Bubble":219,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],229:[function(require,module,exports){
+},{"../Bubble":220,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],230:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23928,7 +24015,7 @@ Object.defineProperty(exports, 'WishlistButton', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./WishlistButton":228}],230:[function(require,module,exports){
+},{"./WishlistButton":229}],231:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24137,7 +24224,7 @@ var AccordionItem = (_temp = _class = function (_Component) {
 exports.default = AccordionItem;
 module.exports = exports['default'];
 
-},{"./AccordionItemBody":231,"./AccordionItemTitle":232,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":920}],231:[function(require,module,exports){
+},{"./AccordionItemBody":232,"./AccordionItemTitle":233,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":920}],232:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24227,7 +24314,7 @@ var AccordionItemBody = (_temp = _class = function (_Component) {
 exports.default = AccordionItemBody;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],232:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],233:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24315,7 +24402,7 @@ var AccordionItemTitle = (_temp = _class = function (_Component) {
 exports.default = AccordionItemTitle;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],233:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],234:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24507,7 +24594,7 @@ var Accordion = (_temp = _class = function (_Component) {
 exports.default = Accordion;
 module.exports = exports['default'];
 
-},{"../../../helpers/dom":283,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"jquery":"jquery","react":"react","react-dom":"react-dom"}],234:[function(require,module,exports){
+},{"../../../helpers/dom":283,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"babel-runtime/helpers/toConsumableArray":357,"jquery":"jquery","react":"react","react-dom":"react-dom"}],235:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24591,7 +24678,7 @@ Alert.defaultProps = {
 exports.default = Alert;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],235:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],236:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24622,7 +24709,7 @@ AssetImage.propTypes = {
 exports.default = AssetImage;
 module.exports = exports['default'];
 
-},{"babel-runtime/helpers/extends":352,"react":"react"}],236:[function(require,module,exports){
+},{"babel-runtime/helpers/extends":352,"react":"react"}],237:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24726,7 +24813,7 @@ var CSRFToken = (_temp2 = _class = function (_Component) {
 exports.default = CSRFToken;
 module.exports = exports['default'];
 
-},{"./HiddenInput":241,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],237:[function(require,module,exports){
+},{"./HiddenInput":242,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],238:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24790,7 +24877,7 @@ Checkbox.propTypes = {
 exports.default = Checkbox;
 module.exports = exports["default"];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],238:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],239:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24834,7 +24921,7 @@ FaIcon.propTypes = {
 exports.default = FaIcon;
 module.exports = exports['default'];
 
-},{"babel-runtime/helpers/extends":352,"babel-runtime/helpers/objectWithoutProperties":354,"classnames":"classnames","react":"react"}],239:[function(require,module,exports){
+},{"babel-runtime/helpers/extends":352,"babel-runtime/helpers/objectWithoutProperties":354,"classnames":"classnames","react":"react"}],240:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24917,7 +25004,7 @@ FormAuthenticity.defaultProps = {
 exports.default = FormAuthenticity;
 module.exports = exports['default'];
 
-},{"../CSRFToken":236,"../HiddenInput":241,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],240:[function(require,module,exports){
+},{"../CSRFToken":237,"../HiddenInput":242,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],241:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24993,7 +25080,7 @@ GoodDetails.defaultProps = {
 exports.default = GoodDetails;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react"}],241:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"lodash":"lodash","react":"react"}],242:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25056,7 +25143,7 @@ HiddenInput.propTypes = {
 exports.default = HiddenInput;
 module.exports = exports["default"];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],242:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],243:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25137,7 +25224,7 @@ var Icon = (_temp = _class = function (_Component) {
 exports.default = Icon;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],243:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/defineProperty":351,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],244:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25291,7 +25378,7 @@ Image.defaultProps = {
 exports.default = Image;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"../../../services/Thumbor":328,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],244:[function(require,module,exports){
+},{"../../../schemas":311,"../../../services/Thumbor":328,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],245:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25436,7 +25523,7 @@ RelativeImage.defaultProps = {
 exports.default = RelativeImage;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"./Image":243,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-dom":"react-dom"}],245:[function(require,module,exports){
+},{"../../../schemas":311,"./Image":244,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react","react-dom":"react-dom"}],246:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25463,7 +25550,7 @@ Object.defineProperty(exports, 'RelativeImage', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./Image":243,"./RelativeImage":244}],246:[function(require,module,exports){
+},{"./Image":244,"./RelativeImage":245}],247:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25653,7 +25740,7 @@ ImageSlider.defaultProps = {
 exports.default = ImageSlider;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"./ImageSliderSlides":247,"./ImageSliderThumbs":248,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","lodash/collection/size":496,"react":"react","react-dom":"react-dom"}],247:[function(require,module,exports){
+},{"../../../schemas":311,"./ImageSliderSlides":248,"./ImageSliderThumbs":249,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/extends":352,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","lodash/collection/size":496,"react":"react","react-dom":"react-dom"}],248:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25740,7 +25827,7 @@ ImageSliderSlides.propTypes = {
 exports.default = ImageSliderSlides;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"../Image/RelativeImage":244,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],248:[function(require,module,exports){
+},{"../../../schemas":311,"../Image/RelativeImage":245,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],249:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25851,7 +25938,7 @@ ImageSliderThumbs.propTypes = {
 exports.default = ImageSliderThumbs;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"../Image/Image":243,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],249:[function(require,module,exports){
+},{"../../../schemas":311,"../Image/Image":244,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],250:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26003,7 +26090,7 @@ var InputNumberSpinner = (_temp = _class = function (_Component) {
 exports.default = InputNumberSpinner;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],250:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"jquery":"jquery","react":"react"}],251:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26087,7 +26174,7 @@ LayoutMessages.propTypes = {
 exports.default = LayoutMessages;
 module.exports = exports["default"];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],251:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],252:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26190,7 +26277,7 @@ Link.defaultProps = {
 exports.default = Link;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],252:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],253:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26262,7 +26349,7 @@ HumanizedMoney.propTypes = {
 exports.default = HumanizedMoney;
 module.exports = exports['default'];
 
-},{"../../../helpers/money":284,"../../../schemas":311,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],253:[function(require,module,exports){
+},{"../../../helpers/money":284,"../../../schemas":311,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],254:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26364,7 +26451,7 @@ HumanizedMoneyWithCurrency.propTypes = {
 exports.default = HumanizedMoneyWithCurrency;
 module.exports = exports['default'];
 
-},{"../../../helpers/money":284,"../../../schemas":311,"./HumanizedMoney":252,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],254:[function(require,module,exports){
+},{"../../../helpers/money":284,"../../../schemas":311,"./HumanizedMoney":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],255:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26487,7 +26574,7 @@ OrderComments.defaultProps = {
 exports.default = OrderComments;
 module.exports = exports['default'];
 
-},{"../../../schemas":311,"../FaIcon":238,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],255:[function(require,module,exports){
+},{"../../../schemas":311,"../FaIcon":239,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],256:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26739,7 +26826,7 @@ OrderContents.defaultProps = {
 exports.default = OrderContents;
 module.exports = exports['default'];
 
-},{"../../../constants/OrderConstants":270,"../../../schemas":311,"../FaIcon":238,"../Image":245,"../Money/HumanizedMoneyWithCurrency":253,"./OrderItem":257,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],256:[function(require,module,exports){
+},{"../../../constants/OrderConstants":270,"../../../schemas":311,"../FaIcon":239,"../Image":246,"../Money/HumanizedMoneyWithCurrency":254,"./OrderItem":258,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],257:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26862,7 +26949,7 @@ exports.OrderDeliveryIcon = OrderDeliveryIcon;
 exports.OrderPaymentIcon = OrderPaymentIcon;
 exports.OrderPaymentStateIcon = OrderPaymentStateIcon;
 
-},{"../../../constants/deliveryConstants":273,"../../../constants/paymentConstants":277,"../../../constants/reservationConstants":279,"../../HoC/provideTranslations":93,"../FaIcon":238,"./OrderLabels":258,"react":"react"}],257:[function(require,module,exports){
+},{"../../../constants/deliveryConstants":273,"../../../constants/paymentConstants":277,"../../../constants/reservationConstants":279,"../../HoC/provideTranslations":93,"../FaIcon":239,"./OrderLabels":259,"react":"react"}],258:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26995,7 +27082,7 @@ OrderItem.defaultProps = {
 exports.default = OrderItem;
 module.exports = exports['default'];
 
-},{"../../../constants/OrderConstants":270,"../../../schemas":311,"../Image":245,"../Money/HumanizedMoneyWithCurrency":253,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],258:[function(require,module,exports){
+},{"../../../constants/OrderConstants":270,"../../../schemas":311,"../Image":246,"../Money/HumanizedMoneyWithCurrency":254,"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],259:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27079,7 +27166,7 @@ function OrderPaymentStateLabel(_ref2) {
 exports.OrderDeliveryStateLabel = OrderDeliveryStateLabel;
 exports.OrderPaymentStateLabel = OrderPaymentStateLabel;
 
-},{"../../../constants/deliveryConstants":273,"../../../constants/paymentConstants":277,"react":"react"}],259:[function(require,module,exports){
+},{"../../../constants/deliveryConstants":273,"../../../constants/paymentConstants":277,"react":"react"}],260:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27158,7 +27245,7 @@ OrderSelfDeliveryMessage.defaultProps = {
 exports.default = OrderSelfDeliveryMessage;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],260:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],261:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27247,7 +27334,7 @@ OrderState.defaultProps = {
 exports.default = OrderState;
 module.exports = exports['default'];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],261:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"classnames":"classnames","react":"react"}],262:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27319,7 +27406,7 @@ PostProducts.propTypes = {
 exports.default = PostProducts;
 module.exports = exports["default"];
 
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],262:[function(require,module,exports){
+},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],263:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27402,82 +27489,6 @@ ProductSearchForm.defaultProps = {
 
 exports.default = ProductSearchForm;
 module.exports = exports["default"];
-
-},{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],263:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
-
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var PublishShopButton = function (_Component) {
-  (0, _inherits3.default)(PublishShopButton, _Component);
-
-  function PublishShopButton() {
-    (0, _classCallCheck3.default)(this, PublishShopButton);
-    return (0, _possibleConstructorReturn3.default)(this, (PublishShopButton.__proto__ || (0, _getPrototypeOf2.default)(PublishShopButton)).apply(this, arguments));
-  }
-
-  (0, _createClass3.default)(PublishShopButton, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          className = _props.className,
-          publishShopPath = _props.publishShopPath,
-          t = _props.t;
-
-
-      return _react2.default.createElement(
-        'a',
-        {
-          'data-method': 'post',
-          href: publishShopPath
-        },
-        _react2.default.createElement(
-          'span',
-          { className: className, title: t('vendor.button.publish_shop.title') },
-          t('vendor.button.publish_shop.text')
-        )
-      );
-    }
-  }]);
-  return PublishShopButton;
-}(_react.Component);
-
-PublishShopButton.propTypes = {
-  className: _react.PropTypes.string,
-  publishShopPath: _react.PropTypes.string.isRequired,
-  t: _react.PropTypes.func.isRequired
-};
-
-exports.default = PublishShopButton;
-module.exports = exports['default'];
 
 },{"babel-runtime/core-js/object/get-prototype-of":343,"babel-runtime/helpers/classCallCheck":349,"babel-runtime/helpers/createClass":350,"babel-runtime/helpers/inherits":353,"babel-runtime/helpers/possibleConstructorReturn":355,"react":"react"}],264:[function(require,module,exports){
 'use strict';

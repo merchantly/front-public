@@ -72,6 +72,16 @@ $bubbleCountBackground: #00aeff
     &:before
       content: "\e004"
       font-size: 25px
+  &--publish
+    display: block!important
+    position: absolute
+    top: 0
+    left: 100%
+    margin-left: 12px
+    &:before
+      content: none
+    .Bubble-text
+      padding-left: 20px
 
   @include grid-media-query((lap, palm))
     min-width: $bubbleSmallWidth

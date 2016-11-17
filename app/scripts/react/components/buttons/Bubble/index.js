@@ -1,13 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
+import { reduce } from 'lodash';
 
 class Bubble extends Component {
   getDataAttributes(data) {
     if (data) {
-      return data.reduce((acc, attr) => ({
+      return reduce(data, (acc, val, attr) => ({
         ...acc,
-        ['data-' + attr]: true,
+        [`data-${attr}`]: val,
       }), {});
+    } else {
+      return {};
     }
   }
   handleClick(ev) {
@@ -40,7 +43,7 @@ class Bubble extends Component {
 Bubble.propTypes = {
   className: PropTypes.string,
   count: PropTypes.number,
-  data: PropTypes.array,
+  data: PropTypes.object,
   onClick: PropTypes.func,
   text: PropTypes.string,
   url: PropTypes.string,

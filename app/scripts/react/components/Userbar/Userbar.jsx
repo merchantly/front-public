@@ -3,6 +3,7 @@ import { CabinetButton } from '../buttons/CabinetButton';
 import { DesignButton } from '../buttons/DesignButton';
 import { OperatorButton } from '../buttons/OperatorButton';
 import { WishlistButton } from '../buttons/WishlistButton';
+import PublishShopButton from './PublishShopButton';
 import DesignSettings from '../DesignSettings/DesignSettingsContainer';
 import DesignPreview from '../DesignPreview';
 
@@ -23,6 +24,9 @@ class Userbar extends Component {
       openDesignSettingsPopup,
       operatorText,
       operatorUrl,
+      publishShopPath,
+      t,
+      vendorIsPublished,
       wishlistItemsCount,
       wishlistText,
       wishlistUrl,
@@ -56,6 +60,9 @@ class Userbar extends Component {
               url={wishlistUrl}
             />
           }
+          {vendorIsPublished === false && (
+            <PublishShopButton t={t} url={publishShopPath} />
+          )}
         </div>
         <DesignSettings
           authUrl={authUrl}
@@ -83,14 +90,18 @@ Userbar.propTypes = {
   hasCabinet: PropTypes.bool,
   operatorText: PropTypes.string,
   operatorUrl: PropTypes.string,
+  publishShopPath: PropTypes.string,
   wishlistText: PropTypes.string,
   wishlistUrl: PropTypes.string,
+
+  t: PropTypes.func.isRequired,
 
   // redux props
   openDesignSettingsPopup: PropTypes.func.isRequired,
   hasDesign: PropTypes.bool,
   hasOperator: PropTypes.bool,
   hasWishlist: PropTypes.bool,
+  vendorIsPublished: PropTypes.bool,
   wishlistItemsCount: PropTypes.number,
 };
 

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import PublishShopButton from 'rc/common/PublishShopButton';
 import TopBanner from 'rc/TopBanner';
 import NavBar, {
   externalPropTypes as navBarPropTypes,
@@ -40,15 +39,6 @@ class VendorLayout extends Component {
     return (
       <div>
         <div className="b-page__content">
-          {!vendor.is_published && (
-            <div className="b-publish-shop-button">
-              <PublishShopButton
-                className="b-btn"
-                publishShopPath={publishShopPath}
-                t={t}
-              />
-            </div>
-          )}
           {showTopBanner && <TopBanner {...topBannerProps} />}
           <div className="b-page__content__inner b-page__content__inner_navbar">
             <NavBar {...navBarProps}
@@ -67,7 +57,10 @@ class VendorLayout extends Component {
             menuBottomProps={menuBottomProps}
             showInstagramContainer={showInstagramContainer}
           />
-          <Userbar {...userbarProps} />
+          <Userbar {...userbarProps}
+            i18n={i18n}
+            publishShopPath={publishShopPath}
+          />
         </div>
         <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
         <W1Widget w1ptEnabled={w1ptEnabled} />

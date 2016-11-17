@@ -13,6 +13,7 @@ import connectToRedux from 'rc/HoC/connectToRedux';
 import Userbar from './Userbar';
 import Cookies from 'cookies-js';
 import * as cookieKeys from 'r/constants/cookieKeys';
+import provideTranslations from 'rc/HoC/provideTranslations';
 
 class UserbarContainer extends Component {
   componentWillMount() {
@@ -75,6 +76,7 @@ export const externalPropTypes = {
 
 UserbarContainer.propTypes = {
   ...externalPropTypes,
+  i18n: PropTypes.object,
 
   // redux props
   openDesignSettingsPopup: PropTypes.func.isRequired,
@@ -83,15 +85,17 @@ UserbarContainer.propTypes = {
   hasDesign: PropTypes.bool,
   hasOperator: PropTypes.bool,
   hasWishlist: PropTypes.bool,
+  vendorIsPublished: PropTypes.bool,
   wishlistItemsCount: PropTypes.number,
 };
 
-export default connectToRedux(connect(
+export default provideTranslations(connectToRedux(connect(
   (state, ownProps) => {
     const {
       designMode,
       hasDesign,
       hasOperator,
+      vendorIsPublished,
     } = state.operatorState.data;
     const {
       hasWishlist,
@@ -104,6 +108,7 @@ export default connectToRedux(connect(
       hasOperator,
       hasWishlist,
       wishlistItemsCount,
+      vendorIsPublished,
     });
   },
   {
@@ -111,4 +116,4 @@ export default connectToRedux(connect(
     fetchClientState,
     fetchOperatorState,
   }
-)(UserbarContainer));
+)(UserbarContainer)));
