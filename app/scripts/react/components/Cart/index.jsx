@@ -43,21 +43,15 @@ class CartContainer extends Component {
       initialCart,
       initPackages,
       initialPackages,
-      fetchCart,
-      fetchPackages,
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
       if (initialCart) {
         initCart(initialCart);
-      } else {
-        fetchCart();
       }
 
       if (initialPackages) {
         initPackages(initialPackages);
-      } else {
-        fetchPackages();
       }
       storeInitialized = true;
     }
