@@ -4,7 +4,7 @@ import Bubble from 'rc/buttons/Bubble';
 class PublishShopButton extends Component {
   render() {
     const {
-      publishShopPath,
+      publishShopUrl,
       t,
     } = this.props;
 
@@ -13,7 +13,7 @@ class PublishShopButton extends Component {
         className="Bubble--publish"
         data={{ method: 'post' }}
         text={t('vendor.button.publish_shop.text')}
-        url={publishShopPath}
+        url={publishShopUrl}
       />
     );
   }
@@ -21,7 +21,7 @@ class PublishShopButton extends Component {
 
 PublishShopButton.propTypes = {
   className: PropTypes.string,
-  publishShopPath: PropTypes.string.isRequired,
+  publishShopUrl: PropTypes.string.isRequired,
   t: PropTypes.func.isRequired,
 };
 

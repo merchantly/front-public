@@ -539,7 +539,7 @@
       },
       "searchQuery": "query"
     },
-    "publishShopPath": "/publish/shop",
+    "publishShopUrl": "/publish/shop",
     "scrollToTopProps": {},
     "showInstagramContainer": true,
     "showMenuTop": true,

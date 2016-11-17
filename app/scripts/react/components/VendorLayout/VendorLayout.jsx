@@ -23,7 +23,7 @@ class VendorLayout extends Component {
       menuBottomProps,
       menuTopProps,
       navBarProps,
-      publishShopPath,
+      publishShopUrl,
       scrollToTopProps,
       showClientBar,
       showInstagramContainer,
@@ -59,7 +59,7 @@ class VendorLayout extends Component {
           />
           <Userbar {...userbarProps}
             i18n={i18n}
-            publishShopPath={publishShopPath}
+            publishShopUrl={publishShopUrl}
           />
         </div>
         <div dangerouslySetInnerHTML={{ __html: vendor.custom_append_html }} />
@@ -77,7 +77,7 @@ VendorLayout.propTypes = {
   menuBottomProps: PropTypes.shape(...MenuBottom.wrapped.propTypes).isRequired,
   menuTopProps: PropTypes.shape(...MenuTop.wrapped.propTypes),
   navBarProps: PropTypes.shape(navBarPropTypes).isRequired,
-  publishShopPath: PropTypes.string.isRequired,
+  publishShopUrl: PropTypes.string.isRequired,
   scrollToTopProps: PropTypes.shape(...ScrollToTop.propTypes),
   showClientBar: PropTypes.bool,
   showInstagramContainer: PropTypes.bool,

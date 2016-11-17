@@ -24,7 +24,7 @@ class Userbar extends Component {
       openDesignSettingsPopup,
       operatorText,
       operatorUrl,
-      publishShopPath,
+      publishShopUrl,
       t,
       vendorIsPublished,
       wishlistItemsCount,
@@ -61,7 +61,7 @@ class Userbar extends Component {
             />
           }
           {vendorIsPublished === false && (
-            <PublishShopButton t={t} url={publishShopPath} />
+            <PublishShopButton publishShopUrl={publishShopUrl} t={t} />
           )}
         </div>
         <DesignSettings
@@ -90,7 +90,7 @@ Userbar.propTypes = {
   hasCabinet: PropTypes.bool,
   operatorText: PropTypes.string,
   operatorUrl: PropTypes.string,
-  publishShopPath: PropTypes.string,
+  publishShopUrl: PropTypes.string,
   wishlistText: PropTypes.string,
   wishlistUrl: PropTypes.string,
 
