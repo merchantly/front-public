@@ -19,6 +19,7 @@ import WelcomeWidget from 'rc/Welcome/WelcomeWidget';
 import ProductCardWidget from 'rc/Product/ProductCard/ProductCardWidget';
 import CategoriesShowWidget from 'rc/CategoriesShow/CategoriesShowWidget';
 import CartWidget from 'rc/Cart/CartWidget';
+import OrderWidget from 'rc/Order/OrderWidget';
 
 class Widget extends Component {
   render() {
@@ -29,6 +30,7 @@ class Widget extends Component {
           <Route path="product/:productId" component={ProductCardWidget} />
           <Route path="category/:categoryId" component={CategoriesShowWidget} />
           <Route path="cart" component={CartWidget} />
+          <Route path="checkout" component={OrderWidget} />
         </Route>
       </Router>
     );
