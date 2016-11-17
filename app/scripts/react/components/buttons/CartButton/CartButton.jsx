@@ -9,7 +9,7 @@ class CartButton extends Component {
       <Bubble
         className="Bubble--cart element--active-opacity"
         count={itemsCount}
-        data={['cart-button']}
+        data={{ 'cart-button': true }}
         text={text}
         url={url}
       />

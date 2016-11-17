@@ -1,22 +1,20 @@
 import React, { Component, PropTypes } from 'react';
+import Bubble from 'rc/buttons/Bubble';
 
 class PublishShopButton extends Component {
   render() {
     const {
-      className,
       publishShopPath,
       t,
     } = this.props;
 
     return (
-      <a
-        data-method="post"
-        href={publishShopPath}
-      >
-        <span className={className} title={t('vendor.button.publish_shop.title')}>
-          {t('vendor.button.publish_shop.text')}
-        </span>
-      </a>
+      <Bubble
+        className="Bubble--publish"
+        data={{ method: 'post' }}
+        text={t('vendor.button.publish_shop.text')}
+        url={publishShopPath}
+      />
     );
   }
 }
