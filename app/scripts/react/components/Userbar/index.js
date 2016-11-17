@@ -29,14 +29,23 @@ class UserbarContainer extends Component {
 
     fetchClientState();
     fetchOperatorState()
-      .then(({ response: { designMode } }) => {
+      .then(({ response: { designMode, hasDesign } }) => {
+        if (!hasDesign) {
+          return;
+        }
+
         switch(designMode) {
         case 'open':
-          Cookies.set(cookieKeys.DESIGN_IS_OPEN, true);
+          Cookies.set(cookieKeys.DESIGN_IS_OPEN, 'true');
           openDesignSettingsPopup();
           break;
         case 'disable':
-          Cookies.set(cookieKeys.DESIGN_IS_OPEN, false);
+          Cookies.set(cookieKeys.DESIGN_IS_OPEN, 'false');
+          break;
+        default:
+          if (Cookies.get(cookieKeys.DESIGN_IS_OPEN) === 'true') {
+            openDesignSettingsPopup();
+          }
           break;
         }
       });
