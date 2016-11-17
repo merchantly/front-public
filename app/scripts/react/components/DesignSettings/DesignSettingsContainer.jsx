@@ -32,7 +32,7 @@ class DesignSettingsContainer extends Component {
     }
 
     this.updatePageClass(isOpened);
-    Cookies.set(cookieKeys.DESIGN_IS_OPEN, isOpened);
+    Cookies.set(cookieKeys.DESIGN_IS_OPEN, isOpened.toString());
   }
   isOpened(props) {
     return any(props.popups, (popup) => (
