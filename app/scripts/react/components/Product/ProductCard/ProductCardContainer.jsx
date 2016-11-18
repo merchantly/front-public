@@ -41,9 +41,9 @@ class ProductCardContainer extends Component {
       case READY_STATE:
         return <ProductCard {...productCard} />;
       case LOADING_STATE:
-        return <span>Loading...</span>;
+        return <div className="mrch-ProductCard-loading">Loading...</div>;
       case ERROR_STATE:
-        return <span>Loading error</span>;
+        return <div>Loading error</div>;
       default:
         return null;
     }

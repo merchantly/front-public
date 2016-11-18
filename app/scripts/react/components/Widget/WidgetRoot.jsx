@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { layoutProps } from 'test/fixtures/welcome/page-sample.json';
+import layoutProps from 'test/fixtures/widget/widget-layout.json';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import {

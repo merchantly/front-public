@@ -998,7 +998,7 @@ if (global.gon.__data) {
 }
 
 global.Kiosk = {
-  version: '0.0.650'
+  version: '0.0.651'
 };
 
 // Unless we have no one common component, we will be pass <Provider /> global redux
@@ -16931,13 +16931,13 @@ var ProductCardContainer = function (_Component) {
           return _react2.default.createElement(_ProductCard2.default, productCard);
         case _ProductCardContainer.LOADING_STATE:
           return _react2.default.createElement(
-            'span',
-            null,
+            'div',
+            { className: 'mrch-ProductCard-loading' },
             'Loading...'
           );
         case _ProductCardContainer.ERROR_STATE:
           return _react2.default.createElement(
-            'span',
+            'div',
             null,
             'Loading error'
           );
@@ -31780,7 +31780,7 @@ if (typeof Bugsnag !== 'undefined') {
   if (bugsnagScript) {
     var appVersion = bugsnagScript.getAttribute('data-appversion');
 
-    Bugsnag.appVersion = appVersion + "0.0.650";
+    Bugsnag.appVersion = appVersion + "0.0.651";
   }
   Bugsnag.releaseStage = gon.env;
   Bugsnag.notifyReleaseStages = ['production', 'reproduction', 'staging'];

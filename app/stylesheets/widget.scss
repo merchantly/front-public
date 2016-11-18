@@ -1,5 +1,39 @@
+@charset "UTF-8";
+
+$images-path: "http://saharok.kiiiosk.ru/shop/images";
+$fonts-path: "http://saharok.kiiiosk.ru/shop/fonts";
+$fa-font-path: $fonts-path;
+$entypoPlusWebfontPath: $fonts-path;
+
+@font-face {
+  font-family: "KioskPublicIcons";
+  src: url("#{$fonts-path}/KioskPublicIcons.eot");
+  src: url('#{$fonts-path}/KioskPublicIcons.eot?#iefix') format("embedded-opentype"), url('#{$fonts-path}/KioskPublicIcons.woff') format("woff"), url('#{$fonts-path}/KioskPublicIcons.ttf') format("truetype"), url('#{$fonts-path}/KioskPublicIcons.svg?hwudty') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #kiosk-widget-container {
-  @import "./production";
+
+
+  @import "sass/bundle";
+
+  .nowrap {
+    white-space: pre
+  }
+
+  .b-cart__item {
+    // TODO сделать с этим что-то
+    // Из статики тут приходит 0px
+    // наверняка для чего-то нужно
+    // посавил inherit чтобы показывалась упаковка
+    // в корзине
+    font-size: inherit
+  }
+
+  .mrch-ProductCard-loading {
+    min-height: 640px;
+  }
 }
 
 #kiosk-widget-test {
