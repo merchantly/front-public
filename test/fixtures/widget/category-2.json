@@ -780,7 +780,7 @@
     "description": null,
     "bottom_text": null
   },
-  "showCartButton": false,
+  "showCartButton": true,
   "showCatalogFilter": true,
   "showPagination": false,
   "showQuantity": false,

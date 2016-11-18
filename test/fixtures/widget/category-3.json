@@ -239,7 +239,7 @@
     "description": null,
     "bottom_text": null
   },
-  "showCartButton": false,
+  "showCartButton": true,
   "showCatalogFilter": false,
   "showPagination": false,
   "showQuantity": false,

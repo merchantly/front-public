@@ -332,7 +332,7 @@
     }
   },
   "container": null,
-  "showCartButton": false,
+  "showCartButton": true,
   "showCatalogFilter": false,
   "showPagination": false,
   "showQuantity": false,
