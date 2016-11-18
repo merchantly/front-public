@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 %html
   %head
-    +include 'app/haml/shared/_head.haml'
     :css
       .header, .footer {
         text-align: center;
@@ -54,6 +53,10 @@
             public_api_url: 'http://saharokstore.ru/api'
           },
         };
+        var cssTest = document.createElement('div');
+        cssTest.id = 'kiosk-widget-test';
+        cssTest.style.display = 'none';
+        document.body.appendChild(cssTest);
 
         load('../scripts/widget.js');
       })(window, document, 'kiosk-widget')

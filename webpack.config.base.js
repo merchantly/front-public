@@ -32,6 +32,11 @@ var loaders = [
     exclude: /(node_modules|bower_components)/,
   },
   {
+    test: /\.css$/,
+    loader: 'style!css',
+    exclude: /(node_modules|bower_components)/,
+  },
+  {
     test: /\.json$/,
     loader: 'json-loader',
   },

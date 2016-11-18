@@ -5,7 +5,7 @@ import OrderContainer from './index';
 class OrderWidget extends Component {
   render() {
     return (
-      <WidgetLayout>
+      <WidgetLayout showMenuTop={false}>
         <OrderContainer />
       </WidgetLayout>
     );

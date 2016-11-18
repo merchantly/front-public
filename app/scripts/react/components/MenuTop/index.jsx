@@ -15,6 +15,9 @@ class MenuTop extends Component {
       vendorCabinetPath,
       isMenuTopDesktopSticky,
     } = this.props;
+    const {
+      isWidget,
+    } = this.context;
 
     return (
       <div>
@@ -29,12 +32,14 @@ class MenuTop extends Component {
             items={items}
           />
         </Sticky>
-        <MenuTopMobile
-          hasClientCabinet={hasClientCabinet}
-          items={items}
-          t={t}
-          vendorCabinetPath={vendorCabinetPath}
-        />
+        {!isWidget && (
+          <MenuTopMobile
+            hasClientCabinet={hasClientCabinet}
+            items={items}
+            t={t}
+            vendorCabinetPath={vendorCabinetPath}
+          />
+        )}
       </div>
     );
   }
@@ -47,6 +52,10 @@ MenuTop.propTypes = {
   t: PropTypes.func.isRequired,
   vendorCabinetPath: PropTypes.string,
   isMenuTopDesktopSticky: PropTypes.bool,
+};
+
+MenuTop.contextTypes = {
+  isWidget: PropTypes.bool,
 };
 
 MenuTop.defaultProps = {
