@@ -12189,6 +12189,7 @@ var MenuTop = function (_Component) {
           t = _props.t,
           vendorCabinetPath = _props.vendorCabinetPath,
           isMenuTopDesktopSticky = _props.isMenuTopDesktopSticky;
+      var isWidget = this.context.isWidget;
 
 
       return _react2.default.createElement(
@@ -12207,7 +12208,7 @@ var MenuTop = function (_Component) {
             items: items
           })
         ),
-        _react2.default.createElement(_MenuTopMobile2.default, {
+        !isWidget && _react2.default.createElement(_MenuTopMobile2.default, {
           hasClientCabinet: hasClientCabinet,
           items: items,
           t: t,
@@ -12226,6 +12227,10 @@ MenuTop.propTypes = {
   t: _react.PropTypes.func.isRequired,
   vendorCabinetPath: _react.PropTypes.string,
   isMenuTopDesktopSticky: _react.PropTypes.bool
+};
+
+MenuTop.contextTypes = {
+  isWidget: _react.PropTypes.bool
 };
 
 MenuTop.defaultProps = {
@@ -16408,7 +16413,7 @@ var ProductCard = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'mrch-ProductCard cleanslate' },
+        { className: 'mrch-ProductCard' },
         _react2.default.createElement(
           'div',
           {

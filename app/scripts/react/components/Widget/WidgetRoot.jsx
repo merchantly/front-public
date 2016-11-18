@@ -18,7 +18,7 @@ class WidgetRoot extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="kiosk-widget-container">
         {this.props.children}
       </div>
     );

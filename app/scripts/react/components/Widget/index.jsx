@@ -1,9 +1,13 @@
 /*eslint react/jsx-sort-props:0 */
+import 'styles/widget.scss';
+import 'styles/lib/cleanslate.css';
 import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Router, IndexRoute, Route, hashHistory } from 'react-router';
 import WidgetRoot from './WidgetRoot';
 import 'r/application';
+
+const TEST_NODE_SELECTOR = '#kiosk-widget-test';
 
 import jQuery from 'jquery';
 global.jQuery = jQuery;
@@ -37,4 +41,15 @@ class Widget extends Component {
   }
 }
 
-render(<Widget />, global.mrch.widgetContainer);
+(function loadCss(cb) {
+  const el = document.querySelector(TEST_NODE_SELECTOR);
+  const styles = window.getComputedStyle(el);
+
+  (function checkCss() {
+    if (styles.paddingLeft === '11px') {
+      return cb();
+    } else {
+      setTimeout(checkCss, 100);
+    }
+  }());
+}(() => render(<Widget />, global.mrch.widgetContainer)));

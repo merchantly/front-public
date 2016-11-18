@@ -93,7 +93,7 @@ class ProductCard extends Component {
     const isAddingGood = !!getIn(goodState, [good && good.global_id, 'isFetching']);
 
     return (
-      <div className="mrch-ProductCard cleanslate">
+      <div className="mrch-ProductCard">
         <div
           className="b-page__content__inner b-page__content__inner_content h-product"
           itemScope
