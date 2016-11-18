@@ -17692,13 +17692,13 @@ var ProductCardContainer = function (_Component) {
           return _react2.default.createElement(_ProductCard2.default, productCard);
         case _ProductCardContainer.LOADING_STATE:
           return _react2.default.createElement(
-            'span',
-            null,
+            'div',
+            { className: 'mrch-ProductCard-loading' },
             'Loading...'
           );
         case _ProductCardContainer.ERROR_STATE:
           return _react2.default.createElement(
-            'span',
+            'div',
             null,
             'Loading error'
           );
