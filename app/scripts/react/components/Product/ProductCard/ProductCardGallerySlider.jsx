@@ -86,8 +86,12 @@ class ProductCardGallerySlider extends Component {
     }
   }
   destroySlider() {
-    $(findDOMNode(this.refs.productPhoto)).data('owlCarousel').destroy();
-    $(findDOMNode(this.refs.productThumbs)).data('owlCarousel').destroy();
+    try {
+      $(findDOMNode(this.refs.productPhoto)).data('owlCarousel').destroy();
+      $(findDOMNode(this.refs.productThumbs)).data('owlCarousel').destroy();
+    } catch (e) {
+      console.error(e);
+    }
   }
   initFancybox() {
     const { t = () => {} } = this.props;
