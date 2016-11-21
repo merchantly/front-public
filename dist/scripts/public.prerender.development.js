@@ -17343,8 +17343,12 @@ var ProductCardGallerySlider = function (_Component) {
   }, {
     key: 'destroySlider',
     value: function destroySlider() {
-      (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productPhoto)).data('owlCarousel').destroy();
-      (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productThumbs)).data('owlCarousel').destroy();
+      try {
+        (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productPhoto)).data('owlCarousel').destroy();
+        (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productThumbs)).data('owlCarousel').destroy();
+      } catch (e) {
+        console.error(e);
+      }
     }
   }, {
     key: 'initFancybox',
@@ -28754,6 +28758,12 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _AppLink = require('../components/common/AppLink');
+
+var _AppLink2 = _interopRequireDefault(_AppLink);
+
+var _app = require('../../routes/app');
+
 var _money = require('./money');
 
 var _number = require('./number');
@@ -28826,15 +28836,21 @@ function goodActualPrice(_ref) {
 
 function attributeValue(attribute) {
   var products_url = attribute.products_url,
+      property_id = attribute.property_id,
       title = attribute.title,
+      type = attribute.type,
       value = attribute.value;
 
 
-  switch (attribute.type) {
+  switch (type) {
     case 'AttributeLink':
       return _react2.default.createElement(
         'a',
-        { href: value, target: '_blank', className: 'link link--external' },
+        {
+          className: 'link link--external',
+          href: value,
+          target: '_blank'
+        },
         title
       );
     case 'AttributeFile':
@@ -28842,7 +28858,11 @@ function attributeValue(attribute) {
 
       return _react2.default.createElement(
         'a',
-        { href: value.url, target: '_blank', className: 'link link--file' },
+        {
+          className: 'link link--file',
+          href: value.url,
+          target: '_blank'
+        },
         title + ' ' + value.extension + ' (' + (0, _number.numberToHumanSize)(value.size) + ')'
       );
     case 'AttributeDictionary':
@@ -28855,8 +28875,11 @@ function attributeValue(attribute) {
           title + ': '
         ),
         _react2.default.createElement(
-          'a',
-          { href: products_url },
+          _AppLink2.default,
+          {
+            hash: (0, _app.dictionaryEntitiesRoute)(property_id),
+            href: products_url
+          },
           value
         )
       );
@@ -28881,7 +28904,7 @@ function hasDifferentPrices(product) {
   return diffCents.length > 1;
 }
 
-},{"./money":285,"./number":286,"./seo":288,"react":"react"}],288:[function(require,module,exports){
+},{"../../routes/app":335,"../components/common/AppLink":237,"./money":285,"./number":286,"./seo":288,"react":"react"}],288:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28946,7 +28969,7 @@ var simpleFormat = exports.simpleFormat = function simpleFormat() {
 };
 
 },{}],290:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -28954,9 +28977,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.productCategoryPath = productCategoryPath;
 exports.categoryLink = categoryLink;
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _AppLink = require('../components/common/AppLink');
+
+var _AppLink2 = _interopRequireDefault(_AppLink);
+
+var _app = require('../../routes/app');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28975,9 +29004,9 @@ function productCategoryPath(_ref) {
   if (category.parent && !category.parent.is_root) {
     path.push(categoryLink(category.parent));
     path.push(_react2.default.createElement(
-      "span",
-      { key: "delimeter" },
-      " / "
+      'span',
+      { key: 'delimeter' },
+      ' / '
     ));
   }
 
@@ -28987,16 +29016,27 @@ function productCategoryPath(_ref) {
 }
 
 function categoryLink(category) {
-  if (!category || category.is_root) return;
+  if (!category || category.is_root) {
+    return;
+  }
+
+  var id = category.id,
+      name = category.name,
+      public_url = category.public_url;
+
 
   return _react2.default.createElement(
-    "a",
-    { href: category.public_url, key: category.id },
-    category.name
+    _AppLink2.default,
+    {
+      hash: (0, _app.categoryRoute)(id),
+      href: public_url,
+      key: id
+    },
+    name
   );
 }
 
-},{"react":"react"}],291:[function(require,module,exports){
+},{"../../routes/app":335,"../components/common/AppLink":237,"react":"react"}],291:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31288,6 +31328,7 @@ exports.vendorCartItems = vendorCartItems;
 exports.vendorOrder = vendorOrder;
 exports.productRoute = productRoute;
 exports.categoryRoute = categoryRoute;
+exports.dictionaryEntitiesRoute = dictionaryEntitiesRoute;
 exports.cartRoute = cartRoute;
 exports.checkoutRoute = checkoutRoute;
 function vendorCartItems() {
@@ -31304,6 +31345,10 @@ function productRoute(productId) {
 
 function categoryRoute(categoryId) {
   return 'category/' + categoryId;
+}
+
+function dictionaryEntitiesRoute(entitiesId) {
+  return 'entities/' + entitiesId;
 }
 
 function cartRoute() {

@@ -6,9 +6,9 @@ import props2 from 'test/fixtures/widget/category-2.json';
 import props3 from 'test/fixtures/widget/category-3.json';
 
 const props = {
-  '1': props1,
-  '2': props2,
-  '3': props3,
+  '1': props3,
+  '2': props1,
+  '3': props2,
 };
 
 class CategoriesShowWidget extends Component {
@@ -19,7 +19,7 @@ class CategoriesShowWidget extends Component {
 
     return (
       <WidgetLayout>
-        <CategoriesShow {...props[categoryId]} />
+        <CategoriesShow {...props[categoryId % 3 + 1]} />
       </WidgetLayout>
     );
   }

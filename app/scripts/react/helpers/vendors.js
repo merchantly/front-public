@@ -1,4 +1,6 @@
 import React from 'react';
+import AppLink from 'rc/common/AppLink';
+import { categoryRoute } from 'scripts/routes/app';
 
 export function productCategoryPath({ categories }) {
   const notRootCategories = categories.filter((el) => el.is_root === false);
@@ -19,11 +21,23 @@ export function productCategoryPath({ categories }) {
 }
 
 export function categoryLink(category) {
-  if (!category || category.is_root) return;
+  if (!category || category.is_root) {
+    return;
+  }
+
+  const {
+    id,
+    name,
+    public_url,
+  } = category;
 
   return (
-    <a href={category.public_url} key={category.id}>
-      {category.name}
-    </a>
+    <AppLink
+      hash={categoryRoute(id)}
+      href={public_url}
+      key={id}
+    >
+      {name}
+    </AppLink>
   );
 }

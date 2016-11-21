@@ -14,6 +14,10 @@ export function categoryRoute(categoryId) {
   return `category/${categoryId}`;
 }
 
+export function dictionaryEntitiesRoute(entitiesId) {
+  return `entities/${entitiesId}`;
+}
+
 export function cartRoute() {
   return 'cart';
 }
