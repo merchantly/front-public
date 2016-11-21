@@ -9,10 +9,14 @@ export default class ProductCartWishlist extends Component {
     addWishlistUrl: PropTypes.string,
     good: PropTypes.object,
     goWishlistText: PropTypes.string,
+    product: PropTypes.object.isRequired,
     hasWishlist: PropTypes.bool,
     isWishlisted: PropTypes.bool,
     wishlistUrl: PropTypes.string,
-  }
+  };
+  static contextTypes = {
+    isWidget: PropTypes.bool,
+  };
   getAddWishlistUrl() {
     const { addWishlistUrl, good, product } = this.props;
 
@@ -22,9 +26,20 @@ export default class ProductCartWishlist extends Component {
   }
   render() {
     const {
-      addWishlistText, addWishlistUrl, goWishlistText, hasWishlist,
-      isWishlisted, wishlistUrl,
+      addWishlistText,
+      addWishlistUrl,
+      goWishlistText,
+      hasWishlist,
+      isWishlisted,
+      wishlistUrl,
     } = this.props;
+    const {
+      isWidget,
+    } = this.context;
+
+    if (isWidget) {
+      return null;
+    }
 
     if (hasWishlist && (wishlistUrl || addWishlistUrl)) {
       let content;
@@ -32,14 +47,14 @@ export default class ProductCartWishlist extends Component {
       if (isWishlisted) {
         content = (
           <Link href={wishlistUrl}>
-            <Icon active={true} name="wishlist" />
+            <Icon active name="wishlist" />
             {goWishlistText}
           </Link>
         );
       } else {
         content = (
           <Link href={this.getAddWishlistUrl()} method="POST">
-            <Icon active={true} name="wishlist" />
+            <Icon active name="wishlist" />
             {addWishlistText}
           </Link>
         );
