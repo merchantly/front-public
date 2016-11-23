@@ -93,5 +93,7 @@ global.CabinetPage = require('rc/Cabinet/CabinetPage');
 global.DictionaryPage = require('rc/Dictionary/DictionaryPage');
 global.LookbookPage = require('rc/Lookbook/LookbookPage');
 global.PaymentPage = require('rc/Payment/PaymentPage');
+global.ContentPagePage = require('rc/ContentPage/ContentPagePage');
+global.ErrorPagePage = require('rc/ErrorPage/ErrorPagePage');
 
 import './react/application';

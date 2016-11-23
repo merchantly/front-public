@@ -15,7 +15,7 @@ class ErrorPage extends Component {
           <div className="lead-icon">
             <i className="icon-tools"></i>
           </div>
-          <h3>{ subject }</h3>
+          <h3 dangerouslySetInnerHTML={{__html: subject}} />
           <p>
             { content }
             <br />
