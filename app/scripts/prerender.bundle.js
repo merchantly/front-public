@@ -93,3 +93,5 @@ CabinetPage = require('./react/components/Cabinet/CabinetPage');
 DictionaryPage = require('./react/components/Dictionary/DictionaryPage');
 LookbookPage = require('./react/components/Lookbook/LookbookPage');
 PaymentPage = require('./react/components/Payment/PaymentPage');
+ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage');
+ContentPagePage = require('./react/components/ContentPage/ContentPagePage');

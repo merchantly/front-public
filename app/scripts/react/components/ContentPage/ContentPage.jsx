@@ -28,9 +28,7 @@ class ContentPage extends Component {
         </section>
 
         <article className="b-article">
-          <div className="b-text">
-            {text}
-          </div>
+          <div className="b-text" dangerouslySetInnerHTML={{__html: text}} />
         </article>
       </div>
     );
@@ -40,7 +38,7 @@ class ContentPage extends Component {
 ContentPage.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  images: ImageSlider.propTypes.slides,
+  images: ImageSlider.propTypes.slides
 };
 
 export default ContentPage;

@@ -80,5 +80,7 @@ global.CabinetPageSample = () => React.createElement(global.CabinetPage, require
 global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
 global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
 global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
+global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
+global.ErrorPagePageSample = () => React.createElement(global.ErrorPagePage, require('test/fixtures/errorPage/page-sample.json'));
 
 import './lib/ReactRailsUJS';
