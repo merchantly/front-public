@@ -32,12 +32,12 @@ class ProductCard extends Component {
     this.setState({ good, product });
   }
   renderDisqus(product) {
-    let disqus_identifier = DISQUS_IDENTIFIER + product.id;
+    let disqusIdentifier = DISQUS_IDENTIFIER + product.id;
 
     if (this.props.hasComments && this.props.disqusUrl && this.props.disqusUrl.trim()) {
       return (
         <ReactDisqusThread
-          identifier={disqus_identifier}
+          identifier={disqusIdentifier}
           shortname={this.props.disqusUrl}
         />
       );
@@ -86,7 +86,7 @@ class ProductCard extends Component {
                 </div>
                 <div className="b-item-full__price p-price">
                   <ProductPrices
-                    good={good} 
+                    good={good}
                     product={product}
                     t={t}
                   />
