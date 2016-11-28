@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import AssetImage from '../common/AssetImage';
-import { RelativeImage } from '../common/Image';
-import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { decamelizeKeys } from 'humps';
+import AssetImage from 'rc/common/AssetImage';
+import { RelativeImage } from 'rc/common/Image';
+import CartListPackagePrice from './CartListPackagePrice';
 import { getIn } from 'timm';
 import { map } from 'lodash';
+import * as schemas from 'r/schemas';
 
 class CartListPackageItem extends Component {
   renderGoodDetails() {
@@ -20,12 +20,18 @@ class CartListPackageItem extends Component {
     const {
       destroyUrl='',
       good: {
+        globalId,
         image,
         defaultUrl='',
         title='',
-        actualPrice={},
       },
     } = (this.props.item || {});
+    const {
+      changePackageCount,
+      packageCount,
+      packagePrice,
+      t,
+    } = this.props;
 
     return (
       <li className="b-cart__item">
@@ -48,14 +54,15 @@ class CartListPackageItem extends Component {
           </h2>
           {this.renderGoodDetails()}
         </div>
-        <div className="b-cart__item__col-quantity" />
-        <div className="b-cart__item__col-price">
-          <div className="b-cart__item__price">
-            <HumanizedMoneyWithCurrency
-              money={decamelizeKeys(actualPrice)}
-            />
-          </div>
-        </div>
+        <CartListPackagePrice
+          {...{
+            globalId,
+            changePackageCount,
+            packageCount,
+            packagePrice,
+            t,
+          }}
+        />
         <div className="b-cart__item__col-remove">
           <a
             className="b-cart__item__remove"
@@ -71,7 +78,11 @@ class CartListPackageItem extends Component {
 }
 
 CartListPackageItem.propTypes = {
+  changePackageCount: PropTypes.func.isRequired,
   item: PropTypes.object.isRequired,
+  packageCount: PropTypes.number.isRequired,
+  packagePrice: schemas.money,
+  t: PropTypes.func.isRequired,
 };
 
 export default CartListPackageItem;

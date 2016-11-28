@@ -4,6 +4,8 @@ import { humanizedMoneyWithCurrency } from '../../helpers/money';
 import { decamelizeKeys } from 'humps';
 import { size, map } from 'lodash';
 import { getIn } from 'timm';
+import CartListPackagePrice from './CartListPackagePrice';
+import * as schemas from 'r/schemas';
 
 class CartListPackages extends Component {
   renderRadioButton({ value, title, checked, key }) {
@@ -49,6 +51,9 @@ class CartListPackages extends Component {
   }
   render() {
     const {
+      changePackageCount,
+      packageCount,
+      packagePrice,
       packages,
       selectedPackage,
       t,
@@ -88,6 +93,17 @@ class CartListPackages extends Component {
               })
             ))}
           </div>
+          {!!selectedPackage && (
+            <CartListPackagePrice
+              {...{
+                globalId: selectedPackage,
+                changePackageCount,
+                packageCount,
+                packagePrice,
+                t,
+              }}
+            />
+          )}
         </div>
       </li>
     );
@@ -95,6 +111,9 @@ class CartListPackages extends Component {
 }
 
 CartListPackages.propTypes = {
+  changePackageCount: PropTypes.func.isRequired,
+  packageCount: PropTypes.number.isRequired,
+  packagePrice: schemas.money,
   packages: PropTypes.array.isRequired,
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
