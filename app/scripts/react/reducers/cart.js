@@ -4,6 +4,7 @@ import {
   CART_SUCCESS,
   CART_FAILURE,
   CART_SET_AMOUNT,
+  CART_SET_PACKAGE_COUNT,
   CART_SET_PACKAGE,
   CART_INIT_CHECKOUT,
   CART_SET_FIELD_VALUE,
@@ -20,6 +21,7 @@ const initialState = {
     value: '',
   },
   amounts: {},
+  packageCount: 0,
   selectedPackage: '',
   deliveryTypes: [],
   selectedDeliveryType: null,
@@ -41,9 +43,11 @@ export function initCartStore(state, { response }) {
       : parseInt(item.count || 0, 10);
     return result;
   }, {});
+  const packageCount = getIn(response, ['packageItem', 'count']) || 1;
 
   return merge(state, {
     amounts,
+    packageCount,
     coupon: {
       show: true,
       value: response.couponCode,
@@ -88,7 +92,14 @@ const actionMap = {
   },
 
   [CART_SET_PACKAGE](state, { id }) {
-    return set(state, 'selectedPackage', id);
+    return merge(state, {
+      selectedPackage: id,
+      packageCount: Math.max(1, state.packageCount),
+    });
+  },
+
+  [CART_SET_PACKAGE_COUNT](state, { count }) {
+    return set(state, 'packageCount', count);
   },
 
   [CART_INIT_CHECKOUT](state, action) {

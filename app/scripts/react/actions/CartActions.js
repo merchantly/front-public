@@ -14,6 +14,7 @@ export const CART_FAILURE = 'CART_FAILURE';
 
 export const CART_SET_AMOUNT = 'CART_SET_AMOUNT';
 export const CART_SET_PACKAGE = 'CART_SET_PACKAGE';
+export const CART_SET_PACKAGE_COUNT = 'CART_SET_PACKAGE_COUNT';
 export const CART_INIT_CHECKOUT = 'CART_INIT_CHECKOUT';
 export const CART_SET_FIELD_VALUE = 'CART_SET_FIELD_VALUE';
 export const CART_SELECT_DELIVERY = 'CART_SELECT_DELIVERY';
@@ -24,6 +25,13 @@ export function setAmount(id, amount) {
     type: CART_SET_AMOUNT,
     id,
     amount,
+  };
+}
+
+export function setPackageCount(count) {
+  return {
+    type: CART_SET_PACKAGE_COUNT,
+    count,
   };
 }
 
