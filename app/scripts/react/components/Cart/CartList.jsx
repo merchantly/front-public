@@ -3,14 +3,18 @@ import CartListItem from './CartListItem';
 import CartListPackageItem from './CartListPackageItem';
 import CartListPackages from './CartListPackages';
 import { map, isEmpty } from 'lodash';
+import * as schemas from 'r/schemas';
 
 class CartList extends Component {
   render() {
     const {
       amounts,
       changeAmount,
+      changePackageCount,
       items,
+      packageCount,
       packageItem,
+      packagePrice,
       packages,
       prices,
       selectPackage,
@@ -37,16 +41,26 @@ class CartList extends Component {
         {!isEmpty(packageItem)
           ? (
             <CartListPackageItem
-              item={packageItem}
-              t={t}
+              {...{
+                changePackageCount,
+                item: packageItem,
+                packageCount,
+                packagePrice,
+                t,
+              }}
             />
           )
           : (
             <CartListPackages
-              packages={packages}
-              selectPackage={selectPackage}
-              selectedPackage={selectedPackage}
-              t={t}
+              {...{
+                changePackageCount,
+                packageCount,
+                packagePrice,
+                packages,
+                selectPackage,
+                selectedPackage,
+                t,
+              }}
             />
           )
         }
@@ -58,8 +72,11 @@ class CartList extends Component {
 CartList.propTypes = {
   amounts: PropTypes.object.isRequired,
   changeAmount: PropTypes.func.isRequired,
+  changePackageCount: PropTypes.func.isRequired,
   items: PropTypes.array.isRequired,
+  packageCount: PropTypes.number.isRequired,
   packageItem: PropTypes.object.isRequired,
+  packagePrice: schemas.money,
   packages: PropTypes.array.isRequired,
   prices: PropTypes.object.isRequired,
   selectPackage: PropTypes.func.isRequired,

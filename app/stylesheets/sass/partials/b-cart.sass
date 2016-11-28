@@ -204,6 +204,7 @@
       &-img,
       &-content,
       &-quantity,
+      &-package-price,
       &-weight,
       &-price,
       &-remove
@@ -223,6 +224,25 @@
       //   @extend %three-twelfths
       //   @extend %portable--four-twelfths
 
+      &-package-price
+        @extend %five-twelfths
+        @extend %push--palm--one-quarter
+        @extend %palm--nine-twelfths
+        padding-left: 0
+        @include grid-media-query("palm")
+          padding-right: 30px
+
+      &-package-price &-price,
+      &-package-price &-quantity
+        @extend %palm--one-half
+        @include grid-media-query("palm")
+          left: 0
+
+      &-package-price &-price
+        @extend %two-fifths
+
+      &-package-price &-quantity
+        @extend %three-fifths
 
       &-price
         @extend %two-twelfths
@@ -233,6 +253,7 @@
         @extend %three-twelfths
         @extend %push--palm--three-twelfths
         @extend %palm--four-twelfths
+
       &-weight
         @extend %three-twelfths
         @extend %push--palm--three-twelfths
@@ -259,10 +280,6 @@
       font-weight: 400
       font-size: 1.786em
       line-height: 1.44em
-
-    .b-cart__item__col-content
-      @extend %six-twelfths
-      @extend %palm--nine-twelfths
 
     .b-form__radio
       margin-bottom: 10px

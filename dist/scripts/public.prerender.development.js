@@ -115,7 +115,11 @@ ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage');
 ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":72,"./react/components/ContentPage/ContentPagePage":71,"./react/components/CurrencySwitcher":74,"./react/components/Dictionary":87,"./react/components/Dictionary/DictionaryPage":86,"./react/components/DictionaryEntitiesShow":90,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":89,"./react/components/ErrorPage":93,"./react/components/ErrorPage/ErrorPagePage":92,"./react/components/LocaleSwitcher":102,"./react/components/Logo/LogoContainer":103,"./react/components/Lookbook":107,"./react/components/Lookbook/LookbookPage":106,"./react/components/MenuBottom":110,"./react/components/MenuTop":117,"./react/components/NavBar":120,"./react/components/Order":125,"./react/components/Order/OrderPage":123,"./react/components/OrderCancelled":128,"./react/components/OrderCancelled/OrderCancelledPage":127,"./react/components/OrderCreated":131,"./react/components/OrderCreated/OrderCreatedPage":130,"./react/components/OrderPaid":134,"./react/components/OrderPaid/OrderPaidPage":133,"./react/components/OrderPayment":137,"./react/components/OrderPayment/OrderPaymentPage":136,"./react/components/OrderShow":140,"./react/components/OrderShow/OrderShowPage":139,"./react/components/Pagination":143,"./react/components/Payment":146,"./react/components/Payment/PaymentPage":145,"./react/components/Product/ProductBlock":155,"./react/components/Product/ProductCard":173,"./react/components/Product/ProductCard/ProductCardPage":168,"./react/components/ProductArchived":193,"./react/components/ProductArchived/ProductArchivedPage":192,"./react/components/ProductGroup":195,"./react/components/ProductList":197,"./react/components/ProductSearch":200,"./react/components/ProductSearch/ProductSearchPage":199,"./react/components/ScrollToTop":201,"./react/components/TopBanner":202,"./react/components/Welcome":213,"./react/components/Welcome/WelcomePage":212,"./react/components/WelcomeChildren":216,"./react/components/WelcomeChildren/WelcomeChildrenPage":215,"./react/components/Wishlist":222,"./react/components/Wishlist/WishlistPage":221,"./react/components/common/ImageSlider":250,"./react/components/common/PostProducts":265,"./react/reducers/Design.prerender":296,"./react/reducers/cart":297,"./react/reducers/clientState":298,"./react/reducers/operatorState":299,"./react/reducers/packages":300,"./react/reducers/popup":301,"react":"react","react-dom":"react-dom","react-dom/server":605,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+=======
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":35,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":34,"./react/components/CategoriesShow":50,"./react/components/CategoriesShow/CategoriesShowPage":49,"./react/components/CategoriesShowChildren":53,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":52,"./react/components/Checkout/CheckoutCoupon":56,"./react/components/ChildrenProducts":64,"./react/components/ClientSessionNew":68,"./react/components/ClientSessionNew/ClientSessionNewPage":66,"./react/components/Clientbar":70,"./react/components/ContentPage":73,"./react/components/ContentPage/ContentPagePage":72,"./react/components/CurrencySwitcher":75,"./react/components/Dictionary":88,"./react/components/Dictionary/DictionaryPage":87,"./react/components/DictionaryEntitiesShow":91,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":90,"./react/components/ErrorPage":94,"./react/components/ErrorPage/ErrorPagePage":93,"./react/components/LocaleSwitcher":103,"./react/components/Logo/LogoContainer":104,"./react/components/Lookbook":108,"./react/components/Lookbook/LookbookPage":107,"./react/components/MenuBottom":110,"./react/components/MenuTop":117,"./react/components/NavBar":120,"./react/components/Order":125,"./react/components/Order/OrderPage":123,"./react/components/OrderCancelled":128,"./react/components/OrderCancelled/OrderCancelledPage":127,"./react/components/OrderCreated":131,"./react/components/OrderCreated/OrderCreatedPage":130,"./react/components/OrderPaid":134,"./react/components/OrderPaid/OrderPaidPage":133,"./react/components/OrderPayment":137,"./react/components/OrderPayment/OrderPaymentPage":136,"./react/components/OrderShow":140,"./react/components/OrderShow/OrderShowPage":139,"./react/components/Pagination":143,"./react/components/Payment":146,"./react/components/Payment/PaymentPage":145,"./react/components/Product/ProductBlock":155,"./react/components/Product/ProductCard":173,"./react/components/Product/ProductCard/ProductCardPage":168,"./react/components/ProductArchived":193,"./react/components/ProductArchived/ProductArchivedPage":192,"./react/components/ProductGroup":195,"./react/components/ProductList":197,"./react/components/ProductSearch":200,"./react/components/ProductSearch/ProductSearchPage":199,"./react/components/ScrollToTop":201,"./react/components/TopBanner":202,"./react/components/Welcome":213,"./react/components/Welcome/WelcomePage":212,"./react/components/WelcomeChildren":216,"./react/components/WelcomeChildren/WelcomeChildrenPage":215,"./react/components/Wishlist":222,"./react/components/Wishlist/WishlistPage":221,"./react/components/common/ImageSlider":250,"./react/components/common/PostProducts":265,"./react/reducers/Design.prerender":296,"./react/reducers/cart":297,"./react/reducers/clientState":298,"./react/reducers/operatorState":299,"./react/reducers/packages":300,"./react/reducers/popup":301,"react":"react","react-dom":"react-dom","react-dom/server":605,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 (function (global){
 'use strict';
 
@@ -138,13 +142,14 @@ require('./prerender.bundle');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CART_SELECT_PAYMENT = exports.CART_SELECT_DELIVERY = exports.CART_SET_FIELD_VALUE = exports.CART_INIT_CHECKOUT = exports.CART_SET_PACKAGE = exports.CART_SET_AMOUNT = exports.CART_FAILURE = exports.CART_SUCCESS = exports.CART_REQUEST = undefined;
+exports.CART_SELECT_PAYMENT = exports.CART_SELECT_DELIVERY = exports.CART_SET_FIELD_VALUE = exports.CART_INIT_CHECKOUT = exports.CART_SET_PACKAGE_COUNT = exports.CART_SET_PACKAGE = exports.CART_SET_AMOUNT = exports.CART_FAILURE = exports.CART_SUCCESS = exports.CART_REQUEST = undefined;
 
 var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 exports.setAmount = setAmount;
+exports.setPackageCount = setPackageCount;
 exports.selectPackage = selectPackage;
 exports.selectDelivery = selectDelivery;
 exports.selectPayment = selectPayment;
@@ -167,6 +172,7 @@ var CART_FAILURE = exports.CART_FAILURE = 'CART_FAILURE';
 
 var CART_SET_AMOUNT = exports.CART_SET_AMOUNT = 'CART_SET_AMOUNT';
 var CART_SET_PACKAGE = exports.CART_SET_PACKAGE = 'CART_SET_PACKAGE';
+var CART_SET_PACKAGE_COUNT = exports.CART_SET_PACKAGE_COUNT = 'CART_SET_PACKAGE_COUNT';
 var CART_INIT_CHECKOUT = exports.CART_INIT_CHECKOUT = 'CART_INIT_CHECKOUT';
 var CART_SET_FIELD_VALUE = exports.CART_SET_FIELD_VALUE = 'CART_SET_FIELD_VALUE';
 var CART_SELECT_DELIVERY = exports.CART_SELECT_DELIVERY = 'CART_SELECT_DELIVERY';
@@ -177,6 +183,13 @@ function setAmount(id, amount) {
     type: CART_SET_AMOUNT,
     id: id,
     amount: amount
+  };
+}
+
+function setPackageCount(count) {
+  return {
+    type: CART_SET_PACKAGE_COUNT,
+    count: count
   };
 }
 
@@ -1098,7 +1111,7 @@ function BlogPostContainer(props) {
 exports.default = (0, _provideTranslations2.default)(BlogPostContainer);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":95,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
+},{"../HoC/provideTranslations":96,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1337,7 +1350,11 @@ BlogPostListItem.propTypes = {
 exports.default = (0, _provideTranslations2.default)(BlogPostListItem);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../services/Thumbor":331,"../HoC/provideTranslations":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],20:[function(require,module,exports){
+=======
+},{"../../services/Thumbor":331,"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],20:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1782,7 +1799,11 @@ CabinetOrder.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetOrder);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"../common/Order/OrderIcons":260,"../common/Order/OrderState":264,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],24:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../common/Order/OrderIcons":260,"../common/Order/OrderState":264,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],24:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1927,7 +1948,11 @@ CabinetContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"./Cabinet":22,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],26:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./Cabinet":22,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],26:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2019,7 +2044,11 @@ var Cart = function (_Component) {
     value: function renderError(err, key) {
       var id = 'cart-error-' + key;
 
-      return _react2.default.createElement('div', { id: id, key: id, dangerouslySetInnerHTML: { __html: err } });
+      return _react2.default.createElement('div', {
+        dangerouslySetInnerHTML: { __html: err },
+        id: id,
+        key: id
+      });
     }
   }, {
     key: 'renderErrors',
@@ -2053,10 +2082,13 @@ var Cart = function (_Component) {
           cartErrors = _props2.cartErrors,
           cartItems = _props2.cartItems,
           changeAmount = _props2.changeAmount,
+          changePackageCount = _props2.changePackageCount,
           couponCode = _props2.couponCode,
           formAuthenticity = _props2.formAuthenticity,
           isBelowMinimalPrice = _props2.isBelowMinimalPrice,
           packageItem = _props2.packageItem,
+          packageCount = _props2.packageCount,
+          packagePrice = _props2.packagePrice,
           packages = _props2.packages,
           prices = _props2.prices,
           selectPackage = _props2.selectPackage,
@@ -2120,8 +2152,11 @@ var Cart = function (_Component) {
             _react2.default.createElement(_CartList2.default, {
               amounts: amounts,
               changeAmount: changeAmount,
+              changePackageCount: changePackageCount,
               items: cartItems,
+              packageCount: packageCount,
               packageItem: packageItem,
+              packagePrice: packagePrice,
               packages: packages,
               prices: prices,
               selectPackage: selectPackage,
@@ -2200,12 +2235,15 @@ Cart.propTypes = {
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
+  changePackageCount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
+  packagePrice: schemas.money,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
@@ -2457,7 +2495,11 @@ CartCoupon.defaultProps = {
 
 exports.default = (0, _provideTranslations2.default)(CartCoupon);
 
+<<<<<<< HEAD
 },{"../../../routes/api":337,"../HoC/provideTranslations":95,"../common/TextInput":271,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+=======
+},{"../../../routes/api":337,"../HoC/provideTranslations":96,"../common/TextInput":271,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2502,6 +2544,12 @@ var _CartListPackages2 = _interopRequireDefault(_CartListPackages);
 
 var _lodash = require('lodash');
 
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CartList = function (_Component) {
@@ -2518,8 +2566,11 @@ var CartList = function (_Component) {
       var _props = this.props,
           amounts = _props.amounts,
           changeAmount = _props.changeAmount,
+          changePackageCount = _props.changePackageCount,
           items = _props.items,
+          packageCount = _props.packageCount,
           packageItem = _props.packageItem,
+          packagePrice = _props.packagePrice,
           packages = _props.packages,
           prices = _props.prices,
           selectPackage = _props.selectPackage,
@@ -2544,9 +2595,15 @@ var CartList = function (_Component) {
           });
         }),
         !(0, _lodash.isEmpty)(packageItem) ? _react2.default.createElement(_CartListPackageItem2.default, {
+          changePackageCount: changePackageCount,
           item: packageItem,
+          packageCount: packageCount,
+          packagePrice: packagePrice,
           t: t
         }) : _react2.default.createElement(_CartListPackages2.default, {
+          changePackageCount: changePackageCount,
+          packageCount: packageCount,
+          packagePrice: packagePrice,
           packages: packages,
           selectPackage: selectPackage,
           selectedPackage: selectedPackage,
@@ -2561,8 +2618,11 @@ var CartList = function (_Component) {
 CartList.propTypes = {
   amounts: _react.PropTypes.object.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
+  changePackageCount: _react.PropTypes.func.isRequired,
   items: _react.PropTypes.array.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
+  packagePrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
@@ -2573,7 +2633,11 @@ CartList.propTypes = {
 exports.default = CartList;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./CartListItem":30,"./CartListPackageItem":31,"./CartListPackages":32,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./CartListItem":30,"./CartListPackageItem":31,"./CartListPackages":33,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2899,15 +2963,19 @@ var _AssetImage2 = _interopRequireDefault(_AssetImage);
 
 var _Image = require('../common/Image');
 
-var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
+var _CartListPackagePrice = require('./CartListPackagePrice');
 
-var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
-
-var _humps = require('humps');
+var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
 
 var _timm = require('timm');
 
 var _lodash = require('lodash');
+
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2939,13 +3007,19 @@ var CartListPackageItem = function (_Component) {
           _ref$destroyUrl = _ref.destroyUrl,
           destroyUrl = _ref$destroyUrl === undefined ? '' : _ref$destroyUrl,
           _ref$good = _ref.good,
+          globalId = _ref$good.globalId,
           image = _ref$good.image,
           _ref$good$defaultUrl = _ref$good.defaultUrl,
           defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl,
           _ref$good$title = _ref$good.title,
-          title = _ref$good$title === undefined ? '' : _ref$good$title,
-          _ref$good$actualPrice = _ref$good.actualPrice,
-          actualPrice = _ref$good$actualPrice === undefined ? {} : _ref$good$actualPrice;
+          title = _ref$good$title === undefined ? '' : _ref$good$title;
+
+      var _props = this.props,
+          changePackageCount = _props.changePackageCount,
+          packageCount = _props.packageCount,
+          packagePrice = _props.packagePrice,
+          t = _props.t;
+
 
       return _react2.default.createElement(
         'li',
@@ -2977,18 +3051,13 @@ var CartListPackageItem = function (_Component) {
           ),
           this.renderGoodDetails()
         ),
-        _react2.default.createElement('div', { className: 'b-cart__item__col-quantity' }),
-        _react2.default.createElement(
-          'div',
-          { className: 'b-cart__item__col-price' },
-          _react2.default.createElement(
-            'div',
-            { className: 'b-cart__item__price' },
-            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
-              money: (0, _humps.decamelizeKeys)(actualPrice)
-            })
-          )
-        ),
+        _react2.default.createElement(_CartListPackagePrice2.default, {
+          globalId: globalId,
+          changePackageCount: changePackageCount,
+          packageCount: packageCount,
+          packagePrice: packagePrice,
+          t: t
+        }),
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-remove' },
@@ -3009,13 +3078,118 @@ var CartListPackageItem = function (_Component) {
 }(_react.Component);
 
 CartListPackageItem.propTypes = {
-  item: _react.PropTypes.object.isRequired
+  changePackageCount: _react.PropTypes.func.isRequired,
+  item: _react.PropTypes.object.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
+  packagePrice: schemas.money,
+  t: _react.PropTypes.func.isRequired
 };
 
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/AssetImage":239,"../common/Image":249,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../common/AssetImage":239,"../common/Image":249,"./CartListPackagePrice":32,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Select = require('../common/Select');
+
+var _Select2 = _interopRequireDefault(_Select);
+
+var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
+
+var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
+
+var _humps = require('humps');
+
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+var _lodash = require('lodash');
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CartListPackagePrice(props) {
+  var globalId = props.globalId,
+      changePackageCount = props.changePackageCount,
+      packageCount = props.packageCount,
+      packagePrice = props.packagePrice,
+      t = props.t;
+
+  var options = (0, _lodash.range)(1, 10).map(function (i) {
+    return {
+      value: i,
+      title: i
+    };
+  });
+
+  return _react2.default.createElement(
+    'div',
+    { className: 'b-cart__item__col-package-price' },
+    _react2.default.createElement(
+      'div',
+      { className: 'b-cart__item__col-quantity' },
+      _react2.default.createElement('input', {
+        name: 'cart[package_good_global_id]',
+        type: 'hidden',
+        value: globalId
+      }),
+      _react2.default.createElement(
+        'span',
+        { className: 'b-cart__item__quantity__text' },
+        t('vendor.cart.amount')
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'b-cart__item__quantity__select' },
+        _react2.default.createElement(_Select2.default, {
+          name: 'cart[package_count]',
+          onChange: changePackageCount,
+          options: options,
+          value: packageCount
+        })
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { className: 'b-cart__item__col-price' },
+      _react2.default.createElement(
+        'div',
+        { className: 'b-cart__item__price' },
+        _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
+          money: (0, _humps.decamelizeKeys)(packagePrice)
+        })
+      )
+    )
+  );
+}
+
+CartListPackagePrice.propTypes = {
+  globalId: _react.PropTypes.string.isRequired,
+  changePackageCount: _react.PropTypes.func.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
+  packagePrice: schemas.money,
+  t: _react.PropTypes.func.isRequired
+};
+
+exports.default = CartListPackagePrice;
+module.exports = exports['default'];
+
+},{"../../schemas":314,"../common/Money/HumanizedMoneyWithCurrency":257,"../common/Select":269,"humps":471,"lodash":"lodash","react":"react"}],33:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3055,6 +3229,16 @@ var _humps = require('humps');
 var _lodash = require('lodash');
 
 var _timm = require('timm');
+
+var _CartListPackagePrice = require('./CartListPackagePrice');
+
+var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
+
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3130,6 +3314,9 @@ var CartListPackages = function (_Component) {
       var _this2 = this;
 
       var _props = this.props,
+          changePackageCount = _props.changePackageCount,
+          packageCount = _props.packageCount,
+          packagePrice = _props.packagePrice,
           packages = _props.packages,
           selectedPackage = _props.selectedPackage,
           t = _props.t;
@@ -3177,7 +3364,14 @@ var CartListPackages = function (_Component) {
                 checked: selectedPackage === item.globalId
               });
             })
-          )
+          ),
+          !!selectedPackage && _react2.default.createElement(_CartListPackagePrice2.default, {
+            globalId: selectedPackage,
+            changePackageCount: changePackageCount,
+            packageCount: packageCount,
+            packagePrice: packagePrice,
+            t: t
+          })
         )
       );
     }
@@ -3186,6 +3380,9 @@ var CartListPackages = function (_Component) {
 }(_react.Component);
 
 CartListPackages.propTypes = {
+  changePackageCount: _react.PropTypes.func.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
+  packagePrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
@@ -3195,7 +3392,11 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":287,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"../../schemas":314,"../common/Image":249,"./CartListPackagePrice":32,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],34:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3303,7 +3504,11 @@ CartPage.defaultProps = {};
 exports.default = CartPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../VendorLayout":208,"./index":34,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],34:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../VendorLayout":208,"./index":35,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],35:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3385,6 +3590,7 @@ var CartContainer = function (_Component) {
     var _this = (0, _possibleConstructorReturn3.default)(this, (CartContainer.__proto__ || (0, _getPrototypeOf2.default)(CartContainer)).call(this, props));
 
     _this.changeAmount = _this.changeAmount.bind(_this);
+    _this.changePackageCount = _this.changePackageCount.bind(_this);
     _this.selectPackage = _this.selectPackage.bind(_this);
     return _this;
   }
@@ -3409,6 +3615,11 @@ var CartContainer = function (_Component) {
     key: 'changeAmount',
     value: function changeAmount(id, amount) {
       this.props.changeAmount(id, amount);
+    }
+  }, {
+    key: 'changePackageCount',
+    value: function changePackageCount(count) {
+      this.props.changePackageCount(count);
     }
   }, {
     key: 'selectPackage',
@@ -3442,12 +3653,14 @@ CartContainer.propTypes = {
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
+  changePackageCount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   fetchCart: _react.PropTypes.func.isRequired,
   fetchPackages: _react.PropTypes.func.isRequired,
   initCart: _react.PropTypes.func.isRequired,
   initPackages: _react.PropTypes.func.isRequired,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
+  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
   packages: _react.PropTypes.array.isRequired,
   packagesIsFetching: _react.PropTypes.bool.isRequired,
@@ -3492,6 +3705,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
       _cart$amounts = cart.amounts,
       amounts = _cart$amounts === undefined ? {} : _cart$amounts,
       coupon = cart.coupon,
+      packageCount = cart.packageCount,
       selectedPackage = cart.selectedPackage;
   var _packagesStore$packag = packagesStore.packages,
       packages = _packagesStore$packag === undefined ? [] : _packagesStore$packag,
@@ -3510,14 +3724,16 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 
     return (0, _timm.set)(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
   });
-  var selectedPackagePrice = selectedPackage ? (0, _timm.getIn)((0, _lodash.find)(packages, function (p) {
+  var selectedPackageMoney = selectedPackage && (0, _timm.getIn)((0, _lodash.find)(packages, function (p) {
     return p.globalId === selectedPackage;
-  }), ['price', 'cents']) || 0 : 0;
-  var packagePrice = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.getIn)(packageItem, ['good', 'actualPrice', 'cents']) : selectedPackagePrice;
+  }), ['price']);
+  var selectedPackagePrice = (0, _timm.getIn)(selectedPackageMoney, ['cents']) || 0;
+  var packagePriceCents = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.getIn)(packageItem, ['good', 'actualPrice', 'cents']) * packageCount : selectedPackagePrice * packageCount;
   var totalPrice = (0, _timm.set)(cartTotalPrice, 'cents', (0, _lodash.reduce)(prices, function (acc, price) {
     return acc + (price.cents || 0);
-  }, packagePrice));
+  }, packagePriceCents));
   var isBelowMinimalPrice = !!minimalPrice && (totalPrice.cents || 0) < minimalPrice.cents;
+  var packagePrice = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.set)(packageItem.good.actualPrice, 'cents', packagePriceCents) : (0, _timm.set)(selectedPackageMoney, 'cents', packagePriceCents);
 
   return {
     amounts: amounts,
@@ -3527,6 +3743,8 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     cartItems: cartItems,
     couponCode: couponCode,
     isBelowMinimalPrice: isBelowMinimalPrice,
+    packageCount: packageCount,
+    packagePrice: packagePrice,
     packages: packages,
     packagesIsFetching: packagesIsFetching,
     prices: prices,
@@ -3536,6 +3754,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   };
 }, {
   changeAmount: _CartActions.setAmount,
+  changePackageCount: _CartActions.setPackageCount,
   selectPackage: _CartActions.selectPackage,
   initCart: _CartActions.initCart,
   fetchCart: _CartActions.fetchCart,
@@ -3544,7 +3763,11 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(CartContainer)));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":286,"../../reducers/cart":297,"../../reducers/packages":300,"../../schemas":314,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],35:[function(require,module,exports){
+=======
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":286,"../../reducers/cart":297,"../../reducers/packages":300,"../../schemas":314,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],36:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3642,7 +3865,11 @@ CatalogFilter.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CatalogFilter);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"../common/Checkbox":241,"./CatalogFilterOptions":40,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],36:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../common/Checkbox":241,"./CatalogFilterOptions":41,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],37:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3651,7 +3878,7 @@ Object.defineProperty(exports, "__esModule", {
 var MAX_VISIBLE_LIMIT = exports.MAX_VISIBLE_LIMIT = 10;
 var COLLAPSED_VISIBLE_COUNT = exports.COLLAPSED_VISIBLE_COUNT = 5;
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3855,7 +4082,11 @@ CatalogFilterCheckbox.propTypes = {
 exports.default = CatalogFilterCheckbox;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":36,"./CatalogFilterExpandButton":39,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react","react-dom":"react-dom"}],38:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":37,"./CatalogFilterExpandButton":40,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react","react-dom":"react-dom"}],39:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3972,7 +4203,11 @@ CatalogFilterColor.propTypes = {
 exports.default = CatalogFilterColor;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],39:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],40:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4070,7 +4305,11 @@ CatalogFilterExpandButton.propTypes = {
 exports.default = CatalogFilterExpandButton;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],40:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],41:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4190,7 +4429,11 @@ CatalogFilterOptions.propTypes = {
 exports.default = CatalogFilterOptions;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./CatalogFilterCheckbox":37,"./CatalogFilterColor":38,"./CatalogFilterRadio":41,"./CatalogFilterRange":42,"./CatalogFilterSelectedOptions":43,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],41:[function(require,module,exports){
+=======
+},{"./CatalogFilterCheckbox":38,"./CatalogFilterColor":39,"./CatalogFilterRadio":42,"./CatalogFilterRange":43,"./CatalogFilterSelectedOptions":44,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],42:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4326,7 +4569,11 @@ CatalogFilterRadio.propTypes = {
 exports.default = CatalogFilterRadio;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],42:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],43:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4526,7 +4773,11 @@ CatalogFilterRange.defaultProps = {
 exports.default = CatalogFilterRange;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/slicedToArray":359,"numeral":576,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/slicedToArray":359,"numeral":576,"react":"react","react-nouislider":"react-nouislider"}],44:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4606,7 +4857,11 @@ CatalogFilterSelectedOptions.propTypes = {
 exports.default = CatalogFilterSelectedOptions;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],44:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],45:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4696,7 +4951,11 @@ CatalogFilterContainer.defaultProps = {
 exports.default = CatalogFilterContainer;
 exports.CatalogFilter = _CatalogFilter2.default;
 
+<<<<<<< HEAD
 },{"../../schemas":314,"./CatalogFilter.jsx":35,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],45:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./CatalogFilter.jsx":36,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],46:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4737,7 +4996,11 @@ function getFilter(instance) {
 }
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":355,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],46:[function(require,module,exports){
+=======
+},{"babel-runtime/helpers/extends":355,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],47:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4755,7 +5018,7 @@ Object.defineProperty(exports, 'getFilter', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./getFilter":45}],47:[function(require,module,exports){
+},{"./getFilter":46}],48:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4849,7 +5112,11 @@ CategoriesShow.propTypes = {
 exports.default = CategoriesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],48:[function(require,module,exports){
+=======
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],49:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4955,7 +5222,11 @@ CategoriesShowPage.defaultProps = {};
 exports.default = CategoriesShowPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList":197,"../VendorLayout":208,"./index":49,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],49:[function(require,module,exports){
+=======
+},{"../ProductList":197,"../VendorLayout":208,"./index":50,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],50:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5039,7 +5310,11 @@ CategoriesShowContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(CategoriesShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"../ProductList":197,"./CategoriesShow":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],50:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":197,"./CategoriesShow":48,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],51:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5132,7 +5407,11 @@ CategoriesShowChildren.propTypes = {
 exports.default = CategoriesShowChildren;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":63,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],51:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],52:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5236,7 +5515,11 @@ CategoriesShowChildrenPage.propTypes = {
 exports.default = CategoriesShowChildrenPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":63,"../VendorLayout":208,"./index":52,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],52:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"../VendorLayout":208,"./index":53,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],53:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5317,7 +5600,11 @@ CategoriesShowChildrenContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(CategoriesShowChildrenContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":63,"../HoC/provideTranslations":95,"./CategoriesShowChildren":50,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],53:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"../HoC/provideTranslations":96,"./CategoriesShowChildren":51,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],54:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5484,7 +5771,11 @@ CheckoutActions.propTypes = {
 exports.default = CheckoutActions;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"./CheckoutPublicOffer":59,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],54:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./CheckoutPublicOffer":60,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],55:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5549,7 +5840,11 @@ CheckoutAlert.propTypes = {
 exports.default = CheckoutAlert;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Alert":238,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],55:[function(require,module,exports){
+=======
+},{"../common/Alert":238,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],56:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5739,7 +6034,11 @@ CheckoutCoupon.defaultProps = {
 exports.default = CheckoutCoupon;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../routes/api":337,"../common/TextInput":271,"./CheckoutAlert":54,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],56:[function(require,module,exports){
+=======
+},{"../../../routes/api":337,"../common/TextInput":271,"./CheckoutAlert":55,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],57:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5888,7 +6187,11 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":287,"../../helpers/text":291,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react"}],57:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"../../helpers/text":291,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react"}],58:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6060,7 +6363,11 @@ CheckoutFields.defaultProps = {};
 exports.default = CheckoutFields;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react","timm":"timm"}],58:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react","timm":"timm"}],59:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6189,7 +6496,11 @@ CheckoutPayments.defaultProps = {
 exports.default = CheckoutPayments;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/text":291,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],59:[function(require,module,exports){
+=======
+},{"../../helpers/text":291,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],60:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6302,7 +6613,11 @@ CheckoutPublicOffer.defaultProps = {
 exports.default = CheckoutPublicOffer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Checkbox":241,"../common/HiddenInput":245,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],60:[function(require,module,exports){
+=======
+},{"../common/Checkbox":241,"../common/HiddenInput":245,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],61:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6389,7 +6704,11 @@ CheckoutStep.propTypes = {
 exports.default = CheckoutStep;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],61:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],62:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6587,7 +6906,11 @@ Checkout.defaultProps = {
 exports.default = Checkout;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../routes/app":338,"../../schemas":314,"../common/Alert":238,"../common/FormAuthenticity":243,"./CheckoutActions":53,"./CheckoutCoupon":55,"./CheckoutDeliveries":56,"./CheckoutFields":57,"./CheckoutPayments":58,"./CheckoutStep":60,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],62:[function(require,module,exports){
+=======
+},{"../../../routes/app":338,"../../schemas":314,"../common/Alert":238,"../common/FormAuthenticity":243,"./CheckoutActions":54,"./CheckoutCoupon":56,"./CheckoutDeliveries":57,"./CheckoutFields":58,"./CheckoutPayments":59,"./CheckoutStep":61,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],63:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6709,7 +7032,11 @@ ChildrenProducts.defaultProps = {
 exports.default = ChildrenProducts;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../ProductGroup":195,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],63:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../ProductGroup":195,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],64:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6797,7 +7124,11 @@ ChildrenProductsContainer.defaultProps = {
 exports.default = ChildrenProductsContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"./ChildrenProducts":62,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],64:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"./ChildrenProducts":63,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],65:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6935,7 +7266,11 @@ ClientSessionNew.defaultProps = {
 exports.default = ClientSessionNew;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../common/FormAuthenticity":243,"./PinAlert":66,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],65:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../common/FormAuthenticity":243,"./PinAlert":67,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],66:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7035,7 +7370,11 @@ ClientSessionNewPage.propTypes = {
 exports.default = ClientSessionNewPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../VendorLayout":208,"./index":67,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],66:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../VendorLayout":208,"./index":68,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],67:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7148,7 +7487,11 @@ PinAlert.defaultProps = {
 exports.default = PinAlert;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],67:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],68:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7226,7 +7569,11 @@ ClientSessionNewContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ClientSessionNewContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./ClientSessionNew":64,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],68:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./ClientSessionNew":65,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],69:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7334,7 +7681,11 @@ Clientbar.defaultProps = {
 exports.default = Clientbar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../buttons/CabinetButton":225,"../buttons/CartButton/CartButtonController":227,"../buttons/WishlistButton":233,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],69:[function(require,module,exports){
+=======
+},{"../buttons/CabinetButton":225,"../buttons/CartButton/CartButtonController":227,"../buttons/WishlistButton":233,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],70:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7352,7 +7703,7 @@ Object.defineProperty(exports, 'Clientbar', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./Clientbar":68}],70:[function(require,module,exports){
+},{"./Clientbar":69}],71:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7451,7 +7802,11 @@ ContentPage.propTypes = {
 exports.default = ContentPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],71:[function(require,module,exports){
+=======
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],72:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7544,7 +7899,11 @@ ContentPagePage.propTypes = {
 exports.default = ContentPagePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":208,"./index":72,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],72:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":73,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],73:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7570,7 +7929,11 @@ function ContentPageContainer(props) {
 exports.default = ContentPageContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./ContentPage":70,"humps":471,"react":"react"}],73:[function(require,module,exports){
+=======
+},{"./ContentPage":71,"humps":471,"react":"react"}],74:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7678,7 +8041,11 @@ CurrencySwitcher.propTypes = {
 exports.default = CurrencySwitcher;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":287,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"lodash/object/get":567,"react":"react"}],74:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"lodash/object/get":567,"react":"react"}],75:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7758,7 +8125,11 @@ CurrencySwitcherContainer.defaultProps = {
 exports.default = CurrencySwitcherContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./CurrencySwitcher":73,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","urijs":"urijs"}],75:[function(require,module,exports){
+=======
+},{"./CurrencySwitcher":74,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","urijs":"urijs"}],76:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8099,7 +8470,11 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(DesignPreview);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":94,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","jss":"jss","jss-nested":488,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],76:[function(require,module,exports){
+=======
+},{"../HoC/connectToRedux":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","jss":"jss","jss-nested":488,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],77:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8250,7 +8625,11 @@ var DesignSettingsAttach = (_temp2 = _class2 = function (_Component2) {
 exports.default = DesignSettingsAttach;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],77:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],78:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8327,7 +8706,11 @@ var DesignSettingsCheckbox = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsCheckbox;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],78:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],79:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8387,7 +8770,11 @@ var DesignSettingsCloseButton = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsCloseButton;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],79:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],80:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8559,7 +8946,11 @@ exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(functio
 })(DesignSettingsContainer));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../../constants/globalEventKeys":278,"../../constants/storageKeys":283,"../HoC/connectToRedux":94,"./index":84,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":796}],80:[function(require,module,exports){
+=======
+},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../../constants/globalEventKeys":278,"../../constants/storageKeys":283,"../HoC/connectToRedux":95,"./index":85,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":796}],81:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8647,7 +9038,11 @@ var DesignSettingsOption = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsOption;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],81:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],82:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8822,7 +9217,11 @@ var DesignSettingsRadioListItem = (_temp2 = _class2 = function (_Component2) {
 }, _temp2);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/designTypes":277,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],82:[function(require,module,exports){
+=======
+},{"../../constants/designTypes":277,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],83:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8920,7 +9319,11 @@ var DesignSettingsSaveButton = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsSaveButton;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],83:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],84:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9019,7 +9422,11 @@ var DesignSettingsSlider = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsSlider;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Slider":270,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],84:[function(require,module,exports){
+=======
+},{"../common/Slider":270,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9384,7 +9791,11 @@ var DesignSettings = (_temp = _class = function (_Component) {
 exports.default = DesignSettings;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../models/designOptions":295,"../common/Accordion":237,"../common/Accordion/AccordionItem":234,"../common/Scroller":268,"./DesignSettingsAttach":76,"./DesignSettingsCheckbox":77,"./DesignSettingsCloseButton":78,"./DesignSettingsOption":80,"./DesignSettingsRadioList":81,"./DesignSettingsSaveButton":82,"./DesignSettingsSlider":83,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],85:[function(require,module,exports){
+=======
+},{"../../models/designOptions":295,"../common/Accordion":237,"../common/Accordion/AccordionItem":234,"../common/Scroller":268,"./DesignSettingsAttach":77,"./DesignSettingsCheckbox":78,"./DesignSettingsCloseButton":79,"./DesignSettingsOption":81,"./DesignSettingsRadioList":82,"./DesignSettingsSaveButton":83,"./DesignSettingsSlider":84,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],86:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9457,7 +9868,11 @@ Dictionary.propTypes = {
 exports.default = Dictionary;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],86:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],87:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9542,7 +9957,11 @@ DictionaryPage.propTypes = {
 exports.default = DictionaryPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":208,"./index":87,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],87:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":88,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],88:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9568,7 +9987,11 @@ function DictionaryContainer(props) {
 exports.default = DictionaryContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./Dictionary":85,"humps":471,"react":"react"}],88:[function(require,module,exports){
+=======
+},{"./Dictionary":86,"humps":471,"react":"react"}],89:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9659,7 +10082,11 @@ DictionaryEntitiesShow.propTypes = {
 exports.default = DictionaryEntitiesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],89:[function(require,module,exports){
+=======
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],90:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9762,7 +10189,11 @@ DictionaryEntitiesShowPage.defaultProps = {};
 exports.default = DictionaryEntitiesShowPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList":197,"../VendorLayout":208,"./index":90,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],90:[function(require,module,exports){
+=======
+},{"../ProductList":197,"../VendorLayout":208,"./index":91,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],91:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9844,7 +10275,11 @@ DictionaryEntitiesShowContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(DictionaryEntitiesShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"../ProductList":197,"./DictionaryEntitiesShow":88,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],91:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":197,"./DictionaryEntitiesShow":89,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],92:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9951,7 +10386,11 @@ ErrorPage.defaultProps = {
 exports.default = ErrorPage;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],92:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],93:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10047,7 +10486,11 @@ ErrorPagePage.propTypes = {
 exports.default = ErrorPagePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":208,"./index":93,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],93:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":94,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],94:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10073,7 +10516,11 @@ function ErrorPageContainter(props) {
 exports.default = ErrorPageContainter;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./ErrorPage":91,"humps":471,"react":"react"}],94:[function(require,module,exports){
+=======
+},{"./ErrorPage":92,"humps":471,"react":"react"}],95:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 (function (global){
 'use strict';
 
@@ -10139,7 +10586,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux"}],95:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux"}],96:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10270,7 +10721,11 @@ var provideTranslations = function provideTranslations(WrappedComponent) {
 exports.default = provideTranslations;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/localeLanguages":279,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"i18next":"i18next","react":"react"}],96:[function(require,module,exports){
+=======
+},{"../../constants/localeLanguages":279,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"i18next":"i18next","react":"react"}],97:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10384,7 +10839,11 @@ Instagram.propTypes = {
 exports.default = Instagram;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./InstagramEntries":99,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],97:[function(require,module,exports){
+=======
+},{"./InstagramEntries":100,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],98:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10394,7 +10853,7 @@ var ERROR_STATE = exports.ERROR_STATE = 'error';
 var LOADING_STATE = exports.LOADING_STATE = 'loading';
 var READY_STATE = exports.READY_STATE = 'ready';
 
-},{}],98:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10520,7 +10979,11 @@ InstagramContainer.defaultProps = {
 exports.default = InstagramContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/instagramActions":10,"./Instagram":96,"./InstagramContainer.constants":97,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],99:[function(require,module,exports){
+=======
+},{"../../actions/instagramActions":10,"./Instagram":97,"./InstagramContainer.constants":98,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],100:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10611,7 +11074,11 @@ InstagramEntries.propTypes = {
 exports.default = InstagramEntries;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],100:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],101:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10638,7 +11105,7 @@ Object.defineProperty(exports, 'InstagramContainer', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-},{"./Instagram":96,"./InstagramContainer":98}],101:[function(require,module,exports){
+},{"./Instagram":97,"./InstagramContainer":99}],102:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10748,7 +11215,11 @@ LocaleSwitcher.propTypes = {
 exports.default = (0, _provideTranslations2.default)(LocaleSwitcher);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"react":"react"}],102:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"react":"react"}],103:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10830,7 +11301,11 @@ LocaleSwitcherContainer.defaultProps = {
 exports.default = LocaleSwitcherContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"./LocaleSwitcher":101,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],103:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./LocaleSwitcher":102,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],104:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10930,7 +11405,11 @@ var LogoContainer = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(LogoContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":94,"./index":104,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux","timm":"timm"}],104:[function(require,module,exports){
+=======
+},{"../HoC/connectToRedux":95,"./index":105,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux","timm":"timm"}],105:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11002,7 +11481,11 @@ var Logo = (_temp = _class = function (_Component) {
 exports.default = Logo;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],105:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],106:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11082,7 +11565,11 @@ Lookbook.propTypes = {
 exports.default = Lookbook;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],106:[function(require,module,exports){
+=======
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],107:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11176,7 +11663,11 @@ LookbookPage.propTypes = {
 exports.default = LookbookPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":208,"../common/ImageSlider":250,"./index":107,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],107:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"../common/ImageSlider":250,"./index":108,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],108:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11202,6 +11693,7 @@ function LookbookContainer(props) {
 exports.default = LookbookContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./Lookbook":105,"humps":471,"react":"react"}],108:[function(require,module,exports){
 'use strict';
 
@@ -11372,6 +11864,9 @@ exports.default = EmailOptInForm;
 module.exports = exports['default'];
 
 },{"../../../routes/api":337,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","lodash":"lodash","react":"react"}],109:[function(require,module,exports){
+=======
+},{"./Lookbook":106,"humps":471,"react":"react"}],109:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11660,7 +12155,11 @@ MenuBottom.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuBottom);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CurrencySwitcher":74,"../HoC/provideTranslations":95,"../LocaleSwitcher":102,"./EmailOptInForm":108,"./MenuBottomLink":109,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],111:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CurrencySwitcher":75,"../HoC/provideTranslations":96,"../LocaleSwitcher":103,"./MenuBottomLink":109,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],111:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12552,7 +13051,11 @@ MenuTop.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuTop);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./MenuTopDesktop":111,"./MenuTopMobile":115,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-stickynode":"react-stickynode"}],118:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./MenuTopDesktop":111,"./MenuTopMobile":115,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-stickynode":"react-stickynode"}],118:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12681,7 +13184,11 @@ NavBar.propTypes = {
 exports.default = NavBar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../Clientbar":69,"../Logo":104,"../common/ProductSearchForm":266,"./NavBarContacts":119,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],119:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Clientbar":70,"../Logo":105,"../common/ProductSearchForm":266,"./NavBarContacts":119,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],119:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12926,7 +13433,11 @@ NavBarContainer.defaultProps = {
 
 exports.default = (0, _provideTranslations2.default)(NavBarContainer);
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../Clientbar":69,"../HoC/provideTranslations":95,"../Logo":104,"./NavBar":118,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],121:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Clientbar":70,"../HoC/provideTranslations":96,"../Logo":105,"./NavBar":118,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],121:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13169,7 +13680,11 @@ Order.propTypes = {
 exports.default = Order;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../Checkout":61,"./OrderTitle":124,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],123:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Checkout":62,"./OrderTitle":124,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],123:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13682,7 +14197,11 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(OrderContainer)));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../helpers/dom":286,"../../reducers/cart":297,"../../schemas":314,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Order":122,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],126:[function(require,module,exports){
+=======
+},{"../../actions/CartActions":4,"../../helpers/dom":286,"../../reducers/cart":297,"../../schemas":314,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Order":122,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],126:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13982,7 +14501,11 @@ OrderCancelledContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderCancelledContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderCancelled":126,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],129:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderCancelled":126,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],129:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14290,7 +14813,11 @@ OrderCreatedContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(OrderCreatedContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderCreated":129,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],132:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderCreated":129,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],132:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14610,7 +15137,11 @@ OrderPaidContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderPaidContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderPaid":132,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],135:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderPaid":132,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],135:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14901,7 +15432,11 @@ OrderPaymentContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderPaymentContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"./OrderPayment":135,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],138:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./OrderPayment":135,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],138:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15222,7 +15757,11 @@ OrderShowContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(OrderShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderShow":138,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],141:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderShow":138,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],141:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15717,7 +16256,11 @@ PaymentContainer.propTypes = {
 
 exports.default = (0, _provideTranslations2.default)(PaymentContainer);
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"./Payment":144,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],147:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./Payment":144,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],147:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16193,7 +16736,11 @@ ProductBlock.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductBlock);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../HoC/provideTranslations":95,"../ProductBlockCartForm/ProductBlockCartFormButton":156,"../ProductPrices":183,"./ProductBlockBadges":153,"./ProductBlockImage":154,"react":"react"}],156:[function(require,module,exports){
+=======
+},{"../../HoC/provideTranslations":96,"../ProductBlockCartForm/ProductBlockCartFormButton":156,"../ProductPrices":183,"./ProductBlockBadges":153,"./ProductBlockImage":154,"react":"react"}],156:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16764,7 +17311,11 @@ exports.default = (0, _provideTranslations2.default)(ProductCard);
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"../../../schemas":314,"../../HoC/provideTranslations":95,"../ProductCart":178,"../ProductPrices":183,"./ProductCard.constants":158,"./ProductCardBadges":160,"./ProductCardBreadcrumbs":161,"./ProductCardDetails":164,"./ProductCardGallery":165,"./ProductCardSchema":169,"./ProductCardSimilarProducts":170,"./ProductCardTitle":171,"./ProductCardVideo":172,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-disqus-thread":604}],160:[function(require,module,exports){
+=======
+},{"../../../schemas":314,"../../HoC/provideTranslations":96,"../ProductCart":178,"../ProductPrices":183,"./ProductCard.constants":158,"./ProductCardBadges":160,"./ProductCardBreadcrumbs":161,"./ProductCardDetails":164,"./ProductCardGallery":165,"./ProductCardSchema":169,"./ProductCardSimilarProducts":170,"./ProductCardTitle":171,"./ProductCardVideo":172,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-disqus-thread":604}],160:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20326,7 +20877,11 @@ ProductArchivedContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductArchivedContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./ProductArchived":191,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],194:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./ProductArchived":191,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],194:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20465,7 +21020,11 @@ ProductGroup.defaultProps = {
 exports.default = ProductGroup;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../CatalogFilter":44,"../Product/ProductBlock":155,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],195:[function(require,module,exports){
+=======
+},{"../CatalogFilter":45,"../Product/ProductBlock":155,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],195:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20562,7 +21121,11 @@ ProductGroupContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductGroupContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../CatalogFilter":44,"../HoC/provideTranslations":95,"../Product/ProductBlock":155,"./ProductGroup":194,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],196:[function(require,module,exports){
+=======
+},{"../CatalogFilter":45,"../HoC/provideTranslations":96,"../Product/ProductBlock":155,"./ProductGroup":194,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],196:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20734,7 +21297,11 @@ ProductList.propTypes = {
 exports.default = ProductList;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../Pagination":143,"../Product/ProductBlock":155,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],197:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../Pagination":143,"../Product/ProductBlock":155,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],197:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20837,7 +21404,11 @@ ProductListContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductListContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],198:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],198:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20958,7 +21529,11 @@ ProductSearch.propTypes = {
 exports.default = ProductSearch;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],199:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],199:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21071,7 +21646,11 @@ ProductSearchPage.propTypes = {
 exports.default = ProductSearchPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../VendorLayout":208,"./index":200,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],200:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../VendorLayout":208,"./index":200,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],200:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21167,7 +21746,11 @@ ProductSearchContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductSearchContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./ProductSearch":198,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],201:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductSearch":198,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],201:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21667,7 +22250,11 @@ Userbar.defaultProps = {
 exports.default = Userbar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../DesignPreview":75,"../DesignSettings/DesignSettingsContainer":79,"../buttons/CabinetButton":225,"../buttons/DesignButton":229,"../buttons/OperatorButton":231,"../buttons/WishlistButton":233,"./PublishShopButton":203,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],205:[function(require,module,exports){
+=======
+},{"../DesignPreview":76,"../DesignSettings/DesignSettingsContainer":80,"../buttons/CabinetButton":225,"../buttons/DesignButton":229,"../buttons/OperatorButton":231,"../buttons/WishlistButton":233,"./PublishShopButton":203,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],205:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21853,7 +22440,11 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   fetchOperatorState: _OperatorStateActions.fetchOperatorState
 })(UserbarContainer)));
 
+<<<<<<< HEAD
 },{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Userbar":204,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],206:[function(require,module,exports){
+=======
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Userbar":204,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],206:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21960,7 +22551,11 @@ Footer.defaultProps = {
 exports.default = Footer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../Instagram":100,"../MenuBottom":110,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],207:[function(require,module,exports){
+=======
+},{"../Instagram":101,"../MenuBottom":110,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],207:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22209,7 +22804,11 @@ VendorLayoutContainer.propTypes = _VendorLayout2.default.propTypes;
 exports.default = (0, _provideTranslations2.default)(VendorLayoutContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":95,"./VendorLayout":207,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],209:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./VendorLayout":207,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],209:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22334,7 +22933,11 @@ VendorPaymentLayout.propTypes = {
 exports.default = VendorPaymentLayout;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../Logo":104,"../common/LayoutMessages":254,"../common/W1Widget":272,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],210:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Logo":105,"../common/LayoutMessages":254,"../common/W1Widget":272,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],210:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22550,7 +23153,11 @@ Welcome.defaultProps = {};
 exports.default = Welcome;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+=======
+},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22672,7 +23279,11 @@ WelcomePage.propTypes = {
 exports.default = WelcomePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../VendorLayout":208,"./index":213,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],213:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../VendorLayout":208,"./index":213,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],213:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22775,7 +23386,11 @@ WelcomeContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WelcomeContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./Welcome":211,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],214:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./Welcome":211,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],214:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22895,7 +23510,11 @@ WelcomeChildren.propTypes = {
 exports.default = WelcomeChildren;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../ChildrenProducts/ChildrenProducts":62,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],215:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../ChildrenProducts/ChildrenProducts":63,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],215:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23693,7 +24312,11 @@ WishlistContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WishlistContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../HoC/provideTranslations":95,"./Wishlist":217,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],223:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./Wishlist":217,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],223:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27313,7 +27936,11 @@ exports.OrderDeliveryIcon = OrderDeliveryIcon;
 exports.OrderPaymentIcon = OrderPaymentIcon;
 exports.OrderPaymentStateIcon = OrderPaymentStateIcon;
 
+<<<<<<< HEAD
 },{"../../../constants/deliveryConstants":276,"../../../constants/paymentConstants":280,"../../../constants/reservationConstants":282,"../../HoC/provideTranslations":95,"../FaIcon":242,"./OrderLabels":262,"react":"react"}],261:[function(require,module,exports){
+=======
+},{"../../../constants/deliveryConstants":276,"../../../constants/paymentConstants":280,"../../../constants/reservationConstants":282,"../../HoC/provideTranslations":96,"../FaIcon":242,"./OrderLabels":262,"react":"react"}],261:[function(require,module,exports){
+>>>>>>> add packageCount to cart. resolves #2
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29646,6 +30273,7 @@ var initialState = {
     value: ''
   },
   amounts: {},
+  packageCount: 0,
   selectedPackage: '',
   deliveryTypes: [],
   selectedDeliveryType: null,
@@ -29667,9 +30295,11 @@ function initCartStore(state, _ref) {
     result[item.id] = isSellingByWeight ? parseFloat(item.weight || 0) : parseInt(item.count || 0, 10);
     return result;
   }, {});
+  var packageCount = (0, _timm.getIn)(response, ['packageItem', 'count']) || 1;
 
   return (0, _timm.merge)(state, {
     amounts: amounts,
+    packageCount: packageCount,
     coupon: {
       show: true,
       value: response.couponCode
@@ -29714,20 +30344,27 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE, function (state, _ref5) {
   var id = _ref5.id;
 
-  return (0, _timm.set)(state, 'selectedPackage', id);
+  return (0, _timm.merge)(state, {
+    selectedPackage: id,
+    packageCount: Math.max(1, state.packageCount)
+  });
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE_COUNT, function (state, _ref6) {
+  var count = _ref6.count;
+
+  return (0, _timm.set)(state, 'packageCount', count);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_INIT_CHECKOUT, function (state, action) {
   return initCheckoutCartStore(state, action);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref6) {
-  var name = _ref6.name,
-      value = _ref6.value;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref7) {
+  var name = _ref7.name,
+      value = _ref7.value;
 
   return (0, _timm.setIn)(state, ['checkoutFieldValues', name, 'value'], value);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref7) {
-  var id = _ref7.id;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref8) {
+  var id = _ref8.id;
 
   return (0, _timm.set)(state, 'selectedDeliveryType', id);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref8) {
-  var id = _ref8.id;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref9) {
+  var id = _ref9.id;
 
   return (0, _timm.set)(state, 'selectedPaymentType', id);
 }), _actionMap);
@@ -42871,11 +43508,19 @@ function closure ( target, options, originalOptions ){
                 } else {
                     format = format.replace('b', '');
                 }
+<<<<<<< HEAD
 
                 for (power = 0; power <= binarySuffixes.length; power++) {
                     min = Math.pow(1024, power);
                     max = Math.pow(1024, power + 1);
 
+=======
+
+                for (power = 0; power <= binarySuffixes.length; power++) {
+                    min = Math.pow(1024, power);
+                    max = Math.pow(1024, power + 1);
+
+>>>>>>> add packageCount to cart. resolves #2
                     if (value >= min && value < max) {
                         bytes = bytes + binarySuffixes[power];
                         if (min > 0) {
