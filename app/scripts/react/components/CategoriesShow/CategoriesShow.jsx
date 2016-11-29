@@ -10,6 +10,11 @@ class CategoriesShow extends Component {
       t,
       title,
       vendorRootPath,
+      catalogFilterProps,
+      showCartButton,
+      showCatalogFilter,
+      showPagination,
+      showQuantity,
     } = this.props;
 
     return products.items.length > 0 || isFilterDirty
@@ -20,6 +25,11 @@ class CategoriesShow extends Component {
           showPagination
           t={t}
           title={title}
+          catalogFilterProps={catalogFilterProps}
+          showCartButton={showCartButton}
+          showCatalogFilter={showCatalogFilter}
+          showPagination={showPagination}
+          showQuantity={showQuantity}
         />
       )
       : (
@@ -36,7 +46,12 @@ class CategoriesShow extends Component {
 }
 
 CategoriesShow.propTypes = {
-  container: PropTypes.object.isRequired,
+  container: ProductList.propTypes.container,
+  showCartButton: ProductList.propTypes.showCartButton,
+  showCatalogFilter: ProductList.propTypes.showCatalogFilter,
+  showPagination: ProductList.propTypes.showPagination,
+  showQuantity: ProductList.propTypes.showQuantity,
+  catalogFilterProps: ProductList.propTypes.catalogFilterProps,
   isFilterDirty: PropTypes.bool,
   products: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,

@@ -13,6 +13,11 @@ class CategoriesShowPage extends Component {
       products,
       title,
       vendorRootPath,
+      catalogFilterProps,
+      showCartButton,
+      showCatalogFilter,
+      showPagination,
+      showQuantity,
     } = this.props;
 
     return (
@@ -24,6 +29,11 @@ class CategoriesShowPage extends Component {
           products={products}
           title={title}
           vendorRootPath={vendorRootPath}
+          catalogFilterProps={catalogFilterProps}
+          showCartButton={showCartButton}
+          showCatalogFilter={showCatalogFilter}
+          showPagination={showPagination}
+          showQuantity={showQuantity}
         />
       </VendorLayoutContainer>
     );
@@ -32,6 +42,11 @@ class CategoriesShowPage extends Component {
 
 CategoriesShowPage.propTypes = {
   container: ProductList.wrapped.propTypes.container,
+  catalogFilterProps: ProductList.wrapped.propTypes.catalogFilterProps,
+  showCartButton: ProductList.wrapped.propTypes.showCartButton,
+  showCatalogFilter: ProductList.wrapped.propTypes.showCatalogFilter,
+  showPagination: ProductList.wrapped.propTypes.showPagination,
+  showQuantity: ProductList.wrapped.propTypes.showQuantity,
   i18n: PropTypes.object,
   isFilterDirty: PropTypes.bool,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
