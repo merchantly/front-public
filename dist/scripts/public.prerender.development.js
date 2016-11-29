@@ -4757,6 +4757,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -4798,6 +4802,8 @@ var CategoriesShow = function (_Component) {
   (0, _createClass3.default)(CategoriesShow, [{
     key: 'render',
     value: function render() {
+      var _React$createElement;
+
       var _props = this.props,
           container = _props.container,
           isFilterDirty = _props.isFilterDirty,
@@ -4805,17 +4811,23 @@ var CategoriesShow = function (_Component) {
           t = _props.t,
           title = _props.title,
           vendorRootPath = _props.vendorRootPath,
-          catalogFilterProps = _props.catalogFilterProps;
+          catalogFilterProps = _props.catalogFilterProps,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showPagination = _props.showPagination,
+          showQuantity = _props.showQuantity;
 
 
-      return products.items.length > 0 || isFilterDirty ? _react2.default.createElement(_ProductList2.default, {
+      return products.items.length > 0 || isFilterDirty ? _react2.default.createElement(_ProductList2.default, (_React$createElement = {
         container: container,
         products: products,
         showPagination: true,
         t: t,
         title: title,
-        catalogFilterProps: catalogFilterProps
-      }) : _react2.default.createElement(
+        catalogFilterProps: catalogFilterProps,
+        showCartButton: showCartButton,
+        showCatalogFilter: showCatalogFilter
+      }, (0, _defineProperty3.default)(_React$createElement, 'showPagination', showPagination), (0, _defineProperty3.default)(_React$createElement, 'showQuantity', showQuantity), _React$createElement)) : _react2.default.createElement(
         'div',
         { className: 'b-text b-text_center' },
         _react2.default.createElement(
@@ -4836,6 +4848,10 @@ var CategoriesShow = function (_Component) {
 
 CategoriesShow.propTypes = {
   container: _ProductList2.default.propTypes.container,
+  showCartButton: _ProductList2.default.propTypes.showCartButton,
+  showCatalogFilter: _ProductList2.default.propTypes.showCatalogFilter,
+  showPagination: _ProductList2.default.propTypes.showPagination,
+  showQuantity: _ProductList2.default.propTypes.showQuantity,
   catalogFilterProps: _ProductList2.default.propTypes.catalogFilterProps,
   isFilterDirty: _react.PropTypes.bool,
   products: _react.PropTypes.object.isRequired,
@@ -4847,7 +4863,7 @@ CategoriesShow.propTypes = {
 exports.default = CategoriesShow;
 module.exports = exports['default'];
 
-},{"../ProductList/ProductList":195,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"react":"react"}],48:[function(require,module,exports){
+},{"../ProductList/ProductList":195,"babel-runtime/core-js/object/get-prototype-of":345,"babel-runtime/helpers/classCallCheck":351,"babel-runtime/helpers/createClass":352,"babel-runtime/helpers/defineProperty":353,"babel-runtime/helpers/inherits":355,"babel-runtime/helpers/possibleConstructorReturn":357,"react":"react"}],48:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4919,7 +4935,11 @@ var CategoriesShowPage = function (_Component) {
           products = _props.products,
           title = _props.title,
           vendorRootPath = _props.vendorRootPath,
-          catalogFilterProps = _props.catalogFilterProps;
+          catalogFilterProps = _props.catalogFilterProps,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showPagination = _props.showPagination,
+          showQuantity = _props.showQuantity;
 
 
       return _react2.default.createElement(
@@ -4932,7 +4952,11 @@ var CategoriesShowPage = function (_Component) {
           products: products,
           title: title,
           vendorRootPath: vendorRootPath,
-          catalogFilterProps: catalogFilterProps
+          catalogFilterProps: catalogFilterProps,
+          showCartButton: showCartButton,
+          showCatalogFilter: showCatalogFilter,
+          showPagination: showPagination,
+          showQuantity: showQuantity
         })
       );
     }
@@ -4943,9 +4967,12 @@ var CategoriesShowPage = function (_Component) {
 CategoriesShowPage.propTypes = {
   container: _ProductList2.default.wrapped.propTypes.container,
   catalogFilterProps: _ProductList2.default.wrapped.propTypes.catalogFilterProps,
+  showCartButton: _ProductList2.default.wrapped.propTypes.showCartButton,
+  showCatalogFilter: _ProductList2.default.wrapped.propTypes.showCatalogFilter,
+  showPagination: _ProductList2.default.wrapped.propTypes.showPagination,
+  showQuantity: _ProductList2.default.wrapped.propTypes.showQuantity,
   i18n: _react.PropTypes.object,
   isFilterDirty: _react.PropTypes.bool,
-
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired,
   products: _ProductList2.default.wrapped.propTypes.products,
   title: _react.PropTypes.string,
@@ -5022,6 +5049,10 @@ var CategoriesShowContainer = function (_Component) {
 CategoriesShowContainer.propTypes = {
   container: _ProductList2.default.wrapped.propTypes.container,
   catalogFilterProps: _ProductList2.default.wrapped.propTypes.catalogFilterProps,
+  showCartButton: _ProductList2.default.wrapped.propTypes.showCartButton,
+  showCatalogFilter: _ProductList2.default.wrapped.propTypes.showCatalogFilter,
+  showPagination: _ProductList2.default.wrapped.propTypes.showPagination,
+  showQuantity: _ProductList2.default.wrapped.propTypes.showQuantity,
   i18n: _react.PropTypes.object,
   isFilterDirty: _react.PropTypes.bool,
   products: _ProductList2.default.wrapped.propTypes.products,
