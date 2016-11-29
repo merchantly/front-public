@@ -11,6 +11,11 @@ class CategoriesShowContainer extends Component {
 
 CategoriesShowContainer.propTypes = {
   container: ProductList.wrapped.propTypes.container,
+  catalogFilterProps: ProductList.wrapped.propTypes.catalogFilterProps,
+  showCartButton: ProductList.wrapped.propTypes.showCartButton,
+  showCatalogFilter: ProductList.wrapped.propTypes.showCatalogFilter,
+  showPagination: ProductList.wrapped.propTypes.showPagination,
+  showQuantity: ProductList.wrapped.propTypes.showQuantity,
   i18n: PropTypes.object,
   isFilterDirty: PropTypes.bool,
   products: ProductList.wrapped.propTypes.products,

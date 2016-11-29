@@ -4804,7 +4804,8 @@ var CategoriesShow = function (_Component) {
           products = _props.products,
           t = _props.t,
           title = _props.title,
-          vendorRootPath = _props.vendorRootPath;
+          vendorRootPath = _props.vendorRootPath,
+          catalogFilterProps = _props.catalogFilterProps;
 
 
       return products.items.length > 0 || isFilterDirty ? _react2.default.createElement(_ProductList2.default, {
@@ -4812,7 +4813,8 @@ var CategoriesShow = function (_Component) {
         products: products,
         showPagination: true,
         t: t,
-        title: title
+        title: title,
+        catalogFilterProps: catalogFilterProps
       }) : _react2.default.createElement(
         'div',
         { className: 'b-text b-text_center' },
@@ -4833,7 +4835,8 @@ var CategoriesShow = function (_Component) {
 }(_react.Component);
 
 CategoriesShow.propTypes = {
-  container: _react.PropTypes.object.isRequired,
+  container: _ProductList2.default.propTypes.container,
+  catalogFilterProps: _ProductList2.default.propTypes.catalogFilterProps,
   isFilterDirty: _react.PropTypes.bool,
   products: _react.PropTypes.object.isRequired,
   t: _react.PropTypes.func.isRequired,
@@ -4915,7 +4918,8 @@ var CategoriesShowPage = function (_Component) {
           layoutProps = _props.layoutProps,
           products = _props.products,
           title = _props.title,
-          vendorRootPath = _props.vendorRootPath;
+          vendorRootPath = _props.vendorRootPath,
+          catalogFilterProps = _props.catalogFilterProps;
 
 
       return _react2.default.createElement(
@@ -4927,7 +4931,8 @@ var CategoriesShowPage = function (_Component) {
           isFilterDirty: isFilterDirty,
           products: products,
           title: title,
-          vendorRootPath: vendorRootPath
+          vendorRootPath: vendorRootPath,
+          catalogFilterProps: catalogFilterProps
         })
       );
     }
@@ -4937,8 +4942,10 @@ var CategoriesShowPage = function (_Component) {
 
 CategoriesShowPage.propTypes = {
   container: _ProductList2.default.wrapped.propTypes.container,
+  catalogFilterProps: _ProductList2.default.wrapped.propTypes.catalogFilterProps,
   i18n: _react.PropTypes.object,
   isFilterDirty: _react.PropTypes.bool,
+
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired,
   products: _ProductList2.default.wrapped.propTypes.products,
   title: _react.PropTypes.string,
@@ -5014,6 +5021,7 @@ var CategoriesShowContainer = function (_Component) {
 
 CategoriesShowContainer.propTypes = {
   container: _ProductList2.default.wrapped.propTypes.container,
+  catalogFilterProps: _ProductList2.default.wrapped.propTypes.catalogFilterProps,
   i18n: _react.PropTypes.object,
   isFilterDirty: _react.PropTypes.bool,
   products: _ProductList2.default.wrapped.propTypes.products,
