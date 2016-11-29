@@ -66,9 +66,11 @@ class Cart extends Component {
       cartItems,
       changeAmount,
       changePackageCount,
+      continueShoppingUrl,
       couponCode,
       formAuthenticity,
       isBelowMinimalPrice,
+      isHeaderButtons,
       packageItem,
       packageCount,
       packagePrice,
@@ -120,6 +122,34 @@ class Cart extends Component {
                 method="post"
                 noValidate
               >
+                {isHeaderButtons && (
+                  <div className="b-cart__action">
+                    <div className="b-cart__action__container">
+                      <div className="b-cart__action__col-clear">
+                        <a
+                          className="b-cart__action__clear b-btn b-btn_trans"
+                          href={continueShoppingUrl}
+                        >
+                          {t('vendor.cart.continue_shopping')}
+                        </a>
+                      </div>
+                      <div className="b-cart__action__col-right">
+                        <div className="b-cart__action__col-submit">
+                          <input
+                            className="b-cart__action__submit b-btn element--active-opacity"
+                            data-cart-submit
+                            data-disable-with={t('vendor.button.disable_with.waiting')}
+                            disabled={isBelowMinimalPrice}
+                            name="commit"
+                            onClick={this.startProcessing}
+                            type="submit"
+                            value={t('vendor.order.submit')}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <FormAuthenticity {...formAuthenticity} />
                 {hasErrors && this.renderErrors('top')}
                 <CartList
@@ -194,9 +224,11 @@ Cart.propTypes = {
   cartItems: PropTypes.array.isRequired,
   changeAmount: PropTypes.func.isRequired,
   changePackageCount: PropTypes.func.isRequired,
+  continueShoppingUrl: PropTypes.string,
   couponCode: PropTypes.string,
   formAuthenticity: PropTypes.object,
   isBelowMinimalPrice: PropTypes.bool.isRequired,
+  isHeaderButtons: PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: PropTypes.array.isRequired,
   packageCount: PropTypes.number.isRequired,

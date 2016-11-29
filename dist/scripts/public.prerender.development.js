@@ -400,7 +400,11 @@ function fetchOperatorState(force) {
   };
 }
 
+<<<<<<< HEAD
 },{"../../routes/api":337,"../helpers/dom":286,"../middleware/api":293,"babel-runtime/core-js/promise":349,"babel-runtime/helpers/defineProperty":354,"query-string":599}],7:[function(require,module,exports){
+=======
+},{"../../routes/api":336,"../helpers/dom":285,"../middleware/api":292,"babel-runtime/core-js/promise":348,"babel-runtime/helpers/defineProperty":353,"query-string":598}],7:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2082,10 +2086,15 @@ var Cart = function (_Component) {
           cartErrors = _props2.cartErrors,
           cartItems = _props2.cartItems,
           changeAmount = _props2.changeAmount,
+<<<<<<< HEAD
           changePackageCount = _props2.changePackageCount,
+=======
+          continueShoppingUrl = _props2.continueShoppingUrl,
+>>>>>>> add cart header buttons. closes #3
           couponCode = _props2.couponCode,
           formAuthenticity = _props2.formAuthenticity,
           isBelowMinimalPrice = _props2.isBelowMinimalPrice,
+          isHeaderButtons = _props2.isHeaderButtons,
           packageItem = _props2.packageItem,
           packageCount = _props2.packageCount,
           packagePrice = _props2.packagePrice,
@@ -2147,6 +2156,44 @@ var Cart = function (_Component) {
               method: 'post',
               noValidate: true
             },
+            isHeaderButtons && _react2.default.createElement(
+              'div',
+              { className: 'b-cart__action' },
+              _react2.default.createElement(
+                'div',
+                { className: 'b-cart__action__container' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'b-cart__action__col-clear' },
+                  _react2.default.createElement(
+                    'a',
+                    {
+                      className: 'b-cart__action__clear b-btn b-btn_trans',
+                      href: continueShoppingUrl
+                    },
+                    t('vendor.cart.continue_shopping')
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'b-cart__action__col-right' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'b-cart__action__col-submit' },
+                    _react2.default.createElement('input', {
+                      className: 'b-cart__action__submit b-btn element--active-opacity',
+                      'data-cart-submit': true,
+                      'data-disable-with': t('vendor.button.disable_with.waiting'),
+                      disabled: isBelowMinimalPrice,
+                      name: 'commit',
+                      onClick: this.startProcessing,
+                      type: 'submit',
+                      value: t('vendor.order.submit')
+                    })
+                  )
+                )
+              )
+            ),
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
             hasErrors && this.renderErrors('top'),
             _react2.default.createElement(_CartList2.default, {
@@ -2235,10 +2282,15 @@ Cart.propTypes = {
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
+<<<<<<< HEAD
   changePackageCount: _react.PropTypes.func.isRequired,
+=======
+  continueShoppingUrl: _react.PropTypes.string,
+>>>>>>> add cart header buttons. closes #3
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
+  isHeaderButtons: _react.PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   packageCount: _react.PropTypes.number.isRequired,
@@ -3640,9 +3692,11 @@ var CartContainer = function (_Component) {
 
 CartContainer.propTypes = {
   // initial props
+  continueShoppingUrl: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   initialCart: _react.PropTypes.object,
   initialPackages: _react.PropTypes.array,
+  isHeaderButtons: _react.PropTypes.bool,
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
 
@@ -3672,6 +3726,7 @@ CartContainer.propTypes = {
 };
 
 CartContainer.defaultProps = {
+  isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch'
   }
@@ -35052,7 +35107,11 @@ var Dispatcher = (function () {
 
 module.exports = Dispatcher;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":469}],469:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":468}],468:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -35104,7 +35163,11 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],470:[function(require,module,exports){
+=======
+},{"_process":597}],469:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -37520,7 +37583,11 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],488:[function(require,module,exports){
+=======
+},{"_process":597}],487:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 'use strict';
 
 exports.__esModule = true;
@@ -44005,7 +44072,11 @@ function closure ( target, options, originalOptions ){
     }
 }).call(this);
 
+<<<<<<< HEAD
 },{}],577:[function(require,module,exports){
+=======
+},{}],576:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 'use strict';
 
 function oldAdd(element, className) {
@@ -44049,7 +44120,7 @@ exports.list = function (element) {
   }
 };
 
-},{}],578:[function(require,module,exports){
+},{}],577:[function(require,module,exports){
 'use strict';
 
 var DOM = {};
@@ -44135,7 +44206,7 @@ DOM.queryChildren = function (element, selector) {
 
 module.exports = DOM;
 
-},{}],579:[function(require,module,exports){
+},{}],578:[function(require,module,exports){
 'use strict';
 
 var EventElement = function (element) {
@@ -44208,7 +44279,7 @@ EventManager.prototype.once = function (element, eventName, handler) {
 
 module.exports = EventManager;
 
-},{}],580:[function(require,module,exports){
+},{}],579:[function(require,module,exports){
 'use strict';
 
 module.exports = (function () {
@@ -44223,7 +44294,7 @@ module.exports = (function () {
   };
 })();
 
-},{}],581:[function(require,module,exports){
+},{}],580:[function(require,module,exports){
 'use strict';
 
 var cls = require('./class');
@@ -44308,7 +44379,7 @@ exports.env = {
   supportsIePointer: window.navigator.msMaxTouchPoints !== null
 };
 
-},{"./class":577,"./dom":578}],582:[function(require,module,exports){
+},{"./class":576,"./dom":577}],581:[function(require,module,exports){
 'use strict';
 
 var destroy = require('./plugin/destroy');
@@ -44321,7 +44392,7 @@ module.exports = {
   destroy: destroy
 };
 
-},{"./plugin/destroy":584,"./plugin/initialize":592,"./plugin/update":596}],583:[function(require,module,exports){
+},{"./plugin/destroy":583,"./plugin/initialize":591,"./plugin/update":595}],582:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -44339,7 +44410,7 @@ module.exports = {
   theme: 'default'
 };
 
-},{}],584:[function(require,module,exports){
+},{}],583:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -44363,7 +44434,7 @@ module.exports = function (element) {
   instances.remove(element);
 };
 
-},{"../lib/dom":578,"../lib/helper":581,"./instances":593}],585:[function(require,module,exports){
+},{"../lib/dom":577,"../lib/helper":580,"./instances":592}],584:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -44404,7 +44475,7 @@ module.exports = function (element) {
   bindClickRailHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594,"../update-scroll":595}],586:[function(require,module,exports){
+},{"../instances":592,"../update-geometry":593,"../update-scroll":594}],585:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44509,7 +44580,7 @@ module.exports = function (element) {
   bindMouseScrollYHandler(element, i);
 };
 
-},{"../../lib/dom":578,"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],587:[function(require,module,exports){
+},{"../../lib/dom":577,"../../lib/helper":580,"../instances":592,"../update-geometry":593,"../update-scroll":594}],586:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44665,7 +44736,7 @@ module.exports = function (element) {
   bindKeyboardHandler(element, i);
 };
 
-},{"../../lib/dom":578,"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],588:[function(require,module,exports){
+},{"../../lib/dom":577,"../../lib/helper":580,"../instances":592,"../update-geometry":593,"../update-scroll":594}],587:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -44808,7 +44879,7 @@ module.exports = function (element) {
   bindMouseWheelHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594,"../update-scroll":595}],589:[function(require,module,exports){
+},{"../instances":592,"../update-geometry":593,"../update-scroll":594}],588:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -44825,7 +44896,7 @@ module.exports = function (element) {
   bindNativeScrollHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594}],590:[function(require,module,exports){
+},{"../instances":592,"../update-geometry":593}],589:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44942,7 +45013,7 @@ module.exports = function (element) {
   bindSelectionHandler(element, i);
 };
 
-},{"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],591:[function(require,module,exports){
+},{"../../lib/helper":580,"../instances":592,"../update-geometry":593,"../update-scroll":594}],590:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -45125,7 +45196,7 @@ module.exports = function (element) {
   bindTouchHandler(element, i, _.env.supportsTouch, _.env.supportsIePointer);
 };
 
-},{"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],592:[function(require,module,exports){
+},{"../../lib/helper":580,"../instances":592,"../update-geometry":593,"../update-scroll":594}],591:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -45164,7 +45235,7 @@ module.exports = function (element, userSettings) {
   updateGeometry(element);
 };
 
-},{"../lib/class":577,"../lib/helper":581,"./handler/click-rail":585,"./handler/drag-scrollbar":586,"./handler/keyboard":587,"./handler/mouse-wheel":588,"./handler/native-scroll":589,"./handler/selection":590,"./handler/touch":591,"./instances":593,"./update-geometry":594}],593:[function(require,module,exports){
+},{"../lib/class":576,"../lib/helper":580,"./handler/click-rail":584,"./handler/drag-scrollbar":585,"./handler/keyboard":586,"./handler/mouse-wheel":587,"./handler/native-scroll":588,"./handler/selection":589,"./handler/touch":590,"./instances":592,"./update-geometry":593}],592:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -45273,7 +45344,7 @@ exports.get = function (element) {
   return instances[getId(element)];
 };
 
-},{"../lib/class":577,"../lib/dom":578,"../lib/event-manager":579,"../lib/guid":580,"../lib/helper":581,"./default-setting":583}],594:[function(require,module,exports){
+},{"../lib/class":576,"../lib/dom":577,"../lib/event-manager":578,"../lib/guid":579,"../lib/helper":580,"./default-setting":582}],593:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -45401,7 +45472,7 @@ module.exports = function (element) {
   }
 };
 
-},{"../lib/class":577,"../lib/dom":578,"../lib/helper":581,"./instances":593,"./update-scroll":595}],595:[function(require,module,exports){
+},{"../lib/class":576,"../lib/dom":577,"../lib/helper":580,"./instances":592,"./update-scroll":594}],594:[function(require,module,exports){
 'use strict';
 
 var instances = require('./instances');
@@ -45500,7 +45571,7 @@ module.exports = function (element, axis, value) {
 
 };
 
-},{"./instances":593}],596:[function(require,module,exports){
+},{"./instances":592}],595:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -45539,7 +45610,7 @@ module.exports = function (element) {
   dom.css(i.scrollbarYRail, 'display', '');
 };
 
-},{"../lib/dom":578,"../lib/helper":581,"./instances":593,"./update-geometry":594,"./update-scroll":595}],597:[function(require,module,exports){
+},{"../lib/dom":577,"../lib/helper":580,"./instances":592,"./update-geometry":593,"./update-scroll":594}],596:[function(require,module,exports){
 (function (process){
 // Generated by CoffeeScript 1.7.1
 (function() {
@@ -45575,7 +45646,7 @@ module.exports = function (element) {
 }).call(this);
 
 }).call(this,require('_process'))
-},{"_process":598}],598:[function(require,module,exports){
+},{"_process":597}],597:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -45757,7 +45828,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],599:[function(require,module,exports){
+},{}],598:[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -45857,7 +45928,11 @@ exports.stringify = function (obj, opts) {
 	}).join('&') : '';
 };
 
+<<<<<<< HEAD
 },{"object-assign":600,"strict-uri-encode":797}],600:[function(require,module,exports){
+=======
+},{"object-assign":599,"strict-uri-encode":796}],599:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 'use strict';
 /* eslint-disable no-unused-vars */
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -45942,7 +46017,11 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
+<<<<<<< HEAD
 },{}],601:[function(require,module,exports){
+=======
+},{}],600:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (global){
 var now = require('performance-now')
   , root = typeof window === 'undefined' ? global : window
@@ -46018,7 +46097,11 @@ module.exports.polyfill = function() {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"performance-now":597}],602:[function(require,module,exports){
+=======
+},{"performance-now":596}],601:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 module.exports = require('react/lib/shallowCompare');
 },{"react/lib/shallowCompare":748}],603:[function(require,module,exports){
 'use strict';
@@ -46300,7 +46383,11 @@ Provider.childContextTypes = {
   store: _storeShape2["default"].isRequired
 };
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"../utils/storeShape":609,"../utils/warning":610,"_process":598,"react":"react"}],607:[function(require,module,exports){
+=======
+},{"../utils/storeShape":608,"../utils/warning":609,"_process":597,"react":"react"}],606:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 'use strict';
 
@@ -46698,7 +46785,11 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
   };
 }
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"../utils/shallowEqual":608,"../utils/storeShape":609,"../utils/warning":610,"../utils/wrapActionCreators":611,"_process":598,"hoist-non-react-statics":470,"invariant":487,"lodash/isPlainObject":621,"react":"react"}],608:[function(require,module,exports){
+=======
+},{"../utils/shallowEqual":607,"../utils/storeShape":608,"../utils/warning":609,"../utils/wrapActionCreators":610,"_process":597,"hoist-non-react-statics":469,"invariant":486,"lodash/isPlainObject":620,"react":"react"}],607:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 "use strict";
 
 exports.__esModule = true;
@@ -48275,7 +48366,11 @@ ReactPerf.measureMethods(CSSPropertyOperations, 'CSSPropertyOperations', {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./CSSProperty":625,"./ReactPerf":693,"./dangerousStyleValue":727,"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/camelizeStyleName":755,"fbjs/lib/hyphenateStyleName":766,"fbjs/lib/memoizeStringOnly":773,"fbjs/lib/warning":778}],627:[function(require,module,exports){
+=======
+},{"./CSSProperty":624,"./ReactPerf":692,"./dangerousStyleValue":726,"_process":597,"fbjs/lib/ExecutionEnvironment":752,"fbjs/lib/camelizeStyleName":754,"fbjs/lib/hyphenateStyleName":765,"fbjs/lib/memoizeStringOnly":772,"fbjs/lib/warning":777}],626:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -48371,7 +48466,11 @@ PooledClass.addPoolingTo(CallbackQueue);
 
 module.exports = CallbackQueue;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./PooledClass":645,"_process":598,"fbjs/lib/invariant":767}],628:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./PooledClass":644,"_process":597,"fbjs/lib/invariant":766}],627:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -48849,7 +48948,11 @@ ReactPerf.measureMethods(DOMChildrenOperations, 'DOMChildrenOperations', {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Danger":633,"./ReactMultiChildUpdateTypes":689,"./ReactPerf":693,"./setInnerHTML":746,"./setTextContent":747,"_process":598,"fbjs/lib/invariant":767}],631:[function(require,module,exports){
+=======
+},{"./Danger":632,"./ReactMultiChildUpdateTypes":688,"./ReactPerf":692,"./setInnerHTML":745,"./setTextContent":746,"_process":597,"fbjs/lib/invariant":766}],630:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49086,7 +49189,11 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],632:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],631:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49314,7 +49421,11 @@ ReactPerf.measureMethods(DOMPropertyOperations, 'DOMPropertyOperations', {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./DOMProperty":631,"./ReactPerf":693,"./quoteAttributeValueForBrowser":744,"_process":598,"fbjs/lib/warning":778}],633:[function(require,module,exports){
+=======
+},{"./DOMProperty":630,"./ReactPerf":692,"./quoteAttributeValueForBrowser":743,"_process":597,"fbjs/lib/warning":777}],632:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49462,7 +49573,11 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/createNodesFromMarkup":758,"fbjs/lib/emptyFunction":759,"fbjs/lib/getMarkupWrap":763,"fbjs/lib/invariant":767}],634:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/ExecutionEnvironment":752,"fbjs/lib/createNodesFromMarkup":757,"fbjs/lib/emptyFunction":758,"fbjs/lib/getMarkupWrap":762,"fbjs/lib/invariant":766}],633:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -49990,7 +50105,11 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./EventPluginRegistry":638,"./EventPluginUtils":639,"./ReactErrorUtils":678,"./accumulateInto":724,"./forEachAccumulated":732,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],638:[function(require,module,exports){
+=======
+},{"./EventPluginRegistry":637,"./EventPluginUtils":638,"./ReactErrorUtils":677,"./accumulateInto":723,"./forEachAccumulated":731,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],637:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -50213,7 +50332,11 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],639:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],638:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -50418,7 +50541,11 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./EventConstants":636,"./ReactErrorUtils":678,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],640:[function(require,module,exports){
+=======
+},{"./EventConstants":635,"./ReactErrorUtils":677,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],639:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -50556,7 +50683,11 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./EventConstants":636,"./EventPluginHub":637,"./accumulateInto":724,"./forEachAccumulated":732,"_process":598,"fbjs/lib/warning":778}],641:[function(require,module,exports){
+=======
+},{"./EventConstants":635,"./EventPluginHub":636,"./accumulateInto":723,"./forEachAccumulated":731,"_process":597,"fbjs/lib/warning":777}],640:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51020,7 +51151,11 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactPropTypeLocations":695,"./ReactPropTypes":696,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],644:[function(require,module,exports){
+=======
+},{"./ReactPropTypeLocations":694,"./ReactPropTypes":695,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],643:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -51190,7 +51325,11 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],646:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],645:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51270,7 +51409,11 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactInstanceMap":684,"./findDOMNode":730,"_process":598,"fbjs/lib/warning":778}],648:[function(require,module,exports){
+=======
+},{"./ReactInstanceMap":683,"./findDOMNode":729,"_process":597,"fbjs/lib/warning":777}],647:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51720,7 +51863,11 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactReconciler":698,"./instantiateReactComponent":740,"./shouldUpdateReactComponent":749,"./traverseAllChildren":750,"_process":598,"fbjs/lib/warning":778}],650:[function(require,module,exports){
+=======
+},{"./ReactReconciler":697,"./instantiateReactComponent":739,"./shouldUpdateReactComponent":748,"./traverseAllChildren":749,"_process":597,"fbjs/lib/warning":777}],649:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52677,7 +52824,11 @@ var ReactClass = {
 
 module.exports = ReactClass;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactComponent":652,"./ReactElement":674,"./ReactNoopUpdateQueue":691,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/keyMirror":770,"fbjs/lib/keyOf":771,"fbjs/lib/warning":778}],652:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactComponent":651,"./ReactElement":673,"./ReactNoopUpdateQueue":690,"./ReactPropTypeLocationNames":693,"./ReactPropTypeLocations":694,"_process":597,"fbjs/lib/emptyObject":759,"fbjs/lib/invariant":766,"fbjs/lib/keyMirror":769,"fbjs/lib/keyOf":770,"fbjs/lib/warning":777}],651:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52802,7 +52953,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactNoopUpdateQueue":691,"./canDefineProperty":726,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],653:[function(require,module,exports){
+=======
+},{"./ReactNoopUpdateQueue":690,"./canDefineProperty":725,"_process":597,"fbjs/lib/emptyObject":759,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],652:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52898,7 +53053,11 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],655:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],654:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -53595,7 +53754,11 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactPerf":693,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./shouldUpdateReactComponent":749,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],656:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactComponentEnvironment":653,"./ReactCurrentOwner":655,"./ReactElement":673,"./ReactInstanceMap":683,"./ReactPerf":692,"./ReactPropTypeLocationNames":693,"./ReactPropTypeLocations":694,"./ReactReconciler":697,"./ReactUpdateQueue":703,"./shouldUpdateReactComponent":748,"_process":597,"fbjs/lib/emptyObject":759,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],655:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53721,7 +53884,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":656,"./ReactDOMTextComponent":668,"./ReactDefaultInjection":671,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdates":705,"./ReactVersion":706,"./findDOMNode":730,"./renderSubtreeIntoContainer":745,"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/warning":778}],658:[function(require,module,exports){
+=======
+},{"./ReactCurrentOwner":655,"./ReactDOMTextComponent":667,"./ReactDefaultInjection":670,"./ReactInstanceHandles":682,"./ReactMount":686,"./ReactPerf":692,"./ReactReconciler":697,"./ReactUpdates":704,"./ReactVersion":705,"./findDOMNode":729,"./renderSubtreeIntoContainer":744,"_process":597,"fbjs/lib/ExecutionEnvironment":752,"fbjs/lib/warning":777}],657:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54737,7 +54904,11 @@ assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mix
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./AutoFocusUtils":623,"./CSSPropertyOperations":626,"./DOMProperty":631,"./DOMPropertyOperations":632,"./EventConstants":636,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactComponentBrowserEnvironment":653,"./ReactDOMButton":658,"./ReactDOMInput":663,"./ReactDOMOption":664,"./ReactDOMSelect":665,"./ReactDOMTextarea":669,"./ReactMount":687,"./ReactMultiChild":688,"./ReactPerf":693,"./ReactUpdateQueue":704,"./canDefineProperty":726,"./escapeTextContentForBrowser":729,"./isEventSupported":741,"./setInnerHTML":746,"./setTextContent":747,"./validateDOMNesting":751,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771,"fbjs/lib/shallowEqual":776,"fbjs/lib/warning":778}],660:[function(require,module,exports){
+=======
+},{"./AutoFocusUtils":622,"./CSSPropertyOperations":625,"./DOMProperty":630,"./DOMPropertyOperations":631,"./EventConstants":635,"./Object.assign":643,"./ReactBrowserEventEmitter":647,"./ReactComponentBrowserEnvironment":652,"./ReactDOMButton":657,"./ReactDOMInput":662,"./ReactDOMOption":663,"./ReactDOMSelect":664,"./ReactDOMTextarea":668,"./ReactMount":686,"./ReactMultiChild":687,"./ReactPerf":692,"./ReactUpdateQueue":703,"./canDefineProperty":725,"./escapeTextContentForBrowser":728,"./isEventSupported":740,"./setInnerHTML":745,"./setTextContent":746,"./validateDOMNesting":750,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/keyOf":770,"fbjs/lib/shallowEqual":775,"fbjs/lib/warning":777}],659:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54917,7 +55088,11 @@ var ReactDOMFactories = mapObject({
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactElement":674,"./ReactElementValidator":675,"_process":598,"fbjs/lib/mapObject":772}],661:[function(require,module,exports){
+=======
+},{"./ReactElement":673,"./ReactElementValidator":674,"_process":597,"fbjs/lib/mapObject":771}],660:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55033,7 +55208,11 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 
 module.exports = ReactDOMIDOperations;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./ReactMount":687,"./ReactPerf":693,"_process":598,"fbjs/lib/invariant":767}],663:[function(require,module,exports){
+=======
+},{"./DOMChildrenOperations":629,"./DOMPropertyOperations":631,"./ReactMount":686,"./ReactPerf":692,"_process":597,"fbjs/lib/invariant":766}],662:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55189,7 +55368,11 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactMount":687,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767}],664:[function(require,module,exports){
+=======
+},{"./LinkedValueUtils":642,"./Object.assign":643,"./ReactDOMIDOperations":661,"./ReactMount":686,"./ReactUpdates":704,"_process":597,"fbjs/lib/invariant":766}],663:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55281,7 +55464,11 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactChildren":650,"./ReactDOMSelect":665,"_process":598,"fbjs/lib/warning":778}],665:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactChildren":649,"./ReactDOMSelect":664,"_process":597,"fbjs/lib/warning":777}],664:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55472,7 +55659,11 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactMount":687,"./ReactUpdates":705,"_process":598,"fbjs/lib/warning":778}],666:[function(require,module,exports){
+=======
+},{"./LinkedValueUtils":642,"./Object.assign":643,"./ReactMount":686,"./ReactUpdates":704,"_process":597,"fbjs/lib/warning":777}],665:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55842,7 +56033,11 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./Object.assign":644,"./ReactComponentBrowserEnvironment":653,"./ReactMount":687,"./escapeTextContentForBrowser":729,"./setTextContent":747,"./validateDOMNesting":751,"_process":598}],669:[function(require,module,exports){
+=======
+},{"./DOMChildrenOperations":629,"./DOMPropertyOperations":631,"./Object.assign":643,"./ReactComponentBrowserEnvironment":652,"./ReactMount":686,"./escapeTextContentForBrowser":728,"./setTextContent":746,"./validateDOMNesting":750,"_process":597}],668:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55958,7 +56153,11 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],670:[function(require,module,exports){
+=======
+},{"./LinkedValueUtils":642,"./Object.assign":643,"./ReactDOMIDOperations":661,"./ReactUpdates":704,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],669:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56126,7 +56325,11 @@ module.exports = {
   inject: inject
 };
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./BeforeInputEventPlugin":624,"./ChangeEventPlugin":628,"./ClientReactRootIndex":629,"./DefaultEventPluginOrder":634,"./EnterLeaveEventPlugin":635,"./HTMLDOMPropertyConfig":642,"./ReactBrowserComponentMixin":647,"./ReactComponentBrowserEnvironment":653,"./ReactDOMComponent":659,"./ReactDOMTextComponent":668,"./ReactDefaultBatchingStrategy":670,"./ReactDefaultPerf":672,"./ReactEventListener":680,"./ReactInjection":681,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactReconcileTransaction":697,"./SVGDOMPropertyConfig":707,"./SelectEventPlugin":708,"./ServerReactRootIndex":709,"./SimpleEventPlugin":710,"_process":598,"fbjs/lib/ExecutionEnvironment":753}],672:[function(require,module,exports){
+=======
+},{"./BeforeInputEventPlugin":623,"./ChangeEventPlugin":627,"./ClientReactRootIndex":628,"./DefaultEventPluginOrder":633,"./EnterLeaveEventPlugin":634,"./HTMLDOMPropertyConfig":641,"./ReactBrowserComponentMixin":646,"./ReactComponentBrowserEnvironment":652,"./ReactDOMComponent":658,"./ReactDOMTextComponent":667,"./ReactDefaultBatchingStrategy":669,"./ReactDefaultPerf":671,"./ReactEventListener":679,"./ReactInjection":680,"./ReactInstanceHandles":682,"./ReactMount":686,"./ReactReconcileTransaction":696,"./SVGDOMPropertyConfig":706,"./SelectEventPlugin":707,"./ServerReactRootIndex":708,"./SimpleEventPlugin":709,"_process":597,"fbjs/lib/ExecutionEnvironment":752}],671:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56816,7 +57019,11 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactCurrentOwner":656,"./canDefineProperty":726,"_process":598}],675:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactCurrentOwner":655,"./canDefineProperty":725,"_process":597}],674:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -57100,7 +57307,11 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./canDefineProperty":726,"./getIteratorFn":737,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],676:[function(require,module,exports){
+=======
+},{"./ReactCurrentOwner":655,"./ReactElement":673,"./ReactPropTypeLocationNames":693,"./ReactPropTypeLocations":694,"./canDefineProperty":725,"./getIteratorFn":736,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],675:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -57285,7 +57496,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],679:[function(require,module,exports){
+=======
+},{"_process":597}],678:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58005,7 +58220,11 @@ var ReactInstanceHandles = {
 
 module.exports = ReactInstanceHandles;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactRootIndex":700,"_process":598,"fbjs/lib/invariant":767}],684:[function(require,module,exports){
+=======
+},{"./ReactRootIndex":699,"_process":597,"fbjs/lib/invariant":766}],683:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58130,7 +58349,11 @@ var React = {
 
 module.exports = React;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactChildren":650,"./ReactClass":651,"./ReactComponent":652,"./ReactDOMFactories":660,"./ReactElement":674,"./ReactElementValidator":675,"./ReactPropTypes":696,"./ReactVersion":706,"./onlyChild":743,"_process":598}],686:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactChildren":649,"./ReactClass":650,"./ReactComponent":651,"./ReactDOMFactories":659,"./ReactElement":673,"./ReactElementValidator":674,"./ReactPropTypes":695,"./ReactVersion":705,"./onlyChild":742,"_process":597}],685:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59029,7 +59252,11 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./DOMProperty":631,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactCurrentOwner":656,"./ReactDOMFeatureFlags":661,"./ReactElement":674,"./ReactEmptyComponentRegistry":677,"./ReactInstanceHandles":683,"./ReactInstanceMap":684,"./ReactMarkupChecksum":686,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./ReactUpdates":705,"./instantiateReactComponent":740,"./setInnerHTML":746,"./shouldUpdateReactComponent":749,"./validateDOMNesting":751,"_process":598,"fbjs/lib/containsNode":756,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],688:[function(require,module,exports){
+=======
+},{"./DOMProperty":630,"./Object.assign":643,"./ReactBrowserEventEmitter":647,"./ReactCurrentOwner":655,"./ReactDOMFeatureFlags":660,"./ReactElement":673,"./ReactEmptyComponentRegistry":676,"./ReactInstanceHandles":682,"./ReactInstanceMap":683,"./ReactMarkupChecksum":685,"./ReactPerf":692,"./ReactReconciler":697,"./ReactUpdateQueue":703,"./ReactUpdates":704,"./instantiateReactComponent":739,"./setInnerHTML":745,"./shouldUpdateReactComponent":748,"./validateDOMNesting":750,"_process":597,"fbjs/lib/containsNode":755,"fbjs/lib/emptyObject":759,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],687:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59528,7 +59755,11 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactChildReconciler":649,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactMultiChildUpdateTypes":689,"./ReactReconciler":698,"./flattenChildren":731,"_process":598}],689:[function(require,module,exports){
+=======
+},{"./ReactChildReconciler":648,"./ReactComponentEnvironment":653,"./ReactCurrentOwner":655,"./ReactMultiChildUpdateTypes":688,"./ReactReconciler":697,"./flattenChildren":730,"_process":597}],688:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59658,7 +59889,11 @@ var ReactNativeComponent = {
 
 module.exports = ReactNativeComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"_process":598,"fbjs/lib/invariant":767}],691:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"_process":597,"fbjs/lib/invariant":766}],690:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -59779,7 +60014,11 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/warning":778}],692:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/warning":777}],691:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59873,7 +60112,11 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],693:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],692:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59972,7 +60215,11 @@ function _noMeasure(objName, fnName, func) {
 
 module.exports = ReactPerf;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],694:[function(require,module,exports){
+=======
+},{"_process":597}],693:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59999,7 +60246,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],695:[function(require,module,exports){
+=======
+},{"_process":597}],694:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60858,7 +61109,11 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactDefaultBatchingStrategy":670,"./ReactElement":674,"./ReactInstanceHandles":683,"./ReactMarkupChecksum":686,"./ReactServerBatchingStrategy":701,"./ReactServerRenderingTransaction":703,"./ReactUpdates":705,"./instantiateReactComponent":740,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767}],703:[function(require,module,exports){
+=======
+},{"./ReactDefaultBatchingStrategy":669,"./ReactElement":673,"./ReactInstanceHandles":682,"./ReactMarkupChecksum":685,"./ReactServerBatchingStrategy":700,"./ReactServerRenderingTransaction":702,"./ReactUpdates":704,"./instantiateReactComponent":739,"_process":597,"fbjs/lib/emptyObject":759,"fbjs/lib/invariant":766}],702:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -61206,7 +61461,11 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],705:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactCurrentOwner":655,"./ReactElement":673,"./ReactInstanceMap":683,"./ReactUpdates":704,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],704:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -61432,7 +61691,11 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./CallbackQueue":627,"./Object.assign":644,"./PooledClass":645,"./ReactPerf":693,"./ReactReconciler":698,"./Transaction":722,"_process":598,"fbjs/lib/invariant":767}],706:[function(require,module,exports){
+=======
+},{"./CallbackQueue":626,"./Object.assign":643,"./PooledClass":644,"./ReactPerf":692,"./ReactReconciler":697,"./Transaction":721,"_process":597,"fbjs/lib/invariant":766}],705:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62397,7 +62660,11 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./EventConstants":636,"./EventPropagators":640,"./ReactMount":687,"./SyntheticClipboardEvent":711,"./SyntheticDragEvent":713,"./SyntheticEvent":714,"./SyntheticFocusEvent":715,"./SyntheticKeyboardEvent":717,"./SyntheticMouseEvent":718,"./SyntheticTouchEvent":719,"./SyntheticUIEvent":720,"./SyntheticWheelEvent":721,"./getEventCharCode":733,"_process":598,"fbjs/lib/EventListener":752,"fbjs/lib/emptyFunction":759,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771}],711:[function(require,module,exports){
+=======
+},{"./EventConstants":635,"./EventPropagators":639,"./ReactMount":686,"./SyntheticClipboardEvent":710,"./SyntheticDragEvent":712,"./SyntheticEvent":713,"./SyntheticFocusEvent":714,"./SyntheticKeyboardEvent":716,"./SyntheticMouseEvent":717,"./SyntheticTouchEvent":718,"./SyntheticUIEvent":719,"./SyntheticWheelEvent":720,"./getEventCharCode":732,"_process":597,"fbjs/lib/EventListener":751,"fbjs/lib/emptyFunction":758,"fbjs/lib/invariant":766,"fbjs/lib/keyOf":770}],710:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62696,7 +62963,11 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 
 module.exports = SyntheticEvent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./PooledClass":645,"_process":598,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],715:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./PooledClass":644,"_process":597,"fbjs/lib/emptyFunction":758,"fbjs/lib/warning":777}],714:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63331,7 +63602,11 @@ var Transaction = {
 
 module.exports = Transaction;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],723:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],722:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63421,7 +63696,11 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598,"fbjs/lib/invariant":767}],725:[function(require,module,exports){
+=======
+},{"_process":597,"fbjs/lib/invariant":766}],724:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63491,7 +63770,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],727:[function(require,module,exports){
+=======
+},{"_process":597}],726:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63598,7 +63881,11 @@ function deprecated(fnName, newModule, newPackage, ctx, fn) {
 
 module.exports = deprecated;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"_process":598,"fbjs/lib/warning":778}],729:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"_process":597,"fbjs/lib/warning":777}],728:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63689,7 +63976,11 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":656,"./ReactInstanceMap":684,"./ReactMount":687,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],731:[function(require,module,exports){
+=======
+},{"./ReactCurrentOwner":655,"./ReactInstanceMap":683,"./ReactMount":686,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],730:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -63740,7 +64031,11 @@ function flattenChildren(children) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./traverseAllChildren":750,"_process":598,"fbjs/lib/warning":778}],732:[function(require,module,exports){
+=======
+},{"./traverseAllChildren":749,"_process":597,"fbjs/lib/warning":777}],731:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64264,7 +64559,11 @@ function instantiateReactComponent(node) {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"./ReactCompositeComponent":655,"./ReactEmptyComponent":676,"./ReactNativeComponent":690,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],741:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"./ReactCompositeComponent":654,"./ReactEmptyComponent":675,"./ReactNativeComponent":689,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],740:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64402,7 +64701,11 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactElement":674,"_process":598,"fbjs/lib/invariant":767}],744:[function(require,module,exports){
+=======
+},{"./ReactElement":673,"_process":597,"fbjs/lib/invariant":766}],743:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64839,7 +65142,11 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceHandles":683,"./getIteratorFn":737,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],751:[function(require,module,exports){
+=======
+},{"./ReactCurrentOwner":655,"./ReactElement":673,"./ReactInstanceHandles":682,"./getIteratorFn":736,"_process":597,"fbjs/lib/invariant":766,"fbjs/lib/warning":777}],750:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -65205,7 +65512,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./Object.assign":644,"_process":598,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],752:[function(require,module,exports){
+=======
+},{"./Object.assign":643,"_process":597,"fbjs/lib/emptyFunction":758,"fbjs/lib/warning":777}],751:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -65292,7 +65603,11 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./emptyFunction":759,"_process":598}],753:[function(require,module,exports){
+=======
+},{"./emptyFunction":758,"_process":597}],752:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65632,7 +65947,11 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ExecutionEnvironment":753,"./createArrayFromMixed":757,"./getMarkupWrap":763,"./invariant":767,"_process":598}],759:[function(require,module,exports){
+=======
+},{"./ExecutionEnvironment":752,"./createArrayFromMixed":756,"./getMarkupWrap":762,"./invariant":766,"_process":597}],758:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65694,7 +66013,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],761:[function(require,module,exports){
+=======
+},{"_process":597}],760:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65855,7 +66178,11 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./ExecutionEnvironment":753,"./invariant":767,"_process":598}],764:[function(require,module,exports){
+=======
+},{"./ExecutionEnvironment":752,"./invariant":766,"_process":597}],763:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66021,7 +66348,11 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"_process":598}],768:[function(require,module,exports){
+=======
+},{"_process":597}],767:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66122,7 +66453,11 @@ var keyMirror = function (obj) {
 
 module.exports = keyMirror;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./invariant":767,"_process":598}],771:[function(require,module,exports){
+=======
+},{"./invariant":766,"_process":597}],770:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66412,7 +66747,11 @@ function toArray(obj) {
 
 module.exports = toArray;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./invariant":767,"_process":598}],778:[function(require,module,exports){
+=======
+},{"./invariant":766,"_process":597}],777:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -66472,7 +66811,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./emptyFunction":759,"_process":598}],779:[function(require,module,exports){
+=======
+},{"./emptyFunction":758,"_process":597}],778:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 'use strict';
 
 exports.__esModule = true;
@@ -66728,7 +67071,11 @@ function combineReducers(reducers) {
   };
 }
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./createStore":783,"./utils/warning":784,"_process":598,"lodash/isPlainObject":794}],782:[function(require,module,exports){
+=======
+},{"./createStore":782,"./utils/warning":783,"_process":597,"lodash/isPlainObject":793}],781:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 "use strict";
 
 exports.__esModule = true;
@@ -68208,7 +68555,11 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./dist/lib/listen":802,"./dist/subscribe":805,"./dist/unsubscribe":806,"_process":598}],808:[function(require,module,exports){
+=======
+},{"./dist/lib/listen":801,"./dist/subscribe":804,"./dist/unsubscribe":805,"_process":597}],807:[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -104438,7 +104789,7 @@ if (typeof Object.create !== "function") {
 
 module.exports = require('./src/js/main');
 
-},{"./src/js/main":582}],"react-dom":[function(require,module,exports){
+},{"./src/js/main":581}],"react-dom":[function(require,module,exports){
 'use strict';
 
 module.exports = require('react/lib/ReactDOM');
@@ -104771,7 +105122,11 @@ exports.bindActionCreators = _bindActionCreators2['default'];
 exports.applyMiddleware = _applyMiddleware2['default'];
 exports.compose = _compose2['default'];
 }).call(this,require('_process'))
+<<<<<<< HEAD
 },{"./applyMiddleware":779,"./bindActionCreators":780,"./combineReducers":781,"./compose":782,"./createStore":783,"./utils/warning":784,"_process":598}],"reqwest":[function(require,module,exports){
+=======
+},{"./applyMiddleware":778,"./bindActionCreators":779,"./combineReducers":780,"./compose":781,"./createStore":782,"./utils/warning":783,"_process":597}],"reqwest":[function(require,module,exports){
+>>>>>>> add cart header buttons. closes #3
 /*!
   * Reqwest! A general purpose XHR connection manager
   * license MIT (c) Dustin Diaz 2014
@@ -106134,7 +106489,7 @@ var timm = {
 exports.default = timm;
 
 }).call(this,require('_process'))
-},{"_process":598}],"tinycolor2":[function(require,module,exports){
+},{"_process":597}],"tinycolor2":[function(require,module,exports){
 // TinyColor v1.4.1
 // https://github.com/bgrins/TinyColor
 // Brian Grinstead, MIT License
