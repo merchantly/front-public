@@ -2655,7 +2655,153 @@ CartList.propTypes = {
 exports.default = CartList;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"./CartListItem":30,"./CartListPackageItem":31,"./CartListPackages":33,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
+=======
+},{"./CartListItem":31,"./CartListPackageItem":32,"./CartListPackages":33,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
+>>>>>>> cart img gallery. resolves #6
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _Image = require('../common/Image');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CartListImage = function (_Component) {
+  (0, _inherits3.default)(CartListImage, _Component);
+
+  function CartListImage(props) {
+    (0, _classCallCheck3.default)(this, CartListImage);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (CartListImage.__proto__ || (0, _getPrototypeOf2.default)(CartListImage)).call(this, props));
+
+    _this.initFancybox = _this.initFancybox.bind(_this);
+    _this.destroyFancybox = _this.destroyFancybox.bind(_this);
+    return _this;
+  }
+
+  (0, _createClass3.default)(CartListImage, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.initFancybox();
+    }
+  }, {
+    key: 'initFancybox',
+    value: function initFancybox() {
+      var t = this.props.t;
+
+      var $node = (0, _jquery2.default)((0, _reactDom.findDOMNode)(this));
+
+      $node.find('[data-lightbox]').fancybox({
+        parent: 'body',
+        padding: 0,
+        margin: 0,
+        helpers: {
+          thumbs: { width: 8, height: 8 }
+        },
+        tpl: {
+          closeBtn: '<a title="' + t('vendor.gallery.close') + '" class="fancybox-item fancybox-close" href="javascript:;"><i></i></a>',
+          next: '<a title="' + t('vendor.gallery.next') + '" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+          prev: '<a title="' + t('vendor.gallery.prev') + '" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+        }
+      });
+    }
+  }, {
+    key: 'destroyFancybox',
+    value: function destroyFancybox() {}
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          image = _props.image,
+          images = _props.images,
+          size = _props.size;
+
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'a',
+          {
+            'data-lightbox': true,
+            'data-fancybox-group': image.productId,
+            href: image.url
+          },
+          _react2.default.createElement(_Image.RelativeImage, {
+            className: 'b-cart__item__img',
+            image: image || {},
+            maxHeight: size,
+            maxWidth: size
+          })
+        ),
+        Array.isArray(images) && images.filter(function (img) {
+          return img.url !== image.url;
+        }).map(function (img) {
+          return _react2.default.createElement(
+            'a',
+            {
+              className: 'b-cart__item__img--hidden',
+              'data-lightbox': true,
+              'data-fancybox-group': image.productId,
+              href: img.url,
+              key: img.uid
+            },
+            _react2.default.createElement('img', { src: img.url })
+          );
+        })
+      );
+    }
+  }]);
+  return CartListImage;
+}(_react.Component);
+
+CartListImage.propTypes = {
+  image: _react.PropTypes.object.isRequired,
+  images: _react.PropTypes.array.isRequired,
+  size: _react.PropTypes.number.isRequired,
+  t: _react.PropTypes.func.isRequired
+};
+
+CartListImage.defaultProps = {};
+
+exports.default = CartListImage;
+module.exports = exports['default'];
+
+},{"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react","react-dom":"react-dom"}],31:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2686,8 +2832,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Image = require('../common/Image');
-
 var _AssetImage = require('../common/AssetImage');
 
 var _AssetImage2 = _interopRequireDefault(_AssetImage);
@@ -2707,6 +2851,10 @@ var _lodash = require('lodash');
 var _timm = require('timm');
 
 var _OrderConstants = require('../../constants/OrderConstants');
+
+var _CartListImage = require('./CartListImage');
+
+var _CartListImage2 = _interopRequireDefault(_CartListImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2860,10 +3008,13 @@ var CartListItem = function (_Component) {
     value: function render() {
       var _props5 = this.props,
           item = _props5.item,
-          price = _props5.price;
+          price = _props5.price,
+          t = _props5.t;
 
       var _ref = item.good || {},
           image = _ref.image,
+          _ref$images = _ref.images,
+          images = _ref$images === undefined ? [] : _ref$images,
           _ref$defaultUrl = _ref.defaultUrl,
           defaultUrl = _ref$defaultUrl === undefined ? '' : _ref$defaultUrl,
           _ref$title = _ref.title,
@@ -2879,11 +3030,11 @@ var CartListItem = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-img' },
-          _react2.default.createElement(_Image.RelativeImage, {
-            className: 'b-cart__item__img',
-            image: image || {},
-            maxHeight: _OrderConstants.ORDER_IMG_SIZE,
-            maxWidth: _OrderConstants.ORDER_IMG_SIZE
+          _react2.default.createElement(_CartListImage2.default, {
+            image: image,
+            images: images,
+            size: _OrderConstants.ORDER_IMG_SIZE,
+            t: t
           })
         ),
         _react2.default.createElement(
@@ -2944,7 +3095,11 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/OrderConstants":273,"../common/AssetImage":239,"../common/Image":249,"../common/Money/HumanizedMoneyWithCurrency":257,"../common/Select":269,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+=======
+},{"../../constants/OrderConstants":273,"../common/AssetImage":239,"../common/Money/HumanizedMoneyWithCurrency":257,"../common/Select":269,"./CartListImage":30,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+>>>>>>> cart img gallery. resolves #6
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3106,6 +3261,7 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":314,"../common/AssetImage":239,"../common/Image":249,"./CartListPackagePrice":32,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
 'use strict';
 
@@ -3204,6 +3360,9 @@ exports.default = CartListPackagePrice;
 module.exports = exports['default'];
 
 },{"../../schemas":314,"../common/Money/HumanizedMoneyWithCurrency":257,"../common/Select":269,"humps":471,"lodash":"lodash","react":"react"}],33:[function(require,module,exports){
+=======
+},{"../common/AssetImage":239,"../common/Image":249,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+>>>>>>> cart img gallery. resolves #6
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3406,7 +3565,11 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":287,"../../schemas":314,"../common/Image":249,"./CartListPackagePrice":32,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],34:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"lodash":"lodash","react":"react","timm":"timm"}],34:[function(require,module,exports){
+>>>>>>> cart img gallery. resolves #6
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
