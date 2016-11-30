@@ -56,6 +56,11 @@
     @extend %one-whole
     padding-top: 40px
 
+  &__filter-container
+    @extend .b-item-list__filter
+    @include grid-media-query("desk")
+      width: 190px
+
   &_catalog
     .b-item-list__filter
       display: none
