@@ -1,6 +1,5 @@
 /*global gon */
 import React, { Component, PropTypes } from 'react';
-import { RelativeImage } from '../common/Image';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
@@ -14,6 +13,7 @@ import { getIn } from 'timm';
 import {
   ORDER_IMG_SIZE,
 } from 'r/constants/OrderConstants';
+import CartListImage from './CartListImage';
 
 const WEIGHT_STEP = 0.01;
 
@@ -142,9 +142,11 @@ class CartListItem extends Component {
     const {
       item,
       price,
+      t,
     } = this.props;
     const {
       image,
+      images=[],
       defaultUrl='',
       title='',
       sellingByWeight=false,
@@ -154,11 +156,11 @@ class CartListItem extends Component {
     return (
       <li className="b-cart__item">
         <div className="b-cart__item__col-img">
-          <RelativeImage
-            className="b-cart__item__img"
-            image={image || {}}
-            maxHeight={ORDER_IMG_SIZE}
-            maxWidth={ORDER_IMG_SIZE}
+          <CartListImage
+            image={image}
+            images={images}
+            size={ORDER_IMG_SIZE}
+            t={t}
           />
         </div>
         <div className="b-cart__item__col-content">
