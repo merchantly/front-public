@@ -6,7 +6,9 @@ class CategoriesShow extends Component {
     const {
       container,
       isFilterDirty,
+      nextButton,
       products,
+      showNextButton,
       t,
       title,
       vendorRootPath,
@@ -16,7 +18,9 @@ class CategoriesShow extends Component {
       ? (
         <ProductList
           container={container}
+          nextButton={nextButton}
           products={products}
+          showNextButton={showNextButton}
           showPagination
           t={t}
           title={title}
@@ -38,7 +42,9 @@ class CategoriesShow extends Component {
 CategoriesShow.propTypes = {
   container: PropTypes.object.isRequired,
   isFilterDirty: PropTypes.bool,
+  nextButton: PropTypes.object,
   products: PropTypes.object.isRequired,
+  showNextButton: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
