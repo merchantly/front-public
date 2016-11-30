@@ -150,7 +150,7 @@ class ProductCardGallerySlider extends Component {
     return (
       <a
         className="b-slider__item"
-        data-lightbox={true}
+        data-lightbox
         href={elt.url}
         key={idx}
         rel="photo-stack"
