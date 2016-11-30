@@ -115,7 +115,15 @@ ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage');
 ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":36,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":35,"./react/components/CategoriesShow":51,"./react/components/CategoriesShow/CategoriesShowPage":50,"./react/components/CategoriesShowChildren":54,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":53,"./react/components/Checkout/CheckoutCoupon":57,"./react/components/ChildrenProducts":65,"./react/components/ClientSessionNew":69,"./react/components/ClientSessionNew/ClientSessionNewPage":67,"./react/components/Clientbar":71,"./react/components/ContentPage":74,"./react/components/ContentPage/ContentPagePage":73,"./react/components/CurrencySwitcher":76,"./react/components/Dictionary":89,"./react/components/Dictionary/DictionaryPage":88,"./react/components/DictionaryEntitiesShow":92,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":91,"./react/components/ErrorPage":95,"./react/components/ErrorPage/ErrorPagePage":94,"./react/components/LocaleSwitcher":104,"./react/components/Logo/LogoContainer":105,"./react/components/Lookbook":109,"./react/components/Lookbook/LookbookPage":108,"./react/components/MenuBottom":112,"./react/components/MenuTop":119,"./react/components/NavBar":122,"./react/components/Order":127,"./react/components/Order/OrderPage":125,"./react/components/OrderCancelled":130,"./react/components/OrderCancelled/OrderCancelledPage":129,"./react/components/OrderCreated":133,"./react/components/OrderCreated/OrderCreatedPage":132,"./react/components/OrderPaid":136,"./react/components/OrderPaid/OrderPaidPage":135,"./react/components/OrderPayment":139,"./react/components/OrderPayment/OrderPaymentPage":138,"./react/components/OrderShow":142,"./react/components/OrderShow/OrderShowPage":141,"./react/components/Pagination":145,"./react/components/Payment":148,"./react/components/Payment/PaymentPage":147,"./react/components/Product/ProductBlock":157,"./react/components/Product/ProductCard":175,"./react/components/Product/ProductCard/ProductCardPage":170,"./react/components/ProductArchived":195,"./react/components/ProductArchived/ProductArchivedPage":194,"./react/components/ProductGroup":197,"./react/components/ProductList":199,"./react/components/ProductSearch":202,"./react/components/ProductSearch/ProductSearchPage":201,"./react/components/ScrollToTop":203,"./react/components/TopBanner":204,"./react/components/Welcome":215,"./react/components/Welcome/WelcomePage":214,"./react/components/WelcomeChildren":218,"./react/components/WelcomeChildren/WelcomeChildrenPage":217,"./react/components/Wishlist":224,"./react/components/Wishlist/WishlistPage":223,"./react/components/common/ImageSlider":252,"./react/components/common/PostProducts":267,"./react/reducers/Design.prerender":298,"./react/reducers/cart":299,"./react/reducers/clientState":300,"./react/reducers/operatorState":301,"./react/reducers/packages":302,"./react/reducers/popup":303,"react":"react","react-dom":"react-dom","react-dom/server":607,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":49,"./react/components/CategoriesShow/CategoriesShowPage":48,"./react/components/CategoriesShowChildren":52,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":51,"./react/components/Checkout/CheckoutCoupon":55,"./react/components/ChildrenProducts":63,"./react/components/ClientSessionNew":67,"./react/components/ClientSessionNew/ClientSessionNewPage":65,"./react/components/Clientbar":69,"./react/components/ContentPage":72,"./react/components/ContentPage/ContentPagePage":71,"./react/components/CurrencySwitcher":74,"./react/components/Dictionary":87,"./react/components/Dictionary/DictionaryPage":86,"./react/components/DictionaryEntitiesShow":90,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":89,"./react/components/ErrorPage":93,"./react/components/ErrorPage/ErrorPagePage":92,"./react/components/LocaleSwitcher":102,"./react/components/Logo/LogoContainer":103,"./react/components/Lookbook":107,"./react/components/Lookbook/LookbookPage":106,"./react/components/MenuBottom":110,"./react/components/MenuTop":117,"./react/components/NavBar":120,"./react/components/Order":125,"./react/components/Order/OrderPage":123,"./react/components/OrderCancelled":128,"./react/components/OrderCancelled/OrderCancelledPage":127,"./react/components/OrderCreated":131,"./react/components/OrderCreated/OrderCreatedPage":130,"./react/components/OrderPaid":134,"./react/components/OrderPaid/OrderPaidPage":133,"./react/components/OrderPayment":137,"./react/components/OrderPayment/OrderPaymentPage":136,"./react/components/OrderShow":140,"./react/components/OrderShow/OrderShowPage":139,"./react/components/Pagination":143,"./react/components/Payment":146,"./react/components/Payment/PaymentPage":145,"./react/components/Product/ProductBlock":155,"./react/components/Product/ProductCard":173,"./react/components/Product/ProductCard/ProductCardPage":168,"./react/components/ProductArchived":193,"./react/components/ProductArchived/ProductArchivedPage":192,"./react/components/ProductGroup":195,"./react/components/ProductList":197,"./react/components/ProductSearch":200,"./react/components/ProductSearch/ProductSearchPage":199,"./react/components/ScrollToTop":201,"./react/components/TopBanner":202,"./react/components/Welcome":213,"./react/components/Welcome/WelcomePage":212,"./react/components/WelcomeChildren":216,"./react/components/WelcomeChildren/WelcomeChildrenPage":215,"./react/components/Wishlist":222,"./react/components/Wishlist/WishlistPage":221,"./react/components/common/ImageSlider":250,"./react/components/common/PostProducts":265,"./react/reducers/Design.prerender":296,"./react/reducers/cart":297,"./react/reducers/clientState":298,"./react/reducers/operatorState":299,"./react/reducers/packages":300,"./react/reducers/popup":301,"react":"react","react-dom":"react-dom","react-dom/server":605,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+=======
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":50,"./react/components/CategoriesShow/CategoriesShowPage":49,"./react/components/CategoriesShowChildren":53,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":52,"./react/components/Checkout/CheckoutCoupon":56,"./react/components/ChildrenProducts":64,"./react/components/ClientSessionNew":68,"./react/components/ClientSessionNew/ClientSessionNewPage":66,"./react/components/Clientbar":70,"./react/components/ContentPage":73,"./react/components/ContentPage/ContentPagePage":72,"./react/components/CurrencySwitcher":75,"./react/components/Dictionary":88,"./react/components/Dictionary/DictionaryPage":87,"./react/components/DictionaryEntitiesShow":91,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":90,"./react/components/ErrorPage":94,"./react/components/ErrorPage/ErrorPagePage":93,"./react/components/LocaleSwitcher":103,"./react/components/Logo/LogoContainer":104,"./react/components/Lookbook":108,"./react/components/Lookbook/LookbookPage":107,"./react/components/MenuBottom":110,"./react/components/MenuTop":117,"./react/components/NavBar":120,"./react/components/Order":125,"./react/components/Order/OrderPage":123,"./react/components/OrderCancelled":128,"./react/components/OrderCancelled/OrderCancelledPage":127,"./react/components/OrderCreated":131,"./react/components/OrderCreated/OrderCreatedPage":130,"./react/components/OrderPaid":134,"./react/components/OrderPaid/OrderPaidPage":133,"./react/components/OrderPayment":137,"./react/components/OrderPayment/OrderPaymentPage":136,"./react/components/OrderShow":140,"./react/components/OrderShow/OrderShowPage":139,"./react/components/Pagination":143,"./react/components/Payment":146,"./react/components/Payment/PaymentPage":145,"./react/components/Product/ProductBlock":155,"./react/components/Product/ProductCard":173,"./react/components/Product/ProductCard/ProductCardPage":168,"./react/components/ProductArchived":193,"./react/components/ProductArchived/ProductArchivedPage":192,"./react/components/ProductGroup":195,"./react/components/ProductList":197,"./react/components/ProductSearch":200,"./react/components/ProductSearch/ProductSearchPage":199,"./react/components/ScrollToTop":201,"./react/components/TopBanner":202,"./react/components/Welcome":213,"./react/components/Welcome/WelcomePage":212,"./react/components/WelcomeChildren":216,"./react/components/WelcomeChildren/WelcomeChildrenPage":215,"./react/components/Wishlist":222,"./react/components/Wishlist/WishlistPage":221,"./react/components/common/ImageSlider":250,"./react/components/common/PostProducts":265,"./react/reducers/Design.prerender":296,"./react/reducers/cart":297,"./react/reducers/clientState":298,"./react/reducers/operatorState":299,"./react/reducers/packages":300,"./react/reducers/popup":301,"react":"react","react-dom":"react-dom","react-dom/server":605,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 (function (global){
 'use strict';
 
@@ -1107,7 +1115,11 @@ function BlogPostContainer(props) {
 exports.default = (0, _provideTranslations2.default)(BlogPostContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1346,7 +1358,15 @@ BlogPostListItem.propTypes = {
 exports.default = (0, _provideTranslations2.default)(BlogPostListItem);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../services/Thumbor":333,"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],20:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../services/Thumbor":331,"../HoC/provideTranslations":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],20:[function(require,module,exports){
+=======
+},{"../../services/Thumbor":331,"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],20:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1791,7 +1811,15 @@ CabinetOrder.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetOrder);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../common/Order/OrderIcons":262,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],24:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"../common/Order/OrderIcons":260,"../common/Order/OrderState":264,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],24:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../common/Order/OrderIcons":260,"../common/Order/OrderState":264,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],24:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1936,7 +1964,15 @@ CabinetContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CabinetContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./Cabinet":22,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],26:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"./Cabinet":22,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],26:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./Cabinet":22,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],26:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2521,7 +2557,15 @@ CartCoupon.defaultProps = {
 
 exports.default = (0, _provideTranslations2.default)(CartCoupon);
 
+<<<<<<< HEAD
 },{"../../../routes/api":339,"../HoC/provideTranslations":97,"../common/TextInput":273,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../routes/api":337,"../HoC/provideTranslations":95,"../common/TextInput":271,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+=======
+},{"../../../routes/api":337,"../HoC/provideTranslations":96,"../common/TextInput":271,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3919,7 +3963,15 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(CartContainer)));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":288,"../../reducers/cart":299,"../../reducers/packages":302,"../../schemas":316,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],37:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":286,"../../reducers/cart":297,"../../reducers/packages":300,"../../schemas":314,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],35:[function(require,module,exports){
+=======
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":286,"../../reducers/cart":297,"../../reducers/packages":300,"../../schemas":314,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],35:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3954,53 +4006,94 @@ var _provideTranslations = require('../HoC/provideTranslations');
 
 var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
-var _Checkbox = require('../common/Checkbox');
-
-var _Checkbox2 = _interopRequireDefault(_Checkbox);
-
 var _CatalogFilterOptions = require('./CatalogFilterOptions');
 
 var _CatalogFilterOptions2 = _interopRequireDefault(_CatalogFilterOptions);
+
+var _CatalogFilterToggle = require('./CatalogFilterToggle');
+
+var _CatalogFilterToggle2 = _interopRequireDefault(_CatalogFilterToggle);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CatalogFilter = function (_Component) {
   (0, _inherits3.default)(CatalogFilter, _Component);
 
-  function CatalogFilter() {
+  function CatalogFilter(props) {
     (0, _classCallCheck3.default)(this, CatalogFilter);
-    return (0, _possibleConstructorReturn3.default)(this, (CatalogFilter.__proto__ || (0, _getPrototypeOf2.default)(CatalogFilter)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (CatalogFilter.__proto__ || (0, _getPrototypeOf2.default)(CatalogFilter)).call(this, props));
+
+    _this.handleFilterToggle = _this.handleFilterToggle.bind(_this);
+    _this.state = {
+      isOpen: true
+    };
+    return _this;
   }
 
   (0, _createClass3.default)(CatalogFilter, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.syncBodyClass(this.state.isOpen);
+    }
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate(nextProps, nextState) {
+      this.syncBodyClass(nextState.isOpen);
+    }
+  }, {
+    key: 'syncBodyClass',
+    value: function syncBodyClass(isOpen) {
+      if (isOpen) {
+        document.body.classList.remove('b-page_layout-filter--hidden');
+        document.body.classList.add('b-page_layout-filter');
+      } else {
+        document.body.classList.remove('b-page_layout-filter');
+        document.body.classList.add('b-page_layout-filter--hidden');
+      }
+    }
+  }, {
+    key: 'handleFilterToggle',
+    value: function handleFilterToggle() {
+      this.setState({ isOpen: !this.state.isOpen });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          isFilterToggleVisible = _props.isFilterToggleVisible,
+          filterUrl = _props.filterUrl;
+      var isOpen = this.state.isOpen;
+
+      var containerClasses = (0, _classnames2.default)('b-item-list__filter-container', {
+        'b-item-list__filter-container--trigger-visible': isFilterToggleVisible
+      });
+
       return _react2.default.createElement(
         'div',
-        { className: 'b-full-filter' },
-        _react2.default.createElement(_Checkbox2.default, {
-          className: 'b-full-filter__toggle',
-          name: 'filter-toggle',
-          id: 'filter-toggle'
+        { className: containerClasses },
+        _react2.default.createElement(_CatalogFilterToggle2.default, {
+          handleFilterToggle: this.handleFilterToggle,
+          isOpen: isOpen,
+          isVisible: isFilterToggleVisible
         }),
         _react2.default.createElement(
-          'label',
-          {
-            className: 'b-full-filter__trigger',
-            htmlFor: 'filter-toggle'
-          },
+          'div',
+          { className: 'b-item-list__filter' },
           _react2.default.createElement(
-            'span',
-            { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_open' },
-            '\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_close' },
-            '\u0421\u043A\u0440\u044B\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
+            'form',
+            { action: filterUrl, method: 'get' },
+            _react2.default.createElement(
+              'div',
+              { className: 'b-full-filter' },
+              _react2.default.createElement(_CatalogFilterOptions2.default, this.props)
+            )
           )
-        ),
-        _react2.default.createElement(_CatalogFilterOptions2.default, this.props)
+        )
       );
     }
   }]);
@@ -4009,6 +4102,8 @@ var CatalogFilter = function (_Component) {
 
 CatalogFilter.propTypes = {
   filterName: _react.PropTypes.string,
+  filterUrl: _react.PropTypes.string.isRequired,
+  isFilterToggleVisible: _react.PropTypes.bool,
   options: _react.PropTypes.array.isRequired,
   params: _react.PropTypes.object,
   selectedOptions: _react.PropTypes.array
@@ -4017,7 +4112,15 @@ CatalogFilter.propTypes = {
 exports.default = (0, _provideTranslations2.default)(CatalogFilter);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../common/Checkbox":243,"./CatalogFilterOptions":42,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],38:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"../common/Checkbox":241,"./CatalogFilterOptions":40,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],36:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./CatalogFilterOptions":40,"./CatalogFilterToggle":44,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],36:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4230,7 +4333,15 @@ CatalogFilterCheckbox.propTypes = {
 exports.default = CatalogFilterCheckbox;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":38,"./CatalogFilterExpandButton":41,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","react-dom":"react-dom"}],40:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":36,"./CatalogFilterExpandButton":39,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react","react-dom":"react-dom"}],38:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":36,"./CatalogFilterExpandButton":39,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react","react-dom":"react-dom"}],38:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4347,7 +4458,15 @@ CatalogFilterColor.propTypes = {
 exports.default = CatalogFilterColor;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],41:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],39:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],39:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4701,7 +4820,15 @@ CatalogFilterRadio.propTypes = {
 exports.default = CatalogFilterRadio;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],44:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],42:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-dom":"react-dom"}],42:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4901,7 +5028,15 @@ CatalogFilterRange.defaultProps = {
 exports.default = CatalogFilterRange;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/slicedToArray":361,"numeral":578,"react":"react","react-nouislider":"react-nouislider"}],45:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/catalogFilterActions":8,"./utils":46,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/slicedToArray":359,"numeral":576,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/slicedToArray":359,"numeral":576,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4981,7 +5116,86 @@ CatalogFilterSelectedOptions.propTypes = {
 exports.default = CatalogFilterSelectedOptions;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],46:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],44:[function(require,module,exports){
+<<<<<<< HEAD
+=======
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require("babel-runtime/helpers/inherits");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CatalogFilterToggle = function (_Component) {
+  (0, _inherits3.default)(CatalogFilterToggle, _Component);
+
+  function CatalogFilterToggle() {
+    (0, _classCallCheck3.default)(this, CatalogFilterToggle);
+    return (0, _possibleConstructorReturn3.default)(this, (CatalogFilterToggle.__proto__ || (0, _getPrototypeOf2.default)(CatalogFilterToggle)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(CatalogFilterToggle, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          handleFilterToggle = _props.handleFilterToggle,
+          isOpen = _props.isOpen;
+
+
+      return _react2.default.createElement(
+        "div",
+        { className: "b-full-filter__trigger", onClick: handleFilterToggle },
+        _react2.default.createElement(
+          "span",
+          { className: "b-btn element--active-opacity b-full-filter__trigger__action" },
+          isOpen ? 'Скрыть фильтр' : 'Показать фильтр'
+        )
+      );
+    }
+  }]);
+  return CatalogFilterToggle;
+}(_react.Component);
+
+CatalogFilterToggle.propTypes = {
+  handleFilterToggle: _react.PropTypes.func.isRequired,
+  isOpen: _react.PropTypes.bool.isRequired,
+  isVisible: _react.PropTypes.bool
+};
+
+exports.default = CatalogFilterToggle;
+module.exports = exports["default"];
+
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],45:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5017,7 +5231,7 @@ var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
 
-var _CatalogFilter = require('./CatalogFilter.jsx');
+var _CatalogFilter = require('./CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
@@ -5036,15 +5250,7 @@ var CatalogFilterContainer = function (_Component) {
   (0, _createClass3.default)(CatalogFilterContainer, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'b-item-list__filter' },
-        _react2.default.createElement(
-          'form',
-          { action: this.props.filterUrl, method: 'get' },
-          _react2.default.createElement(_CatalogFilter2.default, this.props)
-        )
-      );
+      return _react2.default.createElement(_CatalogFilter2.default, this.props);
     }
   }]);
   return CatalogFilterContainer;
@@ -5053,6 +5259,7 @@ var CatalogFilterContainer = function (_Component) {
 CatalogFilterContainer.propTypes = {
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
+  isFilterToggleVisible: _react.PropTypes.bool,
   options: _react.PropTypes.arrayOf(schemas.catalogFilterOption).isRequired,
   params: _react.PropTypes.objectOf(_react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])),
   selectedOptions: _react.PropTypes.arrayOf(_react.PropTypes.shape({
@@ -5063,6 +5270,7 @@ CatalogFilterContainer.propTypes = {
 
 CatalogFilterContainer.defaultProps = {
   filterUrl: '',
+  isFilterToggleVisible: false,
   options: [],
   params: {},
   selectedOptions: []
@@ -5071,7 +5279,15 @@ CatalogFilterContainer.defaultProps = {
 exports.default = CatalogFilterContainer;
 exports.CatalogFilter = _CatalogFilter2.default;
 
+<<<<<<< HEAD
 },{"../../schemas":316,"./CatalogFilter.jsx":37,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],47:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"./CatalogFilter.jsx":35,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],45:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./CatalogFilter":35,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],46:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5112,7 +5328,15 @@ function getFilter(instance) {
 }
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":357,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],48:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/helpers/extends":355,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],46:[function(require,module,exports){
+=======
+},{"babel-runtime/helpers/extends":355,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],47:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5130,7 +5354,11 @@ Object.defineProperty(exports, 'getFilter', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+<<<<<<< HEAD
 },{"./getFilter":47}],49:[function(require,module,exports){
+=======
+},{"./getFilter":46}],48:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5230,7 +5458,15 @@ CategoriesShow.propTypes = {
 exports.default = CategoriesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],50:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],48:[function(require,module,exports){
+=======
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],49:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5336,7 +5572,15 @@ CategoriesShowPage.defaultProps = {};
 exports.default = CategoriesShowPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList":199,"../VendorLayout":210,"./index":51,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],51:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ProductList":197,"../VendorLayout":208,"./index":49,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],49:[function(require,module,exports){
+=======
+},{"../ProductList":197,"../VendorLayout":208,"./index":50,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],50:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5420,7 +5664,15 @@ CategoriesShowContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(CategoriesShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../ProductList":199,"./CategoriesShow":49,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],52:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"../ProductList":197,"./CategoriesShow":47,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],50:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":197,"./CategoriesShow":48,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],51:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5513,7 +5765,15 @@ CategoriesShowChildren.propTypes = {
 exports.default = CategoriesShowChildren;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],53:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ChildrenProducts":63,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],51:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],52:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5617,7 +5877,15 @@ CategoriesShowChildrenPage.propTypes = {
 exports.default = CategoriesShowChildrenPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"../VendorLayout":210,"./index":54,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],54:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ChildrenProducts":63,"../VendorLayout":208,"./index":52,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],52:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"../VendorLayout":208,"./index":53,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],53:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5698,7 +5966,15 @@ CategoriesShowChildrenContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(CategoriesShowChildrenContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"../HoC/provideTranslations":97,"./CategoriesShowChildren":52,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],55:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ChildrenProducts":63,"../HoC/provideTranslations":95,"./CategoriesShowChildren":50,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],53:[function(require,module,exports){
+=======
+},{"../ChildrenProducts":64,"../HoC/provideTranslations":96,"./CategoriesShowChildren":51,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],54:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5865,7 +6141,15 @@ CheckoutActions.propTypes = {
 exports.default = CheckoutActions;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"./CheckoutPublicOffer":61,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],56:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"./CheckoutPublicOffer":59,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],54:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./CheckoutPublicOffer":60,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],55:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5930,7 +6214,15 @@ CheckoutAlert.propTypes = {
 exports.default = CheckoutAlert;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Alert":240,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],57:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/Alert":238,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],55:[function(require,module,exports){
+=======
+},{"../common/Alert":238,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],56:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6120,7 +6412,15 @@ CheckoutCoupon.defaultProps = {
 exports.default = CheckoutCoupon;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../routes/api":339,"../common/TextInput":273,"./CheckoutAlert":56,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],58:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../routes/api":337,"../common/TextInput":271,"./CheckoutAlert":54,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],56:[function(require,module,exports){
+=======
+},{"../../../routes/api":337,"../common/TextInput":271,"./CheckoutAlert":55,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","react":"react"}],57:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6269,7 +6569,15 @@ CheckoutDeliveries.defaultProps = {
 exports.default = CheckoutDeliveries;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../helpers/text":293,"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react"}],59:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":287,"../../helpers/text":291,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react"}],57:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"../../helpers/text":291,"../common/Money/HumanizedMoneyWithCurrency":257,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react"}],58:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6441,7 +6749,15 @@ CheckoutFields.defaultProps = {};
 exports.default = CheckoutFields;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react","timm":"timm"}],60:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react","timm":"timm"}],58:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"humps":471,"react":"react","timm":"timm"}],59:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6570,7 +6886,15 @@ CheckoutPayments.defaultProps = {
 exports.default = CheckoutPayments;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/text":293,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],61:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/text":291,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],59:[function(require,module,exports){
+=======
+},{"../../helpers/text":291,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react"}],60:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6683,7 +7007,15 @@ CheckoutPublicOffer.defaultProps = {
 exports.default = CheckoutPublicOffer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Checkbox":243,"../common/HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],62:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/Checkbox":241,"../common/HiddenInput":245,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],60:[function(require,module,exports){
+=======
+},{"../common/Checkbox":241,"../common/HiddenInput":245,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],61:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6770,7 +7102,15 @@ CheckoutStep.propTypes = {
 exports.default = CheckoutStep;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],63:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],61:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],62:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6968,7 +7308,15 @@ Checkout.defaultProps = {
 exports.default = Checkout;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../routes/app":340,"../../schemas":316,"../common/Alert":240,"../common/FormAuthenticity":245,"./CheckoutActions":55,"./CheckoutCoupon":57,"./CheckoutDeliveries":58,"./CheckoutFields":59,"./CheckoutPayments":60,"./CheckoutStep":62,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],64:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../routes/app":338,"../../schemas":314,"../common/Alert":238,"../common/FormAuthenticity":243,"./CheckoutActions":53,"./CheckoutCoupon":55,"./CheckoutDeliveries":56,"./CheckoutFields":57,"./CheckoutPayments":58,"./CheckoutStep":60,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],62:[function(require,module,exports){
+=======
+},{"../../../routes/app":338,"../../schemas":314,"../common/Alert":238,"../common/FormAuthenticity":243,"./CheckoutActions":54,"./CheckoutCoupon":56,"./CheckoutDeliveries":57,"./CheckoutFields":58,"./CheckoutPayments":59,"./CheckoutStep":61,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],63:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7090,7 +7438,15 @@ ChildrenProducts.defaultProps = {
 exports.default = ChildrenProducts;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../ProductGroup":197,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],65:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../ProductGroup":195,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],63:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../ProductGroup":195,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],64:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7178,7 +7534,15 @@ ChildrenProductsContainer.defaultProps = {
 exports.default = ChildrenProductsContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"./ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],66:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"./ChildrenProducts":62,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],64:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"./ChildrenProducts":63,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],65:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7316,7 +7680,15 @@ ClientSessionNew.defaultProps = {
 exports.default = ClientSessionNew;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../common/FormAuthenticity":245,"./PinAlert":68,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],67:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../common/FormAuthenticity":243,"./PinAlert":66,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],65:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../common/FormAuthenticity":243,"./PinAlert":67,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],66:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7416,7 +7788,15 @@ ClientSessionNewPage.propTypes = {
 exports.default = ClientSessionNewPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":69,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],68:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../VendorLayout":208,"./index":67,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],66:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../VendorLayout":208,"./index":68,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],67:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7529,7 +7909,15 @@ PinAlert.defaultProps = {
 exports.default = PinAlert;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],69:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],67:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],68:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7607,7 +7995,15 @@ ClientSessionNewContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ClientSessionNewContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./ClientSessionNew":66,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],70:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./ClientSessionNew":64,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],68:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./ClientSessionNew":65,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],69:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7715,7 +8111,15 @@ Clientbar.defaultProps = {
 exports.default = Clientbar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../buttons/CabinetButton":227,"../buttons/CartButton/CartButtonController":229,"../buttons/WishlistButton":235,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],71:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../buttons/CabinetButton":225,"../buttons/CartButton/CartButtonController":227,"../buttons/WishlistButton":233,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],69:[function(require,module,exports){
+=======
+},{"../buttons/CabinetButton":225,"../buttons/CartButton/CartButtonController":227,"../buttons/WishlistButton":233,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],70:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7733,7 +8137,11 @@ Object.defineProperty(exports, 'Clientbar', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+<<<<<<< HEAD
 },{"./Clientbar":70}],72:[function(require,module,exports){
+=======
+},{"./Clientbar":69}],71:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7832,7 +8240,15 @@ ContentPage.propTypes = {
 exports.default = ContentPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],73:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],71:[function(require,module,exports){
+=======
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],72:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7925,7 +8341,15 @@ ContentPagePage.propTypes = {
 exports.default = ContentPagePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":74,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],74:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../VendorLayout":208,"./index":72,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],72:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":73,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],73:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7951,7 +8375,15 @@ function ContentPageContainer(props) {
 exports.default = ContentPageContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./ContentPage":72,"humps":473,"react":"react"}],75:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./ContentPage":70,"humps":471,"react":"react"}],73:[function(require,module,exports){
+=======
+},{"./ContentPage":71,"humps":471,"react":"react"}],74:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8059,7 +8491,15 @@ CurrencySwitcher.propTypes = {
 exports.default = CurrencySwitcher;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/money":289,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"lodash/object/get":569,"react":"react"}],76:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/money":287,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"lodash/object/get":567,"react":"react"}],74:[function(require,module,exports){
+=======
+},{"../../helpers/money":287,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"lodash/object/get":567,"react":"react"}],75:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8139,7 +8579,15 @@ CurrencySwitcherContainer.defaultProps = {
 exports.default = CurrencySwitcherContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./CurrencySwitcher":75,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],77:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./CurrencySwitcher":73,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","urijs":"urijs"}],75:[function(require,module,exports){
+=======
+},{"./CurrencySwitcher":74,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","urijs":"urijs"}],76:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8480,7 +8928,15 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(DesignPreview);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":96,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","jss":"jss","jss-nested":490,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],78:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/connectToRedux":94,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","jss":"jss","jss-nested":488,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],76:[function(require,module,exports){
+=======
+},{"../HoC/connectToRedux":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","jss":"jss","jss-nested":488,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],77:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8631,7 +9087,15 @@ var DesignSettingsAttach = (_temp2 = _class2 = function (_Component2) {
 exports.default = DesignSettingsAttach;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],79:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],77:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],78:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8708,7 +9172,15 @@ var DesignSettingsCheckbox = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsCheckbox;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],80:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],78:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],79:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -8768,7 +9240,15 @@ var DesignSettingsCloseButton = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsCloseButton;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],81:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],79:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],80:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8940,7 +9420,15 @@ exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(functio
 })(DesignSettingsContainer));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../../constants/globalEventKeys":280,"../../constants/storageKeys":285,"../HoC/connectToRedux":96,"./index":86,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":798}],82:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../../constants/globalEventKeys":278,"../../constants/storageKeys":283,"../HoC/connectToRedux":94,"./index":84,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":796}],80:[function(require,module,exports){
+=======
+},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../../constants/globalEventKeys":278,"../../constants/storageKeys":283,"../HoC/connectToRedux":95,"./index":85,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":796}],81:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9028,7 +9516,15 @@ var DesignSettingsOption = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsOption;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],83:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],81:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],82:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9203,7 +9699,15 @@ var DesignSettingsRadioListItem = (_temp2 = _class2 = function (_Component2) {
 }, _temp2);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/designTypes":279,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],84:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../constants/designTypes":277,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],82:[function(require,module,exports){
+=======
+},{"../../constants/designTypes":277,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],83:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9301,7 +9805,15 @@ var DesignSettingsSaveButton = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsSaveButton;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],83:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],84:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9400,7 +9912,15 @@ var DesignSettingsSlider = (_temp = _class = function (_Component) {
 exports.default = DesignSettingsSlider;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/Slider":272,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],86:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/Slider":270,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],84:[function(require,module,exports){
+=======
+},{"../common/Slider":270,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9765,7 +10285,15 @@ var DesignSettings = (_temp = _class = function (_Component) {
 exports.default = DesignSettings;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../models/designOptions":297,"../common/Accordion":239,"../common/Accordion/AccordionItem":236,"../common/Scroller":270,"./DesignSettingsAttach":78,"./DesignSettingsCheckbox":79,"./DesignSettingsCloseButton":80,"./DesignSettingsOption":82,"./DesignSettingsRadioList":83,"./DesignSettingsSaveButton":84,"./DesignSettingsSlider":85,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],87:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../models/designOptions":295,"../common/Accordion":237,"../common/Accordion/AccordionItem":234,"../common/Scroller":268,"./DesignSettingsAttach":76,"./DesignSettingsCheckbox":77,"./DesignSettingsCloseButton":78,"./DesignSettingsOption":80,"./DesignSettingsRadioList":81,"./DesignSettingsSaveButton":82,"./DesignSettingsSlider":83,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],85:[function(require,module,exports){
+=======
+},{"../../models/designOptions":295,"../common/Accordion":237,"../common/Accordion/AccordionItem":234,"../common/Scroller":268,"./DesignSettingsAttach":77,"./DesignSettingsCheckbox":78,"./DesignSettingsCloseButton":79,"./DesignSettingsOption":81,"./DesignSettingsRadioList":82,"./DesignSettingsSaveButton":83,"./DesignSettingsSlider":84,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],86:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9838,7 +10366,15 @@ Dictionary.propTypes = {
 exports.default = Dictionary;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],88:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],86:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],87:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9923,7 +10459,15 @@ DictionaryPage.propTypes = {
 exports.default = DictionaryPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":89,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],89:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../VendorLayout":208,"./index":87,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],87:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":88,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],88:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9949,7 +10493,15 @@ function DictionaryContainer(props) {
 exports.default = DictionaryContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./Dictionary":87,"humps":473,"react":"react"}],90:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./Dictionary":85,"humps":471,"react":"react"}],88:[function(require,module,exports){
+=======
+},{"./Dictionary":86,"humps":471,"react":"react"}],89:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10046,7 +10598,15 @@ DictionaryEntitiesShow.propTypes = {
 exports.default = DictionaryEntitiesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],91:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],89:[function(require,module,exports){
+=======
+},{"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],90:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10149,7 +10709,15 @@ DictionaryEntitiesShowPage.defaultProps = {};
 exports.default = DictionaryEntitiesShowPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../ProductList":199,"../VendorLayout":210,"./index":92,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],92:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../ProductList":197,"../VendorLayout":208,"./index":90,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],90:[function(require,module,exports){
+=======
+},{"../ProductList":197,"../VendorLayout":208,"./index":91,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],91:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10231,7 +10799,15 @@ DictionaryEntitiesShowContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(DictionaryEntitiesShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../ProductList":199,"./DictionaryEntitiesShow":90,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],93:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"../ProductList":197,"./DictionaryEntitiesShow":88,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],91:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":197,"./DictionaryEntitiesShow":89,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],92:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10338,7 +10914,15 @@ ErrorPage.defaultProps = {
 exports.default = ErrorPage;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],94:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],92:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],93:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10434,7 +11018,15 @@ ErrorPagePage.propTypes = {
 exports.default = ErrorPagePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":95,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],95:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../VendorLayout":208,"./index":93,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],93:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"./index":94,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],94:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10460,7 +11052,15 @@ function ErrorPageContainter(props) {
 exports.default = ErrorPageContainter;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./ErrorPage":93,"humps":473,"react":"react"}],96:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./ErrorPage":91,"humps":471,"react":"react"}],94:[function(require,module,exports){
+=======
+},{"./ErrorPage":92,"humps":471,"react":"react"}],95:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 (function (global){
 'use strict';
 
@@ -10526,7 +11126,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux"}],97:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux"}],95:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux"}],96:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10657,7 +11265,15 @@ var provideTranslations = function provideTranslations(WrappedComponent) {
 exports.default = provideTranslations;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../constants/localeLanguages":281,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"i18next":"i18next","react":"react"}],98:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../constants/localeLanguages":279,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"i18next":"i18next","react":"react"}],96:[function(require,module,exports){
+=======
+},{"../../constants/localeLanguages":279,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/defineProperty":354,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"i18next":"i18next","react":"react"}],97:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10771,7 +11387,15 @@ Instagram.propTypes = {
 exports.default = Instagram;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./InstagramEntries":101,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],99:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./InstagramEntries":99,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],97:[function(require,module,exports){
+=======
+},{"./InstagramEntries":100,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],98:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10781,7 +11405,11 @@ var ERROR_STATE = exports.ERROR_STATE = 'error';
 var LOADING_STATE = exports.LOADING_STATE = 'loading';
 var READY_STATE = exports.READY_STATE = 'ready';
 
+<<<<<<< HEAD
 },{}],100:[function(require,module,exports){
+=======
+},{}],99:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10907,7 +11535,15 @@ InstagramContainer.defaultProps = {
 exports.default = InstagramContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/instagramActions":10,"./Instagram":98,"./InstagramContainer.constants":99,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],101:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/instagramActions":10,"./Instagram":96,"./InstagramContainer.constants":97,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],99:[function(require,module,exports){
+=======
+},{"../../actions/instagramActions":10,"./Instagram":97,"./InstagramContainer.constants":98,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],100:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10998,7 +11634,15 @@ InstagramEntries.propTypes = {
 exports.default = InstagramEntries;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],102:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],100:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],101:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11025,7 +11669,11 @@ Object.defineProperty(exports, 'InstagramContainer', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+<<<<<<< HEAD
 },{"./Instagram":98,"./InstagramContainer":100}],103:[function(require,module,exports){
+=======
+},{"./Instagram":97,"./InstagramContainer":99}],102:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11135,7 +11783,15 @@ LocaleSwitcher.propTypes = {
 exports.default = (0, _provideTranslations2.default)(LocaleSwitcher);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"react":"react"}],104:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"react":"react"}],102:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash/collection/map":498,"lodash/collection/size":499,"lodash/function/bind":501,"react":"react"}],103:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11217,7 +11873,15 @@ LocaleSwitcherContainer.defaultProps = {
 exports.default = LocaleSwitcherContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"./LocaleSwitcher":103,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],105:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"./LocaleSwitcher":101,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],103:[function(require,module,exports){
+=======
+},{"../../schemas":314,"./LocaleSwitcher":102,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],104:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11317,7 +11981,15 @@ var LogoContainer = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(LogoContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":96,"./index":106,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux","timm":"timm"}],106:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/connectToRedux":94,"./index":104,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux","timm":"timm"}],104:[function(require,module,exports){
+=======
+},{"../HoC/connectToRedux":95,"./index":105,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-redux":"react-redux","timm":"timm"}],105:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11389,7 +12061,15 @@ var Logo = (_temp = _class = function (_Component) {
 exports.default = Logo;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],107:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],105:[function(require,module,exports){
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],106:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11469,7 +12149,15 @@ Lookbook.propTypes = {
 exports.default = Lookbook;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],108:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],106:[function(require,module,exports){
+=======
+},{"../common/ImageSlider":250,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],107:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11563,7 +12251,15 @@ LookbookPage.propTypes = {
 exports.default = LookbookPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../VendorLayout":210,"../common/ImageSlider":252,"./index":109,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],109:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../VendorLayout":208,"../common/ImageSlider":250,"./index":107,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],107:[function(require,module,exports){
+=======
+},{"../VendorLayout":208,"../common/ImageSlider":250,"./index":108,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],108:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11589,7 +12285,12 @@ function LookbookContainer(props) {
 exports.default = LookbookContainer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"./Lookbook":107,"humps":473,"react":"react"}],110:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"./Lookbook":105,"humps":471,"react":"react"}],108:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11758,7 +12459,14 @@ EmailOptInForm.propTypes = {
 exports.default = EmailOptInForm;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../../routes/api":339,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","lodash":"lodash","react":"react"}],111:[function(require,module,exports){
+=======
+},{"../../../routes/api":337,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","lodash":"lodash","react":"react"}],109:[function(require,module,exports){
+=======
+},{"./Lookbook":106,"humps":471,"react":"react"}],109:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12047,7 +12755,15 @@ MenuBottom.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuBottom);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CurrencySwitcher":76,"../HoC/provideTranslations":97,"../LocaleSwitcher":104,"./EmailOptInForm":110,"./MenuBottomLink":111,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],113:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CurrencySwitcher":74,"../HoC/provideTranslations":95,"../LocaleSwitcher":102,"./EmailOptInForm":108,"./MenuBottomLink":109,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],111:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CurrencySwitcher":75,"../HoC/provideTranslations":96,"../LocaleSwitcher":103,"./MenuBottomLink":109,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"classnames":"classnames","react":"react"}],111:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12939,7 +13655,15 @@ MenuTop.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(MenuTop);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./MenuTopDesktop":113,"./MenuTopMobile":117,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-stickynode":"react-stickynode"}],120:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./MenuTopDesktop":111,"./MenuTopMobile":115,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-stickynode":"react-stickynode"}],118:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./MenuTopDesktop":111,"./MenuTopMobile":115,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-stickynode":"react-stickynode"}],118:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13068,7 +13792,15 @@ NavBar.propTypes = {
 exports.default = NavBar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../Clientbar":71,"../Logo":106,"../common/ProductSearchForm":268,"./NavBarContacts":121,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],121:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../Clientbar":69,"../Logo":104,"../common/ProductSearchForm":266,"./NavBarContacts":119,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],119:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Clientbar":70,"../Logo":105,"../common/ProductSearchForm":266,"./NavBarContacts":119,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],119:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13313,7 +14045,15 @@ NavBarContainer.defaultProps = {
 
 exports.default = (0, _provideTranslations2.default)(NavBarContainer);
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../Clientbar":71,"../HoC/provideTranslations":97,"../Logo":106,"./NavBar":120,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],123:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../Clientbar":69,"../HoC/provideTranslations":95,"../Logo":104,"./NavBar":118,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],121:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Clientbar":70,"../HoC/provideTranslations":96,"../Logo":105,"./NavBar":118,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],121:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13556,7 +14296,15 @@ Order.propTypes = {
 exports.default = Order;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../Checkout":63,"./OrderTitle":126,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],125:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../Checkout":61,"./OrderTitle":124,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],123:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Checkout":62,"./OrderTitle":124,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],123:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14069,7 +14817,15 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(OrderContainer)));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../helpers/dom":288,"../../reducers/cart":299,"../../schemas":316,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Order":124,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],128:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/CartActions":4,"../../helpers/dom":286,"../../reducers/cart":297,"../../schemas":314,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Order":122,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],126:[function(require,module,exports){
+=======
+},{"../../actions/CartActions":4,"../../helpers/dom":286,"../../reducers/cart":297,"../../schemas":314,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Order":122,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],126:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14369,7 +15125,15 @@ OrderCancelledContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderCancelledContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderCancelled":128,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],131:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderCancelled":126,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],129:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderCancelled":126,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],129:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14677,7 +15441,15 @@ OrderCreatedContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(OrderCreatedContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderCreated":131,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],134:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderCreated":129,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],132:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderCreated":129,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],132:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14997,7 +15769,15 @@ OrderPaidContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderPaidContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderPaid":134,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],137:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderPaid":132,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],135:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderPaid":132,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],135:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15288,7 +16068,15 @@ OrderPaymentContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(OrderPaymentContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./OrderPayment":137,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],140:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"./OrderPayment":135,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],138:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./OrderPayment":135,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],138:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15609,7 +16397,15 @@ OrderShowContainer.propTypes = {
 exports.default = (0, _provideTranslations2.default)(OrderShowContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderShow":140,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],143:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./OrderShow":138,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],141:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./OrderShow":138,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],141:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16104,7 +16900,15 @@ PaymentContainer.propTypes = {
 
 exports.default = (0, _provideTranslations2.default)(PaymentContainer);
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./Payment":146,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],149:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"./Payment":144,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],147:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./Payment":144,"babel-runtime/helpers/extends":355,"humps":471,"react":"react"}],147:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16580,7 +17384,15 @@ ProductBlock.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductBlock);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../HoC/provideTranslations":97,"../ProductBlockCartForm/ProductBlockCartFormButton":158,"../ProductPrices":185,"./ProductBlockBadges":155,"./ProductBlockImage":156,"react":"react"}],158:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../HoC/provideTranslations":95,"../ProductBlockCartForm/ProductBlockCartFormButton":156,"../ProductPrices":183,"./ProductBlockBadges":153,"./ProductBlockImage":154,"react":"react"}],156:[function(require,module,exports){
+=======
+},{"../../HoC/provideTranslations":96,"../ProductBlockCartForm/ProductBlockCartFormButton":156,"../ProductPrices":183,"./ProductBlockBadges":153,"./ProductBlockImage":154,"react":"react"}],156:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17151,7 +17963,15 @@ exports.default = (0, _provideTranslations2.default)(ProductCard);
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+<<<<<<< HEAD
 },{"../../../schemas":316,"../../HoC/provideTranslations":97,"../ProductCart":180,"../ProductPrices":185,"./ProductCard.constants":160,"./ProductCardBadges":162,"./ProductCardBreadcrumbs":163,"./ProductCardDetails":166,"./ProductCardGallery":167,"./ProductCardSchema":171,"./ProductCardSimilarProducts":172,"./ProductCardTitle":173,"./ProductCardVideo":174,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-disqus-thread":606}],162:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../schemas":314,"../../HoC/provideTranslations":95,"../ProductCart":178,"../ProductPrices":183,"./ProductCard.constants":158,"./ProductCardBadges":160,"./ProductCardBreadcrumbs":161,"./ProductCardDetails":164,"./ProductCardGallery":165,"./ProductCardSchema":169,"./ProductCardSimilarProducts":170,"./ProductCardTitle":171,"./ProductCardVideo":172,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-disqus-thread":604}],160:[function(require,module,exports){
+=======
+},{"../../../schemas":314,"../../HoC/provideTranslations":96,"../ProductCart":178,"../ProductPrices":183,"./ProductCard.constants":158,"./ProductCardBadges":160,"./ProductCardBreadcrumbs":161,"./ProductCardDetails":164,"./ProductCardGallery":165,"./ProductCardSchema":169,"./ProductCardSimilarProducts":170,"./ProductCardTitle":171,"./ProductCardVideo":172,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react","react-disqus-thread":604}],160:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20713,7 +21533,15 @@ ProductArchivedContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductArchivedContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./ProductArchived":193,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],196:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./ProductArchived":191,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],194:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./ProductArchived":191,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],194:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20852,7 +21680,15 @@ ProductGroup.defaultProps = {
 exports.default = ProductGroup;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../CatalogFilter":46,"../Product/ProductBlock":157,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],197:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../CatalogFilter":44,"../Product/ProductBlock":155,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],195:[function(require,module,exports){
+=======
+},{"../CatalogFilter":45,"../Product/ProductBlock":155,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],195:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20949,7 +21785,15 @@ ProductGroupContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductGroupContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../CatalogFilter":46,"../HoC/provideTranslations":97,"../Product/ProductBlock":157,"./ProductGroup":196,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],198:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../CatalogFilter":44,"../HoC/provideTranslations":95,"../Product/ProductBlock":155,"./ProductGroup":194,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],196:[function(require,module,exports){
+=======
+},{"../CatalogFilter":45,"../HoC/provideTranslations":96,"../Product/ProductBlock":155,"./ProductGroup":194,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],196:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21132,7 +21976,15 @@ ProductList.propTypes = {
 exports.default = ProductList;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../Pagination":145,"../Product/ProductBlock":157,"../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],199:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../Pagination":143,"../Product/ProductBlock":155,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],197:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../Pagination":143,"../Product/ProductBlock":155,"../common/Image":249,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],197:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21241,7 +22093,15 @@ ProductListContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductListContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],200:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],198:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],198:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21368,7 +22228,15 @@ ProductSearch.propTypes = {
 exports.default = ProductSearch;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],201:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],199:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],199:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21481,7 +22349,15 @@ ProductSearchPage.propTypes = {
 exports.default = ProductSearchPage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../VendorLayout":210,"./index":202,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],202:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../VendorLayout":208,"./index":200,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],200:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../VendorLayout":208,"./index":200,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],200:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21577,7 +22453,15 @@ ProductSearchContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductSearchContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductSearch":200,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],203:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./ProductSearch":198,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],201:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductSearch":198,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],201:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22077,7 +22961,15 @@ Userbar.defaultProps = {
 exports.default = Userbar;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../DesignPreview":77,"../DesignSettings/DesignSettingsContainer":81,"../buttons/CabinetButton":227,"../buttons/DesignButton":231,"../buttons/OperatorButton":233,"../buttons/WishlistButton":235,"./PublishShopButton":205,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],207:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../DesignPreview":75,"../DesignSettings/DesignSettingsContainer":79,"../buttons/CabinetButton":225,"../buttons/DesignButton":229,"../buttons/OperatorButton":231,"../buttons/WishlistButton":233,"./PublishShopButton":203,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],205:[function(require,module,exports){
+=======
+},{"../DesignPreview":76,"../DesignSettings/DesignSettingsContainer":80,"../buttons/CabinetButton":225,"../buttons/DesignButton":229,"../buttons/OperatorButton":231,"../buttons/WishlistButton":233,"./PublishShopButton":203,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],205:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22263,7 +23155,15 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   fetchOperatorState: _OperatorStateActions.fetchOperatorState
 })(UserbarContainer)));
 
+<<<<<<< HEAD
 },{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Userbar":206,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],208:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../HoC/connectToRedux":94,"../HoC/provideTranslations":95,"./Userbar":204,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],206:[function(require,module,exports){
+=======
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":275,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Userbar":204,"babel-runtime/core-js/object/assign":343,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],206:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22370,7 +23270,15 @@ Footer.defaultProps = {
 exports.default = Footer;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../Instagram":102,"../MenuBottom":112,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],209:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../Instagram":100,"../MenuBottom":110,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],207:[function(require,module,exports){
+=======
+},{"../Instagram":101,"../MenuBottom":110,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],207:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22619,7 +23527,15 @@ VendorLayoutContainer.propTypes = _VendorLayout2.default.propTypes;
 exports.default = (0, _provideTranslations2.default)(VendorLayoutContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./VendorLayout":209,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],211:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../HoC/provideTranslations":95,"./VendorLayout":207,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],209:[function(require,module,exports){
+=======
+},{"../HoC/provideTranslations":96,"./VendorLayout":207,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],209:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22744,7 +23660,15 @@ VendorPaymentLayout.propTypes = {
 exports.default = VendorPaymentLayout;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../Logo":106,"../common/LayoutMessages":256,"../common/W1Widget":274,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],212:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../Logo":104,"../common/LayoutMessages":254,"../common/W1Widget":272,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],210:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../Logo":105,"../common/LayoutMessages":254,"../common/W1Widget":272,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],210:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22966,7 +23890,15 @@ Welcome.defaultProps = {};
 exports.default = Welcome;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../helpers/seo":292,"../../schemas":316,"../CatalogFilter":46,"../ProductList/ProductList":198,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],214:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+=======
+},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23088,7 +24020,15 @@ WelcomePage.propTypes = {
 exports.default = WelcomePage;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../VendorLayout":210,"./index":215,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],215:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../VendorLayout":208,"./index":213,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],213:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../VendorLayout":208,"./index":213,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/extends":355,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],213:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23191,7 +24131,15 @@ WelcomeContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WelcomeContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./Welcome":213,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],216:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../CatalogFilter":44,"../HoC/provideTranslations":95,"./Welcome":211,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],214:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./Welcome":211,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],214:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23311,7 +24259,15 @@ WelcomeChildren.propTypes = {
 exports.default = WelcomeChildren;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../ChildrenProducts/ChildrenProducts":64,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],217:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../ChildrenProducts/ChildrenProducts":62,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],215:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../ChildrenProducts/ChildrenProducts":63,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],215:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24109,7 +25065,15 @@ WishlistContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(WishlistContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./Wishlist":219,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],225:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../schemas":314,"../HoC/provideTranslations":95,"./Wishlist":217,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],223:[function(require,module,exports){
+=======
+},{"../../schemas":314,"../HoC/provideTranslations":96,"./Wishlist":217,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],223:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27729,7 +28693,15 @@ exports.OrderDeliveryIcon = OrderDeliveryIcon;
 exports.OrderPaymentIcon = OrderPaymentIcon;
 exports.OrderPaymentStateIcon = OrderPaymentStateIcon;
 
+<<<<<<< HEAD
 },{"../../../constants/deliveryConstants":278,"../../../constants/paymentConstants":282,"../../../constants/reservationConstants":284,"../../HoC/provideTranslations":97,"../FaIcon":244,"./OrderLabels":264,"react":"react"}],263:[function(require,module,exports){
+=======
+<<<<<<< HEAD
+},{"../../../constants/deliveryConstants":276,"../../../constants/paymentConstants":280,"../../../constants/reservationConstants":282,"../../HoC/provideTranslations":95,"../FaIcon":242,"./OrderLabels":262,"react":"react"}],261:[function(require,module,exports){
+=======
+},{"../../../constants/deliveryConstants":276,"../../../constants/paymentConstants":280,"../../../constants/reservationConstants":282,"../../HoC/provideTranslations":96,"../FaIcon":242,"./OrderLabels":262,"react":"react"}],261:[function(require,module,exports){
+>>>>>>> optional filter trigger button. resolves #4
+>>>>>>> optional filter trigger button. resolves #4
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -43254,6 +44226,7 @@ function closure ( target, options, originalOptions ){
             format = format.replace(/\+/g, '');
         }
 
+<<<<<<< HEAD
         // see if abbreviation is wanted
         if (format.indexOf('a') > -1) {
             // check if abbreviation is specified
@@ -43262,12 +44235,31 @@ function closure ( target, options, originalOptions ){
             abbrB = format.indexOf('aB') >= 0;
             abbrT = format.indexOf('aT') >= 0;
             abbrForce = abbrK || abbrM || abbrB || abbrT;
+=======
+            // see if we are formatting binary bytes
+            if (format.indexOf('b') > -1) {
+                // check for space before
+                if (format.indexOf(' b') > -1) {
+                    bytes = ' ';
+                    format = format.replace(' b', '');
+                } else {
+                    format = format.replace('b', '');
+                }
+<<<<<<< HEAD
+
+                for (power = 0; power <= binarySuffixes.length; power++) {
+                    min = Math.pow(1024, power);
+                    max = Math.pow(1024, power + 1);
+
+=======
+>>>>>>> optional filter trigger button. resolves #4
 
             // check for space before abbreviation
             if (format.indexOf(' a') > -1) {
                 abbr = ' ';
             }
 
+<<<<<<< HEAD
             format = format.replace(new RegExp(abbr + 'a[KMBT]?'), '');
 
             if (abs >= Math.pow(10, 12) && !abbrForce || abbrT) {
@@ -43286,6 +44278,17 @@ function closure ( target, options, originalOptions ){
                 // thousand
                 abbr = abbr + languages[options.currentLanguage].abbreviations.thousand;
                 value = value / Math.pow(10, 3);
+=======
+>>>>>>> optional filter trigger button. resolves #4
+                    if (value >= min && value < max) {
+                        bytes = bytes + binarySuffixes[power];
+                        if (min > 0) {
+                            value = value / min;
+                        }
+                        break;
+                    }
+                }
+>>>>>>> optional filter trigger button. resolves #4
             }
         }
 
