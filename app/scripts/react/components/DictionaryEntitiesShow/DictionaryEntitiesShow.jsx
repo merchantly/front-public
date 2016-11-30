@@ -5,7 +5,9 @@ class DictionaryEntitiesShow extends Component {
   render() {
     const {
       entity,
+      nextButton,
       products,
+      showNextButton,
       t,
       title,
       vendorRootPath,
@@ -15,7 +17,9 @@ class DictionaryEntitiesShow extends Component {
       ? (
         <ProductList
           container={entity}
+          nextButton={nextButton}
           products={products}
+          showNextButton={showNextButton}
           showPagination
           title={title}
         />
@@ -35,7 +39,9 @@ class DictionaryEntitiesShow extends Component {
 
 DictionaryEntitiesShow.propTypes = {
   entity: PropTypes.object.isRequired,
+  nextButton: PropTypes.object,
   products: PropTypes.object.isRequired,
+  showNextButton: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
