@@ -12,11 +12,13 @@ class ProductList extends Component {
       showCatalogFilter,
       container,
       i18n,
+      nextButton,
       products: {
         items,
         pagination,
       },
       showCartButton,
+      showNextButton,
       showPagination,
       showQuantity,
       t,
@@ -62,13 +64,20 @@ class ProductList extends Component {
               />
             ))
             : (
-            <div className="b-text b-text_center">
-              {t('vendor.products.nothing_found_by_criteria')}
-            </div>
-          )}
+              <div className="b-text b-text_center">
+                {t('vendor.products.nothing_found_by_criteria')}
+              </div>
+            )}
           {(showPagination && pagination.total_pages > 1) && (
             <div className="b-item-list__paginator">
               <Pagination {...pagination} />
+            </div>
+          )}
+          {!!showNextButton && (
+            <div className="b-text b-item-list__next">
+              <a className="b-btn b-btn_trans" href={nextButton.url}>
+                {nextButton.title}
+              </a>
             </div>
           )}
         </div>

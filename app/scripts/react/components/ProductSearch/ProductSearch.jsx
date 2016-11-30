@@ -7,9 +7,11 @@ class ProductSearch extends Component {
   render() {
     const {
       catalogFilterProps,
+      nextButton,
       products,
       showCatalogFilter,
       showCartButton,
+      showNextButton,
       showQuantity,
       t,
       vendorRootPath,
@@ -19,9 +21,11 @@ class ProductSearch extends Component {
       ? (
         <ProductList
           catalogFilterProps={catalogFilterProps}
+          nextButton={nextButton}
           products={products}
           showCartButton={showCartButton}
           showCatalogFilter={showCatalogFilter}
+          showNextButton={showNextButton}
           showPagination
           showQuantity={showQuantity}
           t={t}
@@ -49,9 +53,11 @@ class ProductSearch extends Component {
 
 ProductSearch.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
+  nextButton: PropTypes.object,
   products: schemas.productList.isRequired,
   showCatalogFilter: PropTypes.bool.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showNextButton: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
   vendorRootPath: PropTypes.string,
