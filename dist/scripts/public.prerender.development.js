@@ -22701,7 +22701,10 @@ var WelcomeChildren = function (_Component) {
           _props$vendor = _props.vendor,
           preProductsText = _props$vendor.preProductsText,
           postProductsText = _props$vendor.postProductsText,
-          sliderImages = _props$vendor.sliderImages;
+          sliderImages = _props$vendor.sliderImages,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showQuantity = _props.showQuantity;
 
 
       return _react2.default.createElement(
@@ -22731,7 +22734,12 @@ var WelcomeChildren = function (_Component) {
         childrenProducts && _react2.default.createElement(
           'div',
           { className: 'b-page__content__inner b-page__content__inner_content' },
-          _react2.default.createElement(_ChildrenProducts2.default, { childrenProducts: childrenProducts })
+          _react2.default.createElement(_ChildrenProducts2.default, {
+            childrenProducts: childrenProducts,
+            showCartButton: showCartButton,
+            showCatalogFilter: showCatalogFilter,
+            showQuantity: showQuantity
+          })
         ),
         postProductsText && _react2.default.createElement(
           'div',
@@ -22746,6 +22754,9 @@ var WelcomeChildren = function (_Component) {
 
 WelcomeChildren.propTypes = {
   childrenProducts: schemas.childrenProducts,
+  showCartButton: _react.PropTypes.bool,
+  showCatalogFilter: _react.PropTypes.bool,
+  showQuantity: _react.PropTypes.bool,
   showWelcomeSlider: _react.PropTypes.bool.isRequired,
   vendor: schemas.vendor
 };
@@ -22824,7 +22835,10 @@ var WelcomeChildrenPage = function (_Component) {
           i18n = _props.i18n,
           layoutProps = _props.layoutProps,
           showWelcomeSlider = _props.showWelcomeSlider,
-          vendor = _props.vendor;
+          vendor = _props.vendor,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showQuantity = _props.showQuantity;
 
 
       return _react2.default.createElement(
@@ -22833,7 +22847,10 @@ var WelcomeChildrenPage = function (_Component) {
         _react2.default.createElement(_index2.default, {
           childrenProducts: childrenProducts,
           showWelcomeSlider: showWelcomeSlider,
-          vendor: vendor
+          vendor: vendor,
+          showCartButton: showCartButton,
+          showCatalogFilter: showCatalogFilter,
+          showQuantity: showQuantity
         })
       );
     }
@@ -22843,6 +22860,9 @@ var WelcomeChildrenPage = function (_Component) {
 
 WelcomeChildrenPage.propTypes = {
   childrenProducts: schemas.childrenProducts,
+  showCartButton: _react.PropTypes.bool,
+  showCatalogFilter: _react.PropTypes.bool,
+  showQuantity: _react.PropTypes.bool,
   i18n: _react.PropTypes.object,
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired,
   showWelcomeSlider: _react.PropTypes.bool,
@@ -22915,7 +22935,10 @@ var WelcomeChildrenContainer = function (_Component) {
 WelcomeChildrenContainer.propTypes = {
   childrenProducts: schemas.childrenProducts,
   showWelcomeSlider: _react.PropTypes.bool,
-  vendor: schemas.vendor
+  vendor: schemas.vendor,
+  showCartButton: _react.PropTypes.bool,
+  showCatalogFilter: _react.PropTypes.bool,
+  showQuantity: _react.PropTypes.bool
 };
 
 WelcomeChildrenContainer.defaultProps = {
