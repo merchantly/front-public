@@ -14,6 +14,9 @@ class WelcomeChildren extends Component {
         postProductsText,
         sliderImages,
       },
+      showCartButton,
+      showCatalogFilter,
+      showQuantity
     } = this.props;
 
     return (
@@ -39,7 +42,12 @@ class WelcomeChildren extends Component {
         )}
         {childrenProducts && (
           <div className="b-page__content__inner b-page__content__inner_content">
-            <ChildrenProducts childrenProducts={childrenProducts} />
+            <ChildrenProducts 
+              childrenProducts={childrenProducts}
+              showCartButton={showCartButton}
+              showCatalogFilter={showCatalogFilter}
+              showQuantity={showQuantity}
+            />
           </div>
         )}
         {postProductsText && (
@@ -54,6 +62,9 @@ class WelcomeChildren extends Component {
 
 WelcomeChildren.propTypes = {
   childrenProducts: schemas.childrenProducts,
+  showCartButton: PropTypes.bool,
+  showCatalogFilter: PropTypes.bool,
+  showQuantity: PropTypes.bool,
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor,
 };
