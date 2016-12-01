@@ -13927,7 +13927,7 @@ var OrderCreated = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'b-cart__mesage' },
+            { className: 'b-cart__message' },
             _react2.default.createElement(_OrderComments2.default, { comments: adminComments }),
             _react2.default.createElement(
               'p',
@@ -26388,12 +26388,12 @@ var LayoutMessages = function (_Component) {
       return flash && flash.length > 0 ? _react2.default.createElement(
         "div",
         null,
-        flash.map(function (_ref) {
+        flash.map(function (_ref, idx) {
           var name = _ref.name,
               msg = _ref.msg;
           return _react2.default.createElement(
             "div",
-            { className: "alert alert-" + name },
+            { className: "alert alert-" + name, key: "flash-item-" + idx },
             _react2.default.createElement(
               "a",
               { className: "close", "data-dismiss": "alert" },

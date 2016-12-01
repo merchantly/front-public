@@ -9,8 +9,8 @@ class LayoutMessages extends Component {
     return flash && flash.length > 0
       ? (
         <div>
-          {flash.map(({ name, msg }) => (
-            <div className={`alert alert-${name}`}>
+          {flash.map(({ name, msg }, idx) => (
+            <div className={`alert alert-${name}`} key={`flash-item-${idx}`}>
               <a className="close" data-dismiss="alert">
                 {'\u00d7'}
               </a>

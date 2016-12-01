@@ -38,7 +38,7 @@ class OrderCreated extends Component {
           <h1 className="b-cart__title">
             {t('vendor.order.created.title')}
           </h1>
-          <div className="b-cart__mesage">
+          <div className="b-cart__message">
             <OrderComments comments={adminComments} />
             <p>
               <a href={defaultUrl}>
