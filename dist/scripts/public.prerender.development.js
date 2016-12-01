@@ -3262,7 +3262,8 @@ var CartPage = function (_Component) {
           initialCart = _props.initialCart,
           initialPackages = _props.initialPackages,
           isTesting = _props.isTesting,
-          layoutProps = _props.layoutProps;
+          layoutProps = _props.layoutProps,
+          minimalPrice = _props.minimalPrice;
 
 
       return _react2.default.createElement(
@@ -3276,7 +3277,8 @@ var CartPage = function (_Component) {
           i18n: i18n,
           initialCart: initialCart,
           initialPackages: initialPackages,
-          isTesting: isTesting
+          isTesting: isTesting,
+          minimalPrice: minimalPrice
         })
       );
     }
@@ -3290,6 +3292,7 @@ CartPage.propTypes = {
   initialCart: _react.PropTypes.object,
   initialPackages: _react.PropTypes.array,
   isTesting: _react.PropTypes.bool,
+  minimalPrice: schemas.money,
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired
 };
 
