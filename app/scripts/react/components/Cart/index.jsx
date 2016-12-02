@@ -72,9 +72,11 @@ class CartContainer extends Component {
 
 CartContainer.propTypes = {
   // initial props
+  continueShoppingUrl: PropTypes.string,
   formAuthenticity: PropTypes.object,
   initialCart: PropTypes.object,
   initialPackages: PropTypes.array,
+  isHeaderButtons: PropTypes.bool,
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
 
@@ -104,6 +106,7 @@ CartContainer.propTypes = {
 };
 
 CartContainer.defaultProps = {
+  isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch',
   },

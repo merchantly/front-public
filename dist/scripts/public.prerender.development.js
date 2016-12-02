@@ -2067,9 +2067,11 @@ var Cart = function (_Component) {
           cartItems = _props2.cartItems,
           changeAmount = _props2.changeAmount,
           changePackageCount = _props2.changePackageCount,
+          continueShoppingUrl = _props2.continueShoppingUrl,
           couponCode = _props2.couponCode,
           formAuthenticity = _props2.formAuthenticity,
           isBelowMinimalPrice = _props2.isBelowMinimalPrice,
+          isHeaderButtons = _props2.isHeaderButtons,
           packageItem = _props2.packageItem,
           packageCount = _props2.packageCount,
           packagePrice = _props2.packagePrice,
@@ -2131,6 +2133,44 @@ var Cart = function (_Component) {
               method: 'post',
               noValidate: true
             },
+            isHeaderButtons && _react2.default.createElement(
+              'div',
+              { className: 'b-cart__action' },
+              _react2.default.createElement(
+                'div',
+                { className: 'b-cart__action__container' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'b-cart__action__col-clear' },
+                  _react2.default.createElement(
+                    'a',
+                    {
+                      className: 'b-cart__action__clear b-btn b-btn_trans',
+                      href: continueShoppingUrl
+                    },
+                    t('vendor.cart.continue_shopping')
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'b-cart__action__col-right' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'b-cart__action__col-submit' },
+                    _react2.default.createElement('input', {
+                      className: 'b-cart__action__submit b-btn element--active-opacity',
+                      'data-cart-submit': true,
+                      'data-disable-with': t('vendor.button.disable_with.waiting'),
+                      disabled: isBelowMinimalPrice,
+                      name: 'commit',
+                      onClick: this.startProcessing,
+                      type: 'submit',
+                      value: t('vendor.order.submit')
+                    })
+                  )
+                )
+              )
+            ),
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
             hasErrors && this.renderErrors('top'),
             _react2.default.createElement(_CartList2.default, {
@@ -2220,9 +2260,11 @@ Cart.propTypes = {
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
   changePackageCount: _react.PropTypes.func.isRequired,
+  continueShoppingUrl: _react.PropTypes.string,
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
+  isHeaderButtons: _react.PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   packageCount: _react.PropTypes.number.isRequired,
@@ -3604,9 +3646,11 @@ var CartContainer = function (_Component) {
 
 CartContainer.propTypes = {
   // initial props
+  continueShoppingUrl: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   initialCart: _react.PropTypes.object,
   initialPackages: _react.PropTypes.array,
+  isHeaderButtons: _react.PropTypes.bool,
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
 
@@ -3636,6 +3680,7 @@ CartContainer.propTypes = {
 };
 
 CartContainer.defaultProps = {
+  isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch'
   }
