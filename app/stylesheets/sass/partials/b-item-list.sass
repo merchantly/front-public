@@ -75,3 +75,65 @@
   p
     margin-top: 0.2em
     margin-bottom: 0.2em
+
+  &#{&}_catalog#{&}--with-filter
+    padding-top: 40px
+    overflow: hidden
+    h2
+      padding-top: 0
+    @include grid-media-query("palm")
+      padding-top: 0
+    .b-item-list
+      &__title
+        padding-top: 0
+        line-height: 100%
+        @include grid-media-query("palm")
+          padding-top: 42px
+      &__filter
+        width: 190px
+        float: left
+        border-right: 1px solid $basicBorderColor
+        padding-right: 10px
+      &__filter-container
+        display: block
+        border: none
+        &.b-item-list__filter-container--trigger-visible .b-full-filter__trigger
+          display: block
+        @include grid-media-query((lap, palm))
+          display: block
+      &__content
+        margin-left: 210px
+      &__description
+        margin-left: 234px
+
+    @include grid-media-query((lap, palm))
+      .b-item-list
+        &__filter
+          float: none
+          width: 100%
+          padding: 0
+          border: none
+          max-width: 500px
+          margin-left: auto
+          margin-right: auto
+        &__content
+          margin-left: -18px
+        &__description
+          margin-left: 6px
+    .b-item-list__filter
+      display: block
+
+    &.b-item-list--with-hidden-filter
+      .b-item-list
+        &__content
+          margin-left: -18px
+        &__description
+          margin-left: 6px
+        &__filter
+          display: none
+        &__filter-container
+          display: block
+          &.b-item-list__filter-container--trigger-visible
+            float: none
+            .b-full-filter__trigger
+              display: block

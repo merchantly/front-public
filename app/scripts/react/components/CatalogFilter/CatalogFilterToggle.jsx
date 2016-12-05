@@ -5,12 +5,13 @@ class CatalogFilterToggle extends Component {
     const {
       handleFilterToggle,
       isOpen,
+      t,
     } = this.props;
 
     return (
       <div className="b-full-filter__trigger" onClick={handleFilterToggle}>
         <span className="b-btn element--active-opacity b-full-filter__trigger__action">
-          {isOpen ? 'Скрыть фильтр' : 'Показать фильтр'}
+          {t(`vendor.filter.${isOpen ? 'hide' : 'show'}`)}
         </span>
       </div>
     );
@@ -20,7 +21,7 @@ class CatalogFilterToggle extends Component {
 CatalogFilterToggle.propTypes = {
   handleFilterToggle: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
-  isVisible: PropTypes.bool,
+  t: PropTypes.func.isRequired,
 };
 
 export default CatalogFilterToggle;
