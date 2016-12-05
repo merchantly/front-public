@@ -98,47 +98,6 @@
     #w1widget
       display: block
 
-  &_layout-filter
-    .b-item-list_catalog
-      padding-top: 40px
-      overflow: hidden
-      h2
-        padding-top: 0
-      @include grid-media-query("palm")
-        padding-top: 0
-      .b-item-list
-        &__title
-          padding-top: 0
-          line-height: 100%
-          @include grid-media-query("palm")
-            padding-top: 42px
-        &__filter
-          width: 190px
-          float: left
-          border-right: 1px solid $basicBorderColor
-          padding-right: 10px
-        &__content
-          margin-left: 210px
-        &__description
-          margin-left: 234px
-
-      @include grid-media-query((lap, palm))
-        .b-item-list
-          &__filter
-            float: none
-            width: 100%
-            padding: 0
-            border: none
-            max-width: 500px
-            margin-left: auto
-            margin-right: auto
-          &__content
-            margin-left: -18px
-          &__description
-            margin-left: 6px
-      .b-item-list__filter
-        display: block
-
   &_landing
     text-align: center
 

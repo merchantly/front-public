@@ -255,6 +255,8 @@ global.gon = {
           },
         },
         'filter': {
+          'show': 'Показать фильтр',
+          'hide': 'Скрыть фильтр',
           'availability': 'Доступность',
           'price_range': 'Ценовой диапазон',
           'expand_button': {

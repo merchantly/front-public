@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ProductBlock from 'rc/Product/ProductBlock';
 import CatalogFilterContainer from 'rc/CatalogFilter';
+import ItemListCatalog from 'rc/ItemListCatalog';
 
 class ProductGroup extends Component {
   constructor(props) {
@@ -27,8 +28,11 @@ class ProductGroup extends Component {
     } = this.props;
 
     return (
-      <section className="b-item-list b-item-list_catalog">
-        {showCatalogFilter && <CatalogFilterContainer {...catalogFilterProps} />}
+      <ItemListCatalog
+        catalogFilterProps={catalogFilterProps}
+        showCatalogFilter={showCatalogFilter}
+        t={t}
+      >
         {title && (
           <h2>
             <a href="#" onClick={this.handleCategoryClick}>
@@ -37,7 +41,7 @@ class ProductGroup extends Component {
           </h2>
         )}
         <div className="b-item-list__content">
-          {items.map((item) => (
+          {items.map(item => (
             <ProductBlock
               i18n={i18n}
               key={`product-block-${item.id}`}
@@ -52,8 +56,7 @@ class ProductGroup extends Component {
             {t('vendor.products.others')}
           </a>
         </div>
-
-      </section>
+      </ItemListCatalog>
     );
   }
 }

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ProductBlock from 'rc/Product/ProductBlock';
 import Pagination from 'rc/Pagination';
 import CatalogFilterContainer from 'rc/CatalogFilter';
+import ItemListCatalog from 'rc/ItemListCatalog';
 import { Image } from 'rc/common/Image';
 import * as schemas from 'r/schemas';
 
@@ -26,8 +27,11 @@ class ProductList extends Component {
     } = this.props;
 
     return (
-      <section className="b-item-list b-item-list_catalog">
-        {showCatalogFilter && <CatalogFilterContainer {...catalogFilterProps} />}
+      <ItemListCatalog
+        catalogFilterProps={catalogFilterProps}
+        showCatalogFilter={showCatalogFilter}
+        t={t}
+      >
         {title && (
           <h1 className="b-item-list__title">
             {title}
@@ -54,7 +58,7 @@ class ProductList extends Component {
         )}
         <div className="b-item-list__content">
           {items.length > 0
-            ? items.map((item) => (
+            ? items.map(item => (
               <ProductBlock
                 i18n={i18n}
                 key={`product-block-${item.id}`}
@@ -67,7 +71,8 @@ class ProductList extends Component {
               <div className="b-text b-text_center">
                 {t('vendor.products.nothing_found_by_criteria')}
               </div>
-            )}
+            )
+          }
           {(showPagination && pagination.total_pages > 1) && (
             <div className="b-item-list__paginator">
               <Pagination {...pagination} />
@@ -89,7 +94,7 @@ class ProductList extends Component {
             />
           </div>
         )}
-      </section>
+      </ItemListCatalog>
     );
   }
 }

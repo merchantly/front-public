@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ProductList from 'rc/ProductList/ProductList';
 import CatalogFilterContainer from 'rc/CatalogFilter';
+import ItemListCatalog from 'rc/ItemListCatalog';
 import * as schemas from 'r/schemas';
 
 class ProductSearch extends Component {
@@ -33,8 +34,11 @@ class ProductSearch extends Component {
         />
       )
       : (
-        <section className="b-item-list b-item-list_catalog">
-          {showCatalogFilter && <CatalogFilterContainer {...catalogFilterProps} />}
+        <ItemListCatalog
+          catalogFilterProps={catalogFilterProps}
+          showCatalogFilter={showCatalogFilter}
+          t={t}
+        >
           <div className="b-text b-text_center">
             <p>
               {t('vendor.search.nothing_found')}
@@ -46,7 +50,7 @@ class ProductSearch extends Component {
               {t('vendor.order.continue_shopping')}
             </a>
           </div>
-        </section>
+        </ItemListCatalog>
       );
   }
 }
