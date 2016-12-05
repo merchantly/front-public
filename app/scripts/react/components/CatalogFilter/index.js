@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import React, { Component, PropTypes } from 'react';
 import * as schemas from 'r/schemas';
 import CatalogFilter from './CatalogFilter';
@@ -21,11 +22,12 @@ CatalogFilterContainer.propTypes = {
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   })).isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 CatalogFilterContainer.defaultProps = {
   filterUrl: '',
-  isFilterToggleVisible: false,
+  isFilterToggleVisible: true,
   options: [],
   params: {},
   selectedOptions: [],
