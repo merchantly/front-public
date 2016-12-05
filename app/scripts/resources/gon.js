@@ -333,6 +333,13 @@ global.gon = {
         'cabinet_order': {
           'items_count': '%{itemsCount} поз.',
         },
+        'subscription_email': {
+          'title': 'Подписаться на новостную рассылку',
+          'text': 'Зарегистрируйтесь и получите скидку 10% на всю покупку онлайн',
+          'submit_button_text': 'Подписаться',
+          'success_text': 'Вы подписались на новости',
+          'unknown_error': 'Неизвестная ошибка',
+        },
       },
     },
   },

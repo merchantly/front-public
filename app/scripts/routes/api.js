@@ -40,3 +40,7 @@ export function clientState() {
 export function operatorState() {
   return `${oUrl}/v1/operator_state.json`;
 }
+
+export function subscriptionEmails() {
+  return `${pUrl}/v1/subscription_emails.json`;
+}

@@ -5,6 +5,7 @@ import provideTranslations from 'rc/HoC/provideTranslations';
 import CurrencySwitcher from 'rc/CurrencySwitcher';
 import LocaleSwitcher from 'rc/LocaleSwitcher';
 import classNames from 'classnames';
+import EmailOptInForm from './EmailOptInForm';
 
 class MenuBottom extends Component {
   isActive(item, activeItems) {
@@ -34,12 +35,13 @@ class MenuBottom extends Component {
       leftItems,
       rightActiveItems,
       rightItems,
+      showEmailOptIn,
       t,
       vendorLandingLink,
     } = this.props;
     const contentWrapperClasses = classNames({
       'b-footer__content-wrapper': true,
-      'b-footer__content-wrapper--with-middle': footerMenuMiddleHtml,
+      'b-footer__content-wrapper--with-middle': footerMenuMiddleHtml || showEmailOptIn,
     });
 
     return (
@@ -52,6 +54,11 @@ class MenuBottom extends Component {
             className="b-footer__nav b-footer__nav_middle"
             dangerouslySetInnerHTML={{ __html: footerMenuMiddleHtml }}
           />
+        )}
+        {showEmailOptIn && (
+          <div className="b-footer__nav b-footer__nav_middle">
+            <EmailOptInForm t={t} />
+          </div>
         )}
         <div className="b-footer__nav b-footer__nav_soc">
           {this.renderList(rightItems, rightActiveItems)}
@@ -95,12 +102,14 @@ MenuBottom.propTypes = {
   locales: PropTypes.arrayOf(schemas.locale),
   rightActiveItems: PropTypes.arrayOf(schemas.menuItem).isRequired,
   rightItems: PropTypes.arrayOf(schemas.menuItem).isRequired,
+  showEmailOptIn: PropTypes.bool,
   t: PropTypes.func.isRequired,
   vendorLandingLink: PropTypes.string,
 };
 
 MenuBottom.defaultProps = {
   isVendorLandingLinkDisabled: true,
+  showEmailOptIn: false,
 };
 
 export default provideTranslations(MenuBottom);
