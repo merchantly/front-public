@@ -15,10 +15,14 @@ _numeral2.default.language('ru', _ru2.default);
 _numeral2.default.language('ru');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"numeral":578,"numeral/languages/ru":577}],2:[function(require,module,exports){
 =======
 },{"numeral":577,"numeral/languages/ru":576}],2:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"numeral":578,"numeral/languages/ru":577}],2:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 window = undefined; // React-rails set window to this, it's unexpected behavior
 React = require('react');
@@ -121,6 +125,7 @@ ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":36,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":35,"./react/components/CategoriesShow":51,"./react/components/CategoriesShow/CategoriesShowPage":50,"./react/components/CategoriesShowChildren":54,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":53,"./react/components/Checkout/CheckoutCoupon":57,"./react/components/ChildrenProducts":65,"./react/components/ClientSessionNew":69,"./react/components/ClientSessionNew/ClientSessionNewPage":67,"./react/components/Clientbar":71,"./react/components/ContentPage":74,"./react/components/ContentPage/ContentPagePage":73,"./react/components/CurrencySwitcher":76,"./react/components/Dictionary":89,"./react/components/Dictionary/DictionaryPage":88,"./react/components/DictionaryEntitiesShow":92,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":91,"./react/components/ErrorPage":95,"./react/components/ErrorPage/ErrorPagePage":94,"./react/components/LocaleSwitcher":104,"./react/components/Logo/LogoContainer":105,"./react/components/Lookbook":109,"./react/components/Lookbook/LookbookPage":108,"./react/components/MenuBottom":112,"./react/components/MenuTop":119,"./react/components/NavBar":122,"./react/components/Order":127,"./react/components/Order/OrderPage":125,"./react/components/OrderCancelled":130,"./react/components/OrderCancelled/OrderCancelledPage":129,"./react/components/OrderCreated":133,"./react/components/OrderCreated/OrderCreatedPage":132,"./react/components/OrderPaid":136,"./react/components/OrderPaid/OrderPaidPage":135,"./react/components/OrderPayment":139,"./react/components/OrderPayment/OrderPaymentPage":138,"./react/components/OrderShow":142,"./react/components/OrderShow/OrderShowPage":141,"./react/components/Pagination":145,"./react/components/Payment":148,"./react/components/Payment/PaymentPage":147,"./react/components/Product/ProductBlock":157,"./react/components/Product/ProductCard":175,"./react/components/Product/ProductCard/ProductCardPage":170,"./react/components/ProductArchived":195,"./react/components/ProductArchived/ProductArchivedPage":194,"./react/components/ProductGroup":197,"./react/components/ProductList":199,"./react/components/ProductSearch":202,"./react/components/ProductSearch/ProductSearchPage":201,"./react/components/ScrollToTop":203,"./react/components/TopBanner":204,"./react/components/Welcome":215,"./react/components/Welcome/WelcomePage":214,"./react/components/WelcomeChildren":218,"./react/components/WelcomeChildren/WelcomeChildrenPage":217,"./react/components/Wishlist":224,"./react/components/Wishlist/WishlistPage":223,"./react/components/common/ImageSlider":252,"./react/components/common/PostProducts":267,"./react/reducers/Design.prerender":298,"./react/reducers/cart":299,"./react/reducers/clientState":300,"./react/reducers/operatorState":301,"./react/reducers/packages":302,"./react/reducers/popup":303,"react":"react","react-dom":"react-dom","react-dom/server":607,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
 =======
 =======
@@ -137,6 +142,9 @@ ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
 },{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":36,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":35,"./react/components/CategoriesShow":51,"./react/components/CategoriesShow/CategoriesShowPage":50,"./react/components/CategoriesShowChildren":54,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":53,"./react/components/Checkout/CheckoutCoupon":57,"./react/components/ChildrenProducts":65,"./react/components/ClientSessionNew":69,"./react/components/ClientSessionNew/ClientSessionNewPage":67,"./react/components/Clientbar":71,"./react/components/ContentPage":74,"./react/components/ContentPage/ContentPagePage":73,"./react/components/CurrencySwitcher":76,"./react/components/Dictionary":89,"./react/components/Dictionary/DictionaryPage":88,"./react/components/DictionaryEntitiesShow":92,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":91,"./react/components/ErrorPage":95,"./react/components/ErrorPage/ErrorPagePage":94,"./react/components/LocaleSwitcher":104,"./react/components/Logo/LogoContainer":105,"./react/components/Lookbook":109,"./react/components/Lookbook/LookbookPage":108,"./react/components/MenuBottom":111,"./react/components/MenuTop":118,"./react/components/NavBar":121,"./react/components/Order":126,"./react/components/Order/OrderPage":124,"./react/components/OrderCancelled":129,"./react/components/OrderCancelled/OrderCancelledPage":128,"./react/components/OrderCreated":132,"./react/components/OrderCreated/OrderCreatedPage":131,"./react/components/OrderPaid":135,"./react/components/OrderPaid/OrderPaidPage":134,"./react/components/OrderPayment":138,"./react/components/OrderPayment/OrderPaymentPage":137,"./react/components/OrderShow":141,"./react/components/OrderShow/OrderShowPage":140,"./react/components/Pagination":144,"./react/components/Payment":147,"./react/components/Payment/PaymentPage":146,"./react/components/Product/ProductBlock":156,"./react/components/Product/ProductCard":174,"./react/components/Product/ProductCard/ProductCardPage":169,"./react/components/ProductArchived":194,"./react/components/ProductArchived/ProductArchivedPage":193,"./react/components/ProductGroup":196,"./react/components/ProductList":198,"./react/components/ProductSearch":201,"./react/components/ProductSearch/ProductSearchPage":200,"./react/components/ScrollToTop":202,"./react/components/TopBanner":203,"./react/components/Welcome":214,"./react/components/Welcome/WelcomePage":213,"./react/components/WelcomeChildren":217,"./react/components/WelcomeChildren/WelcomeChildrenPage":216,"./react/components/Wishlist":223,"./react/components/Wishlist/WishlistPage":222,"./react/components/common/ImageSlider":251,"./react/components/common/PostProducts":266,"./react/reducers/Design.prerender":297,"./react/reducers/cart":298,"./react/reducers/clientState":299,"./react/reducers/operatorState":300,"./react/reducers/packages":301,"./react/reducers/popup":302,"react":"react","react-dom":"react-dom","react-dom/server":606,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./locales/numeral/ru":1,"./react/components/BlogPost":17,"./react/components/BlogPost/BlogPostPage":16,"./react/components/BlogPostList":21,"./react/components/BlogPostList/BlogPostListPage":20,"./react/components/Cabinet":25,"./react/components/Cabinet/CabinetPage":24,"./react/components/Cart":34,"./react/components/Cart/CartCoupon":28,"./react/components/Cart/CartPage":33,"./react/components/CategoriesShow":50,"./react/components/CategoriesShow/CategoriesShowPage":49,"./react/components/CategoriesShowChildren":53,"./react/components/CategoriesShowChildren/CategoriesShowChildrenPage":52,"./react/components/Checkout/CheckoutCoupon":56,"./react/components/ChildrenProducts":64,"./react/components/ClientSessionNew":68,"./react/components/ClientSessionNew/ClientSessionNewPage":66,"./react/components/Clientbar":70,"./react/components/ContentPage":73,"./react/components/ContentPage/ContentPagePage":72,"./react/components/CurrencySwitcher":75,"./react/components/Dictionary":88,"./react/components/Dictionary/DictionaryPage":87,"./react/components/DictionaryEntitiesShow":91,"./react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage":90,"./react/components/ErrorPage":94,"./react/components/ErrorPage/ErrorPagePage":93,"./react/components/LocaleSwitcher":104,"./react/components/Logo/LogoContainer":105,"./react/components/Lookbook":109,"./react/components/Lookbook/LookbookPage":108,"./react/components/MenuBottom":112,"./react/components/MenuTop":119,"./react/components/NavBar":122,"./react/components/Order":127,"./react/components/Order/OrderPage":125,"./react/components/OrderCancelled":130,"./react/components/OrderCancelled/OrderCancelledPage":129,"./react/components/OrderCreated":133,"./react/components/OrderCreated/OrderCreatedPage":132,"./react/components/OrderPaid":136,"./react/components/OrderPaid/OrderPaidPage":135,"./react/components/OrderPayment":139,"./react/components/OrderPayment/OrderPaymentPage":138,"./react/components/OrderShow":142,"./react/components/OrderShow/OrderShowPage":141,"./react/components/Pagination":145,"./react/components/Payment":148,"./react/components/Payment/PaymentPage":147,"./react/components/Product/ProductBlock":157,"./react/components/Product/ProductCard":175,"./react/components/Product/ProductCard/ProductCardPage":170,"./react/components/ProductArchived":195,"./react/components/ProductArchived/ProductArchivedPage":194,"./react/components/ProductGroup":197,"./react/components/ProductList":199,"./react/components/ProductSearch":202,"./react/components/ProductSearch/ProductSearchPage":201,"./react/components/ScrollToTop":203,"./react/components/TopBanner":204,"./react/components/Welcome":215,"./react/components/Welcome/WelcomePage":214,"./react/components/WelcomeChildren":218,"./react/components/WelcomeChildren/WelcomeChildrenPage":217,"./react/components/Wishlist":224,"./react/components/Wishlist/WishlistPage":223,"./react/components/common/ImageSlider":252,"./react/components/common/PostProducts":267,"./react/reducers/Design.prerender":298,"./react/reducers/cart":299,"./react/reducers/clientState":300,"./react/reducers/operatorState":301,"./react/reducers/packages":302,"./react/reducers/popup":303,"react":"react","react-dom":"react-dom","react-dom/server":607,"react-redux":"react-redux","redux":"redux","redux-thunk":"redux-thunk"}],3:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -159,14 +167,13 @@ require('./prerender.bundle');
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CART_SELECT_PAYMENT = exports.CART_SELECT_DELIVERY = exports.CART_SET_FIELD_VALUE = exports.CART_INIT_CHECKOUT = exports.CART_SET_PACKAGE_COUNT = exports.CART_SET_PACKAGE = exports.CART_SET_AMOUNT = exports.CART_FAILURE = exports.CART_SUCCESS = exports.CART_REQUEST = undefined;
+exports.CART_SELECT_PAYMENT = exports.CART_SELECT_DELIVERY = exports.CART_SET_FIELD_VALUE = exports.CART_INIT_CHECKOUT = exports.CART_SET_PACKAGE = exports.CART_SET_AMOUNT = exports.CART_FAILURE = exports.CART_SUCCESS = exports.CART_REQUEST = undefined;
 
 var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 exports.setAmount = setAmount;
-exports.setPackageCount = setPackageCount;
 exports.selectPackage = selectPackage;
 exports.selectDelivery = selectDelivery;
 exports.selectPayment = selectPayment;
@@ -189,7 +196,6 @@ var CART_FAILURE = exports.CART_FAILURE = 'CART_FAILURE';
 
 var CART_SET_AMOUNT = exports.CART_SET_AMOUNT = 'CART_SET_AMOUNT';
 var CART_SET_PACKAGE = exports.CART_SET_PACKAGE = 'CART_SET_PACKAGE';
-var CART_SET_PACKAGE_COUNT = exports.CART_SET_PACKAGE_COUNT = 'CART_SET_PACKAGE_COUNT';
 var CART_INIT_CHECKOUT = exports.CART_INIT_CHECKOUT = 'CART_INIT_CHECKOUT';
 var CART_SET_FIELD_VALUE = exports.CART_SET_FIELD_VALUE = 'CART_SET_FIELD_VALUE';
 var CART_SELECT_DELIVERY = exports.CART_SELECT_DELIVERY = 'CART_SELECT_DELIVERY';
@@ -200,13 +206,6 @@ function setAmount(id, amount) {
     type: CART_SET_AMOUNT,
     id: id,
     amount: amount
-  };
-}
-
-function setPackageCount(count) {
-  return {
-    type: CART_SET_PACKAGE_COUNT,
-    count: count
   };
 }
 
@@ -286,10 +285,14 @@ function fetchCart() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339,"../middleware/api":295,"babel-runtime/helpers/defineProperty":356,"humps":473}],5:[function(require,module,exports){
 =======
 },{"../../routes/api":338,"../middleware/api":294,"babel-runtime/helpers/defineProperty":355,"humps":472}],5:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339,"../middleware/api":295,"babel-runtime/helpers/defineProperty":356,"humps":473}],5:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -348,10 +351,14 @@ function fetchClientState(force) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339,"../helpers/dom":288,"../middleware/api":295,"babel-runtime/core-js/promise":351,"babel-runtime/helpers/defineProperty":356}],6:[function(require,module,exports){
 =======
 },{"../../routes/api":338,"../helpers/dom":287,"../middleware/api":294,"babel-runtime/core-js/promise":350,"babel-runtime/helpers/defineProperty":355}],6:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339,"../helpers/dom":288,"../middleware/api":295,"babel-runtime/core-js/promise":351,"babel-runtime/helpers/defineProperty":356}],6:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -426,10 +433,14 @@ function fetchOperatorState(force) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339,"../helpers/dom":288,"../middleware/api":295,"babel-runtime/core-js/promise":351,"babel-runtime/helpers/defineProperty":356,"query-string":602}],7:[function(require,module,exports){
 =======
 },{"../../routes/api":338,"../helpers/dom":287,"../middleware/api":294,"babel-runtime/core-js/promise":350,"babel-runtime/helpers/defineProperty":355,"query-string":600}],7:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339,"../helpers/dom":288,"../middleware/api":295,"babel-runtime/core-js/promise":351,"babel-runtime/helpers/defineProperty":356,"query-string":602}],7:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -479,10 +490,14 @@ function fetchPackages() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339,"../middleware/api":295,"babel-runtime/helpers/defineProperty":356,"humps":473}],8:[function(require,module,exports){
 =======
 },{"../../routes/api":338,"../middleware/api":294,"babel-runtime/helpers/defineProperty":355,"humps":472}],8:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339,"../middleware/api":295,"babel-runtime/helpers/defineProperty":356,"humps":473}],8:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -520,10 +535,14 @@ function showFilteredCount(filter, t) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../api/api":14,"../services/Notice":332}],9:[function(require,module,exports){
 =======
 },{"../api/api":14,"../services/Notice":331}],9:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../api/api":14,"../services/Notice":332}],9:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -631,10 +650,14 @@ function saveChanges(authUrl) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339,"../constants/actionTypes":276,"../services/Notice":332,"../utils/buildParams":337,"babel-runtime/core-js/object/keys":349,"jquery":"jquery"}],10:[function(require,module,exports){
 =======
 },{"../../routes/api":338,"../constants/actionTypes":275,"../services/Notice":331,"../utils/buildParams":336,"babel-runtime/core-js/object/keys":348,"jquery":"jquery"}],10:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339,"../constants/actionTypes":276,"../services/Notice":332,"../utils/buildParams":337,"babel-runtime/core-js/object/keys":349,"jquery":"jquery"}],10:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -655,10 +678,14 @@ function loadEntries(entriesLimit) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339}],11:[function(require,module,exports){
 =======
 },{"../../routes/api":338}],11:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339}],11:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -695,10 +722,14 @@ function closeDesignSettingsPopup() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../constants/actionTypes":276}],12:[function(require,module,exports){
 =======
 },{"../constants/actionTypes":275}],12:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../constants/actionTypes":276}],12:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -716,10 +747,14 @@ function load(vendorID, productCardID) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339}],13:[function(require,module,exports){
 =======
 },{"../../routes/api":338}],13:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339}],13:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -812,10 +847,14 @@ function initBasketState() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../routes/api":339,"../../stores/BasketDispatcher":335}],14:[function(require,module,exports){
 =======
 },{"../../../routes/api":338,"../../stores/BasketDispatcher":334}],14:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../routes/api":339,"../../stores/BasketDispatcher":335}],14:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Api, TIMEOUT, abortPendingRequests, apiRoutes, deleteRequest, getRequest, postRequest, putRequest, request, vendorKey, _pendingRequests;
 
 apiRoutes = require('../../routes/api');
@@ -904,10 +943,14 @@ module.exports = Api;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../routes/api":339}],15:[function(require,module,exports){
 =======
 },{"../../routes/api":338}],15:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../routes/api":339}],15:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -1039,10 +1082,14 @@ exports.default = BlogPost;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],16:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],16:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],16:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1149,10 +1196,14 @@ exports.default = BlogPostPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":17,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],17:[function(require,module,exports){
 =======
 },{"../VendorLayout":209,"./index":17,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],17:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./index":17,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],17:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1182,6 +1233,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
 =======
 },{"../HoC/provideTranslations":96,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
@@ -1189,6 +1241,9 @@ module.exports = exports['default'];
 =======
 },{"../HoC/provideTranslations":97,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./BlogPost":15,"react":"react"}],18:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1281,10 +1336,14 @@ exports.default = BlogPostList;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Pagination":145,"./BlogPostListItem":19,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],19:[function(require,module,exports){
 =======
 },{"../Pagination":144,"./BlogPostListItem":19,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],19:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Pagination":145,"./BlogPostListItem":19,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],19:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1433,6 +1492,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../services/Thumbor":333,"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],20:[function(require,module,exports){
 =======
 =======
@@ -1449,6 +1509,9 @@ module.exports = exports['default'];
 },{"../../services/Thumbor":332,"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],20:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../services/Thumbor":333,"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],20:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1538,10 +1601,14 @@ exports.default = BlogPostListPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./BlogPostList":18,"./index":21,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],21:[function(require,module,exports){
 =======
 },{"../VendorLayout":209,"./BlogPostList":18,"./index":21,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],21:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./BlogPostList":18,"./index":21,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],21:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1568,10 +1635,14 @@ exports.default = BlogPostListContainer;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./BlogPostList":18,"humps":473,"react":"react"}],22:[function(require,module,exports){
 =======
 },{"./BlogPostList":18,"humps":472,"react":"react"}],22:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./BlogPostList":18,"humps":473,"react":"react"}],22:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1723,10 +1794,14 @@ exports.default = Cabinet;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Pagination":145,"./CabinetOrder":23,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],23:[function(require,module,exports){
 =======
 },{"../Pagination":144,"./CabinetOrder":23,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],23:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Pagination":145,"./CabinetOrder":23,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],23:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -1907,6 +1982,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../common/Order/OrderIcons":262,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],24:[function(require,module,exports){
 =======
 =======
@@ -1923,6 +1999,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"../common/Order/OrderIcons":261,"../common/Order/OrderState":265,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],24:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"../common/Order/OrderIcons":262,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],24:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2030,10 +2109,14 @@ exports.default = CabinetPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Pagination":145,"../VendorLayout":210,"./CabinetOrder":23,"./index":25,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],25:[function(require,module,exports){
 =======
 },{"../Pagination":144,"../VendorLayout":209,"./CabinetOrder":23,"./index":25,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],25:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Pagination":145,"../VendorLayout":210,"./CabinetOrder":23,"./index":25,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],25:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2073,6 +2156,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./Cabinet":22,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],26:[function(require,module,exports){
 =======
 =======
@@ -2089,6 +2173,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"./Cabinet":22,"babel-runtime/helpers/extends":356,"humps":472,"react":"react"}],26:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./Cabinet":22,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],26:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2180,11 +2267,7 @@ var Cart = function (_Component) {
     value: function renderError(err, key) {
       var id = 'cart-error-' + key;
 
-      return _react2.default.createElement('div', {
-        dangerouslySetInnerHTML: { __html: err },
-        id: id,
-        key: id
-      });
+      return _react2.default.createElement('div', { id: id, key: id, dangerouslySetInnerHTML: { __html: err } });
     }
   }, {
     key: 'renderErrors',
@@ -2218,15 +2301,10 @@ var Cart = function (_Component) {
           cartErrors = _props2.cartErrors,
           cartItems = _props2.cartItems,
           changeAmount = _props2.changeAmount,
-          changePackageCount = _props2.changePackageCount,
-          continueShoppingUrl = _props2.continueShoppingUrl,
           couponCode = _props2.couponCode,
           formAuthenticity = _props2.formAuthenticity,
           isBelowMinimalPrice = _props2.isBelowMinimalPrice,
-          isHeaderButtons = _props2.isHeaderButtons,
           packageItem = _props2.packageItem,
-          packageCount = _props2.packageCount,
-          packagePrice = _props2.packagePrice,
           packages = _props2.packages,
           prices = _props2.prices,
           selectPackage = _props2.selectPackage,
@@ -2285,54 +2363,13 @@ var Cart = function (_Component) {
               method: 'post',
               noValidate: true
             },
-            isHeaderButtons && _react2.default.createElement(
-              'div',
-              { className: 'b-cart__action' },
-              _react2.default.createElement(
-                'div',
-                { className: 'b-cart__action__container' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'b-cart__action__col-clear' },
-                  _react2.default.createElement(
-                    'a',
-                    {
-                      className: 'b-cart__action__clear b-btn b-btn_trans',
-                      href: continueShoppingUrl
-                    },
-                    t('vendor.cart.continue_shopping')
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'b-cart__action__col-right' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'b-cart__action__col-submit' },
-                    _react2.default.createElement('input', {
-                      className: 'b-cart__action__submit b-btn element--active-opacity',
-                      'data-cart-submit': true,
-                      'data-disable-with': t('vendor.button.disable_with.waiting'),
-                      disabled: isBelowMinimalPrice,
-                      name: 'commit',
-                      onClick: this.startProcessing,
-                      type: 'submit',
-                      value: t('vendor.order.submit')
-                    })
-                  )
-                )
-              )
-            ),
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
             hasErrors && this.renderErrors('top'),
             _react2.default.createElement(_CartList2.default, {
               amounts: amounts,
               changeAmount: changeAmount,
-              changePackageCount: changePackageCount,
               items: cartItems,
-              packageCount: packageCount,
               packageItem: packageItem,
-              packagePrice: packagePrice,
               packages: packages,
               prices: prices,
               selectPackage: selectPackage,
@@ -2411,17 +2448,12 @@ Cart.propTypes = {
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
-  changePackageCount: _react.PropTypes.func.isRequired,
-  continueShoppingUrl: _react.PropTypes.string,
   couponCode: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
-  isHeaderButtons: _react.PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
-  packagePrice: schemas.money,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
@@ -2433,10 +2465,14 @@ exports.default = Cart;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../schemas":316,"../common/FormAuthenticity":245,"../common/Money/HumanizedMoneyWithCurrency":259,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
 =======
 },{"../../helpers/money":288,"../../schemas":315,"../common/FormAuthenticity":244,"../common/Money/HumanizedMoneyWithCurrency":258,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../../schemas":316,"../common/FormAuthenticity":245,"../common/Money/HumanizedMoneyWithCurrency":259,"./CartCoupon":28,"./CartList":29,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],27:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2502,10 +2538,14 @@ exports.default = CartAlert;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/Alert":240,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],28:[function(require,module,exports){
 =======
 },{"../common/Alert":239,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],28:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/Alert":240,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],28:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2683,6 +2723,7 @@ exports.default = (0, _provideTranslations2.default)(CartCoupon);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../routes/api":339,"../HoC/provideTranslations":97,"../common/TextInput":273,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
 =======
 =======
@@ -2699,6 +2740,9 @@ exports.default = (0, _provideTranslations2.default)(CartCoupon);
 },{"../../../routes/api":338,"../HoC/provideTranslations":97,"../common/TextInput":272,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../routes/api":339,"../HoC/provideTranslations":96,"../common/TextInput":273,"./CartAlert":27,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],29:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2743,12 +2787,6 @@ var _CartListPackages2 = _interopRequireDefault(_CartListPackages);
 
 var _lodash = require('lodash');
 
-var _schemas = require('../../schemas');
-
-var schemas = _interopRequireWildcard(_schemas);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CartList = function (_Component) {
@@ -2765,11 +2803,8 @@ var CartList = function (_Component) {
       var _props = this.props,
           amounts = _props.amounts,
           changeAmount = _props.changeAmount,
-          changePackageCount = _props.changePackageCount,
           items = _props.items,
-          packageCount = _props.packageCount,
           packageItem = _props.packageItem,
-          packagePrice = _props.packagePrice,
           packages = _props.packages,
           prices = _props.prices,
           selectPackage = _props.selectPackage,
@@ -2794,15 +2829,9 @@ var CartList = function (_Component) {
           });
         }),
         !(0, _lodash.isEmpty)(packageItem) ? _react2.default.createElement(_CartListPackageItem2.default, {
-          changePackageCount: changePackageCount,
           item: packageItem,
-          packageCount: packageCount,
-          packagePrice: packagePrice,
           t: t
         }) : _react2.default.createElement(_CartListPackages2.default, {
-          changePackageCount: changePackageCount,
-          packageCount: packageCount,
-          packagePrice: packagePrice,
           packages: packages,
           selectPackage: selectPackage,
           selectedPackage: selectedPackage,
@@ -2817,11 +2846,8 @@ var CartList = function (_Component) {
 CartList.propTypes = {
   amounts: _react.PropTypes.object.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
-  changePackageCount: _react.PropTypes.func.isRequired,
   items: _react.PropTypes.array.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
-  packagePrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   prices: _react.PropTypes.object.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
@@ -2833,10 +2859,14 @@ exports.default = CartList;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./CartListItem":31,"./CartListPackageItem":32,"./CartListPackages":34,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./CartListItem":31,"./CartListPackageItem":32,"./CartListPackages":34,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CartListItem":30,"./CartListPackageItem":31,"./CartListPackages":32,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],30:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2863,18 +2893,13 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
-
 var _Image = require('../common/Image');
 
+<<<<<<< HEAD
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CartListImage = function (_Component) {
@@ -3013,6 +3038,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+=======
+>>>>>>> rebuild after rebase
 var _AssetImage = require('../common/AssetImage');
 
 var _AssetImage2 = _interopRequireDefault(_AssetImage);
@@ -3032,10 +3059,6 @@ var _lodash = require('lodash');
 var _timm = require('timm');
 
 var _OrderConstants = require('../../constants/OrderConstants');
-
-var _CartListImage = require('./CartListImage');
-
-var _CartListImage2 = _interopRequireDefault(_CartListImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3189,13 +3212,10 @@ var CartListItem = function (_Component) {
     value: function render() {
       var _props5 = this.props,
           item = _props5.item,
-          price = _props5.price,
-          t = _props5.t;
+          price = _props5.price;
 
       var _ref = item.good || {},
           image = _ref.image,
-          _ref$images = _ref.images,
-          images = _ref$images === undefined ? [] : _ref$images,
           _ref$defaultUrl = _ref.defaultUrl,
           defaultUrl = _ref$defaultUrl === undefined ? '' : _ref$defaultUrl,
           _ref$title = _ref.title,
@@ -3211,11 +3231,11 @@ var CartListItem = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-img' },
-          _react2.default.createElement(_CartListImage2.default, {
-            image: image,
-            images: images,
-            size: _OrderConstants.ORDER_IMG_SIZE,
-            t: t
+          _react2.default.createElement(_Image.RelativeImage, {
+            className: 'b-cart__item__img',
+            image: image || {},
+            maxHeight: _OrderConstants.ORDER_IMG_SIZE,
+            maxWidth: _OrderConstants.ORDER_IMG_SIZE
           })
         ),
         _react2.default.createElement(
@@ -3277,10 +3297,14 @@ exports.default = CartListItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../constants/OrderConstants":275,"../common/AssetImage":241,"../common/Money/HumanizedMoneyWithCurrency":259,"../common/Select":271,"./CartListImage":30,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
 =======
 },{"../../constants/OrderConstants":274,"../common/AssetImage":240,"../common/Money/HumanizedMoneyWithCurrency":258,"../common/Select":270,"./CartListImage":30,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../constants/OrderConstants":275,"../common/AssetImage":241,"../common/Image":251,"../common/Money/HumanizedMoneyWithCurrency":259,"../common/Select":271,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","timm":"timm"}],31:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3317,19 +3341,15 @@ var _AssetImage2 = _interopRequireDefault(_AssetImage);
 
 var _Image = require('../common/Image');
 
-var _CartListPackagePrice = require('./CartListPackagePrice');
+var _HumanizedMoneyWithCurrency = require('../common/Money/HumanizedMoneyWithCurrency');
 
-var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
+var _HumanizedMoneyWithCurrency2 = _interopRequireDefault(_HumanizedMoneyWithCurrency);
+
+var _humps = require('humps');
 
 var _timm = require('timm');
 
 var _lodash = require('lodash');
-
-var _schemas = require('../../schemas');
-
-var schemas = _interopRequireWildcard(_schemas);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3361,19 +3381,13 @@ var CartListPackageItem = function (_Component) {
           _ref$destroyUrl = _ref.destroyUrl,
           destroyUrl = _ref$destroyUrl === undefined ? '' : _ref$destroyUrl,
           _ref$good = _ref.good,
-          globalId = _ref$good.globalId,
           image = _ref$good.image,
           _ref$good$defaultUrl = _ref$good.defaultUrl,
           defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl,
           _ref$good$title = _ref$good.title,
-          title = _ref$good$title === undefined ? '' : _ref$good$title;
-
-      var _props = this.props,
-          changePackageCount = _props.changePackageCount,
-          packageCount = _props.packageCount,
-          packagePrice = _props.packagePrice,
-          t = _props.t;
-
+          title = _ref$good$title === undefined ? '' : _ref$good$title,
+          _ref$good$actualPrice = _ref$good.actualPrice,
+          actualPrice = _ref$good$actualPrice === undefined ? {} : _ref$good$actualPrice;
 
       return _react2.default.createElement(
         'li',
@@ -3405,13 +3419,18 @@ var CartListPackageItem = function (_Component) {
           ),
           this.renderGoodDetails()
         ),
-        _react2.default.createElement(_CartListPackagePrice2.default, {
-          globalId: globalId,
-          changePackageCount: changePackageCount,
-          packageCount: packageCount,
-          packagePrice: packagePrice,
-          t: t
-        }),
+        _react2.default.createElement('div', { className: 'b-cart__item__col-quantity' }),
+        _react2.default.createElement(
+          'div',
+          { className: 'b-cart__item__col-price' },
+          _react2.default.createElement(
+            'div',
+            { className: 'b-cart__item__price' },
+            _react2.default.createElement(_HumanizedMoneyWithCurrency2.default, {
+              money: (0, _humps.decamelizeKeys)(actualPrice)
+            })
+          )
+        ),
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-remove' },
@@ -3432,16 +3451,13 @@ var CartListPackageItem = function (_Component) {
 }(_react.Component);
 
 CartListPackageItem.propTypes = {
-  changePackageCount: _react.PropTypes.func.isRequired,
-  item: _react.PropTypes.object.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
-  packagePrice: schemas.money,
-  t: _react.PropTypes.func.isRequired
+  item: _react.PropTypes.object.isRequired
 };
 
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../schemas":316,"../common/AssetImage":241,"../common/Image":251,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
 =======
@@ -3548,6 +3564,9 @@ module.exports = exports['default'];
 =======
 },{"../../schemas":315,"../common/Money/HumanizedMoneyWithCurrency":258,"../common/Select":270,"humps":472,"lodash":"lodash","react":"react"}],34:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/AssetImage":241,"../common/Image":251,"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","timm":"timm"}],32:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3587,16 +3606,6 @@ var _humps = require('humps');
 var _lodash = require('lodash');
 
 var _timm = require('timm');
-
-var _CartListPackagePrice = require('./CartListPackagePrice');
-
-var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
-
-var _schemas = require('../../schemas');
-
-var schemas = _interopRequireWildcard(_schemas);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3672,9 +3681,6 @@ var CartListPackages = function (_Component) {
       var _this2 = this;
 
       var _props = this.props,
-          changePackageCount = _props.changePackageCount,
-          packageCount = _props.packageCount,
-          packagePrice = _props.packagePrice,
           packages = _props.packages,
           selectedPackage = _props.selectedPackage,
           t = _props.t;
@@ -3722,14 +3728,7 @@ var CartListPackages = function (_Component) {
                 checked: selectedPackage === item.globalId
               });
             })
-          ),
-          !!selectedPackage && _react2.default.createElement(_CartListPackagePrice2.default, {
-            globalId: selectedPackage,
-            changePackageCount: changePackageCount,
-            packageCount: packageCount,
-            packagePrice: packagePrice,
-            t: t
-          })
+          )
         )
       );
     }
@@ -3738,9 +3737,6 @@ var CartListPackages = function (_Component) {
 }(_react.Component);
 
 CartListPackages.propTypes = {
-  changePackageCount: _react.PropTypes.func.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
-  packagePrice: schemas.money,
   packages: _react.PropTypes.array.isRequired,
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
@@ -3751,10 +3747,14 @@ exports.default = CartListPackages;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../schemas":316,"../common/Image":251,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","timm":"timm"}],35:[function(require,module,exports){
 =======
 },{"../../helpers/money":288,"../../schemas":315,"../common/Image":250,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"lodash":"lodash","react":"react","timm":"timm"}],35:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3863,10 +3863,14 @@ exports.default = CartPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":36,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],36:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":36,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],36:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":34,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],34:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3948,7 +3952,6 @@ var CartContainer = function (_Component) {
     var _this = (0, _possibleConstructorReturn3.default)(this, (CartContainer.__proto__ || (0, _getPrototypeOf2.default)(CartContainer)).call(this, props));
 
     _this.changeAmount = _this.changeAmount.bind(_this);
-    _this.changePackageCount = _this.changePackageCount.bind(_this);
     _this.selectPackage = _this.selectPackage.bind(_this);
     return _this;
   }
@@ -3975,11 +3978,6 @@ var CartContainer = function (_Component) {
       this.props.changeAmount(id, amount);
     }
   }, {
-    key: 'changePackageCount',
-    value: function changePackageCount(count) {
-      this.props.changePackageCount(count);
-    }
-  }, {
     key: 'selectPackage',
     value: function selectPackage(id) {
       this.props.selectPackage(id);
@@ -3998,11 +3996,9 @@ var CartContainer = function (_Component) {
 
 CartContainer.propTypes = {
   // initial props
-  continueShoppingUrl: _react.PropTypes.string,
   formAuthenticity: _react.PropTypes.object,
   initialCart: _react.PropTypes.object,
   initialPackages: _react.PropTypes.array,
-  isHeaderButtons: _react.PropTypes.bool,
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
 
@@ -4013,14 +4009,12 @@ CartContainer.propTypes = {
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
   changeAmount: _react.PropTypes.func.isRequired,
-  changePackageCount: _react.PropTypes.func.isRequired,
   couponCode: _react.PropTypes.string,
   fetchCart: _react.PropTypes.func.isRequired,
   fetchPackages: _react.PropTypes.func.isRequired,
   initCart: _react.PropTypes.func.isRequired,
   initPackages: _react.PropTypes.func.isRequired,
   isBelowMinimalPrice: _react.PropTypes.bool.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
   packageItem: _react.PropTypes.object.isRequired,
   packages: _react.PropTypes.array.isRequired,
   packagesIsFetching: _react.PropTypes.bool.isRequired,
@@ -4032,7 +4026,6 @@ CartContainer.propTypes = {
 };
 
 CartContainer.defaultProps = {
-  isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch'
   }
@@ -4066,7 +4059,6 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
       _cart$amounts = cart.amounts,
       amounts = _cart$amounts === undefined ? {} : _cart$amounts,
       coupon = cart.coupon,
-      packageCount = cart.packageCount,
       selectedPackage = cart.selectedPackage;
   var _packagesStore$packag = packagesStore.packages,
       packages = _packagesStore$packag === undefined ? [] : _packagesStore$packag,
@@ -4085,16 +4077,14 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 
     return (0, _timm.set)(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
   });
-  var selectedPackageMoney = selectedPackage && (0, _timm.getIn)((0, _lodash.find)(packages, function (p) {
+  var selectedPackagePrice = selectedPackage ? (0, _timm.getIn)((0, _lodash.find)(packages, function (p) {
     return p.globalId === selectedPackage;
-  }), ['price']);
-  var selectedPackagePrice = (0, _timm.getIn)(selectedPackageMoney, ['cents']) || 0;
-  var packagePriceCents = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.getIn)(packageItem, ['good', 'actualPrice', 'cents']) * packageCount : selectedPackagePrice * packageCount;
+  }), ['price', 'cents']) || 0 : 0;
+  var packagePrice = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.getIn)(packageItem, ['good', 'actualPrice', 'cents']) : selectedPackagePrice;
   var totalPrice = (0, _timm.set)(cartTotalPrice, 'cents', (0, _lodash.reduce)(prices, function (acc, price) {
     return acc + (price.cents || 0);
-  }, packagePriceCents));
+  }, packagePrice));
   var isBelowMinimalPrice = !!minimalPrice && (totalPrice.cents || 0) < minimalPrice.cents;
-  var packagePrice = !(0, _lodash.isEmpty)(packageItem) ? (0, _timm.set)(packageItem.good.actualPrice, 'cents', packagePriceCents) : (0, _timm.set)(selectedPackageMoney, 'cents', packagePriceCents);
 
   return {
     amounts: amounts,
@@ -4104,8 +4094,6 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     cartItems: cartItems,
     couponCode: couponCode,
     isBelowMinimalPrice: isBelowMinimalPrice,
-    packageCount: packageCount,
-    packagePrice: packagePrice,
     packages: packages,
     packagesIsFetching: packagesIsFetching,
     prices: prices,
@@ -4115,7 +4103,6 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   };
 }, {
   changeAmount: _CartActions.setAmount,
-  changePackageCount: _CartActions.setPackageCount,
   selectPackage: _CartActions.selectPackage,
   initCart: _CartActions.initCart,
   fetchCart: _CartActions.fetchCart,
@@ -4124,6 +4111,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(CartContainer)));
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":288,"../../reducers/cart":299,"../../reducers/packages":302,"../../schemas":316,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],37:[function(require,module,exports){
@@ -4142,6 +4130,9 @@ module.exports = exports['default'];
 },{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":287,"../../reducers/cart":298,"../../reducers/packages":301,"../../schemas":315,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],37:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/CartActions":4,"../../actions/PackagesActions":7,"../../helpers/dom":288,"../../reducers/cart":299,"../../reducers/packages":302,"../../schemas":316,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Cart":26,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],35:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4172,17 +4163,21 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 var _provideTranslations = require('../HoC/provideTranslations');
 
 var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
-var _Checkbox = require('../common/Checkbox');
-
-var _Checkbox2 = _interopRequireDefault(_Checkbox);
-
 var _CatalogFilterOptions = require('./CatalogFilterOptions');
 
 var _CatalogFilterOptions2 = _interopRequireDefault(_CatalogFilterOptions);
+
+var _CatalogFilterToggle = require('./CatalogFilterToggle');
+
+var _CatalogFilterToggle2 = _interopRequireDefault(_CatalogFilterToggle);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4197,48 +4192,62 @@ var CatalogFilter = function (_Component) {
   (0, _createClass3.default)(CatalogFilter, [{
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          handleFilterToggle = _props.handleFilterToggle,
+          isFilterToggleVisible = _props.isFilterToggleVisible,
+          isOpen = _props.isOpen,
+          filterUrl = _props.filterUrl,
+          t = _props.t;
+
+      var containerClasses = (0, _classnames2.default)('b-item-list__filter-container', {
+        'b-item-list__filter-container--trigger-visible': isFilterToggleVisible
+      });
+
       return _react2.default.createElement(
         'div',
-        { className: 'b-full-filter' },
-        _react2.default.createElement(_Checkbox2.default, {
-          className: 'b-full-filter__toggle',
-          name: 'filter-toggle',
-          id: 'filter-toggle'
+        { className: containerClasses },
+        _react2.default.createElement(_CatalogFilterToggle2.default, {
+          handleFilterToggle: handleFilterToggle,
+          isOpen: isOpen,
+          isVisible: isFilterToggleVisible,
+          t: t
         }),
         _react2.default.createElement(
-          'label',
-          {
-            className: 'b-full-filter__trigger',
-            htmlFor: 'filter-toggle'
-          },
+          'div',
+          { className: 'b-item-list__filter' },
           _react2.default.createElement(
-            'span',
-            { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_open' },
-            '\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
-          ),
-          _react2.default.createElement(
-            'span',
-            { className: 'b-btn element--active-opacity b-full-filter__trigger__action b-full-filter__trigger__action_close' },
-            '\u0421\u043A\u0440\u044B\u0442\u044C \u0444\u0438\u043B\u044C\u0442\u0440'
+            'form',
+            { action: filterUrl, method: 'get' },
+            _react2.default.createElement(
+              'div',
+              { className: 'b-full-filter' },
+              _react2.default.createElement(_CatalogFilterOptions2.default, this.props)
+            )
           )
-        ),
-        _react2.default.createElement(_CatalogFilterOptions2.default, this.props)
+        )
       );
     }
   }]);
   return CatalogFilter;
-}(_react.Component);
+}(_react.Component); /* eslint-disable react/no-unused-prop-types */
+
 
 CatalogFilter.propTypes = {
   filterName: _react.PropTypes.string,
+  filterUrl: _react.PropTypes.string.isRequired,
+  handleFilterToggle: _react.PropTypes.func.isRequired,
+  isFilterToggleVisible: _react.PropTypes.bool,
+  isOpen: _react.PropTypes.bool.isRequired,
   options: _react.PropTypes.array.isRequired,
   params: _react.PropTypes.object,
-  selectedOptions: _react.PropTypes.array
+  selectedOptions: _react.PropTypes.array,
+  t: _react.PropTypes.func.isRequired
 };
 
 exports.default = (0, _provideTranslations2.default)(CatalogFilter);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../common/Checkbox":243,"./CatalogFilterOptions":42,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],38:[function(require,module,exports){
@@ -4257,6 +4266,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"../common/Checkbox":242,"./CatalogFilterOptions":42,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],38:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./CatalogFilterOptions":40,"./CatalogFilterToggle":44,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],36:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4265,7 +4277,7 @@ Object.defineProperty(exports, "__esModule", {
 var MAX_VISIBLE_LIMIT = exports.MAX_VISIBLE_LIMIT = 10;
 var COLLAPSED_VISIBLE_COUNT = exports.COLLAPSED_VISIBLE_COUNT = 5;
 
-},{}],39:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4471,6 +4483,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":38,"./CatalogFilterExpandButton":41,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","react-dom":"react-dom"}],40:[function(require,module,exports){
 =======
 =======
@@ -4487,6 +4500,9 @@ module.exports = exports['default'];
 },{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":38,"./CatalogFilterExpandButton":41,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react","react-dom":"react-dom"}],40:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/catalogFilterActions":8,"./CatalogFilterCheckbox.constants":36,"./CatalogFilterExpandButton":39,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","react-dom":"react-dom"}],38:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4605,6 +4621,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],41:[function(require,module,exports){
 =======
 =======
@@ -4621,6 +4638,9 @@ module.exports = exports['default'];
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-dom":"react-dom"}],41:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],39:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4719,10 +4739,14 @@ exports.default = CatalogFilterExpandButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],42:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],42:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],40:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4843,10 +4867,14 @@ exports.default = CatalogFilterOptions;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CatalogFilterCheckbox":39,"./CatalogFilterColor":40,"./CatalogFilterRadio":43,"./CatalogFilterRange":44,"./CatalogFilterSelectedOptions":45,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],43:[function(require,module,exports){
 =======
 },{"./CatalogFilterCheckbox":39,"./CatalogFilterColor":40,"./CatalogFilterRadio":43,"./CatalogFilterRange":44,"./CatalogFilterSelectedOptions":45,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],43:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CatalogFilterCheckbox":37,"./CatalogFilterColor":38,"./CatalogFilterRadio":41,"./CatalogFilterRange":42,"./CatalogFilterSelectedOptions":43,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],41:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -4984,6 +5012,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],44:[function(require,module,exports){
 =======
 =======
@@ -5000,6 +5029,9 @@ module.exports = exports['default'];
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-dom":"react-dom"}],44:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],42:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5201,6 +5233,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/slicedToArray":361,"numeral":578,"react":"react","react-nouislider":"react-nouislider"}],45:[function(require,module,exports){
 =======
 =======
@@ -5217,6 +5250,9 @@ module.exports = exports['default'];
 },{"../../actions/catalogFilterActions":8,"./utils":48,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/slicedToArray":360,"numeral":577,"react":"react","react-nouislider":"react-nouislider"}],45:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/catalogFilterActions":8,"./utils":47,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/slicedToArray":361,"numeral":578,"react":"react","react-nouislider":"react-nouislider"}],43:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5298,6 +5334,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],46:[function(require,module,exports){
 =======
 =======
@@ -5305,6 +5342,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],44:[function(require,module,exports){
 <<<<<<< HEAD
 =======
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],44:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -5350,7 +5390,8 @@ var CatalogFilterToggle = function (_Component) {
     value: function render() {
       var _props = this.props,
           handleFilterToggle = _props.handleFilterToggle,
-          isOpen = _props.isOpen;
+          isOpen = _props.isOpen,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -5359,7 +5400,7 @@ var CatalogFilterToggle = function (_Component) {
         _react2.default.createElement(
           "span",
           { className: "b-btn element--active-opacity b-full-filter__trigger__action" },
-          isOpen ? 'Скрыть фильтр' : 'Показать фильтр'
+          t("vendor.filter." + (isOpen ? 'hide' : 'show'))
         )
       );
     }
@@ -5370,12 +5411,13 @@ var CatalogFilterToggle = function (_Component) {
 CatalogFilterToggle.propTypes = {
   handleFilterToggle: _react.PropTypes.func.isRequired,
   isOpen: _react.PropTypes.bool.isRequired,
-  isVisible: _react.PropTypes.bool
+  t: _react.PropTypes.func.isRequired
 };
 
 exports.default = CatalogFilterToggle;
 module.exports = exports["default"];
 
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"react":"react"}],45:[function(require,module,exports){
 >>>>>>> optional filter trigger button. resolves #4
 <<<<<<< HEAD
@@ -5385,6 +5427,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],46:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],45:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5420,7 +5465,7 @@ var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
 
-var _CatalogFilter = require('./CatalogFilter.jsx');
+var _CatalogFilter = require('./CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
@@ -5439,33 +5484,29 @@ var CatalogFilterContainer = function (_Component) {
   (0, _createClass3.default)(CatalogFilterContainer, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'b-item-list__filter' },
-        _react2.default.createElement(
-          'form',
-          { action: this.props.filterUrl, method: 'get' },
-          _react2.default.createElement(_CatalogFilter2.default, this.props)
-        )
-      );
+      return _react2.default.createElement(_CatalogFilter2.default, this.props);
     }
   }]);
   return CatalogFilterContainer;
-}(_react.Component);
+}(_react.Component); /* eslint-disable react/no-unused-prop-types */
+
 
 CatalogFilterContainer.propTypes = {
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
+  isFilterToggleVisible: _react.PropTypes.bool,
   options: _react.PropTypes.arrayOf(schemas.catalogFilterOption).isRequired,
   params: _react.PropTypes.objectOf(_react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string])),
   selectedOptions: _react.PropTypes.arrayOf(_react.PropTypes.shape({
     name: _react.PropTypes.string.isRequired,
     url: _react.PropTypes.string.isRequired
-  })).isRequired
+  })).isRequired,
+  t: _react.PropTypes.func.isRequired
 };
 
 CatalogFilterContainer.defaultProps = {
   filterUrl: '',
+  isFilterToggleVisible: true,
   options: [],
   params: {},
   selectedOptions: []
@@ -5474,6 +5515,7 @@ CatalogFilterContainer.defaultProps = {
 exports.default = CatalogFilterContainer;
 exports.CatalogFilter = _CatalogFilter2.default;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../schemas":316,"./CatalogFilter.jsx":37,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],47:[function(require,module,exports){
@@ -5492,6 +5534,9 @@ exports.CatalogFilter = _CatalogFilter2.default;
 },{"../../schemas":315,"./CatalogFilter.jsx":37,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],47:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./CatalogFilter":35,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],46:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5534,6 +5579,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":357,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],48:[function(require,module,exports){
 =======
 =======
@@ -5550,6 +5596,9 @@ module.exports = exports['default'];
 },{"babel-runtime/helpers/extends":356,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],48:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/extends":357,"jquery":"jquery","react-dom":"react-dom","urijs":"urijs"}],47:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5569,6 +5618,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getFilter":47}],49:[function(require,module,exports){
 =======
 },{"./getFilter":46}],48:[function(require,module,exports){
@@ -5576,6 +5626,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 =======
 },{"./getFilter":47}],49:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getFilter":46}],48:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5626,9 +5679,7 @@ var CategoriesShow = function (_Component) {
       var _props = this.props,
           container = _props.container,
           isFilterDirty = _props.isFilterDirty,
-          nextButton = _props.nextButton,
           products = _props.products,
-          showNextButton = _props.showNextButton,
           t = _props.t,
           title = _props.title,
           vendorRootPath = _props.vendorRootPath;
@@ -5636,9 +5687,7 @@ var CategoriesShow = function (_Component) {
 
       return products.items.length > 0 || isFilterDirty ? _react2.default.createElement(_ProductList2.default, {
         container: container,
-        nextButton: nextButton,
         products: products,
-        showNextButton: showNextButton,
         showPagination: true,
         t: t,
         title: title
@@ -5664,9 +5713,7 @@ var CategoriesShow = function (_Component) {
 CategoriesShow.propTypes = {
   container: _react.PropTypes.object.isRequired,
   isFilterDirty: _react.PropTypes.bool,
-  nextButton: _react.PropTypes.object,
   products: _react.PropTypes.object.isRequired,
-  showNextButton: _react.PropTypes.bool,
   t: _react.PropTypes.func.isRequired,
   title: _react.PropTypes.string,
   vendorRootPath: _react.PropTypes.string
@@ -5675,6 +5722,7 @@ CategoriesShow.propTypes = {
 exports.default = CategoriesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],50:[function(require,module,exports){
@@ -5693,6 +5741,9 @@ module.exports = exports['default'];
 },{"../ProductList/ProductList":197,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],50:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],49:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5800,6 +5851,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ProductList":199,"../VendorLayout":210,"./index":51,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],51:[function(require,module,exports){
 =======
 =======
@@ -5816,6 +5868,9 @@ module.exports = exports['default'];
 },{"../ProductList":198,"../VendorLayout":209,"./index":51,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],51:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductList":199,"../VendorLayout":210,"./index":50,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],50:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -5901,6 +5956,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../ProductList":199,"./CategoriesShow":49,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],52:[function(require,module,exports){
 =======
 =======
@@ -5917,6 +5973,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"../ProductList":198,"./CategoriesShow":49,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],52:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":199,"./CategoriesShow":48,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],51:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6011,6 +6070,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],53:[function(require,module,exports){
 =======
 =======
@@ -6027,6 +6087,9 @@ module.exports = exports['default'];
 },{"../ChildrenProducts":65,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],53:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],52:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6132,6 +6195,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"../VendorLayout":210,"./index":54,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],54:[function(require,module,exports){
 =======
 =======
@@ -6148,6 +6212,9 @@ module.exports = exports['default'];
 },{"../ChildrenProducts":65,"../VendorLayout":209,"./index":54,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],54:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ChildrenProducts":64,"../VendorLayout":210,"./index":53,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],53:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6230,6 +6297,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ChildrenProducts":65,"../HoC/provideTranslations":97,"./CategoriesShowChildren":52,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],55:[function(require,module,exports){
 =======
 =======
@@ -6246,6 +6314,9 @@ module.exports = exports['default'];
 },{"../ChildrenProducts":65,"../HoC/provideTranslations":97,"./CategoriesShowChildren":52,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],55:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ChildrenProducts":64,"../HoC/provideTranslations":96,"./CategoriesShowChildren":51,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],54:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6414,6 +6485,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./CheckoutPublicOffer":61,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],56:[function(require,module,exports){
 =======
 =======
@@ -6430,6 +6502,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"./CheckoutPublicOffer":61,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],56:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./CheckoutPublicOffer":60,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-spinjs":"react-spinjs","rodal":"rodal"}],55:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6496,6 +6571,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/Alert":240,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],57:[function(require,module,exports){
 =======
 =======
@@ -6512,6 +6588,9 @@ module.exports = exports['default'];
 },{"../common/Alert":239,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],57:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/Alert":240,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],56:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6703,6 +6782,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../routes/api":339,"../common/TextInput":273,"./CheckoutAlert":56,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],58:[function(require,module,exports){
 =======
 =======
@@ -6719,6 +6799,9 @@ module.exports = exports['default'];
 },{"../../../routes/api":338,"../common/TextInput":272,"./CheckoutAlert":56,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react"}],58:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../routes/api":339,"../common/TextInput":273,"./CheckoutAlert":55,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],57:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6869,6 +6952,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../helpers/text":293,"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react"}],59:[function(require,module,exports){
 =======
 =======
@@ -6885,6 +6969,9 @@ module.exports = exports['default'];
 },{"../../helpers/money":288,"../../helpers/text":292,"../common/Money/HumanizedMoneyWithCurrency":258,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"react":"react"}],59:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../../helpers/text":293,"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react"}],58:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7058,6 +7145,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react","timm":"timm"}],60:[function(require,module,exports){
 =======
 =======
@@ -7074,6 +7162,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"react":"react","timm":"timm"}],60:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"react":"react","timm":"timm"}],59:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7204,6 +7295,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/text":293,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],61:[function(require,module,exports){
 =======
 =======
@@ -7220,6 +7312,9 @@ module.exports = exports['default'];
 },{"../../helpers/text":292,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react"}],61:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/text":293,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],60:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7334,6 +7429,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/Checkbox":243,"../common/HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],62:[function(require,module,exports){
 =======
 =======
@@ -7350,6 +7446,9 @@ module.exports = exports['default'];
 },{"../common/Checkbox":242,"../common/HiddenInput":246,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],62:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/Checkbox":243,"../common/HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],61:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -7438,6 +7537,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],63:[function(require,module,exports){
 =======
 =======
@@ -7454,6 +7554,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],63:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],62:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7653,6 +7756,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../routes/app":340,"../../schemas":316,"../common/Alert":240,"../common/FormAuthenticity":245,"./CheckoutActions":55,"./CheckoutCoupon":57,"./CheckoutDeliveries":58,"./CheckoutFields":59,"./CheckoutPayments":60,"./CheckoutStep":62,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],64:[function(require,module,exports){
 =======
 =======
@@ -7669,6 +7773,9 @@ module.exports = exports['default'];
 },{"../../../routes/app":339,"../../schemas":315,"../common/Alert":239,"../common/FormAuthenticity":244,"./CheckoutActions":55,"./CheckoutCoupon":57,"./CheckoutDeliveries":58,"./CheckoutFields":59,"./CheckoutPayments":60,"./CheckoutStep":62,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],64:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../routes/app":340,"../../schemas":316,"../common/Alert":240,"../common/FormAuthenticity":245,"./CheckoutActions":54,"./CheckoutCoupon":56,"./CheckoutDeliveries":57,"./CheckoutFields":58,"./CheckoutPayments":59,"./CheckoutStep":61,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],63:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7792,6 +7899,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../ProductGroup":197,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],65:[function(require,module,exports){
 =======
 =======
@@ -7808,6 +7916,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../ProductGroup":196,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],65:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../ProductGroup":197,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],64:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7897,6 +8008,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"./ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],66:[function(require,module,exports){
 =======
 =======
@@ -7913,6 +8025,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"./ChildrenProducts":64,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],66:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"./ChildrenProducts":63,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],65:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8052,6 +8167,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../common/FormAuthenticity":245,"./PinAlert":68,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],67:[function(require,module,exports){
 =======
 =======
@@ -8068,6 +8184,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../common/FormAuthenticity":244,"./PinAlert":68,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],67:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../common/FormAuthenticity":245,"./PinAlert":67,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],66:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8169,6 +8288,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":69,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],68:[function(require,module,exports){
 =======
 =======
@@ -8185,6 +8305,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../VendorLayout":209,"./index":69,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],68:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":68,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],67:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8299,6 +8422,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],69:[function(require,module,exports){
 =======
 =======
@@ -8315,6 +8439,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],69:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],68:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8394,6 +8521,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./ClientSessionNew":66,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],70:[function(require,module,exports){
 =======
 =======
@@ -8410,6 +8538,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./ClientSessionNew":66,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],70:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./ClientSessionNew":65,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],69:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8519,6 +8650,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../buttons/CabinetButton":227,"../buttons/CartButton/CartButtonController":229,"../buttons/WishlistButton":235,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],71:[function(require,module,exports){
 =======
 =======
@@ -8535,6 +8667,9 @@ module.exports = exports['default'];
 },{"../buttons/CabinetButton":226,"../buttons/CartButton/CartButtonController":228,"../buttons/WishlistButton":234,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],71:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../buttons/CabinetButton":227,"../buttons/CartButton/CartButtonController":229,"../buttons/WishlistButton":235,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],70:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8554,6 +8689,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Clientbar":70}],72:[function(require,module,exports){
 =======
 },{"./Clientbar":69}],71:[function(require,module,exports){
@@ -8561,6 +8697,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 =======
 },{"./Clientbar":70}],72:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Clientbar":69}],71:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8661,6 +8800,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],73:[function(require,module,exports){
 =======
 =======
@@ -8677,6 +8817,9 @@ module.exports = exports['default'];
 },{"../common/ImageSlider":251,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],73:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],72:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8771,6 +8914,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":74,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],74:[function(require,module,exports){
 =======
 =======
@@ -8787,6 +8931,9 @@ module.exports = exports['default'];
 },{"../VendorLayout":209,"./index":74,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],74:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./index":73,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],73:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8814,6 +8961,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ContentPage":72,"humps":473,"react":"react"}],75:[function(require,module,exports){
 =======
 =======
@@ -8830,6 +8978,9 @@ module.exports = exports['default'];
 },{"./ContentPage":72,"humps":472,"react":"react"}],75:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ContentPage":71,"humps":473,"react":"react"}],74:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8939,6 +9090,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"lodash/object/get":569,"react":"react"}],76:[function(require,module,exports){
 =======
 =======
@@ -8955,6 +9107,89 @@ module.exports = exports['default'];
 },{"../../helpers/money":288,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash/collection/map":499,"lodash/collection/size":500,"lodash/function/bind":502,"lodash/object/get":568,"react":"react"}],76:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"lodash/object/get":569,"react":"react"}],75:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _urijs = require('urijs');
+
+var _urijs2 = _interopRequireDefault(_urijs);
+
+var _CurrencySwitcher = require('./CurrencySwitcher');
+
+var _CurrencySwitcher2 = _interopRequireDefault(_CurrencySwitcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var CurrencySwitcherContainer = function (_Component) {
+  (0, _inherits3.default)(CurrencySwitcherContainer, _Component);
+
+  function CurrencySwitcherContainer() {
+    (0, _classCallCheck3.default)(this, CurrencySwitcherContainer);
+    return (0, _possibleConstructorReturn3.default)(this, (CurrencySwitcherContainer.__proto__ || (0, _getPrototypeOf2.default)(CurrencySwitcherContainer)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(CurrencySwitcherContainer, [{
+    key: 'handleChange',
+    value: function handleChange(value) {
+      window.location = new _urijs2.default().removeQuery('currency').addQuery('currency', value).toString();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_CurrencySwitcher2.default, (0, _extends3.default)({}, this.props, { onChange: this.handleChange }));
+    }
+  }]);
+  return CurrencySwitcherContainer;
+}(_react.Component);
+
+CurrencySwitcherContainer.propTypes = {
+  currenciesIsoCodes: _react.PropTypes.array.isRequired,
+  current: _react.PropTypes.string
+};
+
+CurrencySwitcherContainer.defaultProps = {
+  currenciesIsoCodes: [],
+  current: 'RUB'
+};
+
+exports.default = CurrencySwitcherContainer;
+module.exports = exports['default'];
+
+},{"./CurrencySwitcher":74,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],76:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9394,6 +9629,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":96,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","jss":"jss","jss-nested":490,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],78:[function(require,module,exports){
 =======
 =======
@@ -9410,6 +9646,9 @@ module.exports = exports['default'];
 },{"../HoC/connectToRedux":96,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/core-js/object/keys":348,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","jss":"jss","jss-nested":489,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],78:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/connectToRedux":95,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","jss":"jss","jss-nested":490,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],77:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9562,6 +9801,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],79:[function(require,module,exports){
 =======
 =======
@@ -9578,6 +9818,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],79:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],78:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9656,6 +9899,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],80:[function(require,module,exports){
 =======
 =======
@@ -9672,6 +9916,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],80:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],79:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -9733,6 +9980,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],81:[function(require,module,exports){
 =======
 =======
@@ -9749,6 +9997,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],81:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],80:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -9922,6 +10173,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../../constants/globalEventKeys":280,"../../constants/storageKeys":285,"../HoC/connectToRedux":96,"./index":86,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":798}],82:[function(require,module,exports){
 =======
 =======
@@ -9938,6 +10190,9 @@ module.exports = exports['default'];
 },{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":276,"../../constants/globalEventKeys":279,"../../constants/storageKeys":284,"../HoC/connectToRedux":96,"./index":86,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":797}],82:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/designActions":9,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../../constants/globalEventKeys":280,"../../constants/storageKeys":285,"../HoC/connectToRedux":95,"./index":85,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","jquery":"jquery","lodash":"lodash","react":"react","react-redux":"react-redux","redux":"redux","store":798}],81:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10027,6 +10282,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],83:[function(require,module,exports){
 =======
 =======
@@ -10043,6 +10299,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],83:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],82:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10219,6 +10478,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../constants/designTypes":279,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],84:[function(require,module,exports){
 =======
 =======
@@ -10235,6 +10495,9 @@ module.exports = exports['default'];
 },{"../../constants/designTypes":278,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],84:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../constants/designTypes":279,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash":"lodash","react":"react","tinycolor2":"tinycolor2"}],83:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10334,6 +10597,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
 =======
 =======
@@ -10350,6 +10614,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/core-js/object/keys":348,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],84:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10450,6 +10717,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/Slider":272,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],86:[function(require,module,exports){
 =======
 =======
@@ -10466,6 +10734,9 @@ module.exports = exports['default'];
 },{"../common/Slider":271,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],86:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/Slider":272,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],85:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10832,6 +11103,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../models/designOptions":297,"../common/Accordion":239,"../common/Accordion/AccordionItem":236,"../common/Scroller":270,"./DesignSettingsAttach":78,"./DesignSettingsCheckbox":79,"./DesignSettingsCloseButton":80,"./DesignSettingsOption":82,"./DesignSettingsRadioList":83,"./DesignSettingsSaveButton":84,"./DesignSettingsSlider":85,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],87:[function(require,module,exports){
 =======
 =======
@@ -10848,6 +11120,9 @@ module.exports = exports['default'];
 },{"../../models/designOptions":296,"../common/Accordion":238,"../common/Accordion/AccordionItem":235,"../common/Scroller":269,"./DesignSettingsAttach":78,"./DesignSettingsCheckbox":79,"./DesignSettingsCloseButton":80,"./DesignSettingsOption":82,"./DesignSettingsRadioList":83,"./DesignSettingsSaveButton":84,"./DesignSettingsSlider":85,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],87:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../models/designOptions":297,"../common/Accordion":239,"../common/Accordion/AccordionItem":236,"../common/Scroller":270,"./DesignSettingsAttach":77,"./DesignSettingsCheckbox":78,"./DesignSettingsCloseButton":79,"./DesignSettingsOption":81,"./DesignSettingsRadioList":82,"./DesignSettingsSaveButton":83,"./DesignSettingsSlider":84,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],86:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10922,6 +11197,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],88:[function(require,module,exports){
 =======
 =======
@@ -10938,6 +11214,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],88:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],87:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11024,6 +11303,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":89,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],89:[function(require,module,exports){
 =======
 =======
@@ -11040,6 +11320,9 @@ module.exports = exports['default'];
 },{"../VendorLayout":209,"./index":89,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],89:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./index":88,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],88:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11067,6 +11350,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Dictionary":87,"humps":473,"react":"react"}],90:[function(require,module,exports){
 =======
 =======
@@ -11083,6 +11367,9 @@ module.exports = exports['default'];
 },{"./Dictionary":87,"humps":472,"react":"react"}],90:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Dictionary":86,"humps":473,"react":"react"}],89:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11132,9 +11419,7 @@ var DictionaryEntitiesShow = function (_Component) {
     value: function render() {
       var _props = this.props,
           entity = _props.entity,
-          nextButton = _props.nextButton,
           products = _props.products,
-          showNextButton = _props.showNextButton,
           t = _props.t,
           title = _props.title,
           vendorRootPath = _props.vendorRootPath;
@@ -11142,9 +11427,7 @@ var DictionaryEntitiesShow = function (_Component) {
 
       return products.items.length ? _react2.default.createElement(_ProductList2.default, {
         container: entity,
-        nextButton: nextButton,
         products: products,
-        showNextButton: showNextButton,
         showPagination: true,
         title: title
       }) : _react2.default.createElement(
@@ -11168,9 +11451,7 @@ var DictionaryEntitiesShow = function (_Component) {
 
 DictionaryEntitiesShow.propTypes = {
   entity: _react.PropTypes.object.isRequired,
-  nextButton: _react.PropTypes.object,
   products: _react.PropTypes.object.isRequired,
-  showNextButton: _react.PropTypes.bool,
   t: _react.PropTypes.func.isRequired,
   title: _react.PropTypes.string,
   vendorRootPath: _react.PropTypes.string
@@ -11179,6 +11460,7 @@ DictionaryEntitiesShow.propTypes = {
 exports.default = DictionaryEntitiesShow;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],91:[function(require,module,exports){
@@ -11197,6 +11479,9 @@ module.exports = exports['default'];
 },{"../ProductList/ProductList":197,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],91:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],90:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11301,6 +11586,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ProductList":199,"../VendorLayout":210,"./index":92,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],92:[function(require,module,exports){
 =======
 =======
@@ -11317,6 +11603,9 @@ module.exports = exports['default'];
 },{"../ProductList":198,"../VendorLayout":209,"./index":92,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],92:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductList":199,"../VendorLayout":210,"./index":91,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],91:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11400,6 +11689,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"../ProductList":199,"./DictionaryEntitiesShow":90,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],93:[function(require,module,exports){
 =======
 =======
@@ -11416,6 +11706,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"../ProductList":198,"./DictionaryEntitiesShow":90,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],93:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"../ProductList":199,"./DictionaryEntitiesShow":89,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],92:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11524,6 +11817,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],94:[function(require,module,exports){
 =======
 =======
@@ -11540,6 +11834,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],94:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],93:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11637,6 +11934,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":95,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],95:[function(require,module,exports){
 =======
 =======
@@ -11653,6 +11951,9 @@ module.exports = exports['default'];
 },{"../VendorLayout":209,"./index":95,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],95:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./index":94,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],94:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11680,6 +11981,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ErrorPage":93,"humps":473,"react":"react"}],96:[function(require,module,exports){
 =======
 =======
@@ -11696,6 +11998,9 @@ module.exports = exports['default'];
 },{"./ErrorPage":93,"humps":472,"react":"react"}],96:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ErrorPage":92,"humps":473,"react":"react"}],95:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -11763,6 +12068,7 @@ module.exports = exports['default'];
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux"}],97:[function(require,module,exports){
 =======
 =======
@@ -11779,6 +12085,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-redux":"react-redux"}],97:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux"}],96:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11911,6 +12220,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../constants/localeLanguages":281,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"i18next":"i18next","react":"react"}],98:[function(require,module,exports){
 =======
 =======
@@ -11927,6 +12237,9 @@ module.exports = exports['default'];
 },{"../../constants/localeLanguages":280,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"i18next":"i18next","react":"react"}],98:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../constants/localeLanguages":281,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"i18next":"i18next","react":"react"}],97:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12042,6 +12355,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./InstagramEntries":101,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],99:[function(require,module,exports){
 =======
 =======
@@ -12058,6 +12372,9 @@ module.exports = exports['default'];
 },{"./InstagramEntries":101,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],99:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./InstagramEntries":100,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],98:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12069,6 +12386,7 @@ var READY_STATE = exports.READY_STATE = 'ready';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],100:[function(require,module,exports){
 =======
 },{}],99:[function(require,module,exports){
@@ -12076,6 +12394,9 @@ var READY_STATE = exports.READY_STATE = 'ready';
 =======
 },{}],100:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],99:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12203,6 +12524,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/instagramActions":10,"./Instagram":98,"./InstagramContainer.constants":99,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],101:[function(require,module,exports){
 =======
 =======
@@ -12219,6 +12541,9 @@ module.exports = exports['default'];
 },{"../../actions/instagramActions":10,"./Instagram":98,"./InstagramContainer.constants":99,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],101:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/instagramActions":10,"./Instagram":97,"./InstagramContainer.constants":98,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],100:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12311,6 +12636,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],102:[function(require,module,exports){
 =======
 =======
@@ -12327,6 +12653,9 @@ module.exports = exports['default'];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],102:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],101:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12355,6 +12684,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Instagram":98,"./InstagramContainer":100}],103:[function(require,module,exports){
 =======
 },{"./Instagram":97,"./InstagramContainer":99}],102:[function(require,module,exports){
@@ -12362,6 +12692,117 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 =======
 },{"./Instagram":98,"./InstagramContainer":100}],103:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Instagram":97,"./InstagramContainer":99}],102:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _CatalogFilter = require('../CatalogFilter');
+
+var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ItemListCatalog = function (_Component) {
+  (0, _inherits3.default)(ItemListCatalog, _Component);
+
+  function ItemListCatalog(props) {
+    (0, _classCallCheck3.default)(this, ItemListCatalog);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ItemListCatalog.__proto__ || (0, _getPrototypeOf2.default)(ItemListCatalog)).call(this, props));
+
+    _this.handleFilterToggle = _this.handleFilterToggle.bind(_this);
+
+    _this.state = {
+      isOpen: true
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(ItemListCatalog, [{
+    key: 'handleFilterToggle',
+    value: function handleFilterToggle() {
+      this.setState({ isOpen: !this.state.isOpen });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          children = _props.children,
+          catalogFilterProps = _props.catalogFilterProps,
+          showCatalogFilter = _props.showCatalogFilter,
+          t = _props.t;
+      var isOpen = this.state.isOpen;
+
+      var itemListClasses = (0, _classnames2.default)({
+        'b-item-list': true,
+        'b-item-list_catalog': true,
+        'b-item-list--with-filter': showCatalogFilter,
+        'b-item-list--with-hidden-filter': showCatalogFilter && !isOpen
+      });
+
+      return _react2.default.createElement(
+        'section',
+        { className: itemListClasses },
+        showCatalogFilter && _react2.default.createElement(_CatalogFilter2.default, (0, _extends3.default)({}, catalogFilterProps, {
+          handleFilterToggle: this.handleFilterToggle,
+          isOpen: isOpen,
+          t: t
+        })),
+        children
+      );
+    }
+  }]);
+  return ItemListCatalog;
+}(_react.Component);
+
+ItemListCatalog.propTypes = {
+  catalogFilterProps: _react.PropTypes.shape((0, _extends3.default)({}, _CatalogFilter2.default.propTypes)),
+  children: _react.PropTypes.oneOfType([_react.PropTypes.node, _react.PropTypes.arrayOf(_react.PropTypes.node)]),
+  showCatalogFilter: _react.PropTypes.bool,
+  t: _react.PropTypes.func.isRequired
+};
+
+exports.default = ItemListCatalog;
+module.exports = exports['default'];
+
+},{"../CatalogFilter":45,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],103:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12473,6 +12914,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"react":"react"}],104:[function(require,module,exports){
 =======
 =======
@@ -12489,6 +12931,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash/collection/map":499,"lodash/collection/size":500,"lodash/function/bind":502,"react":"react"}],104:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash/collection/map":500,"lodash/collection/size":501,"lodash/function/bind":503,"react":"react"}],104:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12572,6 +13017,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./LocaleSwitcher":103,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],105:[function(require,module,exports){
 =======
 =======
@@ -12588,6 +13034,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"./LocaleSwitcher":103,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],105:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./LocaleSwitcher":103,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],105:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12689,6 +13138,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/connectToRedux":96,"./index":106,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux","timm":"timm"}],106:[function(require,module,exports){
 =======
 =======
@@ -12705,6 +13155,9 @@ module.exports = exports['default'];
 },{"../HoC/connectToRedux":96,"./index":106,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-redux":"react-redux","timm":"timm"}],106:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/connectToRedux":95,"./index":106,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-redux":"react-redux","timm":"timm"}],106:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12778,6 +13231,7 @@ module.exports = exports["default"];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],107:[function(require,module,exports){
 =======
 =======
@@ -12794,6 +13248,9 @@ module.exports = exports["default"];
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],107:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],107:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12875,6 +13332,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],108:[function(require,module,exports){
 =======
 =======
@@ -12891,6 +13349,9 @@ module.exports = exports['default'];
 },{"../common/ImageSlider":251,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],108:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/ImageSlider":252,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],108:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12986,6 +13447,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"../common/ImageSlider":252,"./index":109,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],109:[function(require,module,exports){
 =======
 =======
@@ -13002,6 +13464,9 @@ module.exports = exports['default'];
 },{"../VendorLayout":209,"../common/ImageSlider":251,"./index":109,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],109:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"../common/ImageSlider":252,"./index":109,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],109:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13029,6 +13494,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Lookbook":107,"humps":473,"react":"react"}],110:[function(require,module,exports){
 =======
 =======
@@ -13036,6 +13502,9 @@ module.exports = exports['default'];
 <<<<<<< HEAD
 },{"./Lookbook":105,"humps":471,"react":"react"}],108:[function(require,module,exports){
 >>>>>>> optional filter trigger button. resolves #4
+=======
+},{"./Lookbook":107,"humps":473,"react":"react"}],110:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13205,6 +13674,7 @@ exports.default = EmailOptInForm;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../routes/api":339,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","lodash":"lodash","react":"react"}],111:[function(require,module,exports){
 =======
 },{"../../../routes/api":337,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/core-js/object/keys":347,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"jquery":"jquery","lodash":"lodash","react":"react"}],109:[function(require,module,exports){
@@ -13218,6 +13688,9 @@ module.exports = exports['default'];
 },{"./Lookbook":107,"humps":472,"react":"react"}],110:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../routes/api":339,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","lodash":"lodash","react":"react"}],111:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13315,10 +13788,14 @@ exports.default = MenuBottomLink;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],112:[function(require,module,exports){
 =======
 },{"../../schemas":315,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],111:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],112:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13512,6 +13989,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CurrencySwitcher":76,"../HoC/provideTranslations":97,"../LocaleSwitcher":104,"./EmailOptInForm":110,"./MenuBottomLink":111,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],113:[function(require,module,exports){
 =======
 =======
@@ -13528,6 +14006,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CurrencySwitcher":76,"../HoC/provideTranslations":97,"../LocaleSwitcher":104,"./MenuBottomLink":110,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],112:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CurrencySwitcher":75,"../HoC/provideTranslations":96,"../LocaleSwitcher":104,"./EmailOptInForm":110,"./MenuBottomLink":111,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],113:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13642,10 +14123,14 @@ exports.default = MenuTopDesktop;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./MenuTopDesktopSingle":115,"./MenuTopDesktopWithChildren":116,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],114:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./MenuTopDesktopSingle":114,"./MenuTopDesktopWithChildren":115,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],113:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./MenuTopDesktopSingle":115,"./MenuTopDesktopWithChildren":116,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],114:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13764,10 +14249,14 @@ exports.default = MenuTopDesktopChild;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],115:[function(require,module,exports){
 =======
 },{"../../schemas":315,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],114:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],115:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13863,10 +14352,14 @@ exports.default = MenuTopDesktopSingle;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],116:[function(require,module,exports){
 =======
 },{"../../schemas":315,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],115:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],116:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14024,10 +14517,14 @@ exports.default = MenuTopDeskTopWithChildren;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./MenuTopDesktopChild":114,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],117:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./MenuTopDesktopChild":113,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],116:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./MenuTopDesktopChild":114,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],117:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14238,10 +14735,14 @@ exports.default = MenuTopMobile;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./MenuTopToggleButton":118,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],118:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./MenuTopToggleButton":117,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],117:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./MenuTopToggleButton":118,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],118:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14321,10 +14822,14 @@ exports.default = MenuTopToggleButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],119:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],118:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],119:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14445,6 +14950,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./MenuTopDesktop":113,"./MenuTopMobile":117,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-stickynode":"react-stickynode"}],120:[function(require,module,exports){
 =======
 =======
@@ -14461,6 +14967,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./MenuTopDesktop":112,"./MenuTopMobile":116,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-stickynode":"react-stickynode"}],119:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./MenuTopDesktop":113,"./MenuTopMobile":117,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-stickynode":"react-stickynode"}],120:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14591,6 +15100,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../Clientbar":71,"../Logo":106,"../common/ProductSearchForm":268,"./NavBarContacts":121,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],121:[function(require,module,exports){
 =======
 =======
@@ -14607,6 +15117,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../Clientbar":71,"../Logo":106,"../common/ProductSearchForm":267,"./NavBarContacts":120,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],120:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../Clientbar":70,"../Logo":106,"../common/ProductSearchForm":268,"./NavBarContacts":121,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],121:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14750,10 +15263,14 @@ exports.default = NavBarContacts;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"babel-runtime/core-js/json/stringify":344,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/typeof":363,"react":"react"}],122:[function(require,module,exports){
 =======
 },{"../../schemas":315,"babel-runtime/core-js/json/stringify":343,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/typeof":362,"react":"react"}],121:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"babel-runtime/core-js/json/stringify":344,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/typeof":363,"react":"react"}],122:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14857,6 +15374,7 @@ exports.default = (0, _provideTranslations2.default)(NavBarContainer);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../Clientbar":71,"../HoC/provideTranslations":97,"../Logo":106,"./NavBar":120,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],123:[function(require,module,exports){
 =======
 =======
@@ -14873,6 +15391,9 @@ exports.default = (0, _provideTranslations2.default)(NavBarContainer);
 },{"../../schemas":315,"../Clientbar":71,"../HoC/provideTranslations":97,"../Logo":106,"./NavBar":119,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],122:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../Clientbar":70,"../HoC/provideTranslations":96,"../Logo":106,"./NavBar":120,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],123:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14977,10 +15498,14 @@ exports.default = Notice;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../entities/Timer":287,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],124:[function(require,module,exports){
 =======
 },{"../../entities/Timer":286,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-dom":"react-dom"}],123:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../entities/Timer":287,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],124:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15121,6 +15646,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../Checkout":63,"./OrderTitle":126,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],125:[function(require,module,exports){
 =======
 =======
@@ -15137,6 +15663,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../Checkout":63,"./OrderTitle":125,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],124:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../Checkout":62,"./OrderTitle":126,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],125:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15268,10 +15797,14 @@ exports.default = OrderPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":127,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],126:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":126,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],125:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":127,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],126:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15387,10 +15920,14 @@ exports.default = OrderTitle;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react"}],127:[function(require,module,exports){
 =======
 },{"../common/Money/HumanizedMoneyWithCurrency":258,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"humps":472,"lodash":"lodash","react":"react"}],126:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"humps":473,"lodash":"lodash","react":"react"}],127:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15659,6 +16196,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/CartActions":4,"../../helpers/dom":288,"../../reducers/cart":299,"../../schemas":316,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Order":124,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],128:[function(require,module,exports){
 =======
 =======
@@ -15675,6 +16213,9 @@ module.exports = exports['default'];
 },{"../../actions/CartActions":4,"../../helpers/dom":287,"../../reducers/cart":298,"../../schemas":315,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Order":123,"babel-runtime/core-js/object/assign":344,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],127:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/CartActions":4,"../../helpers/dom":288,"../../reducers/cart":299,"../../schemas":316,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Order":124,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],128:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15793,10 +16334,14 @@ exports.default = OrderCancelled;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderContents":261,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],129:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../common/Order/OrderComments":259,"../common/Order/OrderContents":260,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],128:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderContents":261,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],129:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15901,10 +16446,14 @@ exports.default = OrderCancelledPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":130,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],130:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":129,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],129:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":130,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],130:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -15984,6 +16533,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderCancelled":128,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],131:[function(require,module,exports){
 =======
 =======
@@ -16000,6 +16550,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./OrderCancelled":127,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],130:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./OrderCancelled":128,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],131:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16135,10 +16688,14 @@ exports.default = OrderCreated;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderSelfDeliveryMessage":265,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],132:[function(require,module,exports){
 =======
 },{"../../helpers/money":288,"../../schemas":315,"../common/Order/OrderComments":259,"../common/Order/OrderSelfDeliveryMessage":264,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],131:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderSelfDeliveryMessage":265,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],132:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16239,10 +16796,14 @@ exports.default = OrderCreatedPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":133,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],133:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":132,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],132:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":133,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],133:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16317,6 +16878,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderCreated":131,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],134:[function(require,module,exports){
 =======
 =======
@@ -16333,6 +16895,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./OrderCreated":130,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],133:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./OrderCreated":131,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],134:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16472,10 +17037,14 @@ exports.default = OrderPaid;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderContents":261,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],135:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../common/Order/OrderComments":259,"../common/Order/OrderContents":260,"../common/Order/OrderState":265,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],134:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../common/Order/OrderComments":260,"../common/Order/OrderContents":261,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],135:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16579,10 +17148,14 @@ exports.default = OrderPaidPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":136,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],136:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":135,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],135:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":136,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],136:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16662,6 +17235,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderPaid":134,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],137:[function(require,module,exports){
 =======
 =======
@@ -16678,6 +17252,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./OrderPaid":133,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],136:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./OrderPaid":134,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],137:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16795,10 +17372,14 @@ exports.default = OrderPayment;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/dom":288,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],138:[function(require,module,exports){
 =======
 },{"../../helpers/dom":287,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],137:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/dom":288,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],138:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16895,10 +17476,14 @@ exports.default = OrderPaymentPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorPaymentLayout":212,"./index":139,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],139:[function(require,module,exports){
 =======
 },{"../VendorPaymentLayout":211,"./index":138,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],138:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorPaymentLayout":212,"./index":139,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],139:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -16978,6 +17563,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./OrderPayment":137,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],140:[function(require,module,exports){
 =======
 =======
@@ -16994,6 +17580,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"./OrderPayment":136,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],139:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./OrderPayment":137,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],140:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17146,10 +17735,14 @@ exports.default = OrderShow;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../schemas":316,"../common/Order/OrderContents":261,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],141:[function(require,module,exports){
 =======
 },{"../../helpers/money":288,"../../schemas":315,"../common/Order/OrderContents":260,"../common/Order/OrderState":265,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],140:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../../schemas":316,"../common/Order/OrderContents":261,"../common/Order/OrderState":266,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],141:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17247,10 +17840,14 @@ exports.default = OrderShowPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":142,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],142:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":141,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],141:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":142,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],142:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17324,6 +17921,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./OrderShow":140,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],143:[function(require,module,exports){
 =======
 =======
@@ -17340,6 +17938,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./OrderShow":139,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],142:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./OrderShow":140,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],143:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17493,10 +18094,14 @@ Pagination.defaultProps = {
 exports.default = Pagination;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/dom":288,"./PaginationCurrentWindow":144,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],144:[function(require,module,exports){
 =======
 },{"../../helpers/dom":287,"./PaginationCurrentWindow":143,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","urijs":"urijs"}],143:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/dom":288,"./PaginationCurrentWindow":144,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],144:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17559,10 +18164,14 @@ exports.default = PaginationCurrentWindow;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"././Pagination.jsx":143,"classnames":"classnames","lodash":"lodash","react":"react"}],145:[function(require,module,exports){
 =======
 },{"././Pagination.jsx":142,"classnames":"classnames","lodash":"lodash","react":"react"}],144:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"././Pagination.jsx":143,"classnames":"classnames","lodash":"lodash","react":"react"}],145:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17597,10 +18206,14 @@ exports.default = PaginationContainer;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./Pagination":143,"humps":473,"react":"react"}],146:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./Pagination":142,"humps":472,"react":"react"}],145:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./Pagination":143,"humps":473,"react":"react"}],146:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17702,10 +18315,14 @@ Payment.propTypes = {
 exports.default = Payment;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],147:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],146:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],147:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17800,10 +18417,14 @@ exports.default = PaymentPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../VendorLayout":210,"./index":148,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],148:[function(require,module,exports){
 =======
 },{"../VendorLayout":209,"./index":147,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],147:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../VendorLayout":210,"./index":148,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],148:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17856,6 +18477,7 @@ exports.default = (0, _provideTranslations2.default)(PaymentContainer);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./Payment":146,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],149:[function(require,module,exports){
 =======
 =======
@@ -17872,6 +18494,9 @@ exports.default = (0, _provideTranslations2.default)(PaymentContainer);
 },{"../HoC/provideTranslations":97,"./Payment":145,"babel-runtime/helpers/extends":356,"humps":472,"react":"react"}],148:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./Payment":146,"babel-runtime/helpers/extends":357,"humps":473,"react":"react"}],149:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17910,10 +18535,14 @@ exports.default = ProductAddToCartButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],150:[function(require,module,exports){
 =======
 },{"react":"react"}],149:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],150:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17949,10 +18578,14 @@ exports.default = ProductBadge;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"classnames":"classnames","react":"react"}],151:[function(require,module,exports){
 =======
 },{"classnames":"classnames","react":"react"}],150:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"classnames":"classnames","react":"react"}],151:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17983,10 +18616,14 @@ exports.default = ProductBadgeNew;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductBadge":150,"react":"react"}],152:[function(require,module,exports){
 =======
 },{"./ProductBadge":149,"react":"react"}],151:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductBadge":150,"react":"react"}],152:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18034,10 +18671,14 @@ exports.default = ProductBadgeSale;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductBadge":150,"react":"react"}],153:[function(require,module,exports){
 =======
 },{"./ProductBadge":149,"react":"react"}],152:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductBadge":150,"react":"react"}],153:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18068,10 +18709,14 @@ exports.default = ProductBadgeSoldOut;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductBadge":150,"react":"react"}],154:[function(require,module,exports){
 =======
 },{"./ProductBadge":149,"react":"react"}],153:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductBadge":150,"react":"react"}],154:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18102,10 +18747,14 @@ exports.default = ProductBadgeUnavailable;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductBadge":150,"react":"react"}],155:[function(require,module,exports){
 =======
 },{"./ProductBadge":149,"react":"react"}],154:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductBadge":150,"react":"react"}],155:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18155,10 +18804,14 @@ exports.default = ProductBlockBadges;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ProductBadges/ProductBadgeNew":151,"../ProductBadges/ProductBadgeSale":152,"../ProductBadges/ProductBadgeSoldOut":153,"../ProductBadges/ProductBadgeUnavailable":154,"react":"react"}],156:[function(require,module,exports){
 =======
 },{"../ProductBadges/ProductBadgeNew":150,"../ProductBadges/ProductBadgeSale":151,"../ProductBadges/ProductBadgeSoldOut":152,"../ProductBadges/ProductBadgeUnavailable":153,"react":"react"}],155:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductBadges/ProductBadgeNew":151,"../ProductBadges/ProductBadgeSale":152,"../ProductBadges/ProductBadgeSoldOut":153,"../ProductBadges/ProductBadgeUnavailable":154,"react":"react"}],156:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18283,10 +18936,14 @@ exports.default = ProductBlockImage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],157:[function(require,module,exports){
 =======
 },{"../../common/Image":250,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],156:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],157:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18381,6 +19038,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../HoC/provideTranslations":97,"../ProductBlockCartForm/ProductBlockCartFormButton":158,"../ProductPrices":185,"./ProductBlockBadges":155,"./ProductBlockImage":156,"react":"react"}],158:[function(require,module,exports){
 =======
 =======
@@ -18397,6 +19055,9 @@ module.exports = exports['default'];
 },{"../../HoC/provideTranslations":97,"../ProductBlockCartForm/ProductBlockCartFormButton":157,"../ProductPrices":184,"./ProductBlockBadges":154,"./ProductBlockImage":155,"react":"react"}],157:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../HoC/provideTranslations":96,"../ProductBlockCartForm/ProductBlockCartFormButton":158,"../ProductPrices":185,"./ProductBlockBadges":155,"./ProductBlockImage":156,"react":"react"}],158:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18564,10 +19225,14 @@ exports.default = ProductBlockCartFormButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../actions/view/BasketActions":13,"../../../stores/BasketStore":336,"../../common/InputNumberSpinner":255,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],159:[function(require,module,exports){
 =======
 },{"../../../actions/view/BasketActions":13,"../../../stores/BasketStore":335,"../../common/InputNumberSpinner":254,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react"}],158:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../actions/view/BasketActions":13,"../../../stores/BasketStore":336,"../../common/InputNumberSpinner":255,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],159:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18705,10 +19370,14 @@ exports.default = ProductBulk;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],160:[function(require,module,exports){
 =======
 },{"../../common/Money/HumanizedMoneyWithCurrency":258,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-dom":"react-dom"}],159:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],160:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18717,10 +19386,14 @@ Object.defineProperty(exports, "__esModule", {
 var DISQUS_IDENTIFIER = exports.DISQUS_IDENTIFIER = 'disqus_product';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],161:[function(require,module,exports){
 =======
 },{}],160:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],161:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -18981,6 +19654,7 @@ module.exports = exports['default'];
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../../HoC/provideTranslations":97,"../ProductCart":180,"../ProductPrices":185,"./ProductCard.constants":160,"./ProductCardBadges":162,"./ProductCardBreadcrumbs":163,"./ProductCardDetails":166,"./ProductCardGallery":167,"./ProductCardSchema":171,"./ProductCardSimilarProducts":172,"./ProductCardTitle":173,"./ProductCardVideo":174,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-disqus-thread":606}],162:[function(require,module,exports){
 =======
 =======
@@ -18997,6 +19671,9 @@ module.exports = exports['default'];
 },{"../../../schemas":315,"../../HoC/provideTranslations":97,"../ProductCart":179,"../ProductPrices":184,"./ProductCard.constants":159,"./ProductCardBadges":161,"./ProductCardBreadcrumbs":162,"./ProductCardDetails":165,"./ProductCardGallery":166,"./ProductCardSchema":170,"./ProductCardSimilarProducts":171,"./ProductCardTitle":172,"./ProductCardVideo":173,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-disqus-thread":605}],161:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../../HoC/provideTranslations":96,"../ProductCart":180,"../ProductPrices":185,"./ProductCard.constants":160,"./ProductCardBadges":162,"./ProductCardBreadcrumbs":163,"./ProductCardDetails":166,"./ProductCardGallery":167,"./ProductCardSchema":171,"./ProductCardSimilarProducts":172,"./ProductCardTitle":173,"./ProductCardVideo":174,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-disqus-thread":606}],162:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19036,10 +19713,14 @@ exports.default = ProductCardBadges;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ProductBadges/ProductBadgeNew":151,"../ProductBadges/ProductBadgeSale":152,"react":"react"}],163:[function(require,module,exports){
 =======
 },{"../ProductBadges/ProductBadgeNew":150,"../ProductBadges/ProductBadgeSale":151,"react":"react"}],162:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductBadges/ProductBadgeNew":151,"../ProductBadges/ProductBadgeSale":152,"react":"react"}],163:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19117,10 +19798,14 @@ exports.default = ProductCardBreadcrumbs;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/vendors":294,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],164:[function(require,module,exports){
 =======
 },{"../../../helpers/vendors":293,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],163:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/vendors":294,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],164:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19131,10 +19816,14 @@ var LOADING_STATE = exports.LOADING_STATE = 'loading';
 var READY_STATE = exports.READY_STATE = 'ready';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],165:[function(require,module,exports){
 =======
 },{}],164:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],165:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19263,10 +19952,14 @@ exports.default = ProductCardContainer;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../actions/productCardActions":12,"./ProductCard":161,"./ProductCardContainer.constants":164,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],166:[function(require,module,exports){
 =======
 },{"../../../actions/productCardActions":12,"./ProductCard":160,"./ProductCardContainer.constants":163,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],165:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../actions/productCardActions":12,"./ProductCard":161,"./ProductCardContainer.constants":164,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],166:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19444,10 +20137,14 @@ exports.default = ProductCardDetails;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/product":291,"../../../helpers/seo":292,"../ProductBlock/ProductBlockImage":156,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],167:[function(require,module,exports){
 =======
 },{"../../../helpers/product":290,"../../../helpers/seo":291,"../ProductBlock/ProductBlockImage":155,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],166:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/product":291,"../../../helpers/seo":292,"../ProductBlock/ProductBlockImage":156,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],167:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19540,10 +20237,14 @@ exports.default = ProductCardGallery;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/globalEventKeys":280,"./ProductCardGalleryImage":168,"./ProductCardGallerySlider":169,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","jquery":"jquery","react":"react","react-dom":"react-dom"}],168:[function(require,module,exports){
 =======
 },{"../../../constants/globalEventKeys":279,"./ProductCardGalleryImage":167,"./ProductCardGallerySlider":168,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","jquery":"jquery","react":"react","react-dom":"react-dom"}],167:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/globalEventKeys":280,"./ProductCardGalleryImage":168,"./ProductCardGallerySlider":169,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","jquery":"jquery","react":"react","react-dom":"react-dom"}],168:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19643,10 +20344,14 @@ exports.default = ProductCardGalleryImage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","jquery":"jquery","react":"react"}],169:[function(require,module,exports){
 =======
 },{"../../common/Image/RelativeImage":249,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","jquery":"jquery","react":"react"}],168:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","jquery":"jquery","react":"react"}],169:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19954,10 +20659,14 @@ exports.default = ProductCardGallerySlider;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/globalEventKeys":280,"../../common/Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react","react-dom":"react-dom"}],170:[function(require,module,exports){
 =======
 },{"../../../constants/globalEventKeys":279,"../../common/Image/RelativeImage":249,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react","react-dom":"react-dom"}],169:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/globalEventKeys":280,"../../common/Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react","react-dom":"react-dom"}],170:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20079,10 +20788,14 @@ exports.default = ProductCardPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../../VendorLayout":210,"./ProductCard":161,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],171:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../../VendorLayout":209,"./ProductCard":160,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],170:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../../VendorLayout":210,"./ProductCard":161,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],171:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20142,10 +20855,14 @@ exports.default = ProductCardSchema;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/product":291,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],172:[function(require,module,exports){
 =======
 },{"../../../helpers/product":290,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],171:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/product":291,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],172:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20201,10 +20918,14 @@ exports.default = ProductCardSimilarProducts;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../ProductBlock":157,"react":"react"}],173:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../ProductBlock":156,"react":"react"}],172:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../ProductBlock":157,"react":"react"}],173:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20284,10 +21005,14 @@ exports.default = ProductCardTitle;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/seo":292,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],174:[function(require,module,exports){
 =======
 },{"../../../helpers/seo":291,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],173:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/seo":292,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],174:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -20354,10 +21079,14 @@ exports.default = ProductCardVideo;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],175:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],174:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],175:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20385,10 +21114,14 @@ Object.defineProperty(exports, 'ProductCardContainer', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductCard":161,"./ProductCardContainer":165}],176:[function(require,module,exports){
 =======
 },{"./ProductCard":160,"./ProductCardContainer":164}],175:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductCard":161,"./ProductCardContainer":165}],176:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20445,10 +21178,14 @@ exports.default = ProductCartForProduct;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/HiddenInput":247,"../ProductAddToCartButton":149,"./ProductCartWishlist":179,"babel-runtime/helpers/extends":357,"react":"react"}],177:[function(require,module,exports){
 =======
 },{"../../common/HiddenInput":246,"../ProductAddToCartButton":148,"./ProductCartWishlist":178,"babel-runtime/helpers/extends":356,"react":"react"}],176:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/HiddenInput":247,"../ProductAddToCartButton":149,"./ProductCartWishlist":179,"babel-runtime/helpers/extends":357,"react":"react"}],177:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20537,10 +21274,14 @@ exports.default = ProductCartForProductItems;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../ProductGoods":181,"../ProductProperties":191,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],178:[function(require,module,exports){
 =======
 },{"../ProductGoods":180,"../ProductProperties":190,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],177:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../ProductGoods":181,"../ProductProperties":191,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],178:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20585,10 +21326,14 @@ exports.default = ProductCartNotAvailable;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductCartWishlist":179,"babel-runtime/helpers/extends":357,"react":"react"}],179:[function(require,module,exports){
 =======
 },{"./ProductCartWishlist":178,"babel-runtime/helpers/extends":356,"react":"react"}],178:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductCartWishlist":179,"babel-runtime/helpers/extends":357,"react":"react"}],179:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20710,10 +21455,14 @@ exports.default = ProductCartWishlist;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Icon":248,"../../common/Link":257,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],180:[function(require,module,exports){
 =======
 },{"../../common/Icon":247,"../../common/Link":256,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","urijs":"urijs"}],179:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Icon":248,"../../common/Link":257,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","urijs":"urijs"}],180:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20867,10 +21616,14 @@ exports.default = ProductCart;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../../routes/app":340,"../../common/CSRFToken":242,"../../common/HiddenInput":247,"../ProductBulk":159,"./ProductCartForProduct":176,"./ProductCartForProductItems":177,"./ProductCartNotAvailable":178,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],181:[function(require,module,exports){
 =======
 },{"../../../../routes/app":339,"../../common/CSRFToken":241,"../../common/HiddenInput":246,"../ProductBulk":158,"./ProductCartForProduct":175,"./ProductCartForProductItems":176,"./ProductCartNotAvailable":177,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react"}],180:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../../routes/app":340,"../../common/CSRFToken":242,"../../common/HiddenInput":247,"../ProductBulk":159,"./ProductCartForProduct":176,"./ProductCartForProductItems":177,"./ProductCartNotAvailable":178,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],181:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21091,10 +21844,14 @@ exports.default = ProductGoods;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/globalEventKeys":280,"../../../helpers/product":291,"../ProductAddToCartButton":149,"../ProductCart/ProductCartWishlist":179,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],182:[function(require,module,exports){
 =======
 },{"../../../constants/globalEventKeys":279,"../../../helpers/product":290,"../ProductAddToCartButton":148,"../ProductCart/ProductCartWishlist":178,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],181:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/globalEventKeys":280,"../../../helpers/product":291,"../ProductAddToCartButton":149,"../ProductCart/ProductCartWishlist":179,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],182:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21129,10 +21886,14 @@ exports.default = ProductGoodActualPrice;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Money/HumanizedMoneyWithCurrency":259,"react":"react"}],183:[function(require,module,exports){
 =======
 },{"../../common/Money/HumanizedMoneyWithCurrency":258,"react":"react"}],182:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Money/HumanizedMoneyWithCurrency":259,"react":"react"}],183:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21250,10 +22011,14 @@ exports.default = ProductGoodPrice;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Money/HumanizedMoneyWithCurrency":259,"./ProductGoodActualPrice":182,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],184:[function(require,module,exports){
 =======
 },{"../../common/Money/HumanizedMoneyWithCurrency":258,"./ProductGoodActualPrice":181,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],183:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Money/HumanizedMoneyWithCurrency":259,"./ProductGoodActualPrice":182,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],184:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21331,10 +22096,14 @@ exports.default = ProductGoodPrices;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Money/HumanizedMoney":258,"../../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],185:[function(require,module,exports){
 =======
 },{"../../common/Money/HumanizedMoney":257,"../../common/Money/HumanizedMoneyWithCurrency":258,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],184:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Money/HumanizedMoney":258,"../../common/Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],185:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21478,10 +22247,14 @@ exports.default = ProductPrices;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ProductGoodPrice":183,"./ProductGoodPrices":184,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/typeof":363,"deep-diff":"deep-diff","react":"react"}],186:[function(require,module,exports){
 =======
 },{"./ProductGoodPrice":182,"./ProductGoodPrices":183,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/typeof":362,"deep-diff":"deep-diff","react":"react"}],185:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ProductGoodPrice":183,"./ProductGoodPrices":184,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/typeof":363,"deep-diff":"deep-diff","react":"react"}],186:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21552,10 +22325,14 @@ exports.default = PropertyList;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./PropertyListItem":187,"./utils":192,"babel-runtime/helpers/typeof":363,"react":"react"}],187:[function(require,module,exports){
 =======
 },{"./PropertyListItem":186,"./utils":191,"babel-runtime/helpers/typeof":362,"react":"react"}],186:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./PropertyListItem":187,"./utils":192,"babel-runtime/helpers/typeof":363,"react":"react"}],187:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21671,10 +22448,14 @@ exports.default = PropertyListItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/propertyTypes":283,"./PropertyListItemColor":188,"./PropertyListItemDictionary":189,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],188:[function(require,module,exports){
 =======
 },{"../../../constants/propertyTypes":282,"./PropertyListItemColor":187,"./PropertyListItemDictionary":188,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],187:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/propertyTypes":283,"./PropertyListItemColor":188,"./PropertyListItemDictionary":189,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],188:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21758,10 +22539,14 @@ exports.default = PropertyListItemColor;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/RadioColor":269,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],189:[function(require,module,exports){
 =======
 },{"../../common/RadioColor":268,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],188:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/RadioColor":269,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],189:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21845,10 +22630,14 @@ exports.default = PropertyListItemDictionary;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Select":271,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],190:[function(require,module,exports){
 =======
 },{"../../common/Select":270,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],189:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Select":271,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],190:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21938,10 +22727,14 @@ exports.default = PropertySingle;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../common/Select":271,"./utils":192,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],191:[function(require,module,exports){
 =======
 },{"../../common/Select":270,"./utils":191,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],190:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../common/Select":271,"./utils":192,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],191:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22189,10 +22982,14 @@ exports.default = ProductProperties;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/globalEventKeys":280,"../../../services/Error":331,"../../common/HiddenInput":247,"../ProductAddToCartButton":149,"../ProductCart/ProductCartWishlist":179,"./PropertyList":186,"./PropertySingle":190,"./utils":192,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],192:[function(require,module,exports){
 =======
 },{"../../../constants/globalEventKeys":279,"../../../services/Error":330,"../../common/HiddenInput":246,"../ProductAddToCartButton":148,"../ProductCart/ProductCartWishlist":178,"./PropertyList":185,"./PropertySingle":189,"./utils":191,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/core-js/object/keys":348,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],191:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/globalEventKeys":280,"../../../services/Error":331,"../../common/HiddenInput":247,"../ProductAddToCartButton":149,"../ProductCart/ProductCartWishlist":179,"./PropertyList":186,"./PropertySingle":190,"./utils":192,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/core-js/object/keys":349,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],192:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22375,10 +23172,14 @@ function isGoodStrictlyFiltered(good, filters) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"lodash":"lodash"}],193:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/extends":356,"lodash":"lodash"}],192:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"lodash":"lodash"}],193:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22504,10 +23305,14 @@ exports.default = ProductArchived;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/product":291,"../../helpers/seo":292,"../common/ProductSearchForm":268,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],194:[function(require,module,exports){
 =======
 },{"../../helpers/product":290,"../../helpers/seo":291,"../common/ProductSearchForm":267,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],193:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/product":291,"../../helpers/seo":292,"../common/ProductSearchForm":268,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],194:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22608,10 +23413,14 @@ exports.default = ProductArchivedPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":195,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],195:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":194,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],194:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":195,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],195:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22692,6 +23501,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./ProductArchived":193,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],196:[function(require,module,exports){
 =======
 =======
@@ -22708,6 +23518,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./ProductArchived":192,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],195:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./ProductArchived":193,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],196:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22750,6 +23563,10 @@ var _CatalogFilter = require('../CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
+var _ItemListCatalog = require('../ItemListCatalog');
+
+var _ItemListCatalog2 = _interopRequireDefault(_ItemListCatalog);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductGroup = function (_Component) {
@@ -22785,9 +23602,12 @@ var ProductGroup = function (_Component) {
 
 
       return _react2.default.createElement(
-        'section',
-        { className: 'b-item-list b-item-list_catalog' },
-        showCatalogFilter && _react2.default.createElement(_CatalogFilter2.default, catalogFilterProps),
+        _ItemListCatalog2.default,
+        {
+          catalogFilterProps: catalogFilterProps,
+          showCatalogFilter: showCatalogFilter,
+          t: t
+        },
         title && _react2.default.createElement(
           'h2',
           null,
@@ -22848,6 +23668,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../CatalogFilter":46,"../Product/ProductBlock":157,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],197:[function(require,module,exports){
 =======
 =======
@@ -22864,6 +23685,9 @@ module.exports = exports['default'];
 },{"../CatalogFilter":46,"../Product/ProductBlock":156,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],196:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../CatalogFilter":45,"../ItemListCatalog":102,"../Product/ProductBlock":157,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],197:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22962,6 +23786,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../CatalogFilter":46,"../HoC/provideTranslations":97,"../Product/ProductBlock":157,"./ProductGroup":196,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],198:[function(require,module,exports){
 =======
 =======
@@ -22978,6 +23803,9 @@ module.exports = exports['default'];
 },{"../CatalogFilter":46,"../HoC/provideTranslations":97,"../Product/ProductBlock":156,"./ProductGroup":195,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],197:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../CatalogFilter":45,"../HoC/provideTranslations":96,"../Product/ProductBlock":157,"./ProductGroup":196,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],198:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23024,6 +23852,10 @@ var _CatalogFilter = require('../CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
+var _ItemListCatalog = require('../ItemListCatalog');
+
+var _ItemListCatalog2 = _interopRequireDefault(_ItemListCatalog);
+
 var _Image = require('../common/Image');
 
 var _schemas = require('../../schemas');
@@ -23050,12 +23882,10 @@ var ProductList = function (_Component) {
           showCatalogFilter = _props.showCatalogFilter,
           container = _props.container,
           i18n = _props.i18n,
-          nextButton = _props.nextButton,
           _props$products = _props.products,
           items = _props$products.items,
           pagination = _props$products.pagination,
           showCartButton = _props.showCartButton,
-          showNextButton = _props.showNextButton,
           showPagination = _props.showPagination,
           showQuantity = _props.showQuantity,
           t = _props.t,
@@ -23063,9 +23893,12 @@ var ProductList = function (_Component) {
 
 
       return _react2.default.createElement(
-        'section',
-        { className: 'b-item-list b-item-list_catalog' },
-        showCatalogFilter && _react2.default.createElement(_CatalogFilter2.default, catalogFilterProps),
+        _ItemListCatalog2.default,
+        {
+          catalogFilterProps: catalogFilterProps,
+          showCatalogFilter: showCatalogFilter,
+          t: t
+        },
         title && _react2.default.createElement(
           'h1',
           { className: 'b-item-list__title' },
@@ -23112,15 +23945,6 @@ var ProductList = function (_Component) {
             'div',
             { className: 'b-item-list__paginator' },
             _react2.default.createElement(_Pagination2.default, pagination)
-          ),
-          !!showNextButton && _react2.default.createElement(
-            'div',
-            { className: 'b-text b-item-list__next' },
-            _react2.default.createElement(
-              'a',
-              { className: 'b-btn b-btn_trans', href: nextButton.url },
-              nextButton.title
-            )
           )
         ),
         container && container.bottom_text && _react2.default.createElement(
@@ -23162,6 +23986,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../Pagination":145,"../Product/ProductBlock":157,"../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],199:[function(require,module,exports){
 =======
 =======
@@ -23178,6 +24003,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../Pagination":144,"../Product/ProductBlock":156,"../common/Image":250,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],198:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../ItemListCatalog":102,"../Pagination":145,"../Product/ProductBlock":157,"../common/Image":251,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],199:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23257,14 +24085,9 @@ ProductListContainer.propTypes = {
     bottom_text: _react.PropTypes.string
   }),
   i18n: _react.PropTypes.object,
-  nextButton: _react.PropTypes.shape({
-    url: _react.PropTypes.string.isRequired,
-    title: _react.PropTypes.string.isRequired
-  }),
   products: schemas.productList.isRequired,
   showCartButton: _react.PropTypes.bool,
   showCatalogFilter: _react.PropTypes.bool,
-  showNextButton: _react.PropTypes.bool,
   showPagination: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool,
   t: _react.PropTypes.func.isRequired,
@@ -23278,7 +24101,6 @@ ProductListContainer.defaultProps = {
   },
   showCartButton: false,
   showCatalogFilter: false,
-  showNextButton: false,
   showPagination: false,
   showQuantity: false
 };
@@ -23286,6 +24108,7 @@ ProductListContainer.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductListContainer);
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],200:[function(require,module,exports){
@@ -23304,6 +24127,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductList":197,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],199:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],200:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23346,6 +24172,10 @@ var _CatalogFilter = require('../CatalogFilter');
 
 var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
+var _ItemListCatalog = require('../ItemListCatalog');
+
+var _ItemListCatalog2 = _interopRequireDefault(_ItemListCatalog);
+
 var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
@@ -23367,11 +24197,9 @@ var ProductSearch = function (_Component) {
     value: function render() {
       var _props = this.props,
           catalogFilterProps = _props.catalogFilterProps,
-          nextButton = _props.nextButton,
           products = _props.products,
           showCatalogFilter = _props.showCatalogFilter,
           showCartButton = _props.showCartButton,
-          showNextButton = _props.showNextButton,
           showQuantity = _props.showQuantity,
           t = _props.t,
           vendorRootPath = _props.vendorRootPath;
@@ -23379,19 +24207,20 @@ var ProductSearch = function (_Component) {
 
       return products.items.length ? _react2.default.createElement(_ProductList2.default, {
         catalogFilterProps: catalogFilterProps,
-        nextButton: nextButton,
         products: products,
         showCartButton: showCartButton,
         showCatalogFilter: showCatalogFilter,
-        showNextButton: showNextButton,
         showPagination: true,
         showQuantity: showQuantity,
         t: t,
         title: t('vendor.search.results_title', { count: products.total_count })
       }) : _react2.default.createElement(
-        'section',
-        { className: 'b-item-list b-item-list_catalog' },
-        showCatalogFilter && _react2.default.createElement(_CatalogFilter2.default, catalogFilterProps),
+        _ItemListCatalog2.default,
+        {
+          catalogFilterProps: catalogFilterProps,
+          showCatalogFilter: showCatalogFilter,
+          t: t
+        },
         _react2.default.createElement(
           'div',
           { className: 'b-text b-text_center' },
@@ -23417,11 +24246,9 @@ var ProductSearch = function (_Component) {
 
 ProductSearch.propTypes = {
   catalogFilterProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_CatalogFilter2.default.propTypes)),
-  nextButton: _react.PropTypes.object,
   products: schemas.productList.isRequired,
   showCatalogFilter: _react.PropTypes.bool.isRequired,
   showCartButton: _react.PropTypes.bool.isRequired,
-  showNextButton: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool.isRequired,
   t: _react.PropTypes.func.isRequired,
   vendorRootPath: _react.PropTypes.string
@@ -23430,6 +24257,7 @@ ProductSearch.propTypes = {
 exports.default = ProductSearch;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],201:[function(require,module,exports){
@@ -23448,6 +24276,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../ProductList/ProductList":197,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],200:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../ItemListCatalog":102,"../ProductList/ProductList":198,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],201:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23562,6 +24393,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../VendorLayout":210,"./index":202,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],202:[function(require,module,exports){
 =======
 =======
@@ -23578,6 +24410,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../VendorLayout":209,"./index":201,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],201:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../VendorLayout":210,"./index":202,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],202:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23675,6 +24510,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductSearch":200,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],203:[function(require,module,exports){
 =======
 =======
@@ -23691,6 +24527,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./ProductSearch":199,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],202:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./ProductSearch":200,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],203:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23833,10 +24672,14 @@ exports.default = ScrollToTop;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/dom":288,"../common/Icon":248,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],204:[function(require,module,exports){
 =======
 },{"../../helpers/dom":287,"../common/Icon":247,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],203:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/dom":288,"../common/Icon":248,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],204:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23958,10 +24801,14 @@ exports.default = TopBanner;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../constants/globalEventKeys":280,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react","react-dom":"react-dom"}],205:[function(require,module,exports){
 =======
 },{"../../constants/globalEventKeys":279,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react","react-dom":"react-dom"}],204:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../constants/globalEventKeys":280,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react","react-dom":"react-dom"}],205:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24035,10 +24882,14 @@ exports.default = PublishShopButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../buttons/Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],206:[function(require,module,exports){
 =======
 },{"../buttons/Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],205:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../buttons/Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],206:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24204,6 +25055,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../DesignPreview":77,"../DesignSettings/DesignSettingsContainer":81,"../buttons/CabinetButton":227,"../buttons/DesignButton":231,"../buttons/OperatorButton":233,"../buttons/WishlistButton":235,"./PublishShopButton":205,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],207:[function(require,module,exports){
 =======
 =======
@@ -24220,6 +25072,9 @@ module.exports = exports['default'];
 },{"../DesignPreview":77,"../DesignSettings/DesignSettingsContainer":81,"../buttons/CabinetButton":226,"../buttons/DesignButton":230,"../buttons/OperatorButton":232,"../buttons/WishlistButton":234,"./PublishShopButton":204,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],206:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../DesignPreview":76,"../DesignSettings/DesignSettingsContainer":80,"../buttons/CabinetButton":227,"../buttons/DesignButton":231,"../buttons/OperatorButton":233,"../buttons/WishlistButton":235,"./PublishShopButton":205,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],207:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24407,6 +25262,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Userbar":206,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],208:[function(require,module,exports){
 =======
 =======
@@ -24423,6 +25279,9 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 },{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":276,"../HoC/connectToRedux":96,"../HoC/provideTranslations":97,"./Userbar":205,"babel-runtime/core-js/object/assign":344,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],207:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":6,"../../actions/popupActions":11,"../../constants/cookieKeys":277,"../HoC/connectToRedux":95,"../HoC/provideTranslations":96,"./Userbar":206,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],208:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24531,6 +25390,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Instagram":102,"../MenuBottom":112,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],209:[function(require,module,exports){
 =======
 =======
@@ -24547,6 +25407,9 @@ module.exports = exports['default'];
 },{"../Instagram":102,"../MenuBottom":111,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],208:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Instagram":101,"../MenuBottom":112,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],209:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24733,10 +25596,14 @@ exports.default = VendorLayout;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../MenuBottom":112,"../MenuTop":119,"../NavBar":122,"../ScrollToTop":203,"../TopBanner":204,"../Userbar":207,"../common/LayoutMessages":256,"../common/W1Widget":274,"./Footer":208,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],210:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../MenuBottom":111,"../MenuTop":118,"../NavBar":121,"../ScrollToTop":202,"../TopBanner":203,"../Userbar":206,"../common/LayoutMessages":255,"../common/W1Widget":273,"./Footer":207,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],209:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../MenuBottom":112,"../MenuTop":119,"../NavBar":122,"../ScrollToTop":203,"../TopBanner":204,"../Userbar":207,"../common/LayoutMessages":256,"../common/W1Widget":274,"./Footer":208,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],210:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24801,6 +25668,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../HoC/provideTranslations":97,"./VendorLayout":209,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],211:[function(require,module,exports){
 =======
 =======
@@ -24817,6 +25685,9 @@ module.exports = exports['default'];
 },{"../HoC/provideTranslations":97,"./VendorLayout":208,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],210:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../HoC/provideTranslations":96,"./VendorLayout":209,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],211:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -24943,6 +25814,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../Logo":106,"../common/LayoutMessages":256,"../common/W1Widget":274,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],212:[function(require,module,exports){
 =======
 =======
@@ -24957,237 +25829,9 @@ module.exports = exports['default'];
 =======
 },{"../../schemas":315,"../Logo":106,"../common/LayoutMessages":255,"../common/W1Widget":273,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],211:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
-
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _VendorPaymentLayout = require('./VendorPaymentLayout');
-
-var _VendorPaymentLayout2 = _interopRequireDefault(_VendorPaymentLayout);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var VendorPaymentLayoutContainer = function (_Component) {
-  (0, _inherits3.default)(VendorPaymentLayoutContainer, _Component);
-
-  function VendorPaymentLayoutContainer() {
-    (0, _classCallCheck3.default)(this, VendorPaymentLayoutContainer);
-    return (0, _possibleConstructorReturn3.default)(this, (VendorPaymentLayoutContainer.__proto__ || (0, _getPrototypeOf2.default)(VendorPaymentLayoutContainer)).apply(this, arguments));
-  }
-
-  (0, _createClass3.default)(VendorPaymentLayoutContainer, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(_VendorPaymentLayout2.default, this.props);
-    }
-  }]);
-  return VendorPaymentLayoutContainer;
-}(_react.Component);
-
-VendorPaymentLayoutContainer.propTypes = _VendorPaymentLayout2.default.propTypes;
-
-exports.default = VendorPaymentLayoutContainer;
-module.exports = exports['default'];
-
-},{"./VendorPaymentLayout":210,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],212:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');
-
-var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
-
-var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
-
-var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ImageSlider = require('../common/ImageSlider');
-
-var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
-
-var _PostProducts = require('../common/PostProducts');
-
-var _PostProducts2 = _interopRequireDefault(_PostProducts);
-
-var _ProductList = require('../ProductList/ProductList');
-
-var _ProductList2 = _interopRequireDefault(_ProductList);
-
-var _seo = require('../../helpers/seo');
-
-var _CatalogFilter = require('../CatalogFilter');
-
-var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
-
-var _schemas = require('../../schemas');
-
-var schemas = _interopRequireWildcard(_schemas);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Welcome = function (_Component) {
-  (0, _inherits3.default)(Welcome, _Component);
-
-  function Welcome() {
-    (0, _classCallCheck3.default)(this, Welcome);
-    return (0, _possibleConstructorReturn3.default)(this, (Welcome.__proto__ || (0, _getPrototypeOf2.default)(Welcome)).apply(this, arguments));
-  }
-
-  (0, _createClass3.default)(Welcome, [{
-    key: 'render',
-    value: function render() {
-      var _props = this.props,
-          catalogFilterProps = _props.catalogFilterProps,
-          isFilterDirty = _props.isFilterDirty,
-          nextButton = _props.nextButton,
-          products = _props.products,
-          showCartButton = _props.showCartButton,
-          showCatalogFilter = _props.showCatalogFilter,
-          showNextButton = _props.showNextButton,
-          showPaginationOnWelcome = _props.showPaginationOnWelcome,
-          showQuantity = _props.showQuantity,
-          showWelcomeSlider = _props.showWelcomeSlider,
-          vendor = _props.vendor,
-          t = _props.t;
-      var preProductsText = vendor.pre_products_text,
-          postProductsText = vendor.post_products_text,
-          sliderImages = vendor.slider_images;
-
-
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'div',
-          { className: 'b-page__content__inner b-page__content__inner_slider' },
-          showWelcomeSlider && _react2.default.createElement(_ImageSlider2.default, {
-            className: 'b-slider_promo',
-            hasThumbs: false,
-            slides: sliderImages
-          })
-        ),
-        preProductsText && _react2.default.createElement(
-          'div',
-          { className: 'b-page__content__inner b-page__content__inner_content' },
-          _react2.default.createElement(
-            'div',
-            { className: 'lead-text' },
-            _react2.default.createElement('div', {
-              className: 'lead-text__content',
-              dangerouslySetInnerHTML: { __html: preProductsText }
-            })
-          )
-        ),
-        (products.items.length || isFilterDirty) && _react2.default.createElement(
-          'div',
-          { className: 'b-page__content__inner b-page__content__inner_content' },
-          _react2.default.createElement(_ProductList2.default, {
-            catalogFilterProps: catalogFilterProps,
-            nextButton: nextButton,
-            products: products,
-            showCartButton: showCartButton,
-            showCatalogFilter: showCatalogFilter,
-            showNextButton: showNextButton,
-            showPagination: showPaginationOnWelcome,
-            showQuantity: showQuantity,
-            t: t
-          })
-        ),
-        postProductsText && _react2.default.createElement(
-          'div',
-          { className: 'b-page__content__inner b-page__content__inner_content' },
-          _react2.default.createElement(_PostProducts2.default, {
-            postProductsText: postProductsText,
-            title: (0, _seo.h1)(vendor)
-          })
-        )
-      );
-    }
-  }]);
-  return Welcome;
-}(_react.Component);
-
-Welcome.propTypes = {
-  catalogFilterProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_CatalogFilter2.default.propTypes)),
-  isFilterDirty: _react.PropTypes.bool.isRequired,
-  nextButton: _react.PropTypes.object,
-  products: schemas.productList.isRequired,
-  showCartButton: _react.PropTypes.bool.isRequired,
-  showCatalogFilter: _react.PropTypes.bool.isRequired,
-  showNextButton: _react.PropTypes.bool,
-  showPaginationOnWelcome: _react.PropTypes.bool.isRequired,
-  showQuantity: _react.PropTypes.bool.isRequired,
-  showWelcomeSlider: _react.PropTypes.bool.isRequired,
-  vendor: schemas.vendor.isRequired,
-  t: _react.PropTypes.func.isRequired
-};
-
-Welcome.defaultProps = {};
-
-exports.default = Welcome;
-module.exports = exports['default'];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
 =======
-},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
->>>>>>> fix i18n, move filter toggle classes
->>>>>>> optional filter trigger button. resolves #4
-=======
-},{"../../helpers/seo":291,"../../schemas":315,"../CatalogFilter":46,"../ProductList/ProductList":197,"../common/ImageSlider":251,"../common/PostProducts":266,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],213:[function(require,module,exports){
->>>>>>> fix i18n, move filter toggle classes
+},{"../../schemas":316,"../Logo":106,"../common/LayoutMessages":256,"../common/W1Widget":274,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],212:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25321,6 +25965,239 @@ var Welcome = function (_Component) {
       var _props = this.props,
           catalogFilterProps = _props.catalogFilterProps,
           isFilterDirty = _props.isFilterDirty,
+          products = _props.products,
+          showCartButton = _props.showCartButton,
+          showCatalogFilter = _props.showCatalogFilter,
+          showPaginationOnWelcome = _props.showPaginationOnWelcome,
+          showQuantity = _props.showQuantity,
+          showWelcomeSlider = _props.showWelcomeSlider,
+          vendor = _props.vendor,
+          t = _props.t;
+      var preProductsText = vendor.pre_products_text,
+          postProductsText = vendor.post_products_text,
+          sliderImages = vendor.slider_images;
+
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'b-page__content__inner b-page__content__inner_slider' },
+          showWelcomeSlider && _react2.default.createElement(_ImageSlider2.default, {
+            className: 'b-slider_promo',
+            hasThumbs: false,
+            slides: sliderImages
+          })
+        ),
+        preProductsText && _react2.default.createElement(
+          'div',
+          { className: 'b-page__content__inner b-page__content__inner_content' },
+          _react2.default.createElement(
+            'div',
+            { className: 'lead-text' },
+            _react2.default.createElement('div', {
+              className: 'lead-text__content',
+              dangerouslySetInnerHTML: { __html: preProductsText }
+            })
+          )
+        ),
+        (products.items.length || isFilterDirty) && _react2.default.createElement(
+          'div',
+          { className: 'b-page__content__inner b-page__content__inner_content' },
+          _react2.default.createElement(_ProductList2.default, {
+            catalogFilterProps: catalogFilterProps,
+            products: products,
+            showCartButton: showCartButton,
+            showCatalogFilter: showCatalogFilter,
+            showPagination: showPaginationOnWelcome,
+            showQuantity: showQuantity,
+            t: t
+          })
+        ),
+        postProductsText && _react2.default.createElement(
+          'div',
+          { className: 'b-page__content__inner b-page__content__inner_content' },
+          _react2.default.createElement(_PostProducts2.default, {
+            postProductsText: postProductsText,
+            title: (0, _seo.h1)(vendor)
+          })
+        )
+      );
+    }
+  }]);
+  return Welcome;
+}(_react.Component);
+
+Welcome.propTypes = {
+  catalogFilterProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_CatalogFilter2.default.propTypes)),
+  isFilterDirty: _react.PropTypes.bool.isRequired,
+  products: schemas.productList.isRequired,
+  showCartButton: _react.PropTypes.bool.isRequired,
+  showCatalogFilter: _react.PropTypes.bool.isRequired,
+  showPaginationOnWelcome: _react.PropTypes.bool.isRequired,
+  showQuantity: _react.PropTypes.bool.isRequired,
+  showWelcomeSlider: _react.PropTypes.bool.isRequired,
+  vendor: schemas.vendor.isRequired,
+  t: _react.PropTypes.func.isRequired
+};
+
+Welcome.defaultProps = {};
+
+exports.default = Welcome;
+module.exports = exports['default'];
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":44,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+=======
+},{"../../helpers/seo":290,"../../schemas":314,"../CatalogFilter":45,"../ProductList/ProductList":196,"../common/ImageSlider":250,"../common/PostProducts":265,"babel-runtime/core-js/object/get-prototype-of":346,"babel-runtime/helpers/classCallCheck":352,"babel-runtime/helpers/createClass":353,"babel-runtime/helpers/inherits":356,"babel-runtime/helpers/possibleConstructorReturn":358,"babel-runtime/helpers/toConsumableArray":360,"react":"react"}],212:[function(require,module,exports){
+>>>>>>> fix i18n, move filter toggle classes
+>>>>>>> optional filter trigger button. resolves #4
+=======
+},{"../../helpers/seo":291,"../../schemas":315,"../CatalogFilter":46,"../ProductList/ProductList":197,"../common/ImageSlider":251,"../common/PostProducts":266,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],213:[function(require,module,exports){
+>>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/seo":292,"../../schemas":316,"../CatalogFilter":45,"../ProductList/ProductList":198,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],214:[function(require,module,exports){
+>>>>>>> rebuild after rebase
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _VendorPaymentLayout = require('./VendorPaymentLayout');
+
+var _VendorPaymentLayout2 = _interopRequireDefault(_VendorPaymentLayout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var VendorPaymentLayoutContainer = function (_Component) {
+  (0, _inherits3.default)(VendorPaymentLayoutContainer, _Component);
+
+  function VendorPaymentLayoutContainer() {
+    (0, _classCallCheck3.default)(this, VendorPaymentLayoutContainer);
+    return (0, _possibleConstructorReturn3.default)(this, (VendorPaymentLayoutContainer.__proto__ || (0, _getPrototypeOf2.default)(VendorPaymentLayoutContainer)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(VendorPaymentLayoutContainer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_VendorPaymentLayout2.default, this.props);
+    }
+  }]);
+  return VendorPaymentLayoutContainer;
+}(_react.Component);
+
+VendorPaymentLayoutContainer.propTypes = _VendorPaymentLayout2.default.propTypes;
+
+exports.default = VendorPaymentLayoutContainer;
+module.exports = exports['default'];
+
+<<<<<<< HEAD
+},{"./VendorPaymentLayout":211,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],213:[function(require,module,exports){
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../VendorLayout":210,"./index":215,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],215:[function(require,module,exports){
+>>>>>>> rebuild after rebase
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _toConsumableArray2 = require('babel-runtime/helpers/toConsumableArray');
+
+var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ImageSlider = require('../common/ImageSlider');
+
+var _ImageSlider2 = _interopRequireDefault(_ImageSlider);
+
+var _PostProducts = require('../common/PostProducts');
+
+var _PostProducts2 = _interopRequireDefault(_PostProducts);
+
+var _ProductList = require('../ProductList/ProductList');
+
+var _ProductList2 = _interopRequireDefault(_ProductList);
+
+var _seo = require('../../helpers/seo');
+
+var _CatalogFilter = require('../CatalogFilter');
+
+var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
+
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Welcome = function (_Component) {
+  (0, _inherits3.default)(Welcome, _Component);
+
+  function Welcome() {
+    (0, _classCallCheck3.default)(this, Welcome);
+    return (0, _possibleConstructorReturn3.default)(this, (Welcome.__proto__ || (0, _getPrototypeOf2.default)(Welcome)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(Welcome, [{
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          catalogFilterProps = _props.catalogFilterProps,
+          isFilterDirty = _props.isFilterDirty,
           nextButton = _props.nextButton,
           products = _props.products,
           showCartButton = _props.showCartButton,
@@ -25409,6 +26286,7 @@ Welcome.defaultProps = {};
 exports.default = Welcome;
 module.exports = exports['default'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../helpers/seo":292,"../../schemas":316,"../CatalogFilter":46,"../ProductList/ProductList":198,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],214:[function(require,module,exports){
 =======
@@ -25677,6 +26555,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../CatalogFilter":46,"../HoC/provideTranslations":97,"./Welcome":212,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],215:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../CatalogFilter":45,"../HoC/provideTranslations":96,"./Welcome":213,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],216:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25798,6 +26679,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../ChildrenProducts/ChildrenProducts":64,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],217:[function(require,module,exports){
 =======
 =======
@@ -25814,6 +26696,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../ChildrenProducts/ChildrenProducts":64,"../common/ImageSlider":251,"../common/PostProducts":266,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],216:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../ChildrenProducts/ChildrenProducts":63,"../common/ImageSlider":252,"../common/PostProducts":267,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],217:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25913,10 +26798,14 @@ exports.default = WelcomeChildrenPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":218,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],218:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":217,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],217:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":218,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],218:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -25991,10 +26880,14 @@ exports.default = WelcomeChildrenContainer;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./WelcomeChildren":216,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],219:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./WelcomeChildren":215,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],218:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./WelcomeChildren":216,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],219:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26098,10 +26991,14 @@ exports.default = Wishlist;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./WishlistList":222,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],220:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./WishlistList":221,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],219:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./WishlistList":222,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],220:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -26188,10 +27085,14 @@ exports.default = WishlistAddToCartButton;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],221:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],220:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],221:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26343,10 +27244,14 @@ exports.default = WishlistItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../helpers/money":289,"../../schemas":316,"../common/AssetImage":241,"../common/GoodDetails":246,"../common/Image/Image":249,"./WishlistAddToCartButton":220,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],222:[function(require,module,exports){
 =======
 },{"../../helpers/money":288,"../../schemas":315,"../common/AssetImage":240,"../common/GoodDetails":245,"../common/Image/Image":248,"./WishlistAddToCartButton":219,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],221:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../helpers/money":289,"../../schemas":316,"../common/AssetImage":241,"../common/GoodDetails":246,"../common/Image/Image":249,"./WishlistAddToCartButton":220,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],222:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26447,10 +27352,14 @@ exports.default = WishlistList;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"./WishlistItem":221,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],223:[function(require,module,exports){
 =======
 },{"../../schemas":315,"./WishlistItem":220,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],222:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"./WishlistItem":221,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],223:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26551,10 +27460,14 @@ exports.default = WishlistPage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../VendorLayout":210,"./index":224,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],224:[function(require,module,exports){
 =======
 },{"../../schemas":315,"../VendorLayout":209,"./index":223,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"react":"react"}],223:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../VendorLayout":210,"./index":224,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"react":"react"}],224:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26641,6 +27554,7 @@ module.exports = exports['default'];
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../schemas":316,"../HoC/provideTranslations":97,"./Wishlist":219,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],225:[function(require,module,exports){
 =======
 =======
@@ -26657,6 +27571,9 @@ module.exports = exports['default'];
 },{"../../schemas":315,"../HoC/provideTranslations":97,"./Wishlist":218,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],224:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../schemas":316,"../HoC/provideTranslations":96,"./Wishlist":219,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],225:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26781,10 +27698,14 @@ exports.default = Bubble;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash":"lodash","react":"react"}],226:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","lodash":"lodash","react":"react"}],225:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash":"lodash","react":"react"}],226:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26853,10 +27774,14 @@ exports.default = CabinetButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],227:[function(require,module,exports){
 =======
 },{"../Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],226:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],227:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26875,10 +27800,14 @@ Object.defineProperty(exports, 'CabinetButton', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CabinetButton":226}],228:[function(require,module,exports){
 =======
 },{"./CabinetButton":225}],227:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CabinetButton":226}],228:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -26948,10 +27877,14 @@ exports.default = CartButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],229:[function(require,module,exports){
 =======
 },{"../Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],228:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],229:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27089,10 +28022,14 @@ exports.default = CartButtonController;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../actions/view/BasketActions":13,"../../../helpers/money":289,"../../../stores/BasketStore":336,"./CartButton":228,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],230:[function(require,module,exports){
 =======
 },{"../../../actions/view/BasketActions":13,"../../../helpers/money":288,"../../../stores/BasketStore":335,"./CartButton":227,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],229:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../actions/view/BasketActions":13,"../../../helpers/money":289,"../../../stores/BasketStore":336,"./CartButton":228,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],230:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27164,10 +28101,14 @@ exports.default = DesignButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],231:[function(require,module,exports){
 =======
 },{"../Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],230:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],231:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27186,10 +28127,14 @@ Object.defineProperty(exports, 'DesignButton', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DesignButton":230}],232:[function(require,module,exports){
 =======
 },{"./DesignButton":229}],231:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DesignButton":230}],232:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27261,10 +28206,14 @@ exports.default = OperatorButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],233:[function(require,module,exports){
 =======
 },{"../Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],232:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],233:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27283,10 +28232,14 @@ Object.defineProperty(exports, 'OperatorButton', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./OperatorButton":232}],234:[function(require,module,exports){
 =======
 },{"./OperatorButton":231}],233:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./OperatorButton":232}],234:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27361,10 +28314,14 @@ exports.default = WishlistButton;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],235:[function(require,module,exports){
 =======
 },{"../Bubble":224,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],234:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../Bubble":225,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],235:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27383,10 +28340,14 @@ Object.defineProperty(exports, 'WishlistButton', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./WishlistButton":234}],236:[function(require,module,exports){
 =======
 },{"./WishlistButton":233}],235:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./WishlistButton":234}],236:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27596,10 +28557,14 @@ exports.default = AccordionItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./AccordionItemBody":237,"./AccordionItemTitle":238,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":932}],237:[function(require,module,exports){
 =======
 },{"./AccordionItemBody":236,"./AccordionItemTitle":237,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":931}],236:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./AccordionItemBody":237,"./AccordionItemTitle":238,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","react-dom":"react-dom","uuid":932}],237:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27690,10 +28655,14 @@ exports.default = AccordionItemBody;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],238:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],237:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],238:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27782,10 +28751,14 @@ exports.default = AccordionItemTitle;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],239:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],238:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],239:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -27978,10 +28951,14 @@ exports.default = Accordion;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/dom":288,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"jquery":"jquery","react":"react","react-dom":"react-dom"}],240:[function(require,module,exports){
 =======
 },{"../../../helpers/dom":287,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"babel-runtime/helpers/toConsumableArray":361,"jquery":"jquery","react":"react","react-dom":"react-dom"}],239:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/dom":288,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"babel-runtime/helpers/toConsumableArray":362,"jquery":"jquery","react":"react","react-dom":"react-dom"}],240:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28066,10 +29043,14 @@ exports.default = Alert;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],241:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],240:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],241:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28101,10 +29082,14 @@ exports.default = AssetImage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":357,"react":"react"}],242:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/extends":356,"react":"react"}],241:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/extends":357,"react":"react"}],242:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28209,10 +29194,14 @@ exports.default = CSRFToken;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],243:[function(require,module,exports){
 =======
 },{"./HiddenInput":246,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],242:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],243:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28277,10 +29266,14 @@ exports.default = Checkbox;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],244:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],243:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],244:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28325,10 +29318,14 @@ exports.default = FaIcon;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":357,"babel-runtime/helpers/objectWithoutProperties":359,"classnames":"classnames","react":"react"}],245:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/extends":356,"babel-runtime/helpers/objectWithoutProperties":358,"classnames":"classnames","react":"react"}],244:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/extends":357,"babel-runtime/helpers/objectWithoutProperties":359,"classnames":"classnames","react":"react"}],245:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28412,10 +29409,14 @@ exports.default = FormAuthenticity;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../CSRFToken":242,"../HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],246:[function(require,module,exports){
 =======
 },{"../CSRFToken":241,"../HiddenInput":246,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],245:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../CSRFToken":242,"../HiddenInput":247,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],246:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28492,10 +29493,14 @@ exports.default = GoodDetails;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],247:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"lodash":"lodash","react":"react"}],246:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"lodash":"lodash","react":"react"}],247:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28559,10 +29564,14 @@ exports.default = HiddenInput;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],248:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],247:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],248:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28644,10 +29653,14 @@ exports.default = Icon;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],249:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/defineProperty":355,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],248:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/defineProperty":356,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],249:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28802,10 +29815,14 @@ exports.default = Image;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../../../services/Thumbor":333,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],250:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../../../services/Thumbor":332,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],249:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../../../services/Thumbor":333,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],250:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28951,10 +29968,14 @@ exports.default = RelativeImage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"./Image":249,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],251:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"./Image":248,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react","react-dom":"react-dom"}],250:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"./Image":249,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react","react-dom":"react-dom"}],251:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -28982,10 +30003,14 @@ Object.defineProperty(exports, 'RelativeImage', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Image":249,"./RelativeImage":250}],252:[function(require,module,exports){
 =======
 },{"./Image":248,"./RelativeImage":249}],251:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Image":249,"./RelativeImage":250}],252:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29176,10 +30201,14 @@ exports.default = ImageSlider;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"./ImageSliderSlides":253,"./ImageSliderThumbs":254,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash/collection/size":501,"react":"react","react-dom":"react-dom"}],253:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"./ImageSliderSlides":252,"./ImageSliderThumbs":253,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","lodash/collection/size":500,"react":"react","react-dom":"react-dom"}],252:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"./ImageSliderSlides":253,"./ImageSliderThumbs":254,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","lodash/collection/size":501,"react":"react","react-dom":"react-dom"}],253:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29267,10 +30296,14 @@ exports.default = ImageSliderSlides;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],254:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../Image/RelativeImage":249,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],253:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../Image/RelativeImage":250,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],254:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29382,10 +30415,14 @@ exports.default = ImageSliderThumbs;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../Image/Image":249,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],255:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../Image/Image":248,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],254:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../Image/Image":249,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],255:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29538,10 +30575,14 @@ exports.default = InputNumberSpinner;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],256:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"jquery":"jquery","react":"react"}],255:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"jquery":"jquery","react":"react"}],256:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29626,10 +30667,14 @@ exports.default = LayoutMessages;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],257:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],256:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],257:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29733,10 +30778,14 @@ exports.default = Link;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],258:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],257:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],258:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29809,10 +30858,14 @@ exports.default = HumanizedMoney;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/money":289,"../../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],259:[function(require,module,exports){
 =======
 },{"../../../helpers/money":288,"../../../schemas":315,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],258:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/money":289,"../../../schemas":316,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],259:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29915,10 +30968,14 @@ exports.default = HumanizedMoneyWithCurrency;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../helpers/money":289,"../../../schemas":316,"./HumanizedMoney":258,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],260:[function(require,module,exports){
 =======
 },{"../../../helpers/money":288,"../../../schemas":315,"./HumanizedMoney":257,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],259:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../helpers/money":289,"../../../schemas":316,"./HumanizedMoney":258,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],260:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30042,10 +31099,14 @@ exports.default = OrderComments;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../schemas":316,"../FaIcon":244,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],261:[function(require,module,exports){
 =======
 },{"../../../schemas":315,"../FaIcon":243,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],260:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../schemas":316,"../FaIcon":244,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],261:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30298,10 +31359,14 @@ exports.default = OrderContents;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/OrderConstants":275,"../../../schemas":316,"../FaIcon":244,"../Image":251,"../Money/HumanizedMoneyWithCurrency":259,"./OrderItem":263,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],262:[function(require,module,exports){
 =======
 },{"../../../constants/OrderConstants":274,"../../../schemas":315,"../FaIcon":243,"../Image":250,"../Money/HumanizedMoneyWithCurrency":258,"./OrderItem":262,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],261:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/OrderConstants":275,"../../../schemas":316,"../FaIcon":244,"../Image":251,"../Money/HumanizedMoneyWithCurrency":259,"./OrderItem":263,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],262:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30426,6 +31491,7 @@ exports.OrderPaymentStateIcon = OrderPaymentStateIcon;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/deliveryConstants":278,"../../../constants/paymentConstants":282,"../../../constants/reservationConstants":284,"../../HoC/provideTranslations":97,"../FaIcon":244,"./OrderLabels":264,"react":"react"}],263:[function(require,module,exports){
 =======
 =======
@@ -30442,6 +31508,9 @@ exports.OrderPaymentStateIcon = OrderPaymentStateIcon;
 },{"../../../constants/deliveryConstants":277,"../../../constants/paymentConstants":281,"../../../constants/reservationConstants":283,"../../HoC/provideTranslations":97,"../FaIcon":243,"./OrderLabels":263,"react":"react"}],262:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/deliveryConstants":278,"../../../constants/paymentConstants":282,"../../../constants/reservationConstants":284,"../../HoC/provideTranslations":96,"../FaIcon":244,"./OrderLabels":264,"react":"react"}],263:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30575,10 +31644,14 @@ exports.default = OrderItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/OrderConstants":275,"../../../schemas":316,"../Image":251,"../Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],264:[function(require,module,exports){
 =======
 },{"../../../constants/OrderConstants":274,"../../../schemas":315,"../Image":250,"../Money/HumanizedMoneyWithCurrency":258,"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],263:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/OrderConstants":275,"../../../schemas":316,"../Image":251,"../Money/HumanizedMoneyWithCurrency":259,"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],264:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30663,10 +31736,14 @@ exports.OrderDeliveryStateLabel = OrderDeliveryStateLabel;
 exports.OrderPaymentStateLabel = OrderPaymentStateLabel;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../../constants/deliveryConstants":278,"../../../constants/paymentConstants":282,"react":"react"}],265:[function(require,module,exports){
 =======
 },{"../../../constants/deliveryConstants":277,"../../../constants/paymentConstants":281,"react":"react"}],264:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../../constants/deliveryConstants":278,"../../../constants/paymentConstants":282,"react":"react"}],265:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30746,10 +31823,14 @@ exports.default = OrderSelfDeliveryMessage;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],266:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],265:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],266:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30839,10 +31920,14 @@ exports.default = OrderState;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],267:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react"}],266:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react"}],267:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30915,10 +32000,14 @@ exports.default = PostProducts;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],268:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],267:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],268:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31003,10 +32092,14 @@ exports.default = ProductSearchForm;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],269:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],268:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],269:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31126,10 +32219,14 @@ exports.default = RadioColor;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","tinycolor2":"tinycolor2"}],270:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","react":"react","tinycolor2":"tinycolor2"}],269:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","react":"react","tinycolor2":"tinycolor2"}],270:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31236,10 +32333,14 @@ exports.default = Scroller;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","perfect-scrollbar":"perfect-scrollbar","react":"react","react-dom":"react-dom"}],271:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"classnames":"classnames","perfect-scrollbar":"perfect-scrollbar","react":"react","react-dom":"react-dom"}],270:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"classnames":"classnames","perfect-scrollbar":"perfect-scrollbar","react":"react","react-dom":"react-dom"}],271:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31343,10 +32444,14 @@ exports.default = Select;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],272:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],271:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],272:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31461,10 +32566,14 @@ exports.default = Slider;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"nouislider":"nouislider","react":"react","react-dom":"react-dom"}],273:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"nouislider":"nouislider","react":"react","react-dom":"react-dom"}],272:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"nouislider":"nouislider","react":"react","react-dom":"react-dom"}],273:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31529,10 +32638,14 @@ exports.default = TextInput;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],274:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],273:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],274:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31609,10 +32722,14 @@ exports.default = W1Widget;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],275:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"react":"react"}],274:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"react":"react"}],275:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31621,10 +32738,14 @@ Object.defineProperty(exports, "__esModule", {
 var ORDER_IMG_SIZE = exports.ORDER_IMG_SIZE = 143;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],276:[function(require,module,exports){
 =======
 },{}],275:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],276:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31645,10 +32766,14 @@ var POPUP_OPEN = exports.POPUP_OPEN = 'POPUP_OPEN';
 var POPUP_CLOSE = exports.POPUP_CLOSE = 'POPUP_CLOSE';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],277:[function(require,module,exports){
 =======
 },{}],276:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],277:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31657,10 +32782,14 @@ Object.defineProperty(exports, "__esModule", {
 var DESIGN_IS_OPEN = exports.DESIGN_IS_OPEN = 'DESIGN_IS_OPEN';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],278:[function(require,module,exports){
 =======
 },{}],277:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],278:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31673,10 +32802,14 @@ var DELIVERY_STATE_NOT_NEEDED = exports.DELIVERY_STATE_NOT_NEEDED = 'done';
 var DELIVERY_STATE_CANCELED = exports.DELIVERY_STATE_CANCELED = 'canceled';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],279:[function(require,module,exports){
 =======
 },{}],278:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],279:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31692,10 +32825,14 @@ var DESIGN_FONT_SIZE_TYPE = exports.DESIGN_FONT_SIZE_TYPE = 'DESIGN_FONT_SIZE_TY
 var DESIGN_ATTACHMENT_TYPE = exports.DESIGN_ATTACHMENT_TYPE = 'DESIGN_ATTACHMENT_TYPE';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],280:[function(require,module,exports){
 =======
 },{}],279:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],280:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31707,10 +32844,14 @@ var DOM_CHANGE = exports.DOM_CHANGE = 'DOM_CHANGE';
 var PHOTO_CHANGE = exports.PHOTO_CHANGE = 'productPhotoChange';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],281:[function(require,module,exports){
 =======
 },{}],280:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],281:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31720,10 +32861,14 @@ exports.default = ['ru', 'en', 'ua', 'kz'];
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],282:[function(require,module,exports){
 =======
 },{}],281:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],282:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31736,10 +32881,14 @@ var PAYMENT_STATE_PAID = exports.PAYMENT_STATE_PAID = 'paid';
 var PAYMENT_STATE_CANCELED = exports.PAYMENT_STATE_CANCELED = 'canceled';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],283:[function(require,module,exports){
 =======
 },{}],282:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],283:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31757,10 +32906,14 @@ var PROPERTY_BOOLEAN_TYPE = exports.PROPERTY_BOOLEAN_TYPE = 'PropertyBoolean';
 var PROPERTY_DICTIONARY_TYPE = exports.PROPERTY_DICTIONARY_TYPE = 'items';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],284:[function(require,module,exports){
 =======
 },{}],283:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],284:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31771,10 +32924,14 @@ var RESERVATION_TYPE_REMOTE = exports.RESERVATION_TYPE_REMOTE = 'remote';
 var RESERVATION_TYPE_LOCAL = exports.RESERVATION_TYPE_LOCAL = 'local';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],285:[function(require,module,exports){
 =======
 },{}],284:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],285:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31785,10 +32942,14 @@ var DESIGN_IS_OPEN = exports.DESIGN_IS_OPEN = 'DESIGN_IS_OPEN';
 var DESIGN_SELECTED_INDEX = exports.DESIGN_SELECTED_INDEX = 'DESIGN_SELECTED_INDEX';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],286:[function(require,module,exports){
 =======
 },{}],285:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],286:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31847,10 +33008,14 @@ exports.default = BaseDispatcher;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"flux":469}],287:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"flux":468}],286:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"flux":469}],287:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31888,10 +33053,14 @@ exports.default = Timer;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/classCallCheck":354}],288:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/classCallCheck":353}],287:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/classCallCheck":354}],288:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31966,10 +33135,14 @@ function getTransitionEndEvent() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],289:[function(require,module,exports){
 =======
 },{}],288:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],289:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32059,10 +33232,14 @@ function unknownIsoCodeMessage(money) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../models/currencies":296,"i18next":"i18next","numeral":578}],290:[function(require,module,exports){
 =======
 },{"../models/currencies":295,"i18next":"i18next","numeral":577}],289:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../models/currencies":296,"i18next":"i18next","numeral":578}],290:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32081,10 +33258,14 @@ function numberToHumanSize(number) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"numeral":578}],291:[function(require,module,exports){
 =======
 },{"numeral":577}],290:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"numeral":578}],291:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32228,10 +33409,14 @@ function hasDifferentPrices(product) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./money":289,"./number":290,"./seo":292,"react":"react"}],292:[function(require,module,exports){
 =======
 },{"./money":288,"./number":289,"./seo":291,"react":"react"}],291:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./money":289,"./number":290,"./seo":292,"react":"react"}],292:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32276,10 +33461,14 @@ function schemaOrgGoodAvailability(good) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],293:[function(require,module,exports){
 =======
 },{}],292:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],293:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32300,10 +33489,14 @@ var simpleFormat = exports.simpleFormat = function simpleFormat() {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],294:[function(require,module,exports){
 =======
 },{}],293:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],294:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32355,10 +33548,14 @@ function categoryLink(category) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],295:[function(require,module,exports){
 =======
 },{"react":"react"}],294:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],295:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32489,10 +33686,14 @@ exports.default = function (store) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../services/Notice":332,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/promise":351,"babel-runtime/core-js/symbol":352,"babel-runtime/helpers/slicedToArray":361,"babel-runtime/helpers/typeof":363,"humps":473}],296:[function(require,module,exports){
 =======
 },{"../services/Notice":331,"babel-runtime/core-js/object/assign":344,"babel-runtime/core-js/promise":350,"babel-runtime/core-js/symbol":351,"babel-runtime/helpers/slicedToArray":360,"babel-runtime/helpers/typeof":362,"humps":472}],295:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../services/Notice":332,"babel-runtime/core-js/object/assign":345,"babel-runtime/core-js/promise":351,"babel-runtime/core-js/symbol":352,"babel-runtime/helpers/slicedToArray":361,"babel-runtime/helpers/typeof":363,"humps":473}],296:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32598,10 +33799,14 @@ exports.default = currencies;
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],297:[function(require,module,exports){
 =======
 },{}],296:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],297:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32829,10 +34034,14 @@ exports.default = {
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../constants/designTypes":279}],298:[function(require,module,exports){
 =======
 },{"../constants/designTypes":278}],297:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../constants/designTypes":279}],298:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32880,10 +34089,14 @@ exports.default = (0, _createReducer2.default)(initialState, {});
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utils/createReducer":338}],299:[function(require,module,exports){
 =======
 },{"../utils/createReducer":337}],298:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utils/createReducer":338}],299:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32918,7 +34131,6 @@ var initialState = {
     value: ''
   },
   amounts: {},
-  packageCount: 0,
   selectedPackage: '',
   deliveryTypes: [],
   selectedDeliveryType: null,
@@ -32940,11 +34152,9 @@ function initCartStore(state, _ref) {
     result[item.id] = isSellingByWeight ? parseFloat(item.weight || 0) : parseInt(item.count || 0, 10);
     return result;
   }, {});
-  var packageCount = (0, _timm.getIn)(response, ['packageItem', 'count']) || 1;
 
   return (0, _timm.merge)(state, {
     amounts: amounts,
-    packageCount: packageCount,
     coupon: {
       show: true,
       value: response.couponCode
@@ -32989,27 +34199,20 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE, function (state, _ref5) {
   var id = _ref5.id;
 
-  return (0, _timm.merge)(state, {
-    selectedPackage: id,
-    packageCount: Math.max(1, state.packageCount)
-  });
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_PACKAGE_COUNT, function (state, _ref6) {
-  var count = _ref6.count;
-
-  return (0, _timm.set)(state, 'packageCount', count);
+  return (0, _timm.set)(state, 'selectedPackage', id);
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_INIT_CHECKOUT, function (state, action) {
   return initCheckoutCartStore(state, action);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref7) {
-  var name = _ref7.name,
-      value = _ref7.value;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SET_FIELD_VALUE, function (state, _ref6) {
+  var name = _ref6.name,
+      value = _ref6.value;
 
   return (0, _timm.setIn)(state, ['checkoutFieldValues', name, 'value'], value);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref8) {
-  var id = _ref8.id;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref7) {
+  var id = _ref7.id;
 
   return (0, _timm.set)(state, 'selectedDeliveryType', id);
-}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref9) {
-  var id = _ref9.id;
+}), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref8) {
+  var id = _ref8.id;
 
   return (0, _timm.set)(state, 'selectedPaymentType', id);
 }), _actionMap);
@@ -33017,10 +34220,14 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 exports.default = (0, _createReducer2.default)(initialState, actionMap);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../actions/CartActions":4,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"lodash":"lodash","timm":"timm"}],300:[function(require,module,exports){
 =======
 },{"../actions/CartActions":4,"../utils/createReducer":337,"babel-runtime/helpers/defineProperty":355,"lodash":"lodash","timm":"timm"}],299:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../actions/CartActions":4,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"lodash":"lodash","timm":"timm"}],300:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33079,10 +34286,14 @@ exports.default = (0, _createReducer2.default)(initialState, actionMap);
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../actions/ClientStateActions":5,"../utils/createReducer":338,"babel-runtime/core-js/object/assign":345,"babel-runtime/helpers/defineProperty":356}],301:[function(require,module,exports){
 =======
 },{"../actions/ClientStateActions":5,"../utils/createReducer":337,"babel-runtime/core-js/object/assign":344,"babel-runtime/helpers/defineProperty":355}],300:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../actions/ClientStateActions":5,"../utils/createReducer":338,"babel-runtime/core-js/object/assign":345,"babel-runtime/helpers/defineProperty":356}],301:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33141,10 +34352,14 @@ exports.default = (0, _createReducer2.default)(initialState, actionMap);
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../actions/OperatorStateActions":6,"../utils/createReducer":338,"babel-runtime/core-js/object/assign":345,"babel-runtime/helpers/defineProperty":356}],302:[function(require,module,exports){
 =======
 },{"../actions/OperatorStateActions":6,"../utils/createReducer":337,"babel-runtime/core-js/object/assign":344,"babel-runtime/helpers/defineProperty":355}],301:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../actions/OperatorStateActions":6,"../utils/createReducer":338,"babel-runtime/core-js/object/assign":345,"babel-runtime/helpers/defineProperty":356}],302:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33204,10 +34419,14 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Pac
 exports.default = (0, _createReducer2.default)(initialState, actionMap);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../actions/PackagesActions":7,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"timm":"timm"}],303:[function(require,module,exports){
 =======
 },{"../actions/PackagesActions":7,"../utils/createReducer":337,"babel-runtime/helpers/defineProperty":355,"timm":"timm"}],302:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../actions/PackagesActions":7,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"timm":"timm"}],303:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33265,10 +34484,14 @@ exports.default = (0, _createReducer3.default)(initialState, (_createReducer = {
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../constants/actionTypes":276,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"lodash":"lodash","timm":"timm"}],304:[function(require,module,exports){
 =======
 },{"../constants/actionTypes":275,"../utils/createReducer":337,"babel-runtime/helpers/defineProperty":355,"lodash":"lodash","timm":"timm"}],303:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../constants/actionTypes":276,"../utils/createReducer":338,"babel-runtime/helpers/defineProperty":356,"lodash":"lodash","timm":"timm"}],304:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33290,10 +34513,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./money":319,"react":"react"}],305:[function(require,module,exports){
 =======
 },{"./money":318,"react":"react"}],304:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./money":319,"react":"react"}],305:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33342,10 +34569,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./good":314,"./money":319,"react":"react"}],306:[function(require,module,exports){
 =======
 },{"./good":313,"./money":318,"react":"react"}],305:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./good":314,"./money":319,"react":"react"}],306:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33415,10 +34646,14 @@ exports.default = oneOfType([rangeOption, checkboxOption, radioOption, colorOpti
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/extends":357,"react":"react"}],307:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/extends":356,"react":"react"}],306:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/extends":357,"react":"react"}],307:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33434,10 +34669,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],308:[function(require,module,exports){
 =======
 },{"react":"react"}],307:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],308:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33457,10 +34696,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],309:[function(require,module,exports){
 =======
 },{"react":"react"}],308:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],309:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33478,10 +34721,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],310:[function(require,module,exports){
 =======
 },{"react":"react"}],309:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],310:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33506,10 +34753,14 @@ exports.default = arrayOf(shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./product":325,"react":"react"}],311:[function(require,module,exports){
 =======
 },{"./product":324,"react":"react"}],310:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./product":325,"react":"react"}],311:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33528,10 +34779,14 @@ exports.default = shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],312:[function(require,module,exports){
 =======
 },{"react":"react"}],311:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],312:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33560,10 +34815,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./money":319,"react":"react"}],313:[function(require,module,exports){
 =======
 },{"./money":318,"react":"react"}],312:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./money":319,"react":"react"}],313:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33579,10 +34838,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],314:[function(require,module,exports){
 =======
 },{"react":"react"}],313:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],314:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33621,10 +34884,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./image":315,"./money":319,"react":"react"}],315:[function(require,module,exports){
 =======
 },{"./image":314,"./money":318,"react":"react"}],314:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./image":315,"./money":319,"react":"react"}],315:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33641,10 +34908,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],316:[function(require,module,exports){
 =======
 },{"react":"react"}],315:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],316:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33888,10 +35159,14 @@ Object.defineProperty(exports, 'order', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./cart":304,"./cartApi":305,"./catalogFilterOption":306,"./checkoutCoupon":307,"./checkoutField":308,"./checkoutPublicOffer":309,"./childrenProducts":310,"./comment":311,"./deliveryType":312,"./formAuthenticity":313,"./good":314,"./image":315,"./locale":317,"./menuItem":318,"./money":319,"./order":320,"./orderItem":321,"./packagesApi":322,"./pagination":323,"./paymentType":324,"./product":325,"./productList":326,"./slide":327,"./vendor":328,"./vendorContact":329,"./wishlistItem":330}],317:[function(require,module,exports){
 =======
 },{"./cart":303,"./cartApi":304,"./catalogFilterOption":305,"./checkoutCoupon":306,"./checkoutField":307,"./checkoutPublicOffer":308,"./childrenProducts":309,"./comment":310,"./deliveryType":311,"./formAuthenticity":312,"./good":313,"./image":314,"./locale":316,"./menuItem":317,"./money":318,"./order":319,"./orderItem":320,"./packagesApi":321,"./pagination":322,"./paymentType":323,"./product":324,"./productList":325,"./slide":326,"./vendor":327,"./vendorContact":328,"./wishlistItem":329}],316:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./cart":304,"./cartApi":305,"./catalogFilterOption":306,"./checkoutCoupon":307,"./checkoutField":308,"./checkoutPublicOffer":309,"./childrenProducts":310,"./comment":311,"./deliveryType":312,"./formAuthenticity":313,"./good":314,"./image":315,"./locale":317,"./menuItem":318,"./money":319,"./order":320,"./orderItem":321,"./packagesApi":322,"./pagination":323,"./paymentType":324,"./product":325,"./productList":326,"./slide":327,"./vendor":328,"./vendorContact":329,"./wishlistItem":330}],317:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33907,10 +35182,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],318:[function(require,module,exports){
 =======
 },{"react":"react"}],317:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],318:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33937,10 +35216,14 @@ exports.default = menuItem;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],319:[function(require,module,exports){
 =======
 },{"react":"react"}],318:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],319:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33956,10 +35239,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],320:[function(require,module,exports){
 =======
 },{"react":"react"}],319:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],320:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34034,10 +35321,14 @@ exports.default = shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./comment":311,"./good":314,"./money":319,"./orderItem":321,"react":"react"}],321:[function(require,module,exports){
 =======
 },{"./comment":310,"./good":313,"./money":318,"./orderItem":320,"react":"react"}],320:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./comment":311,"./good":314,"./money":319,"./orderItem":321,"react":"react"}],321:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34072,10 +35363,14 @@ exports.default = shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./good":314,"./money":319,"react":"react"}],322:[function(require,module,exports){
 =======
 },{"./good":313,"./money":318,"react":"react"}],321:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./good":314,"./money":319,"react":"react"}],322:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34112,10 +35407,14 @@ exports.default = _react.PropTypes.arrayOf(_react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./image":315,"./money":319,"react":"react"}],323:[function(require,module,exports){
 =======
 },{"./image":314,"./money":318,"react":"react"}],322:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./image":315,"./money":319,"react":"react"}],323:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34132,10 +35431,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],324:[function(require,module,exports){
 =======
 },{"react":"react"}],323:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],324:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34152,10 +35455,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],325:[function(require,module,exports){
 =======
 },{"react":"react"}],324:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],325:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34198,10 +35505,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./good":314,"./image":315,"./money":319,"react":"react"}],326:[function(require,module,exports){
 =======
 },{"./good":313,"./image":314,"./money":318,"react":"react"}],325:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./good":314,"./image":315,"./money":319,"react":"react"}],326:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34231,10 +35542,14 @@ exports.default = shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./pagination":323,"./product":325,"react":"react"}],327:[function(require,module,exports){
 =======
 },{"./pagination":322,"./product":324,"react":"react"}],326:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./pagination":323,"./product":325,"react":"react"}],327:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34258,10 +35573,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./image":315,"react":"react"}],328:[function(require,module,exports){
 =======
 },{"./image":314,"react":"react"}],327:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./image":315,"react":"react"}],328:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34296,10 +35615,14 @@ exports.default = shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./slide":327,"./vendorContact":329,"react":"react"}],329:[function(require,module,exports){
 =======
 },{"./slide":326,"./vendorContact":328,"react":"react"}],328:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./slide":327,"./vendorContact":329,"react":"react"}],329:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34316,10 +35639,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],330:[function(require,module,exports){
 =======
 },{"react":"react"}],329:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],330:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34352,10 +35679,14 @@ exports.default = _react.PropTypes.shape({
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./good":314,"./product":325,"react":"react"}],331:[function(require,module,exports){
 =======
 },{"./good":313,"./product":324,"react":"react"}],330:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./good":314,"./product":325,"react":"react"}],331:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -34413,10 +35744,14 @@ module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],332:[function(require,module,exports){
 =======
 },{}],331:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],332:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -34519,10 +35854,14 @@ module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../components/Notice":123,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/typeof":363,"react":"react","react-dom":"react-dom"}],333:[function(require,module,exports){
 =======
 },{"../components/Notice":122,"babel-runtime/helpers/extends":356,"babel-runtime/helpers/typeof":362,"react":"react","react-dom":"react-dom"}],332:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../components/Notice":123,"babel-runtime/helpers/extends":357,"babel-runtime/helpers/typeof":363,"react":"react","react-dom":"react-dom"}],333:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -34575,10 +35914,14 @@ module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/toConsumableArray":362}],334:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/toConsumableArray":361}],333:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/toConsumableArray":362}],334:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34642,10 +35985,14 @@ exports.default = BaseStore;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"events":468}],335:[function(require,module,exports){
 =======
 },{"babel-runtime/core-js/object/get-prototype-of":347,"babel-runtime/helpers/classCallCheck":353,"babel-runtime/helpers/createClass":354,"babel-runtime/helpers/inherits":357,"babel-runtime/helpers/possibleConstructorReturn":359,"events":467}],334:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/core-js/object/get-prototype-of":348,"babel-runtime/helpers/classCallCheck":354,"babel-runtime/helpers/createClass":355,"babel-runtime/helpers/inherits":358,"babel-runtime/helpers/possibleConstructorReturn":360,"events":468}],335:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34692,10 +36039,14 @@ exports.default = BasketDispatcher;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../dispatchers/BaseDispatcher":286,"./BasketStore":336}],336:[function(require,module,exports){
 =======
 },{"../dispatchers/BaseDispatcher":285,"./BasketStore":335}],335:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../dispatchers/BaseDispatcher":286,"./BasketStore":336}],336:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34743,10 +36094,14 @@ exports.default = BasketStore;
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./BaseStore":334,"lodash":"lodash"}],337:[function(require,module,exports){
 =======
 },{"./BaseStore":333,"lodash":"lodash"}],336:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./BaseStore":334,"lodash":"lodash"}],337:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34795,10 +36150,14 @@ function buildParams(prefix, obj, traditional, add) {
 module.exports = exports['default'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"babel-runtime/helpers/typeof":363,"lodash":"lodash"}],338:[function(require,module,exports){
 =======
 },{"babel-runtime/helpers/typeof":362,"lodash":"lodash"}],337:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"babel-runtime/helpers/typeof":363,"lodash":"lodash"}],338:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34822,10 +36181,14 @@ function createReducer(initialState, handlers) {
 module.exports = exports["default"];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],339:[function(require,module,exports){
 =======
 },{}],338:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],339:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -34892,10 +36255,14 @@ function subscriptionEmails() {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],340:[function(require,module,exports){
 =======
 },{}],339:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],340:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34911,6 +36278,7 @@ function vendorOrder() {
   return '/orders';
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{}],341:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/array/from"), __esModule: true };
@@ -34941,33 +36309,40 @@ module.exports = { "default": require("core-js/library/fn/symbol/iterator"), __e
 },{"core-js/library/fn/symbol/iterator":376}],354:[function(require,module,exports){
 =======
 },{}],340:[function(require,module,exports){
+=======
+},{}],341:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = { "default": require("core-js/library/fn/array/from"), __esModule: true };
-},{"core-js/library/fn/array/from":363}],341:[function(require,module,exports){
+},{"core-js/library/fn/array/from":364}],342:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/get-iterator"), __esModule: true };
-},{"core-js/library/fn/get-iterator":364}],342:[function(require,module,exports){
+},{"core-js/library/fn/get-iterator":365}],343:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/is-iterable"), __esModule: true };
-},{"core-js/library/fn/is-iterable":365}],343:[function(require,module,exports){
+},{"core-js/library/fn/is-iterable":366}],344:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/json/stringify"), __esModule: true };
-},{"core-js/library/fn/json/stringify":366}],344:[function(require,module,exports){
+},{"core-js/library/fn/json/stringify":367}],345:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/assign"), __esModule: true };
-},{"core-js/library/fn/object/assign":367}],345:[function(require,module,exports){
+},{"core-js/library/fn/object/assign":368}],346:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/create"), __esModule: true };
-},{"core-js/library/fn/object/create":368}],346:[function(require,module,exports){
+},{"core-js/library/fn/object/create":369}],347:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/define-property"), __esModule: true };
-},{"core-js/library/fn/object/define-property":369}],347:[function(require,module,exports){
+},{"core-js/library/fn/object/define-property":370}],348:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/get-prototype-of"), __esModule: true };
-},{"core-js/library/fn/object/get-prototype-of":370}],348:[function(require,module,exports){
+},{"core-js/library/fn/object/get-prototype-of":371}],349:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/keys"), __esModule: true };
-},{"core-js/library/fn/object/keys":371}],349:[function(require,module,exports){
+},{"core-js/library/fn/object/keys":372}],350:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/set-prototype-of"), __esModule: true };
-},{"core-js/library/fn/object/set-prototype-of":372}],350:[function(require,module,exports){
+},{"core-js/library/fn/object/set-prototype-of":373}],351:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/promise"), __esModule: true };
-},{"core-js/library/fn/promise":373}],351:[function(require,module,exports){
+},{"core-js/library/fn/promise":374}],352:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/symbol"), __esModule: true };
-},{"core-js/library/fn/symbol":374}],352:[function(require,module,exports){
+},{"core-js/library/fn/symbol":375}],353:[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/symbol/iterator"), __esModule: true };
+<<<<<<< HEAD
 },{"core-js/library/fn/symbol/iterator":375}],353:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"core-js/library/fn/symbol/iterator":376}],354:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -34978,10 +36353,14 @@ exports.default = function (instance, Constructor) {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],355:[function(require,module,exports){
 =======
 },{}],354:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],355:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35010,10 +36389,14 @@ exports.default = function () {
   };
 }();
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/object/define-property":347}],356:[function(require,module,exports){
 =======
 },{"../core-js/object/define-property":346}],355:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/object/define-property":347}],356:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35039,10 +36422,14 @@ exports.default = function (obj, key, value) {
   return obj;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/object/define-property":347}],357:[function(require,module,exports){
 =======
 },{"../core-js/object/define-property":346}],356:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/object/define-property":347}],357:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35067,10 +36454,14 @@ exports.default = _assign2.default || function (target) {
   return target;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/object/assign":345}],358:[function(require,module,exports){
 =======
 },{"../core-js/object/assign":344}],357:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/object/assign":345}],358:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35105,10 +36496,14 @@ exports.default = function (subClass, superClass) {
   if (superClass) _setPrototypeOf2.default ? (0, _setPrototypeOf2.default)(subClass, superClass) : subClass.__proto__ = superClass;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/object/create":346,"../core-js/object/set-prototype-of":350,"../helpers/typeof":363}],359:[function(require,module,exports){
 =======
 },{"../core-js/object/create":345,"../core-js/object/set-prototype-of":349,"../helpers/typeof":362}],358:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/object/create":346,"../core-js/object/set-prototype-of":350,"../helpers/typeof":363}],359:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35125,10 +36520,14 @@ exports.default = function (obj, keys) {
   return target;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],360:[function(require,module,exports){
 =======
 },{}],359:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],360:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35147,10 +36546,14 @@ exports.default = function (self, call) {
   return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../helpers/typeof":363}],361:[function(require,module,exports){
 =======
 },{"../helpers/typeof":362}],360:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../helpers/typeof":363}],361:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35203,10 +36606,14 @@ exports.default = function () {
   };
 }();
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/get-iterator":342,"../core-js/is-iterable":343}],362:[function(require,module,exports){
 =======
 },{"../core-js/get-iterator":341,"../core-js/is-iterable":342}],361:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/get-iterator":342,"../core-js/is-iterable":343}],362:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35229,10 +36636,14 @@ exports.default = function (arr) {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/array/from":341}],363:[function(require,module,exports){
 =======
 },{"../core-js/array/from":340}],362:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../core-js/array/from":341}],363:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -35255,6 +36666,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
   return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../core-js/symbol":352,"../core-js/symbol/iterator":353}],364:[function(require,module,exports){
 require('../../modules/es6.string.iterator');
 require('../../modules/es6.array.from');
@@ -35270,24 +36682,32 @@ module.exports = require('../modules/core.is-iterable');
 },{"../modules/core.is-iterable":451,"../modules/es6.string.iterator":462,"../modules/web.dom.iterable":466}],367:[function(require,module,exports){
 =======
 },{"../core-js/symbol":351,"../core-js/symbol/iterator":352}],363:[function(require,module,exports){
+=======
+},{"../core-js/symbol":352,"../core-js/symbol/iterator":353}],364:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../../modules/es6.string.iterator');
 require('../../modules/es6.array.from');
 module.exports = require('../../modules/_core').Array.from;
-},{"../../modules/_core":383,"../../modules/es6.array.from":451,"../../modules/es6.string.iterator":461}],364:[function(require,module,exports){
+},{"../../modules/_core":384,"../../modules/es6.array.from":452,"../../modules/es6.string.iterator":462}],365:[function(require,module,exports){
 require('../modules/web.dom.iterable');
 require('../modules/es6.string.iterator');
 module.exports = require('../modules/core.get-iterator');
-},{"../modules/core.get-iterator":449,"../modules/es6.string.iterator":461,"../modules/web.dom.iterable":465}],365:[function(require,module,exports){
+},{"../modules/core.get-iterator":450,"../modules/es6.string.iterator":462,"../modules/web.dom.iterable":466}],366:[function(require,module,exports){
 require('../modules/web.dom.iterable');
 require('../modules/es6.string.iterator');
 module.exports = require('../modules/core.is-iterable');
+<<<<<<< HEAD
 },{"../modules/core.is-iterable":450,"../modules/es6.string.iterator":461,"../modules/web.dom.iterable":465}],366:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../modules/core.is-iterable":451,"../modules/es6.string.iterator":462,"../modules/web.dom.iterable":466}],367:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var core  = require('../../modules/_core')
   , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
 module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../modules/_core":384}],368:[function(require,module,exports){
 require('../../modules/es6.object.assign');
@@ -35299,21 +36719,32 @@ require('../../modules/es6.object.assign');
 module.exports = require('../../modules/_core').Object.assign;
 },{"../../modules/_core":383,"../../modules/es6.object.assign":453}],368:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../modules/_core":384}],368:[function(require,module,exports){
+require('../../modules/es6.object.assign');
+module.exports = require('../../modules/_core').Object.assign;
+},{"../../modules/_core":384,"../../modules/es6.object.assign":454}],369:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../../modules/es6.object.create');
 var $Object = require('../../modules/_core').Object;
 module.exports = function create(P, D){
   return $Object.create(P, D);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../modules/_core":384,"../../modules/es6.object.create":455}],370:[function(require,module,exports){
 =======
 },{"../../modules/_core":383,"../../modules/es6.object.create":454}],369:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../modules/_core":384,"../../modules/es6.object.create":455}],370:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../../modules/es6.object.define-property');
 var $Object = require('../../modules/_core').Object;
 module.exports = function defineProperty(it, key, desc){
   return $Object.defineProperty(it, key, desc);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../modules/_core":384,"../../modules/es6.object.define-property":456}],371:[function(require,module,exports){
 require('../../modules/es6.object.get-prototype-of');
@@ -35327,31 +36758,43 @@ module.exports = require('../../modules/_core').Object.setPrototypeOf;
 },{"../../modules/_core":384,"../../modules/es6.object.set-prototype-of":459}],374:[function(require,module,exports){
 =======
 },{"../../modules/_core":383,"../../modules/es6.object.define-property":455}],370:[function(require,module,exports){
+=======
+},{"../../modules/_core":384,"../../modules/es6.object.define-property":456}],371:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../../modules/es6.object.get-prototype-of');
 module.exports = require('../../modules/_core').Object.getPrototypeOf;
-},{"../../modules/_core":383,"../../modules/es6.object.get-prototype-of":456}],371:[function(require,module,exports){
+},{"../../modules/_core":384,"../../modules/es6.object.get-prototype-of":457}],372:[function(require,module,exports){
 require('../../modules/es6.object.keys');
 module.exports = require('../../modules/_core').Object.keys;
-},{"../../modules/_core":383,"../../modules/es6.object.keys":457}],372:[function(require,module,exports){
+},{"../../modules/_core":384,"../../modules/es6.object.keys":458}],373:[function(require,module,exports){
 require('../../modules/es6.object.set-prototype-of');
 module.exports = require('../../modules/_core').Object.setPrototypeOf;
+<<<<<<< HEAD
 },{"../../modules/_core":383,"../../modules/es6.object.set-prototype-of":458}],373:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../modules/_core":384,"../../modules/es6.object.set-prototype-of":459}],374:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../modules/es6.object.to-string');
 require('../modules/es6.string.iterator');
 require('../modules/web.dom.iterable');
 require('../modules/es6.promise');
 module.exports = require('../modules/_core').Promise;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../modules/_core":384,"../modules/es6.object.to-string":460,"../modules/es6.promise":461,"../modules/es6.string.iterator":462,"../modules/web.dom.iterable":466}],375:[function(require,module,exports){
 =======
 },{"../modules/_core":383,"../modules/es6.object.to-string":459,"../modules/es6.promise":460,"../modules/es6.string.iterator":461,"../modules/web.dom.iterable":465}],374:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../modules/_core":384,"../modules/es6.object.to-string":460,"../modules/es6.promise":461,"../modules/es6.string.iterator":462,"../modules/web.dom.iterable":466}],375:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('../../modules/es6.symbol');
 require('../../modules/es6.object.to-string');
 require('../../modules/es7.symbol.async-iterator');
 require('../../modules/es7.symbol.observable');
 module.exports = require('../../modules/_core').Symbol;
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"../../modules/_core":384,"../../modules/es6.object.to-string":460,"../../modules/es6.symbol":463,"../../modules/es7.symbol.async-iterator":464,"../../modules/es7.symbol.observable":465}],376:[function(require,module,exports){
 require('../../modules/es6.string.iterator');
@@ -35365,10 +36808,18 @@ require('../../modules/web.dom.iterable');
 module.exports = require('../../modules/_wks-ext').f('iterator');
 },{"../../modules/_wks-ext":446,"../../modules/es6.string.iterator":461,"../../modules/web.dom.iterable":465}],376:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../modules/_core":384,"../../modules/es6.object.to-string":460,"../../modules/es6.symbol":463,"../../modules/es7.symbol.async-iterator":464,"../../modules/es7.symbol.observable":465}],376:[function(require,module,exports){
+require('../../modules/es6.string.iterator');
+require('../../modules/web.dom.iterable');
+module.exports = require('../../modules/_wks-ext').f('iterator');
+},{"../../modules/_wks-ext":447,"../../modules/es6.string.iterator":462,"../../modules/web.dom.iterable":466}],377:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = function(it){
   if(typeof it != 'function')throw TypeError(it + ' is not a function!');
   return it;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{}],378:[function(require,module,exports){
 module.exports = function(){ /* empty */ };
@@ -35378,26 +36829,39 @@ module.exports = function(){ /* empty */ };
 module.exports = function(){ /* empty */ };
 },{}],378:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],378:[function(require,module,exports){
+module.exports = function(){ /* empty */ };
+},{}],379:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = function(it, Constructor, name, forbiddenField){
   if(!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)){
     throw TypeError(name + ': incorrect invocation!');
   } return it;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],380:[function(require,module,exports){
 =======
 },{}],379:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],380:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./_is-object');
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_is-object":404}],381:[function(require,module,exports){
 =======
 },{"./_is-object":403}],380:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_is-object":404}],381:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = require('./_to-iobject')
@@ -35420,10 +36884,14 @@ module.exports = function(IS_INCLUDES){
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_to-index":439,"./_to-iobject":441,"./_to-length":442}],382:[function(require,module,exports){
 =======
 },{"./_to-index":438,"./_to-iobject":440,"./_to-length":441}],381:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_to-index":439,"./_to-iobject":441,"./_to-length":442}],382:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // getting tag from 19.1.3.6 Object.prototype.toString()
 var cof = require('./_cof')
   , TAG = require('./_wks')('toStringTag')
@@ -35448,15 +36916,20 @@ module.exports = function(it){
     : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cof":383,"./_wks":448}],383:[function(require,module,exports){
 =======
 },{"./_cof":382,"./_wks":447}],382:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cof":383,"./_wks":448}],383:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var toString = {}.toString;
 
 module.exports = function(it){
   return toString.call(it).slice(8, -1);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{}],384:[function(require,module,exports){
 var core = module.exports = {version: '2.4.0'};
@@ -35468,6 +36941,12 @@ var core = module.exports = {version: '2.4.0'};
 if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 },{}],384:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],384:[function(require,module,exports){
+var core = module.exports = {version: '2.4.0'};
+if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
+},{}],385:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var $defineProperty = require('./_object-dp')
   , createDesc      = require('./_property-desc');
@@ -35477,10 +36956,14 @@ module.exports = function(object, index, value){
   else object[index] = value;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-dp":417,"./_property-desc":428}],386:[function(require,module,exports){
 =======
 },{"./_object-dp":416,"./_property-desc":427}],385:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_object-dp":417,"./_property-desc":428}],386:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // optional / simple context binding
 var aFunction = require('./_a-function');
 module.exports = function(fn, that, length){
@@ -35502,29 +36985,41 @@ module.exports = function(fn, that, length){
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_a-function":377}],387:[function(require,module,exports){
 =======
 },{"./_a-function":376}],386:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_a-function":377}],387:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.2.1 RequireObjectCoercible(argument)
 module.exports = function(it){
   if(it == undefined)throw TypeError("Can't call method on  " + it);
   return it;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],388:[function(require,module,exports){
 =======
 },{}],387:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],388:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // Thank's IE8 for his funny defineProperty
 module.exports = !require('./_fails')(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_fails":393}],389:[function(require,module,exports){
 =======
 },{"./_fails":392}],388:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_fails":393}],389:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./_is-object')
   , document = require('./_global').document
   // in old IE typeof document.createElement is 'object'
@@ -35533,19 +37028,27 @@ module.exports = function(it){
   return is ? document.createElement(it) : {};
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_global":395,"./_is-object":404}],390:[function(require,module,exports){
 =======
 },{"./_global":394,"./_is-object":403}],389:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_global":395,"./_is-object":404}],390:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // IE 8- don't enum bug keys
 module.exports = (
   'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
 ).split(',');
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],391:[function(require,module,exports){
 =======
 },{}],390:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],391:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // all enumerable object keys, includes symbols
 var getKeys = require('./_object-keys')
   , gOPS    = require('./_object-gops')
@@ -35562,10 +37065,14 @@ module.exports = function(it){
   } return result;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-gops":422,"./_object-keys":425,"./_object-pie":426}],392:[function(require,module,exports){
 =======
 },{"./_object-gops":421,"./_object-keys":424,"./_object-pie":425}],391:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_object-gops":422,"./_object-keys":425,"./_object-pie":426}],392:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var global    = require('./_global')
   , core      = require('./_core')
   , ctx       = require('./_ctx')
@@ -35628,10 +37135,14 @@ $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library` 
 module.exports = $export;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_core":384,"./_ctx":386,"./_global":395,"./_hide":397}],393:[function(require,module,exports){
 =======
 },{"./_core":383,"./_ctx":385,"./_global":394,"./_hide":396}],392:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_core":384,"./_ctx":386,"./_global":395,"./_hide":397}],393:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = function(exec){
   try {
     return !!exec();
@@ -35640,10 +37151,14 @@ module.exports = function(exec){
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],394:[function(require,module,exports){
 =======
 },{}],393:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],394:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ctx         = require('./_ctx')
   , call        = require('./_iter-call')
   , isArrayIter = require('./_is-array-iter')
@@ -35670,28 +37185,40 @@ var exports = module.exports = function(iterable, entries, fn, that, ITERATOR){
 exports.BREAK  = BREAK;
 exports.RETURN = RETURN;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_ctx":386,"./_is-array-iter":402,"./_iter-call":405,"./_to-length":442,"./core.get-iterator-method":449}],395:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_ctx":385,"./_is-array-iter":401,"./_iter-call":404,"./_to-length":441,"./core.get-iterator-method":448}],394:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_ctx":386,"./_is-array-iter":402,"./_iter-call":405,"./_to-length":442,"./core.get-iterator-method":449}],395:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 var global = module.exports = typeof window != 'undefined' && window.Math == Math
   ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
 if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],396:[function(require,module,exports){
 =======
 },{}],395:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],396:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var hasOwnProperty = {}.hasOwnProperty;
 module.exports = function(it, key){
   return hasOwnProperty.call(it, key);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],397:[function(require,module,exports){
 =======
 },{}],396:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],397:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var dP         = require('./_object-dp')
   , createDesc = require('./_property-desc');
 module.exports = require('./_descriptors') ? function(object, key, value){
@@ -35700,6 +37227,7 @@ module.exports = require('./_descriptors') ? function(object, key, value){
   object[key] = value;
   return object;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_descriptors":388,"./_object-dp":417,"./_property-desc":428}],398:[function(require,module,exports){
 module.exports = require('./_global').document && document.documentElement;
@@ -35710,13 +37238,20 @@ module.exports = !require('./_descriptors') && !require('./_fails')(function(){
 },{"./_descriptors":388,"./_dom-create":389,"./_fails":393}],400:[function(require,module,exports){
 =======
 },{"./_descriptors":387,"./_object-dp":416,"./_property-desc":427}],397:[function(require,module,exports){
+=======
+},{"./_descriptors":388,"./_object-dp":417,"./_property-desc":428}],398:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = require('./_global').document && document.documentElement;
-},{"./_global":394}],398:[function(require,module,exports){
+},{"./_global":395}],399:[function(require,module,exports){
 module.exports = !require('./_descriptors') && !require('./_fails')(function(){
   return Object.defineProperty(require('./_dom-create')('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
+<<<<<<< HEAD
 },{"./_descriptors":387,"./_dom-create":388,"./_fails":392}],399:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_descriptors":388,"./_dom-create":389,"./_fails":393}],400:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
 module.exports = function(fn, args, that){
   var un = that === undefined;
@@ -35734,20 +37269,28 @@ module.exports = function(fn, args, that){
   } return              fn.apply(that, args);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],401:[function(require,module,exports){
 =======
 },{}],400:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],401:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 var cof = require('./_cof');
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cof":383}],402:[function(require,module,exports){
 =======
 },{"./_cof":382}],401:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cof":383}],402:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // check on default Array iterator
 var Iterators  = require('./_iterators')
   , ITERATOR   = require('./_wks')('iterator')
@@ -35757,15 +37300,20 @@ module.exports = function(it){
   return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_iterators":410,"./_wks":448}],403:[function(require,module,exports){
 =======
 },{"./_iterators":409,"./_wks":447}],402:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_iterators":410,"./_wks":448}],403:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.2.2 IsArray(argument)
 var cof = require('./_cof');
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_cof":383}],404:[function(require,module,exports){
 module.exports = function(it){
@@ -35779,6 +37327,13 @@ module.exports = function(it){
 };
 },{}],404:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cof":383}],404:[function(require,module,exports){
+module.exports = function(it){
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+},{}],405:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // call something on iterator step with safe closing on error
 var anObject = require('./_an-object');
 module.exports = function(iterator, fn, value, entries){
@@ -35792,10 +37347,14 @@ module.exports = function(iterator, fn, value, entries){
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380}],406:[function(require,module,exports){
 =======
 },{"./_an-object":379}],405:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380}],406:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var create         = require('./_object-create')
   , descriptor     = require('./_property-desc')
@@ -35810,10 +37369,14 @@ module.exports = function(Constructor, NAME, next){
   setToStringTag(Constructor, NAME + ' Iterator');
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_hide":397,"./_object-create":416,"./_property-desc":428,"./_set-to-string-tag":433,"./_wks":448}],407:[function(require,module,exports){
 =======
 },{"./_hide":396,"./_object-create":415,"./_property-desc":427,"./_set-to-string-tag":432,"./_wks":447}],406:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_hide":397,"./_object-create":416,"./_property-desc":428,"./_set-to-string-tag":433,"./_wks":448}],407:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var LIBRARY        = require('./_library')
   , $export        = require('./_export')
@@ -35885,10 +37448,14 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
   return methods;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_export":392,"./_has":396,"./_hide":397,"./_iter-create":406,"./_iterators":410,"./_library":412,"./_object-gpo":423,"./_redefine":430,"./_set-to-string-tag":433,"./_wks":448}],408:[function(require,module,exports){
 =======
 },{"./_export":391,"./_has":395,"./_hide":396,"./_iter-create":405,"./_iterators":409,"./_library":411,"./_object-gpo":422,"./_redefine":429,"./_set-to-string-tag":432,"./_wks":447}],407:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_export":392,"./_has":396,"./_hide":397,"./_iter-create":406,"./_iterators":410,"./_library":412,"./_object-gpo":423,"./_redefine":430,"./_set-to-string-tag":433,"./_wks":448}],408:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ITERATOR     = require('./_wks')('iterator')
   , SAFE_CLOSING = false;
 
@@ -35911,6 +37478,7 @@ module.exports = function(exec, skipClosing){
   return safe;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_wks":448}],409:[function(require,module,exports){
 module.exports = function(done, value){
   return {value: value, done: !!done};
@@ -35920,13 +37488,19 @@ module.exports = {};
 },{}],411:[function(require,module,exports){
 =======
 },{"./_wks":447}],408:[function(require,module,exports){
+=======
+},{"./_wks":448}],409:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = function(done, value){
   return {value: value, done: !!done};
 };
-},{}],409:[function(require,module,exports){
-module.exports = {};
 },{}],410:[function(require,module,exports){
+<<<<<<< HEAD
 >>>>>>> fix i18n, move filter toggle classes
+=======
+module.exports = {};
+},{}],411:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getKeys   = require('./_object-keys')
   , toIObject = require('./_to-iobject');
 module.exports = function(object, el){
@@ -35938,6 +37512,7 @@ module.exports = function(object, el){
   while(length > index)if(O[key = keys[index++]] === el)return key;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-keys":425,"./_to-iobject":441}],412:[function(require,module,exports){
 module.exports = true;
 },{}],413:[function(require,module,exports){
@@ -35946,6 +37521,11 @@ module.exports = true;
 module.exports = true;
 },{}],412:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_object-keys":425,"./_to-iobject":441}],412:[function(require,module,exports){
+module.exports = true;
+},{}],413:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var META     = require('./_uid')('meta')
   , isObject = require('./_is-object')
   , has      = require('./_has')
@@ -36000,10 +37580,14 @@ var meta = module.exports = {
   onFreeze: onFreeze
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_fails":393,"./_has":396,"./_is-object":404,"./_object-dp":417,"./_uid":445}],414:[function(require,module,exports){
 =======
 },{"./_fails":392,"./_has":395,"./_is-object":403,"./_object-dp":416,"./_uid":444}],413:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_fails":393,"./_has":396,"./_is-object":404,"./_object-dp":417,"./_uid":445}],414:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var global    = require('./_global')
   , macrotask = require('./_task').set
   , Observer  = global.MutationObserver || global.WebKitMutationObserver
@@ -36073,10 +37657,14 @@ module.exports = function(){
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cof":383,"./_global":395,"./_task":438}],415:[function(require,module,exports){
 =======
 },{"./_cof":382,"./_global":394,"./_task":437}],414:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cof":383,"./_global":395,"./_task":438}],415:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys  = require('./_object-keys')
@@ -36111,10 +37699,14 @@ module.exports = !$assign || require('./_fails')(function(){
   } return T;
 } : $assign;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_fails":393,"./_iobject":401,"./_object-gops":422,"./_object-keys":425,"./_object-pie":426,"./_to-object":443}],416:[function(require,module,exports){
 =======
 },{"./_fails":392,"./_iobject":400,"./_object-gops":421,"./_object-keys":424,"./_object-pie":425,"./_to-object":442}],415:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_fails":393,"./_iobject":401,"./_object-gops":422,"./_object-keys":425,"./_object-pie":426,"./_to-object":443}],416:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = require('./_an-object')
   , dPs         = require('./_object-dps')
@@ -36158,10 +37750,14 @@ module.exports = Object.create || function create(O, Properties){
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_dom-create":389,"./_enum-bug-keys":390,"./_html":398,"./_object-dps":418,"./_shared-key":434}],417:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_dom-create":388,"./_enum-bug-keys":389,"./_html":397,"./_object-dps":417,"./_shared-key":433}],416:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_dom-create":389,"./_enum-bug-keys":390,"./_html":398,"./_object-dps":418,"./_shared-key":434}],417:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var anObject       = require('./_an-object')
   , IE8_DOM_DEFINE = require('./_ie8-dom-define')
   , toPrimitive    = require('./_to-primitive')
@@ -36179,10 +37775,14 @@ exports.f = require('./_descriptors') ? Object.defineProperty : function defineP
   return O;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_descriptors":388,"./_ie8-dom-define":399,"./_to-primitive":444}],418:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_descriptors":387,"./_ie8-dom-define":398,"./_to-primitive":443}],417:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_descriptors":388,"./_ie8-dom-define":399,"./_to-primitive":444}],418:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var dP       = require('./_object-dp')
   , anObject = require('./_an-object')
   , getKeys  = require('./_object-keys');
@@ -36197,10 +37797,14 @@ module.exports = require('./_descriptors') ? Object.defineProperties : function 
   return O;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_descriptors":388,"./_object-dp":417,"./_object-keys":425}],419:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_descriptors":387,"./_object-dp":416,"./_object-keys":424}],418:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_descriptors":388,"./_object-dp":417,"./_object-keys":425}],419:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var pIE            = require('./_object-pie')
   , createDesc     = require('./_property-desc')
   , toIObject      = require('./_to-iobject')
@@ -36218,10 +37822,14 @@ exports.f = require('./_descriptors') ? gOPD : function getOwnPropertyDescriptor
   if(has(O, P))return createDesc(!pIE.f.call(O, P), O[P]);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_descriptors":388,"./_has":396,"./_ie8-dom-define":399,"./_object-pie":426,"./_property-desc":428,"./_to-iobject":441,"./_to-primitive":444}],420:[function(require,module,exports){
 =======
 },{"./_descriptors":387,"./_has":395,"./_ie8-dom-define":398,"./_object-pie":425,"./_property-desc":427,"./_to-iobject":440,"./_to-primitive":443}],419:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_descriptors":388,"./_has":396,"./_ie8-dom-define":399,"./_object-pie":426,"./_property-desc":428,"./_to-iobject":441,"./_to-primitive":444}],420:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = require('./_to-iobject')
   , gOPN      = require('./_object-gopn').f
@@ -36243,10 +37851,14 @@ module.exports.f = function getOwnPropertyNames(it){
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-gopn":421,"./_to-iobject":441}],421:[function(require,module,exports){
 =======
 },{"./_object-gopn":420,"./_to-iobject":440}],420:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_object-gopn":421,"./_to-iobject":441}],421:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys      = require('./_object-keys-internal')
   , hiddenKeys = require('./_enum-bug-keys').concat('length', 'prototype');
@@ -36254,6 +37866,7 @@ var $keys      = require('./_object-keys-internal')
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
   return $keys(O, hiddenKeys);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_enum-bug-keys":390,"./_object-keys-internal":424}],422:[function(require,module,exports){
 exports.f = Object.getOwnPropertySymbols;
@@ -36263,6 +37876,11 @@ exports.f = Object.getOwnPropertySymbols;
 exports.f = Object.getOwnPropertySymbols;
 },{}],422:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_enum-bug-keys":390,"./_object-keys-internal":424}],422:[function(require,module,exports){
+exports.f = Object.getOwnPropertySymbols;
+},{}],423:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has         = require('./_has')
   , toObject    = require('./_to-object')
@@ -36277,10 +37895,14 @@ module.exports = Object.getPrototypeOf || function(O){
   } return O instanceof Object ? ObjectProto : null;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_has":396,"./_shared-key":434,"./_to-object":443}],424:[function(require,module,exports){
 =======
 },{"./_has":395,"./_shared-key":433,"./_to-object":442}],423:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_has":396,"./_shared-key":434,"./_to-object":443}],424:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var has          = require('./_has')
   , toIObject    = require('./_to-iobject')
   , arrayIndexOf = require('./_array-includes')(false)
@@ -36299,10 +37921,14 @@ module.exports = function(object, names){
   return result;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_array-includes":381,"./_has":396,"./_shared-key":434,"./_to-iobject":441}],425:[function(require,module,exports){
 =======
 },{"./_array-includes":380,"./_has":395,"./_shared-key":433,"./_to-iobject":440}],424:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_array-includes":381,"./_has":396,"./_shared-key":434,"./_to-iobject":441}],425:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys       = require('./_object-keys-internal')
   , enumBugKeys = require('./_enum-bug-keys');
@@ -36310,6 +37936,7 @@ var $keys       = require('./_object-keys-internal')
 module.exports = Object.keys || function keys(O){
   return $keys(O, enumBugKeys);
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_enum-bug-keys":390,"./_object-keys-internal":424}],426:[function(require,module,exports){
 exports.f = {}.propertyIsEnumerable;
@@ -36319,6 +37946,11 @@ exports.f = {}.propertyIsEnumerable;
 exports.f = {}.propertyIsEnumerable;
 },{}],426:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_enum-bug-keys":390,"./_object-keys-internal":424}],426:[function(require,module,exports){
+exports.f = {}.propertyIsEnumerable;
+},{}],427:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // most Object methods by ES6 should accept primitives
 var $export = require('./_export')
   , core    = require('./_core')
@@ -36330,10 +37962,14 @@ module.exports = function(KEY, exec){
   $export($export.S + $export.F * fails(function(){ fn(1); }), 'Object', exp);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_core":384,"./_export":392,"./_fails":393}],428:[function(require,module,exports){
 =======
 },{"./_core":383,"./_export":391,"./_fails":392}],427:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_core":384,"./_export":392,"./_fails":393}],428:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 module.exports = function(bitmap, value){
   return {
     enumerable  : !(bitmap & 1),
@@ -36343,10 +37979,14 @@ module.exports = function(bitmap, value){
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],429:[function(require,module,exports){
 =======
 },{}],428:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],429:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var hide = require('./_hide');
 module.exports = function(target, src, safe){
   for(var key in src){
@@ -36354,6 +37994,7 @@ module.exports = function(target, src, safe){
     else hide(target, key, src[key]);
   } return target;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_hide":397}],430:[function(require,module,exports){
 module.exports = require('./_hide');
@@ -36363,6 +38004,11 @@ module.exports = require('./_hide');
 module.exports = require('./_hide');
 },{"./_hide":396}],430:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_hide":397}],430:[function(require,module,exports){
+module.exports = require('./_hide');
+},{"./_hide":397}],431:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
 var isObject = require('./_is-object')
@@ -36389,10 +38035,14 @@ module.exports = {
   check: check
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_ctx":386,"./_is-object":404,"./_object-gopd":419}],432:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_ctx":385,"./_is-object":403,"./_object-gopd":418}],431:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_ctx":386,"./_is-object":404,"./_object-gopd":419}],432:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var global      = require('./_global')
   , core        = require('./_core')
@@ -36408,10 +38058,14 @@ module.exports = function(KEY){
   });
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_core":384,"./_descriptors":388,"./_global":395,"./_object-dp":417,"./_wks":448}],433:[function(require,module,exports){
 =======
 },{"./_core":383,"./_descriptors":387,"./_global":394,"./_object-dp":416,"./_wks":447}],432:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_core":384,"./_descriptors":388,"./_global":395,"./_object-dp":417,"./_wks":448}],433:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var def = require('./_object-dp').f
   , has = require('./_has')
   , TAG = require('./_wks')('toStringTag');
@@ -36420,20 +38074,28 @@ module.exports = function(it, tag, stat){
   if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_has":396,"./_object-dp":417,"./_wks":448}],434:[function(require,module,exports){
 =======
 },{"./_has":395,"./_object-dp":416,"./_wks":447}],433:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_has":396,"./_object-dp":417,"./_wks":448}],434:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var shared = require('./_shared')('keys')
   , uid    = require('./_uid');
 module.exports = function(key){
   return shared[key] || (shared[key] = uid(key));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_shared":435,"./_uid":445}],435:[function(require,module,exports){
 =======
 },{"./_shared":434,"./_uid":444}],434:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_shared":435,"./_uid":445}],435:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var global = require('./_global')
   , SHARED = '__core-js_shared__'
   , store  = global[SHARED] || (global[SHARED] = {});
@@ -36441,10 +38103,14 @@ module.exports = function(key){
   return store[key] || (store[key] = {});
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_global":395}],436:[function(require,module,exports){
 =======
 },{"./_global":394}],435:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_global":395}],436:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
 var anObject  = require('./_an-object')
   , aFunction = require('./_a-function')
@@ -36454,10 +38120,14 @@ module.exports = function(O, D){
   return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_a-function":377,"./_an-object":380,"./_wks":448}],437:[function(require,module,exports){
 =======
 },{"./_a-function":376,"./_an-object":379,"./_wks":447}],436:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_a-function":377,"./_an-object":380,"./_wks":448}],437:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var toInteger = require('./_to-integer')
   , defined   = require('./_defined');
 // true  -> String#at
@@ -36476,10 +38146,14 @@ module.exports = function(TO_STRING){
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_defined":387,"./_to-integer":440}],438:[function(require,module,exports){
 =======
 },{"./_defined":386,"./_to-integer":439}],437:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_defined":387,"./_to-integer":440}],438:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ctx                = require('./_ctx')
   , invoke             = require('./_invoke')
   , html               = require('./_html')
@@ -36556,10 +38230,14 @@ module.exports = {
   clear: clearTask
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cof":383,"./_ctx":386,"./_dom-create":389,"./_global":395,"./_html":398,"./_invoke":400}],439:[function(require,module,exports){
 =======
 },{"./_cof":382,"./_ctx":385,"./_dom-create":388,"./_global":394,"./_html":397,"./_invoke":399}],438:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cof":383,"./_ctx":386,"./_dom-create":389,"./_global":395,"./_html":398,"./_invoke":400}],439:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var toInteger = require('./_to-integer')
   , max       = Math.max
   , min       = Math.min;
@@ -36568,10 +38246,14 @@ module.exports = function(index, length){
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_to-integer":440}],440:[function(require,module,exports){
 =======
 },{"./_to-integer":439}],439:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_to-integer":440}],440:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.1.4 ToInteger
 var ceil  = Math.ceil
   , floor = Math.floor;
@@ -36579,10 +38261,14 @@ module.exports = function(it){
   return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],441:[function(require,module,exports){
 =======
 },{}],440:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],441:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = require('./_iobject')
   , defined = require('./_defined');
@@ -36590,10 +38276,14 @@ module.exports = function(it){
   return IObject(defined(it));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_defined":387,"./_iobject":401}],442:[function(require,module,exports){
 =======
 },{"./_defined":386,"./_iobject":400}],441:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_defined":387,"./_iobject":401}],442:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.1.15 ToLength
 var toInteger = require('./_to-integer')
   , min       = Math.min;
@@ -36601,20 +38291,28 @@ module.exports = function(it){
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_to-integer":440}],443:[function(require,module,exports){
 =======
 },{"./_to-integer":439}],442:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_to-integer":440}],443:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.1.13 ToObject(argument)
 var defined = require('./_defined');
 module.exports = function(it){
   return Object(defined(it));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_defined":387}],444:[function(require,module,exports){
 =======
 },{"./_defined":386}],443:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_defined":387}],444:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 7.1.1 ToPrimitive(input [, PreferredType])
 var isObject = require('./_is-object');
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
@@ -36628,20 +38326,28 @@ module.exports = function(it, S){
   throw TypeError("Can't convert object to primitive value");
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_is-object":404}],445:[function(require,module,exports){
 =======
 },{"./_is-object":403}],444:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_is-object":404}],445:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var id = 0
   , px = Math.random();
 module.exports = function(key){
   return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],446:[function(require,module,exports){
 =======
 },{}],445:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],446:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var global         = require('./_global')
   , core           = require('./_core')
   , LIBRARY        = require('./_library')
@@ -36652,6 +38358,7 @@ module.exports = function(name){
   if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_core":384,"./_global":395,"./_library":412,"./_object-dp":417,"./_wks-ext":447}],447:[function(require,module,exports){
 exports.f = require('./_wks');
 },{"./_wks":448}],448:[function(require,module,exports){
@@ -36660,6 +38367,11 @@ exports.f = require('./_wks');
 exports.f = require('./_wks');
 },{"./_wks":447}],447:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_core":384,"./_global":395,"./_library":412,"./_object-dp":417,"./_wks-ext":447}],447:[function(require,module,exports){
+exports.f = require('./_wks');
+},{"./_wks":448}],448:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var store      = require('./_shared')('wks')
   , uid        = require('./_uid')
   , Symbol     = require('./_global').Symbol
@@ -36672,10 +38384,14 @@ var $exports = module.exports = function(name){
 
 $exports.store = store;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_global":395,"./_shared":435,"./_uid":445}],449:[function(require,module,exports){
 =======
 },{"./_global":394,"./_shared":434,"./_uid":444}],448:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_global":395,"./_shared":435,"./_uid":445}],449:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var classof   = require('./_classof')
   , ITERATOR  = require('./_wks')('iterator')
   , Iterators = require('./_iterators');
@@ -36685,10 +38401,14 @@ module.exports = require('./_core').getIteratorMethod = function(it){
     || Iterators[classof(it)];
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_classof":382,"./_core":384,"./_iterators":410,"./_wks":448}],450:[function(require,module,exports){
 =======
 },{"./_classof":381,"./_core":383,"./_iterators":409,"./_wks":447}],449:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_classof":382,"./_core":384,"./_iterators":410,"./_wks":448}],450:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var anObject = require('./_an-object')
   , get      = require('./core.get-iterator-method');
 module.exports = require('./_core').getIterator = function(it){
@@ -36697,10 +38417,14 @@ module.exports = require('./_core').getIterator = function(it){
   return anObject(iterFn.call(it));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_core":384,"./core.get-iterator-method":449}],451:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_core":383,"./core.get-iterator-method":448}],450:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_an-object":380,"./_core":384,"./core.get-iterator-method":449}],451:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var classof   = require('./_classof')
   , ITERATOR  = require('./_wks')('iterator')
   , Iterators = require('./_iterators');
@@ -36711,10 +38435,14 @@ module.exports = require('./_core').isIterable = function(it){
     || Iterators.hasOwnProperty(classof(O));
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_classof":382,"./_core":384,"./_iterators":410,"./_wks":448}],452:[function(require,module,exports){
 =======
 },{"./_classof":381,"./_core":383,"./_iterators":409,"./_wks":447}],451:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_classof":382,"./_core":384,"./_iterators":410,"./_wks":448}],452:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var ctx            = require('./_ctx')
   , $export        = require('./_export')
@@ -36754,10 +38482,14 @@ $export($export.S + $export.F * !require('./_iter-detect')(function(iter){ Array
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_create-property":385,"./_ctx":386,"./_export":392,"./_is-array-iter":402,"./_iter-call":405,"./_iter-detect":408,"./_to-length":442,"./_to-object":443,"./core.get-iterator-method":449}],453:[function(require,module,exports){
 =======
 },{"./_create-property":384,"./_ctx":385,"./_export":391,"./_is-array-iter":401,"./_iter-call":404,"./_iter-detect":407,"./_to-length":441,"./_to-object":442,"./core.get-iterator-method":448}],452:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_create-property":385,"./_ctx":386,"./_export":392,"./_is-array-iter":402,"./_iter-call":405,"./_iter-detect":408,"./_to-length":442,"./_to-object":443,"./core.get-iterator-method":449}],453:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var addToUnscopables = require('./_add-to-unscopables')
   , step             = require('./_iter-step')
@@ -36793,14 +38525,19 @@ addToUnscopables('keys');
 addToUnscopables('values');
 addToUnscopables('entries');
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_add-to-unscopables":378,"./_iter-define":407,"./_iter-step":409,"./_iterators":410,"./_to-iobject":441}],454:[function(require,module,exports){
 =======
 },{"./_add-to-unscopables":377,"./_iter-define":406,"./_iter-step":408,"./_iterators":409,"./_to-iobject":440}],453:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_add-to-unscopables":378,"./_iter-define":407,"./_iter-step":409,"./_iterators":410,"./_to-iobject":441}],454:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.3.1 Object.assign(target, source)
 var $export = require('./_export');
 
 $export($export.S + $export.F, 'Object', {assign: require('./_object-assign')});
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_export":392,"./_object-assign":415}],455:[function(require,module,exports){
 var $export = require('./_export')
@@ -36813,15 +38550,22 @@ $export($export.S + $export.F * !require('./_descriptors'), 'Object', {definePro
 },{"./_descriptors":388,"./_export":392,"./_object-dp":417}],457:[function(require,module,exports){
 =======
 },{"./_export":391,"./_object-assign":414}],454:[function(require,module,exports){
+=======
+},{"./_export":392,"./_object-assign":415}],455:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var $export = require('./_export')
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 $export($export.S, 'Object', {create: require('./_object-create')});
-},{"./_export":391,"./_object-create":415}],455:[function(require,module,exports){
+},{"./_export":392,"./_object-create":416}],456:[function(require,module,exports){
 var $export = require('./_export');
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 $export($export.S + $export.F * !require('./_descriptors'), 'Object', {defineProperty: require('./_object-dp').f});
+<<<<<<< HEAD
 },{"./_descriptors":387,"./_export":391,"./_object-dp":416}],456:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_descriptors":388,"./_export":392,"./_object-dp":417}],457:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.9 Object.getPrototypeOf(O)
 var toObject        = require('./_to-object')
   , $getPrototypeOf = require('./_object-gpo');
@@ -36832,10 +38576,14 @@ require('./_object-sap')('getPrototypeOf', function(){
   };
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-gpo":423,"./_object-sap":427,"./_to-object":443}],458:[function(require,module,exports){
 =======
 },{"./_object-gpo":422,"./_object-sap":426,"./_to-object":442}],457:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_object-gpo":423,"./_object-sap":427,"./_to-object":443}],458:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.2.14 Object.keys(O)
 var toObject = require('./_to-object')
   , $keys    = require('./_object-keys');
@@ -36846,6 +38594,7 @@ require('./_object-sap')('keys', function(){
   };
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_object-keys":425,"./_object-sap":427,"./_to-object":443}],459:[function(require,module,exports){
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = require('./_export');
@@ -36855,13 +38604,20 @@ $export($export.S, 'Object', {setPrototypeOf: require('./_set-proto').set});
 },{}],461:[function(require,module,exports){
 =======
 },{"./_object-keys":424,"./_object-sap":426,"./_to-object":442}],458:[function(require,module,exports){
+=======
+},{"./_object-keys":425,"./_object-sap":427,"./_to-object":443}],459:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = require('./_export');
 $export($export.S, 'Object', {setPrototypeOf: require('./_set-proto').set});
-},{"./_export":391,"./_set-proto":430}],459:[function(require,module,exports){
+},{"./_export":392,"./_set-proto":431}],460:[function(require,module,exports){
 
+<<<<<<< HEAD
 },{}],460:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],461:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var LIBRARY            = require('./_library')
   , global             = require('./_global')
@@ -37162,10 +38918,14 @@ $export($export.S + $export.F * !(USE_NATIVE && require('./_iter-detect')(functi
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_a-function":377,"./_an-instance":379,"./_classof":382,"./_core":384,"./_ctx":386,"./_export":392,"./_for-of":394,"./_global":395,"./_is-object":404,"./_iter-detect":408,"./_library":412,"./_microtask":414,"./_redefine-all":429,"./_set-species":432,"./_set-to-string-tag":433,"./_species-constructor":436,"./_task":438,"./_wks":448}],462:[function(require,module,exports){
 =======
 },{"./_a-function":376,"./_an-instance":378,"./_classof":381,"./_core":383,"./_ctx":385,"./_export":391,"./_for-of":393,"./_global":394,"./_is-object":403,"./_iter-detect":407,"./_library":411,"./_microtask":413,"./_redefine-all":428,"./_set-species":431,"./_set-to-string-tag":432,"./_species-constructor":435,"./_task":437,"./_wks":447}],461:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_a-function":377,"./_an-instance":379,"./_classof":382,"./_core":384,"./_ctx":386,"./_export":392,"./_for-of":394,"./_global":395,"./_is-object":404,"./_iter-detect":408,"./_library":412,"./_microtask":414,"./_redefine-all":429,"./_set-species":432,"./_set-to-string-tag":433,"./_species-constructor":436,"./_task":438,"./_wks":448}],462:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var $at  = require('./_string-at')(true);
 
@@ -37184,10 +38944,14 @@ require('./_iter-define')(String, 'String', function(iterated){
   return {value: point, done: false};
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_iter-define":407,"./_string-at":437}],463:[function(require,module,exports){
 =======
 },{"./_iter-define":406,"./_string-at":436}],462:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_iter-define":407,"./_string-at":437}],463:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 // ECMAScript 6 symbols shim
 var global         = require('./_global')
@@ -37424,6 +39188,7 @@ setToStringTag(Math, 'Math', true);
 // 24.3.3 JSON[@@toStringTag]
 setToStringTag(global.JSON, 'JSON', true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_an-object":380,"./_descriptors":388,"./_enum-keys":391,"./_export":392,"./_fails":393,"./_global":395,"./_has":396,"./_hide":397,"./_is-array":403,"./_keyof":411,"./_library":412,"./_meta":413,"./_object-create":416,"./_object-dp":417,"./_object-gopd":419,"./_object-gopn":421,"./_object-gopn-ext":420,"./_object-gops":422,"./_object-keys":425,"./_object-pie":426,"./_property-desc":428,"./_redefine":430,"./_set-to-string-tag":433,"./_shared":435,"./_to-iobject":441,"./_to-primitive":444,"./_uid":445,"./_wks":448,"./_wks-define":446,"./_wks-ext":447}],464:[function(require,module,exports){
 require('./_wks-define')('asyncIterator');
 },{"./_wks-define":446}],465:[function(require,module,exports){
@@ -37431,11 +39196,18 @@ require('./_wks-define')('observable');
 },{"./_wks-define":446}],466:[function(require,module,exports){
 =======
 },{"./_an-object":379,"./_descriptors":387,"./_enum-keys":390,"./_export":391,"./_fails":392,"./_global":394,"./_has":395,"./_hide":396,"./_is-array":402,"./_keyof":410,"./_library":411,"./_meta":412,"./_object-create":415,"./_object-dp":416,"./_object-gopd":418,"./_object-gopn":420,"./_object-gopn-ext":419,"./_object-gops":421,"./_object-keys":424,"./_object-pie":425,"./_property-desc":427,"./_redefine":429,"./_set-to-string-tag":432,"./_shared":434,"./_to-iobject":440,"./_to-primitive":443,"./_uid":444,"./_wks":447,"./_wks-define":445,"./_wks-ext":446}],463:[function(require,module,exports){
+=======
+},{"./_an-object":380,"./_descriptors":388,"./_enum-keys":391,"./_export":392,"./_fails":393,"./_global":395,"./_has":396,"./_hide":397,"./_is-array":403,"./_keyof":411,"./_library":412,"./_meta":413,"./_object-create":416,"./_object-dp":417,"./_object-gopd":419,"./_object-gopn":421,"./_object-gopn-ext":420,"./_object-gops":422,"./_object-keys":425,"./_object-pie":426,"./_property-desc":428,"./_redefine":430,"./_set-to-string-tag":433,"./_shared":435,"./_to-iobject":441,"./_to-primitive":444,"./_uid":445,"./_wks":448,"./_wks-define":446,"./_wks-ext":447}],464:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('./_wks-define')('asyncIterator');
-},{"./_wks-define":445}],464:[function(require,module,exports){
+},{"./_wks-define":446}],465:[function(require,module,exports){
 require('./_wks-define')('observable');
+<<<<<<< HEAD
 },{"./_wks-define":445}],465:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_wks-define":446}],466:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 require('./es6.array.iterator');
 var global        = require('./_global')
   , hide          = require('./_hide')
@@ -37450,10 +39222,14 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
   Iterators[NAME] = Iterators.Array;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_global":395,"./_hide":397,"./_iterators":410,"./_wks":448,"./es6.array.iterator":453}],467:[function(require,module,exports){
 =======
 },{"./_global":394,"./_hide":396,"./_iterators":409,"./_wks":447,"./es6.array.iterator":452}],466:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_global":395,"./_hide":397,"./_iterators":410,"./_wks":448,"./es6.array.iterator":453}],467:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var has = Object.prototype.hasOwnProperty
@@ -37767,10 +39543,14 @@ if ('undefined' !== typeof module) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],468:[function(require,module,exports){
 =======
 },{}],467:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],468:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -38075,10 +39855,14 @@ function isUndefined(arg) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],469:[function(require,module,exports){
 =======
 },{}],468:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],469:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -38091,10 +39875,14 @@ function isUndefined(arg) {
 module.exports.Dispatcher = require('./lib/Dispatcher');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./lib/Dispatcher":470}],470:[function(require,module,exports){
 =======
 },{"./lib/Dispatcher":469}],469:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./lib/Dispatcher":470}],470:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
@@ -38329,10 +40117,14 @@ var Dispatcher = (function () {
 module.exports = Dispatcher;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":471}],471:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":470}],470:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":471}],471:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -38385,10 +40177,14 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],472:[function(require,module,exports){
 =======
 },{"_process":599}],471:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],472:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -38441,10 +40237,14 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],473:[function(require,module,exports){
 =======
 },{}],472:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],473:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // =========
 // = humps =
 // =========
@@ -38584,10 +40384,14 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 })(this);
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],474:[function(require,module,exports){
 =======
 },{}],473:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],474:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38852,10 +40656,14 @@ var Connector = function (_EventEmitter) {
 
 exports.default = Connector;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventEmitter":476,"./logger":486,"./utils":488}],475:[function(require,module,exports){
 =======
 },{"./EventEmitter":475,"./logger":485,"./utils":487}],474:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventEmitter":476,"./logger":486,"./utils":488}],475:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38945,10 +40753,14 @@ var Connector = function (_EventEmitter) {
 
 exports.default = Connector;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventEmitter":476,"./logger":486,"./utils":488}],476:[function(require,module,exports){
 =======
 },{"./EventEmitter":475,"./logger":485,"./utils":487}],475:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventEmitter":476,"./logger":486,"./utils":488}],476:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39017,10 +40829,14 @@ var EventEmitter = function () {
 
 exports.default = EventEmitter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],477:[function(require,module,exports){
 =======
 },{}],476:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],477:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39167,10 +40983,14 @@ var Interpolator = function () {
 
 exports.default = Interpolator;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./logger":486,"./utils":488}],478:[function(require,module,exports){
 =======
 },{"./logger":485,"./utils":487}],477:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./logger":486,"./utils":488}],478:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39280,10 +41100,14 @@ var LanguageUtil = function () {
 
 exports.default = LanguageUtil;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./logger":486}],479:[function(require,module,exports){
 =======
 },{"./logger":485}],478:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./logger":486}],479:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39449,10 +41273,14 @@ var PluralResolver = function () {
 
 exports.default = PluralResolver;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./logger":486}],480:[function(require,module,exports){
 =======
 },{"./logger":485}],479:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./logger":486}],480:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39611,10 +41439,14 @@ var ResourceStore = function (_EventEmitter) {
 
 exports.default = ResourceStore;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventEmitter":476,"./utils":488}],481:[function(require,module,exports){
 =======
 },{"./EventEmitter":475,"./utils":487}],480:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventEmitter":476,"./utils":488}],481:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -39924,10 +41756,14 @@ var Translator = function (_EventEmitter) {
 
 exports.default = Translator;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventEmitter":476,"./compatibility/v1":482,"./logger":486,"./postProcessor":487,"./utils":488}],482:[function(require,module,exports){
 =======
 },{"./EventEmitter":475,"./compatibility/v1":481,"./logger":485,"./postProcessor":486,"./utils":487}],481:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventEmitter":476,"./compatibility/v1":482,"./logger":486,"./postProcessor":487,"./utils":488}],482:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40083,10 +41919,14 @@ function appendBackwardsAPI(i18n) {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../logger":486}],483:[function(require,module,exports){
 =======
 },{"../logger":485}],482:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../logger":486}],483:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40159,10 +41999,14 @@ function transformOptions(options) {
   return options;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],484:[function(require,module,exports){
 =======
 },{}],483:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],484:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40550,10 +42394,14 @@ var I18n = function (_EventEmitter) {
 
 exports.default = new I18n();
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./BackendConnector":474,"./CacheConnector":475,"./EventEmitter":476,"./Interpolator":477,"./LanguageUtils":478,"./PluralResolver":479,"./ResourceStore":480,"./Translator":481,"./compatibility/v1":482,"./defaults":483,"./logger":486,"./postProcessor":487}],485:[function(require,module,exports){
 =======
 },{"./BackendConnector":473,"./CacheConnector":474,"./EventEmitter":475,"./Interpolator":476,"./LanguageUtils":477,"./PluralResolver":478,"./ResourceStore":479,"./Translator":480,"./compatibility/v1":481,"./defaults":482,"./logger":485,"./postProcessor":486}],484:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./BackendConnector":474,"./CacheConnector":475,"./EventEmitter":476,"./Interpolator":477,"./LanguageUtils":478,"./PluralResolver":479,"./ResourceStore":480,"./Translator":481,"./compatibility/v1":482,"./defaults":483,"./logger":486,"./postProcessor":487}],485:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40568,10 +42416,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = _i18next2.default;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./i18next":484}],486:[function(require,module,exports){
 =======
 },{"./i18next":483}],485:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./i18next":484}],486:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40665,10 +42517,14 @@ var Logger = function () {
 
 exports.default = new Logger();
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],487:[function(require,module,exports){
 =======
 },{}],486:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],487:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -40692,10 +42548,14 @@ exports.default = {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],488:[function(require,module,exports){
 =======
 },{}],487:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],488:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40814,10 +42674,14 @@ function escape(data) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],489:[function(require,module,exports){
 =======
 },{}],488:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],489:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -40873,10 +42737,14 @@ module.exports = invariant;
 
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],490:[function(require,module,exports){
 =======
 },{"_process":599}],489:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],490:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -40905,10 +42773,14 @@ function jssNested(rule) {
 
 module.exports = exports['default'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],491:[function(require,module,exports){
 =======
 },{}],490:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],491:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -41016,10 +42888,14 @@ var Jss = (function () {
 exports['default'] = Jss;
 module.exports = exports['default'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./PluginsRegistry":492,"./Rule":493,"./StyleSheet":494,"./uid":497}],492:[function(require,module,exports){
 =======
 },{"./PluginsRegistry":491,"./Rule":492,"./StyleSheet":493,"./uid":496}],491:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./PluginsRegistry":492,"./Rule":493,"./StyleSheet":494,"./uid":497}],492:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -41063,10 +42939,14 @@ var PluginsRegistry = (function () {
 exports["default"] = PluginsRegistry;
 module.exports = exports["default"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],493:[function(require,module,exports){
 =======
 },{}],492:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],493:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -41337,10 +43217,14 @@ function indent(level, str) {
 }
 module.exports = exports['default'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./clone":495,"./defaults":496,"./uid":497}],494:[function(require,module,exports){
 =======
 },{"./clone":494,"./defaults":495,"./uid":496}],493:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./clone":495,"./defaults":496,"./uid":497}],494:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * StyleSheet abstraction, contains rules, injects stylesheet into dom.
  *
@@ -41612,10 +43496,14 @@ var StyleSheet = (function () {
 exports['default'] = StyleSheet;
 module.exports = exports['default'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],495:[function(require,module,exports){
 =======
 },{}],494:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],495:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -41639,10 +43527,14 @@ function clone(obj) {
 
 module.exports = exports["default"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],496:[function(require,module,exports){
 =======
 },{}],495:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],496:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Merges second object with first one only if value is undefined.
  * It expects both objects to be plain.
@@ -41665,10 +43557,14 @@ function defaults(obj1, obj2) {
 
 module.exports = exports["default"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],497:[function(require,module,exports){
 =======
 },{}],496:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],497:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -41705,10 +43601,14 @@ function reset() {
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],498:[function(require,module,exports){
 =======
 },{}],497:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],498:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Gets the last element of `array`.
  *
@@ -41730,10 +43630,14 @@ function last(array) {
 module.exports = last;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],499:[function(require,module,exports){
 =======
 },{}],498:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],499:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var LazyWrapper = require('../internal/LazyWrapper'),
     LodashWrapper = require('../internal/LodashWrapper'),
     baseLodash = require('../internal/baseLodash'),
@@ -41861,10 +43765,14 @@ lodash.prototype = baseLodash.prototype;
 module.exports = lodash;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/LazyWrapper":505,"../internal/LodashWrapper":506,"../internal/baseLodash":519,"../internal/isObjectLike":551,"../internal/wrapperClone":562,"../lang/isArray":564}],500:[function(require,module,exports){
 =======
 },{"../internal/LazyWrapper":504,"../internal/LodashWrapper":505,"../internal/baseLodash":518,"../internal/isObjectLike":550,"../internal/wrapperClone":561,"../lang/isArray":563}],499:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/LazyWrapper":505,"../internal/LodashWrapper":506,"../internal/baseLodash":519,"../internal/isObjectLike":551,"../internal/wrapperClone":562,"../lang/isArray":564}],500:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayMap = require('../internal/arrayMap'),
     baseCallback = require('../internal/baseCallback'),
     baseMap = require('../internal/baseMap'),
@@ -41935,10 +43843,14 @@ function map(collection, iteratee, thisArg) {
 module.exports = map;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/arrayMap":508,"../internal/baseCallback":510,"../internal/baseMap":520,"../lang/isArray":564}],501:[function(require,module,exports){
 =======
 },{"../internal/arrayMap":507,"../internal/baseCallback":509,"../internal/baseMap":519,"../lang/isArray":563}],500:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/arrayMap":508,"../internal/baseCallback":510,"../internal/baseMap":520,"../lang/isArray":564}],501:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getLength = require('../internal/getLength'),
     isLength = require('../internal/isLength'),
     keys = require('../object/keys');
@@ -41971,10 +43883,14 @@ function size(collection) {
 module.exports = size;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/getLength":543,"../internal/isLength":550,"../object/keys":570}],502:[function(require,module,exports){
 =======
 },{"../internal/getLength":542,"../internal/isLength":549,"../object/keys":569}],501:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/getLength":543,"../internal/isLength":550,"../object/keys":570}],502:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('../internal/getNative');
 
 /* Native method references for those with the same name as other `lodash` methods. */
@@ -42001,10 +43917,14 @@ var now = nativeNow || function() {
 module.exports = now;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/getNative":545}],503:[function(require,module,exports){
 =======
 },{"../internal/getNative":544}],502:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/getNative":545}],503:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var createWrapper = require('../internal/createWrapper'),
     replaceHolders = require('../internal/replaceHolders'),
     restParam = require('./restParam');
@@ -42063,10 +43983,14 @@ bind.placeholder = {};
 module.exports = bind;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/createWrapper":537,"../internal/replaceHolders":557,"./restParam":504}],504:[function(require,module,exports){
 =======
 },{"../internal/createWrapper":536,"../internal/replaceHolders":556,"./restParam":503}],503:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/createWrapper":537,"../internal/replaceHolders":557,"./restParam":504}],504:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -42127,10 +44051,14 @@ function restParam(func, start) {
 module.exports = restParam;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],505:[function(require,module,exports){
 =======
 },{}],504:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],505:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -42159,10 +44087,14 @@ LazyWrapper.prototype.constructor = LazyWrapper;
 module.exports = LazyWrapper;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseCreate":511,"./baseLodash":519}],506:[function(require,module,exports){
 =======
 },{"./baseCreate":510,"./baseLodash":518}],505:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseCreate":511,"./baseLodash":519}],506:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -42186,10 +44118,14 @@ LodashWrapper.prototype.constructor = LodashWrapper;
 module.exports = LodashWrapper;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseCreate":511,"./baseLodash":519}],507:[function(require,module,exports){
 =======
 },{"./baseCreate":510,"./baseLodash":518}],506:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseCreate":511,"./baseLodash":519}],507:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copies the values of `source` to `array`.
  *
@@ -42212,10 +44148,14 @@ function arrayCopy(source, array) {
 module.exports = arrayCopy;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],508:[function(require,module,exports){
 =======
 },{}],507:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],508:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * A specialized version of `_.map` for arrays without support for callback
  * shorthands and `this` binding.
@@ -42239,10 +44179,14 @@ function arrayMap(array, iteratee) {
 module.exports = arrayMap;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],509:[function(require,module,exports){
 =======
 },{}],508:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],509:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * A specialized version of `_.some` for arrays without support for callback
  * shorthands and `this` binding.
@@ -42268,10 +44212,14 @@ function arraySome(array, predicate) {
 module.exports = arraySome;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],510:[function(require,module,exports){
 =======
 },{}],509:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],510:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseMatches = require('./baseMatches'),
     baseMatchesProperty = require('./baseMatchesProperty'),
     bindCallback = require('./bindCallback'),
@@ -42309,10 +44257,14 @@ function baseCallback(func, thisArg, argCount) {
 module.exports = baseCallback;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utility/identity":573,"../utility/property":575,"./baseMatches":521,"./baseMatchesProperty":522,"./bindCallback":528}],511:[function(require,module,exports){
 =======
 },{"../utility/identity":572,"../utility/property":574,"./baseMatches":520,"./baseMatchesProperty":521,"./bindCallback":527}],510:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utility/identity":573,"../utility/property":575,"./baseMatches":521,"./baseMatchesProperty":522,"./bindCallback":528}],511:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('../lang/isObject');
 
 /**
@@ -42338,10 +44290,14 @@ var baseCreate = (function() {
 module.exports = baseCreate;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isObject":567}],512:[function(require,module,exports){
 =======
 },{"../lang/isObject":566}],511:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isObject":567}],512:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseForOwn = require('./baseForOwn'),
     createBaseEach = require('./createBaseEach');
 
@@ -42359,10 +44315,14 @@ var baseEach = createBaseEach(baseForOwn);
 module.exports = baseEach;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseForOwn":514,"./createBaseEach":531}],513:[function(require,module,exports){
 =======
 },{"./baseForOwn":513,"./createBaseEach":530}],512:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseForOwn":514,"./createBaseEach":531}],513:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -42382,10 +44342,14 @@ var baseFor = createBaseFor();
 module.exports = baseFor;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./createBaseFor":532}],514:[function(require,module,exports){
 =======
 },{"./createBaseFor":531}],513:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./createBaseFor":532}],514:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseFor = require('./baseFor'),
     keys = require('../object/keys');
 
@@ -42405,10 +44369,14 @@ function baseForOwn(object, iteratee) {
 module.exports = baseForOwn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../object/keys":570,"./baseFor":513}],515:[function(require,module,exports){
 =======
 },{"../object/keys":569,"./baseFor":512}],514:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../object/keys":570,"./baseFor":513}],515:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var toObject = require('./toObject');
 
 /**
@@ -42440,10 +44408,14 @@ function baseGet(object, path, pathKey) {
 module.exports = baseGet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./toObject":560}],516:[function(require,module,exports){
 =======
 },{"./toObject":559}],515:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./toObject":560}],516:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsEqualDeep = require('./baseIsEqualDeep'),
     isObject = require('../lang/isObject'),
     isObjectLike = require('./isObjectLike');
@@ -42474,10 +44446,14 @@ function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
 module.exports = baseIsEqual;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isObject":567,"./baseIsEqualDeep":517,"./isObjectLike":551}],517:[function(require,module,exports){
 =======
 },{"../lang/isObject":566,"./baseIsEqualDeep":516,"./isObjectLike":550}],516:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isObject":567,"./baseIsEqualDeep":517,"./isObjectLike":551}],517:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var equalArrays = require('./equalArrays'),
     equalByTag = require('./equalByTag'),
     equalObjects = require('./equalObjects'),
@@ -42582,10 +44558,14 @@ function baseIsEqualDeep(object, other, equalFunc, customizer, isLoose, stackA, 
 module.exports = baseIsEqualDeep;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isArray":564,"../lang/isTypedArray":568,"./equalArrays":538,"./equalByTag":539,"./equalObjects":540}],518:[function(require,module,exports){
 =======
 },{"../lang/isArray":563,"../lang/isTypedArray":567,"./equalArrays":537,"./equalByTag":538,"./equalObjects":539}],517:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isArray":564,"../lang/isTypedArray":568,"./equalArrays":538,"./equalByTag":539,"./equalObjects":540}],518:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsEqual = require('./baseIsEqual'),
     toObject = require('./toObject');
 
@@ -42640,10 +44620,14 @@ function baseIsMatch(object, matchData, customizer) {
 module.exports = baseIsMatch;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseIsEqual":516,"./toObject":560}],519:[function(require,module,exports){
 =======
 },{"./baseIsEqual":515,"./toObject":559}],518:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseIsEqual":516,"./toObject":560}],519:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * The function whose prototype all chaining wrappers inherit from.
  *
@@ -42656,10 +44640,14 @@ function baseLodash() {
 module.exports = baseLodash;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],520:[function(require,module,exports){
 =======
 },{}],519:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],520:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseEach = require('./baseEach'),
     isArrayLike = require('./isArrayLike');
 
@@ -42685,10 +44673,14 @@ function baseMap(collection, iteratee) {
 module.exports = baseMap;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseEach":512,"./isArrayLike":546}],521:[function(require,module,exports){
 =======
 },{"./baseEach":511,"./isArrayLike":545}],520:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseEach":512,"./isArrayLike":546}],521:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsMatch = require('./baseIsMatch'),
     getMatchData = require('./getMatchData'),
     toObject = require('./toObject');
@@ -42721,10 +44713,14 @@ function baseMatches(source) {
 module.exports = baseMatches;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseIsMatch":518,"./getMatchData":544,"./toObject":560}],522:[function(require,module,exports){
 =======
 },{"./baseIsMatch":517,"./getMatchData":543,"./toObject":559}],521:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseIsMatch":518,"./getMatchData":544,"./toObject":560}],522:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGet = require('./baseGet'),
     baseIsEqual = require('./baseIsEqual'),
     baseSlice = require('./baseSlice'),
@@ -42772,10 +44768,14 @@ function baseMatchesProperty(path, srcValue) {
 module.exports = baseMatchesProperty;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../array/last":498,"../lang/isArray":564,"./baseGet":515,"./baseIsEqual":516,"./baseSlice":526,"./isKey":548,"./isStrictComparable":552,"./toObject":560,"./toPath":561}],523:[function(require,module,exports){
 =======
 },{"../array/last":497,"../lang/isArray":563,"./baseGet":514,"./baseIsEqual":515,"./baseSlice":525,"./isKey":547,"./isStrictComparable":551,"./toObject":559,"./toPath":560}],522:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../array/last":498,"../lang/isArray":564,"./baseGet":515,"./baseIsEqual":516,"./baseSlice":526,"./isKey":548,"./isStrictComparable":552,"./toObject":560,"./toPath":561}],523:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -42792,10 +44792,14 @@ function baseProperty(key) {
 module.exports = baseProperty;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],524:[function(require,module,exports){
 =======
 },{}],523:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],524:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGet = require('./baseGet'),
     toPath = require('./toPath');
 
@@ -42817,10 +44821,14 @@ function basePropertyDeep(path) {
 module.exports = basePropertyDeep;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseGet":515,"./toPath":561}],525:[function(require,module,exports){
 =======
 },{"./baseGet":514,"./toPath":560}],524:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseGet":515,"./toPath":561}],525:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var identity = require('../utility/identity'),
     metaMap = require('./metaMap');
 
@@ -42840,10 +44848,14 @@ var baseSetData = !metaMap ? identity : function(func, data) {
 module.exports = baseSetData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utility/identity":573,"./metaMap":554}],526:[function(require,module,exports){
 =======
 },{"../utility/identity":572,"./metaMap":553}],525:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utility/identity":573,"./metaMap":554}],526:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
  *
@@ -42878,10 +44890,14 @@ function baseSlice(array, start, end) {
 module.exports = baseSlice;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],527:[function(require,module,exports){
 =======
 },{}],526:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],527:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Converts `value` to a string if it's not one. An empty string is returned
  * for `null` or `undefined` values.
@@ -42897,10 +44913,14 @@ function baseToString(value) {
 module.exports = baseToString;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],528:[function(require,module,exports){
 =======
 },{}],527:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],528:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var identity = require('../utility/identity');
 
 /**
@@ -42942,10 +44962,14 @@ function bindCallback(func, thisArg, argCount) {
 module.exports = bindCallback;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utility/identity":573}],529:[function(require,module,exports){
 =======
 },{"../utility/identity":572}],528:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utility/identity":573}],529:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -42982,10 +45006,14 @@ function composeArgs(args, partials, holders) {
 module.exports = composeArgs;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],530:[function(require,module,exports){
 =======
 },{}],529:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],530:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -43024,10 +45052,14 @@ function composeArgsRight(args, partials, holders) {
 module.exports = composeArgsRight;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],531:[function(require,module,exports){
 =======
 },{}],530:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],531:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getLength = require('./getLength'),
     isLength = require('./isLength'),
     toObject = require('./toObject');
@@ -43061,10 +45093,14 @@ function createBaseEach(eachFunc, fromRight) {
 module.exports = createBaseEach;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getLength":543,"./isLength":550,"./toObject":560}],532:[function(require,module,exports){
 =======
 },{"./getLength":542,"./isLength":549,"./toObject":559}],531:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getLength":543,"./isLength":550,"./toObject":560}],532:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var toObject = require('./toObject');
 
 /**
@@ -43094,10 +45130,14 @@ function createBaseFor(fromRight) {
 module.exports = createBaseFor;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./toObject":560}],533:[function(require,module,exports){
 =======
 },{"./toObject":559}],532:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./toObject":560}],533:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -43124,10 +45164,14 @@ module.exports = createBindWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./createCtorWrapper":534}],534:[function(require,module,exports){
 =======
 },{"./createCtorWrapper":533}],533:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./createCtorWrapper":534}],534:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseCreate = require('./baseCreate'),
     isObject = require('../lang/isObject');
 
@@ -43167,10 +45211,14 @@ function createCtorWrapper(Ctor) {
 module.exports = createCtorWrapper;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isObject":567,"./baseCreate":511}],535:[function(require,module,exports){
 =======
 },{"../lang/isObject":566,"./baseCreate":510}],534:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isObject":567,"./baseCreate":511}],535:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
@@ -43286,10 +45334,14 @@ module.exports = createHybridWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./arrayCopy":507,"./composeArgs":529,"./composeArgsRight":530,"./createCtorWrapper":534,"./isLaziable":549,"./reorder":556,"./replaceHolders":557,"./setData":558}],536:[function(require,module,exports){
 =======
 },{"./arrayCopy":506,"./composeArgs":528,"./composeArgsRight":529,"./createCtorWrapper":533,"./isLaziable":548,"./reorder":555,"./replaceHolders":556,"./setData":557}],535:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./arrayCopy":507,"./composeArgs":529,"./composeArgsRight":530,"./createCtorWrapper":534,"./isLaziable":549,"./reorder":556,"./replaceHolders":557,"./setData":558}],536:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -43337,10 +45389,14 @@ module.exports = createPartialWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./createCtorWrapper":534}],537:[function(require,module,exports){
 =======
 },{"./createCtorWrapper":533}],536:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./createCtorWrapper":534}],537:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseSetData = require('./baseSetData'),
     createBindWrapper = require('./createBindWrapper'),
     createHybridWrapper = require('./createHybridWrapper'),
@@ -43429,10 +45485,14 @@ function createWrapper(func, bitmask, thisArg, partials, holders, argPos, ary, a
 module.exports = createWrapper;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseSetData":525,"./createBindWrapper":533,"./createHybridWrapper":535,"./createPartialWrapper":536,"./getData":541,"./mergeData":553,"./setData":558}],538:[function(require,module,exports){
 =======
 },{"./baseSetData":524,"./createBindWrapper":532,"./createHybridWrapper":534,"./createPartialWrapper":535,"./getData":540,"./mergeData":552,"./setData":557}],537:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseSetData":525,"./createBindWrapper":533,"./createHybridWrapper":535,"./createPartialWrapper":536,"./getData":541,"./mergeData":553,"./setData":558}],538:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arraySome = require('./arraySome');
 
 /**
@@ -43486,10 +45546,14 @@ function equalArrays(array, other, equalFunc, customizer, isLoose, stackA, stack
 module.exports = equalArrays;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./arraySome":509}],539:[function(require,module,exports){
 =======
 },{"./arraySome":508}],538:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./arraySome":509}],539:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
     dateTag = '[object Date]',
@@ -43540,10 +45604,14 @@ function equalByTag(object, other, tag) {
 module.exports = equalByTag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],540:[function(require,module,exports){
 =======
 },{}],539:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],540:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var keys = require('../object/keys');
 
 /** Used for native method references. */
@@ -43613,10 +45681,14 @@ function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, sta
 module.exports = equalObjects;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../object/keys":570}],541:[function(require,module,exports){
 =======
 },{"../object/keys":569}],540:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../object/keys":570}],541:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var metaMap = require('./metaMap'),
     noop = require('../utility/noop');
 
@@ -43634,10 +45706,14 @@ var getData = !metaMap ? noop : function(func) {
 module.exports = getData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utility/noop":574,"./metaMap":554}],542:[function(require,module,exports){
 =======
 },{"../utility/noop":573,"./metaMap":553}],541:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utility/noop":574,"./metaMap":554}],542:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var realNames = require('./realNames');
 
 /**
@@ -43665,10 +45741,14 @@ function getFuncName(func) {
 module.exports = getFuncName;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./realNames":555}],543:[function(require,module,exports){
 =======
 },{"./realNames":554}],542:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./realNames":555}],543:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseProperty = require('./baseProperty');
 
 /**
@@ -43686,10 +45766,14 @@ var getLength = baseProperty('length');
 module.exports = getLength;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./baseProperty":523}],544:[function(require,module,exports){
 =======
 },{"./baseProperty":522}],543:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./baseProperty":523}],544:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isStrictComparable = require('./isStrictComparable'),
     pairs = require('../object/pairs');
 
@@ -43713,10 +45797,14 @@ function getMatchData(object) {
 module.exports = getMatchData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../object/pairs":572,"./isStrictComparable":552}],545:[function(require,module,exports){
 =======
 },{"../object/pairs":571,"./isStrictComparable":551}],544:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../object/pairs":572,"./isStrictComparable":552}],545:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isNative = require('../lang/isNative');
 
 /**
@@ -43735,10 +45823,14 @@ function getNative(object, key) {
 module.exports = getNative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isNative":566}],546:[function(require,module,exports){
 =======
 },{"../lang/isNative":565}],545:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isNative":566}],546:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getLength = require('./getLength'),
     isLength = require('./isLength');
 
@@ -43756,10 +45848,14 @@ function isArrayLike(value) {
 module.exports = isArrayLike;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getLength":543,"./isLength":550}],547:[function(require,module,exports){
 =======
 },{"./getLength":542,"./isLength":549}],546:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getLength":543,"./isLength":550}],547:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used to detect unsigned integer values. */
 var reIsUint = /^\d+$/;
 
@@ -43786,10 +45882,14 @@ function isIndex(value, length) {
 module.exports = isIndex;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],548:[function(require,module,exports){
 =======
 },{}],547:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],548:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isArray = require('../lang/isArray'),
     toObject = require('./toObject');
 
@@ -43820,10 +45920,14 @@ function isKey(value, object) {
 module.exports = isKey;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isArray":564,"./toObject":560}],549:[function(require,module,exports){
 =======
 },{"../lang/isArray":563,"./toObject":559}],548:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isArray":564,"./toObject":560}],549:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var LazyWrapper = require('./LazyWrapper'),
     getData = require('./getData'),
     getFuncName = require('./getFuncName'),
@@ -43853,10 +45957,14 @@ function isLaziable(func) {
 module.exports = isLaziable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../chain/lodash":499,"./LazyWrapper":505,"./getData":541,"./getFuncName":542}],550:[function(require,module,exports){
 =======
 },{"../chain/lodash":498,"./LazyWrapper":504,"./getData":540,"./getFuncName":541}],549:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../chain/lodash":499,"./LazyWrapper":505,"./getData":541,"./getFuncName":542}],550:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
  * of an array-like value.
@@ -43879,10 +45987,14 @@ function isLength(value) {
 module.exports = isLength;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],551:[function(require,module,exports){
 =======
 },{}],550:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],551:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is object-like.
  *
@@ -43897,10 +46009,14 @@ function isObjectLike(value) {
 module.exports = isObjectLike;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],552:[function(require,module,exports){
 =======
 },{}],551:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],552:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('../lang/isObject');
 
 /**
@@ -43918,10 +46034,14 @@ function isStrictComparable(value) {
 module.exports = isStrictComparable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isObject":567}],553:[function(require,module,exports){
 =======
 },{"../lang/isObject":566}],552:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isObject":567}],553:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
     composeArgsRight = require('./composeArgsRight'),
@@ -44013,10 +46133,14 @@ function mergeData(data, source) {
 module.exports = mergeData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./arrayCopy":507,"./composeArgs":529,"./composeArgsRight":530,"./replaceHolders":557}],554:[function(require,module,exports){
 =======
 },{"./arrayCopy":506,"./composeArgs":528,"./composeArgsRight":529,"./replaceHolders":556}],553:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./arrayCopy":507,"./composeArgs":529,"./composeArgsRight":530,"./replaceHolders":557}],554:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 var getNative = require('./getNative');
 
@@ -44030,20 +46154,28 @@ module.exports = metaMap;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getNative":545}],555:[function(require,module,exports){
 =======
 },{"./getNative":544}],554:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getNative":545}],555:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used to lookup unminified function names. */
 var realNames = {};
 
 module.exports = realNames;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],556:[function(require,module,exports){
 =======
 },{}],555:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],556:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayCopy = require('./arrayCopy'),
     isIndex = require('./isIndex');
 
@@ -44075,10 +46207,14 @@ function reorder(array, indexes) {
 module.exports = reorder;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./arrayCopy":507,"./isIndex":547}],557:[function(require,module,exports){
 =======
 },{"./arrayCopy":506,"./isIndex":546}],556:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./arrayCopy":507,"./isIndex":547}],557:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used as the internal argument placeholder. */
 var PLACEHOLDER = '__lodash_placeholder__';
 
@@ -44109,10 +46245,14 @@ function replaceHolders(array, placeholder) {
 module.exports = replaceHolders;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],558:[function(require,module,exports){
 =======
 },{}],557:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],558:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseSetData = require('./baseSetData'),
     now = require('../date/now');
 
@@ -44156,10 +46296,14 @@ var setData = (function() {
 module.exports = setData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../date/now":502,"./baseSetData":525}],559:[function(require,module,exports){
 =======
 },{"../date/now":501,"./baseSetData":524}],558:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../date/now":502,"./baseSetData":525}],559:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('./isIndex'),
@@ -44203,10 +46347,14 @@ function shimKeys(object) {
 module.exports = shimKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isArguments":563,"../lang/isArray":564,"../object/keysIn":571,"./isIndex":547,"./isLength":550}],560:[function(require,module,exports){
 =======
 },{"../lang/isArguments":562,"../lang/isArray":563,"../object/keysIn":570,"./isIndex":546,"./isLength":549}],559:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isArguments":563,"../lang/isArray":564,"../object/keysIn":571,"./isIndex":547,"./isLength":550}],560:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('../lang/isObject');
 
 /**
@@ -44223,10 +46371,14 @@ function toObject(value) {
 module.exports = toObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isObject":567}],561:[function(require,module,exports){
 =======
 },{"../lang/isObject":566}],560:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isObject":567}],561:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseToString = require('./baseToString'),
     isArray = require('../lang/isArray');
 
@@ -44257,10 +46409,14 @@ function toPath(value) {
 module.exports = toPath;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lang/isArray":564,"./baseToString":527}],562:[function(require,module,exports){
 =======
 },{"../lang/isArray":563,"./baseToString":526}],561:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lang/isArray":564,"./baseToString":527}],562:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var LazyWrapper = require('./LazyWrapper'),
     LodashWrapper = require('./LodashWrapper'),
     arrayCopy = require('./arrayCopy');
@@ -44281,10 +46437,14 @@ function wrapperClone(wrapper) {
 module.exports = wrapperClone;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./LazyWrapper":505,"./LodashWrapper":506,"./arrayCopy":507}],563:[function(require,module,exports){
 =======
 },{"./LazyWrapper":504,"./LodashWrapper":505,"./arrayCopy":506}],562:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./LazyWrapper":505,"./LodashWrapper":506,"./arrayCopy":507}],563:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isArrayLike = require('../internal/isArrayLike'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -44321,10 +46481,14 @@ function isArguments(value) {
 module.exports = isArguments;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/isArrayLike":546,"../internal/isObjectLike":551}],564:[function(require,module,exports){
 =======
 },{"../internal/isArrayLike":545,"../internal/isObjectLike":550}],563:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/isArrayLike":546,"../internal/isObjectLike":551}],564:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('../internal/getNative'),
     isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
@@ -44367,10 +46531,14 @@ var isArray = nativeIsArray || function(value) {
 module.exports = isArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/getNative":545,"../internal/isLength":550,"../internal/isObjectLike":551}],565:[function(require,module,exports){
 =======
 },{"../internal/getNative":544,"../internal/isLength":549,"../internal/isObjectLike":550}],564:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/getNative":545,"../internal/isLength":550,"../internal/isObjectLike":551}],565:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
@@ -44411,10 +46579,14 @@ function isFunction(value) {
 module.exports = isFunction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isObject":567}],566:[function(require,module,exports){
 =======
 },{"./isObject":566}],565:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isObject":567}],566:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isFunction = require('./isFunction'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -44465,10 +46637,14 @@ function isNative(value) {
 module.exports = isNative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/isObjectLike":551,"./isFunction":565}],567:[function(require,module,exports){
 =======
 },{"../internal/isObjectLike":550,"./isFunction":564}],566:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/isObjectLike":551,"./isFunction":565}],567:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -44499,10 +46675,14 @@ function isObject(value) {
 module.exports = isObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],568:[function(require,module,exports){
 =======
 },{}],567:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],568:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -44579,10 +46759,14 @@ function isTypedArray(value) {
 module.exports = isTypedArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/isLength":550,"../internal/isObjectLike":551}],569:[function(require,module,exports){
 =======
 },{"../internal/isLength":549,"../internal/isObjectLike":550}],568:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/isLength":550,"../internal/isObjectLike":551}],569:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGet = require('../internal/baseGet'),
     toPath = require('../internal/toPath');
 
@@ -44618,10 +46802,14 @@ function get(object, path, defaultValue) {
 module.exports = get;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/baseGet":515,"../internal/toPath":561}],570:[function(require,module,exports){
 =======
 },{"../internal/baseGet":514,"../internal/toPath":560}],569:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/baseGet":515,"../internal/toPath":561}],570:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('../internal/getNative'),
     isArrayLike = require('../internal/isArrayLike'),
     isObject = require('../lang/isObject'),
@@ -44669,10 +46857,14 @@ var keys = !nativeKeys ? shimKeys : function(object) {
 module.exports = keys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/getNative":545,"../internal/isArrayLike":546,"../internal/shimKeys":559,"../lang/isObject":567}],571:[function(require,module,exports){
 =======
 },{"../internal/getNative":544,"../internal/isArrayLike":545,"../internal/shimKeys":558,"../lang/isObject":566}],570:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/getNative":545,"../internal/isArrayLike":546,"../internal/shimKeys":559,"../lang/isObject":567}],571:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('../internal/isIndex'),
@@ -44739,10 +46931,14 @@ function keysIn(object) {
 module.exports = keysIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/isIndex":547,"../internal/isLength":550,"../lang/isArguments":563,"../lang/isArray":564,"../lang/isObject":567}],572:[function(require,module,exports){
 =======
 },{"../internal/isIndex":546,"../internal/isLength":549,"../lang/isArguments":562,"../lang/isArray":563,"../lang/isObject":566}],571:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/isIndex":547,"../internal/isLength":550,"../lang/isArguments":563,"../lang/isArray":564,"../lang/isObject":567}],572:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var keys = require('./keys'),
     toObject = require('../internal/toObject');
 
@@ -44778,10 +46974,14 @@ function pairs(object) {
 module.exports = pairs;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/toObject":560,"./keys":570}],573:[function(require,module,exports){
 =======
 },{"../internal/toObject":559,"./keys":569}],572:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/toObject":560,"./keys":570}],573:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * This method returns the first argument provided to it.
  *
@@ -44804,10 +47004,14 @@ function identity(value) {
 module.exports = identity;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],574:[function(require,module,exports){
 =======
 },{}],573:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],574:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * A no-operation function that returns `undefined` regardless of the
  * arguments it receives.
@@ -44829,10 +47033,14 @@ function noop() {
 module.exports = noop;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],575:[function(require,module,exports){
 =======
 },{}],574:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],575:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseProperty = require('../internal/baseProperty'),
     basePropertyDeep = require('../internal/basePropertyDeep'),
     isKey = require('../internal/isKey');
@@ -44866,10 +47074,14 @@ function property(path) {
 module.exports = property;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../internal/baseProperty":523,"../internal/basePropertyDeep":524,"../internal/isKey":548}],576:[function(require,module,exports){
 =======
 },{"../internal/baseProperty":522,"../internal/basePropertyDeep":523,"../internal/isKey":547}],575:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../internal/baseProperty":523,"../internal/basePropertyDeep":524,"../internal/isKey":548}],576:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*! nouislider-algolia-fork - 10.0.0 - 2016-11-02 18:17:49 */
 
 (function (factory) {
@@ -46838,10 +49050,14 @@ function closure ( target, options, originalOptions ){
 
 }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],577:[function(require,module,exports){
 =======
 },{}],576:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],577:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*! @preserve
  * numeral.js language configuration
  * language : russian (ru)
@@ -46881,10 +49097,14 @@ function closure ( target, options, originalOptions ){
 }());
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],578:[function(require,module,exports){
 =======
 },{}],577:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],578:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*! @preserve
  * numeral.js
  * version : 1.5.6
@@ -47172,6 +49392,7 @@ function closure ( target, options, originalOptions ){
             signed = true;
             format = format.replace(/\+/g, '');
         }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         // see if abbreviation is wanted
@@ -47193,11 +49414,46 @@ function closure ( target, options, originalOptions ){
                     format = format.replace('b', '');
                 }
 <<<<<<< HEAD
+=======
 
-                for (power = 0; power <= binarySuffixes.length; power++) {
-                    min = Math.pow(1024, power);
-                    max = Math.pow(1024, power + 1);
+        // see if abbreviation is wanted
+        if (format.indexOf('a') > -1) {
+            // check if abbreviation is specified
+            abbrK = format.indexOf('aK') >= 0;
+            abbrM = format.indexOf('aM') >= 0;
+            abbrB = format.indexOf('aB') >= 0;
+            abbrT = format.indexOf('aT') >= 0;
+            abbrForce = abbrK || abbrM || abbrB || abbrT;
 
+            // check for space before abbreviation
+            if (format.indexOf(' a') > -1) {
+                abbr = ' ';
+            }
+
+            format = format.replace(new RegExp(abbr + 'a[KMBT]?'), '');
+
+            if (abs >= Math.pow(10, 12) && !abbrForce || abbrT) {
+                // trillion
+                abbr = abbr + languages[options.currentLanguage].abbreviations.trillion;
+                value = value / Math.pow(10, 12);
+            } else if (abs < Math.pow(10, 12) && abs >= Math.pow(10, 9) && !abbrForce || abbrB) {
+                // billion
+                abbr = abbr + languages[options.currentLanguage].abbreviations.billion;
+                value = value / Math.pow(10, 9);
+            } else if (abs < Math.pow(10, 9) && abs >= Math.pow(10, 6) && !abbrForce || abbrM) {
+                // million
+                abbr = abbr + languages[options.currentLanguage].abbreviations.million;
+                value = value / Math.pow(10, 6);
+            } else if (abs < Math.pow(10, 6) && abs >= Math.pow(10, 3) && !abbrForce || abbrK) {
+                // thousand
+                abbr = abbr + languages[options.currentLanguage].abbreviations.thousand;
+                value = value / Math.pow(10, 3);
+            }
+        }
+>>>>>>> rebuild after rebase
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> optional filter trigger button. resolves #4
 
@@ -47236,9 +49492,28 @@ function closure ( target, options, originalOptions ){
                     }
                 }
 >>>>>>> optional filter trigger button. resolves #4
+=======
+        if (format.indexOf('[.]') > -1) {
+            optDec = true;
+            format = format.replace('[.]', '.');
+        }
+
+        w = value.toString().split('.')[0];
+        precision = format.split('.')[1];
+        thousands = format.indexOf(',');
+
+        if (precision) {
+            if (precision.indexOf('[') > -1) {
+                precision = precision.replace(']', '');
+                precision = precision.split('[');
+                d = toFixed(value, (precision[0].length + precision[1].length), roundingFunction, precision[1].length);
+            } else {
+                d = toFixed(value, precision.length, roundingFunction);
+>>>>>>> rebuild after rebase
             }
         }
 
+<<<<<<< HEAD
 
         if (format.indexOf('[.]') > -1) {
             optDec = true;
@@ -47256,8 +49531,24 @@ function closure ( target, options, originalOptions ){
                 d = toFixed(value, (precision[0].length + precision[1].length), roundingFunction, precision[1].length);
             } else {
                 d = toFixed(value, precision.length, roundingFunction);
+=======
+            w = d.split('.')[0];
+
+            if (d.indexOf('.') > -1) {
+                d = languages[options.currentLanguage].delimiters.decimal + d.split('.')[1];
+            } else {
+                d = '';
             }
 
+            if (optDec && Number(d.slice(1)) === 0) {
+                d = '';
+>>>>>>> rebuild after rebase
+            }
+        } else {
+            w = toFixed(value, null, roundingFunction);
+        }
+
+<<<<<<< HEAD
             w = d.split('.')[0];
 
             if (d.indexOf('.') > -1) {
@@ -47306,6 +49597,41 @@ function closure ( target, options, originalOptions ){
             power,
             value;
 
+=======
+        // format number
+        if (w.indexOf('-') > -1) {
+            w = w.slice(1);
+            neg = true;
+        }
+
+        if (thousands > -1) {
+            w = w.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1' + languages[options.currentLanguage].delimiters.thousands);
+        }
+
+        if (format.indexOf('.') === 0) {
+            w = '';
+        }
+
+        return ((negP && neg) ? '(' : '') + ((!negP && neg) ? '-' : '') + ((!neg && signed) ? '+' : '') + w + d + ((abbr) ? abbr : '') + ((negP && neg) ? ')' : '');
+    }
+
+
+    /************************************
+        Unformatting
+    ************************************/
+
+    // revert to number
+    function unformatNumeral(n, string) {
+        var stringOriginal = string,
+            thousandRegExp,
+            millionRegExp,
+            billionRegExp,
+            trillionRegExp,
+            bytesMultiplier = false,
+            power,
+            value;
+
+>>>>>>> rebuild after rebase
         if (string.indexOf(':') > -1) {
             value = unformatTime(string);
         } else {
@@ -47762,6 +50088,9 @@ function closure ( target, options, originalOptions ){
 }).call(this);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> rebuild after rebase
 },{}],579:[function(require,module,exports){
 'use strict';
 /* eslint-disable no-unused-vars */
@@ -47848,9 +50177,12 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 };
 
 },{}],580:[function(require,module,exports){
+<<<<<<< HEAD
 =======
 },{}],578:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+>>>>>>> rebuild after rebase
 'use strict';
 
 function oldAdd(element, className) {
@@ -47895,10 +50227,14 @@ exports.list = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],581:[function(require,module,exports){
 =======
 },{}],579:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],581:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var DOM = {};
@@ -47985,10 +50321,14 @@ DOM.queryChildren = function (element, selector) {
 module.exports = DOM;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],582:[function(require,module,exports){
 =======
 },{}],580:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],582:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var EventElement = function (element) {
@@ -48062,10 +50402,14 @@ EventManager.prototype.once = function (element, eventName, handler) {
 module.exports = EventManager;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],583:[function(require,module,exports){
 =======
 },{}],581:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],583:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 module.exports = (function () {
@@ -48081,10 +50425,14 @@ module.exports = (function () {
 })();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],584:[function(require,module,exports){
 =======
 },{}],582:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],584:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var cls = require('./class');
@@ -48170,10 +50518,14 @@ exports.env = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./class":580,"./dom":581}],585:[function(require,module,exports){
 =======
 },{"./class":578,"./dom":579}],583:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./class":580,"./dom":581}],585:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var destroy = require('./plugin/destroy');
@@ -48187,10 +50539,14 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./plugin/destroy":587,"./plugin/initialize":595,"./plugin/update":599}],586:[function(require,module,exports){
 =======
 },{"./plugin/destroy":585,"./plugin/initialize":593,"./plugin/update":597}],584:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./plugin/destroy":587,"./plugin/initialize":595,"./plugin/update":599}],586:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 module.exports = {
@@ -48209,10 +50565,14 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],587:[function(require,module,exports){
 =======
 },{}],585:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],587:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../lib/helper');
@@ -48237,10 +50597,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lib/dom":581,"../lib/helper":584,"./instances":596}],588:[function(require,module,exports){
 =======
 },{"../lib/dom":579,"../lib/helper":582,"./instances":594}],586:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lib/dom":581,"../lib/helper":584,"./instances":596}],588:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var instances = require('../instances');
@@ -48282,10 +50646,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../instances":596,"../update-geometry":597,"../update-scroll":598}],589:[function(require,module,exports){
 =======
 },{"../instances":594,"../update-geometry":595,"../update-scroll":596}],587:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../instances":596,"../update-geometry":597,"../update-scroll":598}],589:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -48391,10 +50759,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../lib/dom":581,"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],590:[function(require,module,exports){
 =======
 },{"../../lib/dom":579,"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],588:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../lib/dom":581,"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],590:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -48551,10 +50923,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../lib/dom":581,"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],591:[function(require,module,exports){
 =======
 },{"../../lib/dom":579,"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],589:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../lib/dom":581,"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],591:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var instances = require('../instances');
@@ -48698,10 +51074,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../instances":596,"../update-geometry":597,"../update-scroll":598}],592:[function(require,module,exports){
 =======
 },{"../instances":594,"../update-geometry":595,"../update-scroll":596}],590:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../instances":596,"../update-geometry":597,"../update-scroll":598}],592:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var instances = require('../instances');
@@ -48719,10 +51099,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../instances":596,"../update-geometry":597}],593:[function(require,module,exports){
 =======
 },{"../instances":594,"../update-geometry":595}],591:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../instances":596,"../update-geometry":597}],593:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -48840,10 +51224,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],594:[function(require,module,exports){
 =======
 },{"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],592:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],594:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -49027,10 +51415,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],595:[function(require,module,exports){
 =======
 },{"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],593:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../../lib/helper":584,"../instances":596,"../update-geometry":597,"../update-scroll":598}],595:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../lib/helper');
@@ -49070,10 +51462,14 @@ module.exports = function (element, userSettings) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lib/class":580,"../lib/helper":584,"./handler/click-rail":588,"./handler/drag-scrollbar":589,"./handler/keyboard":590,"./handler/mouse-wheel":591,"./handler/native-scroll":592,"./handler/selection":593,"./handler/touch":594,"./instances":596,"./update-geometry":597}],596:[function(require,module,exports){
 =======
 },{"../lib/class":578,"../lib/helper":582,"./handler/click-rail":586,"./handler/drag-scrollbar":587,"./handler/keyboard":588,"./handler/mouse-wheel":589,"./handler/native-scroll":590,"./handler/selection":591,"./handler/touch":592,"./instances":594,"./update-geometry":595}],594:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lib/class":580,"../lib/helper":584,"./handler/click-rail":588,"./handler/drag-scrollbar":589,"./handler/keyboard":590,"./handler/mouse-wheel":591,"./handler/native-scroll":592,"./handler/selection":593,"./handler/touch":594,"./instances":596,"./update-geometry":597}],596:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../lib/helper');
@@ -49183,10 +51579,14 @@ exports.get = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lib/class":580,"../lib/dom":581,"../lib/event-manager":582,"../lib/guid":583,"../lib/helper":584,"./default-setting":586}],597:[function(require,module,exports){
 =======
 },{"../lib/class":578,"../lib/dom":579,"../lib/event-manager":580,"../lib/guid":581,"../lib/helper":582,"./default-setting":584}],595:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lib/class":580,"../lib/dom":581,"../lib/event-manager":582,"../lib/guid":583,"../lib/helper":584,"./default-setting":586}],597:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../lib/helper');
@@ -49315,10 +51715,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lib/class":580,"../lib/dom":581,"../lib/helper":584,"./instances":596,"./update-scroll":598}],598:[function(require,module,exports){
 =======
 },{"../lib/class":578,"../lib/dom":579,"../lib/helper":582,"./instances":594,"./update-scroll":596}],596:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lib/class":580,"../lib/dom":581,"../lib/helper":584,"./instances":596,"./update-scroll":598}],598:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var instances = require('./instances');
@@ -49418,10 +51822,14 @@ module.exports = function (element, axis, value) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./instances":596}],599:[function(require,module,exports){
 =======
 },{"./instances":594}],597:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./instances":596}],599:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _ = require('../lib/helper');
@@ -49461,10 +51869,14 @@ module.exports = function (element) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../lib/dom":581,"../lib/helper":584,"./instances":596,"./update-geometry":597,"./update-scroll":598}],600:[function(require,module,exports){
 =======
 },{"../lib/dom":579,"../lib/helper":582,"./instances":594,"./update-geometry":595,"./update-scroll":596}],598:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../lib/dom":581,"../lib/helper":584,"./instances":596,"./update-geometry":597,"./update-scroll":598}],600:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 // Generated by CoffeeScript 1.7.1
 (function() {
@@ -49501,10 +51913,14 @@ module.exports = function (element) {
 
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],601:[function(require,module,exports){
 =======
 },{"_process":599}],599:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],601:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -49687,10 +52103,14 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],602:[function(require,module,exports){
 =======
 },{}],600:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],602:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -49791,6 +52211,7 @@ exports.stringify = function (obj, opts) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"object-assign":579,"strict-uri-encode":799}],603:[function(require,module,exports){
 =======
 },{"object-assign":601,"strict-uri-encode":798}],601:[function(require,module,exports){
@@ -49880,6 +52301,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 },{}],602:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"object-assign":579,"strict-uri-encode":799}],603:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 var now = require('performance-now')
   , root = typeof window === 'undefined' ? global : window
@@ -49956,6 +52380,7 @@ module.exports.polyfill = function() {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"performance-now":600}],604:[function(require,module,exports){
 module.exports = require('react/lib/shallowCompare');
 },{"react/lib/shallowCompare":750}],605:[function(require,module,exports){
@@ -49964,6 +52389,11 @@ module.exports = require('react/lib/shallowCompare');
 module.exports = require('react/lib/shallowCompare');
 },{"react/lib/shallowCompare":749}],604:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"performance-now":600}],604:[function(require,module,exports){
+module.exports = require('react/lib/shallowCompare');
+},{"react/lib/shallowCompare":750}],605:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -50154,6 +52584,7 @@ module.exports = _react2['default'].createClass({
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],606:[function(require,module,exports){
 'use strict';
 
@@ -50166,15 +52597,26 @@ module.exports = require('./components/DisqusThread');
 module.exports = require('./components/DisqusThread');
 },{"./components/DisqusThread":604}],606:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],606:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./components/DisqusThread');
+},{"./components/DisqusThread":605}],607:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 module.exports = require('react/lib/ReactDOMServer');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react/lib/ReactDOMServer":669}],608:[function(require,module,exports){
 =======
 },{"react/lib/ReactDOMServer":668}],607:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react/lib/ReactDOMServer":669}],608:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 'use strict';
 
@@ -50256,10 +52698,14 @@ Provider.childContextTypes = {
 };
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utils/storeShape":611,"../utils/warning":612,"_process":601,"react":"react"}],609:[function(require,module,exports){
 =======
 },{"../utils/storeShape":610,"../utils/warning":611,"_process":599,"react":"react"}],608:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utils/storeShape":611,"../utils/warning":612,"_process":601,"react":"react"}],609:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 'use strict';
 
@@ -50658,10 +53104,14 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
 }
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"../utils/shallowEqual":610,"../utils/storeShape":611,"../utils/warning":612,"../utils/wrapActionCreators":613,"_process":601,"hoist-non-react-statics":472,"invariant":489,"lodash/isPlainObject":623,"react":"react"}],610:[function(require,module,exports){
 =======
 },{"../utils/shallowEqual":609,"../utils/storeShape":610,"../utils/warning":611,"../utils/wrapActionCreators":612,"_process":599,"hoist-non-react-statics":471,"invariant":488,"lodash/isPlainObject":622,"react":"react"}],609:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"../utils/shallowEqual":610,"../utils/storeShape":611,"../utils/warning":612,"../utils/wrapActionCreators":613,"_process":601,"hoist-non-react-statics":472,"invariant":489,"lodash/isPlainObject":623,"react":"react"}],610:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -50689,10 +53139,14 @@ function shallowEqual(objA, objB) {
   return true;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],611:[function(require,module,exports){
 =======
 },{}],610:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],611:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -50705,10 +53159,14 @@ exports["default"] = _react.PropTypes.shape({
   getState: _react.PropTypes.func.isRequired
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react"}],612:[function(require,module,exports){
 =======
 },{"react":"react"}],611:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react"}],612:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -50735,10 +53193,14 @@ function warning(message) {
   /* eslint-enable no-empty */
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],613:[function(require,module,exports){
 =======
 },{}],612:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],613:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -50752,10 +53214,14 @@ function wrapActionCreators(actionCreators) {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"redux":"redux"}],614:[function(require,module,exports){
 =======
 },{"redux":"redux"}],613:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"redux":"redux"}],614:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -50764,10 +53230,14 @@ var Symbol = root.Symbol;
 module.exports = Symbol;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":621}],615:[function(require,module,exports){
 =======
 },{"./_root":620}],614:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":621}],615:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Symbol = require('./_Symbol'),
     getRawTag = require('./_getRawTag'),
     objectToString = require('./_objectToString');
@@ -50799,10 +53269,14 @@ function baseGetTag(value) {
 module.exports = baseGetTag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Symbol":614,"./_getRawTag":618,"./_objectToString":619}],616:[function(require,module,exports){
 =======
 },{"./_Symbol":613,"./_getRawTag":617,"./_objectToString":618}],615:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Symbol":614,"./_getRawTag":618,"./_objectToString":619}],616:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
@@ -50811,10 +53285,14 @@ module.exports = freeGlobal;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],617:[function(require,module,exports){
 =======
 },{}],616:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],617:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var overArg = require('./_overArg');
 
 /** Built-in value references. */
@@ -50823,10 +53301,14 @@ var getPrototype = overArg(Object.getPrototypeOf, Object);
 module.exports = getPrototype;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_overArg":620}],618:[function(require,module,exports){
 =======
 },{"./_overArg":619}],617:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_overArg":620}],618:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Symbol = require('./_Symbol');
 
 /** Used for built-in method references. */
@@ -50875,10 +53357,14 @@ function getRawTag(value) {
 module.exports = getRawTag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Symbol":614}],619:[function(require,module,exports){
 =======
 },{"./_Symbol":613}],618:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Symbol":614}],619:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -50903,10 +53389,14 @@ function objectToString(value) {
 module.exports = objectToString;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],620:[function(require,module,exports){
 =======
 },{}],619:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],620:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Creates a unary function that invokes `func` with its argument transformed.
  *
@@ -50924,10 +53414,14 @@ function overArg(func, transform) {
 module.exports = overArg;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],621:[function(require,module,exports){
 =======
 },{}],620:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],621:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `self`. */
@@ -50939,10 +53433,14 @@ var root = freeGlobal || freeSelf || Function('return this')();
 module.exports = root;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_freeGlobal":616}],622:[function(require,module,exports){
 =======
 },{"./_freeGlobal":615}],621:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_freeGlobal":616}],622:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is object-like. A value is object-like if it's not `null`
  * and has a `typeof` result of "object".
@@ -50974,10 +53472,14 @@ function isObjectLike(value) {
 module.exports = isObjectLike;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],623:[function(require,module,exports){
 =======
 },{}],622:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],623:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetTag = require('./_baseGetTag'),
     getPrototype = require('./_getPrototype'),
     isObjectLike = require('./isObjectLike');
@@ -51042,10 +53544,14 @@ function isPlainObject(value) {
 module.exports = isPlainObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetTag":615,"./_getPrototype":617,"./isObjectLike":622}],624:[function(require,module,exports){
 =======
 },{"./_baseGetTag":614,"./_getPrototype":616,"./isObjectLike":621}],623:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetTag":615,"./_getPrototype":617,"./isObjectLike":622}],624:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -51534,10 +54040,14 @@ Sticky.STATUS_FIXED = STATUS_FIXED;
 module.exports = Sticky;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"classnames":"classnames","react":"react","react-addons-shallow-compare":604,"subscribe-ui-event":809}],625:[function(require,module,exports){
 =======
 },{"classnames":"classnames","react":"react","react-addons-shallow-compare":603,"subscribe-ui-event":808}],624:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"classnames":"classnames","react":"react","react-addons-shallow-compare":604,"subscribe-ui-event":809}],625:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51575,10 +54085,14 @@ var AutoFocusUtils = {
 
 module.exports = AutoFocusUtils;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactMount":689,"./findDOMNode":732,"fbjs/lib/focusNode":763}],626:[function(require,module,exports){
 =======
 },{"./ReactMount":688,"./findDOMNode":731,"fbjs/lib/focusNode":762}],625:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactMount":689,"./findDOMNode":732,"fbjs/lib/focusNode":763}],626:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015 Facebook, Inc.
  * All rights reserved.
@@ -51985,10 +54499,14 @@ var BeforeInputEventPlugin = {
 
 module.exports = BeforeInputEventPlugin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPropagators":642,"./FallbackCompositionState":643,"./SyntheticCompositionEvent":714,"./SyntheticInputEvent":718,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/keyOf":773}],627:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPropagators":641,"./FallbackCompositionState":642,"./SyntheticCompositionEvent":713,"./SyntheticInputEvent":717,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/keyOf":772}],626:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPropagators":642,"./FallbackCompositionState":643,"./SyntheticCompositionEvent":714,"./SyntheticInputEvent":718,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/keyOf":773}],627:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52129,10 +54647,14 @@ var CSSProperty = {
 
 module.exports = CSSProperty;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],628:[function(require,module,exports){
 =======
 },{}],627:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],628:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52311,10 +54833,14 @@ ReactPerf.measureMethods(CSSPropertyOperations, 'CSSPropertyOperations', {
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CSSProperty":627,"./ReactPerf":695,"./dangerousStyleValue":729,"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/camelizeStyleName":757,"fbjs/lib/hyphenateStyleName":768,"fbjs/lib/memoizeStringOnly":775,"fbjs/lib/warning":780}],629:[function(require,module,exports){
 =======
 },{"./CSSProperty":626,"./ReactPerf":694,"./dangerousStyleValue":728,"_process":599,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/camelizeStyleName":756,"fbjs/lib/hyphenateStyleName":767,"fbjs/lib/memoizeStringOnly":774,"fbjs/lib/warning":779}],628:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CSSProperty":627,"./ReactPerf":695,"./dangerousStyleValue":729,"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/camelizeStyleName":757,"fbjs/lib/hyphenateStyleName":768,"fbjs/lib/memoizeStringOnly":775,"fbjs/lib/warning":780}],629:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52411,10 +54937,14 @@ PooledClass.addPoolingTo(CallbackQueue);
 module.exports = CallbackQueue;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./PooledClass":647,"_process":601,"fbjs/lib/invariant":769}],630:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./PooledClass":646,"_process":599,"fbjs/lib/invariant":768}],629:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./PooledClass":647,"_process":601,"fbjs/lib/invariant":769}],630:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52737,10 +55267,14 @@ var ChangeEventPlugin = {
 
 module.exports = ChangeEventPlugin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPluginHub":639,"./EventPropagators":642,"./ReactUpdates":707,"./SyntheticEvent":716,"./getEventTarget":738,"./isEventSupported":743,"./isTextInputElement":744,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/keyOf":773}],631:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPluginHub":638,"./EventPropagators":641,"./ReactUpdates":706,"./SyntheticEvent":715,"./getEventTarget":737,"./isEventSupported":742,"./isTextInputElement":743,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/keyOf":772}],630:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPluginHub":639,"./EventPropagators":642,"./ReactUpdates":707,"./SyntheticEvent":716,"./getEventTarget":738,"./isEventSupported":743,"./isTextInputElement":744,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/keyOf":773}],631:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52765,10 +55299,14 @@ var ClientReactRootIndex = {
 
 module.exports = ClientReactRootIndex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],632:[function(require,module,exports){
 =======
 },{}],631:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],632:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52901,10 +55439,14 @@ ReactPerf.measureMethods(DOMChildrenOperations, 'DOMChildrenOperations', {
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Danger":635,"./ReactMultiChildUpdateTypes":691,"./ReactPerf":695,"./setInnerHTML":748,"./setTextContent":749,"_process":601,"fbjs/lib/invariant":769}],633:[function(require,module,exports){
 =======
 },{"./Danger":634,"./ReactMultiChildUpdateTypes":690,"./ReactPerf":694,"./setInnerHTML":747,"./setTextContent":748,"_process":599,"fbjs/lib/invariant":768}],632:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Danger":635,"./ReactMultiChildUpdateTypes":691,"./ReactPerf":695,"./setInnerHTML":748,"./setTextContent":749,"_process":601,"fbjs/lib/invariant":769}],633:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -53142,10 +55684,14 @@ var DOMProperty = {
 module.exports = DOMProperty;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],634:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],633:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],634:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -53374,10 +55920,14 @@ ReactPerf.measureMethods(DOMPropertyOperations, 'DOMPropertyOperations', {
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633,"./ReactPerf":695,"./quoteAttributeValueForBrowser":746,"_process":601,"fbjs/lib/warning":780}],635:[function(require,module,exports){
 =======
 },{"./DOMProperty":632,"./ReactPerf":694,"./quoteAttributeValueForBrowser":745,"_process":599,"fbjs/lib/warning":779}],634:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633,"./ReactPerf":695,"./quoteAttributeValueForBrowser":746,"_process":601,"fbjs/lib/warning":780}],635:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -53526,10 +56076,14 @@ var Danger = {
 module.exports = Danger;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/createNodesFromMarkup":760,"fbjs/lib/emptyFunction":761,"fbjs/lib/getMarkupWrap":765,"fbjs/lib/invariant":769}],636:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/createNodesFromMarkup":759,"fbjs/lib/emptyFunction":760,"fbjs/lib/getMarkupWrap":764,"fbjs/lib/invariant":768}],635:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/createNodesFromMarkup":760,"fbjs/lib/emptyFunction":761,"fbjs/lib/getMarkupWrap":765,"fbjs/lib/invariant":769}],636:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53558,10 +56112,14 @@ var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ Si
 
 module.exports = DefaultEventPluginOrder;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/keyOf":773}],637:[function(require,module,exports){
 =======
 },{"fbjs/lib/keyOf":772}],636:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/keyOf":773}],637:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53687,10 +56245,14 @@ var EnterLeaveEventPlugin = {
 
 module.exports = EnterLeaveEventPlugin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPropagators":642,"./ReactMount":689,"./SyntheticMouseEvent":720,"fbjs/lib/keyOf":773}],638:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPropagators":641,"./ReactMount":688,"./SyntheticMouseEvent":719,"fbjs/lib/keyOf":772}],637:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPropagators":642,"./ReactMount":689,"./SyntheticMouseEvent":720,"fbjs/lib/keyOf":773}],638:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53784,10 +56346,14 @@ var EventConstants = {
 
 module.exports = EventConstants;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/keyMirror":772}],639:[function(require,module,exports){
 =======
 },{"fbjs/lib/keyMirror":771}],638:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/keyMirror":772}],639:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54070,10 +56636,14 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventPluginRegistry":640,"./EventPluginUtils":641,"./ReactErrorUtils":680,"./accumulateInto":726,"./forEachAccumulated":734,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],640:[function(require,module,exports){
 =======
 },{"./EventPluginRegistry":639,"./EventPluginUtils":640,"./ReactErrorUtils":679,"./accumulateInto":725,"./forEachAccumulated":733,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],639:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventPluginRegistry":640,"./EventPluginUtils":641,"./ReactErrorUtils":680,"./accumulateInto":726,"./forEachAccumulated":734,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],640:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54297,10 +56867,14 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],641:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],640:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],641:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54506,10 +57080,14 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./ReactErrorUtils":680,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],642:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./ReactErrorUtils":679,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],641:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./ReactErrorUtils":680,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],642:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54648,10 +57226,14 @@ var EventPropagators = {
 module.exports = EventPropagators;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPluginHub":639,"./accumulateInto":726,"./forEachAccumulated":734,"_process":601,"fbjs/lib/warning":780}],643:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPluginHub":638,"./accumulateInto":725,"./forEachAccumulated":733,"_process":599,"fbjs/lib/warning":779}],642:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPluginHub":639,"./accumulateInto":726,"./forEachAccumulated":734,"_process":601,"fbjs/lib/warning":780}],643:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54748,10 +57330,14 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./PooledClass":647,"./getTextContentAccessor":741}],644:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./PooledClass":646,"./getTextContentAccessor":740}],643:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./PooledClass":647,"./getTextContentAccessor":741}],644:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54983,10 +57569,14 @@ var HTMLDOMPropertyConfig = {
 
 module.exports = HTMLDOMPropertyConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633,"fbjs/lib/ExecutionEnvironment":755}],645:[function(require,module,exports){
 =======
 },{"./DOMProperty":632,"fbjs/lib/ExecutionEnvironment":754}],644:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633,"fbjs/lib/ExecutionEnvironment":755}],645:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55124,10 +57714,14 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactPropTypeLocations":697,"./ReactPropTypes":698,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],646:[function(require,module,exports){
 =======
 },{"./ReactPropTypeLocations":696,"./ReactPropTypes":697,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],645:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactPropTypeLocations":697,"./ReactPropTypes":698,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],646:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -55176,10 +57770,14 @@ function assign(target, sources) {
 
 module.exports = assign;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],647:[function(require,module,exports){
 =======
 },{}],646:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],647:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55302,10 +57900,14 @@ var PooledClass = {
 module.exports = PooledClass;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],648:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],647:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],648:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55347,10 +57949,14 @@ React.__SECRET_DOM_SERVER_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOMServer;
 
 module.exports = React;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactDOM":659,"./ReactDOMServer":669,"./ReactIsomorphic":687,"./deprecated":730}],649:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactDOM":658,"./ReactDOMServer":668,"./ReactIsomorphic":686,"./deprecated":729}],648:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactDOM":659,"./ReactDOMServer":669,"./ReactIsomorphic":687,"./deprecated":730}],649:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55390,10 +57996,14 @@ var ReactBrowserComponentMixin = {
 module.exports = ReactBrowserComponentMixin;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactInstanceMap":686,"./findDOMNode":732,"_process":601,"fbjs/lib/warning":780}],650:[function(require,module,exports){
 =======
 },{"./ReactInstanceMap":685,"./findDOMNode":731,"_process":599,"fbjs/lib/warning":779}],649:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactInstanceMap":686,"./findDOMNode":732,"_process":601,"fbjs/lib/warning":780}],650:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55719,10 +58329,14 @@ ReactPerf.measureMethods(ReactBrowserEventEmitter, 'ReactBrowserEventEmitter', {
 
 module.exports = ReactBrowserEventEmitter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPluginHub":639,"./EventPluginRegistry":640,"./Object.assign":646,"./ReactEventEmitterMixin":681,"./ReactPerf":695,"./ViewportMetrics":725,"./isEventSupported":743}],651:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPluginHub":638,"./EventPluginRegistry":639,"./Object.assign":645,"./ReactEventEmitterMixin":680,"./ReactPerf":694,"./ViewportMetrics":724,"./isEventSupported":742}],650:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPluginHub":639,"./EventPluginRegistry":640,"./Object.assign":646,"./ReactEventEmitterMixin":681,"./ReactPerf":695,"./ViewportMetrics":725,"./isEventSupported":743}],651:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -55848,10 +58462,14 @@ var ReactChildReconciler = {
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactReconciler":700,"./instantiateReactComponent":742,"./shouldUpdateReactComponent":751,"./traverseAllChildren":752,"_process":601,"fbjs/lib/warning":780}],652:[function(require,module,exports){
 =======
 },{"./ReactReconciler":699,"./instantiateReactComponent":741,"./shouldUpdateReactComponent":750,"./traverseAllChildren":751,"_process":599,"fbjs/lib/warning":779}],651:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactReconciler":700,"./instantiateReactComponent":742,"./shouldUpdateReactComponent":751,"./traverseAllChildren":752,"_process":601,"fbjs/lib/warning":780}],652:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56035,10 +58653,14 @@ var ReactChildren = {
 
 module.exports = ReactChildren;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./PooledClass":647,"./ReactElement":676,"./traverseAllChildren":752,"fbjs/lib/emptyFunction":761}],653:[function(require,module,exports){
 =======
 },{"./PooledClass":646,"./ReactElement":675,"./traverseAllChildren":751,"fbjs/lib/emptyFunction":760}],652:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./PooledClass":647,"./ReactElement":676,"./traverseAllChildren":752,"fbjs/lib/emptyFunction":761}],653:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -56813,10 +59435,14 @@ var ReactClass = {
 module.exports = ReactClass;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactComponent":654,"./ReactElement":676,"./ReactNoopUpdateQueue":693,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/keyMirror":772,"fbjs/lib/keyOf":773,"fbjs/lib/warning":780}],654:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactComponent":653,"./ReactElement":675,"./ReactNoopUpdateQueue":692,"./ReactPropTypeLocationNames":695,"./ReactPropTypeLocations":696,"_process":599,"fbjs/lib/emptyObject":761,"fbjs/lib/invariant":768,"fbjs/lib/keyMirror":771,"fbjs/lib/keyOf":772,"fbjs/lib/warning":779}],653:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactComponent":654,"./ReactElement":676,"./ReactNoopUpdateQueue":693,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/keyMirror":772,"fbjs/lib/keyOf":773,"fbjs/lib/warning":780}],654:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -56942,10 +59568,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactNoopUpdateQueue":693,"./canDefineProperty":728,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],655:[function(require,module,exports){
 =======
 },{"./ReactNoopUpdateQueue":692,"./canDefineProperty":727,"_process":599,"fbjs/lib/emptyObject":761,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],654:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactNoopUpdateQueue":693,"./canDefineProperty":728,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],655:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56988,10 +59618,14 @@ var ReactComponentBrowserEnvironment = {
 
 module.exports = ReactComponentBrowserEnvironment;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactDOMIDOperations":664,"./ReactMount":689}],656:[function(require,module,exports){
 =======
 },{"./ReactDOMIDOperations":663,"./ReactMount":688}],655:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactDOMIDOperations":664,"./ReactMount":689}],656:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -57046,10 +59680,14 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],657:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],656:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],657:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -57747,10 +60385,14 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactComponentEnvironment":656,"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceMap":686,"./ReactPerf":695,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"./ReactReconciler":700,"./ReactUpdateQueue":706,"./shouldUpdateReactComponent":751,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],658:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactComponentEnvironment":655,"./ReactCurrentOwner":657,"./ReactElement":675,"./ReactInstanceMap":685,"./ReactPerf":694,"./ReactPropTypeLocationNames":695,"./ReactPropTypeLocations":696,"./ReactReconciler":699,"./ReactUpdateQueue":705,"./shouldUpdateReactComponent":750,"_process":599,"fbjs/lib/emptyObject":761,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],657:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactComponentEnvironment":656,"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceMap":686,"./ReactPerf":695,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"./ReactReconciler":700,"./ReactUpdateQueue":706,"./shouldUpdateReactComponent":751,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],658:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57782,10 +60424,14 @@ var ReactCurrentOwner = {
 
 module.exports = ReactCurrentOwner;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],659:[function(require,module,exports){
 =======
 },{}],658:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],659:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -57881,10 +60527,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = React;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":658,"./ReactDOMTextComponent":670,"./ReactDefaultInjection":673,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactPerf":695,"./ReactReconciler":700,"./ReactUpdates":707,"./ReactVersion":708,"./findDOMNode":732,"./renderSubtreeIntoContainer":747,"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/warning":780}],660:[function(require,module,exports){
 =======
 },{"./ReactCurrentOwner":657,"./ReactDOMTextComponent":669,"./ReactDefaultInjection":672,"./ReactInstanceHandles":684,"./ReactMount":688,"./ReactPerf":694,"./ReactReconciler":699,"./ReactUpdates":706,"./ReactVersion":707,"./findDOMNode":731,"./renderSubtreeIntoContainer":746,"_process":599,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/warning":779}],659:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactCurrentOwner":658,"./ReactDOMTextComponent":670,"./ReactDefaultInjection":673,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactPerf":695,"./ReactReconciler":700,"./ReactUpdates":707,"./ReactVersion":708,"./findDOMNode":732,"./renderSubtreeIntoContainer":747,"_process":601,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/warning":780}],660:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57936,10 +60586,14 @@ var ReactDOMButton = {
 
 module.exports = ReactDOMButton;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],661:[function(require,module,exports){
 =======
 },{}],660:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],661:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -58905,10 +61559,14 @@ assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mix
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./AutoFocusUtils":625,"./CSSPropertyOperations":628,"./DOMProperty":633,"./DOMPropertyOperations":634,"./EventConstants":638,"./Object.assign":646,"./ReactBrowserEventEmitter":650,"./ReactComponentBrowserEnvironment":655,"./ReactDOMButton":660,"./ReactDOMInput":665,"./ReactDOMOption":666,"./ReactDOMSelect":667,"./ReactDOMTextarea":671,"./ReactMount":689,"./ReactMultiChild":690,"./ReactPerf":695,"./ReactUpdateQueue":706,"./canDefineProperty":728,"./escapeTextContentForBrowser":731,"./isEventSupported":743,"./setInnerHTML":748,"./setTextContent":749,"./validateDOMNesting":753,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/keyOf":773,"fbjs/lib/shallowEqual":778,"fbjs/lib/warning":780}],662:[function(require,module,exports){
 =======
 },{"./AutoFocusUtils":624,"./CSSPropertyOperations":627,"./DOMProperty":632,"./DOMPropertyOperations":633,"./EventConstants":637,"./Object.assign":645,"./ReactBrowserEventEmitter":649,"./ReactComponentBrowserEnvironment":654,"./ReactDOMButton":659,"./ReactDOMInput":664,"./ReactDOMOption":665,"./ReactDOMSelect":666,"./ReactDOMTextarea":670,"./ReactMount":688,"./ReactMultiChild":689,"./ReactPerf":694,"./ReactUpdateQueue":705,"./canDefineProperty":727,"./escapeTextContentForBrowser":730,"./isEventSupported":742,"./setInnerHTML":747,"./setTextContent":748,"./validateDOMNesting":752,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/keyOf":772,"fbjs/lib/shallowEqual":777,"fbjs/lib/warning":779}],661:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./AutoFocusUtils":625,"./CSSPropertyOperations":628,"./DOMProperty":633,"./DOMPropertyOperations":634,"./EventConstants":638,"./Object.assign":646,"./ReactBrowserEventEmitter":650,"./ReactComponentBrowserEnvironment":655,"./ReactDOMButton":660,"./ReactDOMInput":665,"./ReactDOMOption":666,"./ReactDOMSelect":667,"./ReactDOMTextarea":671,"./ReactMount":689,"./ReactMultiChild":690,"./ReactPerf":695,"./ReactUpdateQueue":706,"./canDefineProperty":728,"./escapeTextContentForBrowser":731,"./isEventSupported":743,"./setInnerHTML":748,"./setTextContent":749,"./validateDOMNesting":753,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/keyOf":773,"fbjs/lib/shallowEqual":778,"fbjs/lib/warning":780}],662:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59089,10 +61747,14 @@ var ReactDOMFactories = mapObject({
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactElement":676,"./ReactElementValidator":677,"_process":601,"fbjs/lib/mapObject":774}],663:[function(require,module,exports){
 =======
 },{"./ReactElement":675,"./ReactElementValidator":676,"_process":599,"fbjs/lib/mapObject":773}],662:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactElement":676,"./ReactElementValidator":677,"_process":601,"fbjs/lib/mapObject":774}],663:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59112,10 +61774,14 @@ var ReactDOMFeatureFlags = {
 
 module.exports = ReactDOMFeatureFlags;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],664:[function(require,module,exports){
 =======
 },{}],663:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],664:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59213,10 +61879,14 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 module.exports = ReactDOMIDOperations;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMChildrenOperations":632,"./DOMPropertyOperations":634,"./ReactMount":689,"./ReactPerf":695,"_process":601,"fbjs/lib/invariant":769}],665:[function(require,module,exports){
 =======
 },{"./DOMChildrenOperations":631,"./DOMPropertyOperations":633,"./ReactMount":688,"./ReactPerf":694,"_process":599,"fbjs/lib/invariant":768}],664:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMChildrenOperations":632,"./DOMPropertyOperations":634,"./ReactMount":689,"./ReactPerf":695,"_process":601,"fbjs/lib/invariant":769}],665:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59373,10 +62043,14 @@ function _handleChange(event) {
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactDOMIDOperations":664,"./ReactMount":689,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769}],666:[function(require,module,exports){
 =======
 },{"./LinkedValueUtils":644,"./Object.assign":645,"./ReactDOMIDOperations":663,"./ReactMount":688,"./ReactUpdates":706,"_process":599,"fbjs/lib/invariant":768}],665:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactDOMIDOperations":664,"./ReactMount":689,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769}],666:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59469,10 +62143,14 @@ var ReactDOMOption = {
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactChildren":652,"./ReactDOMSelect":667,"_process":601,"fbjs/lib/warning":780}],667:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactChildren":651,"./ReactDOMSelect":666,"_process":599,"fbjs/lib/warning":779}],666:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactChildren":652,"./ReactDOMSelect":667,"_process":601,"fbjs/lib/warning":780}],667:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59664,10 +62342,14 @@ function _handleChange(event) {
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactMount":689,"./ReactUpdates":707,"_process":601,"fbjs/lib/warning":780}],668:[function(require,module,exports){
 =======
 },{"./LinkedValueUtils":644,"./Object.assign":645,"./ReactMount":688,"./ReactUpdates":706,"_process":599,"fbjs/lib/warning":779}],667:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactMount":689,"./ReactUpdates":707,"_process":601,"fbjs/lib/warning":780}],668:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59881,10 +62563,14 @@ var ReactDOMSelection = {
 
 module.exports = ReactDOMSelection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getNodeForCharacterOffset":740,"./getTextContentAccessor":741,"fbjs/lib/ExecutionEnvironment":755}],669:[function(require,module,exports){
 =======
 },{"./getNodeForCharacterOffset":739,"./getTextContentAccessor":740,"fbjs/lib/ExecutionEnvironment":754}],668:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getNodeForCharacterOffset":740,"./getTextContentAccessor":741,"fbjs/lib/ExecutionEnvironment":755}],669:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59912,10 +62598,14 @@ var ReactDOMServer = {
 
 module.exports = ReactDOMServer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactDefaultInjection":673,"./ReactServerRendering":704,"./ReactVersion":708}],670:[function(require,module,exports){
 =======
 },{"./ReactDefaultInjection":672,"./ReactServerRendering":703,"./ReactVersion":707}],669:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactDefaultInjection":673,"./ReactServerRendering":704,"./ReactVersion":708}],670:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60046,10 +62736,14 @@ assign(ReactDOMTextComponent.prototype, {
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMChildrenOperations":632,"./DOMPropertyOperations":634,"./Object.assign":646,"./ReactComponentBrowserEnvironment":655,"./ReactMount":689,"./escapeTextContentForBrowser":731,"./setTextContent":749,"./validateDOMNesting":753,"_process":601}],671:[function(require,module,exports){
 =======
 },{"./DOMChildrenOperations":631,"./DOMPropertyOperations":633,"./Object.assign":645,"./ReactComponentBrowserEnvironment":654,"./ReactMount":688,"./escapeTextContentForBrowser":730,"./setTextContent":748,"./validateDOMNesting":752,"_process":599}],670:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMChildrenOperations":632,"./DOMPropertyOperations":634,"./Object.assign":646,"./ReactComponentBrowserEnvironment":655,"./ReactMount":689,"./escapeTextContentForBrowser":731,"./setTextContent":749,"./validateDOMNesting":753,"_process":601}],671:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60166,10 +62860,14 @@ function _handleChange(event) {
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactDOMIDOperations":664,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],672:[function(require,module,exports){
 =======
 },{"./LinkedValueUtils":644,"./Object.assign":645,"./ReactDOMIDOperations":663,"./ReactUpdates":706,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],671:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./LinkedValueUtils":645,"./Object.assign":646,"./ReactDOMIDOperations":664,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],672:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60238,10 +62936,14 @@ var ReactDefaultBatchingStrategy = {
 
 module.exports = ReactDefaultBatchingStrategy;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactUpdates":707,"./Transaction":724,"fbjs/lib/emptyFunction":761}],673:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactUpdates":706,"./Transaction":723,"fbjs/lib/emptyFunction":760}],672:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactUpdates":707,"./Transaction":724,"fbjs/lib/emptyFunction":761}],673:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60342,10 +63044,14 @@ module.exports = {
 };
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./BeforeInputEventPlugin":626,"./ChangeEventPlugin":630,"./ClientReactRootIndex":631,"./DefaultEventPluginOrder":636,"./EnterLeaveEventPlugin":637,"./HTMLDOMPropertyConfig":644,"./ReactBrowserComponentMixin":649,"./ReactComponentBrowserEnvironment":655,"./ReactDOMComponent":661,"./ReactDOMTextComponent":670,"./ReactDefaultBatchingStrategy":672,"./ReactDefaultPerf":674,"./ReactEventListener":682,"./ReactInjection":683,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactReconcileTransaction":699,"./SVGDOMPropertyConfig":709,"./SelectEventPlugin":710,"./ServerReactRootIndex":711,"./SimpleEventPlugin":712,"_process":601,"fbjs/lib/ExecutionEnvironment":755}],674:[function(require,module,exports){
 =======
 },{"./BeforeInputEventPlugin":625,"./ChangeEventPlugin":629,"./ClientReactRootIndex":630,"./DefaultEventPluginOrder":635,"./EnterLeaveEventPlugin":636,"./HTMLDOMPropertyConfig":643,"./ReactBrowserComponentMixin":648,"./ReactComponentBrowserEnvironment":654,"./ReactDOMComponent":660,"./ReactDOMTextComponent":669,"./ReactDefaultBatchingStrategy":671,"./ReactDefaultPerf":673,"./ReactEventListener":681,"./ReactInjection":682,"./ReactInstanceHandles":684,"./ReactMount":688,"./ReactReconcileTransaction":698,"./SVGDOMPropertyConfig":708,"./SelectEventPlugin":709,"./ServerReactRootIndex":710,"./SimpleEventPlugin":711,"_process":599,"fbjs/lib/ExecutionEnvironment":754}],673:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./BeforeInputEventPlugin":626,"./ChangeEventPlugin":630,"./ClientReactRootIndex":631,"./DefaultEventPluginOrder":636,"./EnterLeaveEventPlugin":637,"./HTMLDOMPropertyConfig":644,"./ReactBrowserComponentMixin":649,"./ReactComponentBrowserEnvironment":655,"./ReactDOMComponent":661,"./ReactDOMTextComponent":670,"./ReactDefaultBatchingStrategy":672,"./ReactDefaultPerf":674,"./ReactEventListener":682,"./ReactInjection":683,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactReconcileTransaction":699,"./SVGDOMPropertyConfig":709,"./SelectEventPlugin":710,"./ServerReactRootIndex":711,"./SimpleEventPlugin":712,"_process":601,"fbjs/lib/ExecutionEnvironment":755}],674:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60584,10 +63290,14 @@ var ReactDefaultPerf = {
 
 module.exports = ReactDefaultPerf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633,"./ReactDefaultPerfAnalysis":675,"./ReactMount":689,"./ReactPerf":695,"fbjs/lib/performanceNow":777}],675:[function(require,module,exports){
 =======
 },{"./DOMProperty":632,"./ReactDefaultPerfAnalysis":674,"./ReactMount":688,"./ReactPerf":694,"fbjs/lib/performanceNow":776}],674:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633,"./ReactDefaultPerfAnalysis":675,"./ReactMount":689,"./ReactPerf":695,"fbjs/lib/performanceNow":777}],675:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60790,10 +63500,14 @@ var ReactDefaultPerfAnalysis = {
 
 module.exports = ReactDefaultPerfAnalysis;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646}],676:[function(require,module,exports){
 =======
 },{"./Object.assign":645}],675:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646}],676:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -61044,10 +63758,14 @@ ReactElement.isValidElement = function (object) {
 module.exports = ReactElement;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactCurrentOwner":658,"./canDefineProperty":728,"_process":601}],677:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactCurrentOwner":657,"./canDefineProperty":727,"_process":599}],676:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactCurrentOwner":658,"./canDefineProperty":728,"_process":601}],677:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -61332,10 +64050,14 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"./canDefineProperty":728,"./getIteratorFn":739,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],678:[function(require,module,exports){
 =======
 },{"./ReactCurrentOwner":657,"./ReactElement":675,"./ReactPropTypeLocationNames":695,"./ReactPropTypeLocations":696,"./canDefineProperty":727,"./getIteratorFn":738,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],677:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactPropTypeLocationNames":696,"./ReactPropTypeLocations":697,"./canDefineProperty":728,"./getIteratorFn":739,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],678:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -61392,10 +64114,14 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 
 module.exports = ReactEmptyComponent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactElement":676,"./ReactEmptyComponentRegistry":679,"./ReactReconciler":700}],679:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactElement":675,"./ReactEmptyComponentRegistry":678,"./ReactReconciler":699}],678:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactElement":676,"./ReactEmptyComponentRegistry":679,"./ReactReconciler":700}],679:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -61445,10 +64171,14 @@ var ReactEmptyComponentRegistry = {
 
 module.exports = ReactEmptyComponentRegistry;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],680:[function(require,module,exports){
 =======
 },{}],679:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],680:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -61529,10 +64259,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],681:[function(require,module,exports){
 =======
 },{"_process":599}],680:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],681:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61572,10 +64306,14 @@ var ReactEventEmitterMixin = {
 
 module.exports = ReactEventEmitterMixin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventPluginHub":639}],682:[function(require,module,exports){
 =======
 },{"./EventPluginHub":638}],681:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventPluginHub":639}],682:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61788,10 +64526,14 @@ var ReactEventListener = {
 
 module.exports = ReactEventListener;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./PooledClass":647,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactUpdates":707,"./getEventTarget":738,"fbjs/lib/EventListener":754,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/getUnboundedScrollPosition":766}],683:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./PooledClass":646,"./ReactInstanceHandles":684,"./ReactMount":688,"./ReactUpdates":706,"./getEventTarget":737,"fbjs/lib/EventListener":753,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/getUnboundedScrollPosition":765}],682:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./PooledClass":647,"./ReactInstanceHandles":685,"./ReactMount":689,"./ReactUpdates":707,"./getEventTarget":738,"fbjs/lib/EventListener":754,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/getUnboundedScrollPosition":766}],683:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61831,10 +64573,14 @@ var ReactInjection = {
 
 module.exports = ReactInjection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633,"./EventPluginHub":639,"./ReactBrowserEventEmitter":650,"./ReactClass":653,"./ReactComponentEnvironment":656,"./ReactEmptyComponent":678,"./ReactNativeComponent":692,"./ReactPerf":695,"./ReactRootIndex":702,"./ReactUpdates":707}],684:[function(require,module,exports){
 =======
 },{"./DOMProperty":632,"./EventPluginHub":638,"./ReactBrowserEventEmitter":649,"./ReactClass":652,"./ReactComponentEnvironment":655,"./ReactEmptyComponent":677,"./ReactNativeComponent":691,"./ReactPerf":694,"./ReactRootIndex":701,"./ReactUpdates":706}],683:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633,"./EventPluginHub":639,"./ReactBrowserEventEmitter":650,"./ReactClass":653,"./ReactComponentEnvironment":656,"./ReactEmptyComponent":678,"./ReactNativeComponent":692,"./ReactPerf":695,"./ReactRootIndex":702,"./ReactUpdates":707}],684:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61960,10 +64706,14 @@ var ReactInputSelection = {
 
 module.exports = ReactInputSelection;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactDOMSelection":668,"fbjs/lib/containsNode":758,"fbjs/lib/focusNode":763,"fbjs/lib/getActiveElement":764}],685:[function(require,module,exports){
 =======
 },{"./ReactDOMSelection":667,"fbjs/lib/containsNode":757,"fbjs/lib/focusNode":762,"fbjs/lib/getActiveElement":763}],684:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactDOMSelection":668,"fbjs/lib/containsNode":758,"fbjs/lib/focusNode":763,"fbjs/lib/getActiveElement":764}],685:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62269,10 +65019,14 @@ var ReactInstanceHandles = {
 module.exports = ReactInstanceHandles;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactRootIndex":702,"_process":601,"fbjs/lib/invariant":769}],686:[function(require,module,exports){
 =======
 },{"./ReactRootIndex":701,"_process":599,"fbjs/lib/invariant":768}],685:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactRootIndex":702,"_process":601,"fbjs/lib/invariant":769}],686:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62321,10 +65075,14 @@ var ReactInstanceMap = {
 
 module.exports = ReactInstanceMap;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],687:[function(require,module,exports){
 =======
 },{}],686:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],687:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -62402,10 +65160,14 @@ var React = {
 module.exports = React;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactChildren":652,"./ReactClass":653,"./ReactComponent":654,"./ReactDOMFactories":662,"./ReactElement":676,"./ReactElementValidator":677,"./ReactPropTypes":698,"./ReactVersion":708,"./onlyChild":745,"_process":601}],688:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactChildren":651,"./ReactClass":652,"./ReactComponent":653,"./ReactDOMFactories":661,"./ReactElement":675,"./ReactElementValidator":676,"./ReactPropTypes":697,"./ReactVersion":707,"./onlyChild":744,"_process":599}],687:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactChildren":652,"./ReactClass":653,"./ReactComponent":654,"./ReactDOMFactories":662,"./ReactElement":676,"./ReactElementValidator":677,"./ReactPropTypes":698,"./ReactVersion":708,"./onlyChild":745,"_process":601}],688:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62452,10 +65214,14 @@ var ReactMarkupChecksum = {
 
 module.exports = ReactMarkupChecksum;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./adler32":727}],689:[function(require,module,exports){
 =======
 },{"./adler32":726}],688:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./adler32":727}],689:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -63309,10 +66075,14 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 module.exports = ReactMount;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633,"./Object.assign":646,"./ReactBrowserEventEmitter":650,"./ReactCurrentOwner":658,"./ReactDOMFeatureFlags":663,"./ReactElement":676,"./ReactEmptyComponentRegistry":679,"./ReactInstanceHandles":685,"./ReactInstanceMap":686,"./ReactMarkupChecksum":688,"./ReactPerf":695,"./ReactReconciler":700,"./ReactUpdateQueue":706,"./ReactUpdates":707,"./instantiateReactComponent":742,"./setInnerHTML":748,"./shouldUpdateReactComponent":751,"./validateDOMNesting":753,"_process":601,"fbjs/lib/containsNode":758,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],690:[function(require,module,exports){
 =======
 },{"./DOMProperty":632,"./Object.assign":645,"./ReactBrowserEventEmitter":649,"./ReactCurrentOwner":657,"./ReactDOMFeatureFlags":662,"./ReactElement":675,"./ReactEmptyComponentRegistry":678,"./ReactInstanceHandles":684,"./ReactInstanceMap":685,"./ReactMarkupChecksum":687,"./ReactPerf":694,"./ReactReconciler":699,"./ReactUpdateQueue":705,"./ReactUpdates":706,"./instantiateReactComponent":741,"./setInnerHTML":747,"./shouldUpdateReactComponent":750,"./validateDOMNesting":752,"_process":599,"fbjs/lib/containsNode":757,"fbjs/lib/emptyObject":761,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],689:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633,"./Object.assign":646,"./ReactBrowserEventEmitter":650,"./ReactCurrentOwner":658,"./ReactDOMFeatureFlags":663,"./ReactElement":676,"./ReactEmptyComponentRegistry":679,"./ReactInstanceHandles":685,"./ReactInstanceMap":686,"./ReactMarkupChecksum":688,"./ReactPerf":695,"./ReactReconciler":700,"./ReactUpdateQueue":706,"./ReactUpdates":707,"./instantiateReactComponent":742,"./setInnerHTML":748,"./shouldUpdateReactComponent":751,"./validateDOMNesting":753,"_process":601,"fbjs/lib/containsNode":758,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],690:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -63812,10 +66582,14 @@ var ReactMultiChild = {
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactChildReconciler":651,"./ReactComponentEnvironment":656,"./ReactCurrentOwner":658,"./ReactMultiChildUpdateTypes":691,"./ReactReconciler":700,"./flattenChildren":733,"_process":601}],691:[function(require,module,exports){
 =======
 },{"./ReactChildReconciler":650,"./ReactComponentEnvironment":655,"./ReactCurrentOwner":657,"./ReactMultiChildUpdateTypes":690,"./ReactReconciler":699,"./flattenChildren":732,"_process":599}],690:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactChildReconciler":651,"./ReactComponentEnvironment":656,"./ReactCurrentOwner":658,"./ReactMultiChildUpdateTypes":691,"./ReactReconciler":700,"./flattenChildren":733,"_process":601}],691:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63849,10 +66623,14 @@ var ReactMultiChildUpdateTypes = keyMirror({
 
 module.exports = ReactMultiChildUpdateTypes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/keyMirror":772}],692:[function(require,module,exports){
 =======
 },{"fbjs/lib/keyMirror":771}],691:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/keyMirror":772}],692:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -63950,10 +66728,14 @@ var ReactNativeComponent = {
 module.exports = ReactNativeComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"_process":601,"fbjs/lib/invariant":769}],693:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"_process":599,"fbjs/lib/invariant":768}],692:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"_process":601,"fbjs/lib/invariant":769}],693:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -64075,10 +66857,14 @@ var ReactNoopUpdateQueue = {
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/warning":780}],694:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/warning":779}],693:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/warning":780}],694:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -64173,10 +66959,14 @@ var ReactOwner = {
 module.exports = ReactOwner;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],695:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],694:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],695:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -64276,10 +67066,14 @@ function _noMeasure(objName, fnName, func) {
 module.exports = ReactPerf;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],696:[function(require,module,exports){
 =======
 },{"_process":599}],695:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],696:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -64307,10 +67101,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],697:[function(require,module,exports){
 =======
 },{"_process":599}],696:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],697:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64334,10 +67132,14 @@ var ReactPropTypeLocations = keyMirror({
 
 module.exports = ReactPropTypeLocations;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/keyMirror":772}],698:[function(require,module,exports){
 =======
 },{"fbjs/lib/keyMirror":771}],697:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/keyMirror":772}],698:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64695,10 +67497,14 @@ function getClassName(propValue) {
 
 module.exports = ReactPropTypes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactElement":676,"./ReactPropTypeLocationNames":696,"./getIteratorFn":739,"fbjs/lib/emptyFunction":761}],699:[function(require,module,exports){
 =======
 },{"./ReactElement":675,"./ReactPropTypeLocationNames":695,"./getIteratorFn":738,"fbjs/lib/emptyFunction":760}],698:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactElement":676,"./ReactPropTypeLocationNames":696,"./getIteratorFn":739,"fbjs/lib/emptyFunction":761}],699:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64851,10 +67657,14 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 
 module.exports = ReactReconcileTransaction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./ReactBrowserEventEmitter":650,"./ReactDOMFeatureFlags":663,"./ReactInputSelection":684,"./Transaction":724}],700:[function(require,module,exports){
 =======
 },{"./CallbackQueue":628,"./Object.assign":645,"./PooledClass":646,"./ReactBrowserEventEmitter":649,"./ReactDOMFeatureFlags":662,"./ReactInputSelection":683,"./Transaction":723}],699:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./ReactBrowserEventEmitter":650,"./ReactDOMFeatureFlags":663,"./ReactInputSelection":684,"./Transaction":724}],700:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64963,10 +67773,14 @@ var ReactReconciler = {
 
 module.exports = ReactReconciler;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactRef":701}],701:[function(require,module,exports){
 =======
 },{"./ReactRef":700}],700:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactRef":701}],701:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65046,10 +67860,14 @@ ReactRef.detachRefs = function (instance, element) {
 
 module.exports = ReactRef;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactOwner":694}],702:[function(require,module,exports){
 =======
 },{"./ReactOwner":693}],701:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactOwner":694}],702:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65080,10 +67898,14 @@ var ReactRootIndex = {
 
 module.exports = ReactRootIndex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],703:[function(require,module,exports){
 =======
 },{}],702:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],703:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -65108,10 +67930,14 @@ var ReactServerBatchingStrategy = {
 
 module.exports = ReactServerBatchingStrategy;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],704:[function(require,module,exports){
 =======
 },{}],703:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],704:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -65198,10 +68024,14 @@ module.exports = {
 };
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactDefaultBatchingStrategy":672,"./ReactElement":676,"./ReactInstanceHandles":685,"./ReactMarkupChecksum":688,"./ReactServerBatchingStrategy":703,"./ReactServerRenderingTransaction":705,"./ReactUpdates":707,"./instantiateReactComponent":742,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769}],705:[function(require,module,exports){
 =======
 },{"./ReactDefaultBatchingStrategy":671,"./ReactElement":675,"./ReactInstanceHandles":684,"./ReactMarkupChecksum":687,"./ReactServerBatchingStrategy":702,"./ReactServerRenderingTransaction":704,"./ReactUpdates":706,"./instantiateReactComponent":741,"_process":599,"fbjs/lib/emptyObject":761,"fbjs/lib/invariant":768}],704:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactDefaultBatchingStrategy":672,"./ReactElement":676,"./ReactInstanceHandles":685,"./ReactMarkupChecksum":688,"./ReactServerBatchingStrategy":703,"./ReactServerRenderingTransaction":705,"./ReactUpdates":707,"./instantiateReactComponent":742,"_process":601,"fbjs/lib/emptyObject":762,"fbjs/lib/invariant":769}],705:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -65290,10 +68120,14 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
 module.exports = ReactServerRenderingTransaction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./Transaction":724,"fbjs/lib/emptyFunction":761}],706:[function(require,module,exports){
 =======
 },{"./CallbackQueue":628,"./Object.assign":645,"./PooledClass":646,"./Transaction":723,"fbjs/lib/emptyFunction":760}],705:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./Transaction":724,"fbjs/lib/emptyFunction":761}],706:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -65554,10 +68388,14 @@ var ReactUpdateQueue = {
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceMap":686,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],707:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactCurrentOwner":657,"./ReactElement":675,"./ReactInstanceMap":685,"./ReactUpdates":706,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],706:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceMap":686,"./ReactUpdates":707,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],707:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -65784,10 +68622,14 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./ReactPerf":695,"./ReactReconciler":700,"./Transaction":724,"_process":601,"fbjs/lib/invariant":769}],708:[function(require,module,exports){
 =======
 },{"./CallbackQueue":628,"./Object.assign":645,"./PooledClass":646,"./ReactPerf":694,"./ReactReconciler":699,"./Transaction":723,"_process":599,"fbjs/lib/invariant":768}],707:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CallbackQueue":629,"./Object.assign":646,"./PooledClass":647,"./ReactPerf":695,"./ReactReconciler":700,"./Transaction":724,"_process":601,"fbjs/lib/invariant":769}],708:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65803,10 +68645,14 @@ module.exports = ReactUpdates;
 
 module.exports = '0.14.8';
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],709:[function(require,module,exports){
 =======
 },{}],708:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],709:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65935,10 +68781,14 @@ var SVGDOMPropertyConfig = {
 
 module.exports = SVGDOMPropertyConfig;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./DOMProperty":633}],710:[function(require,module,exports){
 =======
 },{"./DOMProperty":632}],709:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./DOMProperty":633}],710:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66141,10 +68991,14 @@ var SelectEventPlugin = {
 
 module.exports = SelectEventPlugin;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPropagators":642,"./ReactInputSelection":684,"./SyntheticEvent":716,"./isTextInputElement":744,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/getActiveElement":764,"fbjs/lib/keyOf":773,"fbjs/lib/shallowEqual":778}],711:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPropagators":641,"./ReactInputSelection":683,"./SyntheticEvent":715,"./isTextInputElement":743,"fbjs/lib/ExecutionEnvironment":754,"fbjs/lib/getActiveElement":763,"fbjs/lib/keyOf":772,"fbjs/lib/shallowEqual":777}],710:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPropagators":642,"./ReactInputSelection":684,"./SyntheticEvent":716,"./isTextInputElement":744,"fbjs/lib/ExecutionEnvironment":755,"fbjs/lib/getActiveElement":764,"fbjs/lib/keyOf":773,"fbjs/lib/shallowEqual":778}],711:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66175,10 +69029,14 @@ var ServerReactRootIndex = {
 
 module.exports = ServerReactRootIndex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],712:[function(require,module,exports){
 =======
 },{}],711:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],712:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -66769,10 +69627,14 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./EventConstants":638,"./EventPropagators":642,"./ReactMount":689,"./SyntheticClipboardEvent":713,"./SyntheticDragEvent":715,"./SyntheticEvent":716,"./SyntheticFocusEvent":717,"./SyntheticKeyboardEvent":719,"./SyntheticMouseEvent":720,"./SyntheticTouchEvent":721,"./SyntheticUIEvent":722,"./SyntheticWheelEvent":723,"./getEventCharCode":735,"_process":601,"fbjs/lib/EventListener":754,"fbjs/lib/emptyFunction":761,"fbjs/lib/invariant":769,"fbjs/lib/keyOf":773}],713:[function(require,module,exports){
 =======
 },{"./EventConstants":637,"./EventPropagators":641,"./ReactMount":688,"./SyntheticClipboardEvent":712,"./SyntheticDragEvent":714,"./SyntheticEvent":715,"./SyntheticFocusEvent":716,"./SyntheticKeyboardEvent":718,"./SyntheticMouseEvent":719,"./SyntheticTouchEvent":720,"./SyntheticUIEvent":721,"./SyntheticWheelEvent":722,"./getEventCharCode":734,"_process":599,"fbjs/lib/EventListener":753,"fbjs/lib/emptyFunction":760,"fbjs/lib/invariant":768,"fbjs/lib/keyOf":772}],712:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./EventConstants":638,"./EventPropagators":642,"./ReactMount":689,"./SyntheticClipboardEvent":713,"./SyntheticDragEvent":715,"./SyntheticEvent":716,"./SyntheticFocusEvent":717,"./SyntheticKeyboardEvent":719,"./SyntheticMouseEvent":720,"./SyntheticTouchEvent":721,"./SyntheticUIEvent":722,"./SyntheticWheelEvent":723,"./getEventCharCode":735,"_process":601,"fbjs/lib/EventListener":754,"fbjs/lib/emptyFunction":761,"fbjs/lib/invariant":769,"fbjs/lib/keyOf":773}],713:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66813,10 +69675,14 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticEvent":716}],714:[function(require,module,exports){
 =======
 },{"./SyntheticEvent":715}],713:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticEvent":716}],714:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66855,10 +69721,14 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 
 module.exports = SyntheticCompositionEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticEvent":716}],715:[function(require,module,exports){
 =======
 },{"./SyntheticEvent":715}],714:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticEvent":716}],715:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -66897,10 +69767,14 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticMouseEvent":720}],716:[function(require,module,exports){
 =======
 },{"./SyntheticMouseEvent":719}],715:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticMouseEvent":720}],716:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -67084,10 +69958,14 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 module.exports = SyntheticEvent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./PooledClass":647,"_process":601,"fbjs/lib/emptyFunction":761,"fbjs/lib/warning":780}],717:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./PooledClass":646,"_process":599,"fbjs/lib/emptyFunction":760,"fbjs/lib/warning":779}],716:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./PooledClass":647,"_process":601,"fbjs/lib/emptyFunction":761,"fbjs/lib/warning":780}],717:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67126,10 +70004,14 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticUIEvent":722}],718:[function(require,module,exports){
 =======
 },{"./SyntheticUIEvent":721}],717:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticUIEvent":722}],718:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67169,10 +70051,14 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 
 module.exports = SyntheticInputEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticEvent":716}],719:[function(require,module,exports){
 =======
 },{"./SyntheticEvent":715}],718:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticEvent":716}],719:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67259,10 +70145,14 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticUIEvent":722,"./getEventCharCode":735,"./getEventKey":736,"./getEventModifierState":737}],720:[function(require,module,exports){
 =======
 },{"./SyntheticUIEvent":721,"./getEventCharCode":734,"./getEventKey":735,"./getEventModifierState":736}],719:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticUIEvent":722,"./getEventCharCode":735,"./getEventKey":736,"./getEventModifierState":737}],720:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67337,10 +70227,14 @@ SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticUIEvent":722,"./ViewportMetrics":725,"./getEventModifierState":737}],721:[function(require,module,exports){
 =======
 },{"./SyntheticUIEvent":721,"./ViewportMetrics":724,"./getEventModifierState":736}],720:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticUIEvent":722,"./ViewportMetrics":725,"./getEventModifierState":737}],721:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67388,10 +70282,14 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticUIEvent":722,"./getEventModifierState":737}],722:[function(require,module,exports){
 =======
 },{"./SyntheticUIEvent":721,"./getEventModifierState":736}],721:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticUIEvent":722,"./getEventModifierState":737}],722:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67453,10 +70351,14 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticEvent":716,"./getEventTarget":738}],723:[function(require,module,exports){
 =======
 },{"./SyntheticEvent":715,"./getEventTarget":737}],722:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticEvent":716,"./getEventTarget":738}],723:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67513,10 +70415,14 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./SyntheticMouseEvent":720}],724:[function(require,module,exports){
 =======
 },{"./SyntheticMouseEvent":719}],723:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./SyntheticMouseEvent":720}],724:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -67751,10 +70657,14 @@ var Transaction = {
 module.exports = Transaction;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],725:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],724:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],725:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67783,10 +70693,14 @@ var ViewportMetrics = {
 
 module.exports = ViewportMetrics;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],726:[function(require,module,exports){
 =======
 },{}],725:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],726:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -67849,10 +70763,14 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601,"fbjs/lib/invariant":769}],727:[function(require,module,exports){
 =======
 },{"_process":599,"fbjs/lib/invariant":768}],726:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601,"fbjs/lib/invariant":769}],727:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67896,10 +70814,14 @@ function adler32(data) {
 
 module.exports = adler32;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],728:[function(require,module,exports){
 =======
 },{}],727:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],728:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -67927,10 +70849,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],729:[function(require,module,exports){
 =======
 },{"_process":599}],728:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],729:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -67987,10 +70913,14 @@ function dangerousStyleValue(name, value) {
 
 module.exports = dangerousStyleValue;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./CSSProperty":627}],730:[function(require,module,exports){
 =======
 },{"./CSSProperty":626}],729:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./CSSProperty":627}],730:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -68042,10 +70972,14 @@ function deprecated(fnName, newModule, newPackage, ctx, fn) {
 module.exports = deprecated;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"_process":601,"fbjs/lib/warning":780}],731:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"_process":599,"fbjs/lib/warning":779}],730:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"_process":601,"fbjs/lib/warning":780}],731:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68085,10 +71019,14 @@ function escapeTextContentForBrowser(text) {
 
 module.exports = escapeTextContentForBrowser;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],732:[function(require,module,exports){
 =======
 },{}],731:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],732:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -68141,10 +71079,14 @@ function findDOMNode(componentOrElement) {
 module.exports = findDOMNode;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":658,"./ReactInstanceMap":686,"./ReactMount":689,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],733:[function(require,module,exports){
 =======
 },{"./ReactCurrentOwner":657,"./ReactInstanceMap":685,"./ReactMount":688,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],732:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactCurrentOwner":658,"./ReactInstanceMap":686,"./ReactMount":689,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],733:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -68196,10 +71138,14 @@ function flattenChildren(children) {
 module.exports = flattenChildren;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./traverseAllChildren":752,"_process":601,"fbjs/lib/warning":780}],734:[function(require,module,exports){
 =======
 },{"./traverseAllChildren":751,"_process":599,"fbjs/lib/warning":779}],733:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./traverseAllChildren":752,"_process":601,"fbjs/lib/warning":780}],734:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68230,10 +71176,14 @@ var forEachAccumulated = function (arr, cb, scope) {
 
 module.exports = forEachAccumulated;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],735:[function(require,module,exports){
 =======
 },{}],734:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],735:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68285,10 +71235,14 @@ function getEventCharCode(nativeEvent) {
 
 module.exports = getEventCharCode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],736:[function(require,module,exports){
 =======
 },{}],735:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],736:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68393,10 +71347,14 @@ function getEventKey(nativeEvent) {
 
 module.exports = getEventKey;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./getEventCharCode":735}],737:[function(require,module,exports){
 =======
 },{"./getEventCharCode":734}],736:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./getEventCharCode":735}],737:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68442,10 +71400,14 @@ function getEventModifierState(nativeEvent) {
 
 module.exports = getEventModifierState;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],738:[function(require,module,exports){
 =======
 },{}],737:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],738:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68476,10 +71438,14 @@ function getEventTarget(nativeEvent) {
 
 module.exports = getEventTarget;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],739:[function(require,module,exports){
 =======
 },{}],738:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],739:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68521,10 +71487,14 @@ function getIteratorFn(maybeIterable) {
 
 module.exports = getIteratorFn;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],740:[function(require,module,exports){
 =======
 },{}],739:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],740:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68599,10 +71569,14 @@ function getNodeForCharacterOffset(root, offset) {
 
 module.exports = getNodeForCharacterOffset;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],741:[function(require,module,exports){
 =======
 },{}],740:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],741:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68637,10 +71611,14 @@ function getTextContentAccessor() {
 
 module.exports = getTextContentAccessor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/ExecutionEnvironment":755}],742:[function(require,module,exports){
 =======
 },{"fbjs/lib/ExecutionEnvironment":754}],741:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/ExecutionEnvironment":755}],742:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -68756,10 +71734,14 @@ function instantiateReactComponent(node) {
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"./ReactCompositeComponent":657,"./ReactEmptyComponent":678,"./ReactNativeComponent":692,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],743:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"./ReactCompositeComponent":656,"./ReactEmptyComponent":677,"./ReactNativeComponent":691,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],742:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"./ReactCompositeComponent":657,"./ReactEmptyComponent":678,"./ReactNativeComponent":692,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],743:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68821,10 +71803,14 @@ function isEventSupported(eventNameSuffix, capture) {
 
 module.exports = isEventSupported;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/ExecutionEnvironment":755}],744:[function(require,module,exports){
 =======
 },{"fbjs/lib/ExecutionEnvironment":754}],743:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/ExecutionEnvironment":755}],744:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68866,10 +71852,14 @@ function isTextInputElement(elem) {
 
 module.exports = isTextInputElement;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],745:[function(require,module,exports){
 =======
 },{}],744:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],745:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -68906,10 +71896,14 @@ function onlyChild(children) {
 module.exports = onlyChild;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactElement":676,"_process":601,"fbjs/lib/invariant":769}],746:[function(require,module,exports){
 =======
 },{"./ReactElement":675,"_process":599,"fbjs/lib/invariant":768}],745:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactElement":676,"_process":601,"fbjs/lib/invariant":769}],746:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68937,10 +71931,14 @@ function quoteAttributeValueForBrowser(value) {
 
 module.exports = quoteAttributeValueForBrowser;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./escapeTextContentForBrowser":731}],747:[function(require,module,exports){
 =======
 },{"./escapeTextContentForBrowser":730}],746:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./escapeTextContentForBrowser":731}],747:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -68958,10 +71956,14 @@ var ReactMount = require('./ReactMount');
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactMount":689}],748:[function(require,module,exports){
 =======
 },{"./ReactMount":688}],747:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactMount":689}],748:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69053,10 +72055,14 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setInnerHTML;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/ExecutionEnvironment":755}],749:[function(require,module,exports){
 =======
 },{"fbjs/lib/ExecutionEnvironment":754}],748:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/ExecutionEnvironment":755}],749:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69098,10 +72104,14 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = setTextContent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./escapeTextContentForBrowser":731,"./setInnerHTML":748,"fbjs/lib/ExecutionEnvironment":755}],750:[function(require,module,exports){
 =======
 },{"./escapeTextContentForBrowser":730,"./setInnerHTML":747,"fbjs/lib/ExecutionEnvironment":754}],749:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./escapeTextContentForBrowser":731,"./setInnerHTML":748,"fbjs/lib/ExecutionEnvironment":755}],750:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69127,10 +72137,14 @@ function shallowCompare(instance, nextProps, nextState) {
 
 module.exports = shallowCompare;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"fbjs/lib/shallowEqual":778}],751:[function(require,module,exports){
 =======
 },{"fbjs/lib/shallowEqual":777}],750:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"fbjs/lib/shallowEqual":778}],751:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69175,10 +72189,14 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 
 module.exports = shouldUpdateReactComponent;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],752:[function(require,module,exports){
 =======
 },{}],751:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],752:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -69371,10 +72389,14 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceHandles":685,"./getIteratorFn":739,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],753:[function(require,module,exports){
 =======
 },{"./ReactCurrentOwner":657,"./ReactElement":675,"./ReactInstanceHandles":684,"./getIteratorFn":738,"_process":599,"fbjs/lib/invariant":768,"fbjs/lib/warning":779}],752:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ReactCurrentOwner":658,"./ReactElement":676,"./ReactInstanceHandles":685,"./getIteratorFn":739,"_process":601,"fbjs/lib/invariant":769,"fbjs/lib/warning":780}],753:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -69741,10 +72763,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Object.assign":646,"_process":601,"fbjs/lib/emptyFunction":761,"fbjs/lib/warning":780}],754:[function(require,module,exports){
 =======
 },{"./Object.assign":645,"_process":599,"fbjs/lib/emptyFunction":760,"fbjs/lib/warning":779}],753:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Object.assign":646,"_process":601,"fbjs/lib/emptyFunction":761,"fbjs/lib/warning":780}],754:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -69832,10 +72858,14 @@ var EventListener = {
 module.exports = EventListener;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./emptyFunction":761,"_process":601}],755:[function(require,module,exports){
 =======
 },{"./emptyFunction":760,"_process":599}],754:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./emptyFunction":761,"_process":601}],755:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69873,10 +72903,14 @@ var ExecutionEnvironment = {
 
 module.exports = ExecutionEnvironment;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],756:[function(require,module,exports){
 =======
 },{}],755:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],756:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69910,10 +72944,14 @@ function camelize(string) {
 
 module.exports = camelize;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],757:[function(require,module,exports){
 =======
 },{}],756:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],757:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -69955,10 +72993,14 @@ function camelizeStyleName(string) {
 
 module.exports = camelizeStyleName;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./camelize":756}],758:[function(require,module,exports){
 =======
 },{"./camelize":755}],757:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./camelize":756}],758:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70015,10 +73057,14 @@ function containsNode(_x, _x2) {
 
 module.exports = containsNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isTextNode":771}],759:[function(require,module,exports){
 =======
 },{"./isTextNode":770}],758:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isTextNode":771}],759:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70105,10 +73151,14 @@ function createArrayFromMixed(obj) {
 
 module.exports = createArrayFromMixed;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./toArray":779}],760:[function(require,module,exports){
 =======
 },{"./toArray":778}],759:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./toArray":779}],760:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -70196,10 +73246,14 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ExecutionEnvironment":755,"./createArrayFromMixed":759,"./getMarkupWrap":765,"./invariant":769,"_process":601}],761:[function(require,module,exports){
 =======
 },{"./ExecutionEnvironment":754,"./createArrayFromMixed":758,"./getMarkupWrap":764,"./invariant":768,"_process":599}],760:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ExecutionEnvironment":755,"./createArrayFromMixed":759,"./getMarkupWrap":765,"./invariant":769,"_process":601}],761:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70239,10 +73293,14 @@ emptyFunction.thatReturnsArgument = function (arg) {
 
 module.exports = emptyFunction;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],762:[function(require,module,exports){
 =======
 },{}],761:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],762:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -70266,10 +73324,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = emptyObject;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],763:[function(require,module,exports){
 =======
 },{"_process":599}],762:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],763:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70297,10 +73359,14 @@ function focusNode(node) {
 
 module.exports = focusNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],764:[function(require,module,exports){
 =======
 },{}],763:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],764:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70337,10 +73403,14 @@ function getActiveElement() /*?DOMElement*/{
 
 module.exports = getActiveElement;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],765:[function(require,module,exports){
 =======
 },{}],764:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],765:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -70439,10 +73509,14 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ExecutionEnvironment":755,"./invariant":769,"_process":601}],766:[function(require,module,exports){
 =======
 },{"./ExecutionEnvironment":754,"./invariant":768,"_process":599}],765:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ExecutionEnvironment":755,"./invariant":769,"_process":601}],766:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70482,10 +73556,14 @@ function getUnboundedScrollPosition(scrollable) {
 
 module.exports = getUnboundedScrollPosition;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],767:[function(require,module,exports){
 =======
 },{}],766:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],767:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70520,10 +73598,14 @@ function hyphenate(string) {
 
 module.exports = hyphenate;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],768:[function(require,module,exports){
 =======
 },{}],767:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],768:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70564,10 +73646,14 @@ function hyphenateStyleName(string) {
 
 module.exports = hyphenateStyleName;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./hyphenate":767}],769:[function(require,module,exports){
 =======
 },{"./hyphenate":766}],768:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./hyphenate":767}],769:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -70621,10 +73707,14 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],770:[function(require,module,exports){
 =======
 },{"_process":599}],769:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],770:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70649,10 +73739,14 @@ function isNode(object) {
 
 module.exports = isNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],771:[function(require,module,exports){
 =======
 },{}],770:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],771:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70679,10 +73773,14 @@ function isTextNode(object) {
 
 module.exports = isTextNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isNode":770}],772:[function(require,module,exports){
 =======
 },{"./isNode":769}],771:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isNode":770}],772:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -70734,10 +73832,14 @@ var keyMirror = function (obj) {
 module.exports = keyMirror;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./invariant":769,"_process":601}],773:[function(require,module,exports){
 =======
 },{"./invariant":768,"_process":599}],772:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./invariant":769,"_process":601}],773:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70774,10 +73876,14 @@ var keyOf = function (oneKeyObj) {
 
 module.exports = keyOf;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],774:[function(require,module,exports){
 =======
 },{}],773:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],774:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70830,10 +73936,14 @@ function mapObject(object, callback, context) {
 
 module.exports = mapObject;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],775:[function(require,module,exports){
 =======
 },{}],774:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],775:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70866,10 +73976,14 @@ function memoizeStringOnly(callback) {
 
 module.exports = memoizeStringOnly;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],776:[function(require,module,exports){
 =======
 },{}],775:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],776:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70894,10 +74008,14 @@ if (ExecutionEnvironment.canUseDOM) {
 
 module.exports = performance || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ExecutionEnvironment":755}],777:[function(require,module,exports){
 =======
 },{"./ExecutionEnvironment":754}],776:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ExecutionEnvironment":755}],777:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70933,10 +74051,14 @@ if (performance.now) {
 
 module.exports = performanceNow;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./performance":776}],778:[function(require,module,exports){
 =======
 },{"./performance":775}],777:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./performance":776}],778:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -70988,10 +74110,14 @@ function shallowEqual(objA, objB) {
 
 module.exports = shallowEqual;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],779:[function(require,module,exports){
 =======
 },{}],778:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],779:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -71052,10 +74178,14 @@ function toArray(obj) {
 module.exports = toArray;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./invariant":769,"_process":601}],780:[function(require,module,exports){
 =======
 },{"./invariant":768,"_process":599}],779:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./invariant":769,"_process":601}],780:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -71116,10 +74246,14 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = warning;
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./emptyFunction":761,"_process":601}],781:[function(require,module,exports){
 =======
 },{"./emptyFunction":760,"_process":599}],780:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./emptyFunction":761,"_process":601}],781:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -71179,10 +74313,14 @@ function applyMiddleware() {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./compose":784}],782:[function(require,module,exports){
 =======
 },{"./compose":783}],781:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./compose":784}],782:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -71235,10 +74373,14 @@ function bindActionCreators(actionCreators, dispatch) {
   return boundActionCreators;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],783:[function(require,module,exports){
 =======
 },{}],782:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],783:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 'use strict';
 
@@ -71384,10 +74526,14 @@ function combineReducers(reducers) {
 }
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./createStore":785,"./utils/warning":786,"_process":601,"lodash/isPlainObject":796}],784:[function(require,module,exports){
 =======
 },{"./createStore":784,"./utils/warning":785,"_process":599,"lodash/isPlainObject":795}],783:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./createStore":785,"./utils/warning":786,"_process":601,"lodash/isPlainObject":796}],784:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 "use strict";
 
 exports.__esModule = true;
@@ -71427,10 +74573,14 @@ function compose() {
   };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],785:[function(require,module,exports){
 =======
 },{}],784:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],785:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -71693,10 +74843,14 @@ function createStore(reducer, preloadedState, enhancer) {
   }, _ref2[_symbolObservable2['default']] = observable, _ref2;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"lodash/isPlainObject":796,"symbol-observable":925}],786:[function(require,module,exports){
 =======
 },{"lodash/isPlainObject":795,"symbol-observable":924}],785:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"lodash/isPlainObject":796,"symbol-observable":925}],786:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -71723,6 +74877,7 @@ function warning(message) {
   /* eslint-enable no-empty */
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],787:[function(require,module,exports){
 arguments[4][614][0].apply(exports,arguments)
 },{"./_root":794,"dup":614}],788:[function(require,module,exports){
@@ -71736,22 +74891,30 @@ arguments[4][617][0].apply(exports,arguments)
 },{}],786:[function(require,module,exports){
 arguments[4][613][0].apply(exports,arguments)
 },{"./_root":793,"dup":613}],787:[function(require,module,exports){
+=======
+},{}],787:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 arguments[4][614][0].apply(exports,arguments)
-},{"./_Symbol":786,"./_getRawTag":790,"./_objectToString":791,"dup":614}],788:[function(require,module,exports){
+},{"./_root":794,"dup":614}],788:[function(require,module,exports){
 arguments[4][615][0].apply(exports,arguments)
-},{"dup":615}],789:[function(require,module,exports){
+},{"./_Symbol":787,"./_getRawTag":791,"./_objectToString":792,"dup":615}],789:[function(require,module,exports){
 arguments[4][616][0].apply(exports,arguments)
-},{"./_overArg":792,"dup":616}],790:[function(require,module,exports){
+},{"dup":616}],790:[function(require,module,exports){
 arguments[4][617][0].apply(exports,arguments)
+<<<<<<< HEAD
 },{"./_Symbol":786,"dup":617}],791:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_overArg":793,"dup":617}],791:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 arguments[4][618][0].apply(exports,arguments)
 },{"./_Symbol":787,"dup":618}],792:[function(require,module,exports){
 arguments[4][619][0].apply(exports,arguments)
 },{"dup":619}],793:[function(require,module,exports){
 arguments[4][620][0].apply(exports,arguments)
-},{"./_freeGlobal":788,"dup":620}],794:[function(require,module,exports){
+},{"dup":620}],794:[function(require,module,exports){
 arguments[4][621][0].apply(exports,arguments)
+<<<<<<< HEAD
 <<<<<<< HEAD
 },{"./_freeGlobal":789,"dup":621}],795:[function(require,module,exports){
 arguments[4][622][0].apply(exports,arguments)
@@ -71763,6 +74926,13 @@ arguments[4][623][0].apply(exports,arguments)
 arguments[4][622][0].apply(exports,arguments)
 },{"./_baseGetTag":787,"./_getPrototype":789,"./isObjectLike":794,"dup":622}],796:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_freeGlobal":789,"dup":621}],795:[function(require,module,exports){
+arguments[4][622][0].apply(exports,arguments)
+},{"dup":622}],796:[function(require,module,exports){
+arguments[4][623][0].apply(exports,arguments)
+},{"./_baseGetTag":788,"./_getPrototype":790,"./isObjectLike":795,"dup":623}],797:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright (c) 2011-2014 Felix Gnass
  * Licensed under the MIT license
@@ -72142,10 +75312,14 @@ arguments[4][622][0].apply(exports,arguments)
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],798:[function(require,module,exports){
 =======
 },{}],797:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],798:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 "use strict"
 // Module export pattern from
@@ -72341,10 +75515,14 @@ arguments[4][622][0].apply(exports,arguments)
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],799:[function(require,module,exports){
 =======
 },{}],798:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],799:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 module.exports = function (str) {
 	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
@@ -72353,10 +75531,14 @@ module.exports = function (str) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],800:[function(require,module,exports){
 =======
 },{}],799:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],800:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72468,10 +75650,14 @@ ArgmentedEvent.prototype = {
 module.exports = ArgmentedEvent;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./globalVars":802}],801:[function(require,module,exports){
 =======
 },{"./globalVars":801}],800:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./globalVars":802}],801:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72484,10 +75670,14 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],802:[function(require,module,exports){
 =======
 },{}],801:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],802:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72506,10 +75696,14 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"eventemitter3":467}],803:[function(require,module,exports){
 =======
 },{"eventemitter3":466}],802:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"eventemitter3":467}],803:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72529,10 +75723,14 @@ if (typeof navigator !== 'undefined') {
 module.exports = leIE8;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],804:[function(require,module,exports){
 =======
 },{}],803:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],804:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72568,10 +75766,14 @@ function listen(target, eventType, handler) {
 module.exports = listen;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],805:[function(require,module,exports){
 =======
 },{}],804:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],805:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72616,10 +75818,14 @@ function rAFThrottle(func, throttle) {
 module.exports = rAFThrottle;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"raf":603}],806:[function(require,module,exports){
 =======
 },{"raf":602}],805:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"raf":603}],806:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72821,10 +76027,14 @@ module.exports = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./AugmentedEvent":800,"./constants":801,"./globalVars":802,"./lib/leIE8":803,"./lib/listen":804,"./lib/rAFThrottle":805,"lodash/clone":905,"lodash/throttle":923}],807:[function(require,module,exports){
 =======
 },{"./AugmentedEvent":799,"./constants":800,"./globalVars":801,"./lib/leIE8":802,"./lib/listen":803,"./lib/rAFThrottle":804,"lodash/clone":904,"lodash/throttle":922}],806:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./AugmentedEvent":800,"./constants":801,"./globalVars":802,"./lib/leIE8":803,"./lib/listen":804,"./lib/rAFThrottle":805,"lodash/clone":905,"lodash/throttle":923}],807:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72879,10 +76089,14 @@ function subscribe(type, cb, options) {
 module.exports = subscribe;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./constants":801,"./globalVars":802,"./lib/leIE8":803,"./mainEventConnectors":806}],808:[function(require,module,exports){
 =======
 },{"./constants":800,"./globalVars":801,"./lib/leIE8":802,"./mainEventConnectors":805}],807:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./constants":801,"./globalVars":802,"./lib/leIE8":803,"./mainEventConnectors":806}],808:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -72911,10 +76125,14 @@ function unsubscribe(type, cb, options) {
 module.exports = unsubscribe;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./globalVars":802}],809:[function(require,module,exports){
 =======
 },{"./globalVars":801}],808:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./globalVars":802}],809:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (process){
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -72944,10 +76162,14 @@ if (typeof window !== 'undefined') {
 
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./dist/lib/listen":804,"./dist/subscribe":807,"./dist/unsubscribe":808,"_process":601}],810:[function(require,module,exports){
 =======
 },{"./dist/lib/listen":803,"./dist/subscribe":806,"./dist/unsubscribe":807,"_process":599}],809:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./dist/lib/listen":804,"./dist/subscribe":807,"./dist/unsubscribe":808,"_process":601}],810:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -72957,10 +76179,14 @@ var DataView = getNative(root, 'DataView');
 module.exports = DataView;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861,"./_root":897}],811:[function(require,module,exports){
 =======
 },{"./_getNative":860,"./_root":896}],810:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861,"./_root":897}],811:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var hashClear = require('./_hashClear'),
     hashDelete = require('./_hashDelete'),
     hashGet = require('./_hashGet'),
@@ -72995,10 +76221,14 @@ Hash.prototype.set = hashSet;
 module.exports = Hash;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_hashClear":868,"./_hashDelete":869,"./_hashGet":870,"./_hashHas":871,"./_hashSet":872}],812:[function(require,module,exports){
 =======
 },{"./_hashClear":867,"./_hashDelete":868,"./_hashGet":869,"./_hashHas":870,"./_hashSet":871}],811:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_hashClear":868,"./_hashDelete":869,"./_hashGet":870,"./_hashHas":871,"./_hashSet":872}],812:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var listCacheClear = require('./_listCacheClear'),
     listCacheDelete = require('./_listCacheDelete'),
     listCacheGet = require('./_listCacheGet'),
@@ -73033,10 +76263,14 @@ ListCache.prototype.set = listCacheSet;
 module.exports = ListCache;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_listCacheClear":880,"./_listCacheDelete":881,"./_listCacheGet":882,"./_listCacheHas":883,"./_listCacheSet":884}],813:[function(require,module,exports){
 =======
 },{"./_listCacheClear":879,"./_listCacheDelete":880,"./_listCacheGet":881,"./_listCacheHas":882,"./_listCacheSet":883}],812:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_listCacheClear":880,"./_listCacheDelete":881,"./_listCacheGet":882,"./_listCacheHas":883,"./_listCacheSet":884}],813:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -73046,10 +76280,14 @@ var Map = getNative(root, 'Map');
 module.exports = Map;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861,"./_root":897}],814:[function(require,module,exports){
 =======
 },{"./_getNative":860,"./_root":896}],813:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861,"./_root":897}],814:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var mapCacheClear = require('./_mapCacheClear'),
     mapCacheDelete = require('./_mapCacheDelete'),
     mapCacheGet = require('./_mapCacheGet'),
@@ -73084,10 +76322,14 @@ MapCache.prototype.set = mapCacheSet;
 module.exports = MapCache;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_mapCacheClear":885,"./_mapCacheDelete":886,"./_mapCacheGet":887,"./_mapCacheHas":888,"./_mapCacheSet":889}],815:[function(require,module,exports){
 =======
 },{"./_mapCacheClear":884,"./_mapCacheDelete":885,"./_mapCacheGet":886,"./_mapCacheHas":887,"./_mapCacheSet":888}],814:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_mapCacheClear":885,"./_mapCacheDelete":886,"./_mapCacheGet":887,"./_mapCacheHas":888,"./_mapCacheSet":889}],815:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -73097,10 +76339,14 @@ var Promise = getNative(root, 'Promise');
 module.exports = Promise;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861,"./_root":897}],816:[function(require,module,exports){
 =======
 },{"./_getNative":860,"./_root":896}],815:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861,"./_root":897}],816:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -73110,10 +76356,14 @@ var Set = getNative(root, 'Set');
 module.exports = Set;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861,"./_root":897}],817:[function(require,module,exports){
 =======
 },{"./_getNative":860,"./_root":896}],816:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861,"./_root":897}],817:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ListCache = require('./_ListCache'),
     stackClear = require('./_stackClear'),
     stackDelete = require('./_stackDelete'),
@@ -73143,6 +76393,7 @@ Stack.prototype.set = stackSet;
 module.exports = Stack;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_ListCache":812,"./_stackClear":899,"./_stackDelete":900,"./_stackGet":901,"./_stackHas":902,"./_stackSet":903}],818:[function(require,module,exports){
 arguments[4][614][0].apply(exports,arguments)
 },{"./_root":897,"dup":614}],819:[function(require,module,exports){
@@ -73151,6 +76402,11 @@ arguments[4][614][0].apply(exports,arguments)
 arguments[4][613][0].apply(exports,arguments)
 },{"./_root":896,"dup":613}],818:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_ListCache":812,"./_stackClear":899,"./_stackDelete":900,"./_stackGet":901,"./_stackHas":902,"./_stackSet":903}],818:[function(require,module,exports){
+arguments[4][614][0].apply(exports,arguments)
+},{"./_root":897,"dup":614}],819:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root');
 
 /** Built-in value references. */
@@ -73159,10 +76415,14 @@ var Uint8Array = root.Uint8Array;
 module.exports = Uint8Array;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":897}],820:[function(require,module,exports){
 =======
 },{"./_root":896}],819:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":897}],820:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -73172,10 +76432,14 @@ var WeakMap = getNative(root, 'WeakMap');
 module.exports = WeakMap;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861,"./_root":897}],821:[function(require,module,exports){
 =======
 },{"./_getNative":860,"./_root":896}],820:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861,"./_root":897}],821:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Adds the key-value `pair` to `map`.
  *
@@ -73193,10 +76457,14 @@ function addMapEntry(map, pair) {
 module.exports = addMapEntry;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],822:[function(require,module,exports){
 =======
 },{}],821:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],822:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Adds `value` to `set`.
  *
@@ -73214,10 +76482,14 @@ function addSetEntry(set, value) {
 module.exports = addSetEntry;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],823:[function(require,module,exports){
 =======
 },{}],822:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],823:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * A specialized version of `_.forEach` for arrays without support for
  * iteratee shorthands.
@@ -73242,10 +76514,14 @@ function arrayEach(array, iteratee) {
 module.exports = arrayEach;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],824:[function(require,module,exports){
 =======
 },{}],823:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],824:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseTimes = require('./_baseTimes'),
     isArguments = require('./isArguments'),
     isArray = require('./isArray'),
@@ -73297,10 +76573,14 @@ function arrayLikeKeys(value, inherited) {
 module.exports = arrayLikeKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseTimes":841,"./_isIndex":876,"./isArguments":908,"./isArray":909,"./isBuffer":911,"./isTypedArray":917}],825:[function(require,module,exports){
 =======
 },{"./_baseTimes":840,"./_isIndex":875,"./isArguments":907,"./isArray":908,"./isBuffer":910,"./isTypedArray":916}],824:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseTimes":841,"./_isIndex":876,"./isArguments":908,"./isArray":909,"./isBuffer":911,"./isTypedArray":917}],825:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -73323,10 +76603,14 @@ function arrayPush(array, values) {
 module.exports = arrayPush;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],826:[function(require,module,exports){
 =======
 },{}],825:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],826:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * A specialized version of `_.reduce` for arrays without support for
  * iteratee shorthands.
@@ -73355,10 +76639,14 @@ function arrayReduce(array, iteratee, accumulator, initAccum) {
 module.exports = arrayReduce;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],827:[function(require,module,exports){
 =======
 },{}],826:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],827:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseAssignValue = require('./_baseAssignValue'),
     eq = require('./eq');
 
@@ -73389,10 +76677,14 @@ function assignValue(object, key, value) {
 module.exports = assignValue;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseAssignValue":831,"./eq":907}],828:[function(require,module,exports){
 =======
 },{"./_baseAssignValue":830,"./eq":906}],827:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseAssignValue":831,"./eq":907}],828:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var eq = require('./eq');
 
 /**
@@ -73416,10 +76708,14 @@ function assocIndexOf(array, key) {
 module.exports = assocIndexOf;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./eq":907}],829:[function(require,module,exports){
 =======
 },{"./eq":906}],828:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./eq":907}],829:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var copyObject = require('./_copyObject'),
     keys = require('./keys');
 
@@ -73439,10 +76735,14 @@ function baseAssign(object, source) {
 module.exports = baseAssign;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_copyObject":852,"./keys":918}],830:[function(require,module,exports){
 =======
 },{"./_copyObject":851,"./keys":917}],829:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_copyObject":852,"./keys":918}],830:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var copyObject = require('./_copyObject'),
     keysIn = require('./keysIn');
 
@@ -73462,10 +76762,14 @@ function baseAssignIn(object, source) {
 module.exports = baseAssignIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_copyObject":852,"./keysIn":919}],831:[function(require,module,exports){
 =======
 },{"./_copyObject":851,"./keysIn":918}],830:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_copyObject":852,"./keysIn":919}],831:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var defineProperty = require('./_defineProperty');
 
 /**
@@ -73493,10 +76797,14 @@ function baseAssignValue(object, key, value) {
 module.exports = baseAssignValue;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_defineProperty":856}],832:[function(require,module,exports){
 =======
 },{"./_defineProperty":855}],831:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_defineProperty":856}],832:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Stack = require('./_Stack'),
     arrayEach = require('./_arrayEach'),
     assignValue = require('./_assignValue'),
@@ -73652,10 +76960,14 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
 module.exports = baseClone;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Stack":817,"./_arrayEach":823,"./_assignValue":827,"./_baseAssign":829,"./_baseAssignIn":830,"./_cloneBuffer":844,"./_copyArray":851,"./_copySymbols":853,"./_copySymbolsIn":854,"./_getAllKeys":858,"./_getAllKeysIn":859,"./_getTag":866,"./_initCloneArray":873,"./_initCloneByTag":874,"./_initCloneObject":875,"./isArray":909,"./isBuffer":911,"./isObject":914,"./keys":918}],833:[function(require,module,exports){
 =======
 },{"./_Stack":816,"./_arrayEach":822,"./_assignValue":826,"./_baseAssign":828,"./_baseAssignIn":829,"./_cloneBuffer":843,"./_copyArray":850,"./_copySymbols":852,"./_copySymbolsIn":853,"./_getAllKeys":857,"./_getAllKeysIn":858,"./_getTag":865,"./_initCloneArray":872,"./_initCloneByTag":873,"./_initCloneObject":874,"./isArray":908,"./isBuffer":910,"./isObject":913,"./keys":917}],832:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Stack":817,"./_arrayEach":823,"./_assignValue":827,"./_baseAssign":829,"./_baseAssignIn":830,"./_cloneBuffer":844,"./_copyArray":851,"./_copySymbols":853,"./_copySymbolsIn":854,"./_getAllKeys":858,"./_getAllKeysIn":859,"./_getTag":866,"./_initCloneArray":873,"./_initCloneByTag":874,"./_initCloneObject":875,"./isArray":909,"./isBuffer":911,"./isObject":914,"./keys":918}],833:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./isObject');
 
 /** Built-in value references. */
@@ -73688,10 +77000,14 @@ var baseCreate = (function() {
 module.exports = baseCreate;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isObject":914}],834:[function(require,module,exports){
 =======
 },{"./isObject":913}],833:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isObject":914}],834:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayPush = require('./_arrayPush'),
     isArray = require('./isArray');
 
@@ -73714,6 +77030,7 @@ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
 module.exports = baseGetAllKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_arrayPush":825,"./isArray":909}],835:[function(require,module,exports){
 arguments[4][615][0].apply(exports,arguments)
 },{"./_Symbol":818,"./_getRawTag":863,"./_objectToString":895,"dup":615}],836:[function(require,module,exports){
@@ -73722,6 +77039,11 @@ arguments[4][615][0].apply(exports,arguments)
 arguments[4][614][0].apply(exports,arguments)
 },{"./_Symbol":817,"./_getRawTag":862,"./_objectToString":894,"dup":614}],835:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_arrayPush":825,"./isArray":909}],835:[function(require,module,exports){
+arguments[4][615][0].apply(exports,arguments)
+},{"./_Symbol":818,"./_getRawTag":863,"./_objectToString":895,"dup":615}],836:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -73742,10 +77064,14 @@ function baseIsArguments(value) {
 module.exports = baseIsArguments;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetTag":835,"./isObjectLike":915}],837:[function(require,module,exports){
 =======
 },{"./_baseGetTag":834,"./isObjectLike":914}],836:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetTag":835,"./isObjectLike":915}],837:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isFunction = require('./isFunction'),
     isMasked = require('./_isMasked'),
     isObject = require('./isObject'),
@@ -73795,10 +77121,14 @@ function baseIsNative(value) {
 module.exports = baseIsNative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_isMasked":878,"./_toSource":904,"./isFunction":912,"./isObject":914}],838:[function(require,module,exports){
 =======
 },{"./_isMasked":877,"./_toSource":903,"./isFunction":911,"./isObject":913}],837:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_isMasked":878,"./_toSource":904,"./isFunction":912,"./isObject":914}],838:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetTag = require('./_baseGetTag'),
     isLength = require('./isLength'),
     isObjectLike = require('./isObjectLike');
@@ -73861,10 +77191,14 @@ function baseIsTypedArray(value) {
 module.exports = baseIsTypedArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetTag":835,"./isLength":913,"./isObjectLike":915}],839:[function(require,module,exports){
 =======
 },{"./_baseGetTag":834,"./isLength":912,"./isObjectLike":914}],838:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetTag":835,"./isLength":913,"./isObjectLike":915}],839:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isPrototype = require('./_isPrototype'),
     nativeKeys = require('./_nativeKeys');
 
@@ -73897,10 +77231,14 @@ function baseKeys(object) {
 module.exports = baseKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_isPrototype":879,"./_nativeKeys":892}],840:[function(require,module,exports){
 =======
 },{"./_isPrototype":878,"./_nativeKeys":891}],839:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_isPrototype":879,"./_nativeKeys":892}],840:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./isObject'),
     isPrototype = require('./_isPrototype'),
     nativeKeysIn = require('./_nativeKeysIn');
@@ -73936,10 +77274,14 @@ function baseKeysIn(object) {
 module.exports = baseKeysIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_isPrototype":879,"./_nativeKeysIn":893,"./isObject":914}],841:[function(require,module,exports){
 =======
 },{"./_isPrototype":878,"./_nativeKeysIn":892,"./isObject":913}],840:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_isPrototype":879,"./_nativeKeysIn":893,"./isObject":914}],841:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * The base implementation of `_.times` without support for iteratee shorthands
  * or max array length checks.
@@ -73962,10 +77304,14 @@ function baseTimes(n, iteratee) {
 module.exports = baseTimes;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],842:[function(require,module,exports){
 =======
 },{}],841:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],842:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * The base implementation of `_.unary` without support for storing metadata.
  *
@@ -73982,10 +77328,14 @@ function baseUnary(func) {
 module.exports = baseUnary;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],843:[function(require,module,exports){
 =======
 },{}],842:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],843:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Uint8Array = require('./_Uint8Array');
 
 /**
@@ -74004,10 +77354,14 @@ function cloneArrayBuffer(arrayBuffer) {
 module.exports = cloneArrayBuffer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Uint8Array":819}],844:[function(require,module,exports){
 =======
 },{"./_Uint8Array":818}],843:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Uint8Array":819}],844:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root');
 
 /** Detect free variable `exports`. */
@@ -74045,10 +77399,14 @@ function cloneBuffer(buffer, isDeep) {
 module.exports = cloneBuffer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":897}],845:[function(require,module,exports){
 =======
 },{"./_root":896}],844:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":897}],845:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -74067,10 +77425,14 @@ function cloneDataView(dataView, isDeep) {
 module.exports = cloneDataView;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cloneArrayBuffer":843}],846:[function(require,module,exports){
 =======
 },{"./_cloneArrayBuffer":842}],845:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cloneArrayBuffer":843}],846:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var addMapEntry = require('./_addMapEntry'),
     arrayReduce = require('./_arrayReduce'),
     mapToArray = require('./_mapToArray');
@@ -74095,10 +77457,14 @@ function cloneMap(map, isDeep, cloneFunc) {
 module.exports = cloneMap;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_addMapEntry":821,"./_arrayReduce":826,"./_mapToArray":890}],847:[function(require,module,exports){
 =======
 },{"./_addMapEntry":820,"./_arrayReduce":825,"./_mapToArray":889}],846:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_addMapEntry":821,"./_arrayReduce":826,"./_mapToArray":890}],847:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used to match `RegExp` flags from their coerced string values. */
 var reFlags = /\w*$/;
 
@@ -74118,10 +77484,14 @@ function cloneRegExp(regexp) {
 module.exports = cloneRegExp;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],848:[function(require,module,exports){
 =======
 },{}],847:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],848:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var addSetEntry = require('./_addSetEntry'),
     arrayReduce = require('./_arrayReduce'),
     setToArray = require('./_setToArray');
@@ -74146,10 +77516,14 @@ function cloneSet(set, isDeep, cloneFunc) {
 module.exports = cloneSet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_addSetEntry":822,"./_arrayReduce":826,"./_setToArray":898}],849:[function(require,module,exports){
 =======
 },{"./_addSetEntry":821,"./_arrayReduce":825,"./_setToArray":897}],848:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_addSetEntry":822,"./_arrayReduce":826,"./_setToArray":898}],849:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Symbol = require('./_Symbol');
 
 /** Used to convert symbols to primitives and strings. */
@@ -74170,10 +77544,14 @@ function cloneSymbol(symbol) {
 module.exports = cloneSymbol;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Symbol":818}],850:[function(require,module,exports){
 =======
 },{"./_Symbol":817}],849:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Symbol":818}],850:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var cloneArrayBuffer = require('./_cloneArrayBuffer');
 
 /**
@@ -74192,10 +77570,14 @@ function cloneTypedArray(typedArray, isDeep) {
 module.exports = cloneTypedArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cloneArrayBuffer":843}],851:[function(require,module,exports){
 =======
 },{"./_cloneArrayBuffer":842}],850:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cloneArrayBuffer":843}],851:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Copies the values of `source` to `array`.
  *
@@ -74218,10 +77600,14 @@ function copyArray(source, array) {
 module.exports = copyArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],852:[function(require,module,exports){
 =======
 },{}],851:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],852:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var assignValue = require('./_assignValue'),
     baseAssignValue = require('./_baseAssignValue');
 
@@ -74264,10 +77650,14 @@ function copyObject(source, props, object, customizer) {
 module.exports = copyObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_assignValue":827,"./_baseAssignValue":831}],853:[function(require,module,exports){
 =======
 },{"./_assignValue":826,"./_baseAssignValue":830}],852:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_assignValue":827,"./_baseAssignValue":831}],853:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var copyObject = require('./_copyObject'),
     getSymbols = require('./_getSymbols');
 
@@ -74286,10 +77676,14 @@ function copySymbols(source, object) {
 module.exports = copySymbols;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_copyObject":852,"./_getSymbols":864}],854:[function(require,module,exports){
 =======
 },{"./_copyObject":851,"./_getSymbols":863}],853:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_copyObject":852,"./_getSymbols":864}],854:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var copyObject = require('./_copyObject'),
     getSymbolsIn = require('./_getSymbolsIn');
 
@@ -74308,10 +77702,14 @@ function copySymbolsIn(source, object) {
 module.exports = copySymbolsIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_copyObject":852,"./_getSymbolsIn":865}],855:[function(require,module,exports){
 =======
 },{"./_copyObject":851,"./_getSymbolsIn":864}],854:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_copyObject":852,"./_getSymbolsIn":865}],855:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root');
 
 /** Used to detect overreaching core-js shims. */
@@ -74320,10 +77718,14 @@ var coreJsData = root['__core-js_shared__'];
 module.exports = coreJsData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":897}],856:[function(require,module,exports){
 =======
 },{"./_root":896}],855:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":897}],856:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative');
 
 var defineProperty = (function() {
@@ -74337,6 +77739,7 @@ var defineProperty = (function() {
 module.exports = defineProperty;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861}],857:[function(require,module,exports){
 arguments[4][616][0].apply(exports,arguments)
 },{"dup":616}],858:[function(require,module,exports){
@@ -74345,6 +77748,11 @@ arguments[4][616][0].apply(exports,arguments)
 arguments[4][615][0].apply(exports,arguments)
 },{"dup":615}],857:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861}],857:[function(require,module,exports){
+arguments[4][616][0].apply(exports,arguments)
+},{"dup":616}],858:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbols = require('./_getSymbols'),
     keys = require('./keys');
@@ -74363,10 +77771,14 @@ function getAllKeys(object) {
 module.exports = getAllKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetAllKeys":834,"./_getSymbols":864,"./keys":918}],859:[function(require,module,exports){
 =======
 },{"./_baseGetAllKeys":833,"./_getSymbols":863,"./keys":917}],858:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetAllKeys":834,"./_getSymbols":864,"./keys":918}],859:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetAllKeys = require('./_baseGetAllKeys'),
     getSymbolsIn = require('./_getSymbolsIn'),
     keysIn = require('./keysIn');
@@ -74386,10 +77798,14 @@ function getAllKeysIn(object) {
 module.exports = getAllKeysIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetAllKeys":834,"./_getSymbolsIn":865,"./keysIn":919}],860:[function(require,module,exports){
 =======
 },{"./_baseGetAllKeys":833,"./_getSymbolsIn":864,"./keysIn":918}],859:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetAllKeys":834,"./_getSymbolsIn":865,"./keysIn":919}],860:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isKeyable = require('./_isKeyable');
 
 /**
@@ -74410,10 +77826,14 @@ function getMapData(map, key) {
 module.exports = getMapData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_isKeyable":877}],861:[function(require,module,exports){
 =======
 },{"./_isKeyable":876}],860:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_isKeyable":877}],861:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsNative = require('./_baseIsNative'),
     getValue = require('./_getValue');
 
@@ -74433,6 +77853,7 @@ function getNative(object, key) {
 module.exports = getNative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseIsNative":837,"./_getValue":867}],862:[function(require,module,exports){
 arguments[4][617][0].apply(exports,arguments)
 },{"./_overArg":896,"dup":617}],863:[function(require,module,exports){
@@ -74445,6 +77866,13 @@ arguments[4][616][0].apply(exports,arguments)
 arguments[4][617][0].apply(exports,arguments)
 },{"./_Symbol":817,"dup":617}],863:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseIsNative":837,"./_getValue":867}],862:[function(require,module,exports){
+arguments[4][617][0].apply(exports,arguments)
+},{"./_overArg":896,"dup":617}],863:[function(require,module,exports){
+arguments[4][618][0].apply(exports,arguments)
+},{"./_Symbol":818,"dup":618}],864:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var overArg = require('./_overArg'),
     stubArray = require('./stubArray');
 
@@ -74463,10 +77891,14 @@ var getSymbols = nativeGetSymbols ? overArg(nativeGetSymbols, Object) : stubArra
 module.exports = getSymbols;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_overArg":896,"./stubArray":921}],865:[function(require,module,exports){
 =======
 },{"./_overArg":895,"./stubArray":920}],864:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_overArg":896,"./stubArray":921}],865:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayPush = require('./_arrayPush'),
     getPrototype = require('./_getPrototype'),
     getSymbols = require('./_getSymbols'),
@@ -74494,10 +77926,14 @@ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
 module.exports = getSymbolsIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_arrayPush":825,"./_getPrototype":862,"./_getSymbols":864,"./stubArray":921}],866:[function(require,module,exports){
 =======
 },{"./_arrayPush":824,"./_getPrototype":861,"./_getSymbols":863,"./stubArray":920}],865:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_arrayPush":825,"./_getPrototype":862,"./_getSymbols":864,"./stubArray":921}],866:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var DataView = require('./_DataView'),
     Map = require('./_Map'),
     Promise = require('./_Promise'),
@@ -74558,10 +77994,14 @@ if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
 module.exports = getTag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_DataView":810,"./_Map":813,"./_Promise":815,"./_Set":816,"./_WeakMap":820,"./_baseGetTag":835,"./_toSource":904}],867:[function(require,module,exports){
 =======
 },{"./_DataView":809,"./_Map":812,"./_Promise":814,"./_Set":815,"./_WeakMap":819,"./_baseGetTag":834,"./_toSource":903}],866:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_DataView":810,"./_Map":813,"./_Promise":815,"./_Set":816,"./_WeakMap":820,"./_baseGetTag":835,"./_toSource":904}],867:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Gets the value at `key` of `object`.
  *
@@ -74577,10 +78017,14 @@ function getValue(object, key) {
 module.exports = getValue;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],868:[function(require,module,exports){
 =======
 },{}],867:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],868:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var nativeCreate = require('./_nativeCreate');
 
 /**
@@ -74598,10 +78042,14 @@ function hashClear() {
 module.exports = hashClear;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_nativeCreate":891}],869:[function(require,module,exports){
 =======
 },{"./_nativeCreate":890}],868:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_nativeCreate":891}],869:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Removes `key` and its value from the hash.
  *
@@ -74621,10 +78069,14 @@ function hashDelete(key) {
 module.exports = hashDelete;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],870:[function(require,module,exports){
 =======
 },{}],869:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],870:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -74657,10 +78109,14 @@ function hashGet(key) {
 module.exports = hashGet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_nativeCreate":891}],871:[function(require,module,exports){
 =======
 },{"./_nativeCreate":890}],870:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_nativeCreate":891}],871:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var nativeCreate = require('./_nativeCreate');
 
 /** Used for built-in method references. */
@@ -74686,10 +78142,14 @@ function hashHas(key) {
 module.exports = hashHas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_nativeCreate":891}],872:[function(require,module,exports){
 =======
 },{"./_nativeCreate":890}],871:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_nativeCreate":891}],872:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var nativeCreate = require('./_nativeCreate');
 
 /** Used to stand-in for `undefined` hash values. */
@@ -74715,10 +78175,14 @@ function hashSet(key, value) {
 module.exports = hashSet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_nativeCreate":891}],873:[function(require,module,exports){
 =======
 },{"./_nativeCreate":890}],872:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_nativeCreate":891}],873:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -74747,10 +78211,14 @@ function initCloneArray(array) {
 module.exports = initCloneArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],874:[function(require,module,exports){
 =======
 },{}],873:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],874:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var cloneArrayBuffer = require('./_cloneArrayBuffer'),
     cloneDataView = require('./_cloneDataView'),
     cloneMap = require('./_cloneMap'),
@@ -74833,10 +78301,14 @@ function initCloneByTag(object, tag, cloneFunc, isDeep) {
 module.exports = initCloneByTag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_cloneArrayBuffer":843,"./_cloneDataView":845,"./_cloneMap":846,"./_cloneRegExp":847,"./_cloneSet":848,"./_cloneSymbol":849,"./_cloneTypedArray":850}],875:[function(require,module,exports){
 =======
 },{"./_cloneArrayBuffer":842,"./_cloneDataView":844,"./_cloneMap":845,"./_cloneRegExp":846,"./_cloneSet":847,"./_cloneSymbol":848,"./_cloneTypedArray":849}],874:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_cloneArrayBuffer":843,"./_cloneDataView":845,"./_cloneMap":846,"./_cloneRegExp":847,"./_cloneSet":848,"./_cloneSymbol":849,"./_cloneTypedArray":850}],875:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseCreate = require('./_baseCreate'),
     getPrototype = require('./_getPrototype'),
     isPrototype = require('./_isPrototype');
@@ -74857,10 +78329,14 @@ function initCloneObject(object) {
 module.exports = initCloneObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseCreate":833,"./_getPrototype":862,"./_isPrototype":879}],876:[function(require,module,exports){
 =======
 },{"./_baseCreate":832,"./_getPrototype":861,"./_isPrototype":878}],875:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseCreate":833,"./_getPrototype":862,"./_isPrototype":879}],876:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -74885,10 +78361,14 @@ function isIndex(value, length) {
 module.exports = isIndex;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],877:[function(require,module,exports){
 =======
 },{}],876:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],877:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is suitable for use as unique object key.
  *
@@ -74906,10 +78386,14 @@ function isKeyable(value) {
 module.exports = isKeyable;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],878:[function(require,module,exports){
 =======
 },{}],877:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],878:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var coreJsData = require('./_coreJsData');
 
 /** Used to detect methods masquerading as native. */
@@ -74932,10 +78416,14 @@ function isMasked(func) {
 module.exports = isMasked;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_coreJsData":855}],879:[function(require,module,exports){
 =======
 },{"./_coreJsData":854}],878:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_coreJsData":855}],879:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
 
@@ -74956,10 +78444,14 @@ function isPrototype(value) {
 module.exports = isPrototype;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],880:[function(require,module,exports){
 =======
 },{}],879:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],880:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Removes all key-value entries from the list cache.
  *
@@ -74975,10 +78467,14 @@ function listCacheClear() {
 module.exports = listCacheClear;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],881:[function(require,module,exports){
 =======
 },{}],880:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],881:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var assocIndexOf = require('./_assocIndexOf');
 
 /** Used for built-in method references. */
@@ -75016,10 +78512,14 @@ function listCacheDelete(key) {
 module.exports = listCacheDelete;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_assocIndexOf":828}],882:[function(require,module,exports){
 =======
 },{"./_assocIndexOf":827}],881:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_assocIndexOf":828}],882:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -75041,10 +78541,14 @@ function listCacheGet(key) {
 module.exports = listCacheGet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_assocIndexOf":828}],883:[function(require,module,exports){
 =======
 },{"./_assocIndexOf":827}],882:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_assocIndexOf":828}],883:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -75063,10 +78567,14 @@ function listCacheHas(key) {
 module.exports = listCacheHas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_assocIndexOf":828}],884:[function(require,module,exports){
 =======
 },{"./_assocIndexOf":827}],883:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_assocIndexOf":828}],884:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var assocIndexOf = require('./_assocIndexOf');
 
 /**
@@ -75095,10 +78603,14 @@ function listCacheSet(key, value) {
 module.exports = listCacheSet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_assocIndexOf":828}],885:[function(require,module,exports){
 =======
 },{"./_assocIndexOf":827}],884:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_assocIndexOf":828}],885:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var Hash = require('./_Hash'),
     ListCache = require('./_ListCache'),
     Map = require('./_Map');
@@ -75122,10 +78634,14 @@ function mapCacheClear() {
 module.exports = mapCacheClear;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_Hash":811,"./_ListCache":812,"./_Map":813}],886:[function(require,module,exports){
 =======
 },{"./_Hash":810,"./_ListCache":811,"./_Map":812}],885:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_Hash":811,"./_ListCache":812,"./_Map":813}],886:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getMapData = require('./_getMapData');
 
 /**
@@ -75146,10 +78662,14 @@ function mapCacheDelete(key) {
 module.exports = mapCacheDelete;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getMapData":860}],887:[function(require,module,exports){
 =======
 },{"./_getMapData":859}],886:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getMapData":860}],887:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getMapData = require('./_getMapData');
 
 /**
@@ -75168,10 +78688,14 @@ function mapCacheGet(key) {
 module.exports = mapCacheGet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getMapData":860}],888:[function(require,module,exports){
 =======
 },{"./_getMapData":859}],887:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getMapData":860}],888:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getMapData = require('./_getMapData');
 
 /**
@@ -75190,10 +78714,14 @@ function mapCacheHas(key) {
 module.exports = mapCacheHas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getMapData":860}],889:[function(require,module,exports){
 =======
 },{"./_getMapData":859}],888:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getMapData":860}],889:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getMapData = require('./_getMapData');
 
 /**
@@ -75218,10 +78746,14 @@ function mapCacheSet(key, value) {
 module.exports = mapCacheSet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getMapData":860}],890:[function(require,module,exports){
 =======
 },{"./_getMapData":859}],889:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getMapData":860}],890:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Converts `map` to its key-value pairs.
  *
@@ -75242,10 +78774,14 @@ function mapToArray(map) {
 module.exports = mapToArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],891:[function(require,module,exports){
 =======
 },{}],890:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],891:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var getNative = require('./_getNative');
 
 /* Built-in method references that are verified to be native. */
@@ -75254,10 +78790,14 @@ var nativeCreate = getNative(Object, 'create');
 module.exports = nativeCreate;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_getNative":861}],892:[function(require,module,exports){
 =======
 },{"./_getNative":860}],891:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_getNative":861}],892:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var overArg = require('./_overArg');
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
@@ -75266,10 +78806,14 @@ var nativeKeys = overArg(Object.keys, Object);
 module.exports = nativeKeys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_overArg":896}],893:[function(require,module,exports){
 =======
 },{"./_overArg":895}],892:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_overArg":896}],893:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * This function is like
  * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
@@ -75292,10 +78836,14 @@ function nativeKeysIn(object) {
 module.exports = nativeKeysIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],894:[function(require,module,exports){
 =======
 },{}],893:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],894:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var freeGlobal = require('./_freeGlobal');
 
 /** Detect free variable `exports`. */
@@ -75320,6 +78868,7 @@ var nodeUtil = (function() {
 module.exports = nodeUtil;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_freeGlobal":857}],895:[function(require,module,exports){
 arguments[4][619][0].apply(exports,arguments)
 },{"dup":619}],896:[function(require,module,exports){
@@ -75336,6 +78885,15 @@ arguments[4][619][0].apply(exports,arguments)
 arguments[4][620][0].apply(exports,arguments)
 },{"./_freeGlobal":856,"dup":620}],897:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_freeGlobal":857}],895:[function(require,module,exports){
+arguments[4][619][0].apply(exports,arguments)
+},{"dup":619}],896:[function(require,module,exports){
+arguments[4][620][0].apply(exports,arguments)
+},{"dup":620}],897:[function(require,module,exports){
+arguments[4][621][0].apply(exports,arguments)
+},{"./_freeGlobal":857,"dup":621}],898:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Converts `set` to an array of its values.
  *
@@ -75356,10 +78914,14 @@ function setToArray(set) {
 module.exports = setToArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],899:[function(require,module,exports){
 =======
 },{}],898:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],899:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ListCache = require('./_ListCache');
 
 /**
@@ -75377,10 +78939,14 @@ function stackClear() {
 module.exports = stackClear;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_ListCache":812}],900:[function(require,module,exports){
 =======
 },{"./_ListCache":811}],899:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_ListCache":812}],900:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Removes `key` and its value from the stack.
  *
@@ -75401,10 +78967,14 @@ function stackDelete(key) {
 module.exports = stackDelete;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],901:[function(require,module,exports){
 =======
 },{}],900:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],901:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Gets the stack value for `key`.
  *
@@ -75421,10 +78991,14 @@ function stackGet(key) {
 module.exports = stackGet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],902:[function(require,module,exports){
 =======
 },{}],901:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],902:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if a stack value for `key` exists.
  *
@@ -75441,10 +79015,14 @@ function stackHas(key) {
 module.exports = stackHas;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],903:[function(require,module,exports){
 =======
 },{}],902:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],903:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var ListCache = require('./_ListCache'),
     Map = require('./_Map'),
     MapCache = require('./_MapCache');
@@ -75481,10 +79059,14 @@ function stackSet(key, value) {
 module.exports = stackSet;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_ListCache":812,"./_Map":813,"./_MapCache":814}],904:[function(require,module,exports){
 =======
 },{"./_ListCache":811,"./_Map":812,"./_MapCache":813}],903:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_ListCache":812,"./_Map":813,"./_MapCache":814}],904:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used for built-in method references. */
 var funcProto = Function.prototype;
 
@@ -75513,10 +79095,14 @@ function toSource(func) {
 module.exports = toSource;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],905:[function(require,module,exports){
 =======
 },{}],904:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],905:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseClone = require('./_baseClone');
 
 /** Used to compose bitmasks for cloning. */
@@ -75555,10 +79141,14 @@ function clone(value) {
 module.exports = clone;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseClone":832}],906:[function(require,module,exports){
 =======
 },{"./_baseClone":831}],905:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseClone":832}],906:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./isObject'),
     now = require('./now'),
     toNumber = require('./toNumber');
@@ -75749,10 +79339,14 @@ function debounce(func, wait, options) {
 module.exports = debounce;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isObject":914,"./now":920,"./toNumber":924}],907:[function(require,module,exports){
 =======
 },{"./isObject":913,"./now":919,"./toNumber":923}],906:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isObject":914,"./now":920,"./toNumber":924}],907:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Performs a
  * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
@@ -75792,10 +79386,14 @@ function eq(value, other) {
 module.exports = eq;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],908:[function(require,module,exports){
 =======
 },{}],907:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],908:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsArguments = require('./_baseIsArguments'),
     isObjectLike = require('./isObjectLike');
 
@@ -75834,10 +79432,14 @@ var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsAr
 module.exports = isArguments;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseIsArguments":836,"./isObjectLike":915}],909:[function(require,module,exports){
 =======
 },{"./_baseIsArguments":835,"./isObjectLike":914}],908:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseIsArguments":836,"./isObjectLike":915}],909:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is classified as an `Array` object.
  *
@@ -75866,10 +79468,14 @@ var isArray = Array.isArray;
 module.exports = isArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],910:[function(require,module,exports){
 =======
 },{}],909:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],910:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isFunction = require('./isFunction'),
     isLength = require('./isLength');
 
@@ -75905,10 +79511,14 @@ function isArrayLike(value) {
 module.exports = isArrayLike;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isFunction":912,"./isLength":913}],911:[function(require,module,exports){
 =======
 },{"./isFunction":911,"./isLength":912}],910:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isFunction":912,"./isLength":913}],911:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root'),
     stubFalse = require('./stubFalse');
 
@@ -75949,10 +79559,14 @@ var isBuffer = nativeIsBuffer || stubFalse;
 module.exports = isBuffer;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":897,"./stubFalse":922}],912:[function(require,module,exports){
 =======
 },{"./_root":896,"./stubFalse":921}],911:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":897,"./stubFalse":922}],912:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetTag = require('./_baseGetTag'),
     isObject = require('./isObject');
 
@@ -75992,10 +79606,14 @@ function isFunction(value) {
 module.exports = isFunction;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetTag":835,"./isObject":914}],913:[function(require,module,exports){
 =======
 },{"./_baseGetTag":834,"./isObject":913}],912:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetTag":835,"./isObject":914}],913:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /** Used as references for various `Number` constants. */
 var MAX_SAFE_INTEGER = 9007199254740991;
 
@@ -76033,10 +79651,14 @@ function isLength(value) {
 module.exports = isLength;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],914:[function(require,module,exports){
 =======
 },{}],913:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],914:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
@@ -76070,6 +79692,7 @@ function isObject(value) {
 module.exports = isObject;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],915:[function(require,module,exports){
 arguments[4][622][0].apply(exports,arguments)
 },{"dup":622}],916:[function(require,module,exports){
@@ -76078,6 +79701,11 @@ arguments[4][622][0].apply(exports,arguments)
 arguments[4][621][0].apply(exports,arguments)
 },{"dup":621}],915:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],915:[function(require,module,exports){
+arguments[4][622][0].apply(exports,arguments)
+},{"dup":622}],916:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseGetTag = require('./_baseGetTag'),
     isObjectLike = require('./isObjectLike');
 
@@ -76109,10 +79737,14 @@ function isSymbol(value) {
 module.exports = isSymbol;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseGetTag":835,"./isObjectLike":915}],917:[function(require,module,exports){
 =======
 },{"./_baseGetTag":834,"./isObjectLike":914}],916:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseGetTag":835,"./isObjectLike":915}],917:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var baseIsTypedArray = require('./_baseIsTypedArray'),
     baseUnary = require('./_baseUnary'),
     nodeUtil = require('./_nodeUtil');
@@ -76142,10 +79774,14 @@ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedA
 module.exports = isTypedArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_baseIsTypedArray":838,"./_baseUnary":842,"./_nodeUtil":894}],918:[function(require,module,exports){
 =======
 },{"./_baseIsTypedArray":837,"./_baseUnary":841,"./_nodeUtil":893}],917:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_baseIsTypedArray":838,"./_baseUnary":842,"./_nodeUtil":894}],918:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeys = require('./_baseKeys'),
     isArrayLike = require('./isArrayLike');
@@ -76185,10 +79821,14 @@ function keys(object) {
 module.exports = keys;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_arrayLikeKeys":824,"./_baseKeys":839,"./isArrayLike":910}],919:[function(require,module,exports){
 =======
 },{"./_arrayLikeKeys":823,"./_baseKeys":838,"./isArrayLike":909}],918:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_arrayLikeKeys":824,"./_baseKeys":839,"./isArrayLike":910}],919:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var arrayLikeKeys = require('./_arrayLikeKeys'),
     baseKeysIn = require('./_baseKeysIn'),
     isArrayLike = require('./isArrayLike');
@@ -76223,10 +79863,14 @@ function keysIn(object) {
 module.exports = keysIn;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_arrayLikeKeys":824,"./_baseKeysIn":840,"./isArrayLike":910}],920:[function(require,module,exports){
 =======
 },{"./_arrayLikeKeys":823,"./_baseKeysIn":839,"./isArrayLike":909}],919:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_arrayLikeKeys":824,"./_baseKeysIn":840,"./isArrayLike":910}],920:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var root = require('./_root');
 
 /**
@@ -76252,10 +79896,14 @@ var now = function() {
 module.exports = now;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./_root":897}],921:[function(require,module,exports){
 =======
 },{"./_root":896}],920:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./_root":897}],921:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * This method returns a new empty array.
  *
@@ -76281,10 +79929,14 @@ function stubArray() {
 module.exports = stubArray;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],922:[function(require,module,exports){
 =======
 },{}],921:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],922:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /**
  * This method returns `false`.
  *
@@ -76305,10 +79957,14 @@ function stubFalse() {
 module.exports = stubFalse;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],923:[function(require,module,exports){
 =======
 },{}],922:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],923:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var debounce = require('./debounce'),
     isObject = require('./isObject');
 
@@ -76380,10 +80036,14 @@ function throttle(func, wait, options) {
 module.exports = throttle;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./debounce":906,"./isObject":914}],924:[function(require,module,exports){
 =======
 },{"./debounce":905,"./isObject":913}],923:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./debounce":906,"./isObject":914}],924:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 var isObject = require('./isObject'),
     isSymbol = require('./isSymbol');
 
@@ -76452,6 +80112,7 @@ function toNumber(value) {
 module.exports = toNumber;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./isObject":914,"./isSymbol":916}],925:[function(require,module,exports){
 module.exports = require('./lib/index');
 
@@ -76462,6 +80123,12 @@ module.exports = require('./lib/index');
 
 },{"./lib/index":925}],925:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./isObject":914,"./isSymbol":916}],925:[function(require,module,exports){
+module.exports = require('./lib/index');
+
+},{"./lib/index":926}],926:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 'use strict';
 
@@ -76494,10 +80161,14 @@ var result = (0, _ponyfill2['default'])(root);
 exports['default'] = result;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./ponyfill":927}],927:[function(require,module,exports){
 =======
 },{"./ponyfill":926}],926:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./ponyfill":927}],927:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -76522,10 +80193,14 @@ function symbolObservablePonyfill(root) {
 	return result;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],928:[function(require,module,exports){
 =======
 },{}],927:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],928:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*!
  * URI.js - Mutating URLs
  * IPv6 Support
@@ -76713,10 +80388,14 @@ function symbolObservablePonyfill(root) {
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],929:[function(require,module,exports){
 =======
 },{}],928:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],929:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*!
  * URI.js - Mutating URLs
  * Second Level Domain (SLD) Support
@@ -76959,10 +80638,14 @@ function symbolObservablePonyfill(root) {
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],930:[function(require,module,exports){
 =======
 },{}],929:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],930:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 /*! https://mths.be/punycode v1.4.0 by @mathias */
 ;(function(root) {
@@ -77500,10 +81183,14 @@ function symbolObservablePonyfill(root) {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],931:[function(require,module,exports){
 =======
 },{}],930:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],931:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 
 var rng;
@@ -77540,10 +81227,14 @@ module.exports = rng;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{}],932:[function(require,module,exports){
 =======
 },{}],931:[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{}],932:[function(require,module,exports){
+>>>>>>> rebuild after rebase
 //     uuid.js
 //
 //     Copyright (c) 2010-2012 Robert Kieffer
@@ -77729,10 +81420,14 @@ uuid.unparse = unparse;
 module.exports = uuid;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./rng":931}],"accounting":[function(require,module,exports){
 =======
 },{"./rng":930}],"accounting":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./rng":931}],"accounting":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*!
  * accounting.js v0.3.2
  * Copyright 2011, Joss Crowcroft
@@ -83568,10 +87263,14 @@ module.exports = uuid;
 module.exports = require('./dist/commonjs/index.js').default;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./dist/commonjs/index.js":485}],"jquery.mmenu":[function(require,module,exports){
 =======
 },{"./dist/commonjs/index.js":484}],"jquery.mmenu":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./dist/commonjs/index.js":485}],"jquery.mmenu":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*	
  * jQuery mmenu v4.5.7
  * @requires jQuery 1.7.0 or later
@@ -93815,10 +97514,14 @@ var _Jss2 = _interopRequireDefault(_Jss);
 exports['default'] = new _Jss2['default']();
 module.exports = exports['default'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./Jss":491}],"lodash":[function(require,module,exports){
 =======
 },{"./Jss":490}],"lodash":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./Jss":491}],"lodash":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 (function (global){
 /**
  * @license
@@ -109659,19 +113362,27 @@ if (typeof Object.create !== "function") {
 module.exports = require('./src/js/main');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./src/js/main":585}],"react-dom":[function(require,module,exports){
 =======
 },{"./src/js/main":583}],"react-dom":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./src/js/main":585}],"react-dom":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 module.exports = require('react/lib/ReactDOM');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react/lib/ReactDOM":659}],"react-nouislider":[function(require,module,exports){
 =======
 },{"react/lib/ReactDOM":658}],"react-nouislider":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react/lib/ReactDOM":659}],"react-nouislider":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -109812,10 +113523,14 @@ Nouislider.propTypes = {
 module.exports = Nouislider;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"nouislider-algolia-fork":576,"react":"react"}],"react-redux":[function(require,module,exports){
 =======
 },{"nouislider-algolia-fork":575,"react":"react"}],"react-redux":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"nouislider-algolia-fork":576,"react":"react"}],"react-redux":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -109834,10 +113549,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 exports.Provider = _Provider2["default"];
 exports.connect = _connect2["default"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./components/Provider":608,"./components/connect":609}],"react-spinjs":[function(require,module,exports){
 =======
 },{"./components/Provider":607,"./components/connect":608}],"react-spinjs":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./components/Provider":608,"./components/connect":609}],"react-spinjs":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -109927,6 +113646,7 @@ exports['default'] = ReactSpinner;
 module.exports = exports['default'];
 // config will overwrite anything else
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"react":"react","spin.js":797}],"react-stickynode":[function(require,module,exports){
 module.exports = require('./dist/Sticky');
 
@@ -109937,15 +113657,25 @@ module.exports = require('./dist/Sticky');
 
 },{"./dist/Sticky":623}],"react":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"react":"react","spin.js":797}],"react-stickynode":[function(require,module,exports){
+module.exports = require('./dist/Sticky');
+
+},{"./dist/Sticky":624}],"react":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 module.exports = require('./lib/React');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./lib/React":648}],"redux-thunk":[function(require,module,exports){
 =======
 },{"./lib/React":647}],"redux-thunk":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./lib/React":648}],"redux-thunk":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 'use strict';
 
 exports.__esModule = true;
@@ -110019,10 +113749,14 @@ exports.applyMiddleware = _applyMiddleware2['default'];
 exports.compose = _compose2['default'];
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./applyMiddleware":781,"./bindActionCreators":782,"./combineReducers":783,"./compose":784,"./createStore":785,"./utils/warning":786,"_process":601}],"reqwest":[function(require,module,exports){
 =======
 },{"./applyMiddleware":780,"./bindActionCreators":781,"./combineReducers":782,"./compose":783,"./createStore":784,"./utils/warning":785,"_process":599}],"reqwest":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./applyMiddleware":781,"./bindActionCreators":782,"./combineReducers":783,"./compose":784,"./createStore":785,"./utils/warning":786,"_process":601}],"reqwest":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 /*!
   * Reqwest! A general purpose XHR connection manager
   * license MIT (c) Dustin Diaz 2014
@@ -111386,10 +115120,14 @@ exports.default = timm;
 
 }).call(this,require('_process'))
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"_process":601}],"tinycolor2":[function(require,module,exports){
 =======
 },{"_process":599}],"tinycolor2":[function(require,module,exports){
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"_process":601}],"tinycolor2":[function(require,module,exports){
+>>>>>>> rebuild after rebase
 // TinyColor v1.4.1
 // https://github.com/bgrins/TinyColor
 // Brian Grinstead, MIT License
@@ -114828,7 +118566,11 @@ else {
 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 },{"./IPv6":928,"./SecondLevelDomains":929,"./punycode":930}]},{},[3]);
 =======
 },{"./IPv6":927,"./SecondLevelDomains":928,"./punycode":929}]},{},[3]);
 >>>>>>> fix i18n, move filter toggle classes
+=======
+},{"./IPv6":928,"./SecondLevelDomains":929,"./punycode":930}]},{},[3]);
+>>>>>>> rebuild after rebase
