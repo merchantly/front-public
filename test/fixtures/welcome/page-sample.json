@@ -1,6 +1,9 @@
 {
   "layoutProps": {
-    "flash": [],
+    "flash": [{
+      "name": "sample flash",
+      "msg": "sample flash message"
+    }],
     "menuBottomProps": {
       "leftItems": [
         {
