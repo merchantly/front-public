@@ -387,7 +387,7 @@ function fetchOperatorState(force) {
   };
 }
 
-},{"../../routes/api":337,"../helpers/dom":286,"../middleware/api":293,"babel-runtime/core-js/promise":349,"babel-runtime/helpers/defineProperty":354,"query-string":599}],7:[function(require,module,exports){
+},{"../../routes/api":337,"../helpers/dom":286,"../middleware/api":293,"babel-runtime/core-js/promise":349,"babel-runtime/helpers/defineProperty":354,"query-string":600}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -34415,7 +34415,7 @@ var Dispatcher = (function () {
 
 module.exports = Dispatcher;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":469}],469:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":469}],469:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -34467,7 +34467,7 @@ var invariant = function (condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":598}],470:[function(require,module,exports){
+},{"_process":599}],470:[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -36883,7 +36883,7 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 }).call(this,require('_process'))
-},{"_process":598}],488:[function(require,module,exports){
+},{"_process":599}],488:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -42542,7 +42542,7 @@ function closure ( target, options, originalOptions ){
 },{}],576:[function(require,module,exports){
 /*! @preserve
  * numeral.js
- * version : 1.5.4
+ * version : 1.5.6
  * author : Adam Draper
  * license : MIT
  * http://adamwdraper.github.com/Numeral-js/
@@ -42555,7 +42555,7 @@ function closure ( target, options, originalOptions ){
     ************************************/
 
     var numeral,
-        VERSION = '1.5.4',
+        VERSION = '1.5.6',
         // internal storage for language config files
         languages = {},
         defaults = {
@@ -42569,6 +42569,10 @@ function closure ( target, options, originalOptions ){
             zeroFormat: defaults.zeroFormat,
             nullFormat: defaults.nullFormat,
             defaultFormat: defaults.defaultFormat
+        },
+        byteSuffixes = {
+            bytes: ['B','KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+            iec: ['B','KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
         };
 
 
@@ -42625,64 +42629,28 @@ function closure ( target, options, originalOptions ){
     function formatNumeral(n, format, roundingFunction) {
         var output;
 
-        // figure out what kind of format we are dealing with
-        if (format.indexOf('$') > -1) { // currency!!!!!
-            output = formatCurrency(n, format, roundingFunction);
-        } else if (format.indexOf('%') > -1) { // percentage
-            output = formatPercentage(n, format, roundingFunction);
-        } else if (format.indexOf(':') > -1) { // time
-            output = formatTime(n, format);
-        } else { // plain ol' numbers or bytes
-            output = formatNumber(n._value, format, roundingFunction);
-        }
-
-        // return string
-        return output;
-    }
-
-    // revert to number
-    function unformatNumeral(n, string) {
-        var stringOriginal = string,
-            thousandRegExp,
-            millionRegExp,
-            billionRegExp,
-            trillionRegExp,
-            binarySuffixes = ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'],
-            decimalSuffixes = ['KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-            bytesMultiplier = false,
-            power;
-
-        if (string.indexOf(':') > -1) {
-            n._value = unformatTime(string);
+        if (n._value === 0 && options.zeroFormat !== null) {
+            output = options.zeroFormat;
+        } else if (n._value === null && options.nullFormat !== null) {
+            output = options.nullFormat;
         } else {
-            if (string === options.zeroFormat || string === options.nullFormat) {
-                n._value = 0;
+            // figure out what kind of format we are dealing with
+            if (format.indexOf('$') > -1) {
+                output = formatCurrency(n, format, roundingFunction);
+            } else if (format.indexOf('%') > -1) {
+                output = formatPercentage(n, format, roundingFunction);
+            } else if (format.indexOf(':') > -1) {
+                output = formatTime(n, format);
+            } else if (format.indexOf('b') > -1 || format.indexOf('ib') > -1) {
+                output = formatBytes(n, format, roundingFunction);
+            } else if (format.indexOf('o') > -1) {
+                output = formatOrdinal(n, format, roundingFunction);
             } else {
-                if (languages[options.currentLanguage].delimiters.decimal !== '.') {
-                    string = string.replace(/\./g, '').replace(languages[options.currentLanguage].delimiters.decimal, '.');
-                }
-
-                // see if abbreviations are there so that we can multiply to the correct number
-                thousandRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.thousand + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
-                millionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.million + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
-                billionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.billion + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
-                trillionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.trillion + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
-
-                // see if bytes are there so that we can multiply to the correct number
-                for (power = 0; power <= binarySuffixes.length && !bytesMultiplier; power++) {
-                    if (string.indexOf(binarySuffixes[power]) > -1) { bytesMultiplier = Math.pow(1024, power + 1); }
-                    else if (string.indexOf(decimalSuffixes[power]) > -1) { bytesMultiplier = Math.pow(1000, power + 1); }
-                    else { bytesMultiplier = false; }
-                }
-
-                // do some math to create our number
-                n._value = ((bytesMultiplier) ? bytesMultiplier : 1) * ((stringOriginal.match(thousandRegExp)) ? Math.pow(10, 3) : 1) * ((stringOriginal.match(millionRegExp)) ? Math.pow(10, 6) : 1) * ((stringOriginal.match(billionRegExp)) ? Math.pow(10, 9) : 1) * ((stringOriginal.match(trillionRegExp)) ? Math.pow(10, 12) : 1) * ((string.indexOf('%') > -1) ? 0.01 : 1) * (((string.split('-').length + Math.min(string.split('(').length - 1, string.split(')').length - 1)) % 2) ? 1 : -1) * Number(string.replace(/[^0-9\.]+/g, ''));
-
-                // round if we are talking about bytes
-                n._value = (bytesMultiplier) ? Math.ceil(n._value) : n._value;
+                output = formatNumber(n._value, format, roundingFunction);
             }
         }
-        return n._value;
+
+        return output;
     }
 
     function formatCurrency(n, format, roundingFunction) {
@@ -42705,7 +42673,7 @@ function closure ( target, options, originalOptions ){
         }
 
         // format the number
-        output = formatNumber(n._value, format, roundingFunction);
+        output = formatNumber(n._value, format, roundingFunction, false);
 
         // position the symbol
         if (symbolIndex <= 1) {
@@ -42760,13 +42728,254 @@ function closure ( target, options, originalOptions ){
         return output;
     }
 
+    function formatBytes(n, format, roundingFunction) {
+        var output,
+            suffixes = format.indexOf('ib') > -1 ? byteSuffixes.iec : byteSuffixes.bytes,
+            value = n._value,
+            suffix = '',
+            power,
+            min,
+            max;
+
+        // check for space before
+        if (format.indexOf(' b') > -1 || format.indexOf(' ib') > -1) {
+            suffix = ' ';
+            format = format.replace(' ib', '').replace(' b', '');
+        } else {
+            format = format.replace('ib', '').replace('b', '');
+        }
+
+        for (power = 0; power <= suffixes.length; power++) {
+            min = Math.pow(1024, power);
+            max = Math.pow(1024, power + 1);
+
+            if (value === null || value === 0 || value >= min && value < max) {
+                suffix += suffixes[power];
+
+                if (min > 0) {
+                    value = value / min;
+                }
+
+                break;
+            }
+        }
+
+        output = formatNumber(value, format, roundingFunction);
+
+        return output + suffix;
+    }
+
+    function formatOrdinal(n, format, roundingFunction) {
+        var output,
+            ordinal = '';
+
+        // check for space before
+        if (format.indexOf(' o') > -1) {
+            ordinal = ' ';
+            format = format.replace(' o', '');
+        } else {
+            format = format.replace('o', '');
+        }
+
+        ordinal += languages[options.currentLanguage].ordinal(n._value);
+
+        output = formatNumber(n._value, format, roundingFunction);
+
+        return output + ordinal;
+    }
+
     function formatTime(n) {
         var hours = Math.floor(n._value / 60 / 60),
             minutes = Math.floor((n._value - (hours * 60 * 60)) / 60),
             seconds = Math.round(n._value - (hours * 60 * 60) - (minutes * 60));
+
         return hours + ':' + ((minutes < 10) ? '0' + minutes : minutes) + ':' + ((seconds < 10) ? '0' + seconds : seconds);
     }
 
+    function formatNumber(value, format, roundingFunction) {
+        var negP = false,
+            signed = false,
+            optDec = false,
+            abbr = '',
+            abbrK = false, // force abbreviation to thousands
+            abbrM = false, // force abbreviation to millions
+            abbrB = false, // force abbreviation to billions
+            abbrT = false, // force abbreviation to trillions
+            abbrForce = false, // force abbreviation
+            abs,
+            min,
+            max,
+            power,
+            w,
+            precision,
+            thousands,
+            d = '',
+            neg = false;
+
+        if (value === null) {
+            value = 0;
+        }
+
+        abs = Math.abs(value);
+
+        // see if we should use parentheses for negative number or if we should prefix with a sign
+        // if both are present we default to parentheses
+        if (format.indexOf('(') > -1) {
+            negP = true;
+            format = format.slice(1, -1);
+        } else if (format.indexOf('+') > -1) {
+            signed = true;
+            format = format.replace(/\+/g, '');
+        }
+
+        // see if abbreviation is wanted
+        if (format.indexOf('a') > -1) {
+            // check if abbreviation is specified
+            abbrK = format.indexOf('aK') >= 0;
+            abbrM = format.indexOf('aM') >= 0;
+            abbrB = format.indexOf('aB') >= 0;
+            abbrT = format.indexOf('aT') >= 0;
+            abbrForce = abbrK || abbrM || abbrB || abbrT;
+
+            // check for space before abbreviation
+            if (format.indexOf(' a') > -1) {
+                abbr = ' ';
+            }
+
+            format = format.replace(new RegExp(abbr + 'a[KMBT]?'), '');
+
+            if (abs >= Math.pow(10, 12) && !abbrForce || abbrT) {
+                // trillion
+                abbr = abbr + languages[options.currentLanguage].abbreviations.trillion;
+                value = value / Math.pow(10, 12);
+            } else if (abs < Math.pow(10, 12) && abs >= Math.pow(10, 9) && !abbrForce || abbrB) {
+                // billion
+                abbr = abbr + languages[options.currentLanguage].abbreviations.billion;
+                value = value / Math.pow(10, 9);
+            } else if (abs < Math.pow(10, 9) && abs >= Math.pow(10, 6) && !abbrForce || abbrM) {
+                // million
+                abbr = abbr + languages[options.currentLanguage].abbreviations.million;
+                value = value / Math.pow(10, 6);
+            } else if (abs < Math.pow(10, 6) && abs >= Math.pow(10, 3) && !abbrForce || abbrK) {
+                // thousand
+                abbr = abbr + languages[options.currentLanguage].abbreviations.thousand;
+                value = value / Math.pow(10, 3);
+            }
+        }
+
+
+        if (format.indexOf('[.]') > -1) {
+            optDec = true;
+            format = format.replace('[.]', '.');
+        }
+
+        w = value.toString().split('.')[0];
+        precision = format.split('.')[1];
+        thousands = format.indexOf(',');
+
+        if (precision) {
+            if (precision.indexOf('[') > -1) {
+                precision = precision.replace(']', '');
+                precision = precision.split('[');
+                d = toFixed(value, (precision[0].length + precision[1].length), roundingFunction, precision[1].length);
+            } else {
+                d = toFixed(value, precision.length, roundingFunction);
+            }
+
+            w = d.split('.')[0];
+
+            if (d.indexOf('.') > -1) {
+                d = languages[options.currentLanguage].delimiters.decimal + d.split('.')[1];
+            } else {
+                d = '';
+            }
+
+            if (optDec && Number(d.slice(1)) === 0) {
+                d = '';
+            }
+        } else {
+            w = toFixed(value, null, roundingFunction);
+        }
+
+        // format number
+        if (w.indexOf('-') > -1) {
+            w = w.slice(1);
+            neg = true;
+        }
+
+        if (thousands > -1) {
+            w = w.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1' + languages[options.currentLanguage].delimiters.thousands);
+        }
+
+        if (format.indexOf('.') === 0) {
+            w = '';
+        }
+
+        return ((negP && neg) ? '(' : '') + ((!negP && neg) ? '-' : '') + ((!neg && signed) ? '+' : '') + w + d + ((abbr) ? abbr : '') + ((negP && neg) ? ')' : '');
+    }
+
+
+    /************************************
+        Unformatting
+    ************************************/
+
+    // revert to number
+    function unformatNumeral(n, string) {
+        var stringOriginal = string,
+            thousandRegExp,
+            millionRegExp,
+            billionRegExp,
+            trillionRegExp,
+            bytesMultiplier = false,
+            power,
+            value;
+
+        if (string.indexOf(':') > -1) {
+            value = unformatTime(string);
+        } else {
+            if (string === options.zeroFormat || string === options.nullFormat) {
+                value = 0;
+            } else {
+                if (languages[options.currentLanguage].delimiters.decimal !== '.') {
+                    string = string.replace(/\./g, '').replace(languages[options.currentLanguage].delimiters.decimal, '.');
+                }
+
+                // see if abbreviations are there so that we can multiply to the correct number
+                thousandRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.thousand + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
+                millionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.million + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
+                billionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.billion + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
+                trillionRegExp = new RegExp('[^a-zA-Z]' + languages[options.currentLanguage].abbreviations.trillion + '(?:\\)|(\\' + languages[options.currentLanguage].currency.symbol + ')?(?:\\))?)?$');
+
+                // see if bytes are there so that we can multiply to the correct number
+                for (power = 1; power <= byteSuffixes.bytes.length; power++) {
+                    bytesMultiplier = ((string.indexOf(byteSuffixes.bytes[power]) > -1) || (string.indexOf(byteSuffixes.iec[power]) > -1))? Math.pow(1024, power) : false;
+
+                    if (bytesMultiplier) {
+                        break;
+                    }
+                }
+
+                // do some math to create our number
+                value = bytesMultiplier ? bytesMultiplier : 1;
+                value *= stringOriginal.match(thousandRegExp) ? Math.pow(10, 3) : 1;
+                value *= stringOriginal.match(millionRegExp) ? Math.pow(10, 6) : 1;
+                value *= stringOriginal.match(billionRegExp) ? Math.pow(10, 9) : 1;
+                value *= stringOriginal.match(trillionRegExp) ? Math.pow(10, 12) : 1;
+                // check for percentage
+                value *= string.indexOf('%') > -1 ? 0.01 : 1;
+                // check for negative number
+                value *= (string.split('-').length + Math.min(string.split('(').length - 1, string.split(')').length - 1)) % 2 ? 1 : -1;
+                // remove non numbers
+                value *= Number(string.replace(/[^0-9\.]+/g, ''));
+                // round if we are talking about bytes
+                value = bytesMultiplier ? Math.ceil(value) : value;
+            }
+        }
+
+        n._value = value;
+
+        return n._value;
+    }
     function unformatTime(string) {
         var timeArray = string.split(':'),
             seconds = 0;
@@ -42787,192 +42996,6 @@ function closure ( target, options, originalOptions ){
         return Number(seconds);
     }
 
-    function formatNumber(value, format, roundingFunction) {
-        var negP = false,
-            signed = false,
-            optDec = false,
-            abbr = '',
-            abbrK = false, // force abbreviation to thousands
-            abbrM = false, // force abbreviation to millions
-            abbrB = false, // force abbreviation to billions
-            abbrT = false, // force abbreviation to trillions
-            abbrForce = false, // force abbreviation
-            bytes = '',
-            ord = '',
-            abs = Math.abs(value),
-            binarySuffixes = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'],
-            decimalSuffixes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
-            min,
-            max,
-            power,
-            w,
-            precision,
-            thousands,
-            d = '',
-            neg = false;
-
-        // check if number is zero and a custom zero format has been set
-        if (value === 0 && options.zeroFormat !== null) {
-            return options.zeroFormat;
-        } else if (value === null && options.nullFormat !== null) {
-            return options.nullFormat;
-        } else {
-            // see if we should use parentheses for negative number or if we should prefix with a sign
-            // if both are present we default to parentheses
-            if (format.indexOf('(') > -1) {
-                negP = true;
-                format = format.slice(1, -1);
-            } else if (format.indexOf('+') > -1) {
-                signed = true;
-                format = format.replace(/\+/g, '');
-            }
-
-            // see if abbreviation is wanted
-            if (format.indexOf('a') > -1) {
-                // check if abbreviation is specified
-                abbrK = format.indexOf('aK') >= 0;
-                abbrM = format.indexOf('aM') >= 0;
-                abbrB = format.indexOf('aB') >= 0;
-                abbrT = format.indexOf('aT') >= 0;
-                abbrForce = abbrK || abbrM || abbrB || abbrT;
-
-                // check for space before abbreviation
-                if (format.indexOf(' a') > -1) {
-                    abbr = ' ';
-                }
-
-                format = format.replace(new RegExp(abbr + 'a[KMBT]?'), '');
-
-                if (abs >= Math.pow(10, 12) && !abbrForce || abbrT) {
-                    // trillion
-                    abbr = abbr + languages[options.currentLanguage].abbreviations.trillion;
-                    value = value / Math.pow(10, 12);
-                } else if (abs < Math.pow(10, 12) && abs >= Math.pow(10, 9) && !abbrForce || abbrB) {
-                    // billion
-                    abbr = abbr + languages[options.currentLanguage].abbreviations.billion;
-                    value = value / Math.pow(10, 9);
-                } else if (abs < Math.pow(10, 9) && abs >= Math.pow(10, 6) && !abbrForce || abbrM) {
-                    // million
-                    abbr = abbr + languages[options.currentLanguage].abbreviations.million;
-                    value = value / Math.pow(10, 6);
-                } else if (abs < Math.pow(10, 6) && abs >= Math.pow(10, 3) && !abbrForce || abbrK) {
-                    // thousand
-                    abbr = abbr + languages[options.currentLanguage].abbreviations.thousand;
-                    value = value / Math.pow(10, 3);
-                }
-            }
-
-            // see if we are formatting binary bytes
-            if (format.indexOf('b') > -1) {
-                // check for space before
-                if (format.indexOf(' b') > -1) {
-                    bytes = ' ';
-                    format = format.replace(' b', '');
-                } else {
-                    format = format.replace('b', '');
-                }
-
-                for (power = 0; power <= binarySuffixes.length; power++) {
-                    min = Math.pow(1024, power);
-                    max = Math.pow(1024, power + 1);
-
-                    if (value >= min && value < max) {
-                        bytes = bytes + binarySuffixes[power];
-                        if (min > 0) {
-                            value = value / min;
-                        }
-                        break;
-                    }
-                }
-            }
-
-            // see if we are formatting decimal bytes
-            if (format.indexOf('d') > -1) {
-                // check for space before
-                if (format.indexOf(' d') > -1) {
-                    bytes = ' ';
-                    format = format.replace(' d', '');
-                } else {
-                    format = format.replace('d', '');
-                }
-
-                for (power = 0; power <= decimalSuffixes.length; power++) {
-                    min = Math.pow(1000, power);
-                    max = Math.pow(1000, power+1);
-
-                    if (value >= min && value < max) {
-                        bytes = bytes + decimalSuffixes[power];
-                        if (min > 0) {
-                            value = value / min;
-                        }
-                        break;
-                    }
-                }
-            }
-
-            // see if ordinal is wanted
-            if (format.indexOf('o') > -1) {
-                // check for space before
-                if (format.indexOf(' o') > -1) {
-                    ord = ' ';
-                    format = format.replace(' o', '');
-                } else {
-                    format = format.replace('o', '');
-                }
-
-                ord = ord + languages[options.currentLanguage].ordinal(value);
-            }
-
-            if (format.indexOf('[.]') > -1) {
-                optDec = true;
-                format = format.replace('[.]', '.');
-            }
-
-            w = value.toString().split('.')[0];
-            precision = format.split('.')[1];
-            thousands = format.indexOf(',');
-
-            if (precision) {
-                if (precision.indexOf('[') > -1) {
-                    precision = precision.replace(']', '');
-                    precision = precision.split('[');
-                    d = toFixed(value, (precision[0].length + precision[1].length), roundingFunction, precision[1].length);
-                } else {
-                    d = toFixed(value, precision.length, roundingFunction);
-                }
-
-                w = d.split('.')[0];
-
-                if (d.indexOf('.') > -1) {
-                    d = languages[options.currentLanguage].delimiters.decimal + d.split('.')[1];
-                } else {
-                    d = '';
-                }
-
-                if (optDec && Number(d.slice(1)) === 0) {
-                    d = '';
-                }
-            } else {
-                w = toFixed(value, null, roundingFunction);
-            }
-
-            // format number
-            if (w.indexOf('-') > -1) {
-                w = w.slice(1);
-                neg = true;
-            }
-
-            if (thousands > -1) {
-                w = w.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1' + languages[options.currentLanguage].delimiters.thousands);
-            }
-
-            if (format.indexOf('.') === 0) {
-                w = '';
-            }
-
-            return ((negP && neg) ? '(' : '') + ((!negP && neg) ? '-' : '') + ((!neg && signed) ? '+' : '') + w + d + ((ord) ? ord : '') + ((abbr) ? abbr : '') + ((bytes) ? bytes : '') + ((negP && neg) ? ')' : '');
-        }
-    }
 
     /************************************
         Top Level Functions
@@ -42987,6 +43010,8 @@ function closure ( target, options, originalOptions ){
             input = null;
         } else if (!Number(input)) {
             input = numeral.fn.unformat(input);
+        } else {
+            input = Number(input);
         }
 
         return new Numeral(input);
@@ -43083,7 +43108,6 @@ function closure ( target, options, originalOptions ){
     };
 
     numeral.validate = function(val, culture) {
-
         var _decimalSep,
             _thousandSep,
             _currSymbol,
@@ -43263,17 +43287,18 @@ function closure ( target, options, originalOptions ){
             return numeral(this);
         },
 
-        format : function (inputString, roundingFunction) {
+        format: function (inputString, roundingFunction) {
             return formatNumeral(this,
-                  inputString ? inputString : options.defaultFormat,
-                  (roundingFunction !== undefined) ? roundingFunction : Math.round
-              );
+                inputString ? inputString : options.defaultFormat,
+                roundingFunction !== undefined ? roundingFunction : Math.round
+            );
         },
 
-        unformat : function (inputString) {
+        unformat: function (inputString) {
             if (Object.prototype.toString.call(inputString) === '[object Number]') {
                 return inputString;
             }
+
             return unformatNumeral(this, inputString ? inputString : options.defaultFormat);
         },
 
@@ -43362,6 +43387,91 @@ function closure ( target, options, originalOptions ){
 
 },{}],577:[function(require,module,exports){
 'use strict';
+/* eslint-disable no-unused-vars */
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var propIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+function toObject(val) {
+	if (val === null || val === undefined) {
+		throw new TypeError('Object.assign cannot be called with null or undefined');
+	}
+
+	return Object(val);
+}
+
+function shouldUseNative() {
+	try {
+		if (!Object.assign) {
+			return false;
+		}
+
+		// Detect buggy property enumeration order in older V8 versions.
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
+		var test1 = new String('abc');  // eslint-disable-line
+		test1[5] = 'de';
+		if (Object.getOwnPropertyNames(test1)[0] === '5') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test2 = {};
+		for (var i = 0; i < 10; i++) {
+			test2['_' + String.fromCharCode(i)] = i;
+		}
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
+			return test2[n];
+		});
+		if (order2.join('') !== '0123456789') {
+			return false;
+		}
+
+		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
+		var test3 = {};
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
+			test3[letter] = letter;
+		});
+		if (Object.keys(Object.assign({}, test3)).join('') !==
+				'abcdefghijklmnopqrst') {
+			return false;
+		}
+
+		return true;
+	} catch (e) {
+		// We don't expect any of the above to throw, but better to be safe.
+		return false;
+	}
+}
+
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+	var from;
+	var to = toObject(target);
+	var symbols;
+
+	for (var s = 1; s < arguments.length; s++) {
+		from = Object(arguments[s]);
+
+		for (var key in from) {
+			if (hasOwnProperty.call(from, key)) {
+				to[key] = from[key];
+			}
+		}
+
+		if (Object.getOwnPropertySymbols) {
+			symbols = Object.getOwnPropertySymbols(from);
+			for (var i = 0; i < symbols.length; i++) {
+				if (propIsEnumerable.call(from, symbols[i])) {
+					to[symbols[i]] = from[symbols[i]];
+				}
+			}
+		}
+	}
+
+	return to;
+};
+
+},{}],578:[function(require,module,exports){
+'use strict';
 
 function oldAdd(element, className) {
   var classes = element.className.split(' ');
@@ -43404,7 +43514,7 @@ exports.list = function (element) {
   }
 };
 
-},{}],578:[function(require,module,exports){
+},{}],579:[function(require,module,exports){
 'use strict';
 
 var DOM = {};
@@ -43490,7 +43600,7 @@ DOM.queryChildren = function (element, selector) {
 
 module.exports = DOM;
 
-},{}],579:[function(require,module,exports){
+},{}],580:[function(require,module,exports){
 'use strict';
 
 var EventElement = function (element) {
@@ -43563,7 +43673,7 @@ EventManager.prototype.once = function (element, eventName, handler) {
 
 module.exports = EventManager;
 
-},{}],580:[function(require,module,exports){
+},{}],581:[function(require,module,exports){
 'use strict';
 
 module.exports = (function () {
@@ -43578,7 +43688,7 @@ module.exports = (function () {
   };
 })();
 
-},{}],581:[function(require,module,exports){
+},{}],582:[function(require,module,exports){
 'use strict';
 
 var cls = require('./class');
@@ -43663,7 +43773,7 @@ exports.env = {
   supportsIePointer: window.navigator.msMaxTouchPoints !== null
 };
 
-},{"./class":577,"./dom":578}],582:[function(require,module,exports){
+},{"./class":578,"./dom":579}],583:[function(require,module,exports){
 'use strict';
 
 var destroy = require('./plugin/destroy');
@@ -43676,7 +43786,7 @@ module.exports = {
   destroy: destroy
 };
 
-},{"./plugin/destroy":584,"./plugin/initialize":592,"./plugin/update":596}],583:[function(require,module,exports){
+},{"./plugin/destroy":585,"./plugin/initialize":593,"./plugin/update":597}],584:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -43694,7 +43804,7 @@ module.exports = {
   theme: 'default'
 };
 
-},{}],584:[function(require,module,exports){
+},{}],585:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -43718,7 +43828,7 @@ module.exports = function (element) {
   instances.remove(element);
 };
 
-},{"../lib/dom":578,"../lib/helper":581,"./instances":593}],585:[function(require,module,exports){
+},{"../lib/dom":579,"../lib/helper":582,"./instances":594}],586:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -43759,7 +43869,7 @@ module.exports = function (element) {
   bindClickRailHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594,"../update-scroll":595}],586:[function(require,module,exports){
+},{"../instances":594,"../update-geometry":595,"../update-scroll":596}],587:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -43864,7 +43974,7 @@ module.exports = function (element) {
   bindMouseScrollYHandler(element, i);
 };
 
-},{"../../lib/dom":578,"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],587:[function(require,module,exports){
+},{"../../lib/dom":579,"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],588:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44020,7 +44130,7 @@ module.exports = function (element) {
   bindKeyboardHandler(element, i);
 };
 
-},{"../../lib/dom":578,"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],588:[function(require,module,exports){
+},{"../../lib/dom":579,"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],589:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -44163,7 +44273,7 @@ module.exports = function (element) {
   bindMouseWheelHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594,"../update-scroll":595}],589:[function(require,module,exports){
+},{"../instances":594,"../update-geometry":595,"../update-scroll":596}],590:[function(require,module,exports){
 'use strict';
 
 var instances = require('../instances');
@@ -44180,7 +44290,7 @@ module.exports = function (element) {
   bindNativeScrollHandler(element, i);
 };
 
-},{"../instances":593,"../update-geometry":594}],590:[function(require,module,exports){
+},{"../instances":594,"../update-geometry":595}],591:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44297,7 +44407,7 @@ module.exports = function (element) {
   bindSelectionHandler(element, i);
 };
 
-},{"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],591:[function(require,module,exports){
+},{"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],592:[function(require,module,exports){
 'use strict';
 
 var _ = require('../../lib/helper');
@@ -44480,7 +44590,7 @@ module.exports = function (element) {
   bindTouchHandler(element, i, _.env.supportsTouch, _.env.supportsIePointer);
 };
 
-},{"../../lib/helper":581,"../instances":593,"../update-geometry":594,"../update-scroll":595}],592:[function(require,module,exports){
+},{"../../lib/helper":582,"../instances":594,"../update-geometry":595,"../update-scroll":596}],593:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -44519,7 +44629,7 @@ module.exports = function (element, userSettings) {
   updateGeometry(element);
 };
 
-},{"../lib/class":577,"../lib/helper":581,"./handler/click-rail":585,"./handler/drag-scrollbar":586,"./handler/keyboard":587,"./handler/mouse-wheel":588,"./handler/native-scroll":589,"./handler/selection":590,"./handler/touch":591,"./instances":593,"./update-geometry":594}],593:[function(require,module,exports){
+},{"../lib/class":578,"../lib/helper":582,"./handler/click-rail":586,"./handler/drag-scrollbar":587,"./handler/keyboard":588,"./handler/mouse-wheel":589,"./handler/native-scroll":590,"./handler/selection":591,"./handler/touch":592,"./instances":594,"./update-geometry":595}],594:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -44628,7 +44738,7 @@ exports.get = function (element) {
   return instances[getId(element)];
 };
 
-},{"../lib/class":577,"../lib/dom":578,"../lib/event-manager":579,"../lib/guid":580,"../lib/helper":581,"./default-setting":583}],594:[function(require,module,exports){
+},{"../lib/class":578,"../lib/dom":579,"../lib/event-manager":580,"../lib/guid":581,"../lib/helper":582,"./default-setting":584}],595:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -44756,7 +44866,7 @@ module.exports = function (element) {
   }
 };
 
-},{"../lib/class":577,"../lib/dom":578,"../lib/helper":581,"./instances":593,"./update-scroll":595}],595:[function(require,module,exports){
+},{"../lib/class":578,"../lib/dom":579,"../lib/helper":582,"./instances":594,"./update-scroll":596}],596:[function(require,module,exports){
 'use strict';
 
 var instances = require('./instances');
@@ -44855,7 +44965,7 @@ module.exports = function (element, axis, value) {
 
 };
 
-},{"./instances":593}],596:[function(require,module,exports){
+},{"./instances":594}],597:[function(require,module,exports){
 'use strict';
 
 var _ = require('../lib/helper');
@@ -44894,7 +45004,7 @@ module.exports = function (element) {
   dom.css(i.scrollbarYRail, 'display', '');
 };
 
-},{"../lib/dom":578,"../lib/helper":581,"./instances":593,"./update-geometry":594,"./update-scroll":595}],597:[function(require,module,exports){
+},{"../lib/dom":579,"../lib/helper":582,"./instances":594,"./update-geometry":595,"./update-scroll":596}],598:[function(require,module,exports){
 (function (process){
 // Generated by CoffeeScript 1.7.1
 (function() {
@@ -44930,7 +45040,7 @@ module.exports = function (element) {
 }).call(this);
 
 }).call(this,require('_process'))
-},{"_process":598}],598:[function(require,module,exports){
+},{"_process":599}],599:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -45112,7 +45222,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],599:[function(require,module,exports){
+},{}],600:[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -45212,92 +45322,7 @@ exports.stringify = function (obj, opts) {
 	}).join('&') : '';
 };
 
-},{"object-assign":600,"strict-uri-encode":797}],600:[function(require,module,exports){
-'use strict';
-/* eslint-disable no-unused-vars */
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (e) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-module.exports = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (Object.getOwnPropertySymbols) {
-			symbols = Object.getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-},{}],601:[function(require,module,exports){
+},{"object-assign":577,"strict-uri-encode":797}],601:[function(require,module,exports){
 (function (global){
 var now = require('performance-now')
   , root = typeof window === 'undefined' ? global : window
@@ -45373,7 +45398,7 @@ module.exports.polyfill = function() {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"performance-now":597}],602:[function(require,module,exports){
+},{"performance-now":598}],602:[function(require,module,exports){
 module.exports = require('react/lib/shallowCompare');
 },{"react/lib/shallowCompare":748}],603:[function(require,module,exports){
 'use strict';
@@ -45655,7 +45680,7 @@ Provider.childContextTypes = {
   store: _storeShape2["default"].isRequired
 };
 }).call(this,require('_process'))
-},{"../utils/storeShape":609,"../utils/warning":610,"_process":598,"react":"react"}],607:[function(require,module,exports){
+},{"../utils/storeShape":609,"../utils/warning":610,"_process":599,"react":"react"}],607:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -46053,7 +46078,7 @@ function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
   };
 }
 }).call(this,require('_process'))
-},{"../utils/shallowEqual":608,"../utils/storeShape":609,"../utils/warning":610,"../utils/wrapActionCreators":611,"_process":598,"hoist-non-react-statics":470,"invariant":487,"lodash/isPlainObject":621,"react":"react"}],608:[function(require,module,exports){
+},{"../utils/shallowEqual":608,"../utils/storeShape":609,"../utils/warning":610,"../utils/wrapActionCreators":611,"_process":599,"hoist-non-react-statics":470,"invariant":487,"lodash/isPlainObject":621,"react":"react"}],608:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -47630,7 +47655,7 @@ ReactPerf.measureMethods(CSSPropertyOperations, 'CSSPropertyOperations', {
 
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
-},{"./CSSProperty":625,"./ReactPerf":693,"./dangerousStyleValue":727,"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/camelizeStyleName":755,"fbjs/lib/hyphenateStyleName":766,"fbjs/lib/memoizeStringOnly":773,"fbjs/lib/warning":778}],627:[function(require,module,exports){
+},{"./CSSProperty":625,"./ReactPerf":693,"./dangerousStyleValue":727,"_process":599,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/camelizeStyleName":755,"fbjs/lib/hyphenateStyleName":766,"fbjs/lib/memoizeStringOnly":773,"fbjs/lib/warning":778}],627:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -47726,7 +47751,7 @@ PooledClass.addPoolingTo(CallbackQueue);
 
 module.exports = CallbackQueue;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./PooledClass":645,"_process":598,"fbjs/lib/invariant":767}],628:[function(require,module,exports){
+},{"./Object.assign":644,"./PooledClass":645,"_process":599,"fbjs/lib/invariant":767}],628:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -48204,7 +48229,7 @@ ReactPerf.measureMethods(DOMChildrenOperations, 'DOMChildrenOperations', {
 
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
-},{"./Danger":633,"./ReactMultiChildUpdateTypes":689,"./ReactPerf":693,"./setInnerHTML":746,"./setTextContent":747,"_process":598,"fbjs/lib/invariant":767}],631:[function(require,module,exports){
+},{"./Danger":633,"./ReactMultiChildUpdateTypes":689,"./ReactPerf":693,"./setInnerHTML":746,"./setTextContent":747,"_process":599,"fbjs/lib/invariant":767}],631:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -48441,7 +48466,7 @@ var DOMProperty = {
 
 module.exports = DOMProperty;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],632:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],632:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -48669,7 +48694,7 @@ ReactPerf.measureMethods(DOMPropertyOperations, 'DOMPropertyOperations', {
 
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
-},{"./DOMProperty":631,"./ReactPerf":693,"./quoteAttributeValueForBrowser":744,"_process":598,"fbjs/lib/warning":778}],633:[function(require,module,exports){
+},{"./DOMProperty":631,"./ReactPerf":693,"./quoteAttributeValueForBrowser":744,"_process":599,"fbjs/lib/warning":778}],633:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -48817,7 +48842,7 @@ var Danger = {
 
 module.exports = Danger;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/createNodesFromMarkup":758,"fbjs/lib/emptyFunction":759,"fbjs/lib/getMarkupWrap":763,"fbjs/lib/invariant":767}],634:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/createNodesFromMarkup":758,"fbjs/lib/emptyFunction":759,"fbjs/lib/getMarkupWrap":763,"fbjs/lib/invariant":767}],634:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -49345,7 +49370,7 @@ var EventPluginHub = {
 
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
-},{"./EventPluginRegistry":638,"./EventPluginUtils":639,"./ReactErrorUtils":678,"./accumulateInto":724,"./forEachAccumulated":732,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],638:[function(require,module,exports){
+},{"./EventPluginRegistry":638,"./EventPluginUtils":639,"./ReactErrorUtils":678,"./accumulateInto":724,"./forEachAccumulated":732,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],638:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49568,7 +49593,7 @@ var EventPluginRegistry = {
 
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],639:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],639:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49773,7 +49798,7 @@ var EventPluginUtils = {
 
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
-},{"./EventConstants":636,"./ReactErrorUtils":678,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],640:[function(require,module,exports){
+},{"./EventConstants":636,"./ReactErrorUtils":678,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],640:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -49911,7 +49936,7 @@ var EventPropagators = {
 
 module.exports = EventPropagators;
 }).call(this,require('_process'))
-},{"./EventConstants":636,"./EventPluginHub":637,"./accumulateInto":724,"./forEachAccumulated":732,"_process":598,"fbjs/lib/warning":778}],641:[function(require,module,exports){
+},{"./EventConstants":636,"./EventPluginHub":637,"./accumulateInto":724,"./forEachAccumulated":732,"_process":599,"fbjs/lib/warning":778}],641:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -50375,7 +50400,7 @@ var LinkedValueUtils = {
 
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
-},{"./ReactPropTypeLocations":695,"./ReactPropTypes":696,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],644:[function(require,module,exports){
+},{"./ReactPropTypeLocations":695,"./ReactPropTypes":696,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],644:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -50545,7 +50570,7 @@ var PooledClass = {
 
 module.exports = PooledClass;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],646:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],646:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -50625,7 +50650,7 @@ var ReactBrowserComponentMixin = {
 
 module.exports = ReactBrowserComponentMixin;
 }).call(this,require('_process'))
-},{"./ReactInstanceMap":684,"./findDOMNode":730,"_process":598,"fbjs/lib/warning":778}],648:[function(require,module,exports){
+},{"./ReactInstanceMap":684,"./findDOMNode":730,"_process":599,"fbjs/lib/warning":778}],648:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -51075,7 +51100,7 @@ var ReactChildReconciler = {
 
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
-},{"./ReactReconciler":698,"./instantiateReactComponent":740,"./shouldUpdateReactComponent":749,"./traverseAllChildren":750,"_process":598,"fbjs/lib/warning":778}],650:[function(require,module,exports){
+},{"./ReactReconciler":698,"./instantiateReactComponent":740,"./shouldUpdateReactComponent":749,"./traverseAllChildren":750,"_process":599,"fbjs/lib/warning":778}],650:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52032,7 +52057,7 @@ var ReactClass = {
 
 module.exports = ReactClass;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactComponent":652,"./ReactElement":674,"./ReactNoopUpdateQueue":691,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/keyMirror":770,"fbjs/lib/keyOf":771,"fbjs/lib/warning":778}],652:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactComponent":652,"./ReactElement":674,"./ReactNoopUpdateQueue":691,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"_process":599,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/keyMirror":770,"fbjs/lib/keyOf":771,"fbjs/lib/warning":778}],652:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52157,7 +52182,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactComponent;
 }).call(this,require('_process'))
-},{"./ReactNoopUpdateQueue":691,"./canDefineProperty":726,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],653:[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":691,"./canDefineProperty":726,"_process":599,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],653:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -52253,7 +52278,7 @@ var ReactComponentEnvironment = {
 
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],655:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],655:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -52950,7 +52975,7 @@ var ReactCompositeComponent = {
 
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactPerf":693,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./shouldUpdateReactComponent":749,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],656:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactPerf":693,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./shouldUpdateReactComponent":749,"_process":599,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],656:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -53076,7 +53101,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":656,"./ReactDOMTextComponent":668,"./ReactDefaultInjection":671,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdates":705,"./ReactVersion":706,"./findDOMNode":730,"./renderSubtreeIntoContainer":745,"_process":598,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/warning":778}],658:[function(require,module,exports){
+},{"./ReactCurrentOwner":656,"./ReactDOMTextComponent":668,"./ReactDefaultInjection":671,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdates":705,"./ReactVersion":706,"./findDOMNode":730,"./renderSubtreeIntoContainer":745,"_process":599,"fbjs/lib/ExecutionEnvironment":753,"fbjs/lib/warning":778}],658:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54092,7 +54117,7 @@ assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mix
 
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
-},{"./AutoFocusUtils":623,"./CSSPropertyOperations":626,"./DOMProperty":631,"./DOMPropertyOperations":632,"./EventConstants":636,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactComponentBrowserEnvironment":653,"./ReactDOMButton":658,"./ReactDOMInput":663,"./ReactDOMOption":664,"./ReactDOMSelect":665,"./ReactDOMTextarea":669,"./ReactMount":687,"./ReactMultiChild":688,"./ReactPerf":693,"./ReactUpdateQueue":704,"./canDefineProperty":726,"./escapeTextContentForBrowser":729,"./isEventSupported":741,"./setInnerHTML":746,"./setTextContent":747,"./validateDOMNesting":751,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771,"fbjs/lib/shallowEqual":776,"fbjs/lib/warning":778}],660:[function(require,module,exports){
+},{"./AutoFocusUtils":623,"./CSSPropertyOperations":626,"./DOMProperty":631,"./DOMPropertyOperations":632,"./EventConstants":636,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactComponentBrowserEnvironment":653,"./ReactDOMButton":658,"./ReactDOMInput":663,"./ReactDOMOption":664,"./ReactDOMSelect":665,"./ReactDOMTextarea":669,"./ReactMount":687,"./ReactMultiChild":688,"./ReactPerf":693,"./ReactUpdateQueue":704,"./canDefineProperty":726,"./escapeTextContentForBrowser":729,"./isEventSupported":741,"./setInnerHTML":746,"./setTextContent":747,"./validateDOMNesting":751,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771,"fbjs/lib/shallowEqual":776,"fbjs/lib/warning":778}],660:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54272,7 +54297,7 @@ var ReactDOMFactories = mapObject({
 
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
-},{"./ReactElement":674,"./ReactElementValidator":675,"_process":598,"fbjs/lib/mapObject":772}],661:[function(require,module,exports){
+},{"./ReactElement":674,"./ReactElementValidator":675,"_process":599,"fbjs/lib/mapObject":772}],661:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -54388,7 +54413,7 @@ ReactPerf.measureMethods(ReactDOMIDOperations, 'ReactDOMIDOperations', {
 
 module.exports = ReactDOMIDOperations;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./ReactMount":687,"./ReactPerf":693,"_process":598,"fbjs/lib/invariant":767}],663:[function(require,module,exports){
+},{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./ReactMount":687,"./ReactPerf":693,"_process":599,"fbjs/lib/invariant":767}],663:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54544,7 +54569,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactMount":687,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767}],664:[function(require,module,exports){
+},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactMount":687,"./ReactUpdates":705,"_process":599,"fbjs/lib/invariant":767}],664:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54636,7 +54661,7 @@ var ReactDOMOption = {
 
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactChildren":650,"./ReactDOMSelect":665,"_process":598,"fbjs/lib/warning":778}],665:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactChildren":650,"./ReactDOMSelect":665,"_process":599,"fbjs/lib/warning":778}],665:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -54827,7 +54852,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactMount":687,"./ReactUpdates":705,"_process":598,"fbjs/lib/warning":778}],666:[function(require,module,exports){
+},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactMount":687,"./ReactUpdates":705,"_process":599,"fbjs/lib/warning":778}],666:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55197,7 +55222,7 @@ assign(ReactDOMTextComponent.prototype, {
 
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
-},{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./Object.assign":644,"./ReactComponentBrowserEnvironment":653,"./ReactMount":687,"./escapeTextContentForBrowser":729,"./setTextContent":747,"./validateDOMNesting":751,"_process":598}],669:[function(require,module,exports){
+},{"./DOMChildrenOperations":630,"./DOMPropertyOperations":632,"./Object.assign":644,"./ReactComponentBrowserEnvironment":653,"./ReactMount":687,"./escapeTextContentForBrowser":729,"./setTextContent":747,"./validateDOMNesting":751,"_process":599}],669:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -55313,7 +55338,7 @@ function _handleChange(event) {
 
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
-},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],670:[function(require,module,exports){
+},{"./LinkedValueUtils":643,"./Object.assign":644,"./ReactDOMIDOperations":662,"./ReactUpdates":705,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],670:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -55481,7 +55506,7 @@ module.exports = {
   inject: inject
 };
 }).call(this,require('_process'))
-},{"./BeforeInputEventPlugin":624,"./ChangeEventPlugin":628,"./ClientReactRootIndex":629,"./DefaultEventPluginOrder":634,"./EnterLeaveEventPlugin":635,"./HTMLDOMPropertyConfig":642,"./ReactBrowserComponentMixin":647,"./ReactComponentBrowserEnvironment":653,"./ReactDOMComponent":659,"./ReactDOMTextComponent":668,"./ReactDefaultBatchingStrategy":670,"./ReactDefaultPerf":672,"./ReactEventListener":680,"./ReactInjection":681,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactReconcileTransaction":697,"./SVGDOMPropertyConfig":707,"./SelectEventPlugin":708,"./ServerReactRootIndex":709,"./SimpleEventPlugin":710,"_process":598,"fbjs/lib/ExecutionEnvironment":753}],672:[function(require,module,exports){
+},{"./BeforeInputEventPlugin":624,"./ChangeEventPlugin":628,"./ClientReactRootIndex":629,"./DefaultEventPluginOrder":634,"./EnterLeaveEventPlugin":635,"./HTMLDOMPropertyConfig":642,"./ReactBrowserComponentMixin":647,"./ReactComponentBrowserEnvironment":653,"./ReactDOMComponent":659,"./ReactDOMTextComponent":668,"./ReactDefaultBatchingStrategy":670,"./ReactDefaultPerf":672,"./ReactEventListener":680,"./ReactInjection":681,"./ReactInstanceHandles":683,"./ReactMount":687,"./ReactReconcileTransaction":697,"./SVGDOMPropertyConfig":707,"./SelectEventPlugin":708,"./ServerReactRootIndex":709,"./SimpleEventPlugin":710,"_process":599,"fbjs/lib/ExecutionEnvironment":753}],672:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -56171,7 +56196,7 @@ ReactElement.isValidElement = function (object) {
 
 module.exports = ReactElement;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactCurrentOwner":656,"./canDefineProperty":726,"_process":598}],675:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactCurrentOwner":656,"./canDefineProperty":726,"_process":599}],675:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -56455,7 +56480,7 @@ var ReactElementValidator = {
 
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./canDefineProperty":726,"./getIteratorFn":737,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],676:[function(require,module,exports){
+},{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactPropTypeLocationNames":694,"./ReactPropTypeLocations":695,"./canDefineProperty":726,"./getIteratorFn":737,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],676:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -56640,7 +56665,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
-},{"_process":598}],679:[function(require,module,exports){
+},{"_process":599}],679:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57360,7 +57385,7 @@ var ReactInstanceHandles = {
 
 module.exports = ReactInstanceHandles;
 }).call(this,require('_process'))
-},{"./ReactRootIndex":700,"_process":598,"fbjs/lib/invariant":767}],684:[function(require,module,exports){
+},{"./ReactRootIndex":700,"_process":599,"fbjs/lib/invariant":767}],684:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -57485,7 +57510,7 @@ var React = {
 
 module.exports = React;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactChildren":650,"./ReactClass":651,"./ReactComponent":652,"./ReactDOMFactories":660,"./ReactElement":674,"./ReactElementValidator":675,"./ReactPropTypes":696,"./ReactVersion":706,"./onlyChild":743,"_process":598}],686:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactChildren":650,"./ReactClass":651,"./ReactComponent":652,"./ReactDOMFactories":660,"./ReactElement":674,"./ReactElementValidator":675,"./ReactPropTypes":696,"./ReactVersion":706,"./onlyChild":743,"_process":599}],686:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -58384,7 +58409,7 @@ ReactPerf.measureMethods(ReactMount, 'ReactMount', {
 
 module.exports = ReactMount;
 }).call(this,require('_process'))
-},{"./DOMProperty":631,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactCurrentOwner":656,"./ReactDOMFeatureFlags":661,"./ReactElement":674,"./ReactEmptyComponentRegistry":677,"./ReactInstanceHandles":683,"./ReactInstanceMap":684,"./ReactMarkupChecksum":686,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./ReactUpdates":705,"./instantiateReactComponent":740,"./setInnerHTML":746,"./shouldUpdateReactComponent":749,"./validateDOMNesting":751,"_process":598,"fbjs/lib/containsNode":756,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],688:[function(require,module,exports){
+},{"./DOMProperty":631,"./Object.assign":644,"./ReactBrowserEventEmitter":648,"./ReactCurrentOwner":656,"./ReactDOMFeatureFlags":661,"./ReactElement":674,"./ReactEmptyComponentRegistry":677,"./ReactInstanceHandles":683,"./ReactInstanceMap":684,"./ReactMarkupChecksum":686,"./ReactPerf":693,"./ReactReconciler":698,"./ReactUpdateQueue":704,"./ReactUpdates":705,"./instantiateReactComponent":740,"./setInnerHTML":746,"./shouldUpdateReactComponent":749,"./validateDOMNesting":751,"_process":599,"fbjs/lib/containsNode":756,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],688:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -58883,7 +58908,7 @@ var ReactMultiChild = {
 
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
-},{"./ReactChildReconciler":649,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactMultiChildUpdateTypes":689,"./ReactReconciler":698,"./flattenChildren":731,"_process":598}],689:[function(require,module,exports){
+},{"./ReactChildReconciler":649,"./ReactComponentEnvironment":654,"./ReactCurrentOwner":656,"./ReactMultiChildUpdateTypes":689,"./ReactReconciler":698,"./flattenChildren":731,"_process":599}],689:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -59013,7 +59038,7 @@ var ReactNativeComponent = {
 
 module.exports = ReactNativeComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"_process":598,"fbjs/lib/invariant":767}],691:[function(require,module,exports){
+},{"./Object.assign":644,"_process":599,"fbjs/lib/invariant":767}],691:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -59134,7 +59159,7 @@ var ReactNoopUpdateQueue = {
 
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/warning":778}],692:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/warning":778}],692:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59228,7 +59253,7 @@ var ReactOwner = {
 
 module.exports = ReactOwner;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],693:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],693:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59327,7 +59352,7 @@ function _noMeasure(objName, fnName, func) {
 
 module.exports = ReactPerf;
 }).call(this,require('_process'))
-},{"_process":598}],694:[function(require,module,exports){
+},{"_process":599}],694:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -59354,7 +59379,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
-},{"_process":598}],695:[function(require,module,exports){
+},{"_process":599}],695:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -60213,7 +60238,7 @@ module.exports = {
   renderToStaticMarkup: renderToStaticMarkup
 };
 }).call(this,require('_process'))
-},{"./ReactDefaultBatchingStrategy":670,"./ReactElement":674,"./ReactInstanceHandles":683,"./ReactMarkupChecksum":686,"./ReactServerBatchingStrategy":701,"./ReactServerRenderingTransaction":703,"./ReactUpdates":705,"./instantiateReactComponent":740,"_process":598,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767}],703:[function(require,module,exports){
+},{"./ReactDefaultBatchingStrategy":670,"./ReactElement":674,"./ReactInstanceHandles":683,"./ReactMarkupChecksum":686,"./ReactServerBatchingStrategy":701,"./ReactServerRenderingTransaction":703,"./ReactUpdates":705,"./instantiateReactComponent":740,"_process":599,"fbjs/lib/emptyObject":760,"fbjs/lib/invariant":767}],703:[function(require,module,exports){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -60561,7 +60586,7 @@ var ReactUpdateQueue = {
 
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactUpdates":705,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],705:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceMap":684,"./ReactUpdates":705,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],705:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -60787,7 +60812,7 @@ var ReactUpdates = {
 
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
-},{"./CallbackQueue":627,"./Object.assign":644,"./PooledClass":645,"./ReactPerf":693,"./ReactReconciler":698,"./Transaction":722,"_process":598,"fbjs/lib/invariant":767}],706:[function(require,module,exports){
+},{"./CallbackQueue":627,"./Object.assign":644,"./PooledClass":645,"./ReactPerf":693,"./ReactReconciler":698,"./Transaction":722,"_process":599,"fbjs/lib/invariant":767}],706:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -61752,7 +61777,7 @@ var SimpleEventPlugin = {
 
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
-},{"./EventConstants":636,"./EventPropagators":640,"./ReactMount":687,"./SyntheticClipboardEvent":711,"./SyntheticDragEvent":713,"./SyntheticEvent":714,"./SyntheticFocusEvent":715,"./SyntheticKeyboardEvent":717,"./SyntheticMouseEvent":718,"./SyntheticTouchEvent":719,"./SyntheticUIEvent":720,"./SyntheticWheelEvent":721,"./getEventCharCode":733,"_process":598,"fbjs/lib/EventListener":752,"fbjs/lib/emptyFunction":759,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771}],711:[function(require,module,exports){
+},{"./EventConstants":636,"./EventPropagators":640,"./ReactMount":687,"./SyntheticClipboardEvent":711,"./SyntheticDragEvent":713,"./SyntheticEvent":714,"./SyntheticFocusEvent":715,"./SyntheticKeyboardEvent":717,"./SyntheticMouseEvent":718,"./SyntheticTouchEvent":719,"./SyntheticUIEvent":720,"./SyntheticWheelEvent":721,"./getEventCharCode":733,"_process":599,"fbjs/lib/EventListener":752,"fbjs/lib/emptyFunction":759,"fbjs/lib/invariant":767,"fbjs/lib/keyOf":771}],711:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62051,7 +62076,7 @@ PooledClass.addPoolingTo(SyntheticEvent, PooledClass.fourArgumentPooler);
 
 module.exports = SyntheticEvent;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./PooledClass":645,"_process":598,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],715:[function(require,module,exports){
+},{"./Object.assign":644,"./PooledClass":645,"_process":599,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],715:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62686,7 +62711,7 @@ var Transaction = {
 
 module.exports = Transaction;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],723:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],723:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62776,7 +62801,7 @@ function accumulateInto(current, next) {
 
 module.exports = accumulateInto;
 }).call(this,require('_process'))
-},{"_process":598,"fbjs/lib/invariant":767}],725:[function(require,module,exports){
+},{"_process":599,"fbjs/lib/invariant":767}],725:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62846,7 +62871,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
-},{"_process":598}],727:[function(require,module,exports){
+},{"_process":599}],727:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -62953,7 +62978,7 @@ function deprecated(fnName, newModule, newPackage, ctx, fn) {
 
 module.exports = deprecated;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"_process":598,"fbjs/lib/warning":778}],729:[function(require,module,exports){
+},{"./Object.assign":644,"_process":599,"fbjs/lib/warning":778}],729:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63044,7 +63069,7 @@ function findDOMNode(componentOrElement) {
 
 module.exports = findDOMNode;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":656,"./ReactInstanceMap":684,"./ReactMount":687,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],731:[function(require,module,exports){
+},{"./ReactCurrentOwner":656,"./ReactInstanceMap":684,"./ReactMount":687,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],731:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -63095,7 +63120,7 @@ function flattenChildren(children) {
 
 module.exports = flattenChildren;
 }).call(this,require('_process'))
-},{"./traverseAllChildren":750,"_process":598,"fbjs/lib/warning":778}],732:[function(require,module,exports){
+},{"./traverseAllChildren":750,"_process":599,"fbjs/lib/warning":778}],732:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63619,7 +63644,7 @@ function instantiateReactComponent(node) {
 
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"./ReactCompositeComponent":655,"./ReactEmptyComponent":676,"./ReactNativeComponent":690,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],741:[function(require,module,exports){
+},{"./Object.assign":644,"./ReactCompositeComponent":655,"./ReactEmptyComponent":676,"./ReactNativeComponent":690,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],741:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -63757,7 +63782,7 @@ function onlyChild(children) {
 
 module.exports = onlyChild;
 }).call(this,require('_process'))
-},{"./ReactElement":674,"_process":598,"fbjs/lib/invariant":767}],744:[function(require,module,exports){
+},{"./ReactElement":674,"_process":599,"fbjs/lib/invariant":767}],744:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64194,7 +64219,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
-},{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceHandles":683,"./getIteratorFn":737,"_process":598,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],751:[function(require,module,exports){
+},{"./ReactCurrentOwner":656,"./ReactElement":674,"./ReactInstanceHandles":683,"./getIteratorFn":737,"_process":599,"fbjs/lib/invariant":767,"fbjs/lib/warning":778}],751:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015, Facebook, Inc.
@@ -64560,7 +64585,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
-},{"./Object.assign":644,"_process":598,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],752:[function(require,module,exports){
+},{"./Object.assign":644,"_process":599,"fbjs/lib/emptyFunction":759,"fbjs/lib/warning":778}],752:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -64647,7 +64672,7 @@ var EventListener = {
 
 module.exports = EventListener;
 }).call(this,require('_process'))
-},{"./emptyFunction":759,"_process":598}],753:[function(require,module,exports){
+},{"./emptyFunction":759,"_process":599}],753:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -64987,7 +65012,7 @@ function createNodesFromMarkup(markup, handleScript) {
 
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":753,"./createArrayFromMixed":757,"./getMarkupWrap":763,"./invariant":767,"_process":598}],759:[function(require,module,exports){
+},{"./ExecutionEnvironment":753,"./createArrayFromMixed":757,"./getMarkupWrap":763,"./invariant":767,"_process":599}],759:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65049,7 +65074,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = emptyObject;
 }).call(this,require('_process'))
-},{"_process":598}],761:[function(require,module,exports){
+},{"_process":599}],761:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65210,7 +65235,7 @@ function getMarkupWrap(nodeName) {
 
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
-},{"./ExecutionEnvironment":753,"./invariant":767,"_process":598}],764:[function(require,module,exports){
+},{"./ExecutionEnvironment":753,"./invariant":767,"_process":599}],764:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65376,7 +65401,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 }).call(this,require('_process'))
-},{"_process":598}],768:[function(require,module,exports){
+},{"_process":599}],768:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65477,7 +65502,7 @@ var keyMirror = function (obj) {
 
 module.exports = keyMirror;
 }).call(this,require('_process'))
-},{"./invariant":767,"_process":598}],771:[function(require,module,exports){
+},{"./invariant":767,"_process":599}],771:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -65767,7 +65792,7 @@ function toArray(obj) {
 
 module.exports = toArray;
 }).call(this,require('_process'))
-},{"./invariant":767,"_process":598}],778:[function(require,module,exports){
+},{"./invariant":767,"_process":599}],778:[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -65827,7 +65852,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = warning;
 }).call(this,require('_process'))
-},{"./emptyFunction":759,"_process":598}],779:[function(require,module,exports){
+},{"./emptyFunction":759,"_process":599}],779:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -66083,7 +66108,7 @@ function combineReducers(reducers) {
   };
 }
 }).call(this,require('_process'))
-},{"./createStore":783,"./utils/warning":784,"_process":598,"lodash/isPlainObject":794}],782:[function(require,module,exports){
+},{"./createStore":783,"./utils/warning":784,"_process":599,"lodash/isPlainObject":794}],782:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -67563,7 +67588,7 @@ if (typeof window !== 'undefined') {
 }
 
 }).call(this,require('_process'))
-},{"./dist/lib/listen":802,"./dist/subscribe":805,"./dist/unsubscribe":806,"_process":598}],808:[function(require,module,exports){
+},{"./dist/lib/listen":802,"./dist/subscribe":805,"./dist/unsubscribe":806,"_process":599}],808:[function(require,module,exports){
 var getNative = require('./_getNative'),
     root = require('./_root');
 
@@ -70693,7 +70718,7 @@ function symbolObservablePonyfill(root) {
  * URI.js - Mutating URLs
  * IPv6 Support
  *
- * Version: 1.18.3
+ * Version: 1.18.4
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -70880,7 +70905,7 @@ function symbolObservablePonyfill(root) {
  * URI.js - Mutating URLs
  * Second Level Domain (SLD) Support
  *
- * Version: 1.18.3
+ * Version: 1.18.4
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -103793,7 +103818,7 @@ if (typeof Object.create !== "function") {
 
 module.exports = require('./src/js/main');
 
-},{"./src/js/main":582}],"react-dom":[function(require,module,exports){
+},{"./src/js/main":583}],"react-dom":[function(require,module,exports){
 'use strict';
 
 module.exports = require('react/lib/ReactDOM');
@@ -104126,7 +104151,7 @@ exports.bindActionCreators = _bindActionCreators2['default'];
 exports.applyMiddleware = _applyMiddleware2['default'];
 exports.compose = _compose2['default'];
 }).call(this,require('_process'))
-},{"./applyMiddleware":779,"./bindActionCreators":780,"./combineReducers":781,"./compose":782,"./createStore":783,"./utils/warning":784,"_process":598}],"reqwest":[function(require,module,exports){
+},{"./applyMiddleware":779,"./bindActionCreators":780,"./combineReducers":781,"./compose":782,"./createStore":783,"./utils/warning":784,"_process":599}],"reqwest":[function(require,module,exports){
 /*!
   * Reqwest! A general purpose XHR connection manager
   * license MIT (c) Dustin Diaz 2014
@@ -105229,7 +105254,8 @@ function getIn(obj, path) {
 // -- // true
 // -- ```
 function set(obj, key, val) {
-  var finalObj = obj == null ? {} : obj;
+  var fallback = typeof key === 'number' ? [] : {};
+  var finalObj = obj == null ? fallback : obj;
   if (finalObj[key] === val) return finalObj;
   var obj2 = clone(finalObj);
   obj2[key] = val;
@@ -105269,9 +105295,9 @@ function set(obj, key, val) {
 // -- obj3.e === obj.e
 // -- // true
 // --
-// -- // ... unknown paths create intermediate keys:
-// -- setIn({ a: 3 }, ['unknown', 'path'], 4)
-// -- // { a: 3, unknown: { path: 4 } }
+// -- // ... unknown paths create intermediate keys. Numeric segments are treated as array indices:
+// -- setIn({ a: 3 }, ['unknown', 0, 'path'], 4)
+// -- // { a: 3, unknown: [{ path: 4 }] }
 // -- ```
 function doSetIn(obj, path, val, idx) {
   var newValue = void 0;
@@ -105489,7 +105515,7 @@ var timm = {
 exports.default = timm;
 
 }).call(this,require('_process'))
-},{"_process":598}],"tinycolor2":[function(require,module,exports){
+},{"_process":599}],"tinycolor2":[function(require,module,exports){
 // TinyColor v1.4.1
 // https://github.com/bgrins/TinyColor
 // Brian Grinstead, MIT License
@@ -106690,7 +106716,7 @@ else {
 /*!
  * URI.js - Mutating URLs
  *
- * Version: 1.18.3
+ * Version: 1.18.4
  *
  * Author: Rodney Rehm
  * Web: http://medialize.github.io/URI.js/
@@ -106760,7 +106786,7 @@ else {
     return this;
   }
 
-  URI.version = '1.18.3';
+  URI.version = '1.18.4';
 
   var p = URI.prototype;
   var hasOwn = Object.prototype.hasOwnProperty;
@@ -106909,7 +106935,9 @@ else {
     // everything up to the next whitespace
     end: /[\s\r\n]|$/,
     // trim trailing punctuation captured by end RegExp
-    trim: /[`!()\[\]{};:'".,<>?«»“”„‘’]+$/
+    trim: /[`!()\[\]{};:'".,<>?«»“”„‘’]+$/,
+    // balanced parens inclusion (), [], {}, <>
+    parens: /(\([^\)]*\)|\[[^\]]*\]|\{[^}]*\}|<[^>]*>)/g,
   };
   // http://www.iana.org/assignments/uri-schemes.html
   // http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports
@@ -107631,6 +107659,7 @@ else {
     var _start = options.start || URI.findUri.start;
     var _end = options.end || URI.findUri.end;
     var _trim = options.trim || URI.findUri.trim;
+    var _parens = options.parens || URI.findUri.parens;
     var _attributeOpen = /[a-z0-9-]=["']?$/i;
 
     _start.lastIndex = 0;
@@ -107650,7 +107679,25 @@ else {
       }
 
       var end = start + string.slice(start).search(_end);
-      var slice = string.slice(start, end).replace(_trim, '');
+      var slice = string.slice(start, end);
+      // make sure we include well balanced parens
+      var parensEnd = -1;
+      while (true) {
+        var parensMatch = _parens.exec(slice);
+        if (!parensMatch) {
+          break;
+        }
+
+        var parensMatchEnd = parensMatch.index + parensMatch[0].length;
+        parensEnd = Math.max(parensEnd, parensMatchEnd);
+      }
+
+      if (parensEnd > -1) {
+        slice = slice.slice(0, parensEnd) + slice.slice(parensEnd + 1).replace(_trim, '');
+      } else {
+        slice = slice.replace(_trim, '');
+      }
+
       if (options.ignore && options.ignore.test(slice)) {
         continue;
       }
