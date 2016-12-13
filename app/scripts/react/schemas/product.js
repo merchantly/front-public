@@ -12,7 +12,7 @@ export default PropTypes.shape({
   isRunOut: PropTypes.bool.isRequired,
   isSale: PropTypes.bool.isRequired,
   isSold: PropTypes.bool.isRequired,
-  publicUrl: PropTypes.string.isRequired,
+  publicUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   prices: PropTypes.shape({
     minPrice: money.isRequired,
