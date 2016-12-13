@@ -180,6 +180,7 @@ global.gon = {
           'not_available': 'Больше не продается',
           'empty': 'Пока тут ничего нет',
           'wait': 'Подождите...',
+          'continue_shopping': 'Продолжить покупки',
         },
         'wishlist': {
           'add_item': 'Добавить в список желаний',
@@ -254,6 +255,8 @@ global.gon = {
           },
         },
         'filter': {
+          'show': 'Показать фильтр',
+          'hide': 'Скрыть фильтр',
           'availability': 'Доступность',
           'price_range': 'Ценовой диапазон',
           'expand_button': {

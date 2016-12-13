@@ -5,6 +5,7 @@ import connectToRedux from '../HoC/connectToRedux';
 import { connect } from 'react-redux';
 import {
   setAmount as changeAmount,
+  setPackageCount as changePackageCount,
   selectPackage,
   initCart,
   fetchCart,
@@ -33,6 +34,7 @@ class CartContainer extends Component {
     super(props);
 
     this.changeAmount = this.changeAmount.bind(this);
+    this.changePackageCount = this.changePackageCount.bind(this);
     this.selectPackage = this.selectPackage.bind(this);
   }
   componentWillMount() {
@@ -52,6 +54,9 @@ class CartContainer extends Component {
   changeAmount(id, amount) {
     this.props.changeAmount(id, amount);
   }
+  changePackageCount(count) {
+    this.props.changePackageCount(count);
+  }
   selectPackage(id) {
     this.props.selectPackage(id);
   }
@@ -67,9 +72,11 @@ class CartContainer extends Component {
 
 CartContainer.propTypes = {
   // initial props
+  continueShoppingUrl: PropTypes.string,
   formAuthenticity: PropTypes.object,
   initialCart: PropTypes.object,
   initialPackages: PropTypes.array,
+  isHeaderButtons: PropTypes.bool,
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
 
@@ -80,12 +87,14 @@ CartContainer.propTypes = {
   cartIsFetching: PropTypes.bool.isRequired,
   cartItems: PropTypes.array.isRequired,
   changeAmount: PropTypes.func.isRequired,
+  changePackageCount: PropTypes.func.isRequired,
   couponCode: PropTypes.string,
   fetchCart: PropTypes.func.isRequired,
   fetchPackages: PropTypes.func.isRequired,
   initCart: PropTypes.func.isRequired,
   initPackages: PropTypes.func.isRequired,
   isBelowMinimalPrice: PropTypes.bool.isRequired,
+  packageCount: PropTypes.number.isRequired,
   packageItem: PropTypes.object.isRequired,
   packages: PropTypes.array.isRequired,
   packagesIsFetching: PropTypes.bool.isRequired,
@@ -97,6 +106,7 @@ CartContainer.propTypes = {
 };
 
 CartContainer.defaultProps = {
+  isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch',
   },
@@ -131,6 +141,7 @@ export default provideTranslations(connectToRedux(connect(
       isFetching: cartIsFetching=false,
       amounts={},
       coupon,
+      packageCount,
       selectedPackage,
     } = cart;
     const {
@@ -147,18 +158,21 @@ export default provideTranslations(connectToRedux(connect(
 
         return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
       });
-    const selectedPackagePrice = selectedPackage
-      ? (getIn(find(packages, (p) => p.globalId === selectedPackage), ['price', 'cents']) || 0)
-      : 0;
-    const packagePrice = !isEmpty(packageItem)
-      ? getIn(packageItem, ['good', 'actualPrice', 'cents'])
-      : selectedPackagePrice;
+    const selectedPackageMoney = selectedPackage &&
+      getIn(find(packages, (p) => p.globalId === selectedPackage), ['price']);
+    const selectedPackagePrice = getIn(selectedPackageMoney, ['cents']) || 0;
+    const packagePriceCents = !isEmpty(packageItem)
+      ? getIn(packageItem, ['good', 'actualPrice', 'cents']) * packageCount
+      : selectedPackagePrice * packageCount;
     const totalPrice = set(
       cartTotalPrice,
       'cents',
-      reduce(prices, (acc, price) => acc + (price.cents || 0), packagePrice)
+      reduce(prices, (acc, price) => acc + (price.cents || 0), packagePriceCents)
     );
     const isBelowMinimalPrice = !!minimalPrice && ((totalPrice.cents || 0) < minimalPrice.cents);
+    const packagePrice = !isEmpty(packageItem)
+      ? set(packageItem.good.actualPrice, 'cents', packagePriceCents)
+      : set(selectedPackageMoney, 'cents', packagePriceCents);
 
     return {
       amounts,
@@ -168,6 +182,8 @@ export default provideTranslations(connectToRedux(connect(
       cartItems,
       couponCode,
       isBelowMinimalPrice,
+      packageCount,
+      packagePrice,
       packages,
       packagesIsFetching,
       prices,
@@ -178,6 +194,7 @@ export default provideTranslations(connectToRedux(connect(
   },
   {
     changeAmount,
+    changePackageCount,
     selectPackage,
     initCart,
     fetchCart,

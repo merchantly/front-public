@@ -11,9 +11,11 @@ class Welcome extends Component {
     const {
       catalogFilterProps,
       isFilterDirty,
+      nextButton,
       products,
       showCartButton,
       showCatalogFilter,
+      showNextButton,
       showPaginationOnWelcome,
       showQuantity,
       showWelcomeSlider,
@@ -52,9 +54,11 @@ class Welcome extends Component {
           <div className="b-page__content__inner b-page__content__inner_content">
             <ProductList
               catalogFilterProps={catalogFilterProps}
+              nextButton={nextButton}
               products={products}
               showCartButton={showCartButton}
               showCatalogFilter={showCatalogFilter}
+              showNextButton={showNextButton}
               showPagination={showPaginationOnWelcome}
               showQuantity={showQuantity}
               t={t}
@@ -77,9 +81,11 @@ class Welcome extends Component {
 Welcome.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
   isFilterDirty: PropTypes.bool.isRequired,
+  nextButton: PropTypes.object,
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool.isRequired,
   showCatalogFilter: PropTypes.bool.isRequired,
+  showNextButton: PropTypes.bool,
   showPaginationOnWelcome: PropTypes.bool.isRequired,
   showQuantity: PropTypes.bool.isRequired,
   showWelcomeSlider: PropTypes.bool.isRequired,

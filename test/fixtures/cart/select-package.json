@@ -29,7 +29,8 @@
       "cents": 0,
       "currency_iso_code": "RUB"
     },
-    "items": [{
+    "items": [
+      {
         "id": 74361,
         "good": {
           "id": 15369,
@@ -40,11 +41,38 @@
           "type": "ProductItem",
           "title": "Кольцо ANNA.M.OBJECTS (размер: 13,5)",
           "image": {
-            "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
+            "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
             "product_id": 20943,
             "vendor_id": 68,
             "id": 60815
           },
+          "images": [
+            {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
+              "uid": "2d93c3f3c4b0a0ebb00df7bdbab501669fbe7aeb40b73a4ae5b5c75b57a3253c"
+            }, {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
+              "uid": "0ce9f5189c99eae9b5aa767ab1522475b0c59022ec18dfa3196c683d9c41c47c"
+            }, {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72353/2ddc7b2a-2209-4268-9156-10706b4eca4a.jpg",
+              "uid": "d4431b8aefddb04d4cea2d22570739096e9bc7e452f9e495017d6edfa6f77580"
+            }, {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88873/142d933a-5ac1-4bc8-980f-3c533cf56077.jpg",
+              "uid": "f5429f5adaa229cc81a2a8c48726c069a7e9a2aeaacd650e05134927802ac38a"
+            }, {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/7613/79468f8b-069b-416f-a33d-52e918beff12.png",
+              "uid": "c360d3a39edd0b5d06855c63ad42056616ae146306cd321f96900b97d0268966"
+            }, {
+              "title": "Кольцо ANNA.M.OBJECTS",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/57938/5c9cc17e-f488-46f5-9348-0548305d574f.jpg",
+              "uid": "70bc81533311c447293702cd58d6bc0b85e950fe9c4c965d8090e2b31ad8e9dc"
+            }
+          ],
           "custom_attributes": {
             "Бренд": "ANNA.M.OBJECTS",
             "Материал": "Серебро"
@@ -133,8 +161,7 @@
         "count": 1,
         "destroy_path": "/cart/items/74361",
         "errors": {}
-      },
-      {
+      }, {
         "id": 74360,
         "good": {
           "id": 35997,
@@ -145,11 +172,30 @@
           "type": "ProductItem",
           "title": "Кольцо SOLOMEINA NY&LONDONм (размер: 15,5/17)",
           "image": {
-            "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39051/88b8c604-89d6-4073-9ce5-be355f25bec3.jpg",
+            "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39051/88b8c604-89d6-4073-9ce5-be355f25bec3.jpg",
             "product_id": 39379,
             "vendor_id": 68,
             "id": 39051
           },
+          "images": [
+            {
+              "title": "Кольцо SOLOMEINA NY&LONDONм",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39051/88b8c604-89d6-4073-9ce5-be355f25bec3.jpg",
+              "uid": "923a161e8297c1a0ba616c2d060e500e109f31b5607d4bf4a77f91bad6cb742b"
+            }, {
+              "title": "Кольцо SOLOMEINA NY&LONDONм",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72316/f95409ad-a2c8-4b25-a9bd-a59ca18484d8.jpg",
+              "uid": "8c92f6e18c8dc02dfe04b8b8b6fb0f55c5cf7dd734c34052c1a854d76698aeae"
+            }, {
+              "title": "Кольцо SOLOMEINA NY&LONDONм",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51900/d8ed9ddb-7730-4a90-b0eb-4d3744a2338f.jpg",
+              "uid": "f26283a4f60992c4b0a6833720e8897018b4992a365ab1e27f403273218229cd"
+            }, {
+              "title": "Кольцо SOLOMEINA NY&LONDONм",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/40015/00444442-b077-4c22-92fb-90cd7596c438.jpg",
+              "uid": "da79846ac506ae55cd5389168af2ac203dcbd31c5edc11b6e3d3b9ce505e52d6"
+            }
+          ],
           "custom_attributes": {
             "Бренд": "SOLOMEINA NY&LONDON",
             "Материал": "Серебро",
@@ -239,12 +285,9 @@
         "count": 1,
         "destroy_path": "/cart/items/74360",
         "errors": {
-          "count": [
-            "Данный товар закончился"
-          ]
+          "count": ["Данный товар закончился"]
         }
-      },
-      {
+      }, {
         "id": 74354,
         "good": {
           "id": 15926,
@@ -255,11 +298,94 @@
           "type": "ProductItem",
           "title": "Кольцо VACHE (размер: 12 - 15,5)",
           "image": {
-            "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/7537/c6ced9d2-166d-45e4-893d-3bca40fc08eb.jpg",
+            "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/7537/c6ced9d2-166d-45e4-893d-3bca40fc08eb.jpg",
             "product_id": 20753,
             "vendor_id": 68,
             "id": 7537
           },
+          "images": [
+            {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/7537/c6ced9d2-166d-45e4-893d-3bca40fc08eb.jpg",
+              "uid": "5f6becc6c85f4ca844c7e43b3021f1945356e1a4eb3f9aa5ff5e2871fba2eeb2"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78979/faffe4e3-cad6-46f0-a8a8-4eaee86a5534.jpg",
+              "uid": "8575d6820052f15a829f66bfded85e961baa55a40a23be6622223873ceb50697"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78980/90e477c9-c416-48bc-8c3c-c945692d6b28.jpg",
+              "uid": "101ce4ce0ac3dee28326a2d79f447a75262a2c6cd77ccf2cde80830e5de54ed4"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78982/c75941c7-3e4f-4242-937b-46c02b0b6ad3.jpg",
+              "uid": "7c2129fe6bdb26c1f204233b21d288cc62848fdb49b26fd625034608467e9f0d"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78981/eab7c7e5-6e93-4a09-b3da-121ea625d38a.jpg",
+              "uid": "ea50a2edc34eb3fb9e42578c7e843a7c9a435cf281eafdb5841e84e47e44055e"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78978/002a0f37-5193-4a24-b9a8-a7877f942943.jpg",
+              "uid": "95306edc07d78f6536e485953629cef40fc3fcb1a1336d6d105ee4a3250ef78d"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78983/7bd74d72-caa1-4cc8-8517-a485829bcd35.jpg",
+              "uid": "8e800acf0aae475ebbc57bdad785249f4e3f37c39a9f6e9a18e7245179f287ed"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78985/962300bc-addc-495d-943a-9a87e1735821.jpg",
+              "uid": "072e378ece8b7109f6d97daa4e2b945bbdb130368f9e9ecec918c6bbe0ba7d22"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78984/828c1abf-f169-4f16-9c6f-5ac2860ad9d0.jpg",
+              "uid": "e761b4dfb6256c3360f21c93401cdc66ac76afa8e470ab47638abf2af50fc76b"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78977/dfa54099-86f7-4428-9303-cd36aa5f6593.jpg",
+              "uid": "3a068e42faa06331d1617f3dd11b84610b7c1126c243a2c79878f5692ea5097b"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/50598/7560ab75-0b3e-47a3-bbe0-2d844d1246d0.jpg",
+              "uid": "830fc6ccfcd9b789702f92b4318df2cb4a683a9b74dd1222722b9e23bd2ab96e"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/32962/ff408b6d-e3a0-4054-892e-496abd2f9da7.jpg",
+              "uid": "6ecb35ae0daf2a2ec1ef5d9fb6ba97b6d59627140c622905baa2bc99aaaa7c1e"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8532/96fa376f-c51f-41e7-bc54-a39f3670ded5.jpg",
+              "uid": "38a9fd2b6023f9d52379afad2438e8911bbba3a73a64aa79fc77b1b4b43578f2"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/35214/738c9d06-1e4f-4b06-ace5-40ec0076b69c.jpg",
+              "uid": "f1d58785e3078ff00d81c68369af4d2d3481f3de6f47737cae9ab8e2d7d33d4d"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/7590/d57cf0e2-8e5b-4057-939e-4fd5d85d5ca3.png",
+              "uid": "761ec56bfbca25c0ec1bc49e2f9219a0541f2d8ee222e988d8f2e7dd78db1d53"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/32958/ce66a8e1-dc80-47ed-85cc-605bdf11d764.jpg",
+              "uid": "727905621a33c25798b64884ed45ae8005015722f44e8ebf19a72b8e3842dd9d"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/32950/ddf31164-b427-4dfa-8274-d76da3f8abdb.jpg",
+              "uid": "6f794840bf1b27f692797912491180172746b1c606086d4240befac7f5185886"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/30304/a85c1bf4-1480-4e73-be53-7d541b7ce828.jpg",
+              "uid": "350323a1026364cc38fa22acae12ed4d7cf4dc1f4524b2dfd15048de9cee1c27"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/32945/fe50d58e-f499-46d3-8ae7-14aadfa8f47d.jpg",
+              "uid": "da8b40e9db092124df8d69101ffe7b4adbe232df17bec4dcb9a832740e33215e"
+            }, {
+              "title": "Кольцо VACHE",
+              "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/71444/da4dfcab-1eb2-4180-991b-bec62345b4d4.jpg",
+              "uid": "0ad039070472c6f5f8a02f1fba41a219b7080c604b097bf046012e4148cff145"
+            }
+          ],
           "custom_attributes": {
             "Бренд": "VACHE",
             "Материал": "Серебро"
@@ -355,69 +481,66 @@
     "coupon_code": "",
     "default_url": "http://saharok.stage.kiiiosk.ru/cart",
     "errors": {
-      "all_ordering?": [
-        "В корзине лежат товары не доступные к заказу"
-      ],
-      "minimal_price": [
-        "Ошибка минимальной цены корзины которая НЕ ДОЛЖНА выводиться"
-      ]
+      "all_ordering?": ["В корзине лежат товары не доступные к заказу"],
+      "minimal_price": ["Ошибка минимальной цены корзины которая НЕ ДОЛЖНА выводиться"]
     },
     "updated_at": "2016-09-16T10:59:48.881+03:00",
     "created_at": "2016-09-07T17:38:05.153+03:00",
     "session_id": "8f6d1be5a77168c4ee523632eac265b2"
   },
-  "initialPackages": [{
-    "id": 43869,
-    "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQzODY5",
-    "category_ids": [
-      4763,
-      1562
-    ],
-    "title": "Подарочная упаковка САХАРОК",
-    "updated_at": "2016-08-20T17:21:19.084+03:00",
-    "union_position": 670,
-    "price": {
-      "cents": 15000,
-      "currency_iso_code": "RUB"
-    },
-    "is_published": true,
-    "is_manual_published": true,
-    "is_sold": false,
-    "has_ordering_goods": true,
-    "total_items_quantity": 17,
-    "quantity_unit": {
-      "id": "pcs",
-      "short": "шт."
-    },
-    "operator_state": {
-      "css_class": "__published",
-      "visible": true,
-      "title": "OK"
-    },
-    "article": null,
-    "ident": "#43869",
-    "ms_code": null,
-    "description": "Упаковка из плотной фактурной бумаги, приятной на ощупь, перевязанная атласной лентой.",
-    "is_archived": false,
-    "edit_path": "/operator/products/43869/edit",
-    "image": {
-      "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
-      "product_id": 43869,
-      "vendor_id": 68,
-      "id": 51342
-    },
-    "images": [{
+  "initialPackages": [
+    {
+      "id": 43869,
+      "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQzODY5",
+      "category_ids": [
+        4763, 1562
+      ],
+      "title": "Подарочная упаковка САХАРОК",
+      "updated_at": "2016-08-20T17:21:19.084+03:00",
+      "union_position": 670,
+      "price": {
+        "cents": 15000,
+        "currency_iso_code": "RUB"
+      },
+      "is_published": true,
+      "is_manual_published": true,
+      "is_sold": false,
+      "has_ordering_goods": true,
+      "total_items_quantity": 17,
+      "quantity_unit": {
+        "id": "pcs",
+        "short": "шт."
+      },
+      "operator_state": {
+        "css_class": "__published",
+        "visible": true,
+        "title": "OK"
+      },
+      "article": null,
+      "ident": "#43869",
+      "ms_code": null,
+      "description": "Упаковка из плотной фактурной бумаги, приятной на ощупь, перевязанная атласной лентой.",
+      "is_archived": false,
+      "edit_path": "/operator/products/43869/edit",
+      "image": {
         "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
         "product_id": 43869,
         "vendor_id": 68,
         "id": 51342
       },
-      {
-        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/61777/26849fea-2d79-4fa3-bb47-1fdc4d18751f.jpg",
-        "product_id": 43869,
-        "vendor_id": 68,
-        "id": 61777
-      }
-    ]
-  }]
+      "images": [
+        {
+          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
+          "product_id": 43869,
+          "vendor_id": 68,
+          "id": 51342
+        }, {
+          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/61777/26849fea-2d79-4fa3-bb47-1fdc4d18751f.jpg",
+          "product_id": 43869,
+          "vendor_id": 68,
+          "id": 61777
+        }
+      ]
+    }
+  ]
 }

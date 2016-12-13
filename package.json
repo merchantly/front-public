@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.653",
+  "version": "0.0.659",
   "description": "JS application for kormilica.info",
   "repository": {
     "type": "git",
@@ -76,9 +76,11 @@
     "envify": "^3.4.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.4.0",
-    "eslint-import-resolver-babel-module": "^2.0.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-babel-module": "^2.2.1",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

@@ -18,9 +18,14 @@ ProductListContainer.propTypes = {
     bottom_text: PropTypes.string,
   }),
   i18n: PropTypes.object,
+  nextButton: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
+  showNextButton: PropTypes.bool,
   showPagination: PropTypes.bool,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
@@ -34,6 +39,7 @@ ProductListContainer.defaultProps = {
   },
   showCartButton: false,
   showCatalogFilter: false,
+  showNextButton: false,
   showPagination: false,
   showQuantity: false,
 };

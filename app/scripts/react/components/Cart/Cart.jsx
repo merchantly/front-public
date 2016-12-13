@@ -26,7 +26,11 @@ class Cart extends Component {
     const id = `cart-error-${key}`;
 
     return (
-      <div id={id} key={id} dangerouslySetInnerHTML={{__html: err}} />
+      <div
+        dangerouslySetInnerHTML={{__html: err}}
+        id={id}
+        key={id}
+      />
     );
   }
   renderErrors(suffix='') {
@@ -61,10 +65,15 @@ class Cart extends Component {
       cartErrors,
       cartItems,
       changeAmount,
+      changePackageCount,
+      continueShoppingUrl,
       couponCode,
       formAuthenticity,
       isBelowMinimalPrice,
+      isHeaderButtons,
       packageItem,
+      packageCount,
+      packagePrice,
       packages,
       prices,
       selectPackage,
@@ -105,69 +114,100 @@ class Cart extends Component {
               </div>
             )
             : (
-            <form
-              acceptCharset="UTF-8"
-              action={cartDefaultUrl}
-              className="simple_form edit_cart"
-              id="edit_cart"
-              method="post"
-              noValidate
-            >
-              <FormAuthenticity {...formAuthenticity} />
-              {hasErrors && this.renderErrors('top')}
-              <CartList
-                amounts={amounts}
-                changeAmount={changeAmount}
-                items={cartItems}
-                packageItem={packageItem}
-                packages={packages}
-                prices={prices}
-                selectPackage={selectPackage}
-                selectedPackage={selectedPackage}
-                t={t}
-              />
-              <div className="b-cart__total-sum">
-                {t('vendor.cart.overall')}
-                {' '}
-                <span>
-                  <HumanizedMoneyWithCurrency
-                    money={decamelizeKeys(totalPrice)}
-                  />
-                </span>
-              </div>
-              {hasErrors && this.renderErrors('bottom')}
-              <div className="b-cart__action">
-                <div className="b-cart__action__container">
-                  <div className="b-cart__action__col-clear">
-                    <a
-                      className="b-cart__action__clear b-btn b-btn_trans"
-                      data-confirm={t('vendor.alerts.confirm')}
-                      data-disable-with={t('vendor.button.disable_with.waiting')}
-                      data-method="delete"
-                      href={cartDefaultUrl}
-                      onClick={this.startProcessing}
-                    >
-                      {t('vendor.cart.clear')}
-                    </a>
+              <form
+                acceptCharset="UTF-8"
+                action={cartDefaultUrl}
+                className="simple_form edit_cart"
+                id="edit_cart"
+                method="post"
+                noValidate
+              >
+                {isHeaderButtons && (
+                  <div className="b-cart__action">
+                    <div className="b-cart__action__container">
+                      <div className="b-cart__action__col-clear">
+                        <a
+                          className="b-cart__action__clear b-btn b-btn_trans"
+                          href={continueShoppingUrl}
+                        >
+                          {t('vendor.cart.continue_shopping')}
+                        </a>
+                      </div>
+                      <div className="b-cart__action__col-right">
+                        <div className="b-cart__action__col-submit">
+                          <input
+                            className="b-cart__action__submit b-btn element--active-opacity"
+                            data-cart-submit
+                            data-disable-with={t('vendor.button.disable_with.waiting')}
+                            disabled={isBelowMinimalPrice}
+                            name="commit"
+                            onClick={this.startProcessing}
+                            type="submit"
+                            value={t('vendor.order.submit')}
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="b-cart__action__col-right">
-                    <CartCoupon code={couponCode} t={t} />
-                    <div className="b-cart__action__col-submit">
-                      <input
-                        className="b-cart__action__submit b-btn element--active-opacity"
-                        data-cart-submit
+                )}
+                <FormAuthenticity {...formAuthenticity} />
+                {hasErrors && this.renderErrors('top')}
+                <CartList
+                  amounts={amounts}
+                  changeAmount={changeAmount}
+                  changePackageCount={changePackageCount}
+                  items={cartItems}
+                  packageCount={packageCount}
+                  packageItem={packageItem}
+                  packagePrice={packagePrice}
+                  packages={packages}
+                  prices={prices}
+                  selectPackage={selectPackage}
+                  selectedPackage={selectedPackage}
+                  t={t}
+                />
+                <div className="b-cart__total-sum">
+                  {t('vendor.cart.overall')}
+                  {' '}
+                  <span>
+                    <HumanizedMoneyWithCurrency
+                      money={decamelizeKeys(totalPrice)}
+                    />
+                  </span>
+                </div>
+                {hasErrors && this.renderErrors('bottom')}
+                <div className="b-cart__action">
+                  <div className="b-cart__action__container">
+                    <div className="b-cart__action__col-clear">
+                      <a
+                        className="b-cart__action__clear b-btn b-btn_trans"
+                        data-confirm={t('vendor.alerts.confirm')}
                         data-disable-with={t('vendor.button.disable_with.waiting')}
-                        disabled={isBelowMinimalPrice}
-                        name="commit"
+                        data-method="delete"
+                        href={cartDefaultUrl}
                         onClick={this.startProcessing}
-                        type="submit"
-                        value={t('vendor.order.submit')}
-                      />
+                      >
+                        {t('vendor.cart.clear')}
+                      </a>
+                    </div>
+                    <div className="b-cart__action__col-right">
+                      <CartCoupon code={couponCode} t={t} />
+                      <div className="b-cart__action__col-submit">
+                        <input
+                          className="b-cart__action__submit b-btn element--active-opacity"
+                          data-cart-submit
+                          data-disable-with={t('vendor.button.disable_with.waiting')}
+                          disabled={isBelowMinimalPrice}
+                          name="commit"
+                          onClick={this.startProcessing}
+                          type="submit"
+                          value={t('vendor.order.submit')}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </form>
+              </form>
             )
           }
         </div>
@@ -183,12 +223,17 @@ Cart.propTypes = {
   cartIsFetching: PropTypes.bool.isRequired,
   cartItems: PropTypes.array.isRequired,
   changeAmount: PropTypes.func.isRequired,
+  changePackageCount: PropTypes.func.isRequired,
+  continueShoppingUrl: PropTypes.string,
   couponCode: PropTypes.string,
   formAuthenticity: PropTypes.object,
   isBelowMinimalPrice: PropTypes.bool.isRequired,
+  isHeaderButtons: PropTypes.bool.isRequired,
   minimalPrice: schemas.money,
   packages: PropTypes.array.isRequired,
+  packageCount: PropTypes.number.isRequired,
   packageItem: PropTypes.object.isRequired,
+  packagePrice: schemas.money,
   prices: PropTypes.object.isRequired,
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
