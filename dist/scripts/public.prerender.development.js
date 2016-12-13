@@ -2699,45 +2699,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var CartListImage = function (_Component) {
   (0, _inherits3.default)(CartListImage, _Component);
 
-  function CartListImage(props) {
+  function CartListImage() {
     (0, _classCallCheck3.default)(this, CartListImage);
-
-    var _this = (0, _possibleConstructorReturn3.default)(this, (CartListImage.__proto__ || (0, _getPrototypeOf2.default)(CartListImage)).call(this, props));
-
-    _this.initFancybox = _this.initFancybox.bind(_this);
-    _this.destroyFancybox = _this.destroyFancybox.bind(_this);
-    return _this;
+    return (0, _possibleConstructorReturn3.default)(this, (CartListImage.__proto__ || (0, _getPrototypeOf2.default)(CartListImage)).apply(this, arguments));
   }
 
   (0, _createClass3.default)(CartListImage, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.initFancybox();
+      CartListImage.initFancybox((0, _jquery2.default)((0, _reactDom.findDOMNode)(this)), this.props.t);
     }
-  }, {
-    key: 'initFancybox',
-    value: function initFancybox() {
-      var t = this.props.t;
-
-      var $node = (0, _jquery2.default)((0, _reactDom.findDOMNode)(this));
-
-      $node.find('[data-lightbox]').fancybox({
-        parent: 'body',
-        padding: 0,
-        margin: 0,
-        helpers: {
-          thumbs: { width: 8, height: 8 }
-        },
-        tpl: {
-          closeBtn: '<a title="' + t('vendor.gallery.close') + '" class="fancybox-item fancybox-close" href="javascript:;"><i></i></a>',
-          next: '<a title="' + t('vendor.gallery.next') + '" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
-          prev: '<a title="' + t('vendor.gallery.prev') + '" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
-        }
-      });
-    }
-  }, {
-    key: 'destroyFancybox',
-    value: function destroyFancybox() {}
   }, {
     key: 'render',
     value: function render() {
@@ -2764,22 +2735,44 @@ var CartListImage = function (_Component) {
             maxWidth: size
           })
         ),
-        Array.isArray(images) && images.filter(function (img) {
-          return img.url !== image.url;
-        }).map(function (img) {
-          return _react2.default.createElement(
-            'a',
-            {
-              className: 'b-cart__item__img--hidden',
-              'data-lightbox': true,
-              'data-fancybox-group': image.productId,
-              href: img.url,
-              key: img.uid
-            },
-            _react2.default.createElement('img', { src: img.url })
-          );
-        })
+        CartListImage.fancyboxImages(image, images)
       );
+    }
+  }], [{
+    key: 'initFancybox',
+    value: function initFancybox($node, t) {
+      return $node.find('[data-lightbox]').fancybox({
+        parent: 'body',
+        padding: 0,
+        margin: 0,
+        helpers: {
+          thumbs: { width: 8, height: 8 }
+        },
+        tpl: {
+          closeBtn: '<a title="' + t('vendor.gallery.close') + '" class="fancybox-item fancybox-close" href="javascript:;"><i></i></a>',
+          next: '<a title="' + t('vendor.gallery.next') + '" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
+          prev: '<a title="' + t('vendor.gallery.prev') + '" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+        }
+      });
+    }
+  }, {
+    key: 'fancyboxImages',
+    value: function fancyboxImages(defaultImage, images) {
+      return Array.isArray(images) && images.filter(function (img) {
+        return img.url !== defaultImage.url;
+      }).map(function (img) {
+        return _react2.default.createElement(
+          'a',
+          {
+            className: 'b-cart__item__img--hidden',
+            'data-lightbox': true,
+            'data-fancybox-group': defaultImage.productId,
+            href: img.url,
+            key: img.uid
+          },
+          _react2.default.createElement('img', { src: img.url, alt: '' })
+        );
+      });
     }
   }]);
   return CartListImage;
@@ -3118,6 +3111,12 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _reactDom = require('react-dom');
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -3131,6 +3130,10 @@ var _Image = require('../common/Image');
 var _CartListPackagePrice = require('./CartListPackagePrice');
 
 var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
+
+var _CartListImage = require('./CartListImage');
+
+var _CartListImage2 = _interopRequireDefault(_CartListImage);
 
 var _timm = require('timm');
 
@@ -3153,6 +3156,11 @@ var CartListPackageItem = function (_Component) {
   }
 
   (0, _createClass3.default)(CartListPackageItem, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _CartListImage2.default.initEvent((0, _jquery2.default)((0, _reactDom.findDOMNode)(this)), this.props.t);
+    }
+  }, {
     key: 'renderGoodDetails',
     value: function renderGoodDetails() {
       var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']) || {};
@@ -3174,6 +3182,7 @@ var CartListPackageItem = function (_Component) {
           _ref$good = _ref.good,
           globalId = _ref$good.globalId,
           image = _ref$good.image,
+          images = _ref$good.images,
           _ref$good$defaultUrl = _ref$good.defaultUrl,
           defaultUrl = _ref$good$defaultUrl === undefined ? '' : _ref$good$defaultUrl,
           _ref$good$title = _ref$good.title,
@@ -3185,6 +3194,7 @@ var CartListPackageItem = function (_Component) {
           packagePrice = _props.packagePrice,
           t = _props.t;
 
+      var sImage = image || {};
 
       return _react2.default.createElement(
         'li',
@@ -3192,12 +3202,25 @@ var CartListPackageItem = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-cart__item__col-img' },
-          _react2.default.createElement(_Image.RelativeImage, {
-            className: 'b-cart__item__img',
-            image: image || {},
-            maxHeight: 92,
-            maxWidth: 92
-          })
+          sImage.url && _react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'a',
+              {
+                'data-lightbox': true,
+                'data-fancybox-group': sImage.productId,
+                href: sImage.url
+              },
+              _react2.default.createElement(_Image.RelativeImage, {
+                className: 'b-cart__item__img',
+                image: sImage,
+                maxHeight: 92,
+                maxWidth: 92
+              })
+            ),
+            _CartListImage2.default.fancyboxImages(sImage, images)
+          )
         ),
         _react2.default.createElement(
           'div',
@@ -3253,7 +3276,7 @@ CartListPackageItem.propTypes = {
 exports.default = CartListPackageItem;
 module.exports = exports['default'];
 
-},{"../../schemas":318,"../common/AssetImage":243,"../common/Image":253,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"lodash":"lodash","react":"react","timm":"timm"}],33:[function(require,module,exports){
+},{"../../schemas":318,"../common/AssetImage":243,"../common/Image":253,"./CartListImage":30,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"jquery":"jquery","lodash":"lodash","react":"react","react-dom":"react-dom","timm":"timm"}],33:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3377,31 +3400,44 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _reactDom = require('react-dom');
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _Image = require('../common/Image');
-
-var _money = require('../../helpers/money');
 
 var _humps = require('humps');
 
 var _lodash = require('lodash');
 
-var _timm = require('timm');
+var _schemas = require('../../schemas');
+
+var schemas = _interopRequireWildcard(_schemas);
+
+var _Image = require('../common/Image');
+
+var _money = require('../../helpers/money');
 
 var _CartListPackagePrice = require('./CartListPackagePrice');
 
 var _CartListPackagePrice2 = _interopRequireDefault(_CartListPackagePrice);
 
-var _schemas = require('../../schemas');
+var _CartListImage = require('./CartListImage');
 
-var schemas = _interopRequireWildcard(_schemas);
+var _CartListImage2 = _interopRequireDefault(_CartListImage);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var defaultPackage = {
+  image: {},
+  images: null
+};
 
 var CartListPackages = function (_Component) {
   (0, _inherits3.default)(CartListPackages, _Component);
@@ -3412,6 +3448,11 @@ var CartListPackages = function (_Component) {
   }
 
   (0, _createClass3.default)(CartListPackages, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      _CartListImage2.default.initFancybox((0, _jquery2.default)((0, _reactDom.findDOMNode)(this)), this.props.t);
+    }
+  }, {
     key: 'renderRadioButton',
     value: function renderRadioButton(_ref) {
       var value = _ref.value,
@@ -3487,6 +3528,12 @@ var CartListPackages = function (_Component) {
         return _react2.default.createElement('noscript', null);
       }
 
+      var sPackage = (0, _lodash.find)(packages, function (p) {
+        return p.globalId === selectedPackage;
+      }) || defaultPackage;
+      var sImage = sPackage.image;
+      var sImages = sPackage.images;
+
       return _react2.default.createElement(
         'li',
         { className: 'b-cart__item_spec' },
@@ -3496,12 +3543,25 @@ var CartListPackages = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'b-cart__item__col-img' },
-            _react2.default.createElement(_Image.RelativeImage, {
-              className: 'b-cart__item__img',
-              image: (0, _timm.getIn)(packages, [0, 'image']),
-              maxHeight: 184,
-              maxWidth: 184
-            })
+            sImage.url && _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement(
+                'a',
+                {
+                  'data-lightbox': true,
+                  'data-fancybox-group': sImage.productId,
+                  href: sImage.url
+                },
+                _react2.default.createElement(_Image.RelativeImage, {
+                  className: 'b-cart__item__img',
+                  image: sImage,
+                  maxHeight: 184,
+                  maxWidth: 184
+                })
+              ),
+              _CartListImage2.default.fancyboxImages(sImage, sImages)
+            )
           ),
           _react2.default.createElement(
             'div',
@@ -3553,7 +3613,7 @@ CartListPackages.propTypes = {
 exports.default = CartListPackages;
 module.exports = exports['default'];
 
-},{"../../helpers/money":291,"../../schemas":318,"../common/Image":253,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"humps":475,"lodash":"lodash","react":"react","timm":"timm"}],35:[function(require,module,exports){
+},{"../../helpers/money":291,"../../schemas":318,"../common/Image":253,"./CartListImage":30,"./CartListPackagePrice":33,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"humps":475,"jquery":"jquery","lodash":"lodash","react":"react","react-dom":"react-dom"}],35:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -105895,7 +105955,8 @@ function getIn(obj, path) {
 // -- // true
 // -- ```
 function set(obj, key, val) {
-  var finalObj = obj == null ? {} : obj;
+  var fallback = typeof key === 'number' ? [] : {};
+  var finalObj = obj == null ? fallback : obj;
   if (finalObj[key] === val) return finalObj;
   var obj2 = clone(finalObj);
   obj2[key] = val;
@@ -105935,9 +105996,9 @@ function set(obj, key, val) {
 // -- obj3.e === obj.e
 // -- // true
 // --
-// -- // ... unknown paths create intermediate keys:
-// -- setIn({ a: 3 }, ['unknown', 'path'], 4)
-// -- // { a: 3, unknown: { path: 4 } }
+// -- // ... unknown paths create intermediate keys. Numeric segments are treated as array indices:
+// -- setIn({ a: 3 }, ['unknown', 0, 'path'], 4)
+// -- // { a: 3, unknown: [{ path: 4 }] }
 // -- ```
 function doSetIn(obj, path, val, idx) {
   var newValue = void 0;

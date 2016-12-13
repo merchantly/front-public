@@ -4,22 +4,8 @@ import { findDOMNode } from 'react-dom';
 import { RelativeImage } from 'rc/common/Image';
 
 class CartListImage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.initFancybox = this.initFancybox.bind(this);
-    this.destroyFancybox = this.destroyFancybox.bind(this);
-  }
-  componentDidMount() {
-    this.initFancybox();
-  }
-  initFancybox() {
-    const {
-      t,
-    } = this.props;
-    const $node = $(findDOMNode(this));
-
-    $node
+  static initFancybox($node, t) {
+    return $node
       .find('[data-lightbox]')
       .fancybox({
         parent: 'body',
@@ -35,8 +21,23 @@ class CartListImage extends Component {
         },
       });
   }
-  destroyFancybox() {
-
+  static fancyboxImages(defaultImage, images) {
+    return Array.isArray(images) && images
+      .filter(img => img.url !== defaultImage.url)
+      .map(img => (
+        <a
+          className="b-cart__item__img--hidden"
+          data-lightbox
+          data-fancybox-group={defaultImage.productId}
+          href={img.url}
+          key={img.uid}
+        >
+          <img src={img.url} alt="" />
+        </a>
+      ));
+  }
+  componentDidMount() {
+    CartListImage.initFancybox($(findDOMNode(this)), this.props.t);
   }
   render() {
     const {
@@ -59,19 +60,7 @@ class CartListImage extends Component {
             maxWidth={size}
           />
         </a>
-        {Array.isArray(images) && images
-          .filter((img) => img.url !== image.url)
-          .map((img) => (
-            <a
-              className="b-cart__item__img--hidden"
-              data-lightbox
-              data-fancybox-group={image.productId}
-              href={img.url}
-              key={img.uid}
-            >
-              <img src={img.url} />
-            </a>
-          ))}
+        {CartListImage.fancyboxImages(image, images)}
       </div>
     );
   }
