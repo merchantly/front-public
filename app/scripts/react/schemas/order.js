@@ -14,7 +14,7 @@ const {
 } = PropTypes;
 
 export default shape({
-  externalId: number,
+  externalId: string,
   defaultUrl: string.isRequired, // vendor_order_path(order.external_id)
   freeDelivery: bool,
   freeDeliveryThreshold: money,
@@ -35,9 +35,9 @@ export default shape({
     type: string.isRequired,
   }),
   workflowState: shape({
-    bgStyle: object.isRequired,
+    bgStyle: string,
     title: string,
-    color: string,
+    color: object.isRequired,
   }),
   adminComments: arrayOf(comment),
   items: arrayOf(orderItem).isRequired,

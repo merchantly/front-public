@@ -21951,10 +21951,10 @@ var VendorLayout = function (_Component) {
             })),
             showMenuTop && _react2.default.createElement(_MenuTop2.default, menuTopProps)
           ),
+          _react2.default.createElement(_LayoutMessages2.default, { flash: flash }),
           _react2.default.createElement(
             'div',
             { className: 'b-page__content__inner b-page__content__inner_content' },
-            _react2.default.createElement(_LayoutMessages2.default, { flash: flash }),
             children
           ),
           _react2.default.createElement(_Footer2.default, {
@@ -30521,7 +30521,7 @@ var shape = _react.PropTypes.shape,
     number = _react.PropTypes.number,
     object = _react.PropTypes.object;
 exports.default = shape({
-  externalId: number,
+  externalId: string,
   defaultUrl: string.isRequired, // vendor_order_path(order.external_id)
   freeDelivery: bool,
   freeDeliveryThreshold: _money2.default,
@@ -30542,9 +30542,9 @@ exports.default = shape({
     type: string.isRequired
   }),
   workflowState: shape({
-    bgStyle: object.isRequired,
+    bgStyle: string,
     title: string,
-    color: string
+    color: object.isRequired
   }),
   adminComments: arrayOf(_comment2.default),
   items: arrayOf(_orderItem2.default).isRequired,
@@ -30695,7 +30695,7 @@ exports.default = _react.PropTypes.shape({
   isRunOut: _react.PropTypes.bool.isRequired,
   isSale: _react.PropTypes.bool.isRequired,
   isSold: _react.PropTypes.bool.isRequired,
-  publicUrl: _react.PropTypes.string.isRequired,
+  publicUrl: _react.PropTypes.string,
   title: _react.PropTypes.string.isRequired,
   prices: _react.PropTypes.shape({
     minPrice: _money2.default.isRequired,
@@ -105143,7 +105143,7 @@ function getIn(obj, path) {
 // -- // true
 // -- ```
 function set(obj, key, val) {
-  var fallback = Number.isInteger(key) ? [] : {};
+  var fallback = typeof key === 'number' ? [] : {};
   var finalObj = obj == null ? fallback : obj;
   if (finalObj[key] === val) return finalObj;
   var obj2 = clone(finalObj);
@@ -105184,9 +105184,9 @@ function set(obj, key, val) {
 // -- obj3.e === obj.e
 // -- // true
 // --
-// -- // ... unknown paths create intermediate keys:
-// -- setIn({ a: 3 }, ['unknown', 'path'], 4)
-// -- // { a: 3, unknown: { path: 4 } }
+// -- // ... unknown paths create intermediate keys. Numeric segments are treated as array indices:
+// -- setIn({ a: 3 }, ['unknown', 0, 'path'], 4)
+// -- // { a: 3, unknown: [{ path: 4 }] }
 // -- ```
 function doSetIn(obj, path, val, idx) {
   var newValue = void 0;

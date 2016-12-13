@@ -47,8 +47,8 @@ class VendorLayout extends Component {
             />
             {showMenuTop && <MenuTop {...menuTopProps} />}
           </div>
+          <LayoutMessages flash={flash} />
           <div className="b-page__content__inner b-page__content__inner_content">
-            <LayoutMessages flash={flash} />
             {children}
           </div>
           <Footer
