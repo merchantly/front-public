@@ -13924,7 +13924,8 @@ var OrderPage = function (_Component) {
           paymentTypeId = _props.paymentTypeId,
           paymentTypes = _props.paymentTypes,
           publicOffer = _props.publicOffer,
-          submitOrderUrl = _props.submitOrderUrl;
+          submitOrderUrl = _props.submitOrderUrl,
+          cart = _props.cart;
 
 
       return _react2.default.createElement(
@@ -13945,7 +13946,8 @@ var OrderPage = function (_Component) {
           paymentTypeId: paymentTypeId,
           paymentTypes: paymentTypes,
           publicOffer: publicOffer,
-          submitOrderUrl: submitOrderUrl
+          submitOrderUrl: submitOrderUrl,
+          cart: cart
         })
       );
     }
@@ -15362,14 +15364,12 @@ var OrderPayment = function (_Component) {
           _react2.default.createElement(
             'form',
             { action: orderPaymentUrl, ref: 'form' },
-            fields.map(function (_ref) {
-              var name = _ref.name,
-                  value = _ref.value;
+            fields.map(function (field, index) {
               return _react2.default.createElement('input', {
-                key: 'form-input-' + name,
-                name: name,
+                key: 'form-input-' + index,
+                name: field.name,
                 type: 'hidden',
-                value: value
+                value: field.value
               });
             }),
             _react2.default.createElement('input', {
@@ -27867,7 +27867,7 @@ var OrderContents = function (_Component) {
           'ul',
           { className: 'b-cart__list' },
           items.map(function (item) {
-            return _react2.default.createElement(_OrderItem2.default, { item: item, key: 'order-item-' + item.id });
+            return _react2.default.createElement(_OrderItem2.default, { item: item, key: 'order-item-' + item.good.id });
           }),
           packageGood && this.renderPackageGood(packageGood, packagePrice),
           coupon && _react2.default.createElement(
@@ -28444,7 +28444,7 @@ var OrderState = function (_Component) {
 
 OrderState.propTypes = {
   state: _react.PropTypes.shape({
-    color: _react.PropTypes.string.isRequired,
+    color: _react.PropTypes.object.isRequired,
     title: _react.PropTypes.string
   }).isRequired
 };

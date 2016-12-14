@@ -19,6 +19,7 @@ class OrderPage extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
+      cart
     } = this.props;
 
     return (
@@ -39,6 +40,7 @@ class OrderPage extends Component {
           paymentTypes,
           publicOffer,
           submitOrderUrl,
+          cart
         }}/>
       </VendorLayoutContainer>
     );
