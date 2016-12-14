@@ -18,7 +18,7 @@ export default class ProductCardDetails extends Component {
         <ul className="b-characteristics" ref="attributes">
           {
             product.attributes.map((attr, idx) =>
-              <li className={'b-characteristics-li-property_' + attr.property_id} key={idx}>
+              <li className={'b-characteristics-li-property_' + attr.propertyId} key={idx}>
                 {attributeValue(attr)}
               </li>
             )
@@ -42,11 +42,11 @@ export default class ProductCardDetails extends Component {
     }
   }
   renderTextBlocks(product) {
-    if (product.text_blocks && product.text_blocks.length) {
+    if (product.textBlocks && product.textBlocks.length) {
       return (
         <span ref="textBlocks">
           {
-            product.text_blocks.map((block, idx) =>
+            product.textBlocks.map((block, idx) =>
               <div className="b-item-full__text" key={idx}>
                 <h4>{block.title}</h4>
                 <span dangerouslySetInnerHTML={{ __html: block.content }} />
@@ -69,7 +69,7 @@ export default class ProductCardDetails extends Component {
             {
               otherProducts.map((product, _idx) => (
                 <li key={product.id}>
-                  <a href={product.public_url} title={product.title} alt={product.title}>
+                  <a href={product.publicUrl} title={product.title} alt={product.title}>
                     <ProductBlockImage product={product} />
                   </a>
                 </li>
@@ -88,7 +88,7 @@ export default class ProductCardDetails extends Component {
     if (product) {
       return (
         <span>
-          <span dangerouslySetInnerHTML={{ __html: product.custom_product_html }} />
+          <span dangerouslySetInnerHTML={{ __html: product.customProductHtml }} />
           {this.renderDescription(product)}
           {this.renderAttributes(product)}
           {this.renderTextBlocks(product)}

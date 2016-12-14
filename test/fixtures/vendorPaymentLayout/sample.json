@@ -8,8 +8,8 @@
       "imageAlt": "Test2"
     },
     "vendor": {
-      "custom_append_html": "<p>custom append html</p>",
-      "custom_after_content_html": "<p>custom after content html</p>"
+      "customAppendHtml": "<p>custom append html</p>",
+      "customAfterContentHtml": "<p>custom after content html</p>"
     },
     "w1ptEnabled": ""
   }

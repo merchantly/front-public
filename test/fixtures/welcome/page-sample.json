@@ -1,50 +1,56 @@
 {
   "layoutProps": {
-    "flash": [],
+    "flash": [{
+      "name": "sample flash",
+      "msg": "sample flash message"
+    }],
     "menuBottomProps": {
       "leftItems": [
         {
           "id": 1,
           "title": "Доставка",
           "url": "/dostavka",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 2,
           "title": "Оплата",
           "url": "/oplata",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 3,
           "title": "Контакты",
           "url": "/contacts",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 4,
           "title": "Новости",
           "url": "/news",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
+          "linkTarget": ""
         }
       ],
       "leftActiveItems": [
         {
           "id": 2,
           "url": "/oplata",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
+          "linkTarget": ""
         }
       ],
       "rightItems": [
@@ -52,30 +58,34 @@
           "id": 10,
           "title": "Facebook",
           "url": "/facebook",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 11,
           "title": "Хиты продаж",
           "url": "/instagramm",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 12,
           "title": "Вконтакте",
           "url": "/vk",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
+          "linkTarget": ""
         }
       ],
       "rightActiveItems": [],
-      "currenciesIsoCodes": ["RUB"],
+      "currenciesIsoCodes": [
+        "RUB"
+      ],
       "currentCurrency": "RUB",
       "locales": [
         {
@@ -93,406 +103,453 @@
           "id": 348,
           "title": "Новинки",
           "url": "/categories/2209-novinki",
-          "products_count": 155,
+          "productsCount": 155,
           "children": [],
           "type": "MenuItemCategory",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 753,
           "title": "Хиты продаж",
           "url": "/categories/2904-hity-prodazh",
-          "products_count": 29,
+          "productsCount": 29,
           "children": [],
           "type": "MenuItemCategory",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 738,
           "title": "Украшения",
           "url": "/categories/2926-ukrasheniya",
-          "products_count": 925,
+          "productsCount": 925,
           "children": [
             {
               "id": 6838,
               "title": "Аксессуары",
               "url": "/categories/6838-ukrasheniya-aksessuary",
-              "products_count": 6,
+              "productsCount": 6,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 4148,
               "title": "Безразмерные кольца",
               "url": "/categories/4148-ukrasheniya-bezrazmernye-koltsa",
-              "products_count": 41,
+              "productsCount": 41,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1585,
               "title": "Браслеты",
               "url": "/categories/1585-ukrasheniya-braslety",
-              "products_count": 119,
+              "productsCount": 119,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1763,
               "title": "Браслеты-нитки",
               "url": "/categories/1763-ukrasheniya-braslety-nitki",
-              "products_count": 65,
+              "productsCount": 65,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 4762,
               "title": "Броши",
               "url": "/categories/4762-ukrasheniya-broshi",
-              "products_count": 7,
+              "productsCount": 7,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1581,
               "title": "Каффы",
               "url": "/categories/1581-ukrasheniya-kaffy",
-              "products_count": 29,
+              "productsCount": 29,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1587,
               "title": "Кольца",
               "url": "/categories/1587-ukrasheniya-koltsa",
-              "products_count": 207,
+              "productsCount": 207,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 2486,
               "title": "Кольца на фалангу",
               "url": "/categories/2486-ukrasheniya-koltsa-na-falangu",
-              "products_count": 49,
+              "productsCount": 49,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 2678,
               "title": "Моносережки",
               "url": "/categories/2678-ukrasheniya-monoserezhki",
-              "products_count": 60,
+              "productsCount": 60,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1584,
               "title": "Подвески",
               "url": "/categories/1584-ukrasheniya-podveski",
-              "products_count": 78,
+              "productsCount": 78,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1583,
               "title": "Серьги",
               "url": "/categories/1583-ukrasheniya-sergi",
-              "products_count": 177,
+              "productsCount": 177,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 6348,
               "title": "Серьги-гвоздики",
               "url": "/categories/6348-ukrasheniya-sergi-gvozdiki",
-              "products_count": 36,
+              "productsCount": 36,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 6917,
               "title": "Чокеры",
               "url": "/categories/6917-ukrasheniya-chokery",
-              "products_count": 15,
+              "productsCount": 15,
               "children": [],
               "type": "MenuItemCategory",
-              "link_target": ""
+              "linkTarget": ""
             }
           ],
           "type": "MenuItemCategory",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 254,
           "title": "Бренды",
           "url": "#",
-          "products_count": 0,
+          "productsCount": 0,
           "children": [
             {
               "id": 493,
               "title": "ANNA.M.OBJECTS",
               "url": "/entities/493-anna-m-objects",
-              "products_count": 73,
+              "productsCount": 73,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 8653,
               "title": "ATJEWELER",
               "url": "/entities/8653-atjeweler",
-              "products_count": 15,
+              "productsCount": 15,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 11853,
               "title": "FIANCÈ",
               "url": "/entities/11853-fianc",
-              "products_count": 8,
+              "productsCount": 8,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 452,
               "title": "HIMÈRE",
               "url": "/entities/452-him-re",
-              "products_count": 86,
+              "productsCount": 86,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 12092,
               "title": "JULS JWLS",
               "url": "/entities/12092-juls-jwls",
-              "products_count": 14,
+              "productsCount": 14,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 22973,
               "title": "LACET",
               "url": "/entities/22973-lacet",
-              "products_count": 4,
+              "productsCount": 4,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 646,
               "title": "LENA BELASH",
               "url": "/entities/646-lena-belash",
-              "products_count": 1,
+              "productsCount": 1,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 19458,
               "title": "LIZA VINTOVA",
               "url": "/entities/19458-liza-vintova",
-              "products_count": 6,
+              "productsCount": 6,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 454,
               "title": "MAYA KOTELNITSKAYA",
               "url": "/entities/454-maya-kotelnitskaya",
-              "products_count": 41,
+              "productsCount": 41,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 10032,
               "title": "MMKXSS JEWELRY",
               "url": "/entities/10032-mmkxss-jewelry",
-              "products_count": 25,
+              "productsCount": 25,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 27746,
               "title": "MOONKA",
               "url": "/entities/27746-moonka",
-              "products_count": 14,
+              "productsCount": 14,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 6648,
               "title": "MOONSWOON",
               "url": "/entities/6648-moonswoon",
-              "products_count": 20,
+              "productsCount": 20,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1639,
               "title": "MONQUÈR",
               "url": "/entities/1639-monqu-r",
-              "products_count": 1,
+              "productsCount": 1,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 16302,
               "title": "MOST",
               "url": "/entities/16302-most",
-              "products_count": 9,
+              "productsCount": 9,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 10658,
               "title": "MYTHOS",
               "url": "/entities/10658-mythos",
-              "products_count": 27,
+              "productsCount": 27,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 495,
               "title": "NATALIA BRYANTSEVA",
               "url": "/entities/495-natalia-bryantseva",
-              "products_count": 33,
+              "productsCount": 33,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 19434,
               "title": "NASTYA MAXIMOVA",
               "url": "/entities/19434-nastya-maximova",
-              "products_count": 33,
+              "productsCount": 33,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 554,
               "title": "NATASHA GELB",
               "url": "/entities/554-natasha-gelb",
-              "products_count": 54,
+              "productsCount": 54,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 6750,
               "title": "NATASHA DEA",
               "url": "/entities/6750-natasha-dea",
-              "products_count": 8,
+              "productsCount": 8,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 488,
               "title": "NO NAME",
               "url": "/entities/488-no-name",
-              "products_count": 2,
+              "productsCount": 2,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 27732,
               "title": "O-SH",
               "url": "/entities/27732-o-sh",
-              "products_count": 4,
+              "productsCount": 4,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 459,
               "title": "QARI QRIS",
               "url": "/entities/459-qari-qris",
-              "products_count": 34,
+              "productsCount": 34,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 460,
               "title": "RUE GEMBON",
               "url": "/entities/460-rue-gembon",
-              "products_count": 1,
+              "productsCount": 1,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 1585,
-              "title": "SOLOMEINA NY\u0026LONDON",
+              "title": "SOLOMEINA NY&LONDON",
               "url": "/entities/1585-solomeina-ny-london",
-              "products_count": 46,
+              "productsCount": 46,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 10241,
               "title": "STELLAR JEWELLERY",
               "url": "/entities/10241-stellar-jewellery",
-              "products_count": 9,
+              "productsCount": 9,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 8205,
               "title": "SUMEI",
               "url": "/entities/8205-sumei",
-              "products_count": 18,
+              "productsCount": 18,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 462,
               "title": "VACHE",
               "url": "/entities/462-vache",
-              "products_count": 27,
+              "productsCount": 27,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 36331,
               "title": "MADRE KUNST",
               "url": "/entities/36331-madre-kunst",
-              "products_count": 7,
+              "productsCount": 7,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 31423,
               "title": "YANA PASTEL JEWELRY",
               "url": "/entities/31423-yana-pastel-jewelry",
-              "products_count": 17,
+              "productsCount": 17,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
-            }, {
+              "linkTarget": ""
+            },
+            {
               "id": 14444,
               "title": "САХАРОК",
               "url": "/entities/14444-saharok",
-              "products_count": 6,
+              "productsCount": 6,
               "children": [],
               "type": "MenuItemDictionaryEntity",
-              "link_target": ""
+              "linkTarget": ""
             }
           ],
           "type": "MenuItemDictionary",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 253,
           "title": "Подарочные сертификаты",
           "url": "/categories/2972-podarochnye-sertifikaty",
-          "products_count": 4,
+          "productsCount": 4,
           "children": [],
           "type": "MenuItemCategory",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 1760,
           "title": "На заказ",
           "url": "/pages/797-na-zakaz",
-          "products_count": null,
+          "productsCount": null,
           "children": [],
           "type": "MenuItemPage",
-          "link_target": ""
-        }, {
+          "linkTarget": ""
+        },
+        {
           "id": 1179,
           "title": "Скидки",
           "url": "/categories/4877-skidki",
-          "products_count": 34,
+          "productsCount": 34,
           "children": [],
           "type": "MenuItemCategory",
-          "link_target": ""
+          "linkTarget": ""
         }
       ],
       "activeItems": [
@@ -500,10 +557,10 @@
           "id": 348,
           "title": "Новинки",
           "url": "/categories/2209-novinki",
-          "products_count": 155,
+          "productsCount": 155,
           "children": [],
           "type": "MenuItemCategory",
-          "link_target": ""
+          "linkTarget": ""
         }
       ]
     },
@@ -525,17 +582,19 @@
             "type": "email",
             "value": "saharokstore@gmail.com",
             "link": "mailto:saharokstore@gmail.com"
-          }, {
+          },
+          {
             "type": "phone",
             "value": "+7 666 555 44 33",
             "link": "tel:+76665554433"
-          }, {
+          },
+          {
             "type": "text",
             "value": "plain text contact"
           }
         ],
         "title": "Магазин мебели ручной работы",
-        "search_products_path": "/products/search"
+        "searchProductsPath": "/products/search"
       },
       "searchQuery": "query"
     },
@@ -568,8 +627,8 @@
       "wishlistItemsCount": 1
     },
     "vendor": {
-      "custom_append_html": "<p>custom append html</p>",
-      "custom_after_content_html": "<p>custom after content html</p>"
+      "customAppendHtml": "<p>custom append html</p>",
+      "customAfterContentHtml": "<p>custom after content html</p>"
     },
     "w1ptEnabled": ""
   },
@@ -586,7 +645,8 @@
         "valueFrom": null,
         "valueTo": null,
         "step": 500
-      }, {
+      },
+      {
         "title": "Вставки",
         "type": "checkbox",
         "paramName": "attr_99",
@@ -595,13 +655,15 @@
             "name": "куб. циркон",
             "paramValue": "65",
             "checked": false
-          }, {
+          },
+          {
             "name": "эмаль",
             "paramValue": "14144",
             "checked": false
           }
         ]
-      }, {
+      },
+      {
         "title": "Цвет нити",
         "type": "checkbox",
         "paramName": "attr_92",
@@ -610,25 +672,30 @@
             "name": "серый",
             "paramValue": "26",
             "checked": false
-          }, {
+          },
+          {
             "name": "синий",
             "paramValue": "25",
             "checked": false
-          }, {
+          },
+          {
             "name": "зеленый",
             "paramValue": "33326",
             "checked": false
-          }, {
+          },
+          {
             "name": "черный",
             "paramValue": "23",
             "checked": false
-          }, {
+          },
+          {
             "name": "красный",
             "paramValue": "22",
             "checked": false
           }
         ]
-      }, {
+      },
+      {
         "title": "Цвет покрытия",
         "type": "checkbox",
         "paramName": "attr_89",
@@ -637,35 +704,43 @@
             "name": "золочение",
             "paramValue": "45",
             "checked": false
-          }, {
+          },
+          {
             "name": "фиолетовый",
             "paramValue": "38044",
             "checked": false
-          }, {
+          },
+          {
             "name": "розовый",
             "paramValue": "38043",
             "checked": false
-          }, {
+          },
+          {
             "name": "красный",
             "paramValue": "38042",
             "checked": false
-          }, {
+          },
+          {
             "name": "черный",
             "paramValue": "38041",
             "checked": false
-          }, {
+          },
+          {
             "name": "розовое золочение",
             "paramValue": "12220",
             "checked": false
-          }, {
+          },
+          {
             "name": "чернение золочение родий",
             "paramValue": "12198",
             "checked": false
-          }, {
+          },
+          {
             "name": "родий",
             "paramValue": "44",
             "checked": false
-          }, {
+          },
+          {
             "name": "чернение",
             "paramValue": "46",
             "checked": false
@@ -682,421 +757,446 @@
       {
         "id": 20943,
         "title": "Кольцо ANNA.M.OBJECTS",
-        "is_sale": false,
-        "has_ordering_goods": true,
-        "is_label_new": false,
-        "is_run_out": false,
-        "is_sold": false,
-        "selling_by_weight": false,
-        "weight_of_price": null,
-        "index_image": {
+        "isSale": false,
+        "hasOrderingGoods": true,
+        "isLabelNew": false,
+        "isRunOut": false,
+        "isSold": false,
+        "sellingByWeight": false,
+        "weightOfPrice": null,
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
           "width": 750,
           "height": 936
         },
-        "public_url": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
-        "short_details": "Серебро",
+        "publicUrl": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
+        "shortDetails": "Серебро",
         "goods": [
           {
             "id": 45116,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 42791,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 42792,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15370,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15378,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15366,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15367,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15369,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15371,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15372,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15373,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15374,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15375,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15376,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15377,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15379,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 15368,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
+            "isSale": false,
             "price": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 100000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
           }
         ]
-      }, {
+      },
+      {
         "id": 22172,
         "title": "Кольцо NATALIA BRYANTSEVA",
-        "is_sale": false,
-        "has_ordering_goods": true,
-        "is_label_new": false,
-        "is_run_out": false,
-        "is_sold": false,
-        "selling_by_weight": false,
-        "weight_of_price": null,
-        "index_image": {
+        "isSale": false,
+        "hasOrderingGoods": true,
+        "isLabelNew": false,
+        "isRunOut": false,
+        "isSold": false,
+        "sellingByWeight": false,
+        "weightOfPrice": null,
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8053/6e993711-5a58-482b-b411-84648172aa32.jpg",
           "width": 1500,
           "height": 1501
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78537/e4fc4d8a-3aaf-467b-87f2-e40263949dcd.jpg",
           "width": 2000,
           "height": 2000
         },
-        "public_url": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
-        "short_details": "Серебро, эмаль",
+        "publicUrl": "http://saharokstore.ru/products/22172-koltso-natalia-bryantseva",
+        "shortDetails": "Серебро, эмаль",
         "goods": [
           {
             "id": 27025,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 27689,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 27690,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 27691,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 28474,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 28503,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 31854,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
-          }, {
+          },
+          {
             "id": 42665,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
+            "isSale": false,
             "price": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 450000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
           }
         ]
-      }, {
+      },
+      {
         "id": 33644,
         "title": "Браслет HIMÈRE",
-        "is_sale": false,
-        "has_ordering_goods": true,
-        "is_label_new": false,
-        "is_run_out": false,
-        "is_sold": false,
-        "selling_by_weight": false,
-        "weight_of_price": null,
-        "index_image": {
+        "isSale": false,
+        "hasOrderingGoods": true,
+        "isLabelNew": false,
+        "isRunOut": false,
+        "isSold": false,
+        "sellingByWeight": false,
+        "weightOfPrice": null,
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/29886/f6c04ba9-cd53-432f-a187-87529e2e7204.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
           "width": 640,
           "height": 640
         },
-        "public_url": "http://saharokstore.ru/products/33644-braslet-him-re",
-        "short_details": "Шелковая нить, Серебро, Серебро",
+        "publicUrl": "http://saharokstore.ru/products/33644-braslet-him-re",
+        "shortDetails": "Шелковая нить, Серебро, Серебро",
         "goods": [
           {
             "id": 29992,
             "type": "ProductItem",
-            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
-            "is_sale": false,
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yOTk5Mg",
+            "isSale": false,
             "price": {
               "cents": 200000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             },
-            "actual_price": {
+            "actualPrice": {
               "cents": 200000,
-              "currency_iso_code": "RUB"
+              "currencyIsoCode": "RUB"
             }
           }
         ]
       }
     ],
     "pagination": {
-      "current_page": 1,
-      "total_pages": 20
+      "currentPage": 1,
+      "totalPages": 20
     }
   },
   "showPaginationOnWelcome": true,
@@ -1104,9 +1204,9 @@
   "showQuantity": false,
   "showWelcomeSlider": true,
   "vendor": {
-    "pre_products_text": "<p><em>Pre</em> products text</p>",
-    "post_products_text": "<p><em>Post</em> products text</p>",
-    "slider_images": [
+    "preProductsText": "<p><em>Pre</em> products text</p>",
+    "postProductsText": "<p><em>Post</em> products text</p>",
+    "sliderImages": [
       {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1666/ee8dac29-6bc0-49a8-8cff-93851718ed12.jpg",
@@ -1114,14 +1214,16 @@
           "width": 1000
         },
         "url": "http://wanna-be.ru/categories/8538-kastomnye-kollektsii-masti"
-      }, {
+      },
+      {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1296/f1333e5a-99cc-4f84-b168-bc2e2739cac2.jpg",
           "height": 800,
           "width": 2000
         },
         "url": "http://wanna-be.ru/categories/7499-krasota-v-prostote"
-      }, {
+      },
+      {
         "image": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/8/e442e950-49b4-40a5-9cd6-4711fcb72b2d.jpg",
           "height": 600,

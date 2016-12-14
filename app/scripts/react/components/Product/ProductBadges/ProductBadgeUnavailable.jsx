@@ -1,14 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import ProductBadge from './ProductBadge';
 
 const ProductBadgeUnavailable = ({ product, t }) => (
-  !product.has_ordering_goods && !product.is_run_out
-    ? <ProductBadge text={t('vendor.badges.not_available')} status="sold" />
+  !product.hasOrderingGoods && !product.isRunOut
+    ? <ProductBadge status="sold" text={t('vendor.badges.not_available')} />
     : <span />
 );
 
 ProductBadgeUnavailable.propTypes = {
   product: PropTypes.object.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 export default ProductBadgeUnavailable;

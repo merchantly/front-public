@@ -1,5 +1,6 @@
 import BasketDispatcher from '../../stores/BasketDispatcher';
 import * as apiRoutes from '../../../routes/api';
+import $ from 'jquery';
 
 function startItemRequest(id) {
   return BasketDispatcher.handleServerAction({
@@ -34,7 +35,7 @@ export function addGood(good, count = 1, weight = null) {
     dataType: 'json',
     method: 'post',
     data: {
-      'cart_item[good_id]': good.global_id,
+      'cart_item[good_id]': good.globalId,
       count,
       weight
     },

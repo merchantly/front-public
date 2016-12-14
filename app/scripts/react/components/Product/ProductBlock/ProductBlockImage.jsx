@@ -13,10 +13,13 @@ class ProductBlockImage extends Component {
     };
   }
   getCurrentImage() {
-    const { index_image, second_image } = this.props.product;
+    const {
+      indexImage,
+      secondImage,
+    } = this.props.product;
     const { isHover } = this.state;
 
-    return isHover && second_image ? second_image : index_image;
+    return isHover && secondImage ? secondImage : indexImage;
   }
   handleMouseEnter() {
     this.setState({ isHover: true });
@@ -25,8 +28,13 @@ class ProductBlockImage extends Component {
     this.setState({ isHover: false });
   }
   render() {
-    const { maxWidth, product: {second_image, title} } = this.props;
-    const { currentImage } = this.state;
+    const {
+      maxWidth,
+      product: {
+        secondImage,
+        title,
+      },
+    } = this.props;
 
     return (
       <span
@@ -39,15 +47,17 @@ class ProductBlockImage extends Component {
           maxWidth={maxWidth}
           title={title}
         />
-        {second_image
-          ? <span style={{ display: 'none!important' }}>
+        {secondImage
+          ? (
+            <span style={{ display: 'none!important' }}>
               <RelativeImage
                 className="b-item__pic"
-                image={second_image}
+                image={secondImage}
                 maxWidth={maxWidth}
                 title={title}
               />
             </span>
+          )
           : null
         }
       </span>

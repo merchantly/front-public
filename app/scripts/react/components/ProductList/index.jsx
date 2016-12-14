@@ -15,7 +15,7 @@ ProductListContainer.propTypes = {
   container: PropTypes.shape({
     image: schemas.image,
     description: PropTypes.string,
-    bottom_text: PropTypes.string,
+    bottomText: PropTypes.string,
   }),
   i18n: PropTypes.object,
   nextButton: PropTypes.shape({

@@ -5,7 +5,7 @@ class OrderSelfDeliveryMessage extends Component {
     const {
       deliveryType: {
         selfdelivery,
-        pickup_address: pickupAdress,
+        pickupAdress,
       },
       t,
     } = this.props;
@@ -24,7 +24,7 @@ class OrderSelfDeliveryMessage extends Component {
 OrderSelfDeliveryMessage.propTypes = {
   deliveryType: PropTypes.shape({
     selfdelivery: PropTypes.bool,
-    pickup_address: PropTypes.string,
+    pickupAddress: PropTypes.string,
   }).isRequired,
   t: PropTypes.func.isRequired,
 };

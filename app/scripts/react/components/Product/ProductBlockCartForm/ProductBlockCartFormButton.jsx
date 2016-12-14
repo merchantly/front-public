@@ -11,7 +11,7 @@ class ProductBlockCartFormButton extends Component {
     const { t } = this.props;
 
     this.state = this.getStateFromStore();
-    this.state = { ...this.getStateFromStore(), amount: props.product.selling_by_weight ? parseFloat(props.product.weight_of_price) : 1 }
+    this.state = { ...this.getStateFromStore(), amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1 }
   }
   componentDidMount() {
     this.syncWithStore = () => {
@@ -34,16 +34,16 @@ class ProductBlockCartFormButton extends Component {
   addToBasket() {
     const { product } = this.props;
 
-    return product.selling_by_weight ? addGood(product.goods[0], 1, this.state.amount) : addGood(product.goods[0], this.state.amount);
+    return product.sellingByWeight ? addGood(product.goods[0], 1, this.state.amount) : addGood(product.goods[0], this.state.amount);
   }
   renderQuanity() {
     const { product } = this.props;
     let step, defaultValue, min;
 
-    if (product.selling_by_weight) {
+    if (product.sellingByWeight) {
       step = 0.01;
       min = step;
-      defaultValue = parseFloat(product.weight_of_price);
+      defaultValue = parseFloat(product.weightOfPrice);
     } else {
       step = 1;
       defaultValue = 1;

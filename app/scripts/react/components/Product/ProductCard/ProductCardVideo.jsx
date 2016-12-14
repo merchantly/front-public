@@ -7,11 +7,11 @@ export default class ProductCardVideo extends Component {
   render() {
     const { product } = this.props;
 
-    if (product.video_embed_html) {
+    if (product.videoEmbedHtml) {
       return (
         <div
           className="b-item-full__video"
-          dangerouslySetInnerHTML={{ __html: product.video_embed_html }}
+          dangerouslySetInnerHTML={{ __html: product.videoEmbedHtml }}
         />
       );
     }

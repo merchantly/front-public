@@ -31,7 +31,7 @@ NavBarContainer.defaultProps = {
   vendor: {
     contacts: [],
     title: '',
-    search_products_path: '',
+    searchProductsPath: '',
   },
   searchQuery: '',
   showClientBar: true,

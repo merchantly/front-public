@@ -16,7 +16,7 @@ describe('[Component] ProductCardDetails', () => {
 
   describe('Text blocks', () => {
     it('shouldn\'t render text blocks container when no text blocks to display', () => {
-      const product = { text_blocks: [] };
+      const product = { textBlocks: [] };
       const component = renderIntoDocument(
         <ProductCardDetails product={product} />
       );
@@ -26,7 +26,7 @@ describe('[Component] ProductCardDetails', () => {
 
     it('should render text blocks which count is equals product\'s text_blocks length', () => {
       const product = {
-        text_blocks: [
+        textBlocks: [
           {
             title: 'Подробнее о продукте',
             content: '<ul><li>тип:\tбокс мод</li></ul>',
@@ -43,7 +43,7 @@ describe('[Component] ProductCardDetails', () => {
       const textBlocks = component.refs.textBlocks;
 
       expect(textBlocks).to.be.defined;
-      expect(product.text_blocks.length).to.equal(textBlocks.childNodes.length);
+      expect(product.textBlocks.length).to.equal(textBlocks.childNodes.length);
     });
   });
 
@@ -59,15 +59,15 @@ describe('[Component] ProductCardDetails', () => {
 
     it('should render AttributeDictionary attribute type', () => {
       const title = 'Цвет покрытия';
-      const products_url = '/entities/46-chernenie';
+      const productsUrl = '/entities/46-chernenie';
       const value = 'чернение';
       const product = {
         attributes: [
           {
-            products_url,
+            productsUrl,
             title,
             value,
-            property_id: 89,
+            propertyId: 89,
             type: 'AttributeDictionary',
           },
         ],
@@ -85,18 +85,18 @@ describe('[Component] ProductCardDetails', () => {
 
       expect(attributeTitle.textContent).contain(title);
       expect(attributeValue.textContent).to.equal(value);
-      expect(attributeValue).to.have.property('href').that.contain(products_url);
+      expect(attributeValue).to.have.property('href').that.contain(productsUrl);
     });
 
     it('should render AttributeLink attribute type', () => {
       const product = {
         attributes: [
           {
-            property_id: 2378,
+            propertyId: 2378,
             type: 'AttributeLink',
             title: 'Ссылочка',
             value: 'http://google.ru',
-            products_url: null,
+            productsUrl: null,
           },
         ],
       };
@@ -122,7 +122,7 @@ describe('[Component] ProductCardDetails', () => {
         attributes: [
           {
             title,
-            property_id: 2379,
+            propertyId: 2379,
             type: "AttributeFile",
             value: {
               url,
@@ -130,7 +130,7 @@ describe('[Component] ProductCardDetails', () => {
               filename: '59eb28c9-fa4e-4062-b1d8-4582b9dc6c40.png',
               size: 38144,
             },
-            products_url: null,
+            productsUrl: null,
           },
         ],
       };

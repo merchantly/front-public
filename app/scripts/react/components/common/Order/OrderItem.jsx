@@ -13,12 +13,12 @@ class OrderItem extends Component {
         count,
         title,
         good: {
-          default_url: defaultUrl,
+          defaultUrl,
           article,
         },
-        image_url: imageUrl,
-        total_price: totalPrice,
-        quantity_unit: quantityUnit,
+        imageUrl,
+        totalPrice,
+        quantityUnit,
       },
     } = this.props;
 

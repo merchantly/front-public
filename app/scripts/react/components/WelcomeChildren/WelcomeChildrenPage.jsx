@@ -11,6 +11,9 @@ class WelcomeChildrenPage extends Component {
       layoutProps,
       showWelcomeSlider,
       vendor,
+      showCartButton,
+      showCatalogFilter,
+      showQuantity
     } = this.props;
 
     return (
@@ -19,6 +22,9 @@ class WelcomeChildrenPage extends Component {
           childrenProducts={childrenProducts}
           showWelcomeSlider={showWelcomeSlider}
           vendor={vendor}
+          showCartButton={showCartButton}
+          showCatalogFilter={showCatalogFilter}
+          showQuantity={showQuantity}
         />
       </VendorLayoutContainer>
     );
@@ -27,6 +33,9 @@ class WelcomeChildrenPage extends Component {
 
 WelcomeChildrenPage.propTypes = {
   childrenProducts: schemas.childrenProducts,
+  showCartButton: PropTypes.bool,
+  showCatalogFilter: PropTypes.bool,
+  showQuantity: PropTypes.bool,
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   showWelcomeSlider: PropTypes.bool,

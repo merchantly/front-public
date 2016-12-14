@@ -9,16 +9,17 @@
     "totalCount": 1,
     "totalPrice": {
       "cents": 495000,
-      "currency_iso_code": "RUB"
+      "currencyIsoCode": "RUB"
     }
   },
-  "deliveryTypes": [{
+  "deliveryTypes": [
+    {
       "id": 110,
       "title": "Москва – доставка курьером (2-3 дня)",
       "description": "",
       "price": {
         "cents": 23000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -42,10 +43,10 @@
       ],
       "freeDeliveryThreshold": {
         "cents": 1000000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "reservedFieldValues": {
-        "city_title": "Москва"
+        "cityTitle": "Москва"
       }
     },
     {
@@ -54,7 +55,7 @@
       "description": "Доставка в течение 3 часов с момента подтверждения заказа оператором магазина. \r\nВ будние дни, в пределах МКАД. \r\nПредоплата или наличные курьеру при получении.\r\nАкция \" От 10000 р. доставка бесплатно\"  на срочную не распространяется.",
       "price": {
         "cents": 35000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -78,7 +79,7 @@
       ],
       "freeDeliveryThreshold": null,
       "reservedFieldValues": {
-        "city_title": "Москва"
+        "cityTitle": "Москва"
       }
     },
     {
@@ -87,7 +88,7 @@
       "description": "",
       "price": {
         "cents": 28000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -110,10 +111,10 @@
       ],
       "freeDeliveryThreshold": {
         "cents": 1000000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "reservedFieldValues": {
-        "city_title": "Санкт-Петербург"
+        "cityTitle": "Санкт-Петербург"
       }
     },
     {
@@ -122,7 +123,7 @@
       "description": "",
       "price": {
         "cents": 50000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -145,7 +146,7 @@
       ],
       "freeDeliveryThreshold": {
         "cents": 1000000,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "reservedFieldValues": {}
     },
@@ -155,7 +156,7 @@
       "description": "Москва, ул. Б. Никитская, 35, кв.1, код подъезда #423.\r\nВремя работы: пн-вс, с 11 до 21.\r\n\r\nСрок бронирования украшения - 3 дня.\r\n\r\nОбратите внимание, что обмен и возврат купленных украшений осуществляется в течение 14 дней с момента покупки.",
       "price": {
         "cents": 0,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -175,7 +176,7 @@
       ],
       "freeDeliveryThreshold": null,
       "reservedFieldValues": {
-        "city_title": "Москва"
+        "cityTitle": "Москва"
       }
     },
     {
@@ -184,7 +185,7 @@
       "description": "Москва, Центр дизайна ARTPLAY, ул. Нижняя Сыромятническая, 10, стр.9, подъезд D, 3-й этаж.\r\nВремя работы: пн-вс, с 11 до 21.\r\n\r\nСрок бронирования украшения - 3 дня.\r\n\r\nОбратите внимание, что обмен и возврат купленных украшений осуществляется в течение 14 дней с момента покупки.",
       "price": {
         "cents": 0,
-        "currency_iso_code": "RUB"
+        "currencyIsoCode": "RUB"
       },
       "fields": [
         "name",
@@ -204,26 +205,28 @@
       ],
       "freeDeliveryThreshold": null,
       "reservedFieldValues": {
-        "city_title": "Москва"
+        "cityTitle": "Москва"
       }
     }
   ],
-  "paymentTypes": [{
+  "paymentTypes": [
+    {
       "id": 105,
       "title": "Оплата банковской картой, через терминал или салон связи",
       "description": "Безопасная оплата любым удобным способом",
-      "icon_url": "/images/payment_icons/order_payment_w1.png",
-      "show_icon": false
+      "iconUrl": "/images/payment_icons/order_payment_w1.png",
+      "showIcon": false
     },
     {
       "id": 69,
       "title": "Наличные при получении",
       "description": "",
-      "icon_url": "/images/payment_icons/order_payment_w1.png",
-      "show_icon": false
+      "iconUrl": "/images/payment_icons/order_payment_w1.png",
+      "showIcon": false
     }
   ],
-  "fields": [{
+  "fields": [
+    {
       "name": "name",
       "type": "string",
       "value": "Test Name",

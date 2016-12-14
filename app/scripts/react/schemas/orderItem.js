@@ -11,10 +11,10 @@ const {
 export default shape({
   count: number.isRequired,
   title: string.isRequired,
-  total_price: money.isRequired,
-  quantity_unit: shape({
+  totalPrice: money.isRequired,
+  quantityUnit: shape({
     short: string.isRequired,
   }).isRequired,
-  image_url: string.isRequired,
+  imageUrl: string.isRequired,
   good: good.isRequired,
 });

@@ -24,12 +24,12 @@ class OrderPayment extends Component {
         <h2>
           {t('vendor.order.redirect')}
           <form action={orderPaymentUrl} ref="form">
-            {fields.map(({ name, value }) => (
+            {fields.map((field, index) => (
               <input
-                key={`form-input-${name}`}
-                name={name}
+                key={`form-input-${index}`}
+                name={field.name}
                 type="hidden"
-                value={value}
+                value={field.value}
               />
             ))}
             <input

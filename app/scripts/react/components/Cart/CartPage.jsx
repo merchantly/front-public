@@ -12,6 +12,7 @@ class CartPage extends Component {
       initialPackages,
       isTesting,
       layoutProps,
+      minimalPrice
     } = this.props;
 
     return (
@@ -25,6 +26,7 @@ class CartPage extends Component {
           initialCart={initialCart}
           initialPackages={initialPackages}
           isTesting={isTesting}
+          minimalPrice={minimalPrice}
         />
       </VendorLayoutContainer>
     );
@@ -37,6 +39,7 @@ CartPage.propTypes = {
   initialCart: PropTypes.object,
   initialPackages: PropTypes.array,
   isTesting: PropTypes.bool,
+  minimalPrice: schemas.money,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
 };
 

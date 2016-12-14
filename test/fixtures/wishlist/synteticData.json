@@ -1,19 +1,20 @@
 {
-  "wishlistItems": [{
+  "wishlistItems": [
+    {
       "good": {
         "id": 1,
-        "add_to_cart_url": "/good/add_to_cart/1",
-        "default_url": "/good/1",
-        "long_title": "good 1 long title",
-        "has_ordering_goods": true,
-        "is_sale": false,
+        "addToCartUrl": "/good/add_to_cart/1",
+        "defaultUrl": "/good/1",
+        "longTitle": "good 1 long title",
+        "hasOrderingGoods": true,
+        "isSale": false,
         "price": {
           "cents": 1000,
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
-        "custom_attributes": {
-          "attr 1.1": "value 1.1",
-          "attr 1.2": "value 1.2"
+        "customAttributes": {
+          "attr1.1": "value 1.1",
+          "attr1.2": "value 1.2"
         },
         "image": {
           "url": "/good_image/1"
@@ -22,40 +23,41 @@
       "product": {
         "id": 1,
         "title": "product 1",
-        "has_ordering_goods": true
+        "hasOrderingGoods": true
       },
-      "destroy_url": "/destroy/1"
+      "destroyUrl": "/destroy/1"
     },
     {
       "good": {
         "id": 2,
-        "add_to_cart_url": "/good/add_to_cart/2",
-        "default_url": "/good/2",
-        "long_title": "good 2 long title",
-        "has_ordering_goods": true,
-        "is_sale": false,
+        "addToCartUrl": "/good/add_to_cart/2",
+        "defaultUrl": "/good/2",
+        "longTitle": "good 2 long title",
+        "hasOrderingGoods": true,
+        "isSale": false,
         "price": {
           "cents": 2000,
-          "currency_iso_code": "RUB"
+          "currencyIsoCode": "RUB"
         },
         "image": {
           "url": "/good_image/2"
         },
-        "custom_attributes": {
-          "attr 2.1": "value 2.1",
-          "attr 2.2": "value 2.2"
+        "customAttributes": {
+          "attr2.1": "value 2.1",
+          "attr2.2": "value 2.2"
         }
       },
       "product": {
         "id": 2,
         "title": "product 2",
-        "has_ordering_goods": true
+        "hasOrderingGoods": true
       },
-      "destroy_url": "/destroy/2"
+      "destroyUrl": "/destroy/2"
     }
   ],
   "initialCart": {
-    "items": [{
+    "items": [
+      {
         "good": {
           "id": 1
         }
@@ -66,9 +68,9 @@
         }
       }
     ],
-    "total_price": {
+    "totalPrice": {
       "cents": 5000,
-      "currency_iso_code": "RUB"
+      "currencyIsoCode": "RUB"
     }
   },
   "isPrivate": true

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { humanizedMoneyWithCurrency } from '../../helpers/money';
 import { simpleFormat } from '../../helpers/text';
-import { decamelizeKeys } from 'humps';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 
 class CheckoutDeliveries extends Component {
@@ -36,14 +35,14 @@ class CheckoutDeliveries extends Component {
               {title}
             </div>
             <div className="b-cart__form__delivery-price">
-              <HumanizedMoneyWithCurrency money={decamelizeKeys(price)} />
+              <HumanizedMoneyWithCurrency money={price} />
             </div>
             {threshold && threshold.cents
               ? <div
                 className="cart__form__delivery-address"
                 dangerouslySetInnerHTML={{
                   __html: t('vendor.order.checkout_free_delivery_text_html', {
-                    free_delivery_threshold: humanizedMoneyWithCurrency(decamelizeKeys(threshold)),
+                    'free_delivery_threshold': humanizedMoneyWithCurrency(threshold),
                   }),
                 }}
                 />

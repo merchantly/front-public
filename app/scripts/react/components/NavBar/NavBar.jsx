@@ -31,7 +31,7 @@ class NavBar extends Component {
             </div>
             <div className="b-header__search">
               <ProductSearchForm
-                searchProductsPath={vendor.search_products_path}
+                searchProductsPath={vendor.searchProductsPath}
                 searchQuery={searchQuery}
                 t={t}
               />

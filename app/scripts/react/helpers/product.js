@@ -14,7 +14,7 @@ export function schemaOrgMarkup(product) {
       }
       {product.goods
         && product.goods.length
-        && product.goods.map((el) => schemaOrgGoodPrice(el, product.main_category))
+        && product.goods.map((el) => schemaOrgGoodPrice(el, product.mainCategory))
       }
     </div>
   );
@@ -24,18 +24,18 @@ export function schemaOrgGoodPrice(good, category) {
   return (
     <div
       itemProp="offers"
-      itemScope={true}
+      itemScope
       itemType="http://schema.org/Offer"
-      key={good.global_id}
+      key={good.globalId}
     >
       <meta itemProp="name" content={good.title} />
       <meta itemProp="sku" content={good.article} />
       <meta itemProp="category" content={schemaOrgProductCategory(category)} />
       <meta itemProp="availability" content={schemaOrgGoodAvailability(good)} />
-      {good.actual_price &&
+      {good.actualPrice &&
         <div itemProp="price">
-          <meta itemProp="priceCurrency" content={good.actual_price.currency_iso_code} />
-          <div>{money(good.actual_price)}</div>
+          <meta itemProp="priceCurrency" content={good.actualPrice.currencyIsoCode} />
+          <div>{money(good.actualPrice)}</div>
         </div>
       }
     </div>
@@ -46,26 +46,26 @@ export function goodOrderTitle(product, good) {
   let title = good.title;
 
   if (hasDifferentPrices(product)) {
-    title += ` (${humanizedMoneyWithCurrency(good.actual_price)})`;
+    title += ` (${humanizedMoneyWithCurrency(good.actualPrice)})`;
   }
 
-  if (good.is_run_out) {
+  if (good.isRunOut) {
     title += ' - нет в наличии';
   }
 
   return title;
 }
 
-export function goodActualPrice({ actual_price }) {
-  if (actual_price) {
-    return humanizedMoneyWithCurrency(actual_price);
+export function goodActualPrice({ actualPrice }) {
+  if (actualPrice) {
+    return humanizedMoneyWithCurrency(actualPrice);
   } else {
     return 'Цена неизвестна';
   }
 }
 
 export function attributeValue(attribute) {
-  const { products_url, title, value } = attribute
+  const { productsUrl, title, value } = attribute;
 
   switch(attribute.type) {
     case 'AttributeLink':
@@ -88,7 +88,7 @@ export function attributeValue(attribute) {
           <span className="attribute__title">
             {`${title}: `}
           </span>
-          <a href={products_url}>
+          <a href={productsUrl}>
             {value}
           </a>
         </span>
@@ -100,8 +100,8 @@ export function attributeValue(attribute) {
 
 function hasDifferentPrices(product) {
   const diffCents = product.goods.reduce((prev, good) => {
-    if (good.actual_price) {
-      const actualCents = good.actual_price.cents;
+    if (good.actualPrice) {
+      const actualCents = good.actualPrice.cents;
 
       if (prev.indexOf(actualCents) === -1) {
         return prev.concat([actualCents]);

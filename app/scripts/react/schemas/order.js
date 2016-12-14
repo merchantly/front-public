@@ -14,41 +14,41 @@ const {
 } = PropTypes;
 
 export default shape({
-  external_id: number,
-  default_url: string.isRequired, // vendor_order_path(order.external_id)
-  free_delivery: bool,
-  free_delivery_threshold: money,
-  order_delivery: shape({
-    tracking_id: string,
-    tracking_url: string,
+  externalId: string,
+  defaultUrl: string.isRequired, // vendor_order_path(order.external_id)
+  freeDelivery: bool,
+  freeDeliveryThreshold: money,
+  orderDelivery: shape({
+    trackingId: string,
+    trackingUrl: string,
   }),
-  delivery_price: money,
-  delivery_type: shape({
+  deliveryPrice: money,
+  deliveryType: shape({
     title: string,
     selfdelivery: bool,
-    pickup_address: string,
+    pickupAddress: string,
   }),
-  must_be_paid_online: bool,
-  payment_url: string,
-  payment_type: shape({
+  mustBePaidOnline: bool,
+  paymentUrl: string,
+  paymentType: shape({
     title: string,
     type: string.isRequired,
   }),
-  workflow_state: shape({
-    bg_style: object.isRequired,
+  workflowState: shape({
+    bgStyle: string,
     title: string,
-    color: string,
+    color: object.isRequired,
   }),
-  admin_comments: arrayOf(comment),
+  adminComments: arrayOf(comment),
   items: arrayOf(orderItem).isRequired,
-  package_good: good,
-  package_price: money,
-  total_with_delivery_price: money.isRequired,
+  packageGood: good,
+  packagePrice: money,
+  totalWithDeliveryPrice: money.isRequired,
   phone: string,
   coupon: shape({
     discount: number,
     fixed: bool,
-    fixed_discount: money,
-    free_delivery: bool,
+    fixedDiscount: money,
+    freeDelivery: bool,
   }),
 });

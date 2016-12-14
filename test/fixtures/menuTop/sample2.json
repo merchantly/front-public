@@ -1,319 +1,323 @@
 {
-  "items": [{
+  "items": [
+    {
       "id": "category_menu_item_5372",
       "title": "Подарки к 8 марта ",
       "url": "/categories/5372-podarki-k-8-marta",
-      "products_count": 20,
+      "productsCount": 20,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_5134",
       "title": "Подарки к 14 февраля",
       "url": "/categories/5134-podarki-k-14-fevralya",
-      "products_count": 21,
+      "productsCount": 21,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_4877",
       "title": "Скидки",
       "url": "/categories/4877-skidki",
-      "products_count": 34,
+      "productsCount": 34,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_2972",
       "title": "Подарочные сертификаты",
       "url": "/categories/2972-podarochnye-sertifikaty",
-      "products_count": 4,
+      "productsCount": 4,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_2926",
       "title": "Украшения",
       "url": "/categories/2926-ukrasheniya",
-      "products_count": 925,
-      "children": [{
+      "productsCount": 925,
+      "children": [
+        {
           "id": "category_menu_item_6838",
           "title": "Аксессуары",
           "url": "/categories/6838-ukrasheniya-aksessuary",
-          "products_count": 6,
+          "productsCount": 6,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_4148",
           "title": "Безразмерные кольца",
           "url": "/categories/4148-ukrasheniya-bezrazmernye-koltsa",
-          "products_count": 41,
+          "productsCount": 41,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1585",
           "title": "Браслеты",
           "url": "/categories/1585-ukrasheniya-braslety",
-          "products_count": 119,
+          "productsCount": 119,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1763",
           "title": "Браслеты-нитки",
           "url": "/categories/1763-ukrasheniya-braslety-nitki",
-          "products_count": 65,
+          "productsCount": 65,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_4762",
           "title": "Броши",
           "url": "/categories/4762-ukrasheniya-broshi",
-          "products_count": 7,
+          "productsCount": 7,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1581",
           "title": "Каффы",
           "url": "/categories/1581-ukrasheniya-kaffy",
-          "products_count": 29,
+          "productsCount": 29,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1587",
           "title": "Кольца",
           "url": "/categories/1587-ukrasheniya-koltsa",
-          "products_count": 207,
+          "productsCount": 207,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_2486",
           "title": "Кольца на фалангу",
           "url": "/categories/2486-ukrasheniya-koltsa-na-falangu",
-          "products_count": 49,
+          "productsCount": 49,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_2678",
           "title": "Моносережки",
           "url": "/categories/2678-ukrasheniya-monoserezhki",
-          "products_count": 60,
+          "productsCount": 60,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1584",
           "title": "Подвески",
           "url": "/categories/1584-ukrasheniya-podveski",
-          "products_count": 78,
+          "productsCount": 78,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1583",
           "title": "Серьги",
           "url": "/categories/1583-ukrasheniya-sergi",
-          "products_count": 177,
+          "productsCount": 177,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_6348",
           "title": "Серьги-гвоздики",
           "url": "/categories/6348-ukrasheniya-sergi-gvozdiki",
-          "products_count": 36,
+          "productsCount": 36,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_6917",
           "title": "Чокеры",
           "url": "/categories/6917-ukrasheniya-chokery",
-          "products_count": 15,
+          "productsCount": 15,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         }
       ],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_2904",
       "title": "Хиты продаж",
       "url": "/categories/2904-hity-prodazh",
-      "products_count": 29,
+      "productsCount": 29,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_2209",
       "title": "Новинки",
       "url": "/categories/2209-novinki",
-      "products_count": 155,
+      "productsCount": 155,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     }
   ],
-  "activeItems": [{
+  "activeItems": [
+    {
       "id": "category_menu_item_2926",
       "title": "Украшения",
       "url": "/categories/2926-ukrasheniya",
-      "products_count": 925,
-      "children": [{
+      "productsCount": 925,
+      "children": [
+        {
           "id": "category_menu_item_6838",
           "title": "Аксессуары",
           "url": "/categories/6838-ukrasheniya-aksessuary",
-          "products_count": 6,
+          "productsCount": 6,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_4148",
           "title": "Безразмерные кольца",
           "url": "/categories/4148-ukrasheniya-bezrazmernye-koltsa",
-          "products_count": 41,
+          "productsCount": 41,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1585",
           "title": "Браслеты",
           "url": "/categories/1585-ukrasheniya-braslety",
-          "products_count": 119,
+          "productsCount": 119,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1763",
           "title": "Браслеты-нитки",
           "url": "/categories/1763-ukrasheniya-braslety-nitki",
-          "products_count": 65,
+          "productsCount": 65,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_4762",
           "title": "Броши",
           "url": "/categories/4762-ukrasheniya-broshi",
-          "products_count": 7,
+          "productsCount": 7,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1581",
           "title": "Каффы",
           "url": "/categories/1581-ukrasheniya-kaffy",
-          "products_count": 29,
+          "productsCount": 29,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1587",
           "title": "Кольца",
           "url": "/categories/1587-ukrasheniya-koltsa",
-          "products_count": 207,
+          "productsCount": 207,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_2486",
           "title": "Кольца на фалангу",
           "url": "/categories/2486-ukrasheniya-koltsa-na-falangu",
-          "products_count": 49,
+          "productsCount": 49,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_2678",
           "title": "Моносережки",
           "url": "/categories/2678-ukrasheniya-monoserezhki",
-          "products_count": 60,
+          "productsCount": 60,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1584",
           "title": "Подвески",
           "url": "/categories/1584-ukrasheniya-podveski",
-          "products_count": 78,
+          "productsCount": 78,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_1583",
           "title": "Серьги",
           "url": "/categories/1583-ukrasheniya-sergi",
-          "products_count": 177,
+          "productsCount": 177,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_6348",
           "title": "Серьги-гвоздики",
           "url": "/categories/6348-ukrasheniya-sergi-gvozdiki",
-          "products_count": 36,
+          "productsCount": 36,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         },
         {
           "id": "category_menu_item_6917",
           "title": "Чокеры",
           "url": "/categories/6917-ukrasheniya-chokery",
-          "products_count": 15,
+          "productsCount": 15,
           "children": [],
           "type": "Category",
-          "link_target": null
+          "linkTarget": null
         }
       ],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     },
     {
       "id": "category_menu_item_6838",
       "title": "Аксессуары",
       "url": "/categories/6838-ukrasheniya-aksessuary",
-      "products_count": 6,
+      "productsCount": 6,
       "children": [],
       "type": "Category",
-      "link_target": null
+      "linkTarget": null
     }
   ]
 }

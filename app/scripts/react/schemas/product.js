@@ -5,18 +5,18 @@ import good from './good';
 
 export default PropTypes.shape({
   id: PropTypes.number.isRequired,
-  has_ordering_goods: PropTypes.bool.isRequired,
-  index_image: image,
-  second_image: image,
-  is_label_new: PropTypes.bool.isRequired,
-  is_run_out: PropTypes.bool.isRequired,
-  is_sale: PropTypes.bool.isRequired,
-  is_sold: PropTypes.bool.isRequired,
-  public_url: PropTypes.string.isRequired,
+  hasOrderingGoods: PropTypes.bool.isRequired,
+  indexImage: image,
+  secondImage: image,
+  isLabelNew: PropTypes.bool.isRequired,
+  isRunOut: PropTypes.bool.isRequired,
+  isSale: PropTypes.bool.isRequired,
+  isSold: PropTypes.bool.isRequired,
+  publicUrl: PropTypes.string,
   title: PropTypes.string.isRequired,
   prices: PropTypes.shape({
-    min_price: money.isRequired,
-    max_price: money.isRequired,
+    minPrice: money.isRequired,
+    maxPrice: money.isRequired,
   }),
   goods: PropTypes.arrayOf(good).isRequired,
 });

@@ -28,7 +28,7 @@ class OrderState extends Component {
 
 OrderState.propTypes = {
   state: PropTypes.shape({
-    color: PropTypes.string.isRequired,
+    color: PropTypes.object.isRequired,
     title: PropTypes.string,
   }).isRequired,
 };

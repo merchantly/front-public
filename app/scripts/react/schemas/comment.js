@@ -8,5 +8,5 @@ const {
 export default shape({
   body: string.isRequired,
   author: string,
-  created_at: string.isRequired,
+  createdAt: string.isRequired,
 });

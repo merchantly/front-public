@@ -44,6 +44,6 @@ describe('[Component] WishlistContainer', () => {
       .eq(1)
       .find('a')
       .attr('href')
-    ).to.equal(props.wishlistItems[1].good.add_to_cart_url);
-  });  
+    ).to.equal(props.wishlistItems[1].good.addToCartUrl);
+  });
 });
