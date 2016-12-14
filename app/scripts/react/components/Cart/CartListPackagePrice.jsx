@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import Select from 'rc/common/Select';
 import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurrency';
-import { decamelizeKeys } from 'humps';
 import * as schemas from 'r/schemas';
 import { range } from 'lodash';
 
@@ -42,7 +41,7 @@ function CartListPackagePrice(props) {
       <div className="b-cart__item__col-price">
         <div className="b-cart__item__price">
           <HumanizedMoneyWithCurrency
-            money={decamelizeKeys(packagePrice)}
+            money={packagePrice}
           />
         </div>
       </div>

@@ -170,7 +170,7 @@ class Cart extends Component {
                   {' '}
                   <span>
                     <HumanizedMoneyWithCurrency
-                      money={decamelizeKeys(totalPrice)}
+                      money={totalPrice}
                     />
                   </span>
                 </div>

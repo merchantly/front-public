@@ -1,14 +1,12 @@
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
 import React, { Component, PropTypes } from 'react';
-import { decamelizeKeys } from 'humps';
 import { size, map, find } from 'lodash';
 import * as schemas from 'r/schemas';
 import { RelativeImage } from '../common/Image';
 import { humanizedMoneyWithCurrency } from '../../helpers/money';
 import CartListPackagePrice from './CartListPackagePrice';
 import CartListImage from './CartListImage';
-import { size, map } from 'lodash';
 import { getIn } from 'timm';
 
 const defaultPackage = {
