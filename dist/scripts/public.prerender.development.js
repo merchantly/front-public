@@ -3679,7 +3679,8 @@ var CartPage = function (_Component) {
           initialPackages = _props.initialPackages,
           isTesting = _props.isTesting,
           layoutProps = _props.layoutProps,
-          minimalPrice = _props.minimalPrice;
+          minimalPrice = _props.minimalPrice,
+          isHeaderButtons = _props.isHeaderButtons;
 
 
       return _react2.default.createElement(
@@ -3689,6 +3690,7 @@ var CartPage = function (_Component) {
           showClientBar: false
         }),
         _react2.default.createElement(_index2.default, {
+          isHeaderButtons: isHeaderButtons,
           formAuthenticity: formAuthenticity,
           i18n: i18n,
           initialCart: initialCart,
@@ -5467,7 +5469,9 @@ var CategoriesShowPage = function (_Component) {
           showCartButton = _props.showCartButton,
           showCatalogFilter = _props.showCatalogFilter,
           showPagination = _props.showPagination,
-          showQuantity = _props.showQuantity;
+          showQuantity = _props.showQuantity,
+          showNextButton = _props.showNextButton,
+          nextButton = _props.nextButton;
 
 
       return _react2.default.createElement(
@@ -5484,7 +5488,9 @@ var CategoriesShowPage = function (_Component) {
           showCartButton: showCartButton,
           showCatalogFilter: showCatalogFilter,
           showPagination: showPagination,
-          showQuantity: showQuantity
+          showQuantity: showQuantity,
+          showNextButton: showNextButton,
+          nextButton: nextButton
         })
       );
     }
@@ -10295,13 +10301,17 @@ var DictionaryEntitiesShowPage = function (_Component) {
           layoutProps = _props.layoutProps,
           products = _props.products,
           title = _props.title,
-          vendorRootPath = _props.vendorRootPath;
+          vendorRootPath = _props.vendorRootPath,
+          showNextButton = _props.showNextButton,
+          nextButton = _props.nextButton;
 
 
       return _react2.default.createElement(
         _VendorLayout2.default,
         (0, _extends3.default)({}, layoutProps, { i18n: i18n }),
         _react2.default.createElement(_index2.default, {
+          showNextButton: showNextButton,
+          nextButton: nextButton,
           entity: entity,
           i18n: i18n,
           products: products,
