@@ -19066,7 +19066,11 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
         return _react2.default.createElement(
           'div',
           { className: 'add-to-wishlist' },
-          content
+          _react2.default.createElement(
+            'noindex',
+            null,
+            content
+          )
         );
       }
 
