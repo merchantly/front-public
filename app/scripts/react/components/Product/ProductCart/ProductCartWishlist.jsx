@@ -47,7 +47,9 @@ export default class ProductCartWishlist extends Component {
 
       return (
         <div className="add-to-wishlist">
-          {content}
+          <noindex>
+            {content}
+          </noindex>
         </div>
       );
     }
