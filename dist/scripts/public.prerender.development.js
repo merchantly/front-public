@@ -918,11 +918,7 @@ var BlogPost = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "post__content" },
-            _react2.default.createElement(
-              "div",
-              { className: "post__text b-text" },
-              text
-            )
+            _react2.default.createElement("div", { className: "post__text b-text", dangerouslySetInnerHTML: { __html: text } })
           )
         ),
         _react2.default.createElement(
@@ -937,7 +933,7 @@ var BlogPost = function (_Component) {
               _react2.default.createElement(
                 "span",
                 null,
-                t('operator.blog_post.prev_post')
+                t('vendor.blog_post.prev_post')
               ),
               prev.title
             ),
@@ -947,7 +943,7 @@ var BlogPost = function (_Component) {
               _react2.default.createElement(
                 "span",
                 null,
-                t('operator.blog_post.next_post')
+                t('vendor.blog_post.next_post')
               ),
               next.title
             )
@@ -28508,11 +28504,7 @@ var PostProducts = function (_Component) {
       return _react2.default.createElement(
         "section",
         { className: "b-item-list" },
-        title && _react2.default.createElement(
-          "h1",
-          { className: "b-item-full__title" },
-          title
-        ),
+        title && _react2.default.createElement("h1", { className: "b-item-full__title", dangerouslySetInnerHTML: { __html: title } }),
         _react2.default.createElement("div", { dangerouslySetInnerHTML: { __html: postProductsText } })
       );
     }

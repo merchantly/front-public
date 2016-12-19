@@ -10,9 +10,7 @@ class PostProducts extends Component {
     return (
       <section className="b-item-list">
         {title && (
-          <h1 className="b-item-full__title">
-            {title}
-          </h1>
+          <h1 className="b-item-full__title" dangerouslySetInnerHTML={{ __html: title }} />
         )}
         <div dangerouslySetInnerHTML={{ __html: postProductsText }} />
       </section>
