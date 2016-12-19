@@ -18,6 +18,8 @@ class CategoriesShowPage extends Component {
       showCatalogFilter,
       showPagination,
       showQuantity,
+      showNextButton,
+      nextButton
     } = this.props;
 
     return (
@@ -34,6 +36,8 @@ class CategoriesShowPage extends Component {
           showCatalogFilter={showCatalogFilter}
           showPagination={showPagination}
           showQuantity={showQuantity}
+          showNextButton={showNextButton}
+          nextButton={nextButton}
         />
       </VendorLayoutContainer>
     );
