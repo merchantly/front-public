@@ -12,7 +12,8 @@ class CartPage extends Component {
       initialPackages,
       isTesting,
       layoutProps,
-      minimalPrice
+      minimalPrice,
+      isHeaderButtons
     } = this.props;
 
     return (
@@ -21,6 +22,7 @@ class CartPage extends Component {
         showClientBar={false}
       >
         <CartContainer
+          isHeaderButtons={isHeaderButtons}
           formAuthenticity={formAuthenticity}
           i18n={i18n}
           initialCart={initialCart}
