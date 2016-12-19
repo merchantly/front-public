@@ -12,11 +12,15 @@ class DictionaryEntitiesShowPage extends Component {
       products,
       title,
       vendorRootPath,
+      showNextButton,
+      nextButton
     } = this.props;
 
     return (
       <VendorLayoutContainer {...layoutProps} i18n={i18n}>
         <DictionaryEntitiesShowContainer
+          showNextButton={showNextButton}
+          nextButton={nextButton}
           entity={entity}
           i18n={i18n}
           products={products}
