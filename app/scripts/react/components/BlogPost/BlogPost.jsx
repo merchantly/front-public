@@ -17,19 +17,17 @@ class BlogPost extends Component {
           <div className="post__date">{ date }</div>
           <h1 className="post__title">{ title }</h1>
           <div className="post__content">
-            <div className="post__text b-text">
-              { text }
-            </div>
+            <div className="post__text b-text" dangerouslySetInnerHTML={{__html: text}} />
           </div>
         </article>
         <nav className="postnav">
           <div className="postnav__inner">
             <a className="postnav__prev" href={prev.url}>
-              <span>{t('operator.blog_post.prev_post')}</span>
+              <span>{t('vendor.blog_post.prev_post')}</span>
               {prev.title}
             </a>
             <a className="postnav__next" href={next.url}>
-              <span>{t('operator.blog_post.next_post')}</span>
+              <span>{t('vendor.blog_post.next_post')}</span>
               {next.title}
             </a>
           </div>
