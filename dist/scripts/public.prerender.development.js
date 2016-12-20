@@ -927,7 +927,7 @@ var BlogPost = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "postnav__inner" },
-            _react2.default.createElement(
+            prev && _react2.default.createElement(
               "a",
               { className: "postnav__prev", href: prev.url },
               _react2.default.createElement(
@@ -937,7 +937,7 @@ var BlogPost = function (_Component) {
               ),
               prev.title
             ),
-            _react2.default.createElement(
+            next && _react2.default.createElement(
               "a",
               { className: "postnav__next", href: next.url },
               _react2.default.createElement(

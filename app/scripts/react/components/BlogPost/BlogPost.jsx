@@ -22,14 +22,18 @@ class BlogPost extends Component {
         </article>
         <nav className="postnav">
           <div className="postnav__inner">
-            <a className="postnav__prev" href={prev.url}>
-              <span>{t('vendor.blog_post.prev_post')}</span>
-              {prev.title}
-            </a>
-            <a className="postnav__next" href={next.url}>
-              <span>{t('vendor.blog_post.next_post')}</span>
-              {next.title}
-            </a>
+            {prev &&
+              <a className="postnav__prev" href={prev.url}>
+                <span>{t('vendor.blog_post.prev_post')}</span>
+                {prev.title}
+              </a>
+            }
+            {next &&
+              <a className="postnav__next" href={next.url}>
+                <span>{t('vendor.blog_post.next_post')}</span>
+                {next.title}
+              </a>
+            }
           </div>
         </nav>
       </div>
