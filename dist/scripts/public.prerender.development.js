@@ -15369,7 +15369,7 @@ var OrderPayment = function (_Component) {
           t('vendor.order.redirect'),
           _react2.default.createElement(
             'form',
-            { action: orderPaymentUrl, ref: 'form' },
+            { method: 'post', action: orderPaymentUrl, ref: 'form' },
             fields.map(function (field, index) {
               return _react2.default.createElement('input', {
                 key: 'form-input-' + index,
@@ -27283,11 +27283,7 @@ var LayoutMessages = function (_Component) {
               { className: "close", "data-dismiss": "alert" },
               "\xD7"
             ),
-            _react2.default.createElement(
-              "div",
-              { id: "flash_" + name },
-              msg
-            )
+            _react2.default.createElement("div", { id: "flash_" + name, dangerouslySetInnerHTML: { __html: msg } })
           );
         })
       ) : null;

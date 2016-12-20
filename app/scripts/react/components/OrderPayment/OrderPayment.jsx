@@ -23,7 +23,7 @@ class OrderPayment extends Component {
       <div className="b-text b-text_center">
         <h2>
           {t('vendor.order.redirect')}
-          <form action={orderPaymentUrl} ref="form">
+          <form method="post" action={orderPaymentUrl} ref="form">
             {fields.map((field, index) => (
               <input
                 key={`form-input-${index}`}

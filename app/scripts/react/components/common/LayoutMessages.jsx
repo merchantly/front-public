@@ -14,9 +14,7 @@ class LayoutMessages extends Component {
               <a className="close" data-dismiss="alert">
                 {'\u00d7'}
               </a>
-              <div id={`flash_${name}`}>
-                {msg}
-              </div>
+              <div id={`flash_${name}`} dangerouslySetInnerHTML={{__html: msg}} />
             </div>
           ))}
         </div>
