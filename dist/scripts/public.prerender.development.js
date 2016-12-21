@@ -14420,6 +14420,11 @@ var OrderCancelled = function (_Component) {
   }
 
   (0, _createClass3.default)(OrderCancelled, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.refs.state.setAttribute('style', this.props.order.workflowState.bgStyle);
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -14446,7 +14451,7 @@ var OrderCancelled = function (_Component) {
             t('vendor.order.title', { number: externalId }),
             _react2.default.createElement(
               'span',
-              { className: 'label label-success', style: bgStyle },
+              { className: 'label label-success', ref: 'state' },
               title
             )
           ),

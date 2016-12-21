@@ -4,6 +4,9 @@ import OrderContents from 'rc/common/Order/OrderContents';
 import * as schemas from 'r/schemas';
 
 class OrderCancelled extends Component {
+  componentDidMount() {
+    this.refs.state.setAttribute('style', this.props.order.workflowState.bgStyle);
+  }
   render() {
     const {
       isCurrentClientPresent,
@@ -25,7 +28,7 @@ class OrderCancelled extends Component {
         <div className="b-cart__content">
           <h1 className="b-cart__title">
             {t('vendor.order.title', { number: externalId })}
-            <span className="label label-success" style={bgStyle}>
+            <span className="label label-success" ref="state">
               {title}
             </span>
           </h1>
