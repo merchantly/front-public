@@ -672,9 +672,7 @@
     },
     "adminComments": [],
     "workflowState": {
-      "bgStyle": {
-        "backgroundColor": "#880000"
-      },
+      "bgStyle": "backgroundColor: #880000",
       "title": "Отменен",
       "color": "green"
     },
