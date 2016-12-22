@@ -13,7 +13,8 @@ class CartPage extends Component {
       isTesting,
       layoutProps,
       minimalPrice,
-      isHeaderButtons
+      isHeaderButtons,
+      continueShoppingUrl
     } = this.props;
 
     return (
@@ -25,6 +26,7 @@ class CartPage extends Component {
           isHeaderButtons={isHeaderButtons}
           formAuthenticity={formAuthenticity}
           i18n={i18n}
+          continueShoppingUrl={continueShoppingUrl}
           initialCart={initialCart}
           initialPackages={initialPackages}
           isTesting={isTesting}
@@ -42,6 +44,7 @@ CartPage.propTypes = {
   initialPackages: PropTypes.array,
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
+  continueShoppingUrl: PropTypes.string,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
 };
 
