@@ -73,7 +73,7 @@ class ProductList extends Component {
               </div>
             )
           }
-          {(showPagination && pagination.total_pages > 1) && (
+          {(showPagination && pagination.totalPages > 1) && (
             <div className="b-item-list__paginator">
               <Pagination {...pagination} />
             </div>
