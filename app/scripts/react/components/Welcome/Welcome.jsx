@@ -69,7 +69,7 @@ class Welcome extends Component {
           <div className="b-page__content__inner b-page__content__inner_content">
             <PostProducts
               postProductsText={postProductsText}
-              title={h1(vendor)}
+              title={vendor.h1}
             />
           </div>
         )}
