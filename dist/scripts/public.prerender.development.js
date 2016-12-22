@@ -3680,7 +3680,8 @@ var CartPage = function (_Component) {
           isTesting = _props.isTesting,
           layoutProps = _props.layoutProps,
           minimalPrice = _props.minimalPrice,
-          isHeaderButtons = _props.isHeaderButtons;
+          isHeaderButtons = _props.isHeaderButtons,
+          continueShoppingUrl = _props.continueShoppingUrl;
 
 
       return _react2.default.createElement(
@@ -3693,6 +3694,7 @@ var CartPage = function (_Component) {
           isHeaderButtons: isHeaderButtons,
           formAuthenticity: formAuthenticity,
           i18n: i18n,
+          continueShoppingUrl: continueShoppingUrl,
           initialCart: initialCart,
           initialPackages: initialPackages,
           isTesting: isTesting,
@@ -3711,6 +3713,7 @@ CartPage.propTypes = {
   initialPackages: _react.PropTypes.array,
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
+  continueShoppingUrl: _react.PropTypes.string,
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired
 };
 
@@ -21407,7 +21410,7 @@ var ProductList = function (_Component) {
             { className: 'b-text b-text_center' },
             t('vendor.products.nothing_found_by_criteria')
           ),
-          showPagination && pagination.total_pages > 1 && _react2.default.createElement(
+          showPagination && pagination.totalPages > 1 && _react2.default.createElement(
             'div',
             { className: 'b-item-list__paginator' },
             _react2.default.createElement(_Pagination2.default, pagination)
@@ -23271,7 +23274,7 @@ var Welcome = function (_Component) {
           { className: 'b-page__content__inner b-page__content__inner_content' },
           _react2.default.createElement(_PostProducts2.default, {
             postProductsText: postProductsText,
-            title: (0, _seo.h1)(vendor)
+            title: vendor.h1
           })
         )
       );
