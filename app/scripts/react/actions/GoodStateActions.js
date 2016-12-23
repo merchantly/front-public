@@ -27,12 +27,12 @@ export function addGood(good, count=1, weight=null) {
         dataType: 'json',
         method: 'post',
         data: {
-          'cart_item[good_id]': good.global_id,
+          'cart_item[good_id]': good.globalId,
           count,
           weight,
         },
       },
     },
-    goodId: good.global_id,
+    goodId: good.globalId,
   };
 }

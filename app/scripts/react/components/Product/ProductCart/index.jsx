@@ -68,7 +68,8 @@ export default class ProductCart extends Component {
       product,
       t,
       good,
-      onSubmit
+      onSubmit,
+      formAuthenticity
     } = this.props;
 
     return (

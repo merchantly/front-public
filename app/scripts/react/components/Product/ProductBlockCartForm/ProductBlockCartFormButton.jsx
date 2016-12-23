@@ -12,10 +12,9 @@ class ProductBlockCartFormButton extends Component {
   constructor(props) {
     super(props);
 
-    const { t } = this.props;
-
-    this.state = this.getStateFromStore();
-    this.state = { ...this.getStateFromStore(), amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1 }
+    this.state = {
+      amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1
+    }
   }
   componentWillMount() {
     const {
@@ -105,7 +104,7 @@ ProductBlockCartFormButton.defaultProps = {
 
 export default connectToRedux(connect(
   (state, { product }) => {
-    const goodId = product.goods[0].global_id;
+    const goodId = product.goods[0].globalId;
 
     return {
       goodId,

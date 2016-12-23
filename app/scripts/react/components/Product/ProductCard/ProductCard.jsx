@@ -29,7 +29,7 @@ class ProductCard extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
 
     this.state = {
-      amount: props.product.selling_by_weight ? props.product.weight_of_price : 1 ,
+      amount: props.product.sellingByWeight ? props.product.weightOfPrice : 1 ,
       good: getIn(props.product, ['goods', 0]),
       product: props.product,
     };
@@ -61,7 +61,7 @@ class ProductCard extends Component {
 
     ev.preventDefault();
 
-    return product.selling_by_weight
+    return product.sellingByWeight
       ? addGood(good, 1, amount)
       : addGood(good, amount);
   }
@@ -90,7 +90,7 @@ class ProductCard extends Component {
       good,
       product,
     } = this.state;
-    const isAddingGood = !!getIn(goodState, [good && good.global_id, 'isFetching']);
+    const isAddingGood = !!getIn(goodState, [good && good.globalId, 'isFetching']);
 
     return (
       <div className="mrch-ProductCard">

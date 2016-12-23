@@ -4,7 +4,6 @@ import {
   fetchCart,
 } from 'r/actions/CartActions';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
-import { decamelizeKeys } from 'humps';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { canUseDOM } from 'r/helpers/dom';
@@ -38,7 +37,7 @@ class CartButtonController extends Component {
     const itemsCount = this.getItemsCount();
 
     // выводим total_price, т.е. без учета стоимости доставки
-    const totalPrice = humanizedMoneyWithCurrency(decamelizeKeys(cart.totalPrice), '');
+    const totalPrice = humanizedMoneyWithCurrency(cart.totalPrice, '');
 
     return (
       <CartButton
