@@ -101,40 +101,17 @@ class ProductProperties extends Component {
       />
     );
 
-    if (this.props.properties.length > 1) {
-      return (
-        <span>
-          <PropertyList
-            goods={this.props.goods}
-            onChange={this.updateValues.bind(this)}
-            properties={this.props.properties}
-            t={t}
-            values={values}
-          />
-          {hiddenInput}
-          <div className="b-item-full__form__row b-item-full__form__submit">
-            {addToCartButton}
-          </div>
-          <ProductCartWishlist
-            {...this.props}
-            addWishlistText={t('vendor.button.to_wishlist')}
-            goWishlistText={t('vendor.button.go_wishlist')}
-          />
-        </span>
-      );
-    } else {
-      return (
-        <div className="b-item-full__form__row b-item-full__form__row_fixed">
-          <div className="b-item-full__form__option">
-            <PropertySingle
-              goods={this.props.goods}
-              onChange={this.updateValues.bind(this)}
-              properties={this.props.properties}
-              values={values}
-            />
-          </div>
-        <div className="b-item-full__form__submit">
-          {hiddenInput}
+    return (
+      <span>
+        <PropertyList
+          goods={this.props.goods}
+          onChange={this.updateValues.bind(this)}
+          properties={this.props.properties}
+          t={t}
+          values={values}
+        />
+        {hiddenInput}
+        <div className="b-item-full__form__row b-item-full__form__submit">
           {addToCartButton}
         </div>
         <ProductCartWishlist
@@ -142,9 +119,8 @@ class ProductProperties extends Component {
           addWishlistText={t('vendor.button.to_wishlist')}
           goWishlistText={t('vendor.button.go_wishlist')}
         />
-      </div>
-      );
-    }
+      </span>
+    );
   }
 }
 
