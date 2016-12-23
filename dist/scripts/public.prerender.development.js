@@ -20477,54 +20477,27 @@ var ProductProperties = (_temp = _class = function (_Component) {
         text: good ? t('vendor.button.to_cart') : t('vendor.button.select_good')
       });
 
-      if (this.props.properties.length > 1) {
-        return _react2.default.createElement(
-          'span',
-          null,
-          _react2.default.createElement(_PropertyList2.default, {
-            goods: this.props.goods,
-            onChange: this.updateValues.bind(this),
-            properties: this.props.properties,
-            t: t,
-            values: values
-          }),
-          hiddenInput,
-          _react2.default.createElement(
-            'div',
-            { className: 'b-item-full__form__row b-item-full__form__submit' },
-            addToCartButton
-          ),
-          _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
-            addWishlistText: t('vendor.button.to_wishlist'),
-            goWishlistText: t('vendor.button.go_wishlist')
-          }))
-        );
-      } else {
-        return _react2.default.createElement(
+      return _react2.default.createElement(
+        'span',
+        null,
+        _react2.default.createElement(_PropertyList2.default, {
+          goods: this.props.goods,
+          onChange: this.updateValues.bind(this),
+          properties: this.props.properties,
+          t: t,
+          values: values
+        }),
+        hiddenInput,
+        _react2.default.createElement(
           'div',
-          { className: 'b-item-full__form__row b-item-full__form__row_fixed' },
-          _react2.default.createElement(
-            'div',
-            { className: 'b-item-full__form__option' },
-            _react2.default.createElement(_PropertySingle2.default, {
-              goods: this.props.goods,
-              onChange: this.updateValues.bind(this),
-              properties: this.props.properties,
-              values: values
-            })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'b-item-full__form__submit' },
-            hiddenInput,
-            addToCartButton
-          ),
-          _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
-            addWishlistText: t('vendor.button.to_wishlist'),
-            goWishlistText: t('vendor.button.go_wishlist')
-          }))
-        );
-      }
+          { className: 'b-item-full__form__row b-item-full__form__submit' },
+          addToCartButton
+        ),
+        _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
+          addWishlistText: t('vendor.button.to_wishlist'),
+          goWishlistText: t('vendor.button.go_wishlist')
+        }))
+      );
     }
   }]);
   return ProductProperties;
