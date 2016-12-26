@@ -1,0 +1,344 @@
+{
+  "products": {
+    "items": [
+      {
+        "id": 50508,
+        "title": "Подвеска HIMÈRE",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89738/d29494f6-fa14-4d91-a9b8-4caf8bac0612.jpg",
+          "width": 478,
+          "height": 478
+        },
+        "second_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/77022/5a07df4e-67fb-4f0c-bf85-ea00d3bcd02a.jpg",
+          "width": 534,
+          "height": 534
+        },
+        "public_url": "http://saharokstore.ru/products/50508-podveska-him-re",
+        "short_details": "Шелковая нить, Серебро",
+        "goods": [
+          {
+            "id": 49416,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80OTQxNg",
+            "is_sale": false,
+            "price": {
+              "cents": 200000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 200000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 72031,
+        "title": "Подвеска ANNA.M.OBJECTS",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89341/53d39131-aad2-4a54-b7cd-5e45dfccb782.jpg",
+          "width": 350,
+          "height": 350
+        },
+        "second_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89342/1d2ba515-3b9c-4289-9d78-8564a3408e80.jpg",
+          "width": 350,
+          "height": 350
+        },
+        "public_url": "http://saharokstore.ru/products/72031-podveska-anna-m-objects",
+        "short_details": "Шелковая лента, Серебро",
+        "goods": [
+          {
+            "id": 65008,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NTAwOA",
+            "is_sale": false,
+            "price": {
+              "cents": 100000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 100000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 71516,
+        "title": "Подвеска NATASHA GELB",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88870/98c0c6f2-8407-4c82-8ec4-7785b037b7e5.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/71516-podveska-natasha-gelb",
+        "short_details": "Серебро, Позолота и чернение",
+        "goods": [
+          {
+            "id": 64675,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NDY3NQ",
+            "is_sale": false,
+            "price": {
+              "cents": 500000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 500000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 71952,
+        "title": "Серьги STELLAR JEWELLERY",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88842/a77d1c69-7274-4c28-bcca-0af3c6d6a871.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/71952-sergi-stellar-jewellery",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 64904,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NDkwNA",
+            "is_sale": false,
+            "price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 72004,
+        "title": "Серьги STELLAR JEWELLERY",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88858/4c3631ab-e749-4758-b499-fd04584e9a66.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/72004-sergi-stellar-jewellery",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 64943,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NDk0Mw",
+            "is_sale": false,
+            "price": {
+              "cents": 220000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 220000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 71955,
+        "title": "Серьги STELLAR JEWELLERY ",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88844/2efbf3a2-328e-4a4e-a0b3-b277aee3146d.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/71955-sergi-stellar-jewellery",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 64905,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NDkwNQ",
+            "is_sale": false,
+            "price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 71965,
+        "title": "Серьга STELLAR JEWELLERY",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88836/080b2428-4385-43f5-85a5-544dd51f5ba0.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/71965-serga-stellar-jewellery",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 64907,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NDkwNw",
+            "is_sale": false,
+            "price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 60000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 72070,
+        "title": "Браслет FIANCÈ",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88755/f3a87d22-d5c0-46f5-8b54-83456af97531.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/72070-braslet-fianc",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 65015,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NTAxNQ",
+            "is_sale": false,
+            "price": {
+              "cents": 390000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 390000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      },
+      {
+        "id": 72066,
+        "title": "Браслет FIANCÈ",
+        "is_sale": false,
+        "has_ordering_goods": true,
+        "is_label_new": false,
+        "is_run_out": false,
+        "is_sold": false,
+        "selling_by_weight": false,
+        "weight_of_price": null,
+        "index_image": {
+          "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88758/bab2e022-f601-49f9-be0d-11e160475642.jpg",
+          "width": 1500,
+          "height": 1500
+        },
+        "second_image": null,
+        "public_url": "http://saharokstore.ru/products/72066-braslet-fianc",
+        "short_details": "Серебро",
+        "goods": [
+          {
+            "id": 65011,
+            "type": "ProductItem",
+            "global_id": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS82NTAxMQ",
+            "is_sale": false,
+            "price": {
+              "cents": 540000,
+              "currency_iso_code": "RUB"
+            },
+            "actual_price": {
+              "cents": 540000,
+              "currency_iso_code": "RUB"
+            }
+          }
+        ]
+      }
+    ],
+    "pagination": {
+      "current_page": 1,
+      "total_pages": 1,
+      "currentHref": "http://saharokstore.ru/categories/2209-novinki"
+    }
+  },
+  "container": {
+    "image": null,
+    "description": null,
+    "bottom_text": null
+  },
+  "showCartButton": true,
+  "showCatalogFilter": false,
+  "showPagination": false,
+  "showQuantity": false,
+  "title": "Новинки"
+}

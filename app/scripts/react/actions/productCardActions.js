@@ -1,8 +1,11 @@
 import { productCards } from '../../routes/api';
+// import reqwest from 'reqwest';
 
-export function load(vendorID, productCardID) {
+export function load(productId) {
+  const reqwest = require('reqwest');
+
   return reqwest({
-    url: productCards(productCardID),
+    url: productCards(productId),
     type: 'json',
   });
 }

@@ -1,78 +1,72 @@
 import React, { Component, PropTypes } from 'react';
-import BasketStore from '../../../stores/BasketStore';
 import CartButton from './CartButton';
-import { updateBasketState, initBasketState } from '../../../actions/view/BasketActions';
-import { humanizedMoneyWithCurrency } from '../../../helpers/money';
+import {
+  fetchCart,
+} from 'r/actions/CartActions';
+import { humanizedMoneyWithCurrency } from 'r/helpers/money';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
+import { canUseDOM } from 'r/helpers/dom';
 
 class CartButtonController extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = this.getStateFromStore();
-  }
-
-  componentDidMount() {
-    initBasketState();
-
-    this.syncWithStore = () => {
-      this.setState(this.getStateFromStore());
+  componentWillMount() {
+    if (canUseDOM()) {
+      this.props.fetchCart();
     }
-
-    BasketStore.addChangeListener(this.syncWithStore);
-  }
-  componentWillUnmount() {
-    BasketStore.removeChangeListener(this.syncWithStore)
-  }
-  getStateFromStore() {
-    return {
-      basket: BasketStore.getBasket()
-    };
   }
   getItemsCount() {
-    const { showFullBasketCount } = this.props;
-    const { basket } = this.state;
+    const {
+      cart,
+      showFullBasketCount,
+    } = this.props;
 
-    if (!(basket && basket.items)) {
+    if (!(cart && cart.items)) {
       return 0;
     }
 
-    if (showFullBasketCount) {
-      let total = 0;
-      this.state.basket.items.forEach((cartItem) => {
-        total += cartItem['count'];
-      });
-      return total;
-    }else{
-      return this.state.basket.items.length;
-    }
+    return showFullBasketCount
+      ? cart.items.reduce((total, cartItem) => total += cartItem['count'], 0)
+      : cart.items.length;
   }
   render() {
     const {
-      url,
+      cart,
       t,
+      url,
     } = this.props;
     const itemsCount = this.getItemsCount();
 
     // выводим total_price, т.е. без учета стоимости доставки
-    const totalPrice = humanizedMoneyWithCurrency(this.state.basket.totalPrice, '');
+    const totalPrice = humanizedMoneyWithCurrency(cart.totalPrice, '');
 
     return (
       <CartButton
-        text={t('vendor.cart.basket_button', {total_price: totalPrice})}
-        url={url}
         itemsCount={itemsCount}
+        text={t('vendor.cart.basket_button', { totalPrice })}
+        url={url}
       />
     );
   }
 }
 
 CartButtonController.propTypes = {
+  cart: PropTypes.object.isRequired,
+  fetchCart: PropTypes.func.isRequired,
+  showFullBasketCount: PropTypes.bool,
+  t: PropTypes.func.isRequired,
   url: PropTypes.string.isRequired,
-  showFullBasketCount: PropTypes.bool
 };
-CartButtonController.defaultProps = {
-  url: PropTypes.string.isRequired,
-  showFullBasketCount: false
-}
 
-export default CartButtonController;
+CartButtonController.defaultProps = {
+  showFullBasketCount: false,
+  url: PropTypes.string.isRequired,
+};
+
+export default connectToRedux(connect(
+  (state) => ({
+    cart: state.cart.cart,
+  }),
+  {
+    fetchCart,
+  }
+)(CartButtonController));

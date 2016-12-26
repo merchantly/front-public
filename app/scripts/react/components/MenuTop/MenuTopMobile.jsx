@@ -1,7 +1,9 @@
-/*global $ */
 import React, { Component, PropTypes } from 'react';
 import * as schemas from 'r/schemas';
 import MenuTopToggleButton from './MenuTopToggleButton';
+import $ from 'jquery';
+import AppLink from 'rc/common/AppLink';
+import { categoryRoute } from 'scripts/routes/app';
 
 class MenuTopMobile extends Component {
   constructor(props) {
@@ -40,9 +42,12 @@ class MenuTopMobile extends Component {
 
     return (
       <li id={`mob_menu_item_li_${id}`} key={`mob-menu-item-${id}`}>
-        <a href={url}>
+        <AppLink
+          hash={categoryRoute(id)}
+          href={url}
+        >
           {title}
-        </a>
+        </AppLink>
       </li>
     );
   }
@@ -61,12 +66,13 @@ class MenuTopMobile extends Component {
         <ul>
           {children.map((child) => (
             <li id={`mob_menu_item_li_${child.id}`} key={`mob-menu-item-${child.id}`}>
-              <a
+              <AppLink
                 data-count={child.productsCount}
+                hash={categoryRoute(child.id)}
                 href={child.url}
               >
                 {child.title}
-              </a>
+              </AppLink>
             </li>
           ))}
         </ul>
@@ -109,8 +115,8 @@ class MenuTopMobile extends Component {
             )}
             {items.length > 0 && items.map((item) => (
               item.children.length > 0 ?
-                this.renderWithChildren(item) :
-                this.renderSingle(item)
+              this.renderWithChildren(item) :
+              this.renderSingle(item)
             ))}
           </ul>
         </div>

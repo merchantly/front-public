@@ -16,12 +16,6 @@ import './shared/jump';
 import './shared/application_slider';
 import './shared/theme_switcher';
 
-// TODO: Refactor and cleaning legacy shit
-//import './react/components/Product/add_to_basket_button';
-//import './react/dispatchers/basket';
-//import './react/actions/view/basket';
-//import './react/stores/basket';
-
 // Exposing neccessary resources outside
 global.CatalogFilter = require('./react/components/CatalogFilter').CatalogFilter;
 global.Userbar = require('./react/components/Userbar').default;

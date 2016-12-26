@@ -19,7 +19,7 @@ config.plugins = [
       screw_ie8: true,
       warnings: false,
     },
-  })
+  }),
 ];
 
 module.exports = config;

@@ -14,9 +14,12 @@ import Userbar from './Userbar';
 import Cookies from 'cookies-js';
 import * as cookieKeys from 'r/constants/cookieKeys';
 import provideTranslations from 'rc/HoC/provideTranslations';
+import { canUseDOM } from 'r/helpers/dom';
 
 class UserbarContainer extends Component {
   componentWillMount() {
+    if (!canUseDOM()) return;
+
     const {
       designMode, // FIXME: remove when moved to api
       fetchClientState,

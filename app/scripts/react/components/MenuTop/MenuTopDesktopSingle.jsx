@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import * as schemas from 'r/schemas';
+import AppLink from 'rc/common/AppLink';
+import { categoryRoute } from 'scripts/routes/app';
 
 class MenuTopDesktopSingle extends Component {
   render() {
@@ -19,17 +21,18 @@ class MenuTopDesktopSingle extends Component {
     });
 
     return (
-      <li 
-        className={liClasses} 
+      <li
+        className={liClasses}
         id={`menu_item_li_${id}`}
         key={`menu-item-single-${id}`}
       >
-        <a
+        <AppLink
           className="b-nav__link"
+          hash={categoryRoute(id)}
           href={url}
         >
           {title}
-        </a>
+        </AppLink>
       </li>
     );
   }

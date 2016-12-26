@@ -28,7 +28,6 @@ class Welcome extends Component {
       sliderImages,
     } = vendor;
 
-
     return (
       <div>
         <div className="b-page__content__inner b-page__content__inner_slider">

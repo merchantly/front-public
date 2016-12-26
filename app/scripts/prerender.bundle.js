@@ -1,4 +1,5 @@
-window = undefined; // React-rails set window to this, it's unexpected behavior
+// delete this['window']; // React-rails set window to this, it's unexpected behavior
+window = undefined;
 React = require('react');
 ReactDOM = require('react-dom');
 ReactDOMServer = require('react-dom/server');
@@ -9,19 +10,23 @@ thunk = require('redux-thunk').default;
 Provider = require('react-redux').Provider;
 DesignReducer = require('./react/reducers/Design.prerender');
 PopupReducer = require('./react/reducers/popup');
-CartReducer = require('./react/reducers/cart').default;
-PackagesReducer = require('./react/reducers/packages').default;
+cartReducer = require('./react/reducers/cart').default;
+packagesReducer = require('./react/reducers/packages').default;
+goodStateReducer = require('./react/reducers/goodState');
+layoutReducer = require('./react/reducers/layout');
 clientState = require('./react/reducers/clientState');
 operatorState = require('./react/reducers/operatorState');
 require('./locales/numeral/ru');
 
 var prerenderReducers = combineReducers({
-  cart: CartReducer,
-  packages: PackagesReducer,
+  cart: cartReducer,
+  goodState: goodStateReducer,
+  packages: packagesReducer,
   design: DesignReducer,
   popup: PopupReducer,
   clientState: clientState,
   operatorState: operatorState,
+  widget: layoutReducer,
 });
 
 global.redux = (applyMiddleware(thunk)(createStore))(prerenderReducers, {});

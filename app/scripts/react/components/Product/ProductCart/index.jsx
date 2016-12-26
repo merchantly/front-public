@@ -9,13 +9,18 @@ import ProductBulk from '../ProductBulk';
 
 export default class ProductCart extends Component {
   static propTypes = {
+    amount: PropTypes.number,
     addWishlistUrl: PropTypes.string,
     formAuthenticity: PropTypes.object,
     good: PropTypes.object,
     hasWishlist: PropTypes.bool,
+    isAddingGood: PropTypes.bool.isRequired,
     isWishlisted: PropTypes.bool,
-    product: PropTypes.object.isRequired,
+    onChangeAmount: PropTypes.func.isRequired,
     onGoodChange: PropTypes.func,
+    onSubmit: PropTypes.func.isRequired,
+    product: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
   }
   static defaultProps = {
@@ -63,17 +68,21 @@ export default class ProductCart extends Component {
       product,
       t,
       good,
+      onSubmit,
+      formAuthenticity
     } = this.props;
+
     return (
       <form
         acceptCharset="UTF-8"
         action={vendorCartItems()}
         className="simple_form cart_item"
         method="POST"
+        onSubmit={onSubmit}
       >
         <div style={{ display: 'none'}}>
           <HiddenInput name="utf8" value="✓" />
-          <CSRFToken {...this.props.formAuthenticity} />
+          <CSRFToken {...formAuthenticity} />
         </div>
         {this.renderProductBulkInput(product, good, t)}
         {this.renderContent(product, t)}

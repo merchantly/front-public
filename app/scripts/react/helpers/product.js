@@ -1,8 +1,13 @@
 import React from 'react';
+import AppLink from 'rc/common/AppLink';
+import { dictionaryEntitiesRoute } from 'scripts/routes/app';
 import { money, humanizedMoneyWithCurrency } from './money';
 import { numberToHumanSize } from './number';
 import {
-  h1, schemaOrgGoodAvailability, schemaOrgProductArticle, schemaOrgProductCategory,
+  h1,
+  schemaOrgGoodAvailability,
+  schemaOrgProductArticle,
+  schemaOrgProductCategory,
 } from './seo';
 
 export function schemaOrgMarkup(product) {
@@ -65,12 +70,22 @@ export function goodActualPrice({ actualPrice }) {
 }
 
 export function attributeValue(attribute) {
-  const { productsUrl, title, value } = attribute;
+  const {
+    productsUrl,
+    propertyId,
+    title,
+    type,
+    value,
+  } = attribute
 
-  switch(attribute.type) {
+  switch(type) {
     case 'AttributeLink':
       return (
-        <a href={value} target="_blank" className="link link--external">
+        <a
+          className="link link--external"
+          href={value}
+          target="_blank"
+        >
           {title}
         </a>
       );
@@ -78,7 +93,11 @@ export function attributeValue(attribute) {
       if (!value) return;
 
       return (
-        <a href={value.url} target="_blank" className="link link--file">
+        <a
+          className="link link--file"
+          href={value.url}
+          target="_blank"
+        >
           {`${title} ${value.extension} (${numberToHumanSize(value.size)})`}
         </a>
       );
@@ -88,9 +107,12 @@ export function attributeValue(attribute) {
           <span className="attribute__title">
             {`${title}: `}
           </span>
-          <a href={productsUrl}>
+          <AppLink
+            hash={dictionaryEntitiesRoute(propertyId)}
+            href={productsUrl}
+          >
             {value}
-          </a>
+          </AppLink>
         </span>
       );
     default:

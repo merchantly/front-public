@@ -10,9 +10,11 @@ import ProductCartWishlist from '../ProductCart/ProductCartWishlist';
 class ProductGoods extends Component {
   static propTypes = {
     addWishlistUrl: PropTypes.string,
+    isAddingGood: PropTypes.bool.isRequired,
     isWishlisted: PropTypes.bool,
     onGoodChange: PropTypes.func,
     product: PropTypes.object.isRequired,
+    t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
   }
   componentDidMount() {
@@ -81,6 +83,7 @@ class ProductGoods extends Component {
   }
   render() {
     const {
+      isAddingGood,
       product,
       t,
       wishlistUrl,
@@ -95,6 +98,7 @@ class ProductGoods extends Component {
             </div>
             <div className="b-item-full__form__submit">
               <ProductAddToCartButton
+                isAddingGood={isAddingGood}
                 t={t}
                 text={t('vendor.button.to_cart', {title: product.title})}
               />
@@ -122,8 +126,9 @@ class ProductGoods extends Component {
           </div>
           <div className="b-item-full__form__row b-item-full__form__submit">
             <ProductAddToCartButton
-              text={t('vendor.button.to_cart', {title: product.title})}
+              isAddingGood={isAddingGood}
               t={t}
+              text={t('vendor.button.to_cart', {title: product.title})}
             />
           </div>
         </span>

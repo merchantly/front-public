@@ -1,11 +1,18 @@
-/*global $ */
 import { camelizeKeys } from 'humps';
 import NoticeService from '../services/Notice';
+import $ from 'jquery';
 
 export const CALL_API = Symbol('Call API');
 
 function callApi(endpoint, data) {
-  return $.ajax(endpoint, data)
+  const reqData = Object.assign({}, data, {
+    xhrFields: {
+      withCredentials: true,
+      crossDomain: true,
+    },
+  });
+
+  return $.ajax(endpoint, reqData)
     .then((data, status, jqXHR) => {
       let json = jqXHR.responseJSON;
 
