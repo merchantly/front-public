@@ -409,7 +409,7 @@
       "article": null,
       "type": "Product",
       "title": "Подарочная упаковка САХАРОК",
-      "imageUrl": "http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg",
+      "image": {"url":"http://assets.stage.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/51342/ad08f5f9-f0dd-4ad9-93bf-ad016c810974.jpg"},
       "customAttributes": {
         "бренд": "САХАРОК"
       },

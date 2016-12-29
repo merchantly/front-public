@@ -12,7 +12,7 @@ class OrderContents extends Component {
   renderPackageGood(packageGood, packagePrice) {
     const {
       defaultUrl: packageDefaultUrl,
-      imageUrl: packageImageUrl,
+      image: packageImage,
       title: packageTitle,
       quantityUnit: packageQuantityUnit,
     } = packageGood;
@@ -23,7 +23,7 @@ class OrderContents extends Component {
           <Image
             className="b-cart__item__img"
             hasFixedSize
-            image={{ url: packageImageUrl }}
+            image={{ url: packageImage.url }}
             maxWidth={ORDER_IMG_SIZE}
           />
         </div>
