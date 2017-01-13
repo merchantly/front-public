@@ -137,6 +137,12 @@ export default class DesignSettings extends Component {
                 {...this.getAccordionItemProps('Общие настройки')}
                 itemKey="common"
               >
+                <DesignSettingsOption inRow title='Отображать кнопку "В корзину" в списке товаров'>
+                  <DesignSettingsCheckbox {...this.getProps('showCartButtonInList')} />
+                </DesignSettingsOption>
+                <DesignSettingsOption inRow title='Отображать поле ввода количества в списке товаров'>
+                  <DesignSettingsCheckbox {...this.getProps('showQuantityInList')} />
+                </DesignSettingsOption>
                 <DesignSettingsOption inRow title="Галерея Instagram снизу">
                   <DesignSettingsCheckbox {...this.getProps('mainPageInstagram')} />
                 </DesignSettingsOption>
