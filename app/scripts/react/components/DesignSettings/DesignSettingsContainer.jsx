@@ -16,11 +16,11 @@ import { some } from 'lodash';
 class DesignSettingsContainer extends Component {
   static propTypes = {
     authUrl: PropTypes.string.isRequired,
-    categoryPageUrl: PropTypes.string.isRequired,
+    categoryPageUrl: PropTypes.string,
     design: PropTypes.object.isRequired,
     dispatch: PropTypes.func.isRequired,
     pageType: PropTypes.string.isRequired,
-    productPageUrl: PropTypes.string.isRequired,
+    productPageUrl: PropTypes.string,
   }
   componentDidUpdate() {
     const isOpened = this.isOpened(this.props);

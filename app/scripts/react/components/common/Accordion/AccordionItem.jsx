@@ -15,6 +15,10 @@ export default class AccordionItem extends Component {
     title: PropTypes.string,
     titleClassName: PropTypes.string,
     titleColor: PropTypes.string,
+    isShow: PropTypes.bool
+  }
+  defaultProps = {
+    isShow: true
   }
   constructor(props) {
     super(props);
@@ -39,7 +43,11 @@ export default class AccordionItem extends Component {
     this.setState({ overflow: 'visible' });
   }
   setMaxHeight() {
-    const { expanded } = this.props;
+    const { expanded, isShow } = this.props;
+    if (isShow === false) {
+      return;
+    }
+
     const bodyNode = findDOMNode(this.refs.body);
     const images = bodyNode.querySelectorAll('img');
 
@@ -91,9 +99,13 @@ export default class AccordionItem extends Component {
   }
   render() {
     const {
-      bodyClassName, children, onClick, title, titleColor, titleClassName
+      bodyClassName, children, onClick, title, titleColor, titleClassName, isShow
     } = this.props;
     const { maxHeight, overflow } = this.state;
+
+    if (isShow === false) {
+      return null;
+    }
 
     return (
       <div {...this.getProps()} ref="item">

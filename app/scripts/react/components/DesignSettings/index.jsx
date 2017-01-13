@@ -15,7 +15,7 @@ import DesignSettingsCloseButton from './DesignSettingsCloseButton';
 export default class DesignSettings extends Component {
   static propTypes = {
     authUrl: PropTypes.string.isRequired,
-    categoryPageUrl: PropTypes.string.isRequired,
+    categoryPageUrl: PropTypes.string,
     changeImage: PropTypes.func.isRequired,
     changeOption: PropTypes.func.isRequired,
     closeDesignSettingsPopup: PropTypes.func.isRequired,
@@ -23,7 +23,7 @@ export default class DesignSettings extends Component {
     isSaving: PropTypes.bool.isRequired,
     onItemClick: PropTypes.func.isRequired,
     pageType: PropTypes.string.isRequired,
-    productPageUrl: PropTypes.string.isRequired,
+    productPageUrl: PropTypes.string,
     saveChanges: PropTypes.func.isRequired,
     unsavedFields: PropTypes.object.isRequired,
   }
@@ -97,21 +97,22 @@ export default class DesignSettings extends Component {
                 <DesignSettingsOption inRow title="Слайдер посередине">
                   <DesignSettingsCheckbox {...this.getProps('mainPageSlider')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Товары в порядке установки">
-                  <DesignSettingsCheckbox {...this.getProps('mainPageOrdered')} />
+                <DesignSettingsOption inRow title="Товары в случайном порядке">
+                  <DesignSettingsCheckbox {...this.getProps('mainPageRandom')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
                 {...this.getAccordionItemProps('Страница категории')}
                 itemKey="categories"
+                isShow={categoryPageUrl !== null}
                 redirectUrl={categoryPageUrl}
               >
                 <DesignSettingsOption title="Товаров в ряд">
                   <DesignSettingsRadioList {...this.getProps('categoryPageProductsInRow')} />
                 </DesignSettingsOption>
                 <DesignSettingsOption title="Строк товаров">
-                  <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue />
+                  <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue/>
                 </DesignSettingsOption>
                 <DesignSettingsOption inRow title="Фильтр товаров слева">
                   <DesignSettingsCheckbox {...this.getProps('categoryPageFilter')} />
@@ -120,6 +121,7 @@ export default class DesignSettings extends Component {
 
               <AccordionItem
                 {...this.getAccordionItemProps('Страница товара')}
+                isShow={productPageUrl !== null}
                 itemKey="products"
                 redirectUrl={productPageUrl}
               >

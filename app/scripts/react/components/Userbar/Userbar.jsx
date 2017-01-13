@@ -79,9 +79,9 @@ class Userbar extends Component {
 Userbar.propTypes = {
   // design settings props
   authUrl: PropTypes.string.isRequired,
-  categoryPageUrl: PropTypes.string.isRequired,
+  categoryPageUrl: PropTypes.string,
   pageType: PropTypes.string.isRequired,
-  productPageUrl: PropTypes.string.isRequired,
+  productPageUrl: PropTypes.string,
 
   // userbar props
   cabinetText: PropTypes.string,
