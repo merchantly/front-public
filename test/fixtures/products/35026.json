@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 35026,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM1MDI2",
     "title": "i like™ xtr 50w (к.) - бокс мод открывающий новый уровень возможностей",
     "article": null,

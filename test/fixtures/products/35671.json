@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 35671,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM1Njcx",
     "title": "Набор пелёнок Лето",
     "article": "set1",
@@ -284,6 +285,7 @@
   "similarProducts": [
     {
       "id": 35672,
+      "tags": [{"title": "tag1"}],
       "title": "Набор пелёнок Зима",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -349,6 +351,7 @@
     },
     {
       "id": 35673,
+      "tags": [{"title": "tag1"}],
       "title": "Набор пеленок Лето + Зима",
       "isSale": false,
       "hasOrderingGoods": true,

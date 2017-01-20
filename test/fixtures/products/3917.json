@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 3917,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTc",
     "title": "Анклет с Кистью с цирконами черненый",
     "article": "A001-22",
@@ -356,6 +357,7 @@
   "similarProducts": [
     {
       "id": 19194,
+      "tags": [{"title": "tag1"}],
       "title": "Браслет на кисть Nami черненый с цирконами",
       "isSale": false,
       "hasOrderingGoods": false,
@@ -421,6 +423,7 @@
     },
     {
       "id": 4333,
+      "tags": [{"title": "tag1"}],
       "title": "Цепь на тело Икс с цирконами черненая",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -486,6 +489,7 @@
     },
     {
       "id": 35968,
+      "tags": [{"title": "tag1"}],
       "title": "Анклет Sona-3 с цирконами серебрянный",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -551,6 +555,7 @@
     },
     {
       "id": 4165,
+      "tags": [{"title": "tag1"}],
       "title": "Кольцо на ноготь Хаг с цирконами черненое",
       "isSale": false,
       "hasOrderingGoods": true,
