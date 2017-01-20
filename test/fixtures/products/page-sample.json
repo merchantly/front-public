@@ -632,6 +632,7 @@
   },
   "product": {
     "id": 48022,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
     "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
     "article": null,
@@ -739,6 +740,7 @@
   "similarProducts": [
     {
       "id": 48690,
+      "tags": [{"title": "tag1"}],
       "title": "Салат (100 г, Азербайджан)",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -774,6 +776,7 @@
     },
     {
       "id": 48773,
+      "tags": [{"title": "tag1"}],
       "title": "Картофель розовый (0,5 кг, Россия)",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -809,6 +812,7 @@
     },
     {
       "id": 51852,
+      "tags": [{"title": "tag1"}],
       "title": "Огурцы (1 кг, Луховицы)",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -844,6 +848,7 @@
     },
     {
       "id": 52706,
+      "tags": [{"title": "tag1"}],
       "title": "Помидоры розовые (1 кг, Дагестан)",
       "isSale": false,
       "hasOrderingGoods": true,

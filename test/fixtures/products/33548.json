@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 33548,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzMzNTQ4",
     "title": "Электронный набор для курения i like™ storm",
     "article": null,

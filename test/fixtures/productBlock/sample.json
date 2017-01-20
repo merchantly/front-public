@@ -1,6 +1,7 @@
 {
   "product": {
     "id": 36109,
+    "tags": [{"title": "tag1"}],
     "title": "Кольцо на вторую фалангу MMKXSS JEWELRY",
     "isSale": false,
     "hasOrderingGoods": true,

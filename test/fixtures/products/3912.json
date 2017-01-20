@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 3912,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5MTI",
     "title": "Миникольцо Цепочка золоченая с цирконом б",
     "article": "MR019-13",
@@ -574,6 +575,7 @@
   "similarProducts": [
     {
       "id": 35770,
+      "tags": [{"title": "tag1"}],
       "title": "Кольцо Шибари 5 шнуров роз. золочение",
       "isSale": false,
       "hasOrderingGoods": false,
@@ -603,6 +605,7 @@
     },
     {
       "id": 19319,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Marge без камней черненое",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -840,6 +843,7 @@
     },
     {
       "id": 24198,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Morganna с цирконами черненое",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -991,6 +995,7 @@
     },
     {
       "id": 35752,
+      "tags": [{"title": "tag1"}],
       "title": "Кольцо Шибари простой узел чернение",
       "isSale": false,
       "hasOrderingGoods": false,

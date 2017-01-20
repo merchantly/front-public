@@ -1,6 +1,7 @@
 {
   "product": {
     "id": 48003,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDAz",
     "title": "test",
     "article": null,
@@ -83,6 +84,7 @@
   "similarProducts": [
     {
       "id": 50537,
+      "tags": [{"title": "tag1"}],
       "title": "product1",
       "isSale": false,
       "hasOrderingGoods": true,
