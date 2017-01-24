@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 33427,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzMzNDI3",
     "title": "Spring Flowers",
     "article": null,
@@ -298,6 +299,7 @@
   "similarProducts": [
     {
       "id": 33474,
+      "tags": [{"title": "tag1"}],
       "title": "Pop Culture",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -363,6 +365,7 @@
     },
     {
       "id": 33472,
+      "tags": [{"title": "tag1"}],
       "title": "Summer Flowers",
       "isSale": false,
       "hasOrderingGoods": true,

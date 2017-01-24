@@ -1,6 +1,7 @@
 {
   "product": {
     "id": 51810,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzUxODEw",
     "title": "Юбка на запах",
     "article": "1161002",

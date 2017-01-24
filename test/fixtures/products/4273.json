@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 4273,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQyNzM",
     "title": "Миникольцо Полоски без камней черненое",
     "article": "MR005-02",
@@ -685,6 +686,7 @@
   "similarProducts": [
     {
       "id": 36062,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Yasuo с цирконами золоченое",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -1008,6 +1010,7 @@
     },
     {
       "id": 24231,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Double Stripe с цирконами золоченое",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -1116,6 +1119,7 @@
     },
     {
       "id": 24270,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Shen-13 золоченое",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -1396,6 +1400,7 @@
     },
     {
       "id": 20500,
+      "tags": [{"title": "tag1"}],
       "title": "Миникольцо Shen-10 золоченое",
       "isSale": false,
       "hasOrderingGoods": true,

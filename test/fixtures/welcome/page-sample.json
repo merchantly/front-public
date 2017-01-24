@@ -756,6 +756,7 @@
     "items": [
       {
         "id": 20943,
+        "tags": [{"title": "tag1"}],
         "title": "Кольцо ANNA.M.OBJECTS",
         "isSale": false,
         "hasOrderingGoods": true,
@@ -1019,6 +1020,7 @@
       },
       {
         "id": 22172,
+        "tags": [{"title": "tag1"}],
         "title": "Кольцо NATALIA BRYANTSEVA",
         "isSale": false,
         "hasOrderingGoods": true,
@@ -1156,6 +1158,7 @@
       },
       {
         "id": 33644,
+        "tags": [{"title": "tag1"}],
         "title": "Браслет HIMÈRE",
         "isSale": false,
         "hasOrderingGoods": true,

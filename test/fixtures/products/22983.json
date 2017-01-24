@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 22983,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0VW5pb24vMjI5ODM",
     "title": "Велосипед Giant «Rapid 2 Triple» (2015), белый",
     "article": null,
