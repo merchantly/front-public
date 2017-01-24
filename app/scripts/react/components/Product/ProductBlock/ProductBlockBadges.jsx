@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import ProductBadge from '../ProductBadges/ProductBadge';
 import ProductBadgeNew from '../ProductBadges/ProductBadgeNew';
 import ProductBadgeSale from '../ProductBadges/ProductBadgeSale';
 import ProductBadgeSoldOut from '../ProductBadges/ProductBadgeSoldOut';
@@ -10,6 +11,7 @@ const ProductBlockBadges = ({ product, t }) => (
     <ProductBadgeSoldOut product={product} t={t} />
     <ProductBadgeSale product={product} t={t} />
     <ProductBadgeUnavailable product={product} t={t} />
+    {product.tags && product.tags.map((tag) => <ProductBadge status={['tag', `tag-${tag.id}`]} text={tag.title} key={tag.id} />)}
   </div>
 );
 

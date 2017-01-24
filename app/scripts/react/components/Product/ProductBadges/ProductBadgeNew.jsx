@@ -3,7 +3,7 @@ import ProductBadge from './ProductBadge';
 
 const ProductBadgeNew = ({ product, t }) => (
   product.isLabelNew
-    ? <ProductBadge text={t('vendor.badges.new')} status="sold" />
+    ? <ProductBadge text={t('vendor.badges.new')} status="new" />
     : <span />
 );
 

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const ProductBadge = ({ status, text }) => (
-  <span className={classNames('b-status', 'b-status_' + status)}>
+  <span className={classNames('b-status', [].concat(...[status]).map((status_entity) => `b-status_${status_entity}`))}>
     {text}
   </span>
 );

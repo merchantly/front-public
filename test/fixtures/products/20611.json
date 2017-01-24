@@ -192,6 +192,7 @@
   },
   "product": {
     "id": 20611,
+    "tags": [{"title": "tag1"}],
     "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzIwNjEx",
     "title": "Тестовый товар – не удалять",
     "article": "TEST-GOOD",
@@ -454,6 +455,7 @@
   "similarProducts": [
     {
       "id": 16445,
+      "tags": [{"title": "tag1"}],
       "title": "Велосипед Specialized «Pitch Comp 650B» (2015), размер S, красный",
       "isSale": false,
       "hasOrderingGoods": true,
@@ -519,6 +521,7 @@
     },
     {
       "id": 18589,
+      "tags": [{"title": "tag1"}],
       "title": "Цепь Kryptonite «Evolution Series 4 1055 Mini»",
       "isSale": false,
       "hasOrderingGoods": true,

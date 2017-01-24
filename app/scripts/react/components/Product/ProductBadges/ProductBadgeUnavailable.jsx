@@ -3,7 +3,7 @@ import ProductBadge from './ProductBadge';
 
 const ProductBadgeUnavailable = ({ product, t }) => (
   !product.hasOrderingGoods && !product.isRunOut
-    ? <ProductBadge status="sold" text={t('vendor.badges.not_available')} />
+    ? <ProductBadge status="unavailable" text={t('vendor.badges.not_available')} />
     : <span />
 );
 
