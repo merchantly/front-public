@@ -765,8 +765,6 @@ var _extends3 = _interopRequireDefault(_extends2);
 
 var _api = require('../../routes/api');
 
-var _api2 = _interopRequireDefault(_api);
-
 var _lodash = require('lodash');
 
 var _jquery = require('jquery');
@@ -799,7 +797,7 @@ function request(_method, url) {
 
   var method = (0, _lodash.includes)(['POST', 'PUT', 'DELETE'], _method) ? 'POST' : 'GET';
 
-  _jquery2.default.ajax({
+  return _jquery2.default.ajax({
     url: url,
     method: method,
     data: (0, _extends3.default)({}, data, { _method: _method }),
@@ -828,11 +826,12 @@ var deleteRequest = function deleteRequest(url, data) {
 exports.default = {
   catalogFilter: {
     getFilteredCount: function getFilteredCount(filter) {
-      var url = _api2.default.productsFilteredCount(filter);
+      var url = (0, _api.productsFilteredCount)(filter);
       var key = 'productsFilteredCount';
 
       abortPendingRequests(key);
-      _pendingRequests[key] = getRequest(url);
+
+      return _pendingRequests[key] = getRequest(url);
     }
   }
 };
@@ -16566,11 +16565,15 @@ var _classnames2 = _interopRequireDefault(_classnames);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ProductBadge = function ProductBadge(_ref) {
+  var _ref2;
+
   var status = _ref.status,
       text = _ref.text;
   return _react2.default.createElement(
     'span',
-    { className: (0, _classnames2.default)('b-status', 'b-status_' + status) },
+    { className: (0, _classnames2.default)('b-status', (_ref2 = []).concat.apply(_ref2, [status]).map(function (status_entity) {
+        return 'b-status_' + status_entity;
+      })) },
     text
   );
 };
@@ -16603,7 +16606,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProductBadgeNew = function ProductBadgeNew(_ref) {
   var product = _ref.product,
       t = _ref.t;
-  return product.isLabelNew ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.new'), status: 'sold' }) : _react2.default.createElement('span', null);
+  return product.isLabelNew ? _react2.default.createElement(_ProductBadge2.default, { text: t('vendor.badges.new'), status: 'new' }) : _react2.default.createElement('span', null);
 };
 
 ProductBadgeNew.propTypes = {
@@ -16710,7 +16713,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProductBadgeUnavailable = function ProductBadgeUnavailable(_ref) {
   var product = _ref.product,
       t = _ref.t;
-  return !product.hasOrderingGoods && !product.isRunOut ? _react2.default.createElement(_ProductBadge2.default, { status: 'sold', text: t('vendor.badges.not_available') }) : _react2.default.createElement('span', null);
+  return !product.hasOrderingGoods && !product.isRunOut ? _react2.default.createElement(_ProductBadge2.default, { status: 'unavailable', text: t('vendor.badges.not_available') }) : _react2.default.createElement('span', null);
 };
 
 ProductBadgeUnavailable.propTypes = {
@@ -16731,6 +16734,10 @@ Object.defineProperty(exports, "__esModule", {
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _ProductBadge = require('../ProductBadges/ProductBadge');
+
+var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
 
 var _ProductBadgeNew = require('../ProductBadges/ProductBadgeNew');
 
@@ -16759,7 +16766,10 @@ var ProductBlockBadges = function ProductBlockBadges(_ref) {
     _react2.default.createElement(_ProductBadgeNew2.default, { product: product, t: t }),
     _react2.default.createElement(_ProductBadgeSoldOut2.default, { product: product, t: t }),
     _react2.default.createElement(_ProductBadgeSale2.default, { product: product, t: t }),
-    _react2.default.createElement(_ProductBadgeUnavailable2.default, { product: product, t: t })
+    _react2.default.createElement(_ProductBadgeUnavailable2.default, { product: product, t: t }),
+    product.tags && product.tags.map(function (tag) {
+      return _react2.default.createElement(_ProductBadge2.default, { status: ['tag', 'tag-' + tag.id], text: tag.title, key: tag.id });
+    })
   );
 };
 
@@ -16770,7 +16780,7 @@ ProductBlockBadges.propTypes = {
 exports.default = ProductBlockBadges;
 module.exports = exports['default'];
 
-},{"../ProductBadges/ProductBadgeNew":154,"../ProductBadges/ProductBadgeSale":155,"../ProductBadges/ProductBadgeSoldOut":156,"../ProductBadges/ProductBadgeUnavailable":157,"react":"react"}],159:[function(require,module,exports){
+},{"../ProductBadges/ProductBadge":153,"../ProductBadges/ProductBadgeNew":154,"../ProductBadges/ProductBadgeSale":155,"../ProductBadges/ProductBadgeSoldOut":156,"../ProductBadges/ProductBadgeUnavailable":157,"react":"react"}],159:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17643,6 +17653,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _ProductBadge = require('../ProductBadges/ProductBadge');
+
+var _ProductBadge2 = _interopRequireDefault(_ProductBadge);
+
 var _ProductBadgeNew = require('../ProductBadges/ProductBadgeNew');
 
 var _ProductBadgeNew2 = _interopRequireDefault(_ProductBadgeNew);
@@ -17660,7 +17674,10 @@ var ProductCardBadges = function ProductCardBadges(_ref) {
     'span',
     null,
     _react2.default.createElement(_ProductBadgeNew2.default, { product: product, t: t }),
-    _react2.default.createElement(_ProductBadgeSale2.default, { product: product, t: t })
+    _react2.default.createElement(_ProductBadgeSale2.default, { product: product, t: t }),
+    product.tags && product.tags.map(function (tag) {
+      return _react2.default.createElement(_ProductBadge2.default, { status: ['tag', 'tag-' + tag.id], text: tag.title, key: tag.id });
+    })
   );
 };
 
@@ -17671,7 +17688,7 @@ ProductCardBadges.propTypes = {
 exports.default = ProductCardBadges;
 module.exports = exports['default'];
 
-},{"../ProductBadges/ProductBadgeNew":154,"../ProductBadges/ProductBadgeSale":155,"react":"react"}],166:[function(require,module,exports){
+},{"../ProductBadges/ProductBadge":153,"../ProductBadges/ProductBadgeNew":154,"../ProductBadges/ProductBadgeSale":155,"react":"react"}],166:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
