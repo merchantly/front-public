@@ -1,4 +1,4 @@
-import apiRoutes from 'scripts/routes/api';
+import { productsFilteredCount } from 'scripts/routes/api';
 import { includes } from 'lodash';
 import $ from 'jquery';
 
@@ -22,7 +22,7 @@ function request(_method, url, data = {}) {
 
   const method = includes(['POST', 'PUT', 'DELETE'], _method) ? 'POST' : 'GET';
 
-  $.ajax({
+  return $.ajax({
     url: url,
     method: method,
     data: { ...data, _method },
@@ -43,11 +43,12 @@ const deleteRequest = (url, data) => request('DELETE', url, data);
 export default {
   catalogFilter: {
     getFilteredCount(filter) {
-      const url = apiRoutes.productsFilteredCount(filter);
+      const url = productsFilteredCount(filter);
       const key = 'productsFilteredCount';
 
       abortPendingRequests(key);
-      _pendingRequests[key] = getRequest(url);
+
+      return _pendingRequests[key] = getRequest(url);
     },
   },
 };
