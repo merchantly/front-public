@@ -33,13 +33,24 @@ const ProductBlock = ({ showCartButton, showQuantity, product, t }) => (
         }
         <ProductPrices product={product} t={t} />
       </AppLink>
-      {(showCartButton && product.hasOrderingGoods && product.goods.length > 0) && (
+      {(showCartButton && product.hasOrderingGoods) && (
         <div className="b-item__cart-form">
-          <ProductBlockCartFormButton
-            product={product}
-            showQuantity={showQuantity}
-            t={t}
-          />
+          {(product.goods.length === 1) && (
+            <ProductBlockCartFormButton
+              product={product}
+              showQuantity={showQuantity}
+              t={t}
+            />
+          )}
+          {(product.goods.length > 1) && (
+            <AppLink
+              className="b-btn element--active"
+              hash={productRoute(product.id)}
+              href={product.publicUrl}
+            >
+              {t('vendor.more')}
+            </AppLink>
+          )}
         </div>
       )}
     </div>
