@@ -16982,14 +16982,23 @@ var ProductBlock = function ProductBlock(_ref) {
         ),
         _react2.default.createElement(_ProductPrices2.default, { product: product, t: t })
       ),
-      showCartButton && product.hasOrderingGoods && product.goods.length > 0 && _react2.default.createElement(
+      showCartButton && product.hasOrderingGoods && _react2.default.createElement(
         'div',
         { className: 'b-item__cart-form' },
-        _react2.default.createElement(_ProductBlockCartFormButton2.default, {
+        product.goods.length === 1 && _react2.default.createElement(_ProductBlockCartFormButton2.default, {
           product: product,
           showQuantity: showQuantity,
           t: t
-        })
+        }),
+        product.goods.length > 1 && _react2.default.createElement(
+          _AppLink2.default,
+          {
+            className: 'b-btn element--active',
+            hash: (0, _app.productRoute)(product.id),
+            href: product.publicUrl
+          },
+          t('vendor.more')
+        )
       )
     )
   );
