@@ -90,7 +90,9 @@ class ProductCard extends Component {
       good,
       product,
     } = this.state;
+
     const isAddingGood = !!getIn(goodState, [good && good.globalId, 'isFetching']);
+    const selectedImage = (good && good.image) ? good.image : null;
 
     return (
       <div className="mrch-ProductCard">
@@ -111,6 +113,7 @@ class ProductCard extends Component {
                 <ProductCardGallery
                   images={product.images}
                   isKioskEnvironment={this.isKioskEnvironment()}
+                  selectedImage={selectedImage}
                   t={t}
                 />
               </div>

@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
-import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import RelativeImage from '../../common/Image/RelativeImage';
 
 class ProductCardGallerySlider extends Component {
@@ -15,10 +14,12 @@ class ProductCardGallerySlider extends Component {
     this.destroyFancybox = this.destroyFancybox.bind(this);
     this.renderThumb = this.renderThumb.bind(this);
     this.onAfterPhotoAction = this.onAfterPhotoAction.bind(this);
-    this.onPhotoChange = this.onPhotoChange.bind(this);
+
+    const { selectedImage } = props;
+    const selectedIndex = (selectedImage && selectedImage.uid) ? this.getIndexByUID(props.images, selectedImage.uid) : 0;
 
     this.state = {
-      selectedIndex: 0,
+      selectedIndex: selectedIndex > -1 ? selectedIndex : 0,
     };
   }
   componentDidMount() {
@@ -27,9 +28,13 @@ class ProductCardGallerySlider extends Component {
       this.initSlider();
       this.initFancybox();
     }, 0);
+  }
+  componentWillReceiveProps(nextProps) {
+    const { selectedImage } = nextProps;
 
-    $(document).on(PHOTO_CHANGE, this.onPhotoChange);
-    $(document).on('updateProductImages', this.reinitSlider);
+    if (selectedImage) {
+      this.selectImage(selectedImage);
+    }
   }
   componentDidUpdate(prevProps, prevState) {
     const $productPhoto = $(findDOMNode(this.refs.productPhoto));
@@ -44,7 +49,6 @@ class ProductCardGallerySlider extends Component {
     this.destroySlider();
     this.destroyFancybox();
 
-    $(document).off(PHOTO_CHANGE, this.onPhotoChange);
     $(document).off('updateProductImages', this.reinitSlider);
   }
   initSlider() {
@@ -64,6 +68,12 @@ class ProductCardGallerySlider extends Component {
         pagination: false,
         itemsMobile: 2,
         navigation: true,
+        afterInit: () => {
+          // state и props могли измениться еще до окончания инициализации
+          // поэтому на всякий случай еще раз меняем изображение
+          $productThumbs.trigger('owl.goTo', this.state.selectedIndex);
+          $productPhoto.trigger('owl.goTo', this.state.selectedIndex);
+        }
       });
     }
   }
@@ -135,7 +145,7 @@ class ProductCardGallerySlider extends Component {
       });
     }
   }
-  onPhotoChange(ev, image) {
+  selectImage(image) {
     if (image && image.uid) {
       const selectedIndex = this.getIndexByUID(this.props.images, image.uid);
 
@@ -198,12 +208,12 @@ class ProductCardGallerySlider extends Component {
           {images && images.map(this.renderPhoto)}
         </div>
         {images && images.length > 1 &&
-          <div
-            className="b-slider b-slider_thumbs"
-            ref="productThumbs"
-          >
-            {images.map(this.renderThumb)}
-          </div>
+        <div
+          className="b-slider b-slider_thumbs"
+          ref="productThumbs"
+        >
+          {images.map(this.renderThumb)}
+        </div>
         }
       </div>
     );

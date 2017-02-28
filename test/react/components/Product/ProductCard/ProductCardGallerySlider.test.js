@@ -62,12 +62,8 @@ describe('[Component] ProductCardGallerySlider', () => {
       }
     ];
     const component = renderIntoDocument(
-      <ProductCardGallerySlider images={images} />
+      <ProductCardGallerySlider images={images} selectedImage={images[1]} />
     );
-
-    expect(component.state.selectedIndex).equals(0);
-
-    $(document).trigger(PHOTO_CHANGE, images[1]);
 
     expect(component.state.selectedIndex).equals(1);
   });
@@ -91,12 +87,8 @@ describe('[Component] ProductCardGallerySlider', () => {
       }
     ];
     const component = renderIntoDocument(
-      <ProductCardGallerySlider images={images} />
+      <ProductCardGallerySlider images={images} selectedImage={nonexistentImage} />
     );
-
-    expect(component.state.selectedIndex).equals(0);
-
-    $(document).trigger(PHOTO_CHANGE, nonexistentImage);
 
     expect(component.state.selectedIndex).equals(0);
   });
