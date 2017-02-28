@@ -52,9 +52,9 @@
         "isSale": false,
         "isPreorder": false,
         "image": {
-          "title": "Юбка на запах",
-          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/901/uploads/product_image/image/60979/ba096010-d14c-4aef-a392-8761866ae2ad.png",
-          "uid": "b956ff1c9989ee26dae42a4f52895ef9638832e7a4fcf514bc1e79704d18e512"
+          "title": "42, Песочный",
+          "url": "http://assets.stage.kiiiosk.ru/uploads/shop/901/uploads/product_image/image/82355/89918c64-eba2-46cf-8e45-5543b5e2d210.JPG",
+          "uid": "b956ff1c9989ee26dae42a4f52895ef9638832e7a4fcf514bc1e79704d18e513"
         },
         "attributes": {
           "5545": "42",
@@ -79,7 +79,7 @@
         "isSale": false,
         "isPreorder": false,
         "image": {
-          "title": "Юбка на запах",
+          "title": "42, Темно-синий",
           "url": "http://assets.stage.kiiiosk.ru/uploads/shop/901/uploads/product_image/image/60979/ba096010-d14c-4aef-a392-8761866ae2ad.png",
           "uid": "b956ff1c9989ee26dae42a4f52895ef9638832e7a4fcf514bc1e79704d18e512"
         },
@@ -370,9 +370,14 @@
     ],
     "images": [
       {
-        "title": "Юбка на запах",
+        "title": "42, Темно-синий",
         "url": "http://assets.stage.kiiiosk.ru/uploads/shop/901/uploads/product_image/image/60979/ba096010-d14c-4aef-a392-8761866ae2ad.png",
         "uid": "b956ff1c9989ee26dae42a4f52895ef9638832e7a4fcf514bc1e79704d18e512"
+      },
+      {
+        "title": "42, Песочный",
+        "url": "http://assets.stage.kiiiosk.ru/uploads/shop/901/uploads/product_image/image/82355/89918c64-eba2-46cf-8e45-5543b5e2d210.JPG",
+        "uid": "b956ff1c9989ee26dae42a4f52895ef9638832e7a4fcf514bc1e79704d18e513"
       }
     ],
     "properties": [

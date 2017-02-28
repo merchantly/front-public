@@ -1,8 +1,5 @@
-import $ from 'jquery';
-import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { findDOMNode } from 'react-dom';
-import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import ProductCardGalleryImage from './ProductCardGalleryImage';
 import ProductCardGallerySlider from './ProductCardGallerySlider';
 

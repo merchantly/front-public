@@ -2,7 +2,6 @@ import $ from 'jquery';
 import React, { Component, PropTypes } from 'react';
 import { diff } from 'deep-diff';
 import ErrorService from '../../../services/Error';
-import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import { getInitialGood, getInitialValues, getMatchedGood, getUpdatedValues } from './utils';
 
 import HiddenInput from '../../common/HiddenInput';
@@ -50,7 +49,6 @@ class ProductProperties extends Component {
       if (this.props.onGoodChange) {
         this.props.onGoodChange(this.state.good);
       }
-      $(document).trigger(PHOTO_CHANGE, good ? good.image : null);
     }
   }
   validateProps(props) {
@@ -95,11 +93,11 @@ class ProductProperties extends Component {
     } = this.state;
 
     const hiddenInput = good && (
-      <HiddenInput
-        name="cart_item[good_id]"
-        value={good.globalId}
-      />
-    );
+        <HiddenInput
+          name="cart_item[good_id]"
+          value={good.globalId}
+        />
+      );
     const addToCartButton = (
       <ProductAddToCartButton
         isAddingGood={isAddingGood}

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import $ from 'jquery';
 
-import { PHOTO_CHANGE } from '../../../constants/globalEventKeys';
 import { goodOrderTitle } from '../../../helpers/product';
 
 import ProductAddToCartButton from '../ProductAddToCartButton';
@@ -42,7 +41,6 @@ class ProductGoods extends Component {
       const good = goods[i];
 
       if (good.globalId === value) {
-        $(document).trigger(PHOTO_CHANGE, good.image);
         if (onGoodChange) onGoodChange(good);
         break;
       }

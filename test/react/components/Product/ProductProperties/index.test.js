@@ -51,7 +51,6 @@ describe('[Component] ProductProperties', () => {
     component.setState({ good: nextGood });
 
     then(() => {
-      expect(changeSpy.calledWith(PHOTO_CHANGE, nextGood.image)).to.be.true;
       changeSpy.restore();
       done();
     });
