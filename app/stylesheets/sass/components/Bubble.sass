@@ -74,14 +74,19 @@ $bubbleCountBackground: #00aeff
       font-size: 25px
   &--publish
     display: block!important
-    position: absolute
-    top: 0
-    left: 100%
-    margin-left: 12px
+    position: absolute!important
+    top: 0!important
+    left: 100%!important
+    margin-left: 12px!important
+    background-color: rgb(224, 181, 85)!important
+    color: white!important
     &:before
       content: none
     .Bubble-text
       padding-left: 20px
+      background-color: rgb(224, 181, 85)!important
+      color: white!important
+      border-radius: $bubbleHeight / 2
 
   @include grid-media-query((lap, palm))
     min-width: $bubbleSmallWidth
