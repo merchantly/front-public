@@ -56,7 +56,12 @@ class MenuTopMobile extends Component {
       id,
       title,
       children,
+      url,
     } = item;
+
+    const {
+      t
+    } = this.props;
 
     return (
       <li id={`mob_menu_item_li_${id}`} key={`mob-menu-item-${id}`}>
@@ -64,6 +69,14 @@ class MenuTopMobile extends Component {
           {title}
         </span>
         <ul>
+          <li id={`mob_menu_all_item_li_${id}`} key={`mob-menu-all_item-${id}`}>
+            <AppLink
+              hash={categoryRoute(id)}
+              href={url}
+            >
+              {t('vendor.menu.all_products', {title: title})}
+            </AppLink>
+          </li>
           {children.map((child) => (
             <li id={`mob_menu_item_li_${child.id}`} key={`mob-menu-item-${child.id}`}>
               <AppLink
