@@ -95,6 +95,7 @@
       ],
       "currentLocale": "ru",
       "vendorLandingLink": "http://kiiosk.ru",
+      "footerMenuMiddleHtml": "<p>test</p>",
       "isVendorLandingLinkDisabled": false
     },
     "menuTopProps": {
