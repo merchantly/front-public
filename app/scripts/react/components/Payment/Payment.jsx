@@ -12,11 +12,11 @@ class Payment extends Component {
     } = this.props;
 
     const cartTitle = state === PAYMENT_SUCCESS
-      ? t('payment.w1.success.title')
-      : t('payment.w1.failure.title');
+      ? t('vendor.payment.w1.success.title')
+      : t('vendor.payment.w1.failure.title');
     const cartMessage = state === PAYMENT_SUCCESS
-      ? t('payment.w1.success.desc')
-      : t('payment.w1.failure.desc');
+      ? t('vendor.payment.w1.success.desc')
+      : t('vendor.payment.w1.failure.desc');
 
     return (
       <div className="b-page__content__inner b-page__content__inner_content">
@@ -30,7 +30,7 @@ class Payment extends Component {
                 {cartMessage}
               </p>
               <a className="b-btn" href={vendorUrl}>
-                {t('order.continue_shopping')}
+                {t('vendor.order.continue_shopping')}
               </a>
             </div>
           </div>
