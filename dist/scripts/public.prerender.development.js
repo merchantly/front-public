@@ -12990,7 +12990,9 @@ var MenuTopMobile = function (_Component) {
     value: function renderWithChildren(item) {
       var id = item.id,
           title = item.title,
-          children = item.children;
+          children = item.children,
+          url = item.url;
+      var t = this.props.t;
 
 
       return _react2.default.createElement(
@@ -13004,6 +13006,18 @@ var MenuTopMobile = function (_Component) {
         _react2.default.createElement(
           'ul',
           null,
+          _react2.default.createElement(
+            'li',
+            { id: 'mob_menu_all_item_li_' + id, key: 'mob-menu-all_item-' + id },
+            _react2.default.createElement(
+              _AppLink2.default,
+              {
+                hash: (0, _app.categoryRoute)(id),
+                href: url
+              },
+              t('vendor.menu.all_products', { title: title })
+            )
+          ),
           children.map(function (child) {
             return _react2.default.createElement(
               'li',
@@ -16273,8 +16287,8 @@ var Payment = function (_Component) {
           t = _props.t;
 
 
-      var cartTitle = state === PAYMENT_SUCCESS ? t('payment.w1.success.title') : t('payment.w1.failure.title');
-      var cartMessage = state === PAYMENT_SUCCESS ? t('payment.w1.success.desc') : t('payment.w1.failure.desc');
+      var cartTitle = state === PAYMENT_SUCCESS ? t('vendor.payment.w1.success.title') : t('vendor.payment.w1.failure.title');
+      var cartMessage = state === PAYMENT_SUCCESS ? t('vendor.payment.w1.success.desc') : t('vendor.payment.w1.failure.desc');
 
       return _react2.default.createElement(
         'div',
@@ -16301,7 +16315,7 @@ var Payment = function (_Component) {
               _react2.default.createElement(
                 'a',
                 { className: 'b-btn', href: vendorUrl },
-                t('order.continue_shopping')
+                t('vendor.order.continue_shopping')
               )
             )
           )
@@ -17533,7 +17547,9 @@ var ProductCard = function (_Component) {
           good = _state2.good,
           product = _state2.product;
 
+
       var isAddingGood = !!(0, _timm.getIn)(goodState, [good && good.globalId, 'isFetching']);
+      var selectedImage = good && good.image ? good.image : null;
 
       return _react2.default.createElement(
         'div',
@@ -17564,6 +17580,7 @@ var ProductCard = function (_Component) {
                 _react2.default.createElement(_ProductCardGallery2.default, {
                   images: product.images,
                   isKioskEnvironment: this.isKioskEnvironment(),
+                  selectedImage: selectedImage,
                   t: t
                 })
               ),
@@ -18121,21 +18138,11 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
-
-var _globalEventKeys = require('../../../constants/globalEventKeys');
 
 var _ProductCardGalleryImage = require('./ProductCardGalleryImage');
 
@@ -18186,7 +18193,7 @@ ProductCardGallery.defaultProps = {
 exports.default = ProductCardGallery;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":284,"./ProductCardGalleryImage":171,"./ProductCardGallerySlider":172,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"classnames":"classnames","jquery":"jquery","react":"react","react-dom":"react-dom"}],171:[function(require,module,exports){
+},{"./ProductCardGalleryImage":171,"./ProductCardGallerySlider":172,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"react":"react","react-dom":"react-dom"}],171:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18322,8 +18329,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
-var _globalEventKeys = require('../../../constants/globalEventKeys');
-
 var _RelativeImage = require('../../common/Image/RelativeImage');
 
 var _RelativeImage2 = _interopRequireDefault(_RelativeImage);
@@ -18345,10 +18350,13 @@ var ProductCardGallerySlider = function (_Component) {
     _this.destroyFancybox = _this.destroyFancybox.bind(_this);
     _this.renderThumb = _this.renderThumb.bind(_this);
     _this.onAfterPhotoAction = _this.onAfterPhotoAction.bind(_this);
-    _this.onPhotoChange = _this.onPhotoChange.bind(_this);
+
+    var selectedImage = props.selectedImage;
+
+    var selectedIndex = selectedImage && selectedImage.uid ? _this.getIndexByUID(props.images, selectedImage.uid) : 0;
 
     _this.state = {
-      selectedIndex: 0
+      selectedIndex: selectedIndex > -1 ? selectedIndex : 0
     };
     return _this;
   }
@@ -18363,9 +18371,16 @@ var ProductCardGallerySlider = function (_Component) {
         _this2.initSlider();
         _this2.initFancybox();
       }, 0);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      var selectedImage = nextProps.selectedImage;
 
-      (0, _jquery2.default)(document).on(_globalEventKeys.PHOTO_CHANGE, this.onPhotoChange);
-      (0, _jquery2.default)(document).on('updateProductImages', this.reinitSlider);
+
+      if (selectedImage) {
+        this.selectImage(selectedImage);
+      }
     }
   }, {
     key: 'componentDidUpdate',
@@ -18384,12 +18399,13 @@ var ProductCardGallerySlider = function (_Component) {
       this.destroySlider();
       this.destroyFancybox();
 
-      (0, _jquery2.default)(document).off(_globalEventKeys.PHOTO_CHANGE, this.onPhotoChange);
       (0, _jquery2.default)(document).off('updateProductImages', this.reinitSlider);
     }
   }, {
     key: 'initSlider',
     value: function initSlider() {
+      var _this3 = this;
+
       var $productPhoto = (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productPhoto));
       var $productThumbs = (0, _jquery2.default)((0, _reactDom.findDOMNode)(this.refs.productThumbs));
 
@@ -18405,7 +18421,13 @@ var ProductCardGallerySlider = function (_Component) {
           items: 4,
           pagination: false,
           itemsMobile: 2,
-          navigation: true
+          navigation: true,
+          afterInit: function afterInit() {
+            // state и props могли измениться еще до окончания инициализации
+            // поэтому на всякий случай еще раз меняем изображение
+            $productThumbs.trigger('owl.goTo', _this3.state.selectedIndex);
+            $productPhoto.trigger('owl.goTo', _this3.state.selectedIndex);
+          }
         });
       }
     }
@@ -18490,8 +18512,8 @@ var ProductCardGallerySlider = function (_Component) {
       }
     }
   }, {
-    key: 'onPhotoChange',
-    value: function onPhotoChange(ev, image) {
+    key: 'selectImage',
+    value: function selectImage(image) {
       if (image && image.uid) {
         var selectedIndex = this.getIndexByUID(this.props.images, image.uid);
 
@@ -18596,7 +18618,7 @@ ProductCardGallerySlider.defaultProps = {
 exports.default = ProductCardGallerySlider;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":284,"../../common/Image/RelativeImage":254,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"jquery":"jquery","react":"react","react-dom":"react-dom"}],173:[function(require,module,exports){
+},{"../../common/Image/RelativeImage":254,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"jquery":"jquery","react":"react","react-dom":"react-dom"}],173:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19529,8 +19551,6 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _globalEventKeys = require('../../../constants/globalEventKeys');
-
 var _product = require('../../../helpers/product');
 
 var _ProductAddToCartButton = require('../ProductAddToCartButton');
@@ -19590,7 +19610,6 @@ var ProductGoods = (_temp = _class = function (_Component) {
         var good = goods[i];
 
         if (good.globalId === value) {
-          (0, _jquery2.default)(document).trigger(_globalEventKeys.PHOTO_CHANGE, good.image);
           if (onGoodChange) onGoodChange(good);
           break;
         }
@@ -19717,7 +19736,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
 exports.default = ProductGoods;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":284,"../../../helpers/product":294,"../ProductAddToCartButton":152,"../ProductCart/ProductCartWishlist":182,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/extends":359,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"jquery":"jquery","react":"react"}],185:[function(require,module,exports){
+},{"../../../helpers/product":294,"../ProductAddToCartButton":152,"../ProductCart/ProductCartWishlist":182,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/extends":359,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"jquery":"jquery","react":"react"}],185:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20583,8 +20602,6 @@ var _Error = require('../../../services/Error');
 
 var _Error2 = _interopRequireDefault(_Error);
 
-var _globalEventKeys = require('../../../constants/globalEventKeys');
-
 var _utils = require('./utils');
 
 var _HiddenInput = require('../../common/HiddenInput');
@@ -20647,7 +20664,6 @@ var ProductProperties = (_temp = _class = function (_Component) {
         if (this.props.onGoodChange) {
           this.props.onGoodChange(this.state.good);
         }
-        (0, _jquery2.default)(document).trigger(_globalEventKeys.PHOTO_CHANGE, good ? good.image : null);
       }
     }
   }, {
@@ -20752,7 +20768,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
 exports.default = ProductProperties;
 module.exports = exports['default'];
 
-},{"../../../constants/globalEventKeys":284,"../../../services/Error":336,"../../common/HiddenInput":251,"../ProductAddToCartButton":152,"../ProductCart/ProductCartWishlist":182,"./PropertyList":189,"./PropertySingle":193,"./utils":195,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/core-js/object/keys":351,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/defineProperty":358,"babel-runtime/helpers/extends":359,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],195:[function(require,module,exports){
+},{"../../../services/Error":336,"../../common/HiddenInput":251,"../ProductAddToCartButton":152,"../ProductCart/ProductCartWishlist":182,"./PropertyList":189,"./PropertySingle":193,"./utils":195,"babel-runtime/core-js/object/get-prototype-of":350,"babel-runtime/core-js/object/keys":351,"babel-runtime/helpers/classCallCheck":356,"babel-runtime/helpers/createClass":357,"babel-runtime/helpers/defineProperty":358,"babel-runtime/helpers/extends":359,"babel-runtime/helpers/inherits":360,"babel-runtime/helpers/possibleConstructorReturn":362,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],195:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -29602,9 +29618,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var DOM_CHANGE = exports.DOM_CHANGE = 'DOM_CHANGE';
-
-// Product card
-var PHOTO_CHANGE = exports.PHOTO_CHANGE = 'productPhotoChange';
 
 },{}],285:[function(require,module,exports){
 'use strict';
