@@ -34,6 +34,10 @@
         max-width: 100%
     .b-footer__nav_soc
       @extend %three-eighths
+    .b-footer__nav
+      @include grid-media-query('lap')
+        width: 100%
+        text-align: left
 
   &__link
     display: inline-block
