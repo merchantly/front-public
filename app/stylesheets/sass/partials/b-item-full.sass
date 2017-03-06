@@ -183,6 +183,20 @@ $articulColor: #828282
             flex-grow: 1
 
     &__option
+      &__extended
+        .radiobtn
+          width: 20%
+          margin: 0 7px 7px 0
+          color: white
+          &--light
+            color: black
+          .radiobtn__input:checked + .radiobtn__ind
+            transform: none
+          .radiobtn__ind
+            &:before
+              border-radius: 5px
+            border-radius: 5px
+
       &.b-item-full__form__option_full
         @extend %one-whole
       select
@@ -216,3 +230,27 @@ $articulColor: #828282
 
     .radiobtn--color
       margin: 6px 14px 6px 0
+  &__multiple-choice
+    &__items
+      box-sizing: border-box
+    &__form
+      box-sizing: border-box
+      h3
+        padding-top: 0
+        margin-top: 0
+      .row > div
+        box-sizing: border-box
+        padding: 0
+      .b-cart__item__remove
+        margin-top: -5px
+      .b-item-full__multiple-choice__item
+        width: 85%
+    &__item
+      display: inline-block
+      width: 45%
+      border: 1px gray solid
+      margin: 0 5px 5px 0
+      padding: 5px 10px 5px 10px
+      text-align: right
+      border-radius: 5px
+      cursor: pointer

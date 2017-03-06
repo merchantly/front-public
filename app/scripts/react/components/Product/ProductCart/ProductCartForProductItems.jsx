@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ProductGoods from '../ProductGoods';
 import ProductProperties from '../ProductProperties';
+import GoodsMultipleChoice from '../GoodsMultipleChoice';
 
 export default class ProductCartForProductItems extends Component {
   static propTypes = {
@@ -12,21 +13,30 @@ export default class ProductCartForProductItems extends Component {
     wishlistUrl: PropTypes.string,
   }
   render() {
-    const { product: { goods, properties }, t } = this.props;
+    const { product: { goods, properties }, t, multipleChoice } = this.props;
 
-    if (properties.length) {
+    if (multipleChoice) {
       return (
-        <ProductProperties
-          {...this.props}
-          goods={goods}
-          properties={properties}
-          t={t}
-        />
+        <GoodsMultipleChoice goods={goods} properties={properties} t={t} />
       );
     } else {
-      return (
-        <ProductGoods {...this.props} t={t} />
-      );
+      if (properties.length) {
+        return (
+          <ProductProperties
+            {...this.props}
+            goods={goods}
+            properties={properties}
+            t={t}
+          />
+        );
+      } else {
+        return (
+          <ProductGoods {...this.props} t={t} />
+        );
+      }
     }
+
+
+
   }
 }
