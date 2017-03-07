@@ -18,6 +18,7 @@ class ProductCardPage extends Component {
       similarProducts,
       otherProducts,
       wishlistUrl,
+      multipleChoice
     } = this.props;
 
     return (
@@ -34,6 +35,7 @@ class ProductCardPage extends Component {
           product,
           similarProducts,
           wishlistUrl,
+          multipleChoice
         }} />
       </VendorLayoutContainer>
     );
@@ -52,7 +54,17 @@ ProductCardPage.propTypes = {
   product: schemas.product,
   similarProducts: PropTypes.arrayOf(schemas.product),
   otherProducts: PropTypes.arrayOf(schemas.product),
+  multipleChoice: PropTypes.bool,
   wishlistUrl: PropTypes.string,
+};
+ProductCardPage.defaultProps = {
+  formAuthenticity: {},
+  hasComments: false,
+  disqusUrl: '',
+  product: {},
+  multipleChoice: false,
+  similarProducts: [],
+  otherProducts: [],
 };
 
 export default ProductCardPage;

@@ -85,6 +85,7 @@ class ProductCard extends Component {
       similarProducts,
       otherProducts,
       t,
+      multipleChoice
     } = this.props;
     const {
       good,
@@ -131,17 +132,19 @@ class ProductCard extends Component {
                   />
                 </div>
                 <ProductCardSchema product={product} />
-                <div className="b-item-full__form">
-                  <ProductCart
-                    {...this.props}
-                    {...this.state}
-                    isAddingGood={isAddingGood}
-                    onChangeAmount={this.handleChangeAmount}
-                    onGoodChange={this.handleGoodChange}
-                    onSubmit={this.handleFormSubmit}
-                    t={t}
-                  />
-                </div>
+                {!multipleChoice &&
+                  <div className="b-item-full__form">
+                    <ProductCart
+                      {...this.props}
+                      {...this.state}
+                      isAddingGood={isAddingGood}
+                      onChangeAmount={this.handleChangeAmount}
+                      onGoodChange={this.handleGoodChange}
+                      onSubmit={this.handleFormSubmit}
+                      t={t}
+                    />
+                  </div>
+                }
                 <ProductCardDetails
                   otherProducts={otherProducts}
                   product={product}
@@ -150,6 +153,19 @@ class ProductCard extends Component {
               </div>
               <ProductCardVideo product={product} />
             </div>
+            {multipleChoice &&
+              <div>
+                <ProductCart
+                  {...this.props}
+                  {...this.state}
+                  isAddingGood={isAddingGood}
+                  onChangeAmount={this.handleChangeAmount}
+                  onGoodChange={this.handleGoodChange}
+                  onSubmit={this.handleFormSubmit}
+                  t={t}
+                />
+              </div>
+            }
             <ProductCardSimilarProducts products={similarProducts} t={t} />
             {this.renderDisqus(product)}
           </div>
@@ -172,6 +188,7 @@ ProductCard.propTypes = {
   similarProducts: PropTypes.arrayOf(schemas.product),
   otherProducts: PropTypes.arrayOf(schemas.product),
   wishlistUrl: PropTypes.string,
+  multipleChoice: PropTypes.bool,
   t: PropTypes.func.isRequired,
 };
 
@@ -180,6 +197,7 @@ ProductCard.defaultProps = {
   hasComments: false,
   disqusUrl: '',
   product: {},
+  multipleChoice: false,
   similarProducts: [],
   otherProducts: [],
 };

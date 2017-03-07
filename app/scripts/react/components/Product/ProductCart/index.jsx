@@ -62,13 +62,20 @@ export default class ProductCart extends Component {
       );
     }
   }
+
+  onSubmit = (ev) => {
+    const { product } = this.props;
+    if (!product.multipleChoice) {
+      this.props.onSubmit(ev);
+    }
+  }
+
   render() {
     const {
       onProductChange,
       product,
       t,
       good,
-      onSubmit,
       formAuthenticity
     } = this.props;
 
@@ -78,7 +85,7 @@ export default class ProductCart extends Component {
         action={vendorCartItems()}
         className="simple_form cart_item"
         method="POST"
-        onSubmit={onSubmit}
+        onSubmit={this.onSubmit}
       >
         <div style={{ display: 'none'}}>
           <HiddenInput name="utf8" value="✓" />

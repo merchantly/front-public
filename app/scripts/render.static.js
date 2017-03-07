@@ -7,6 +7,7 @@ import './render.bundle';
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';
 import productMultiSelect from '../../test/fixtures/products/multi-select';
+import productMultiChoice from '../../test/fixtures/products/multiple-choice';
 import productWeight from '../../test/fixtures/products/weight';
 import productDoesntSell from '../../test/fixtures/products/3917';
 import productNoGoods from '../../test/fixtures/products/no-goods';
@@ -35,6 +36,7 @@ import {
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.ProductCardMultiSelect = () => React.createElement(global.ProductCard, productMultiSelect);
+global.ProductCardMultiChoice = () => React.createElement(global.ProductCard, productMultiChoice);
 global.ProductCardDoesntSell = () => React.createElement(global.ProductCard, productDoesntSell);
 global.ProductCardWeight = () => React.createElement(global.ProductCard, productWeight);
 global.ProductCardNoGoods = () => React.createElement(global.ProductCard, productNoGoods);
