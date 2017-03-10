@@ -68,7 +68,7 @@ class OrderShow extends Component {
             {mustBePaidOnline && (
               <a
                 className="b-btn"
-                hrey={paymentUrl}
+                href={paymentUrl}
                 target="_blank"
               >
                 {t('vendor.order.pay')}
