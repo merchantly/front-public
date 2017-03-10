@@ -44,7 +44,7 @@ class PinAlert extends Component {
           : (
           <span className="pin-alert-base">
             <button
-              className="client-pin-code-button"
+              className="b-btn"
               name="send_pin_code"
               type="submit"
             >
