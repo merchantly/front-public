@@ -7689,7 +7689,7 @@ var PinAlert = function (_Component) {
           _react2.default.createElement(
             'button',
             {
-              className: 'client-pin-code-button',
+              className: 'b-btn',
               name: 'send_pin_code',
               type: 'submit'
             },
@@ -15794,7 +15794,7 @@ var OrderShow = function (_Component) {
               'a',
               {
                 className: 'b-btn',
-                hrey: paymentUrl,
+                href: paymentUrl,
                 target: '_blank'
               },
               t('vendor.order.pay')
