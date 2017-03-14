@@ -235,22 +235,44 @@ $articulColor: #828282
       box-sizing: border-box
     &__form
       box-sizing: border-box
+      margin-left: -15px
+      @include grid-media-query((lap))
+        margin-left: 0
       h3
-        padding-top: 0
-        margin-top: 0
-      .row > div
-        box-sizing: border-box
         padding: 0
+        margin: 0
       .b-cart__item__remove
-        margin-top: -5px
+        position: relative
+        top: 3px
       .b-item-full__multiple-choice__item
         width: 85%
+      &__row
+        width: 100%
+        display: table
+        &__items
+          display: table-cell
+        &__count
+          display: table-cell
+          width: 60px
+          select
+            vertical-align: middle
+            margin-top: 10px
+        &__actions
+          display: table-cell
+          width: 35px
+          img
+            vertical-align: middle
+
     &__item
       display: inline-block
       width: 45%
-      border: 1px gray solid
+      border: 1px #d6d6d6 solid
       margin: 0 5px 5px 0
       padding: 5px 10px 5px 10px
       text-align: right
-      border-radius: 5px
       cursor: pointer
+      vertical-align: top
+      @include grid-media-query((lap))
+        width: 43%
+      @include grid-media-query((palm))
+        width: 100%

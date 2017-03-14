@@ -37,25 +37,31 @@ class GoodsMultipleChoice extends Component {
     return (
       <div>
         <div className="row b-item-full__multiple-choice">
-          <div className="col-md-8 b-item-full__multiple-choice__items">
+          <div className="col-md-8 col-xs-12 b-item-full__multiple-choice__items">
             {goods.map((good, idx) => <MultipleChoiceItem properties={properties} selected={selectedGoods.includes(good)} onClick={this.onSelect} good={good} />)}
           </div>
-          <div className="col-md-4 b-item-full__multiple-choice__form">
+          <div className="col-md-4 col-xs-12 b-item-full__multiple-choice__form">
             {selectedGoods.length === 0 &&
               <div className="row">
-                <h3>{t('vendor.cart.not_selected_products')}</h3>
+                <div className="col-md-12">
+                  <h3>{t('vendor.cart.not_selected_products')}</h3>
+                </div>
               </div>
             }
             {selectedGoods.length > 0 &&
               <div>
                 <div className="row">
-                  <h3>{t('vendor.cart.selected_products')}</h3>
-                </div>
-                <div>
-                  {selectedGoods.map((good, idx) => <MultipleChoiceFormItem onRemove={this.onSelect} properties={properties} good={good} />)}
+                  <div className="col-md-12">
+                    <h3>{t('vendor.cart.selected_products')}</h3>
+                  </div>
                 </div>
                 <div className="row">
-                  <div className="b-item-full__form__row b-item-full__form__submit">
+                  <div className="col-md-12">
+                    {selectedGoods.map((good, idx) => <MultipleChoiceFormItem onRemove={this.onSelect} properties={properties} good={good} />)}
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 b-item-full__form__row b-item-full__form__submit">
                     {selectedGoods.length > 0 && <ProductAddToCartButton
                       t={t}
                       text={t('vendor.button.to_cart')}

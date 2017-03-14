@@ -39,11 +39,11 @@ export default class MultipleChoiceFormItem extends Component {
     const { count } = this.state;
 
     return (
-      <div className="row">
-        <div className="col-md-8">
+      <div className="b-item-full__multiple-choice__form__row">
+        <div className="b-item-full__multiple-choice__form__row__items">
           <MultipleChoiceItem properties={properties} good={good} />
         </div>
-        <div className="col-md-2">
+        <div className="b-item-full__multiple-choice__form__row__count">
           <Select
             name={`cart_items[${good.globalId}][count]`}
             onChange={this.onChange}
@@ -51,7 +51,7 @@ export default class MultipleChoiceFormItem extends Component {
             value={count}
           />
         </div>
-        <div className="col-md-2">
+        <div className="b-item-full__multiple-choice__form__row__actions">
           <a className="b-cart__item__remove" onClick={this.onRemove}><AssetImage src="images/cross_white.svg" /></a>
         </div>
       </div>
