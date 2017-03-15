@@ -16576,15 +16576,15 @@ var MultipleChoiceFormItem = (_temp = _class = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'row' },
+        { className: 'b-item-full__multiple-choice__form__row' },
         _react2.default.createElement(
           'div',
-          { className: 'col-md-8' },
+          { className: 'b-item-full__multiple-choice__form__row__items' },
           _react2.default.createElement(_MultipleChoiceItem2.default, { properties: properties, good: good })
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-md-2' },
+          { className: 'b-item-full__multiple-choice__form__row__count' },
           _react2.default.createElement(_Select2.default, {
             name: 'cart_items[' + good.globalId + '][count]',
             onChange: this.onChange,
@@ -16594,7 +16594,7 @@ var MultipleChoiceFormItem = (_temp = _class = function (_Component) {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-md-2' },
+          { className: 'b-item-full__multiple-choice__form__row__actions' },
           _react2.default.createElement(
             'a',
             { className: 'b-cart__item__remove', onClick: this.onRemove },
@@ -16865,21 +16865,25 @@ var GoodsMultipleChoice = (_temp = _class = function (_Component) {
           { className: 'row b-item-full__multiple-choice' },
           _react2.default.createElement(
             'div',
-            { className: 'col-md-8 b-item-full__multiple-choice__items' },
+            { className: 'col-md-8 col-xs-12 b-item-full__multiple-choice__items' },
             goods.map(function (good, idx) {
               return _react2.default.createElement(_MultipleChoiceItem2.default, { properties: properties, selected: selectedGoods.includes(good), onClick: _this2.onSelect, good: good });
             })
           ),
           _react2.default.createElement(
             'div',
-            { className: 'col-md-4 b-item-full__multiple-choice__form' },
+            { className: 'col-md-4 col-xs-12 b-item-full__multiple-choice__form' },
             selectedGoods.length === 0 && _react2.default.createElement(
               'div',
               { className: 'row' },
               _react2.default.createElement(
-                'h3',
-                null,
-                t('vendor.cart.not_selected_products')
+                'div',
+                { className: 'col-md-12' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  t('vendor.cart.not_selected_products')
+                )
               )
             ),
             selectedGoods.length > 0 && _react2.default.createElement(
@@ -16889,24 +16893,32 @@ var GoodsMultipleChoice = (_temp = _class = function (_Component) {
                 'div',
                 { className: 'row' },
                 _react2.default.createElement(
-                  'h3',
-                  null,
-                  t('vendor.cart.selected_products')
+                  'div',
+                  { className: 'col-md-12' },
+                  _react2.default.createElement(
+                    'h3',
+                    null,
+                    t('vendor.cart.selected_products')
+                  )
                 )
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                selectedGoods.map(function (good, idx) {
-                  return _react2.default.createElement(_MultipleChoiceFormItem2.default, { onRemove: _this2.onSelect, properties: properties, good: good });
-                })
               ),
               _react2.default.createElement(
                 'div',
                 { className: 'row' },
                 _react2.default.createElement(
                   'div',
-                  { className: 'b-item-full__form__row b-item-full__form__submit' },
+                  { className: 'col-md-12' },
+                  selectedGoods.map(function (good, idx) {
+                    return _react2.default.createElement(_MultipleChoiceFormItem2.default, { onRemove: _this2.onSelect, properties: properties, good: good });
+                  })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'row' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'col-md-12 b-item-full__form__row b-item-full__form__submit' },
                   selectedGoods.length > 0 && _react2.default.createElement(_ProductAddToCartButton2.default, {
                     t: t,
                     text: t('vendor.button.to_cart')
