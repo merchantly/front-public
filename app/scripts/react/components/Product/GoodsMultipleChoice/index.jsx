@@ -2,6 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import MultipleChoiceItem from './MultipleChoiceItem';
 import MultipleChoiceFormItem from './MultipleChoiceFormItem';
 import ProductAddToCartButton from '../ProductAddToCartButton';
+import {SortableContainer, arrayMove} from 'react-sortable-hoc';
+
+const SortableList = SortableContainer(({items, properties, onSelect}) => {
+  return (
+    <div className="col-md-12 b-item-full__multiple-choice__form__table">
+      {items.map((good, idx) => <MultipleChoiceFormItem key={`item-${idx}`} idx={idx} onRemove={onSelect} properties={properties} good={good} />)}
+    </div>
+  );
+});
 
 class GoodsMultipleChoice extends Component {
   static propTypes = {
@@ -28,6 +37,14 @@ class GoodsMultipleChoice extends Component {
       this.setState((state) => ({ selectedGoods: state.selectedGoods.concat(good) }))
     }
   }
+
+  onSortEnd = ({oldIndex, newIndex}) => {
+    let {selectedGoods} = this.state;
+
+    this.setState({
+      selectedGoods: arrayMove(selectedGoods, oldIndex, newIndex)
+    });
+  };
 
   render() {
     const { goods, properties, t } = this.props;
@@ -56,9 +73,7 @@ class GoodsMultipleChoice extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12">
-                    {selectedGoods.map((good, idx) => <MultipleChoiceFormItem onRemove={this.onSelect} properties={properties} good={good} />)}
-                  </div>
+                  <SortableList onSortEnd={this.onSortEnd} useDragHandle={true} items={selectedGoods} properties={properties} onSelect={this.onSelect} />
                 </div>
                 <div className="row">
                   <div className="col-md-12 b-item-full__form__row b-item-full__form__submit">

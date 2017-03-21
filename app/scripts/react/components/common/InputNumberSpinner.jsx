@@ -8,6 +8,7 @@ export default class InputNumberSpinner extends Component {
     max: PropTypes.number,
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
+    name: PropTypes.string
   }
   static defaultProps = {
     step: 1,
@@ -44,31 +45,30 @@ export default class InputNumberSpinner extends Component {
   }
 
   render() {
-    const { step, min, max, value } = this.props;
+    const { step, min, max, value, name } = this.props;
 
     return (
       <div className="input-number-spinner">
-        <form>
-          <button
-            className="input-number-spinner__button input-number-spinner__button__decrement"
-            onClick={this.handleDecrement.bind(this)}
-          >-</button>
-          <input
-            autoComplete="off"
-            className="input-number-spinner__input"
-            max={max}
-            min={min}
-            onChange={(e) => this.setValue(e.target.value)}
-            ref="input"
-            step={step}
-            type="number"
-            value={value}
-          />
-          <button
-            className="input-number-spinner__button input-number-spinner__button__increment"
-            onClick={this.handleIncrement.bind(this)}
-          >+</button>
-        </form>
+        <button
+          className="input-number-spinner__button input-number-spinner__button__decrement"
+          onClick={this.handleDecrement.bind(this)}
+        >-</button>
+        <input
+          name={name}
+          autoComplete="off"
+          className="input-number-spinner__input"
+          max={max}
+          min={min}
+          onChange={(e) => this.setValue(e.target.value)}
+          ref="input"
+          step={step}
+          type="number"
+          value={value}
+        />
+        <button
+          className="input-number-spinner__button input-number-spinner__button__increment"
+          onClick={this.handleIncrement.bind(this)}
+        >+</button>
       </div>
     );
   }
