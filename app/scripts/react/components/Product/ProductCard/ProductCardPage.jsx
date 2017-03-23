@@ -18,6 +18,8 @@ class ProductCardPage extends Component {
       similarProducts,
       otherProducts,
       wishlistUrl,
+      isOneClickBuy,
+      newOrderUrl,
       multipleChoice
     } = this.props;
 
@@ -31,9 +33,11 @@ class ProductCardPage extends Component {
           hasComments,
           i18n,
           isWishlisted,
+          isOneClickBuy,
           otherProducts,
           product,
           similarProducts,
+          newOrderUrl,
           wishlistUrl,
           multipleChoice
         }} />
@@ -52,9 +56,11 @@ ProductCardPage.propTypes = {
   disqusUrl: PropTypes.string,
   isWishlisted: PropTypes.bool,
   product: schemas.product,
+  newOrderUrl: PropTypes.string,
   similarProducts: PropTypes.arrayOf(schemas.product),
   otherProducts: PropTypes.arrayOf(schemas.product),
   multipleChoice: PropTypes.bool,
+  isOneClickBuy: PropTypes.bool,
   wishlistUrl: PropTypes.string,
 };
 ProductCardPage.defaultProps = {
@@ -63,6 +69,7 @@ ProductCardPage.defaultProps = {
   disqusUrl: '',
   product: {},
   multipleChoice: false,
+  isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
 };

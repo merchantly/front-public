@@ -6493,6 +6493,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var STRING_TYPE = 'string';
 var TEXTAREA_TYPE = 'textarea';
+var HIDDEN_TYPE = 'hidden';
 
 var CheckoutFields = function (_Component) {
   (0, _inherits3.default)(CheckoutFields, _Component);
@@ -6581,6 +6582,14 @@ var CheckoutFields = function (_Component) {
               errorMessage
             )
           );
+          break;
+        case HIDDEN_TYPE:
+          itemContent = _react2.default.createElement('input', {
+            type: HIDDEN_TYPE,
+            id: itemId,
+            name: itemName,
+            value: value
+          });
           break;
       }
 
@@ -11670,10 +11679,23 @@ var Logo = (_temp = _class = function (_Component) {
   (0, _createClass3.default)(Logo, [{
     key: "render",
     value: function render() {
+      var _props = this.props,
+          linkUrl = _props.linkUrl,
+          logoUrl = _props.logoUrl,
+          logoText = _props.logoText,
+          imageAlt = _props.imageAlt;
+
+      if (!linkUrl) {
+        return _react2.default.createElement(
+          "span",
+          { className: "b-logo" },
+          "this.renderContent(logoUrl, logoText, imageAlt)"
+        );
+      }
       return _react2.default.createElement(
         "a",
-        { href: this.props.linkUrl, className: "b-logo" },
-        this.renderContent(this.props.logoUrl, this.props.logoText, this.props.imageAlt)
+        { href: linkUrl, className: "b-logo" },
+        this.renderContent(logoUrl, logoText, imageAlt)
       );
     }
   }, {
@@ -17964,6 +17986,10 @@ var _reactRedux = require('react-redux');
 
 var _timm = require('timm');
 
+var _urijs = require('urijs');
+
+var _urijs2 = _interopRequireDefault(_urijs);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -18011,7 +18037,10 @@ var ProductCard = function (_Component) {
   }, {
     key: 'handleFormSubmit',
     value: function handleFormSubmit(ev) {
-      var addGood = this.props.addGood;
+      var _props = this.props,
+          addGood = _props.addGood,
+          newOrderUrl = _props.newOrderUrl,
+          isOneClickBuy = _props.isOneClickBuy;
       var _state = this.state,
           amount = _state.amount,
           good = _state.good,
@@ -18020,7 +18049,11 @@ var ProductCard = function (_Component) {
 
       ev.preventDefault();
 
-      return product.sellingByWeight ? addGood(good, 1, amount) : addGood(good, amount);
+      if (isOneClickBuy) {
+        document.location = (0, _urijs2.default)(newOrderUrl).setQuery({ 'cart_item[good_id]': good.globalId });
+      } else {
+        return product.sellingByWeight ? addGood(good, 1, amount) : addGood(good, amount);
+      }
     }
   }, {
     key: 'renderDisqus',
@@ -18039,12 +18072,12 @@ var ProductCard = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _props = this.props,
-          goodState = _props.goodState,
-          similarProducts = _props.similarProducts,
-          otherProducts = _props.otherProducts,
-          t = _props.t,
-          multipleChoice = _props.multipleChoice;
+      var _props2 = this.props,
+          goodState = _props2.goodState,
+          similarProducts = _props2.similarProducts,
+          otherProducts = _props2.otherProducts,
+          t = _props2.t,
+          multipleChoice = _props2.multipleChoice;
       var _state2 = this.state,
           good = _state2.good,
           product = _state2.product;
@@ -18160,6 +18193,8 @@ ProductCard.propTypes = {
   otherProducts: _react.PropTypes.arrayOf(schemas.product),
   wishlistUrl: _react.PropTypes.string,
   multipleChoice: _react.PropTypes.bool,
+  isOneClickBuy: _react.PropTypes.bool,
+  newOrderUrl: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired
 };
 
@@ -18169,6 +18204,7 @@ ProductCard.defaultProps = {
   disqusUrl: '',
   product: {},
   multipleChoice: false,
+  isOneClickBuy: false,
   similarProducts: [],
   otherProducts: []
 };
@@ -18183,7 +18219,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 module.exports = exports['default'];
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"../../../actions/GoodStateActions":6,"../../../schemas":324,"../../HoC/connectToRedux":98,"../../HoC/provideTranslations":99,"../ProductCart":186,"../ProductPrices":191,"./ProductCard.constants":166,"./ProductCardBadges":168,"./ProductCardBreadcrumbs":169,"./ProductCardDetails":172,"./ProductCardGallery":173,"./ProductCardSchema":177,"./ProductCardSimilarProducts":178,"./ProductCardTitle":179,"./ProductCardVideo":180,"babel-runtime/core-js/object/get-prototype-of":354,"babel-runtime/helpers/classCallCheck":360,"babel-runtime/helpers/createClass":361,"babel-runtime/helpers/extends":363,"babel-runtime/helpers/inherits":364,"babel-runtime/helpers/possibleConstructorReturn":366,"react":"react","react-disqus-thread":740,"react-redux":"react-redux","timm":"timm"}],168:[function(require,module,exports){
+},{"../../../actions/GoodStateActions":6,"../../../schemas":324,"../../HoC/connectToRedux":98,"../../HoC/provideTranslations":99,"../ProductCart":186,"../ProductPrices":191,"./ProductCard.constants":166,"./ProductCardBadges":168,"./ProductCardBreadcrumbs":169,"./ProductCardDetails":172,"./ProductCardGallery":173,"./ProductCardSchema":177,"./ProductCardSimilarProducts":178,"./ProductCardTitle":179,"./ProductCardVideo":180,"babel-runtime/core-js/object/get-prototype-of":354,"babel-runtime/helpers/classCallCheck":360,"babel-runtime/helpers/createClass":361,"babel-runtime/helpers/extends":363,"babel-runtime/helpers/inherits":364,"babel-runtime/helpers/possibleConstructorReturn":366,"react":"react","react-disqus-thread":740,"react-redux":"react-redux","timm":"timm","urijs":"urijs"}],168:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19212,6 +19248,8 @@ var ProductCardPage = function (_Component) {
           similarProducts = _props.similarProducts,
           otherProducts = _props.otherProducts,
           wishlistUrl = _props.wishlistUrl,
+          isOneClickBuy = _props.isOneClickBuy,
+          newOrderUrl = _props.newOrderUrl,
           multipleChoice = _props.multipleChoice;
 
 
@@ -19226,9 +19264,11 @@ var ProductCardPage = function (_Component) {
           hasComments: hasComments,
           i18n: i18n,
           isWishlisted: isWishlisted,
+          isOneClickBuy: isOneClickBuy,
           otherProducts: otherProducts,
           product: product,
           similarProducts: similarProducts,
+          newOrderUrl: newOrderUrl,
           wishlistUrl: wishlistUrl,
           multipleChoice: multipleChoice
         })
@@ -19248,9 +19288,11 @@ ProductCardPage.propTypes = {
   disqusUrl: _react.PropTypes.string,
   isWishlisted: _react.PropTypes.bool,
   product: schemas.product,
+  newOrderUrl: _react.PropTypes.string,
   similarProducts: _react.PropTypes.arrayOf(schemas.product),
   otherProducts: _react.PropTypes.arrayOf(schemas.product),
   multipleChoice: _react.PropTypes.bool,
+  isOneClickBuy: _react.PropTypes.bool,
   wishlistUrl: _react.PropTypes.string
 };
 ProductCardPage.defaultProps = {
@@ -19259,6 +19301,7 @@ ProductCardPage.defaultProps = {
   disqusUrl: '',
   product: {},
   multipleChoice: false,
+  isOneClickBuy: false,
   similarProducts: [],
   otherProducts: []
 };
@@ -31883,7 +31926,7 @@ var _react = require('react');
 
 exports.default = _react.PropTypes.shape({
   name: _react.PropTypes.string.isRequired,
-  type: _react.PropTypes.oneOf(['string', 'textarea']),
+  type: _react.PropTypes.oneOf(['string', 'textarea', 'hidden']),
   value: _react.PropTypes.string,
   title: _react.PropTypes.string,
   placeholder: _react.PropTypes.string,

@@ -4,6 +4,7 @@ import { getIn } from 'timm';
 
 const STRING_TYPE = 'string';
 const TEXTAREA_TYPE = 'textarea';
+const HIDDEN_TYPE = 'hidden';
 
 class CheckoutFields extends Component {
   renderItem(item, value) {
@@ -67,6 +68,16 @@ class CheckoutFields extends Component {
               <span className="help-block">{errorMessage}</span>
             }
           </div>
+        );
+        break;
+      case HIDDEN_TYPE:
+        itemContent = (
+          <input
+            type={HIDDEN_TYPE}
+            id={itemId}
+            name={itemName}
+            value={value}
+          />
         );
         break;
     }

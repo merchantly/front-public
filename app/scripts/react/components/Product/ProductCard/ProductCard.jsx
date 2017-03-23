@@ -19,6 +19,7 @@ import {
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
+import URI from 'urijs';
 
 class ProductCard extends Component {
   constructor(props) {
@@ -52,6 +53,8 @@ class ProductCard extends Component {
   handleFormSubmit(ev) {
     const {
       addGood,
+      newOrderUrl,
+      isOneClickBuy
     } = this.props;
     const {
       amount,
@@ -61,9 +64,13 @@ class ProductCard extends Component {
 
     ev.preventDefault();
 
-    return product.sellingByWeight
-      ? addGood(good, 1, amount)
-      : addGood(good, amount);
+    if (isOneClickBuy) {
+      document.location = URI(newOrderUrl).setQuery({'cart_item[good_id]': good.globalId});
+    }else {
+      return product.sellingByWeight
+        ? addGood(good, 1, amount)
+        : addGood(good, amount);
+    }
   }
   renderDisqus(product) {
     let disqusIdentifier = DISQUS_IDENTIFIER + product.id;
@@ -189,6 +196,8 @@ ProductCard.propTypes = {
   otherProducts: PropTypes.arrayOf(schemas.product),
   wishlistUrl: PropTypes.string,
   multipleChoice: PropTypes.bool,
+  isOneClickBuy: PropTypes.bool,
+  newOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
 };
 
@@ -198,6 +207,7 @@ ProductCard.defaultProps = {
   disqusUrl: '',
   product: {},
   multipleChoice: false,
+  isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
 };
