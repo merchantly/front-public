@@ -6,8 +6,16 @@ class Logo extends Component {
     logoText: PropTypes.string.isRequired,
     logoUrl: PropTypes.string,
     imageAlt: PropTypes.string,
+    isLogoLink: PropTypes.bool
+  }
+  static defaultProps = {
+    isLogoLink: true
   }
   render() {
+    const { isLogoLink } = this.props;
+    if (!isLogoLink) {
+      return this.renderContent(this.props.logoUrl, this.props.logoText, this.props.imageAlt);
+    }
     return (
       <a href={this.props.linkUrl} className="b-logo">
         {this.renderContent(this.props.logoUrl, this.props.logoText, this.props.imageAlt)}
