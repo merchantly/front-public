@@ -16751,7 +16751,7 @@ var MultipleChoiceItem = (_temp = _class = function (_Component) {
               return item.value === attrValue;
             });
             if (value) {
-              titleBuffer.push(prop.title + ' - ' + value.title);
+              titleBuffer.push('' + value.title);
 
               if (value.imageUrl) {
                 indStyles = { backgroundImage: 'url("' + value.imageUrl + '")' };
