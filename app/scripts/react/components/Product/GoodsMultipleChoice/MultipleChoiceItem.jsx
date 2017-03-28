@@ -30,7 +30,7 @@ export default class MultipleChoiceItem extends Component {
       if (prop) {
         const value = prop.items.find(item => item.value === attrValue);
         if (value) {
-          titleBuffer.push(`${prop.title} - ${value.title}`);
+          titleBuffer.push(`${value.title}`);
 
           if (value.imageUrl) {
             indStyles = { backgroundImage: `url("${value.imageUrl}")` };
