@@ -5,12 +5,21 @@ class Logo extends Component {
     linkUrl: PropTypes.string.isRequired,
     logoText: PropTypes.string.isRequired,
     logoUrl: PropTypes.string,
-    imageAlt: PropTypes.string,
+    imageAlt: PropTypes.string
   }
+
   render() {
+    const { linkUrl, logoUrl, logoText, imageAlt } = this.props;
+    if (!linkUrl) {
+      return (
+        <span className="b-logo">
+          this.renderContent(logoUrl, logoText, imageAlt)
+        </span>
+      );
+    }
     return (
-      <a href={this.props.linkUrl} className="b-logo">
-        {this.renderContent(this.props.logoUrl, this.props.logoText, this.props.imageAlt)}
+      <a href={linkUrl} className="b-logo">
+        {this.renderContent(logoUrl, logoText, imageAlt)}
       </a>
     );
   }
