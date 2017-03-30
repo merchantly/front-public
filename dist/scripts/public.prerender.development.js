@@ -11689,7 +11689,7 @@ var Logo = (_temp = _class = function (_Component) {
         return _react2.default.createElement(
           "span",
           { className: "b-logo" },
-          "this.renderContent(logoUrl, logoText, imageAlt)"
+          this.renderContent(logoUrl, logoText, imageAlt)
         );
       }
       return _react2.default.createElement(

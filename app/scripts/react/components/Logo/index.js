@@ -13,7 +13,7 @@ class Logo extends Component {
     if (!linkUrl) {
       return (
         <span className="b-logo">
-          this.renderContent(logoUrl, logoText, imageAlt)
+          {this.renderContent(logoUrl, logoText, imageAlt)}
         </span>
       );
     }
