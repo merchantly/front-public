@@ -270,8 +270,7 @@ $articulColor: #828282
             > input
               width: 38px
             > button
-              background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.16, rgb(207,207,207)), color-stop(0.79, rgb(252,252,252)))
-              background-image: -moz-linear-gradient(center bottom, rgb(207,207,207) 16%, rgb(252,252,252) 79%)
+              background-color: white
               border: 1px #ccc solid
         &__actions
           display: table-cell
@@ -280,7 +279,7 @@ $articulColor: #828282
           text-align: right
           .b-cart__item__remove
             position: relative
-            top: 4px
+            top: 5px
           a
             width: 25px
             height: 25px
@@ -289,8 +288,10 @@ $articulColor: #828282
             vertical-align: middle
 
     &__item
+      height: 29px
       display: inline-block
-      width: 45%
+      width: 49%
+      box-sizing: border-box
       margin: 0 5px 5px 0
       padding: 5px 10px 5px 10px
       text-align: right
