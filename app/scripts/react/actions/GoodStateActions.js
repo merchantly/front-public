@@ -15,15 +15,19 @@ export function resetGoodState(goodId) {
   };
 }
 
+const param_key = function(globalId, key) {
+  return "cart_items[" + globalId + "][" + key + "]"
+}
+
 export function addGoods(productGlobalId, items, count=1, weight=null) {
+  const data =
+    map(items, (item) => {
+    const res = {}
+      res[param_key(item.good.globalId, 'count')] = item.count;
+      res[param_key(item.good.globalId, 'weight')] = item.weight;
+      return res;
+  });
 
-  const data = map(items, (item) => ( {
-                     "cart_items[${item.good.globalId}][count]": item.count,
-                     "cart_items[${item.good.globalId}][weight]": item.weight
-                   } )
-  );
-
-  console.log("addGoods", data);
   return {
     [CALL_API]: {
       endpoint: apiRoutes.cartItems(),

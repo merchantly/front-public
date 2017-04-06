@@ -100,7 +100,9 @@ class ProductCard extends Component {
       product,
     } = this.state;
 
-    const isAddingGood = !!getIn(goodState, [good && good.globalId, 'isFetching']);
+    const isAddingGood = !!getIn(goodState, [good && good.globalId, 'isFetching']) ||
+      !!getIn(goodState, [product.globalId, 'isFetching']);
+
     const selectedImage = (good && good.image) ? good.image : null;
 
     return (

@@ -12,6 +12,8 @@ function callApi(endpoint, data) {
     },
   });
 
+  console.log('callAPI', endpoint, data);
+
   return $.ajax(endpoint, reqData)
     .then((data, status, jqXHR) => {
       let json = jqXHR.responseJSON;
