@@ -4,6 +4,7 @@ import CSRFToken from '../../common/CSRFToken';
 import HiddenInput from '../../common/HiddenInput';
 import ProductCartForProduct from './ProductCartForProduct';
 import ProductCartForProductItems from './ProductCartForProductItems';
+import ProductCartMultipleChoice from './ProductCartMultipleChoice';
 import ProductCartNotAvailable from './ProductCartNotAvailable';
 import ProductBulk from '../ProductBulk';
 
@@ -22,6 +23,7 @@ export default class ProductCart extends Component {
     product: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
+    multipleChoice: PropTypes.bool,
   }
   static defaultProps = {
     formAuthenticity: {},
@@ -37,9 +39,15 @@ export default class ProductCart extends Component {
           />
         );
       } else {
-        return (
-          <ProductCartForProductItems {...this.props} t={t} />
-        );
+        if (this.props.multipleChoice) {
+          return (
+            <ProductCartMultipleChoice productGlobalId={product.globalId} goods={product.goods} properties={product.properties} t={t} />
+          );
+        } else {
+          return (
+            <ProductCartForProductItems {...this.props} t={t} />
+          );
+        }
       }
     } else {
       return (
@@ -63,19 +71,12 @@ export default class ProductCart extends Component {
     }
   }
 
-  onSubmit = (ev) => {
-    const { product } = this.props;
-    if (!product.multipleChoice) {
-      this.props.onSubmit(ev);
-    }
-  }
-
   render() {
     const {
-      onProductChange,
       product,
       t,
       good,
+      onSubmit,
       formAuthenticity
     } = this.props;
 
@@ -85,7 +86,7 @@ export default class ProductCart extends Component {
         action={vendorCartItems()}
         className="simple_form cart_item"
         method="POST"
-        onSubmit={this.onSubmit}
+        onSubmit={onSubmit}
       >
         <div style={{ display: 'none'}}>
           <HiddenInput name="utf8" value="✓" />

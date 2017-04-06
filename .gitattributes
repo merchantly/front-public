@@ -1,1 +1,7 @@
 ./dist/* binary merge=ours
+./dist/* merge=ours
+dist/* merge=ours
+/dist/* merge=ours
+dist/scripts/appBundle.js binary
+dist/scripts/widget.js binary
+dist/scripts/public.prerender.production.js merge=ours

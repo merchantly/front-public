@@ -7,6 +7,7 @@ class ProductAddToCartButton extends Component {
       isAddingGood,
       t,
       text,
+      onClick,
     } = this.props;
     const {
       isWidget,
@@ -18,7 +19,8 @@ class ProductAddToCartButton extends Component {
         className="b-btn element--active-opacity"
         disabled={disabled || isAddingGood}
         name="to_cart"
-        type="submit"
+        onClick={onClick}
+        type={ onClick ? 'button' : 'submit' }
       >
         {isAddingGood ? t('vendor.button.disable_with.adding') : buttonText}
       </button>
@@ -31,6 +33,7 @@ ProductAddToCartButton.propTypes = {
   isAddingGood: PropTypes.bool,
   t: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 };
 
 ProductAddToCartButton.contextTypes = {
