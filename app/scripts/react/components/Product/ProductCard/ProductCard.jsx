@@ -65,8 +65,9 @@ class ProductCard extends Component {
     ev.preventDefault();
 
     if (isOneClickBuy) {
+      // TODO поддержка multipleChoice
       document.location = URI(newOrderUrl).setQuery({'cart_item[good_id]': good.globalId});
-    }else {
+    } else {
       return product.sellingByWeight
         ? addGood(good, 1, amount)
         : addGood(good, amount);
