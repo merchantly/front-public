@@ -10,16 +10,14 @@
 * Установка нужной версии node/npm
 
   ```sh
-  nvm install 5.4
-  nvm use 5.4
+  nvm install
+  nvm use
   ```
 
 * Установка зависимостей
 
   ```sh
-  npm install -g gulp, bower
-  npm install
-  bower install
+  ./node_modules/bower/bin/bower install
   ```
 
 
