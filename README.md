@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/BrandyMint/kiosk-public-static-v2.svg?branch=master)](https://travis-ci.org/BrandyMint/kiosk-public-static-v2)
+[![Build Status](https://travis-ci.org/BrandyMint/merchantly-public-js.svg?branch=master)](https://travis-ci.org/BrandyMint/merchantly-public-js)
+
 Развертывание проекта
 ---------------------
  
