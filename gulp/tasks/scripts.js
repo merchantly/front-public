@@ -2,8 +2,10 @@ import gulp from 'gulp';
 import browserify from 'browserify';
 import watchify from 'watchify';
 import source from 'vinyl-source-stream';
+import buffer from 'vinyl-buffer';
 import uglify from 'gulp-uglify';
-import streamify from 'gulp-streamify';
+import sourcemaps from 'gulp-sourcemaps';
+// import streamify from 'gulp-streamify';
 import bundleLogger from '../util/bundleLogger';
 import handleErrors from '../util/handleErrors';
 import { scripts as config } from '../config';
@@ -218,7 +220,10 @@ gulp.task('[Production] Scripts', () => {
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.bundle.outputName))
-    //.pipe(streamify(uglify({ mangle: true })))
+    .pipe(buffer())
+    .pipe(sourcemaps.init())
+    .pipe(uglify({ mangle: true }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.production.bundle.dest))
     .on('end', function() {
       bundleLogger.end(config.production.bundle.outputName);
@@ -245,7 +250,8 @@ gulp.task('[Production] Components scripts', () => {
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.components.outputName))
-    .pipe(streamify(uglify({ mangle: false })))
+    .pipe(buffer())
+    .pipe(uglify({ mangle: false }))
     .pipe(gulp.dest(config.production.components.dest))
     .on('end', () => {
       bundleLogger.end(config.production.components.outputName);

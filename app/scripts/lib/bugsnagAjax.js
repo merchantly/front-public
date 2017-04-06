@@ -18,7 +18,7 @@ $(() => {
   });
 
   if (typeof Bugsnag === 'object') {
-    Bugsnag.beforeNotify = (error, metaData) -> {
+    Bugsnag.beforeNotify = (error, metaData) => {
       error.stacktrace = error.stacktrace.replace(/chrome-extension:/g, "chrome_extension:");
     }
 

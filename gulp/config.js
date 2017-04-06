@@ -55,7 +55,7 @@ export default {
         entries: src + '/scripts/render.production.js',
         extensions: ['.jsx', '.cjsx', '.coffee'],
         dest: dist + '/scripts/',
-        outputName: 'appBundle.js',
+        outputName: 'vendorBundle.js',
       },
       components: {
         entries: src + '/scripts/prerender.production.js',
