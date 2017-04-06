@@ -74,7 +74,7 @@ export default {
     production: {
       src: src + '/stylesheets/production.scss',
       dest: dist + '/stylesheets',
-      outputName: 'bundle.css'
+      outputName: 'vendorBundle.css'
     }
   },
   haml: {

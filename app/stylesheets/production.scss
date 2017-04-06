@@ -6,16 +6,3 @@ $fa-font-path: $fonts-path;
 $entypoPlusWebfontPath: $fonts-path;
 
 @import "sass/bundle";
-
-.nowrap {
-  white-space: pre
-}
-
-.b-cart__item {
-  // TODO сделать с этим что-то
-  // Из статики тут приходит 0px
-  // наверняка для чего-то нужно
-  // посавил inherit чтобы показывалась упаковка
-  // в корзине
-  font-size: inherit
-}
