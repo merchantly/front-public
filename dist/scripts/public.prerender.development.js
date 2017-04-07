@@ -19642,14 +19642,14 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
 
     _this.onRemove = function (good) {
       delete _this.state.selectedGoods[good.globalId];
-      _this.setState({ selectedGoods: _this.state.selectedGoods });
+      _this.setState({ justAdded: false, selectedGoods: _this.state.selectedGoods });
     };
 
     _this.onAdd = function (good) {
       var count = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
       _this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good };
-      _this.setState({ selectedGoods: _this.state.selectedGoods });
+      _this.setState({ justAdded: false, selectedGoods: _this.state.selectedGoods });
     };
 
     _this.state = { selectedGoods: {} };
@@ -19666,7 +19666,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
       } else {
         // Процесс добавления окончен, можно удалять товары
         if (this.state.isAddingGood) {
-          this.setState({ isAddingGood: false, selectedGoods: {} });
+          this.setState({ justAdded: true, isAddingGood: false, selectedGoods: {} });
         }
       }
     }
@@ -19684,7 +19684,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
 
       var formItems = (0, _lodash.map)(selectedGoods, function (item) {
         return _react2.default.createElement(_MultipleChoiceFormItem2.default, {
-          key: item.goodId,
+          key: item.good.globalId,
           count: item.count,
           properties: properties,
           good: item.good,
@@ -19694,6 +19694,9 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
       });
 
       var empty = (0, _lodash.isEmpty)(selectedGoods);
+
+      var emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
+
       return _react2.default.createElement(
         'div',
         null,
@@ -19719,7 +19722,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
                 _react2.default.createElement(
                   'h3',
                   null,
-                  t('vendor.cart.not_selected_products')
+                  emptyTitle
                 )
               )
             ),

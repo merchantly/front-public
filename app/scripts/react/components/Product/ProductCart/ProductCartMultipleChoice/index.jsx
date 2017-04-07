@@ -34,7 +34,7 @@ class ProductCartMultipleChoice extends Component {
     } else {
       // Процесс добавления окончен, можно удалять товары
       if (this.state.isAddingGood) {
-        this.setState( { isAddingGood: false, selectedGoods: {} });
+        this.setState( { justAdded: true, isAddingGood: false, selectedGoods: {} });
       }
     }
   }
@@ -50,12 +50,12 @@ class ProductCartMultipleChoice extends Component {
 
   onRemove = (good) => {
     delete this.state.selectedGoods[good.globalId];
-    this.setState({ selectedGoods: this.state.selectedGoods });
+    this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
   }
 
   onAdd = (good, count = 1) => {
     this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good }
-    this.setState({ selectedGoods: this.state.selectedGoods });
+    this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
   }
 
   render() {
@@ -67,7 +67,7 @@ class ProductCartMultipleChoice extends Component {
       selectedGoods,
       (item) =>
         <MultipleChoiceFormItem
-          key={item.goodId}
+          key={item.good.globalId}
           count={item.count}
           properties={properties}
           good={item.good}
@@ -77,6 +77,9 @@ class ProductCartMultipleChoice extends Component {
     )
 
     const empty = isEmpty(selectedGoods)
+
+    const emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
+
     return (
       <div>
         <div className="row b-item-full__multiple-choice">
@@ -87,7 +90,7 @@ class ProductCartMultipleChoice extends Component {
             {empty &&
               <div className="row">
                 <div className="col-md-12">
-                  <h3>{t('vendor.cart.not_selected_products')}</h3>
+                  <h3>{emptyTitle}</h3>
                 </div>
               </div>
             }
