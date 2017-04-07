@@ -368,21 +368,23 @@ function resetGoodState(goodId) {
   };
 }
 
+var param_key = function param_key(globalId, key) {
+  return "cart_items[" + globalId + "][" + key + "]";
+};
+
 function addGoods(productGlobalId, items) {
   var _ref;
 
   var count = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
   var weight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-
   var data = (0, _lodash.map)(items, function (item) {
-    return {
-      "cart_items[${item.good.globalId}][count]": item.count,
-      "cart_items[${item.good.globalId}][weight]": item.weight
-    };
+    var res = {};
+    res[param_key(item.good.globalId, 'count')] = item.count;
+    res[param_key(item.good.globalId, 'weight')] = item.weight;
+    return res;
   });
 
-  console.log("addGoods", data);
   return _ref = {}, (0, _defineProperty3.default)(_ref, _api2.CALL_API, {
     endpoint: apiRoutes.cartItems(),
     types: [GOOD_ADD_REQUEST, GOOD_ADD_SUCCESS, GOOD_ADD_FAILURE],
@@ -17615,7 +17617,8 @@ var ProductCard = function (_Component) {
           product = _state2.product;
 
 
-      var isAddingGood = !!(0, _timm.getIn)(goodState, [good && good.globalId, 'isFetching']);
+      var isAddingGood = !!(0, _timm.getIn)(goodState, [good && good.globalId, 'isFetching']) || !!(0, _timm.getIn)(goodState, [product.globalId, 'isFetching']);
+
       var selectedImage = good && good.image ? good.image : null;
 
       return _react2.default.createElement(
@@ -19592,6 +19595,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _provideTranslations = require('../../../HoC/provideTranslations');
+
+var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
+
 var _MultipleChoiceItem = require('./MultipleChoiceItem');
 
 var _MultipleChoiceItem2 = _interopRequireDefault(_MultipleChoiceItem);
@@ -19605,6 +19612,12 @@ var _ProductAddToCartButton = require('../../ProductAddToCartButton');
 var _ProductAddToCartButton2 = _interopRequireDefault(_ProductAddToCartButton);
 
 var _GoodStateActions = require('../../../../actions/GoodStateActions');
+
+var _connectToRedux = require('../../../HoC/connectToRedux');
+
+var _connectToRedux2 = _interopRequireDefault(_connectToRedux);
+
+var _reactRedux = require('react-redux');
 
 var _lodash = require('lodash');
 
@@ -19620,8 +19633,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
 
     _this.handleCartButton = function () {
       // spinner
-      (0, _GoodStateActions.addGoods)(_this.props.productGlobalId, (0, _lodash.values)(_this.state.selectedGoods));
-      _this.setState({ selectedGoods: {} });
+      _this.props.addGoods(_this.props.productGlobalId, (0, _lodash.values)(_this.state.selectedGoods));
     };
 
     _this.onChangeAmount = function (good, count) {
@@ -19630,14 +19642,14 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
 
     _this.onRemove = function (good) {
       delete _this.state.selectedGoods[good.globalId];
-      _this.setState({ selectedGoods: _this.state.selectedGoods });
+      _this.setState({ justAdded: false, selectedGoods: _this.state.selectedGoods });
     };
 
     _this.onAdd = function (good) {
       var count = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
       _this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good };
-      _this.setState({ selectedGoods: _this.state.selectedGoods });
+      _this.setState({ justAdded: false, selectedGoods: _this.state.selectedGoods });
     };
 
     _this.state = { selectedGoods: {} };
@@ -19645,6 +19657,20 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
   }
 
   (0, _createClass3.default)(ProductCartMultipleChoice, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(_ref) {
+      var isAddingGood = _ref.isAddingGood;
+
+      if (isAddingGood) {
+        this.setState({ isAddingGood: true });
+      } else {
+        // Процесс добавления окончен, можно удалять товары
+        if (this.state.isAddingGood) {
+          this.setState({ justAdded: true, isAddingGood: false, selectedGoods: {} });
+        }
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -19658,7 +19684,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
 
       var formItems = (0, _lodash.map)(selectedGoods, function (item) {
         return _react2.default.createElement(_MultipleChoiceFormItem2.default, {
-          key: item.goodId,
+          key: item.good.globalId,
           count: item.count,
           properties: properties,
           good: item.good,
@@ -19668,6 +19694,9 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
       });
 
       var empty = (0, _lodash.isEmpty)(selectedGoods);
+
+      var emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
+
       return _react2.default.createElement(
         'div',
         null,
@@ -19693,7 +19722,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
                 _react2.default.createElement(
                   'h3',
                   null,
-                  t('vendor.cart.not_selected_products')
+                  emptyTitle
                 )
               )
             ),
@@ -19729,6 +19758,7 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
                   'div',
                   { className: 'col-md-12 b-item-full__form__row b-item-full__form__submit' },
                   _react2.default.createElement(_ProductAddToCartButton2.default, {
+                    isAddingGood: this.props.isAddingGood,
                     t: t,
                     text: t('vendor.button.to_cart'),
                     onClick: this.handleCartButton
@@ -19743,15 +19773,24 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
   }]);
   return ProductCartMultipleChoice;
 }(_react.Component), _class.propTypes = {
+  isAddingGood: _react.PropTypes.bool.isRequired,
   goods: _react.PropTypes.array.isRequired,
-  productGlobalId: _react.PropTypes.string.isRequired
+  productGlobalId: _react.PropTypes.string.isRequired,
+  addGoods: _react.PropTypes.func.isRequired
 }, _class.defaultProps = {
-  goods: []
+  goods: [],
+  isAddingGood: false
 }, _temp);
-exports.default = ProductCartMultipleChoice;
+exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
+  return {
+    goodState: state.goodState
+  };
+}, {
+  addGoods: _GoodStateActions.addGoods
+})(ProductCartMultipleChoice)));
 module.exports = exports['default'];
 
-},{"../../../../actions/GoodStateActions":6,"../../ProductAddToCartButton":152,"./MultipleChoiceFormItem":181,"./MultipleChoiceItem":182,"babel-runtime/core-js/object/get-prototype-of":354,"babel-runtime/helpers/classCallCheck":360,"babel-runtime/helpers/createClass":361,"babel-runtime/helpers/inherits":364,"babel-runtime/helpers/possibleConstructorReturn":366,"lodash":"lodash","react":"react"}],184:[function(require,module,exports){
+},{"../../../../actions/GoodStateActions":6,"../../../HoC/connectToRedux":98,"../../../HoC/provideTranslations":99,"../../ProductAddToCartButton":152,"./MultipleChoiceFormItem":181,"./MultipleChoiceItem":182,"babel-runtime/core-js/object/get-prototype-of":354,"babel-runtime/helpers/classCallCheck":360,"babel-runtime/helpers/createClass":361,"babel-runtime/helpers/inherits":364,"babel-runtime/helpers/possibleConstructorReturn":366,"lodash":"lodash","react":"react","react-redux":"react-redux"}],184:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20017,7 +20056,7 @@ var ProductCart = (_temp = _class = function (_Component) {
           }));
         } else {
           if (this.props.multipleChoice) {
-            return _react2.default.createElement(_ProductCartMultipleChoice2.default, { productGlobalId: product.globalId, goods: product.goods, properties: product.properties, t: t });
+            return _react2.default.createElement(_ProductCartMultipleChoice2.default, { isAddingGood: this.props.isAddingGood, productGlobalId: product.globalId, goods: product.goods, properties: product.properties, t: t });
           } else {
             return _react2.default.createElement(_ProductCartForProductItems2.default, (0, _extends3.default)({}, this.props, { t: t }));
           }
@@ -30822,6 +30861,8 @@ function callApi(endpoint, data) {
       crossDomain: true
     }
   });
+
+  console.log('callAPI', endpoint, data);
 
   return _jquery2.default.ajax(endpoint, reqData).then(function (data, status, jqXHR) {
     var json = jqXHR.responseJSON;

@@ -41,7 +41,7 @@ export default class ProductCart extends Component {
       } else {
         if (this.props.multipleChoice) {
           return (
-            <ProductCartMultipleChoice productGlobalId={product.globalId} goods={product.goods} properties={product.properties} t={t} />
+            <ProductCartMultipleChoice isAddingGood={this.props.isAddingGood} productGlobalId={product.globalId} goods={product.goods} properties={product.properties} t={t} />
           );
         } else {
           return (
