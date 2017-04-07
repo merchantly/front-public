@@ -378,12 +378,13 @@ function addGoods(productGlobalId, items) {
   var count = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
   var weight = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
-  var data = (0, _lodash.map)(items, function (item) {
-    var res = {};
-    res[param_key(item.good.globalId, 'count')] = item.count;
-    res[param_key(item.good.globalId, 'weight')] = item.weight;
-    return res;
+  var data = {};
+  (0, _lodash.each)(items, function (item) {
+    data[param_key(item.good.globalId, 'count')] = item.count;
+    data[param_key(item.good.globalId, 'weight')] = item.weight;
   });
+
+  console.log("addGoods", data);
 
   return _ref = {}, (0, _defineProperty3.default)(_ref, _api2.CALL_API, {
     endpoint: apiRoutes.cartItems(),

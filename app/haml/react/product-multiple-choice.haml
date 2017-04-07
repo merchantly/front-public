@@ -12,6 +12,15 @@
 
       .b-page__content__inner.b-page__content__inner_footer
         +include 'app/haml/shared/_footer.haml'
+    :javascript
+      (function (window, document, target) {
+        window.mrch = {
+          config: {
+            operator_api_url: 'http://standart.3001.brandymint.ru/operator/api',
+            public_api_url: 'http://standart.3001.brandymint.ru/api'
+          },
+        };
+      })(window, document, 'kiosk-widget')
 
     %script{src: '../scripts/vendor.js'}
     %script{src: '../scripts/client.js'}

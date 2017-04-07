@@ -1,6 +1,6 @@
 import * as apiRoutes from 'scripts/routes/api';
 import { CALL_API } from 'r/middleware/api';
-import { map } from 'lodash';
+import { each } from 'lodash';
 
 export const GOOD_ADD_REQUEST = 'GOOD_ADD_REQUEST';
 export const GOOD_ADD_SUCCESS = 'GOOD_ADD_SUCCESS';
@@ -20,13 +20,13 @@ const param_key = function(globalId, key) {
 }
 
 export function addGoods(productGlobalId, items, count=1, weight=null) {
-  const data =
-    map(items, (item) => {
-    const res = {}
-      res[param_key(item.good.globalId, 'count')] = item.count;
-      res[param_key(item.good.globalId, 'weight')] = item.weight;
-      return res;
+  const data = {}
+  each(items, (item) => {
+    data[param_key(item.good.globalId, 'count')] = item.count;
+    data[param_key(item.good.globalId, 'weight')] = item.weight;
   });
+
+  console.log("addGoods", data);
 
   return {
     [CALL_API]: {
