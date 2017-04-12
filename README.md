@@ -25,8 +25,26 @@
 ------
 
   ```sh
-  npm run start
+  OPERATOR_API_URL=//wannabe.kiiiosk.dev:3000/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev:3000/apinpm run start
   ```
+
+Зразработка
+-----------
+
+Перенаправление запросов на разработческий сервер. Например у вас запущен
+backend по адресу kiiiosk.dev, и вы хотите отправлять запросы в магазин wannabe
+(wannabe.kiiiosk.dev), то ему нужно передать адреса API. Это сделать можно или
+через перменные окружения или через окружение окружение.
+
+Через gon так:
+
+```javascript
+gon.opeartor_api_url = 
+# На продакшене это выглядит так: "//wannabe.kiiiosk.ru/operator/api"
+
+gon.public_api_url = 
+# На продакшене это выглядит так: public_api_url: "//wanna-be.ru/api"
+```
 
 Публикация
 ----------
