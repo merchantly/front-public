@@ -25,7 +25,7 @@
 ------
 
   ```sh
-  OPERATOR_API_URL=//wannabe.kiiiosk.dev:3000/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev:3000/apinpm run start
+  OPERATOR_API_URL=//wannabe.kiiiosk.dev:3000/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev:3000/api npm run start
   ```
 
 Зразработка
