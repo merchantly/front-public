@@ -25,7 +25,9 @@
 ------
 
   ```sh
-  OPERATOR_API_URL=//wannabe.kiiiosk.dev:3000/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev:3000/api npm run start
+  # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
+  
+  OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api npm run start
   ```
 
 Зразработка

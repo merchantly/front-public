@@ -360,9 +360,9 @@ global.gon = {
       decimal: ',',
     },
   },
-  root_url: 'http://wannabe.3001.vkontraste.ru',
-  public_api_url: 'http://wanna-be.ru/api',
-  operator_api_url: 'http://wannabe.3001.vkontraste.ru/operator/api',
+  root_url: process.env.ROOT_URL || 'http://wannabe.kiiiosk.dev',
+  public_api_url:  process.env.PUBLIC_API_URL || 'http://wannabe.kiiiosk.dev/api',
+  operator_api_url: process.env.OPERATOR_API_URL || 'http://wannabe.kiiiosk.dev/operator/api',
   max_items_count: 100,
   asset_host: 'assets.stage.kiiiosk.ru',
   __data: {
