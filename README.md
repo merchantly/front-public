@@ -26,9 +26,10 @@
 
   ```sh
   OPERATOR_API_URL=//wannabe.kiiiosk.dev:3000/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev:3000/api npm run start
+  OPERATOR_API_URL=//shop858.kiiiosk.ru/operator/api PUBLIC_API_URL=//shop858.kiiiosk.ru/api npm run start
   ```
 
-Зразработка
+Разработка
 -----------
 
 Перенаправление запросов на разработческий сервер. Например у вас запущен

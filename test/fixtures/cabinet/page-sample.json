@@ -653,7 +653,38 @@
           "title": "Отменен"
         },
         "createdDate": "2016-08-25 09:39:28 +0300",
-        "title": "11668",
+        "title": "11668 &amp;&quot;Yo! &#39; &gt; &lt;",
+        "clientOrderUrl": "/orders/11668",
+        "totalWithDeliveryPrice": "270.00",
+        "cityTitle": "Москва",
+        "deliveryName": "1",
+        "itemsCount": 1,
+        "payment": {
+          "type": "OrderPaymentW1",
+          "state": "canceled",
+          "updatedAt": ""
+        },
+        "paymentType": "Банковской картой на сайте",
+        "paymentState": "payment state",
+        "reservation": {
+          "type": "remote",
+          "reservedAt": "2016-08-25 09:39:28 +0300"
+        },
+        "delivery": {
+          "state": "canceled"
+        },
+        "deliveryState": "Отменена"
+      },
+      {
+        "id": 2,
+        "localId": "11669",
+        "workflowState": {
+          "color": "green",
+          "title": "Новый",
+          "bgStyle" : { "color" : "red", "background" : "black"}
+        },
+        "createdDate": "2016-08-25 09:39:28 +0300",
+        "title": 'Здесь "название" товара',
         "clientOrderUrl": "/orders/11668",
         "totalWithDeliveryPrice": "270.00",
         "cityTitle": "Москва",

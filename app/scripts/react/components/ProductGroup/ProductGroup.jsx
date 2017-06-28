@@ -52,7 +52,7 @@ class ProductGroup extends Component {
           ))}
         </div>
         <div className="b-page__content__inner">
-          <a href="#" onClick={this.handleCategoryClick}>
+          <a href="#" className="b-page__content__inner_show-all-button"onClick={this.handleCategoryClick}>
             {t('vendor.products.others')}
           </a>
         </div>

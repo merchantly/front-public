@@ -30,6 +30,8 @@ class CabinetOrder extends Component {
       t,
     } = this.props;
 
+    var decoded_title = title.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&gt;/g, ">").replace(/&lt;/g, "<").replace(/&#39;/g, "'")
+
     return (
       <li className="b-cart__item">
         <div className="b-cart__item__col-quantity">
@@ -42,7 +44,7 @@ class CabinetOrder extends Component {
         <div className="b-cart__item__col-content">
           <h2 className="b-cart__item__title">
             <a href={clientOrderUrl}>
-              {title}
+              {decoded_title}
             </a>
           </h2>
           {itemsCount > 0 && (
@@ -67,8 +69,7 @@ class CabinetOrder extends Component {
         </div>
         <div className="b-cart__item__col-quantity">
           <div className="b-cart__item__quantity__text">
-            {cityTitle}
-            {deliveryName}
+            {`${cityTitle} ${deliveryName}`}
           </div>
           <OrderReserveStateIcon {...reservation} />
           <OrderDeliveryIcon {...delivery} />

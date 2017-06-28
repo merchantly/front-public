@@ -6,11 +6,21 @@ class OrderState extends Component {
     const {
       color,
       title,
+      bgStyle,
     } = this.props.state;
 
-    if (!color) {
-      return null;
+    var style;
+    
+    if (bgStyle) {
+      style = bgStyle;
+      style["marginLeft"] = "3px";      
+    } else {
+      if (!color) {
+        return null;
+      }
+      style = { "marginLeft" : "3px", "backgroundColor" : color}
     }
+
     const classes = classNames({
       'label label-success': !!title,
       'color-box': !title,
@@ -18,7 +28,7 @@ class OrderState extends Component {
 
     return (
       <span>
-        <span className={classes} style={{ backgroundColor: color }}>
+        <span className={classes} style={ style ? style : null }>
           {title ? title : '&nbsp;'}
         </span>
       </span>

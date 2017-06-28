@@ -26,6 +26,10 @@ class Pagination extends Component {
 
     const showArrows = (totalPages >= WINDOW_SIZE)
 
+    if (totalPages == 1) {
+      return null;
+    }
+
     return (
       <nav className="pagination">
         {showArrows && (currentPage > 1) && (
