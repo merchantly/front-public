@@ -2,6 +2,7 @@
 %html
   %head
     +include 'app/haml/shared/_head.haml'
+    %link{:href => "./stylesheets/local.css", :rel => "stylesheet"}
   %body
     .container
       .text-center
@@ -15,8 +16,8 @@
         %p
           %span Версия
           %span#app_version ??
-    %script{src: '../scripts/vendor.js'}
-    %script{src: '../scripts/client.js'}
+    %script{src: './scripts/vendor.js'}
+    %script{src: './scripts/client.js'}
     :javascript
       document.addEventListener('DOMContentLoaded', function() {
         var element = document.getElementById('app_version');
