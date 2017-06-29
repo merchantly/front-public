@@ -41305,6 +41305,7 @@ for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList'
   Iterators[NAME] = Iterators.Array;
 }
 },{"./_global":711,"./_hide":713,"./_iterators":726,"./_wks":765,"./es6.array.iterator":770}],785:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -41322,7 +41323,7 @@ var _assign = require('object-assign');
 var emptyObject = require('fbjs/lib/emptyObject');
 var _invariant = require('fbjs/lib/invariant');
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   var warning = require('fbjs/lib/warning');
 }
 
@@ -41335,7 +41336,7 @@ function identity(fn) {
 }
 
 var ReactPropTypeLocationNames;
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   ReactPropTypeLocationNames = {
     prop: 'prop',
     context: 'context',
@@ -41615,7 +41616,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       }
     },
     childContextTypes: function(Constructor, childContextTypes) {
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         validateTypeDef(Constructor, childContextTypes, 'childContext');
       }
       Constructor.childContextTypes = _assign(
@@ -41625,7 +41626,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       );
     },
     contextTypes: function(Constructor, contextTypes) {
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         validateTypeDef(Constructor, contextTypes, 'context');
       }
       Constructor.contextTypes = _assign(
@@ -41649,7 +41650,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       }
     },
     propTypes: function(Constructor, propTypes) {
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         validateTypeDef(Constructor, propTypes, 'prop');
       }
       Constructor.propTypes = _assign({}, Constructor.propTypes, propTypes);
@@ -41665,7 +41666,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       if (typeDef.hasOwnProperty(propName)) {
         // use a warning instead of an _invariant so components
         // don't show up in prod but only in __DEV__
-        if ("static" !== 'production') {
+        if (process.env.NODE_ENV !== 'production') {
           warning(
             typeof typeDef[propName] === 'function',
             '%s: %s type `%s` is invalid; it must be a function, usually from ' +
@@ -41713,11 +41714,11 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
    */
   function mixSpecIntoComponent(Constructor, spec) {
     if (!spec) {
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         var typeofSpec = typeof spec;
         var isMixinValid = typeofSpec === 'object' && spec !== null;
 
-        if ("static" !== 'production') {
+        if (process.env.NODE_ENV !== 'production') {
           warning(
             isMixinValid,
             "%s: You're attempting to include a mixin that is either null " +
@@ -41811,7 +41812,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
             }
           } else {
             proto[name] = property;
-            if ("static" !== 'production') {
+            if (process.env.NODE_ENV !== 'production') {
               // Add verbose displayName to the function, which helps when looking
               // at profiling tools.
               if (typeof property === 'function' && spec.displayName) {
@@ -41934,7 +41935,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
    */
   function bindAutoBindMethod(component, method) {
     var boundMethod = method.bind(component);
-    if ("static" !== 'production') {
+    if (process.env.NODE_ENV !== 'production') {
       boundMethod.__reactBoundContext = component;
       boundMethod.__reactBoundMethod = method;
       boundMethod.__reactBoundArguments = null;
@@ -41955,7 +41956,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
         // ignore the value of "this" that the user is trying to use, so
         // let's warn.
         if (newThis !== component && newThis !== null) {
-          if ("static" !== 'production') {
+          if (process.env.NODE_ENV !== 'production') {
             warning(
               false,
               'bind(): React component methods may only be bound to the ' +
@@ -41964,7 +41965,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
             );
           }
         } else if (!args.length) {
-          if ("static" !== 'production') {
+          if (process.env.NODE_ENV !== 'production') {
             warning(
               false,
               'bind(): You are binding a component method to the component. ' +
@@ -42031,7 +42032,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
      * @final
      */
     isMounted: function() {
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         warning(
           this.__didWarnIsMounted,
           '%s: isMounted is deprecated. Instead, make sure to clean up ' +
@@ -42070,7 +42071,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       // This constructor gets overridden by mocks. The argument is used
       // by mocks to assert on what gets mounted.
 
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         warning(
           this instanceof Constructor,
           'Something is calling a React component directly. Use a factory or ' +
@@ -42094,7 +42095,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       // getInitialState and componentWillMount methods for initialization.
 
       var initialState = this.getInitialState ? this.getInitialState() : null;
-      if ("static" !== 'production') {
+      if (process.env.NODE_ENV !== 'production') {
         // We allow auto-mocks to proceed as if they're returning null.
         if (
           initialState === undefined &&
@@ -42128,7 +42129,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       Constructor.defaultProps = Constructor.getDefaultProps();
     }
 
-    if ("static" !== 'production') {
+    if (process.env.NODE_ENV !== 'production') {
       // This is a tag to indicate that the use of these method names is ok,
       // since it's used with createClass. If it's not, then it's likely a
       // mistake so we'll warn you to use the static property, property
@@ -42146,7 +42147,7 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
       'createClass(...): Class specification must implement a `render` method.'
     );
 
-    if ("static" !== 'production') {
+    if (process.env.NODE_ENV !== 'production') {
       warning(
         !Constructor.prototype.componentShouldUpdate,
         '%s has a method called ' +
@@ -42178,7 +42179,8 @@ function factory(ReactComponent, isValidElement, ReactNoopUpdateQueue) {
 
 module.exports = factory;
 
-},{"fbjs/lib/emptyObject":788,"fbjs/lib/invariant":789,"fbjs/lib/warning":790,"object-assign":992}],786:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993,"fbjs/lib/emptyObject":788,"fbjs/lib/invariant":789,"fbjs/lib/warning":790,"object-assign":992}],786:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -42250,6 +42252,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 
 module.exports = emptyFunction;
 },{}],788:[function(require,module,exports){
+(function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -42264,12 +42267,14 @@ module.exports = emptyFunction;
 
 var emptyObject = {};
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   Object.freeze(emptyObject);
 }
 
 module.exports = emptyObject;
-},{}],789:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993}],789:[function(require,module,exports){
+(function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -42295,7 +42300,7 @@ module.exports = emptyObject;
 
 var validateFormat = function validateFormat(format) {};
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   validateFormat = function validateFormat(format) {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
@@ -42325,7 +42330,9 @@ function invariant(condition, format, a, b, c, d, e, f) {
 }
 
 module.exports = invariant;
-},{}],790:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993}],790:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -42349,7 +42356,7 @@ var emptyFunction = require('./emptyFunction');
 
 var warning = emptyFunction;
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   (function () {
     var printWarning = function printWarning(format) {
       for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -42392,7 +42399,8 @@ if ("static" !== 'production') {
 }
 
 module.exports = warning;
-},{"./emptyFunction":787}],791:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./emptyFunction":787,"_process":993}],791:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -42573,6 +42581,7 @@ var go = exports.go = function go(n) {
   if (n) window.history.go(n);
 };
 },{"./DOMStateStorage":794,"./DOMUtils":795,"./ExecutionEnvironment":796,"./LocationUtils":798,"./PathUtils":799}],794:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -42603,7 +42612,7 @@ var saveState = exports.saveState = function saveState(key, state) {
   if (!window.sessionStorage) {
     // Session storage is not available or hidden.
     // sessionStorage is undefined in Internet Explorer when served via file protocol.
-    "static" !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available') : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available') : void 0;
 
     return;
   }
@@ -42618,14 +42627,14 @@ var saveState = exports.saveState = function saveState(key, state) {
     if (SecurityErrors[error.name]) {
       // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
       // attempt to access window.sessionStorage.
-      "static" !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available due to security settings') : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available due to security settings') : void 0;
 
       return;
     }
 
     if (QuotaExceededErrors[error.name] && window.sessionStorage.length === 0) {
       // Safari "private mode" throws QuotaExceededError.
-      "static" !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to save state; sessionStorage is not available in Safari private mode') : void 0;
 
       return;
     }
@@ -42642,7 +42651,7 @@ var readState = exports.readState = function readState(key) {
     if (SecurityErrors[error.name]) {
       // Blocking cookies in Chrome/Firefox/Safari throws SecurityError on any
       // attempt to access window.sessionStorage.
-      "static" !== 'production' ? (0, _warning2.default)(false, '[history] Unable to read state; sessionStorage is not available due to security settings') : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, '[history] Unable to read state; sessionStorage is not available due to security settings') : void 0;
 
       return undefined;
     }
@@ -42658,7 +42667,8 @@ var readState = exports.readState = function readState(key) {
 
   return undefined;
 };
-},{"warning":1043}],795:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993,"warning":1043}],795:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -42714,6 +42724,7 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 exports.__esModule = true;
 var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 },{}],797:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -42840,7 +42851,7 @@ var pushLocation = exports.pushLocation = function pushLocation(location, pathCo
     if (getHashPath() !== path) {
       pushHashPath(path);
     } else {
-      "static" !== 'production' ? (0, _warning2.default)(false, 'You cannot PUSH the same path using hash history') : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'You cannot PUSH the same path using hash history') : void 0;
     }
   });
 };
@@ -42850,7 +42861,9 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
     if (getHashPath() !== path) replaceHashPath(path);
   });
 };
-},{"./BrowserProtocol":793,"./DOMStateStorage":794,"./DOMUtils":795,"./LocationUtils":798,"./PathUtils":799,"warning":1043}],798:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./BrowserProtocol":793,"./DOMStateStorage":794,"./DOMUtils":795,"./LocationUtils":798,"./PathUtils":799,"_process":993,"warning":1043}],798:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -42885,7 +42898,7 @@ var createLocation = exports.createLocation = function createLocation() {
 
   var object = typeof input === 'string' ? (0, _PathUtils.parsePath)(input) : input;
 
-  "static" !== 'production' ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;
+  process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(!object.path, 'Location descriptor objects should have a `pathname`, not a `path`.') : void 0;
 
   var pathname = object.pathname || '/';
   var search = object.search || '';
@@ -42914,11 +42927,11 @@ var statesAreEqual = exports.statesAreEqual = function statesAreEqual(a, b) {
 
   if (typeofA !== typeofB) return false;
 
-  !(typeofA !== 'function') ? "static" !== 'production' ? (0, _invariant2.default)(false, 'You must not store functions in location state') : (0, _invariant2.default)(false) : void 0;
+  !(typeofA !== 'function') ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store functions in location state') : (0, _invariant2.default)(false) : void 0;
 
   // Not the same object, but same type.
   if (typeofA === 'object') {
-    !!(isDate(a) && isDate(b)) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;
+    !!(isDate(a) && isDate(b)) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You must not store Date objects in location state') : (0, _invariant2.default)(false) : void 0;
 
     if (!Array.isArray(a)) {
       var keysofA = Object.keys(a);
@@ -42943,7 +42956,9 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
   // a.action === b.action && // Different action !== location change.
   a.pathname === b.pathname && a.search === b.search && a.hash === b.hash && statesAreEqual(a.state, b.state);
 };
-},{"./Actions":791,"./PathUtils":799,"invariant":810,"warning":1043}],799:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./Actions":791,"./PathUtils":799,"_process":993,"invariant":810,"warning":1043}],799:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -43001,7 +43016,7 @@ var parsePath = exports.parsePath = function parsePath(path) {
   var search = '';
   var hash = '';
 
-  "static" !== 'production' ? (0, _warning2.default)(path === pathname, 'A path must be pathname + search + hash only, not a full URL like "%s"', path) : void 0;
+  process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(path === pathname, 'A path must be pathname + search + hash only, not a full URL like "%s"', path) : void 0;
 
   var hashIndex = pathname.indexOf('#');
   if (hashIndex !== -1) {
@@ -43040,7 +43055,8 @@ var createPath = exports.createPath = function createPath(location) {
 
   return path;
 };
-},{"warning":1043}],800:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993,"warning":1043}],800:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -43079,6 +43095,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
   return false; // Don't update location
 };
 },{"./BrowserProtocol":793,"./LocationUtils":798,"./PathUtils":799}],801:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -43122,7 +43139,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var createBrowserHistory = function createBrowserHistory() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  !_ExecutionEnvironment.canUseDOM ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
+  !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Browser history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
   var useRefresh = options.forceRefresh || !(0, _DOMUtils.supportsHistory)();
   var Protocol = useRefresh ? RefreshProtocol : BrowserProtocol;
@@ -43172,7 +43189,9 @@ var createBrowserHistory = function createBrowserHistory() {
 };
 
 exports.default = createBrowserHistory;
-},{"./BrowserProtocol":793,"./DOMUtils":795,"./ExecutionEnvironment":796,"./RefreshProtocol":800,"./createHistory":803,"invariant":810}],802:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./BrowserProtocol":793,"./DOMUtils":795,"./ExecutionEnvironment":796,"./RefreshProtocol":800,"./createHistory":803,"_process":993,"invariant":810}],802:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -43233,20 +43252,20 @@ var HashPathCoders = {
 var createHashHistory = function createHashHistory() {
   var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  !_ExecutionEnvironment.canUseDOM ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
+  !_ExecutionEnvironment.canUseDOM ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Hash history needs a DOM') : (0, _invariant2.default)(false) : void 0;
 
   var queryKey = options.queryKey,
       hashType = options.hashType;
 
 
-  "static" !== 'production' ? (0, _warning2.default)(queryKey !== false, 'Using { queryKey: false } no longer works. Instead, just don\'t ' + 'use location state if you don\'t want a key in your URL query string') : void 0;
+  process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(queryKey !== false, 'Using { queryKey: false } no longer works. Instead, just don\'t ' + 'use location state if you don\'t want a key in your URL query string') : void 0;
 
   if (typeof queryKey !== 'string') queryKey = DefaultQueryKey;
 
   if (hashType == null) hashType = 'slash';
 
   if (!(hashType in HashPathCoders)) {
-    "static" !== 'production' ? (0, _warning2.default)(false, 'Invalid hash type: %s', hashType) : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Invalid hash type: %s', hashType) : void 0;
 
     hashType = 'slash';
   }
@@ -43302,7 +43321,7 @@ var createHashHistory = function createHashHistory() {
   var goIsSupportedWithoutReload = (0, _DOMUtils.supportsGoWithoutReloadUsingHash)();
 
   var go = function go(n) {
-    "static" !== 'production' ? (0, _warning2.default)(goIsSupportedWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(goIsSupportedWithoutReload, 'Hash history go(n) causes a full page reload in this browser') : void 0;
 
     history.go(n);
   };
@@ -43320,7 +43339,8 @@ var createHashHistory = function createHashHistory() {
 };
 
 exports.default = createHashHistory;
-},{"./DOMUtils":795,"./ExecutionEnvironment":796,"./HashProtocol":797,"./createHistory":803,"invariant":810,"warning":1043}],803:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./DOMUtils":795,"./ExecutionEnvironment":796,"./HashProtocol":797,"./createHistory":803,"_process":993,"invariant":810,"warning":1043}],803:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -43498,6 +43518,7 @@ var createHistory = function createHistory() {
 
 exports.default = createHistory;
 },{"./Actions":791,"./AsyncUtils":792,"./LocationUtils":798,"./PathUtils":799,"./runTransitionHook":805}],804:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -43567,7 +43588,7 @@ var createMemoryHistory = function createMemoryHistory() {
     if (!n) return;
 
     if (!canGo(n)) {
-      "static" !== 'production' ? (0, _warning2.default)(false, 'Cannot go(%s) there is not enough history', n) : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(false, 'Cannot go(%s) there is not enough history', n) : void 0;
 
       return;
     }
@@ -43619,7 +43640,7 @@ var createMemoryHistory = function createMemoryHistory() {
   if (current == null) {
     current = entries.length - 1;
   } else {
-    !(current >= 0 && current < entries.length) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Current index must be >= 0 and < %s, was %s', entries.length, current) : (0, _invariant2.default)(false) : void 0;
+    !(current >= 0 && current < entries.length) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Current index must be >= 0 and < %s, was %s', entries.length, current) : (0, _invariant2.default)(false) : void 0;
   }
 
   var storage = createStateStorage(entries);
@@ -43638,7 +43659,9 @@ var createMemoryHistory = function createMemoryHistory() {
 };
 
 exports.default = createMemoryHistory;
-},{"./Actions":791,"./LocationUtils":798,"./PathUtils":799,"./createHistory":803,"invariant":810,"warning":1043}],805:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./Actions":791,"./LocationUtils":798,"./PathUtils":799,"./createHistory":803,"_process":993,"invariant":810,"warning":1043}],805:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -43657,12 +43680,13 @@ var runTransitionHook = function runTransitionHook(hook, location, callback) {
     // call the callback with the return value.
     callback(result);
   } else {
-    "static" !== 'production' ? (0, _warning2.default)(result === undefined, 'You should not "return" in a transition hook with a callback argument; ' + 'call the callback instead') : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _warning2.default)(result === undefined, 'You should not "return" in a transition hook with a callback argument; ' + 'call the callback instead') : void 0;
   }
 };
 
 exports.default = runTransitionHook;
-},{"warning":1043}],806:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993,"warning":1043}],806:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -44086,6 +44110,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 })(this);
 },{}],810:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
  * All rights reserved.
@@ -44109,7 +44134,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
  */
 
 var invariant = function(condition, format, a, b, c, d, e, f) {
-  if ("static" !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     if (format === undefined) {
       throw new Error('invariant requires an error message argument');
     }
@@ -44138,7 +44163,8 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 
 module.exports = invariant;
 
-},{}],811:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993}],811:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -50736,6 +50762,7 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],994:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -50747,7 +50774,7 @@ process.umask = function() { return 0; };
 
 'use strict';
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   var invariant = require('fbjs/lib/invariant');
   var warning = require('fbjs/lib/warning');
   var ReactPropTypesSecret = require('./lib/ReactPropTypesSecret');
@@ -50766,7 +50793,7 @@ if ("static" !== 'production') {
  * @private
  */
 function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if ("static" !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     for (var typeSpecName in typeSpecs) {
       if (typeSpecs.hasOwnProperty(typeSpecName)) {
         var error;
@@ -50798,7 +50825,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
 
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":998,"fbjs/lib/invariant":1000,"fbjs/lib/warning":1001}],995:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./lib/ReactPropTypesSecret":998,"_process":993,"fbjs/lib/invariant":1000,"fbjs/lib/warning":1001}],995:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -50860,6 +50888,7 @@ module.exports = function() {
 };
 
 },{"./lib/ReactPropTypesSecret":998,"fbjs/lib/emptyFunction":999,"fbjs/lib/invariant":1000}],996:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -51008,7 +51037,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   PropTypeError.prototype = Error.prototype;
 
   function createChainableTypeChecker(validate) {
-    if ("static" !== 'production') {
+    if (process.env.NODE_ENV !== 'production') {
       var manualPropTypeCallCache = {};
       var manualPropTypeWarningCount = 0;
     }
@@ -51025,7 +51054,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
             'Use `PropTypes.checkPropTypes()` to call them. ' +
             'Read more at http://fb.me/use-check-prop-types'
           );
-        } else if ("static" !== 'production' && typeof console !== 'undefined') {
+        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
           if (
@@ -51135,7 +51164,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createEnumTypeChecker(expectedValues) {
     if (!Array.isArray(expectedValues)) {
-      "static" !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
       return emptyFunction.thatReturnsNull;
     }
 
@@ -51178,7 +51207,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-      "static" !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
       return emptyFunction.thatReturnsNull;
     }
 
@@ -51373,7 +51402,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-},{"./checkPropTypes":994,"./lib/ReactPropTypesSecret":998,"fbjs/lib/emptyFunction":999,"fbjs/lib/invariant":1000,"fbjs/lib/warning":1001}],997:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./checkPropTypes":994,"./lib/ReactPropTypesSecret":998,"_process":993,"fbjs/lib/emptyFunction":999,"fbjs/lib/invariant":1000,"fbjs/lib/warning":1001}],997:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -51383,7 +51414,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
     Symbol.for &&
     Symbol.for('react.element')) ||
@@ -51405,7 +51436,8 @@ if ("static" !== 'production') {
   module.exports = require('./factoryWithThrowingShims')();
 }
 
-},{"./factoryWithThrowingShims":995,"./factoryWithTypeCheckers":996}],998:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./factoryWithThrowingShims":995,"./factoryWithTypeCheckers":996,"_process":993}],998:[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -51425,9 +51457,9 @@ module.exports = ReactPropTypesSecret;
 arguments[4][787][0].apply(exports,arguments)
 },{"dup":787}],1000:[function(require,module,exports){
 arguments[4][789][0].apply(exports,arguments)
-},{"dup":789}],1001:[function(require,module,exports){
+},{"_process":993,"dup":789}],1001:[function(require,module,exports){
 arguments[4][790][0].apply(exports,arguments)
-},{"./emptyFunction":999,"dup":790}],1002:[function(require,module,exports){
+},{"./emptyFunction":999,"_process":993,"dup":790}],1002:[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -52078,6 +52110,7 @@ var IndexLink = (0, _createReactClass2.default)({
 exports.default = IndexLink;
 module.exports = exports['default'];
 },{"./Link":1011,"create-react-class":786,"react":"react"}],1008:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52117,7 +52150,7 @@ var IndexRedirect = (0, _createReactClass2.default)({
       if (parentRoute) {
         parentRoute.indexRoute = _Redirect2.default.createRouteFromReactElement(element);
       } else {
-        "static" !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRedirect> does not make sense at the root of your route config') : void 0;
+        process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRedirect> does not make sense at the root of your route config') : void 0;
       }
     }
   },
@@ -52132,13 +52165,15 @@ var IndexRedirect = (0, _createReactClass2.default)({
 
   /* istanbul ignore next: sanity check */
   render: function render() {
-    !false ? "static" !== 'production' ? (0, _invariant2.default)(false, '<IndexRedirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+    !false ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRedirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
   }
 });
 
 exports.default = IndexRedirect;
 module.exports = exports['default'];
-},{"./InternalPropTypes":1010,"./Redirect":1015,"./routerWarning":1035,"create-react-class":786,"invariant":810,"prop-types":997}],1009:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./InternalPropTypes":1010,"./Redirect":1015,"./routerWarning":1035,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997}],1009:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52177,7 +52212,7 @@ var IndexRoute = (0, _createReactClass2.default)({
       if (parentRoute) {
         parentRoute.indexRoute = (0, _RouteUtils.createRouteFromReactElement)(element);
       } else {
-        "static" !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRoute> does not make sense at the root of your route config') : void 0;
+        process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'An <IndexRoute> does not make sense at the root of your route config') : void 0;
       }
     }
   },
@@ -52192,13 +52227,14 @@ var IndexRoute = (0, _createReactClass2.default)({
 
   /* istanbul ignore next: sanity check */
   render: function render() {
-    !false ? "static" !== 'production' ? (0, _invariant2.default)(false, '<IndexRoute> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+    !false ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<IndexRoute> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
   }
 });
 
 exports.default = IndexRoute;
 module.exports = exports['default'];
-},{"./InternalPropTypes":1010,"./RouteUtils":1017,"./routerWarning":1035,"create-react-class":786,"invariant":810,"prop-types":997}],1010:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./InternalPropTypes":1010,"./RouteUtils":1017,"./routerWarning":1035,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997}],1010:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -52225,6 +52261,7 @@ var components = exports.components = (0, _propTypes.oneOfType)([component, _pro
 var route = exports.route = (0, _propTypes.oneOfType)([_propTypes.object, _propTypes.element]);
 var routes = exports.routes = (0, _propTypes.oneOfType)([route, (0, _propTypes.arrayOf)(route)]);
 },{"prop-types":997}],1011:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52316,7 +52353,7 @@ var Link = (0, _createReactClass2.default)({
 
     var router = this.context.router;
 
-    !router ? "static" !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
+    !router ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
 
     if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
 
@@ -52372,7 +52409,9 @@ var Link = (0, _createReactClass2.default)({
 
 exports.default = Link;
 module.exports = exports['default'];
-},{"./ContextUtils":1006,"./PropTypes":1014,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1012:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./ContextUtils":1006,"./PropTypes":1014,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1012:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52566,7 +52605,7 @@ function formatPattern(pattern, params) {
     if (token === '*' || token === '**') {
       paramValue = Array.isArray(params.splat) ? params.splat[splatIndex++] : params.splat;
 
-      !(paramValue != null || parenCount > 0) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
+      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing splat #%s for path "%s"', splatIndex, pattern) : (0, _invariant2.default)(false) : void 0;
 
       if (paramValue != null) pathname += encodeURI(paramValue);
     } else if (token === '(') {
@@ -52585,7 +52624,7 @@ function formatPattern(pattern, params) {
       paramName = token.substring(1);
       paramValue = params[paramName];
 
-      !(paramValue != null || parenCount > 0) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
+      !(paramValue != null || parenCount > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Missing "%s" parameter for path "%s"', paramName, pattern) : (0, _invariant2.default)(false) : void 0;
 
       if (paramValue == null) {
         if (parenCount) {
@@ -52602,7 +52641,7 @@ function formatPattern(pattern, params) {
             }
           }
 
-          !(nextParenIdx > 0) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren at segment "%s"', pattern, tokensSubset.join('')) : (0, _invariant2.default)(false) : void 0;
+          !(nextParenIdx > 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren at segment "%s"', pattern, tokensSubset.join('')) : (0, _invariant2.default)(false) : void 0;
 
           // jump to ending paren
           i = curTokenIdx + nextParenIdx - 1;
@@ -52613,11 +52652,12 @@ function formatPattern(pattern, params) {
     }
   }
 
-  !(parenCount <= 0) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren', pattern) : (0, _invariant2.default)(false) : void 0;
+  !(parenCount <= 0) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'Path "%s" is missing end paren', pattern) : (0, _invariant2.default)(false) : void 0;
 
   return pathname.replace(/\/+/g, '/');
 }
-},{"invariant":810}],1013:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993,"invariant":810}],1013:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -52651,6 +52691,7 @@ var locationShape = exports.locationShape = (0, _propTypes.shape)({
   key: _propTypes.string
 });
 },{"prop-types":997}],1015:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52744,13 +52785,15 @@ var Redirect = (0, _createReactClass2.default)({
 
   /* istanbul ignore next: sanity check */
   render: function render() {
-    !false ? "static" !== 'production' ? (0, _invariant2.default)(false, '<Redirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+    !false ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Redirect> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
   }
 });
 
 exports.default = Redirect;
 module.exports = exports['default'];
-},{"./InternalPropTypes":1010,"./PatternUtils":1012,"./RouteUtils":1017,"create-react-class":786,"invariant":810,"prop-types":997}],1016:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./InternalPropTypes":1010,"./PatternUtils":1012,"./RouteUtils":1017,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997}],1016:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -52799,13 +52842,14 @@ var Route = (0, _createReactClass2.default)({
 
   /* istanbul ignore next: sanity check */
   render: function render() {
-    !false ? "static" !== 'production' ? (0, _invariant2.default)(false, '<Route> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
+    !false ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Route> elements are for router configuration only and should not be rendered') : (0, _invariant2.default)(false) : void 0;
   }
 });
 
 exports.default = Route;
 module.exports = exports['default'];
-},{"./InternalPropTypes":1010,"./RouteUtils":1017,"create-react-class":786,"invariant":810,"prop-types":997}],1017:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./InternalPropTypes":1010,"./RouteUtils":1017,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997}],1017:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -52900,6 +52944,7 @@ function createRoutes(routes) {
   return routes;
 }
 },{"react":"react"}],1018:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -53012,7 +53057,7 @@ var Router = (0, _createReactClass2.default)({
         children = _props.children;
 
 
-    !history.getCurrentLocation ? "static" !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v4.x or v2.x ' + 'and earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please change to history v3.x.') : (0, _invariant2.default)(false) : void 0;
+    !history.getCurrentLocation ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'You have provided a history object created with history v4.x or v2.x ' + 'and earlier. This version of React Router is only compatible with v3 ' + 'history objects. Please change to history v3.x.') : (0, _invariant2.default)(false) : void 0;
 
     return (0, _createTransitionManager3.default)(history, (0, _RouteUtils.createRoutes)(routes || children));
   },
@@ -53037,9 +53082,9 @@ var Router = (0, _createReactClass2.default)({
 
   /* istanbul ignore next: sanity check */
   componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-    "static" !== 'production' ? (0, _routerWarning2.default)(nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(nextProps.history === this.props.history, 'You cannot change <Router history>; it will be ignored') : void 0;
 
-    "static" !== 'production' ? (0, _routerWarning2.default)((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : void 0;
+    process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)((nextProps.routes || nextProps.children) === (this.props.routes || this.props.children), 'You cannot change <Router routes>; it will be ignored') : void 0;
   },
   componentWillUnmount: function componentWillUnmount() {
     if (this._unlisten) this._unlisten();
@@ -53077,7 +53122,9 @@ var Router = (0, _createReactClass2.default)({
 
 exports.default = Router;
 module.exports = exports['default'];
-},{"./InternalPropTypes":1010,"./RouteUtils":1017,"./RouterContext":1019,"./RouterUtils":1020,"./createTransitionManager":1027,"./routerWarning":1035,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1019:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./InternalPropTypes":1010,"./RouteUtils":1017,"./RouterContext":1019,"./RouterUtils":1020,"./createTransitionManager":1027,"./routerWarning":1035,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1019:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -53202,7 +53249,7 @@ var RouterContext = (0, _createReactClass2.default)({
       }, element);
     }
 
-    !(element === null || element === false || _react2.default.isValidElement(element)) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
+    !(element === null || element === false || _react2.default.isValidElement(element)) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'The root route must render a single element') : (0, _invariant2.default)(false) : void 0;
 
     return element;
   }
@@ -53210,7 +53257,8 @@ var RouterContext = (0, _createReactClass2.default)({
 
 exports.default = RouterContext;
 module.exports = exports['default'];
-},{"./ContextUtils":1006,"./RouteUtils":1017,"./getRouteParams":1029,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1020:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./ContextUtils":1006,"./RouteUtils":1017,"./getRouteParams":1029,"_process":993,"create-react-class":786,"invariant":810,"prop-types":997,"react":"react"}],1020:[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -53403,6 +53451,7 @@ function getTransitionUtils() {
 }
 module.exports = exports['default'];
 },{"./AsyncUtils":1005}],1022:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -53428,9 +53477,9 @@ exports.default = function () {
     middlewares[_key] = arguments[_key];
   }
 
-  if ("static" !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     middlewares.forEach(function (middleware, index) {
-      "static" !== 'production' ? (0, _routerWarning2.default)(middleware.renderRouterContext || middleware.renderRouteComponent, 'The middleware specified at index ' + index + ' does not appear to be ' + 'a valid React Router middleware.') : void 0;
+      process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(middleware.renderRouterContext || middleware.renderRouteComponent, 'The middleware specified at index ' + index + ' does not appear to be ' + 'a valid React Router middleware.') : void 0;
     });
   }
 
@@ -53460,7 +53509,8 @@ exports.default = function () {
 };
 
 module.exports = exports['default'];
-},{"./RouterContext":1019,"./routerWarning":1035,"react":"react"}],1023:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./RouterContext":1019,"./routerWarning":1035,"_process":993,"react":"react"}],1023:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -53606,6 +53656,7 @@ function createRouterHistory(createHistory) {
 }
 module.exports = exports['default'];
 },{"./useRouterHistory":1036}],1027:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -53860,7 +53911,7 @@ function createTransitionManager(history, routes) {
           } else if (nextState) {
             listener(null, nextState);
           } else {
-            "static" !== 'production' ? (0, _routerWarning2.default)(false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : void 0;
+            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(false, 'Location "%s" did not match any routes', location.pathname + location.search + location.hash) : void 0;
           }
         });
       }
@@ -53890,7 +53941,8 @@ function createTransitionManager(history, routes) {
   };
 }
 module.exports = exports['default'];
-},{"./TransitionUtils":1021,"./computeChangedRoutes":1024,"./getComponents":1028,"./isActive":1032,"./matchRoutes":1034,"./routerWarning":1035}],1028:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./TransitionUtils":1021,"./computeChangedRoutes":1024,"./getComponents":1028,"./isActive":1032,"./matchRoutes":1034,"./routerWarning":1035,"_process":993}],1028:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -54255,6 +54307,7 @@ function isActive(_ref, indexOnly, currentLocation, routes, params) {
 }
 module.exports = exports['default'];
 },{"./PatternUtils":1012}],1033:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -54298,7 +54351,7 @@ function match(_ref, callback) {
       location = _ref.location,
       options = _objectWithoutProperties(_ref, ['history', 'routes', 'location']);
 
-  !(history || location) ? "static" !== 'production' ? (0, _invariant2.default)(false, 'match needs a history or a location') : (0, _invariant2.default)(false) : void 0;
+  !(history || location) ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'match needs a history or a location') : (0, _invariant2.default)(false) : void 0;
 
   history = history ? history : (0, _createMemoryHistory2.default)(options);
   var transitionManager = (0, _createTransitionManager2.default)(history, (0, _RouteUtils.createRoutes)(routes));
@@ -54327,7 +54380,9 @@ function match(_ref, callback) {
 
 exports.default = match;
 module.exports = exports['default'];
-},{"./RouteUtils":1017,"./RouterUtils":1020,"./createMemoryHistory":1025,"./createTransitionManager":1027,"history/lib/Actions":791,"invariant":810}],1034:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./RouteUtils":1017,"./RouterUtils":1020,"./createMemoryHistory":1025,"./createTransitionManager":1027,"_process":993,"history/lib/Actions":791,"invariant":810}],1034:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -54494,12 +54549,12 @@ function matchRouteDeep(route, location, remainingPathname, paramNames, paramVal
           if (Array.isArray(indexRoute)) {
             var _match$routes;
 
-            "static" !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
+            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
               return !route.path;
             }), 'Index routes should not have paths') : void 0;
             (_match$routes = match.routes).push.apply(_match$routes, indexRoute);
           } else if (indexRoute) {
-            "static" !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
+            process.env.NODE_ENV !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
             match.routes.push(indexRoute);
           }
 
@@ -54583,7 +54638,8 @@ function matchRoutes(routes, location, callback, remainingPathname) {
   }, callback);
 }
 module.exports = exports['default'];
-},{"./AsyncUtils":1005,"./PatternUtils":1012,"./PromiseUtils":1013,"./RouteUtils":1017,"./routerWarning":1035}],1035:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./AsyncUtils":1005,"./PatternUtils":1012,"./PromiseUtils":1013,"./RouteUtils":1017,"./routerWarning":1035,"_process":993}],1035:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -54644,6 +54700,7 @@ function useRouterHistory(createHistory) {
 }
 module.exports = exports['default'];
 },{"history/lib/useBasename":806,"history/lib/useQueries":807}],1037:[function(require,module,exports){
+(function (process){
 'use strict';
 
 exports.__esModule = true;
@@ -54690,7 +54747,7 @@ function withRouter(WrappedComponent, options) {
     propTypes: { router: _PropTypes.routerShape },
 
     getWrappedInstance: function getWrappedInstance() {
-      !withRef ? "static" !== 'production' ? (0, _invariant2.default)(false, 'To access the wrapped instance, you need to specify ' + '`{ withRef: true }` as the second argument of the withRouter() call.') : (0, _invariant2.default)(false) : void 0;
+      !withRef ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, 'To access the wrapped instance, you need to specify ' + '`{ withRef: true }` as the second argument of the withRouter() call.') : (0, _invariant2.default)(false) : void 0;
 
       return this.wrappedInstance;
     },
@@ -54724,7 +54781,8 @@ function withRouter(WrappedComponent, options) {
   return (0, _hoistNonReactStatics2.default)(WithRouter, WrappedComponent);
 }
 module.exports = exports['default'];
-},{"./ContextUtils":1006,"./PropTypes":1014,"create-react-class":786,"hoist-non-react-statics":808,"invariant":810,"react":"react"}],1038:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./ContextUtils":1006,"./PropTypes":1014,"_process":993,"create-react-class":786,"hoist-non-react-statics":808,"invariant":810,"react":"react"}],1038:[function(require,module,exports){
 (function (global){
 /**
  * Copyright (c) 2014, Facebook, Inc.
@@ -55889,6 +55947,7 @@ uuid.unparse = unparse;
 module.exports = uuid;
 
 },{"./rng":1041}],1043:[function(require,module,exports){
+(function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -55909,7 +55968,7 @@ module.exports = uuid;
 
 var warning = function() {};
 
-if ("static" !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   warning = function(condition, format, args) {
     var len = arguments.length;
     args = new Array(len > 2 ? len - 2 : 0);
@@ -55950,7 +56009,8 @@ if ("static" !== 'production') {
 
 module.exports = warning;
 
-},{}],1044:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"_process":993}],1044:[function(require,module,exports){
 module.exports={
   "layoutProps": {
     "flash": [],
