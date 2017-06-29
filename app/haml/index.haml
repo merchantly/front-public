@@ -17,7 +17,7 @@
           %span#app_version ??
     %script{src: '../scripts/vendor.js'}
     %script{src: '../scripts/client.js'}
-    %javascript
+    :javascript
       document.addEventListener('DOMContentLoaded', function() {
         var element = document.getElementById('app_version');
         if (element) { element.innerHTML=Kiosk.version; }
