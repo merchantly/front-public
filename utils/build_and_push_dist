@@ -1,11 +1,11 @@
 echo "Build and push"
 rm -rf node_modules && \
 rm -rf app/bower_components && \
-npm install && \
+yarn install && \
 ./node_modules/bower/bin/bower -v && \
 ./node_modules/bower/bin/bower install && \
 mkdir -p ./dist && \
-npm run dist && \
+yarn dist && \
 git add -f dist && \
 git add package.json && \
 git add app/scripts/react/application.js && \

@@ -1,1 +1,1 @@
-mkdir -p dist && npm run dist
+mkdir -p dist && yarn dist

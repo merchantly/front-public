@@ -7,17 +7,20 @@
 
   [nvm installation](https://github.com/creationix/nvm#installation)
 
-* Установка нужной версии node/npm
+* Установка нужной версии node
 
   ```sh
   nvm install
   nvm use
   ```
 
+* Установите `yarn`
+
 * Установка зависимостей
 
   ```sh
   ./node_modules/bower/bin/bower install
+  yarn insall
   ```
 
 
@@ -27,7 +30,7 @@
   ```sh
   # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
   
-  OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api npm run start
+  OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api yarn start
   ```
 
 Зразработка
@@ -52,7 +55,7 @@ gon.public_api_url =
 ----------
 
   ```sh
-  npm run deploy
+  yarn run deploy
   ```
 
 
@@ -134,4 +137,4 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 
 ## gh-pages deploy
 
-> npm deploy
+> yarn deploy
