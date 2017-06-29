@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames';
 
 class OrderState extends Component {
   render() {
@@ -7,14 +6,10 @@ class OrderState extends Component {
       title,
       bgStyle
     } = this.props.state;
-
-    const classes = classNames({
-      'label order-state-label'
-    });
-
+    
     return (
       <span>
-        <span className={classes} style={bgStyle}>
+        <span className="label order-state-label" style={bgStyle}>
           {title}
         </span>
       </span>
