@@ -42,7 +42,7 @@ class CabinetOrder extends Component {
         <div className="b-cart__item__col-content">
           <h2 className="b-cart__item__title">
             <a href={clientOrderUrl}>
-              {title}
+              <span dangerouslySetInnerHTML={{__html: title}}></span>
             </a>
           </h2>
           {itemsCount > 0 && (
@@ -66,9 +66,8 @@ class CabinetOrder extends Component {
           />
         </div>
         <div className="b-cart__item__col-quantity">
-          <div className="b-cart__item__quantity__text">
-            {cityTitle}
-            {deliveryName}
+          <div className="b-cart__item__quantity__text">            
+            {`${cityTitle} ${deliveryName}`}
           </div>
           <OrderReserveStateIcon {...reservation} />
           <OrderDeliveryIcon {...delivery} />
