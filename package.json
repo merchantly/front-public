@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.742",
+  "version": "0.0.743",
   "description": "JS application for kormilica.info",
   "repository": {
     "type": "git",
@@ -54,7 +54,7 @@
     "uuid": "^2.0.1"
   },
   "devDependencies": {
-    "babel-core": "6.24.1",
+    "babel-core": "^6.24.1",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -67,7 +67,7 @@
     "babel-register": "^6.14.0",
     "babelify": "^7.3.0",
     "bower": "^1.4.1",
-    "browser-sync": "2.18.12",
+    "browser-sync": "^2.18.12",
     "browserify": "^13.1.0",
     "chai": "^3.2.0",
     "coffee-reactify": "^2.4.1",
@@ -79,7 +79,7 @@
     "eslint-config-airbnb": "^13.0.0",
     "eslint-import-resolver-babel-module": "^2.2.1",
     "eslint-plugin-babel": "^3.3.0",
-    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.2.0",
     "gulp": "^3.9.0",
@@ -90,7 +90,7 @@
     "gulp-gh-pages": "^0.5.2",
     "gulp-haml-coffee": "0.0.6",
     "gulp-minify-css": "^1.2.4",
-    "gulp-mocha-phantomjs": "0.12.1",
+    "gulp-mocha-phantomjs": "^0.12.1",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.4",
@@ -117,7 +117,7 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3",
-    "webpack": "1.14.0",
+    "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
   "engines": {
