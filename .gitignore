@@ -22,3 +22,4 @@ www
 /.jsbeautifyrc
 /.vscode
 /testPrerender.js
+/tmp/
