@@ -2,8 +2,8 @@
 
 Развертывание проекта
 ---------------------
- 
-* Установка nvm (пропустить если уже установлен) 
+
+* Установка nvm (пропустить если уже установлен)
 
   [nvm installation](https://github.com/creationix/nvm#installation)
 
@@ -29,7 +29,7 @@
 
   ```sh
   # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
-  
+
   OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api yarn start
   ```
 
@@ -44,18 +44,18 @@ backend по адресу kiiiosk.dev, и вы хотите отправлять
 Через gon так:
 
 ```javascript
-gon.opeartor_api_url = 
+gon.opeartor_api_url =
 # На продакшене это выглядит так: "//wannabe.kiiiosk.ru/operator/api"
 
-gon.public_api_url = 
+gon.public_api_url =
 # На продакшене это выглядит так: public_api_url: "//wanna-be.ru/api"
 ```
 
-Публикация
-----------
+Публикация на gh-pages
+----------------------
 
   ```sh
-  yarn run deploy
+  yarn deploy
   ```
 
 
@@ -132,7 +132,7 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 * Opera Mobile 12.0+
 
 ## HTML5 FileReader
- 
+
 * Firefox 3.6+, IE10+, and Opera 12+.# react-i18next-support
 
 ## gh-pages deploy
