@@ -4,22 +4,18 @@ import classNames from 'classnames';
 class OrderState extends Component {
   render() {
     const {
-      color,
       title,
+      bgStyle
     } = this.props.state;
 
-    if (!color) {
-      return null;
-    }
     const classes = classNames({
-      'label label-success': !!title,
-      'color-box': !title,
+      'label order-state-label'
     });
 
     return (
       <span>
-        <span className={classes} style={{ backgroundColor: color }}>
-          {title ? title : '&nbsp;'}
+        <span className={classes} style={bgStyle}>
+          {title}
         </span>
       </span>
     );
@@ -27,9 +23,9 @@ class OrderState extends Component {
 }
 
 OrderState.propTypes = {
-  state: PropTypes.shape({
-    color: PropTypes.object.isRequired,
-    title: PropTypes.string,
+  state: PropTypes.shape({    
+    bgStyle: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
   }).isRequired,
 };
 
