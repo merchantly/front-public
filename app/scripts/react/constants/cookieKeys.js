@@ -1,1 +1,0 @@
-export const DESIGN_IS_OPEN = 'DESIGN_IS_OPEN';

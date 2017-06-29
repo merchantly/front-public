@@ -1,2 +1,0 @@
-yarn versions | grep KioskPublic | awk -F\' '{print $2}'
-# node -e "console.log(require('./package.json').version)"
