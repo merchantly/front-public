@@ -29,6 +29,14 @@ export function cartsShow() {
   return `${pUrl}/v1/carts/show.json`;
 }
 
+export function wishlistItems() {
+  return `${pUrl}/v1/wishlist_items`;
+}
+
+export function wishlistShow() {
+  return `${pUrl}/v1/wishlist/show.json`;
+}
+
 export function packages() {
   return `${pUrl}/v1/packages.json`;
 }

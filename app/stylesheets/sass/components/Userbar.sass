@@ -5,7 +5,7 @@
   z-index: $userBarZindex
   will-change: transform
   .Bubble:not(:first-child)
-    display: none
+    display: none  
   &:hover
     .Bubble
       float: left
@@ -14,3 +14,7 @@
       margin-bottom: 12px
   @include grid-media-query((lap, palm))
     display: none
+
+.TwoBubbles :nth-child(-n+2)
+  display: block !important
+  margin-bottom: 12px
