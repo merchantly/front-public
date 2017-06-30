@@ -6,3 +6,4 @@ export { default as clientState } from './clientState';
 export { default as operatorState } from './operatorState';
 export { default as goodState } from './goodState';
 export { default as layout } from './layout';
+export { default as wishlist } from './wishlist';
