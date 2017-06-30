@@ -6,6 +6,7 @@ import { WishlistButton } from '../buttons/WishlistButton';
 import PublishShopButton from './PublishShopButton';
 import DesignSettings from '../DesignSettings/DesignSettingsContainer';
 import DesignPreview from '../DesignPreview';
+import classNames from 'classnames';
 
 class Userbar extends Component {
   render() {
@@ -32,9 +33,21 @@ class Userbar extends Component {
       wishlistUrl,
     } = this.props;
 
+    const className = classNames({
+      'Userbar': true,
+      'TwoBubbles': hasWishlist && wishlistUrl
+    });
+
     return (
       <div>
-        <div className="Userbar">
+        <div className={className}>
+          {hasWishlist && wishlistUrl &&
+            <WishlistButton
+              itemsCount={wishlistItemsCount}
+              text={wishlistText}
+              url={wishlistUrl}
+            />
+          }
           {hasOperator && operatorUrl &&
             <OperatorButton
               text={operatorText}
@@ -52,14 +65,7 @@ class Userbar extends Component {
               text={cabinetText}
               url={cabinetUrl}
             />
-          }
-          {hasWishlist && wishlistUrl &&
-            <WishlistButton
-              itemsCount={wishlistItemsCount}
-              text={wishlistText}
-              url={wishlistUrl}
-            />
-          }
+          }          
           {vendorIsPublished === false && (
             <PublishShopButton publishShopUrl={publishShopUrl} t={t} />
           )}
