@@ -15,11 +15,10 @@ const ProductCartForProduct = (props) => (
           text={props.t('vendor.button.to_cart', {title: props.product.title})}
         />
       </div>
-    </div>
-    <ProductCartWishlist
-      {...props}
-      addWishlistText={props.t('vendor.button.to_wishlist')}
-      goWishlistText={props.t('vendor.button.go_wishlist')}
+    </div> 
+    <ProductCartWishlist      
+      t={props.t}
+      product={props.product}
     />
   </span>
 );

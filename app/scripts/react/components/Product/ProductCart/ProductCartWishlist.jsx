@@ -1,74 +1,112 @@
 import React, { Component, PropTypes } from 'react';
 import Icon from '../../common/Icon';
-import Link from '../../common/Link';
 import URI from 'urijs';
+import { wishlistCall } from 'r/actions/WishlistStateActions';
+import { fetchClientState } from 'r/actions/ClientStateActions';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
+import { getIn } from 'timm';
+import { includes } from 'lodash';
+import ProductCartWishlistButton from './ProductCartWishlistButton';
+import ProductCartWishlistButtonFetching from './ProductCartWishlistButtonFetching';
+import ProductCartWishlistButtonRemove from './ProductCartWishlistButtonRemove';
+import * as schemas from 'r/schemas';
+import {
+  WISHLIST_BUTTON_ADD_TO_WISH_LIST,
+  WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST,
+  WISHLIST_BUTTON_FETCHING,  
+} from 'r/actions/WishlistStateActions';
+//import invariant from 'invariant';
 
-export default class ProductCartWishlist extends Component {
-  static propTypes = {
-    addWishlistText: PropTypes.string,
-    addWishlistUrl: PropTypes.string,
-    good: PropTypes.object,
-    goWishlistText: PropTypes.string,
-    product: PropTypes.object.isRequired,
-    hasWishlist: PropTypes.bool,
-    isWishlisted: PropTypes.bool,
-    wishlistUrl: PropTypes.string,
+class ProductCartWishlist extends Component {
+  static propTypes = {    
+    wishlistCall: PropTypes.func.isRequired,
+    fetchClientState: PropTypes.func.isRequired,
+    product: schemas.product.isRequired,
+    t: PropTypes.func.isRequired,
   };
+
   static contextTypes = {
     isWidget: PropTypes.bool,
   };
-  getAddWishlistUrl() {
-    const { addWishlistUrl, good, product } = this.props;
 
-    return new URI(addWishlistUrl)
-      .addQuery('good_id', good ? good.globalId : product.globalId)
-      .toString();
+  wishApiCall(method) {
+    const { wishlistCall, fetchClientState, product } = this.props;
+    const global_id = product && product.globalId;
+       
+    wishlistCall(global_id, method).then((response) => {      
+      fetchClientState(true);
+    });
   }
+
+  addToWishListClick(event) {    
+    event.preventDefault();    
+    event.stopPropagation();
+    this.wishApiCall('post');
+  }
+
+  removeToWishListClick(event) {
+    event.preventDefault();    
+    event.stopPropagation(); 
+    this.wishApiCall('delete');
+  }
+
   render() {
-    const {
-      addWishlistText,
-      addWishlistUrl,
-      goWishlistText,
-      hasWishlist,
-      isWishlisted,
-      wishlistUrl,
+    const {          
+      wishlist,      
+      product,
+      clientState,  
+      t,
     } = this.props;
+
     const {
-      isWidget,
+      isWidget
     } = this.context;
 
     if (isWidget) {
       return null;
+    }  
+
+    const global_id = product && product.globalId, product_id = product && product.id;
+    const isFetching = getIn(wishlist, ["data", "isFetching"]);
+    const isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
+    var wishlistButtonState;
+    
+    if (!global_id || !product_id) {      
+      //invariant(false, "У компонента нет props.product!");
+      return null;
+    }      
+
+    if (isWishlisted) {
+      wishlistButtonState = WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST;
+    } else {
+      wishlistButtonState = WISHLIST_BUTTON_ADD_TO_WISH_LIST;
+    }      
+
+    if (isFetching) {        
+      wishlistButtonState = WISHLIST_BUTTON_FETCHING;        
     }
 
-    if (hasWishlist && (wishlistUrl || addWishlistUrl)) {
-      let content;
-
-      if (isWishlisted) {
-        content = (
-          <Link href={wishlistUrl}>
-            <Icon active name="wishlist" />
-            {goWishlistText}
-          </Link>
-        );
-      } else {
-        content = (
-          <Link href={this.getAddWishlistUrl()} method="POST">
-            <Icon active name="wishlist" />
-            {addWishlistText}
-          </Link>
-        );
-      }
-
-      return (
-        <div className="add-to-wishlist">
-          <noindex>
-            {content}
-          </noindex>
-        </div>
-      );
+    switch(wishlistButtonState) {
+      case WISHLIST_BUTTON_ADD_TO_WISH_LIST:
+        return (<ProductCartWishlistButton title={t('vendor.button.to_wishlist')} onClick={this.addToWishListClick.bind(this)}/>)
+      case WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST:
+        return (<ProductCartWishlistButtonRemove title={t('vendor.button.remove_from_wish_list')} onClick={this.removeToWishListClick.bind(this)}/>)
+      case WISHLIST_BUTTON_FETCHING:
+        return (<ProductCartWishlistButtonFetching title={t('vendor.button.adding_to_wish_list')}/>)          
+      default:
+        return null;          
     }
-
-    return null;
   }
 }
+
+export default connectToRedux(connect(
+  (state) => ({
+    clientState: state.clientState,
+    wishlist: state.wishlist,    
+  }),
+  {
+    wishlistCall,
+    fetchClientState,
+  }
+)(ProductCartWishlist));

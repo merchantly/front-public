@@ -12,8 +12,6 @@ function callApi(endpoint, data) {
     },
   });
 
-  console.log('callAPI', endpoint, data);
-
   return $.ajax(endpoint, reqData)
     .then((data, status, jqXHR) => {
       let json = jqXHR.responseJSON;
@@ -43,7 +41,7 @@ export default (store) => (next) => (action) => {
   if (typeof callAPI === 'undefined') {
     return (next(action));
   }
-
+  
   let { endpoint, data } = callAPI;
   const { types } = callAPI;
 
