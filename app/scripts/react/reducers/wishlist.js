@@ -14,6 +14,9 @@ import { merge, set, setIn, getIn } from 'timm';
 import { reduce } from 'lodash';
 
 const initialState = {  
+  data: {
+    isFetching: false
+  }
 };
 
 const actionMap = { 

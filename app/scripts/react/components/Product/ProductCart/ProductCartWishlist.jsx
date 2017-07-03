@@ -16,6 +16,7 @@ import {
   WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST,
   WISHLIST_BUTTON_FETCHING,  
 } from 'r/actions/WishlistStateActions';
+//import invariant from 'invariant';
 
 class ProductCartWishlist extends Component {
   static propTypes = {    
@@ -31,7 +32,7 @@ class ProductCartWishlist extends Component {
 
   wishApiCall(method) {
     const { wishlistCall, fetchClientState, product } = this.props;
-    var global_id = product && product.globalId;
+    const global_id = product && product.globalId;
        
     wishlistCall(global_id, method).then((response) => {      
       fetchClientState(true);
@@ -54,7 +55,7 @@ class ProductCartWishlist extends Component {
     const {          
       wishlist,      
       product,
-      clientState,         
+      clientState,  
       t,
     } = this.props;
 
@@ -64,14 +65,15 @@ class ProductCartWishlist extends Component {
 
     if (isWidget) {
       return null;
-    }
+    }  
 
-    var global_id = product && product.globalId, product_id = product && product.id;
-    var wishlistButtonState, isFetching = getIn(wishlist, ["data", "isFetching"]);
-    var isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
-
-    if (!global_id || !product_id) {
-      // Компонент не должен выдавать Error, если нет product, иначе тесты не проходят      
+    const global_id = product && product.globalId, product_id = product && product.id;
+    const isFetching = getIn(wishlist, ["data", "isFetching"]);
+    const isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
+    var wishlistButtonState;
+    
+    if (!global_id || !product_id) {      
+      //invariant(false, "У компонента нет props.product!");
       return null;
     }      
 
@@ -101,7 +103,7 @@ class ProductCartWishlist extends Component {
 export default connectToRedux(connect(
   (state) => ({
     clientState: state.clientState,
-    wishlist: state.wishlist,
+    wishlist: state.wishlist,    
   }),
   {
     wishlistCall,

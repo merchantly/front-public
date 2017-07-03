@@ -15,7 +15,7 @@ export const WISHLIST_BUTTON_ADD_TO_WISH_LIST = 'WISHLIST_BUTTON_ADD_TO_WISH_LIS
 export const WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST = 'WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST';
 export const WISHLIST_BUTTON_FETCHING = 'WISHLIST_BUTTON_FETCHING';
 
-export function wishlistCall(productId, method) {
+export function wishlistCall(globalId, method) {
   var types;
   if (method === "post") {
     types = [
@@ -39,10 +39,10 @@ export function wishlistCall(productId, method) {
         dataType: 'json',
         method: method,
         data: {
-          'good_id': productId         
+          'good_id': globalId         
         },
       },
     },
-    good_id: productId,
+    good_id: globalId,
   };
 }
