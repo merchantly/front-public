@@ -10,10 +10,10 @@ export const WISHLIST_REMOVE_REQUEST = 'WISHLIST_REMOVE_REQUEST';
 export const WISHLIST_REMOVE_SUCCESS = 'WISHLIST_REMOVE_SUCCESS';
 export const WISHLIST_REMOVE_FAILURE = 'WISHLIST_REMOVE_FAILURE';
 
-export const WISHLIST_REQUEST = 'WISHLIST_REQUEST';
-export const WISHLIST_SUCCESS = 'WISHLIST_SUCCESS';
-export const WISHLIST_FAILURE = 'WISHLIST_FAILURE';
-
+// Wishlist button states
+export const WISHLIST_BUTTON_ADD_TO_WISH_LIST = 'WISHLIST_BUTTON_ADD_TO_WISH_LIST';
+export const WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST = 'WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST';
+export const WISHLIST_BUTTON_FETCHING = 'WISHLIST_BUTTON_FETCHING';
 
 export function wishlistCall(productId, method) {
   var types;
@@ -44,26 +44,5 @@ export function wishlistCall(productId, method) {
       },
     },
     good_id: productId,
-  };
-}
-
-export function fetchWishlist() {
-  return (dispatch, getState) => {
-    const isFetching = getState().wishlist.isFetching;
-
-    if (isFetching) {
-      return null;
-    }
-
-    return dispatch({
-      [CALL_API]: {
-        endpoint: wishlistShow(),
-        types: [
-          WISHLIST_REQUEST,
-          WISHLIST_SUCCESS,
-          WISHLIST_FAILURE,
-        ],
-      },
-    });
   };
 }
