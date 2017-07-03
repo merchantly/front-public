@@ -3,7 +3,16 @@ import { getOptions } from 'r/components/Product/ProductProperties/utils';
 import MultipleChoiceItem from './MultipleChoiceItem';
 import AssetImage from 'r/components/common/AssetImage';
 import InputNumberSpinner from 'r/components/common/InputNumberSpinner';
-import { partial } from 'lodash'
+import { partial } from 'lodash';
+import {
+  SortableHandle,
+} from 'react-sortable-hoc';
+
+const DragHandle = SortableHandle(({good, properties}) =>
+  <div className="b-item-full__multiple-choice__form__row__items">
+    <MultipleChoiceItem properties={properties} good={good} />
+  </div>
+);
 
 export default class MultipleChoiceFormItem extends Component {
   static propTypes = {
@@ -29,9 +38,7 @@ export default class MultipleChoiceFormItem extends Component {
 
     return (
         <div className="b-item-full__multiple-choice__form__row">
-          <div className="b-item-full__multiple-choice__form__row__items">
-            <MultipleChoiceItem properties={properties} good={good} />
-          </div>
+          <DragHandle properties={properties} good={good} />
           <div className="b-item-full__multiple-choice__form__row__count">
             <InputNumberSpinner
               name={`cart_items[${good.globalId}][count]`}
