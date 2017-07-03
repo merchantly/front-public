@@ -18,11 +18,11 @@ import {
 } from 'r/actions/WishlistStateActions';
 
 class ProductCartWishlist extends Component {
-  static propTypes = {
-    product: PropTypes.object.isRequired,
+  static propTypes = {    
     wishlistCall: PropTypes.func.isRequired,
     fetchClientState: PropTypes.func.isRequired,
     product: schemas.product.isRequired,
+    t: PropTypes.func.isRequired,
   };
 
   static contextTypes = {
