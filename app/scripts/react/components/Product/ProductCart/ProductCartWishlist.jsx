@@ -30,9 +30,10 @@ class ProductCartWishlist extends Component {
   };
 
   wishApiCall(method) {
-    const { wishlistCall, fetchClientState, good } = this.props;
+    const { wishlistCall, fetchClientState, product } = this.props;
+    var global_id = product && product.globalId;
        
-    wishlistCall(good.globalId, method).then((response) => {      
+    wishlistCall(global_id, method).then((response) => {      
       fetchClientState(true);
     });
   }
