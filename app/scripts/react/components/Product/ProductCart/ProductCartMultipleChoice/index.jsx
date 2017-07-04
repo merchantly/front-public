@@ -8,8 +8,31 @@ import {
 } from 'r/actions/GoodStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
-
 import { isEmpty, values, map } from 'lodash';
+import { SortableContainer, SortableElement, arrayMove } from 'react-sortable-hoc';
+
+const SortableItem = SortableElement(({key, count, properties, good, onRemove, onChangeAmount}) => {
+  return (
+    <MultipleChoiceFormItem
+      key={key}
+      count={count}
+      properties={properties}
+      good={good}
+      onRemove={onRemove}
+      onChangeAmount={onChangeAmount}
+      />
+  );
+});
+
+const SortableList = SortableContainer(({items}) => {
+  return (    
+    <div className="col-md-12 b-item-full__multiple-choice__form__table">    
+    {items.map((value, index) => (
+      <SortableItem key={`item-${index}`} index={index} {...value} />
+    ))}
+    </div>   
+  );
+});
 
 class ProductCartMultipleChoice extends Component {
   static propTypes = {
@@ -22,11 +45,17 @@ class ProductCartMultipleChoice extends Component {
     goods: [],
     isAddingGood: false,
   }
+
   constructor(props) {
     super(props);
-
-    this.state = {selectedGoods: {}};
+    this.state = {selectedGoods: {}, items: []};
   }
+
+  onSortEnd = ({oldIndex, newIndex}) => {
+    this.setState({
+      items: arrayMove(this.state.items, oldIndex, newIndex),
+    });
+  };
 
   componentWillReceiveProps({ isAddingGood }) {
     if (isAddingGood) {
@@ -45,37 +74,56 @@ class ProductCartMultipleChoice extends Component {
   }
 
   onChangeAmount = (good, count) => {
-    this.onAdd(good, count);
+    this.onAdd(good, count, true);
+  }
+
+  changeAmmount = (globalId, count) => {
+    let items = [...this.state.items];
+    for (var i = 0; i < items.length; i ++) {
+      if (items[i].key === globalId) {
+        items[i].count = count;
+      }
+    }
+    this.setState({ items: items });
+  }
+
+  deleteFromItems = (globalId) => {
+    let items = [...this.state.items];
+    for (var i = 0; i < items.length; i ++) {
+      if (items[i].key === globalId) {        
+        items.splice(i, 1);
+      }
+    }
+    this.setState({ items: items });
   }
 
   onRemove = (good) => {
     delete this.state.selectedGoods[good.globalId];
     this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
+    this.deleteFromItems(good.globalId);
   }
 
-  onAdd = (good, count = 1) => {
+  onAdd = (good, count = 1, changing = false) => {
     this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good }
     this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
+        
+    if (changing) {
+      this.changeAmmount(good.globalId, count)
+    } else {
+      let item = { key: good.globalId,
+        count: count,
+        properties: this.props.properties,
+        good: good,
+        onRemove: this.onRemove,
+        onChangeAmount: this.onChangeAmount
+      }
+      this.setState((state) => ({ items: state.items.concat(item) }));
+    }
   }
 
   render() {
     const { goods, properties, t } = this.props;
-
-    const { selectedGoods } = this.state;
-
-    const formItems = map(
-      selectedGoods,
-      (item) =>
-        <MultipleChoiceFormItem
-          key={item.good.globalId}
-          count={item.count}
-          properties={properties}
-          good={item.good}
-          onRemove={this.onRemove}
-          onChangeAmount={this.onChangeAmount}
-          />
-    )
-
+    const { selectedGoods, items } = this.state;
     const empty = isEmpty(selectedGoods)
 
     const emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
@@ -102,9 +150,11 @@ class ProductCartMultipleChoice extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12 b-item-full__multiple-choice__form__table">
-                  {formItems}
+                  <div className="col-md-12 b-item-full__multiple-choice__form__table">                    
                   </div>
+                </div>
+                <div className="row">                  
+                  <SortableList items={items} lockAxis="y" onSortEnd={this.onSortEnd} useDragHandle={true}/>
                 </div>
                 <div className="row">
                   <div className="col-md-12 b-item-full__form__row b-item-full__form__submit">
