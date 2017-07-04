@@ -13,6 +13,7 @@ import {
   ORDER_IMG_SIZE,
 } from 'r/constants/OrderConstants';
 import CartListImage from './CartListImage';
+import tinycolor from 'tinycolor2';
 
 const WEIGHT_STEP = 0.01;
 
@@ -36,13 +37,32 @@ class CartListItem extends Component {
     changeAmount(item.id, count);
   }
   renderGoodDetails() {
-    const customAttributes = getIn(this.props.item, ['good', 'customAttributes']) || {};
+    const customAttributes = getIn(this.props.item, ['good', 'customAttributes']);
+    const colorAttributes = getIn(this.props.item, ['good', 'colorAttributes']);    
 
-    return map(customAttributes, (val, key) => (
-      <div className="b-cart__item__option" key={`custom-attr-${key}`}>
-        {`${key}: ${val}`}
-      </div>
-    ));
+    if (colorAttributes) {
+      let background = colorAttributes.imageUrl ? `url("${colorAttributes.imageUrl}") top center repeat` :
+      `linear-gradient(to right, ${colorAttributes.color}, ${colorAttributes.color}, #ffffff)`;
+
+      return (             
+        <div style={{backgroundColor: colorAttributes.color,
+                     background: background,
+                     color: tinycolor(colorAttributes.color).isLight() ? 'black' : 'white',
+                     width: "100%",
+                     marginTop:"5px",
+                     padding: "2px" }}>
+          {`${colorAttributes.title}`}
+        </div>          
+      );
+    }
+
+    if (customAttributes) {
+      return map(customAttributes, (val, key) => (
+        <div className="b-cart__item__option" key={`custom-attr-${key}`}>
+          {`${key}: ${val}`}
+        </div>
+      ))
+    }
   }
   renderErrors() {
     const errors = this.props.item.errors || {};
@@ -170,7 +190,7 @@ class CartListItem extends Component {
             >
               {title}
             </a>
-          </h2>
+          </h2>          
           {this.renderGoodDetails()}
           {(size(item.errors) > 0) && this.renderErrors()}
         </div>

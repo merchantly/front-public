@@ -303,6 +303,8 @@ $articulColor: #828282
         width: 43%
       @include grid-media-query((palm))
         width: 100%
-// для drag and drop, потому что элемент при этом выносится в корень
+.no-select__for-childs > *
+  user-select: none  
+// для drag and drop, потому что элемент при этом выносится в корень 
 body > .b-item-full__multiple-choice__form__row > .b-item-full__multiple-choice__form__row__items
-  width: 100%
+  width: 100%  

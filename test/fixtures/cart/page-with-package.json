@@ -782,6 +782,11 @@
             "материал": "Серебро",
             "вставка": "Персиковый и серый жемчуг"
           },
+          "colorAttributes" : {
+            "color" : "#123300",
+            "imageUrl" : "https://kiiiosk-prod.s3.eu-central-1.amazonaws.com/uploads/shop/2845/favicons/43bc551e-ef01-488c-aab9-f6407c0094fb.svg",
+            "title" : "RP86 Красноватый фиолетовый"
+          },
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/39379-koltso-solomeina-ny-londonm",
           "quantityUnit": {
             "id": "pcs",
@@ -886,6 +891,11 @@
           "customAttributes": {
             "бренд": "VACHE",
             "материал": "Серебро"
+          },
+          "colorAttributes" : {
+            "color" : "#ff00ff",
+            "imageUrl" : null,
+            "title" : "RP86 #ff00ff"
           },
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/20753-koltso-vache",
           "quantityUnit": {

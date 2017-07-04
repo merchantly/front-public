@@ -37,7 +37,7 @@ export default class MultipleChoiceFormItem extends Component {
     const { properties, good, count } = this.props;
 
     return (
-        <div className="b-item-full__multiple-choice__form__row">
+        <div className="b-item-full__multiple-choice__form__row no-select__for-childs">
           <DragHandle properties={properties} good={good} />
           <div className="b-item-full__multiple-choice__form__row__count">
             <InputNumberSpinner
