@@ -2920,10 +2920,13 @@ var _CartListImage = require('./CartListImage');
 
 var _CartListImage2 = _interopRequireDefault(_CartListImage);
 
+var _tinycolor = require('tinycolor2');
+
+var _tinycolor2 = _interopRequireDefault(_tinycolor);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*global gon */
-var WEIGHT_STEP = 0.01;
+var WEIGHT_STEP = 0.01; /*global gon */
 
 var CartListItem = function (_Component) {
   (0, _inherits3.default)(CartListItem, _Component);
@@ -2957,15 +2960,31 @@ var CartListItem = function (_Component) {
   }, {
     key: 'renderGoodDetails',
     value: function renderGoodDetails() {
-      var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']) || {};
+      var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']);
+      var attributes = (0, _timm.getIn)(this.props.item, ['good', 'attributes']);
 
-      return (0, _lodash.map)(customAttributes, function (val, key) {
-        return _react2.default.createElement(
-          'div',
-          { className: 'b-cart__item__option', key: 'custom-attr-' + key },
-          key + ': ' + val
-        );
-      });
+      if (attributes) {
+        return (0, _lodash.map)(attributes, function (attr) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'b-item-full__multiple-choice_colored-attribute', style: { backgroundColor: attr.colorHex,
+                background: 'linear-gradient(to right, ' + attr.colorHex + ', ' + attr.colorHex + ', #ffffff)',
+                color: (0, _tinycolor2.default)(attr.colorHex).isLight() ? 'black' : 'white'
+              } },
+            attr.title + ': ' + attr.value
+          );
+        });
+      }
+
+      if (customAttributes) {
+        return (0, _lodash.map)(customAttributes, function (val, key) {
+          return _react2.default.createElement(
+            'div',
+            { className: 'b-cart__item__option', key: 'custom-attr-' + key },
+            key + ': ' + val
+          );
+        });
+      }
     }
   }, {
     key: 'renderErrors',
@@ -3159,7 +3178,7 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":285,"../common/AssetImage":252,"../common/Money/HumanizedMoneyWithCurrency":269,"../common/Select":281,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react","timm":"timm"}],34:[function(require,module,exports){
+},{"../../constants/OrderConstants":285,"../common/AssetImage":252,"../common/Money/HumanizedMoneyWithCurrency":269,"../common/Select":281,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react","timm":"timm","tinycolor2":"tinycolor2"}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19434,7 +19453,7 @@ var MultipleChoiceFormItem = (_temp2 = _class = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'b-item-full__multiple-choice__form__row' },
+        { className: 'b-item-full__multiple-choice__form__row no-select__for-childs' },
         _react2.default.createElement(DragHandle, { properties: properties, good: good }),
         _react2.default.createElement(
           'div',
