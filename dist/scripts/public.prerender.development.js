@@ -2960,30 +2960,19 @@ var CartListItem = function (_Component) {
   }, {
     key: 'renderGoodDetails',
     value: function renderGoodDetails() {
-      var customAttributes = (0, _timm.getIn)(this.props.item, ['good', 'customAttributes']);
       var attributes = (0, _timm.getIn)(this.props.item, ['good', 'attributes']);
-
       if (attributes) {
         return (0, _lodash.map)(attributes, function (attr) {
+          var style = attr.colorHex ? { backgroundColor: attr.colorHex,
+            color: (0, _tinycolor2.default)(attr.colorHex).isLight() ? 'black' : 'white' } : {};
           return _react2.default.createElement(
             'div',
-            { className: 'b-item-full__multiple-choice_colored-attribute', style: { backgroundColor: attr.colorHex,
-                background: 'linear-gradient(to right, ' + attr.colorHex + ', ' + attr.colorHex + ', #ffffff)',
-                color: (0, _tinycolor2.default)(attr.colorHex).isLight() ? 'black' : 'white'
-              } },
+            { className: 'b-item-full__multiple-choice_colored-attribute', style: style },
             attr.title + ': ' + attr.value
           );
         });
-      }
-
-      if (customAttributes) {
-        return (0, _lodash.map)(customAttributes, function (val, key) {
-          return _react2.default.createElement(
-            'div',
-            { className: 'b-cart__item__option', key: 'custom-attr-' + key },
-            key + ': ' + val
-          );
-        });
+      } else {
+        return null;
       }
     }
   }, {
