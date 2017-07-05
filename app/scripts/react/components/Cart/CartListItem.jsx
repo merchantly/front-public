@@ -13,6 +13,7 @@ import {
   ORDER_IMG_SIZE,
 } from 'r/constants/OrderConstants';
 import CartListImage from './CartListImage';
+import tinycolor from 'tinycolor2';
 
 const WEIGHT_STEP = 0.01;
 
@@ -35,14 +36,21 @@ class CartListItem extends Component {
 
     changeAmount(item.id, count);
   }
-  renderGoodDetails() {
-    const customAttributes = getIn(this.props.item, ['good', 'customAttributes']) || {};
-
-    return map(customAttributes, (val, key) => (
-      <div className="b-cart__item__option" key={`custom-attr-${key}`}>
-        {`${key}: ${val}`}
-      </div>
-    ));
+  renderGoodDetails() {    
+    const attributes = getIn(this.props.item, ['good', 'attributes']);
+    if (attributes) {
+      return map(attributes, (attr) => {
+        let style = attr.colorHex ? { backgroundColor: attr.colorHex,
+                                      color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'} : {}
+        return (
+          <div className="b-item-full__multiple-choice_colored-attribute" style={style}>
+            {`${attr.title}: ${attr.value}`}
+          </div>
+        ) 
+      });
+    } else {
+      return null;
+    }    
   }
   renderErrors() {
     const errors = this.props.item.errors || {};
@@ -170,7 +178,7 @@ class CartListItem extends Component {
             >
               {title}
             </a>
-          </h2>
+          </h2>          
           {this.renderGoodDetails()}
           {(size(item.errors) > 0) && this.renderErrors()}
         </div>

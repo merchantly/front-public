@@ -781,7 +781,7 @@
             "бренд": "SOLOMEINA NY&LONDON",
             "материал": "Серебро",
             "вставка": "Персиковый и серый жемчуг"
-          },
+          },          
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/39379-koltso-solomeina-ny-londonm",
           "quantityUnit": {
             "id": "pcs",
@@ -887,6 +887,20 @@
             "бренд": "VACHE",
             "материал": "Серебро"
           },
+          "attributes" : [{
+            "colorHex" : "#eabec9",
+            "productsUrl" : "http://standart.3001.brandymint.ru/entities/48023-rp293-kosmos-fioletovyy",
+            "propertyId" : "8798",
+            "title" : "Цвет",
+            "type" : "AttributeDictionary",
+            "value" : "RP293 Космос фиолетовый"
+          }, {            
+            "productsUrl" : "http://standart.3001.brandymint.ru/entities/48023-rp293-kosmos-fioletovyy",
+            "propertyId" : "8798",
+            "title" : "VACHE",
+            "type" : "AttributeDictionary",
+            "value" : "Серебро"
+          }],
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/20753-koltso-vache",
           "quantityUnit": {
             "id": "pcs",

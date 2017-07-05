@@ -231,6 +231,10 @@ $articulColor: #828282
     .radiobtn--color
       margin: 6px 14px 6px 0
   &__multiple-choice
+    &_colored-attribute
+      padding: 2px
+      margin-top: 5px
+      width: 100%
     &__items
       box-sizing: border-box
     &__form
@@ -303,6 +307,8 @@ $articulColor: #828282
         width: 43%
       @include grid-media-query((palm))
         width: 100%
-// для drag and drop, потому что элемент при этом выносится в корень
+.no-select__for-childs > *
+  user-select: none  
+// для drag and drop, потому что элемент при этом выносится в корень 
 body > .b-item-full__multiple-choice__form__row > .b-item-full__multiple-choice__form__row__items
-  width: 100%
+  width: 100%  
