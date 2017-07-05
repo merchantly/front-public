@@ -38,22 +38,17 @@ class CartListItem extends Component {
   }
   renderGoodDetails() {
     const customAttributes = getIn(this.props.item, ['good', 'customAttributes']);
-    const colorAttributes = getIn(this.props.item, ['good', 'colorAttributes']);    
+    const attributes = getIn(this.props.item, ['good', 'attributes']);    
 
-    if (colorAttributes) {
-      let background = colorAttributes.imageUrl ? `url("${colorAttributes.imageUrl}") top center repeat` :
-      `linear-gradient(to right, ${colorAttributes.color}, ${colorAttributes.color}, #ffffff)`;
-
-      return (             
-        <div style={{backgroundColor: colorAttributes.color,
-                     background: background,
-                     color: tinycolor(colorAttributes.color).isLight() ? 'black' : 'white',
-                     width: "100%",
-                     marginTop:"5px",
-                     padding: "2px" }}>
-          {`${colorAttributes.title}`}
+    if (attributes) {
+      return map(attributes, (attr) => (
+        <div className="b-item-full__multiple-choice_colored-attribute" style={{backgroundColor: attr.colorHex,
+                     background: `linear-gradient(to right, ${attr.colorHex}, ${attr.colorHex}, #ffffff)`,
+                     color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'                     
+                    }}>
+          {`${attr.title}: ${attr.value}`}
         </div>          
-      );
+      ));
     }
 
     if (customAttributes) {
@@ -61,7 +56,7 @@ class CartListItem extends Component {
         <div className="b-cart__item__option" key={`custom-attr-${key}`}>
           {`${key}: ${val}`}
         </div>
-      ))
+      ));
     }
   }
   renderErrors() {

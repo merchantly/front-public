@@ -781,12 +781,7 @@
             "бренд": "SOLOMEINA NY&LONDON",
             "материал": "Серебро",
             "вставка": "Персиковый и серый жемчуг"
-          },
-          "colorAttributes" : {
-            "color" : "#123300",
-            "imageUrl" : "https://kiiiosk-prod.s3.eu-central-1.amazonaws.com/uploads/shop/2845/favicons/43bc551e-ef01-488c-aab9-f6407c0094fb.svg",
-            "title" : "RP86 Красноватый фиолетовый"
-          },
+          },          
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/39379-koltso-solomeina-ny-londonm",
           "quantityUnit": {
             "id": "pcs",
@@ -892,11 +887,21 @@
             "бренд": "VACHE",
             "материал": "Серебро"
           },
-          "colorAttributes" : {
-            "color" : "#ff00ff",
-            "imageUrl" : null,
-            "title" : "RP86 #ff00ff"
-          },
+          "attributes" : [{
+            "colorHex" : "#eabec9",
+            "productsUrl" : "http://standart.3001.brandymint.ru/entities/48023-rp293-kosmos-fioletovyy",
+            "propertyId" : "8798",
+            "title" : "Цвет",
+            "type" : "AttributeDictionary",
+            "value" : "RP293 Космос фиолетовый"
+          }, {
+            "colorHex" : "#00ff00",
+            "productsUrl" : "http://standart.3001.brandymint.ru/entities/48023-rp293-kosmos-fioletovyy",
+            "propertyId" : "8798",
+            "title" : "Цвет",
+            "type" : "AttributeDictionary",
+            "value" : "Зеленый космос"
+          }],
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/20753-koltso-vache",
           "quantityUnit": {
             "id": "pcs",
