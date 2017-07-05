@@ -8540,6 +8540,13 @@ var _rules = {
         }
       };
     },
+    logoUrl: function logoUrl(value) {
+      return {
+        '.b-header__logo-img': {
+          'content': value ? 'url("' + value + '")' : 'none'
+        }
+      };
+    },
     feedBgColor: function feedBgColor(value) {
       return {
         dep: 'feedTransparency',
@@ -11798,7 +11805,7 @@ var Logo = (_temp = _class = function (_Component) {
   }, {
     key: "renderContent",
     value: function renderContent(logoUrl, logoText, imageAlt) {
-      return logoUrl ? _react2.default.createElement("img", { src: logoUrl, alt: imageAlt }) : _react2.default.createElement(
+      return logoUrl ? _react2.default.createElement("img", { src: logoUrl, className: "b-header__logo-img", alt: imageAlt }) : _react2.default.createElement(
         "span",
         { className: "b-logo__text" },
         logoText
