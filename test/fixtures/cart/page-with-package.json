@@ -894,13 +894,12 @@
             "title" : "Цвет",
             "type" : "AttributeDictionary",
             "value" : "RP293 Космос фиолетовый"
-          }, {
-            "colorHex" : "#00ff00",
+          }, {            
             "productsUrl" : "http://standart.3001.brandymint.ru/entities/48023-rp293-kosmos-fioletovyy",
             "propertyId" : "8798",
-            "title" : "Цвет",
+            "title" : "VACHE",
             "type" : "AttributeDictionary",
-            "value" : "Зеленый космос"
+            "value" : "Серебро"
           }],
           "defaultUrl": "http://saharok.stage.kiiiosk.ru/products/20753-koltso-vache",
           "quantityUnit": {

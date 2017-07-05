@@ -36,28 +36,21 @@ class CartListItem extends Component {
 
     changeAmount(item.id, count);
   }
-  renderGoodDetails() {
-    const customAttributes = getIn(this.props.item, ['good', 'customAttributes']);
-    const attributes = getIn(this.props.item, ['good', 'attributes']);    
-
+  renderGoodDetails() {    
+    const attributes = getIn(this.props.item, ['good', 'attributes']);
     if (attributes) {
-      return map(attributes, (attr) => (
-        <div className="b-item-full__multiple-choice_colored-attribute" style={{backgroundColor: attr.colorHex,
-                     background: `linear-gradient(to right, ${attr.colorHex}, ${attr.colorHex}, #ffffff)`,
-                     color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'                     
-                    }}>
-          {`${attr.title}: ${attr.value}`}
-        </div>          
-      ));
-    }
-
-    if (customAttributes) {
-      return map(customAttributes, (val, key) => (
-        <div className="b-cart__item__option" key={`custom-attr-${key}`}>
-          {`${key}: ${val}`}
-        </div>
-      ));
-    }
+      return map(attributes, (attr) => {
+        let style = attr.colorHex ? { backgroundColor: attr.colorHex,
+                                      color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'} : {}
+        return (
+          <div className="b-item-full__multiple-choice_colored-attribute" style={style}>
+            {`${attr.title}: ${attr.value}`}
+          </div>
+        ) 
+      });
+    } else {
+      return null;
+    }    
   }
   renderErrors() {
     const errors = this.props.item.errors || {};
