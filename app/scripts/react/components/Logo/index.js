@@ -25,7 +25,7 @@ class Logo extends Component {
   }
   renderContent(logoUrl, logoText, imageAlt) {
     return logoUrl
-      ? <img src={logoUrl} alt={imageAlt} />
+      ? <img src={logoUrl} className="b-header__logo-img" alt={imageAlt} />
       : <span className="b-logo__text">{logoText}</span>;
   }
 }

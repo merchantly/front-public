@@ -47,6 +47,13 @@ const _rules = {
         },
       };
     },
+    logoUrl(value) {      
+      return {
+        '.b-header__logo-img': {
+          'content': value ? `url("${value}")` : 'none',
+        },
+      };
+    },
     feedBgColor(value) {
       return {
         dep: 'feedTransparency',
