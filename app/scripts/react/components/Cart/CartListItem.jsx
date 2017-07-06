@@ -14,8 +14,12 @@ import {
 } from 'r/constants/OrderConstants';
 import CartListImage from './CartListImage';
 import tinycolor from 'tinycolor2';
+import { SortableHandle } from 'react-sortable-hoc';
+import Icon from 'rc/common/Icon';
 
 const WEIGHT_STEP = 0.01;
+
+const DragHandle = SortableHandle(() => <AssetImage src="images/updown.png" style={{opacity: 0.5, width: "8px", cursor: "ns-resize"}} />);
 
 class CartListItem extends Component {
   changeWeight(ev) {
@@ -161,7 +165,10 @@ class CartListItem extends Component {
     } = (item.good || {});
 
     return (
-      <li className="b-cart__item">
+      <li className="b-cart__item"> 
+        <div style={{position: "absolute", marginLeft: "2px"}}>
+          <DragHandle/ >
+        </div>
         <div className="b-cart__item__col-img">
           <CartListImage
             image={image}
@@ -198,7 +205,7 @@ class CartListItem extends Component {
             href={item.destroyPath || ''}
           >
             <AssetImage src="images/cross_white.svg" />
-          </a>
+          </a>           
         </div>
       </li>
     );

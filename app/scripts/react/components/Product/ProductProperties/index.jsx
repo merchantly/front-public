@@ -14,11 +14,11 @@ class ProductProperties extends Component {
   static propTypes = {
     addWishlistUrl: PropTypes.string,
     goods: PropTypes.array.isRequired,
+    product: PropTypes.object.isRequired,
     isAddingGood: PropTypes.bool.isRequired,
-    isWishlisted: PropTypes.bool,
+    hasWishlist: PropTypes.bool,
     onGoodChange: PropTypes.func,
-    properties: PropTypes.array.isRequired,
-    wishlistUrl: PropTypes.string,
+    properties: PropTypes.array.isRequired,    
     t: PropTypes.func.isRequired,
   }
   static defaultProps = {
@@ -85,6 +85,8 @@ class ProductProperties extends Component {
   render() {
     const {
       isAddingGood,
+      hasWishlist,
+      product,
       t,
     } = this.props;
     const {
@@ -120,11 +122,7 @@ class ProductProperties extends Component {
         <div className="b-item-full__form__row b-item-full__form__submit">
           {addToCartButton}
         </div>
-        <ProductCartWishlist
-          {...this.props}
-          addWishlistText={t('vendor.button.to_wishlist')}
-          goWishlistText={t('vendor.button.go_wishlist')}
-        />
+        { hasWishlist && <ProductCartWishlist t={t} product={product} /> }        
       </span>
     );
   }

@@ -16,11 +16,7 @@ const ProductCartForProduct = (props) => (
         />
       </div>
     </div> 
-    <ProductCartWishlist      
-      t={props.t}
-      product={props.product}
-      hasWishlist={props.hasWishlist}
-    />
+    { props.hasWishlist && <ProductCartWishlist t={props.t} product={props.product} /> }
   </span>
 );
 

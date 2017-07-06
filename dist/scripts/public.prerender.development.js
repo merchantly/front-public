@@ -2647,16 +2647,76 @@ var _schemas = require('../../schemas');
 
 var schemas = _interopRequireWildcard(_schemas);
 
+var _reactSortableHoc = require('react-sortable-hoc');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var SortableItem = (0, _reactSortableHoc.SortableElement)(function (_ref) {
+  var amount = _ref.amount,
+      changeAmount = _ref.changeAmount,
+      item = _ref.item,
+      itemId = _ref.itemId,
+      price = _ref.price,
+      t = _ref.t;
+
+  return _react2.default.createElement(_CartListItem2.default, { amount: amount, changeAmount: changeAmount, key: 'cart-list-item-' + itemId, item: item, price: price, t: t });
+});
+
+var SortableList = (0, _reactSortableHoc.SortableContainer)(function (_ref2) {
+  var items = _ref2.items,
+      amounts = _ref2.amounts,
+      changeAmount = _ref2.changeAmount,
+      prices = _ref2.prices,
+      t = _ref2.t,
+      packageCount = _ref2.packageCount,
+      packagePrice = _ref2.packagePrice,
+      packages = _ref2.packages,
+      selectPackage = _ref2.selectPackage,
+      selectedPackage = _ref2.selectedPackage,
+      packageItem = _ref2.packageItem,
+      changePackageCount = _ref2.changePackageCount;
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    items.map(function (item, idx) {
+      var itemId = item.id;
+
+      return _react2.default.createElement(SortableItem, {
+        amount: amounts[itemId] || 0,
+        changeAmount: changeAmount,
+        item: item,
+        index: idx,
+        key: itemId,
+        itemId: itemId,
+        price: prices[itemId] || 0,
+        t: t
+      });
+    })
+  );
+});
+
 var CartList = function (_Component) {
   (0, _inherits3.default)(CartList, _Component);
 
-  function CartList() {
+  function CartList(props) {
     (0, _classCallCheck3.default)(this, CartList);
-    return (0, _possibleConstructorReturn3.default)(this, (CartList.__proto__ || (0, _getPrototypeOf2.default)(CartList)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (CartList.__proto__ || (0, _getPrototypeOf2.default)(CartList)).call(this, props));
+
+    _this.onSortEnd = function (_ref3) {
+      var oldIndex = _ref3.oldIndex,
+          newIndex = _ref3.newIndex;
+
+      _this.setState({
+        items: (0, _reactSortableHoc.arrayMove)(_this.state.items, oldIndex, newIndex)
+      });
+    };
+
+    _this.state = { items: _this.props.items };
+    return _this;
   }
 
   (0, _createClass3.default)(CartList, [{
@@ -2666,7 +2726,6 @@ var CartList = function (_Component) {
           amounts = _props.amounts,
           changeAmount = _props.changeAmount,
           changePackageCount = _props.changePackageCount,
-          items = _props.items,
           packageCount = _props.packageCount,
           packageItem = _props.packageItem,
           packagePrice = _props.packagePrice,
@@ -2675,24 +2734,16 @@ var CartList = function (_Component) {
           selectPackage = _props.selectPackage,
           selectedPackage = _props.selectedPackage,
           t = _props.t;
+      var items = this.state.items;
 
 
       return _react2.default.createElement(
         'ul',
         { className: 'b-cart__list' },
-        (0, _lodash.map)(items, function (item, idx) {
-          var itemId = item.id;
-
-
-          return _react2.default.createElement(_CartListItem2.default, {
-            amount: amounts[itemId] || 0,
-            changeAmount: changeAmount,
-            item: item,
-            key: 'cart-item-' + idx,
-            price: prices[itemId] || 0,
-            t: t
-          });
-        }),
+        _react2.default.createElement(SortableList, { items: items, amounts: amounts, changeAmount: changeAmount,
+          changePackageCount: changePackageCount, packageCount: packageCount, packages: packages,
+          selectPackage: selectPackage, selectedPackage: selectedPackage, packageItem: packageItem,
+          prices: prices, t: t, lockAxis: 'y', onSortEnd: this.onSortEnd, useDragHandle: true }),
         !(0, _lodash.isEmpty)(packageItem) ? _react2.default.createElement(_CartListPackageItem2.default, {
           changePackageCount: changePackageCount,
           item: packageItem,
@@ -2732,7 +2783,7 @@ CartList.propTypes = {
 exports.default = CartList;
 module.exports = exports['default'];
 
-},{"../../schemas":327,"./CartListItem":33,"./CartListPackageItem":34,"./CartListPackages":36,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react"}],32:[function(require,module,exports){
+},{"../../schemas":327,"./CartListItem":33,"./CartListPackageItem":34,"./CartListPackages":36,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react","react-sortable-hoc":835}],32:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2924,9 +2975,20 @@ var _tinycolor = require('tinycolor2');
 
 var _tinycolor2 = _interopRequireDefault(_tinycolor);
 
+var _reactSortableHoc = require('react-sortable-hoc');
+
+var _Icon = require('../common/Icon');
+
+var _Icon2 = _interopRequireDefault(_Icon);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var WEIGHT_STEP = 0.01; /*global gon */
+
+
+var DragHandle = (0, _reactSortableHoc.SortableHandle)(function () {
+  return _react2.default.createElement(_AssetImage2.default, { src: 'images/updown.png', style: { opacity: 0.5, width: "8px", cursor: "ns-resize" } });
+});
 
 var CartListItem = function (_Component) {
   (0, _inherits3.default)(CartListItem, _Component);
@@ -3101,6 +3163,11 @@ var CartListItem = function (_Component) {
         { className: 'b-cart__item' },
         _react2.default.createElement(
           'div',
+          { style: { position: "absolute", marginLeft: "2px" } },
+          _react2.default.createElement(DragHandle, null)
+        ),
+        _react2.default.createElement(
+          'div',
           { className: 'b-cart__item__col-img' },
           _react2.default.createElement(_CartListImage2.default, {
             image: image,
@@ -3167,7 +3234,7 @@ CartListItem.propTypes = {
 exports.default = CartListItem;
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":285,"../common/AssetImage":252,"../common/Money/HumanizedMoneyWithCurrency":269,"../common/Select":281,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react","timm":"timm","tinycolor2":"tinycolor2"}],34:[function(require,module,exports){
+},{"../../constants/OrderConstants":285,"../common/AssetImage":252,"../common/Icon":259,"../common/Money/HumanizedMoneyWithCurrency":269,"../common/Select":281,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"lodash":"lodash","react":"react","react-sortable-hoc":835,"timm":"timm","tinycolor2":"tinycolor2"}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19251,10 +19318,7 @@ var ProductCartForProduct = function ProductCartForProduct(props) {
         })
       )
     ),
-    _react2.default.createElement(_ProductCartWishlist2.default, {
-      t: props.t,
-      product: props.product
-    })
+    props.hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: props.t, product: props.product })
   );
 };
 
@@ -20588,10 +20652,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -20734,7 +20794,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
           isAddingGood = _props3.isAddingGood,
           product = _props3.product,
           t = _props3.t,
-          wishlistUrl = _props3.wishlistUrl;
+          hasWishlist = _props3.hasWishlist;
 
 
       if (this.isTitlesValid(product)) {
@@ -20759,10 +20819,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
               })
             )
           ),
-          _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
-            addWishlistText: t('vendor.button.to_wishlist'),
-            goWishlistText: t('vendor.button.go_wishlist')
-          }))
+          hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
         );
       } else {
         return _react2.default.createElement(
@@ -20776,10 +20833,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
               { className: 'b-item-full__form__option b-item-full__form__option_full' },
               this.renderSelect(product)
             ),
-            _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
-              addWishlistText: t('vendor.button.to_wishlist'),
-              goWishlistText: t('vendor.button.go_wishlist')
-            }))
+            hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
           ),
           _react2.default.createElement(
             'div',
@@ -20798,16 +20852,15 @@ var ProductGoods = (_temp = _class = function (_Component) {
 }(_react.Component), _class.propTypes = {
   addWishlistUrl: _react.PropTypes.string,
   isAddingGood: _react.PropTypes.bool.isRequired,
-  isWishlisted: _react.PropTypes.bool,
+  hasWishlist: _react.PropTypes.bool,
   onGoodChange: _react.PropTypes.func,
   product: _react.PropTypes.object.isRequired,
-  t: _react.PropTypes.func.isRequired,
-  wishlistUrl: _react.PropTypes.string
+  t: _react.PropTypes.func.isRequired
 }, _temp);
 exports.default = ProductGoods;
 module.exports = exports['default'];
 
-},{"../../../helpers/product":300,"../ProductAddToCartButton":153,"../ProductCart/ProductCartWishlist":186,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/extends":366,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"jquery":"jquery","react":"react"}],192:[function(require,module,exports){
+},{"../../../helpers/product":300,"../ProductAddToCartButton":153,"../ProductCart/ProductCartWishlist":186,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"jquery":"jquery","react":"react"}],192:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21615,10 +21668,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
 var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
@@ -21770,6 +21819,8 @@ var ProductProperties = (_temp = _class = function (_Component) {
     value: function render() {
       var _props2 = this.props,
           isAddingGood = _props2.isAddingGood,
+          hasWishlist = _props2.hasWishlist,
+          product = _props2.product,
           t = _props2.t;
       var _state = this.state,
           good = _state.good,
@@ -21803,10 +21854,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
           { className: 'b-item-full__form__row b-item-full__form__submit' },
           addToCartButton
         ),
-        _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, this.props, {
-          addWishlistText: t('vendor.button.to_wishlist'),
-          goWishlistText: t('vendor.button.go_wishlist')
-        }))
+        hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
       );
     }
   }]);
@@ -21814,11 +21862,11 @@ var ProductProperties = (_temp = _class = function (_Component) {
 }(_react.Component), _class.propTypes = {
   addWishlistUrl: _react.PropTypes.string,
   goods: _react.PropTypes.array.isRequired,
+  product: _react.PropTypes.object.isRequired,
   isAddingGood: _react.PropTypes.bool.isRequired,
-  isWishlisted: _react.PropTypes.bool,
+  hasWishlist: _react.PropTypes.bool,
   onGoodChange: _react.PropTypes.func,
   properties: _react.PropTypes.array.isRequired,
-  wishlistUrl: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired
 }, _class.defaultProps = {
   goods: [],
@@ -21827,7 +21875,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
 exports.default = ProductProperties;
 module.exports = exports['default'];
 
-},{"../../../services/Error":342,"../../common/HiddenInput":258,"../ProductAddToCartButton":153,"../ProductCart/ProductCartWishlist":186,"./PropertyList":196,"./PropertySingle":200,"./utils":202,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/core-js/object/keys":358,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/defineProperty":365,"babel-runtime/helpers/extends":366,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],202:[function(require,module,exports){
+},{"../../../services/Error":342,"../../common/HiddenInput":258,"../ProductAddToCartButton":153,"../ProductCart/ProductCartWishlist":186,"./PropertyList":196,"./PropertySingle":200,"./utils":202,"babel-runtime/core-js/object/get-prototype-of":357,"babel-runtime/core-js/object/keys":358,"babel-runtime/helpers/classCallCheck":363,"babel-runtime/helpers/createClass":364,"babel-runtime/helpers/defineProperty":365,"babel-runtime/helpers/inherits":367,"babel-runtime/helpers/possibleConstructorReturn":369,"deep-diff":"deep-diff","jquery":"jquery","react":"react"}],202:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
