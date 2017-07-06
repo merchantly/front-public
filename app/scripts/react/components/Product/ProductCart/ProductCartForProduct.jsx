@@ -19,6 +19,7 @@ const ProductCartForProduct = (props) => (
     <ProductCartWishlist      
       t={props.t}
       product={props.product}
+      hasWishlist={props.hasWishlist}
     />
   </span>
 );

@@ -22,6 +22,7 @@ class ProductCartWishlist extends Component {
   static propTypes = {    
     wishlistCall: PropTypes.func.isRequired,
     fetchClientState: PropTypes.func.isRequired,
+    hasWishlist: PropTypes.bool.isRequired,
     product: schemas.product.isRequired,
     t: PropTypes.func.isRequired,
   };
@@ -56,6 +57,7 @@ class ProductCartWishlist extends Component {
       wishlist,      
       product,
       clientState,  
+      hasWishlist,
       t,
     } = this.props;
 
@@ -72,7 +74,7 @@ class ProductCartWishlist extends Component {
     const isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
     var wishlistButtonState;
     
-    if (!global_id || !product_id) {      
+    if (!global_id || !product_id || !hasWishlist) {      
       //invariant(false, "У компонента нет props.product!");
       return null;
     }      
