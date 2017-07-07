@@ -16,8 +16,6 @@ class CategoriesShowChildrenPage extends Component {
       container,
     } = this.props;
 
-    console.log("CategoriesShowChildrenPage", container);
-
     return (
       <VendorLayoutContainer {...layoutProps} i18n={i18n}>
         <CategoriesShowChildrenContainer
