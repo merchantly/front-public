@@ -5,6 +5,7 @@ import CatalogFilterContainer from 'rc/CatalogFilter';
 import ItemListCatalog from 'rc/ItemListCatalog';
 import { Image } from 'rc/common/Image';
 import * as schemas from 'r/schemas';
+import ProductListContainter from './ProductListContainter';
 
 class ProductList extends Component {
   render() {
@@ -37,25 +38,7 @@ class ProductList extends Component {
             {title}
           </h1>
         )}
-        {(container && container.image) && (
-          <div className="b-slider b-slider_promo">
-            <div className="b-slider__item">
-              <Image
-                className="b-container-image"
-                image={container.image}
-                maxWidth={1000}
-              />
-            </div>
-          </div>
-        )}
-        {(container && container.description) && (
-          <div className="b-item-list__description">
-            <div
-              className="b-page__content__inner_content"
-              dangerouslySetInnerHTML={{ __html: container.description }}
-            />
-          </div>
-        )}
+        <ProductListContainter container={container} />
         <div className="b-item-list__content">
           {items.length > 0
             ? items.map(item => (
