@@ -1976,9 +1976,6 @@
     }
   ],
   "container" : {
-    "image": {
-      "url" : "/"
-    },
     "description" : "description",
     "bottomText" : "bottomText"
   },

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import CategoriesShow from './CategoriesShow';
 import ProductList from 'rc/ProductList';
 import provideTranslations from 'rc/HoC/provideTranslations';
+import * as schemas from 'r/schemas';
 
 class CategoriesShowContainer extends Component {
   render() {
@@ -10,7 +11,7 @@ class CategoriesShowContainer extends Component {
 }
 
 CategoriesShowContainer.propTypes = {
-  container: ProductList.wrapped.propTypes.container,
+  container: schemas.container.isRequired,
   catalogFilterProps: ProductList.wrapped.propTypes.catalogFilterProps,
   showCartButton: ProductList.wrapped.propTypes.showCartButton,
   showCatalogFilter: ProductList.wrapped.propTypes.showCatalogFilter,

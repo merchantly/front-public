@@ -78,11 +78,7 @@ class ProductList extends Component {
 
 ProductList.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
-  container: PropTypes.shape({
-    image: schemas.image,
-    description: PropTypes.string,
-    bottomText: PropTypes.string,
-  }),
+  container: schemas.container.isRequired,
   i18n: PropTypes.object,
   products: PropTypes.shape({
     items: PropTypes.array.isRequired,

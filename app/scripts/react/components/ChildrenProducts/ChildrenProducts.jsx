@@ -41,7 +41,7 @@ class ChildrenProducts extends Component {
             vendorCategoryPath={vendorCategoryPath}
           />
         ))}
-        <ProductListContainerBottom container={container} />        
+        <ProductListContainerBottom container={container} />
       </div>
     );
   }
@@ -55,7 +55,7 @@ ChildrenProducts.propTypes = {
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
-  container: PropTypes.object,
+  container: schemas.container.isRequired,
 };
 
 ChildrenProducts.defaultProps = {

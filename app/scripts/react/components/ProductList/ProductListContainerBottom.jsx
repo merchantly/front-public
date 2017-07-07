@@ -8,7 +8,6 @@ class ProductListContainerBottom extends Component {
       container,
     } = this.props;
 
-
     return (        
       <div>
         {(container && container.bottomText) && (
@@ -25,11 +24,7 @@ class ProductListContainerBottom extends Component {
 }
 
 ProductListContainerBottom.propTypes = {
-  container: PropTypes.shape({
-    image: schemas.image,
-    description: PropTypes.string,
-    bottomText: PropTypes.string,
-  })  
+  container: schemas.container.isRequired, 
 };
 
 export default ProductListContainerBottom;

@@ -8,10 +8,9 @@ class ProductListContainer extends Component {
       container,
     } = this.props;
 
-
     return (        
       <div>
-        {(container && container.image) && (
+        {container && container.image && (
           <div className="b-slider b-slider_promo">
             <div className="b-slider__item">
               <Image
@@ -22,7 +21,7 @@ class ProductListContainer extends Component {
             </div>
           </div>
         )}
-        {(container && container.description) && (
+        {container && container.description && (
           <div className="b-item-list__description">
             <div
               className="b-page__content__inner_content"
@@ -36,11 +35,7 @@ class ProductListContainer extends Component {
 }
 
 ProductListContainer.propTypes = {
-  container: PropTypes.shape({
-    image: schemas.image,
-    description: PropTypes.string,
-    bottomText: PropTypes.string,
-  })  
+  container: schemas.container.isRequired,  
 };
 
 export default ProductListContainer;
