@@ -4,21 +4,23 @@ import CategoriesShowChildren from './CategoriesShowChildren';
 import provideTranslations from 'rc/HoC/provideTranslations';
 
 class CategoriesShowChildrenContainer extends Component {
-  render() {
+  render() {    
     return <CategoriesShowChildren {...this.props} />;
   }
 }
 
 CategoriesShowChildrenContainer.propTypes = {
   childrenProducts: ChildrenProducts.propTypes.childrenProducts,
+  container: PropTypes.object,
   showCartButton: PropTypes.bool,
   showQuantity: PropTypes.bool,
   t: PropTypes.func,
   title: PropTypes.string,
-  vendorRootPath: PropTypes.string,
+  vendorRootPath: PropTypes.string,  
 };
 
 CategoriesShowChildrenContainer.defaultProps = {
+  container: {},
   childrenProducts: [],
   showCartButton: false,
   showQuantity: false,

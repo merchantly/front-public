@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ProductGroup from 'rc/ProductGroup';
 import CatalogFilterContainer from 'rc/CatalogFilter';
 import * as schemas from 'r/schemas';
+import ProductListContainter from 'rc/ProductList/ProductListContainter';
 
 class ChildrenProducts extends Component {
   render() {
@@ -13,14 +14,18 @@ class ChildrenProducts extends Component {
       showCatalogFilter,
       showQuantity,
       title,
+      container,
     } = this.props;
 
     return (
       <div>
         {title && (
-          <h1 className="b-item-list__title">
-            {title}
-          </h1>
+          <div>
+            <h1 className="b-item-list__title">
+              {title}
+            </h1>
+            <ProductListContainter container={container} />
+          </div>
         )}
         {childrenProducts.map(({ products, title, vendorCategoryPath }, idx) => (
           <ProductGroup
@@ -48,9 +53,11 @@ ChildrenProducts.propTypes = {
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
+  container: PropTypes.object,
 };
 
 ChildrenProducts.defaultProps = {
+  container: {},
   childrenProducts: [],
   showCartButton: false,
   showCatalogFilter: false,

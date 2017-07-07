@@ -13,7 +13,10 @@ class CategoriesShowChildrenPage extends Component {
       showQuantity,
       title,
       vendorRootPath,
+      container,
     } = this.props;
+
+    console.log("CategoriesShowChildrenPage", container);
 
     return (
       <VendorLayoutContainer {...layoutProps} i18n={i18n}>
@@ -24,6 +27,7 @@ class CategoriesShowChildrenPage extends Component {
           showQuantity={showQuantity}
           title={title}
           vendorRootPath={vendorRootPath}
+          container={container}
         />
       </VendorLayoutContainer>
     );
@@ -38,6 +42,7 @@ CategoriesShowChildrenPage.propTypes = {
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
+  container: PropTypes.object,
 };
 
 export default CategoriesShowChildrenPage;
