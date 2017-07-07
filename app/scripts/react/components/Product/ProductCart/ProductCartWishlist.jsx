@@ -21,7 +21,7 @@ import {
 class ProductCartWishlist extends Component {
   static propTypes = {    
     wishlistCall: PropTypes.func.isRequired,
-    fetchClientState: PropTypes.func.isRequired,
+    fetchClientState: PropTypes.func.isRequired,    
     product: schemas.product.isRequired,
     t: PropTypes.func.isRequired,
   };
@@ -55,7 +55,7 @@ class ProductCartWishlist extends Component {
     const {          
       wishlist,      
       product,
-      clientState,  
+      clientState,      
       t,
     } = this.props;
 

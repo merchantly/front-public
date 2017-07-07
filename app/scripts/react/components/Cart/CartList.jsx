@@ -4,14 +4,59 @@ import CartListPackageItem from './CartListPackageItem';
 import CartListPackages from './CartListPackages';
 import { map, isEmpty } from 'lodash';
 import * as schemas from 'r/schemas';
+import { SortableContainer, SortableElement, arrayMove } from 'react-sortable-hoc';
+
+const SortableItem = SortableElement(({amount, changeAmount, item, itemId, price, t }) => {   
+  return (    
+    <CartListItem amount={amount} changeAmount={changeAmount} key={`cart-list-item-${itemId}`} item={item} price={price} t={t}/>    
+  );
+});
+
+const SortableList = SortableContainer(({
+            items, amounts, changeAmount, prices, t,
+            packageCount, packagePrice, packages, selectPackage,
+            selectedPackage, packageItem, changePackageCount}) => {    
+  return (
+    <div> 
+      {items.map((item, idx) => {
+        const { id: itemId } = item;        
+        return (
+          <SortableItem
+            amount={amounts[itemId] || 0}
+            changeAmount={changeAmount}
+            item={item}
+            index={idx}
+            key={itemId}            
+            itemId={itemId}
+            price={prices[itemId] || 0}            
+            t={t}
+          />
+        )
+      })
+      }      
+    </div>
+  )
+
+});
 
 class CartList extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { items: this.props.items };
+  }
+
+  onSortEnd = ({oldIndex, newIndex}) => {    
+    this.setState({
+      items: arrayMove(this.state.items, oldIndex, newIndex),
+    });
+  };
+
   render() {
     const {
       amounts,
       changeAmount,
       changePackageCount,
-      items,
       packageCount,
       packageItem,
       packagePrice,
@@ -22,23 +67,17 @@ class CartList extends Component {
       t,
     } = this.props;
 
-    return (
-      <ul className="b-cart__list">
-        {map(items, (item, idx) => {
-          const { id: itemId } = item;
+    const {
+      items
+    } = this.state;
 
-          return (
-            <CartListItem
-              amount={amounts[itemId] || 0}
-              changeAmount={changeAmount}
-              item={item}
-              key={`cart-item-${idx}`}
-              price={prices[itemId] || 0}
-              t={t}
-            />
-          );
-        })}
-        {!isEmpty(packageItem)
+    return (    
+      <ul className="b-cart__list">        
+      <SortableList items={items} amounts={amounts} changeAmount={changeAmount}
+                    changePackageCount={changePackageCount} packageCount={packageCount} packages={packages}
+                    selectPackage={selectPackage} selectedPackage={selectedPackage} packageItem={packageItem}
+                    prices={prices} t={t} lockAxis="y" onSortEnd={this.onSortEnd} useDragHandle={true} />
+      {!isEmpty(packageItem)
           ? (
             <CartListPackageItem
               {...{
