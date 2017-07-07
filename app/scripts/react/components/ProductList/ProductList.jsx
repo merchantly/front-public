@@ -5,7 +5,8 @@ import CatalogFilterContainer from 'rc/CatalogFilter';
 import ItemListCatalog from 'rc/ItemListCatalog';
 import { Image } from 'rc/common/Image';
 import * as schemas from 'r/schemas';
-import ProductListContainter from './ProductListContainter';
+import ProductListContainer from './ProductListContainer';
+import ProductListContainerBottom from './ProductListContainerBottom';
 
 class ProductList extends Component {
   render() {
@@ -38,7 +39,7 @@ class ProductList extends Component {
             {title}
           </h1>
         )}
-        <ProductListContainter container={container} />
+        <ProductListContainer container={container} />
         <div className="b-item-list__content">
           {items.length > 0
             ? items.map(item => (
@@ -69,14 +70,7 @@ class ProductList extends Component {
             </div>
           )}
         </div>
-        {(container && container.bottomText) && (
-          <div className="b-item-list__description">
-            <div
-              className="b-page__content__inner_content"
-              dangerouslySetInnerHTML={{ __html: container.bottomText }}
-            />
-          </div>
-        )}
+        <ProductListContainerBottom container={container} />
       </ItemListCatalog>
     );
   }

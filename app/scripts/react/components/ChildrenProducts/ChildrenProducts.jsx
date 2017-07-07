@@ -2,7 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import ProductGroup from 'rc/ProductGroup';
 import CatalogFilterContainer from 'rc/CatalogFilter';
 import * as schemas from 'r/schemas';
-import ProductListContainter from 'rc/ProductList/ProductListContainter';
+import ProductListContainer from 'rc/ProductList/ProductListContainer';
+import ProductListContainerBottom from 'rc/ProductList/ProductListContainerBottom';
 
 class ChildrenProducts extends Component {
   render() {
@@ -24,7 +25,7 @@ class ChildrenProducts extends Component {
             <h1 className="b-item-list__title">
               {title}
             </h1>
-            <ProductListContainter container={container} />
+            <ProductListContainer container={container} />
           </div>
         )}
         {childrenProducts.map(({ products, title, vendorCategoryPath }, idx) => (
@@ -40,6 +41,7 @@ class ChildrenProducts extends Component {
             vendorCategoryPath={vendorCategoryPath}
           />
         ))}
+        <ProductListContainerBottom container={container} />        
       </div>
     );
   }
