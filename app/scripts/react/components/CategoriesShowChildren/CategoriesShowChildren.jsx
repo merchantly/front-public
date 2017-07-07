@@ -10,6 +10,7 @@ class CategoriesShowChildren extends Component {
       t,
       title,
       vendorRootPath,
+      container
     } = this.props;
 
     return childrenProducts.length
@@ -19,6 +20,7 @@ class CategoriesShowChildren extends Component {
           showCartButton={showCartButton}
           showQuantity={showQuantity}
           title={title}
+          container={container}
         />
       )
       : (
@@ -41,6 +43,7 @@ CategoriesShowChildren.propTypes = {
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
+  container: PropTypes.object,
 };
 
 export default CategoriesShowChildren;
