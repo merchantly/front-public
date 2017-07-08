@@ -5,6 +5,8 @@ import CatalogFilterContainer from 'rc/CatalogFilter';
 import ItemListCatalog from 'rc/ItemListCatalog';
 import { Image } from 'rc/common/Image';
 import * as schemas from 'r/schemas';
+import ProductListContainer from './ProductListContainer';
+import ProductListContainerBottom from './ProductListContainerBottom';
 
 class ProductList extends Component {
   render() {
@@ -37,25 +39,7 @@ class ProductList extends Component {
             {title}
           </h1>
         )}
-        {(container && container.image) && (
-          <div className="b-slider b-slider_promo">
-            <div className="b-slider__item">
-              <Image
-                className="b-container-image"
-                image={container.image}
-                maxWidth={1000}
-              />
-            </div>
-          </div>
-        )}
-        {(container && container.description) && (
-          <div className="b-item-list__description">
-            <div
-              className="b-page__content__inner_content"
-              dangerouslySetInnerHTML={{ __html: container.description }}
-            />
-          </div>
-        )}
+        <ProductListContainer container={container} />
         <div className="b-item-list__content">
           {items.length > 0
             ? items.map(item => (
@@ -86,14 +70,7 @@ class ProductList extends Component {
             </div>
           )}
         </div>
-        {(container && container.bottomText) && (
-          <div className="b-item-list__description">
-            <div
-              className="b-page__content__inner_content"
-              dangerouslySetInnerHTML={{ __html: container.bottomText }}
-            />
-          </div>
-        )}
+        <ProductListContainerBottom container={container} />
       </ItemListCatalog>
     );
   }
@@ -101,11 +78,7 @@ class ProductList extends Component {
 
 ProductList.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
-  container: PropTypes.shape({
-    image: schemas.image,
-    description: PropTypes.string,
-    bottomText: PropTypes.string,
-  }),
+  container: schemas.container.isRequired,
   i18n: PropTypes.object,
   products: PropTypes.shape({
     items: PropTypes.array.isRequired,

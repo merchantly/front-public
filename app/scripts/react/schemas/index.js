@@ -24,3 +24,4 @@ export { default as childrenProducts } from './childrenProducts';
 export { default as comment } from './comment';
 export { default as orderItem } from './orderItem';
 export { default as order } from './order';
+export { default as container } from './container';
