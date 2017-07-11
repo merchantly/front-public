@@ -631,10 +631,10 @@
     "w1ptEnabled": ""
   },
   "product": {
-    "id": 48022,
+    "id": 55859,
     "tags": [{"title": "tag1"}],
-    "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
-    "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
+    "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzU1ODU5",
+    "title": "Филе индейки (3 кг, \"Честная ферма\", Рязань)",
     "article": null,
     "hasOrderingGoods": true,
     "isSale": false,
@@ -700,9 +700,9 @@
     ],
     "goods": [
       {
-        "title": "Филе индейки (1 кг, \"Честная ферма\", Рязань)",
+        "title": "Филе индейки (2 кг, \"Честная ферма\", Рязань)",
         "article": null,
-        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQ4MDIy",
+        "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzY3OTM1",
         "isOrdering": true,
         "isRunOut": false,
         "isSale": false,
@@ -1186,8 +1186,8 @@
     "token": "qGUP0Nny5BDETXmb0h2RL15mnIigaQ5pWG/U5HFKV7o=",
     "field": "authenticity_token"
   },
-  "isWishlisted": false,
-  "hasWishlist": true,
+  "isWishlisted": true,
+  "hasWishlist": false,
   "hasComments": false,
   "disqusUrl": null,
   "wishlistUrl": "http://chestnayaferma.ru/wishlist",

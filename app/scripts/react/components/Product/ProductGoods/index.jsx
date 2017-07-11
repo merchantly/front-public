@@ -101,7 +101,7 @@ class ProductGoods extends Component {
               />
             </div>
           </div>
-          { hasWishlist && <ProductCartWishlist t={t} product={product} /> }
+          <ProductCartWishlist t={t} product={product} />
         </span>
       );
     } else {
@@ -111,7 +111,7 @@ class ProductGoods extends Component {
             <div className="b-item-full__form__option b-item-full__form__option_full">
               {this.renderSelect(product)}
             </div>
-            { hasWishlist && <ProductCartWishlist t={t} product={product} /> }
+            <ProductCartWishlist t={t} product={product} />
           </div>
           <div className="b-item-full__form__row b-item-full__form__submit">
             <ProductAddToCartButton
