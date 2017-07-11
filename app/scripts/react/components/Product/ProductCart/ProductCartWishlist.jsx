@@ -68,9 +68,14 @@ class ProductCartWishlist extends Component {
     }  
 
     const global_id = product && product.globalId, product_id = product && product.id;
+    const hasWishlist = clientState && clientState.data && clientState.data.hasWishlist;
     const isFetching = getIn(wishlist, ["data", "isFetching"]);
     const isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
     var wishlistButtonState;
+
+    if (!hasWishlist) {
+      return null;
+    }
     
     if (!global_id || !product_id) {      
       //invariant(false, "У компонента нет props.product!");
