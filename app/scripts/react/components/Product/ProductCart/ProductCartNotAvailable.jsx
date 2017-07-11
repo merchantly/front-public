@@ -9,11 +9,7 @@ const ProductCartNotAvailable = (props) => (
         {props.t('vendor.product.not_available')}
       </div>
     </div>
-    <ProductCartWishlist
-      {...props}
-      addWishlistText={props.t('vendor.button.to_wishlist')}
-      goWishlistText={props.t('vendor.button.go_wishlist')}
-    />
+    <ProductCartWishlist t={props.t} product={props.product} />
   </div>
 );
 

@@ -122,7 +122,7 @@ class ProductProperties extends Component {
         <div className="b-item-full__form__row b-item-full__form__submit">
           {addToCartButton}
         </div>
-        { hasWishlist && <ProductCartWishlist t={t} product={product} /> }        
+        <ProductCartWishlist t={t} product={product} />
       </span>
     );
   }
