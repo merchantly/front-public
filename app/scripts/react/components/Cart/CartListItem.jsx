@@ -167,8 +167,6 @@ class CartListItem extends Component {
       sellingByWeight=false,
     } = (item.good || {});
 
-    console.log("CartListItem", this.props);
-
     return (
       <li className="b-cart__item"> 
         <div style={{position: "absolute", marginLeft: "2px"}}>
