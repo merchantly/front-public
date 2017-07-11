@@ -2981,13 +2981,19 @@ var _Icon = require('../common/Icon');
 
 var _Icon2 = _interopRequireDefault(_Icon);
 
+var _connectToRedux = require('../HoC/connectToRedux');
+
+var _connectToRedux2 = _interopRequireDefault(_connectToRedux);
+
+var _reactRedux = require('react-redux');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var WEIGHT_STEP = 0.01; /*global gon */
 
 
 var DragHandle = (0, _reactSortableHoc.SortableHandle)(function () {
-  return _react2.default.createElement(_AssetImage2.default, { src: 'images/updown.png', style: { opacity: 0.5, width: "8px", cursor: "ns-resize" } });
+  return _react2.default.createElement('img', { src: '/images/updown.png', style: { opacity: 0.5, width: "8px", cursor: "ns-resize" } });
 });
 
 var CartListItem = function (_Component) {
@@ -3145,7 +3151,8 @@ var CartListItem = function (_Component) {
       var _props5 = this.props,
           item = _props5.item,
           price = _props5.price,
-          t = _props5.t;
+          t = _props5.t,
+          sortedCart = _props5.sortedCart;
 
       var _ref = item.good || {},
           image = _ref.image,
@@ -3158,13 +3165,15 @@ var CartListItem = function (_Component) {
           _ref$sellingByWeight = _ref.sellingByWeight,
           sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
 
+      console.log("CartListItem", this.props);
+
       return _react2.default.createElement(
         'li',
         { className: 'b-cart__item' },
         _react2.default.createElement(
           'div',
           { style: { position: "absolute", marginLeft: "2px" } },
-          _react2.default.createElement(DragHandle, null)
+          sortedCart ? _react2.default.createElement(DragHandle, null) : null
         ),
         _react2.default.createElement(
           'div',
@@ -3228,13 +3237,18 @@ CartListItem.propTypes = {
   changeAmount: _react.PropTypes.func.isRequired,
   item: _react.PropTypes.object.isRequired,
   price: _react.PropTypes.object.isRequired,
-  t: _react.PropTypes.func.isRequired
+  t: _react.PropTypes.func.isRequired,
+  sortedCart: _react.PropTypes.bool.isRequired
 };
 
-exports.default = CartListItem;
+exports.default = (0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
+  return {
+    sortedCart: state.clientState.data.sortedCart
+  };
+})(CartListItem));
 module.exports = exports['default'];
 
-},{"../../constants/OrderConstants":287,"../common/AssetImage":254,"../common/Icon":261,"../common/Money/HumanizedMoneyWithCurrency":271,"../common/Select":283,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"lodash":"lodash","react":"react","react-sortable-hoc":838,"timm":"timm","tinycolor2":"tinycolor2"}],34:[function(require,module,exports){
+},{"../../constants/OrderConstants":287,"../HoC/connectToRedux":99,"../common/AssetImage":254,"../common/Icon":261,"../common/Money/HumanizedMoneyWithCurrency":271,"../common/Select":283,"./CartListImage":32,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"lodash":"lodash","react":"react","react-redux":"react-redux","react-sortable-hoc":838,"timm":"timm","tinycolor2":"tinycolor2"}],34:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19355,7 +19369,7 @@ var ProductCartForProduct = function ProductCartForProduct(props) {
         })
       )
     ),
-    props.hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: props.t, product: props.product })
+    _react2.default.createElement(_ProductCartWishlist2.default, { t: props.t, product: props.product })
   );
 };
 
@@ -20057,10 +20071,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -20084,17 +20094,14 @@ var ProductCartNotAvailable = function ProductCartNotAvailable(props) {
         props.t('vendor.product.not_available')
       )
     ),
-    _react2.default.createElement(_ProductCartWishlist2.default, (0, _extends3.default)({}, props, {
-      addWishlistText: props.t('vendor.button.to_wishlist'),
-      goWishlistText: props.t('vendor.button.go_wishlist')
-    }))
+    _react2.default.createElement(_ProductCartWishlist2.default, { t: props.t, product: props.product })
   );
 };
 
 exports.default = ProductCartNotAvailable;
 module.exports = exports['default'];
 
-},{"./ProductCartWishlist":186,"babel-runtime/helpers/extends":369,"react":"react"}],186:[function(require,module,exports){
+},{"./ProductCartWishlist":186,"react":"react"}],186:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20224,9 +20231,14 @@ var ProductCartWishlist = (_temp = _class = function (_Component) {
 
       var global_id = product && product.globalId,
           product_id = product && product.id;
+      var hasWishlist = clientState && clientState.data && clientState.data.hasWishlist;
       var isFetching = (0, _timm.getIn)(wishlist, ["data", "isFetching"]);
       var isWishlisted = (0, _lodash.includes)(clientState.data["wishlitedProductIds"], product_id);
       var wishlistButtonState;
+
+      if (!hasWishlist) {
+        return null;
+      }
 
       if (!global_id || !product_id) {
         //invariant(false, "У компонента нет props.product!");
@@ -20856,7 +20868,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
               })
             )
           ),
-          hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
+          _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
         );
       } else {
         return _react2.default.createElement(
@@ -20870,7 +20882,7 @@ var ProductGoods = (_temp = _class = function (_Component) {
               { className: 'b-item-full__form__option b-item-full__form__option_full' },
               this.renderSelect(product)
             ),
-            hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
+            _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
           ),
           _react2.default.createElement(
             'div',
@@ -21891,7 +21903,7 @@ var ProductProperties = (_temp = _class = function (_Component) {
           { className: 'b-item-full__form__row b-item-full__form__submit' },
           addToCartButton
         ),
-        hasWishlist && _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
+        _react2.default.createElement(_ProductCartWishlist2.default, { t: t, product: product })
       );
     }
   }]);
