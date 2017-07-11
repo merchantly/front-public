@@ -731,8 +731,6 @@
     "token": "",
     "field": "authenticity_token"
   },
-  "isWishlisted": false,
-  "hasWishlist": true,
   "hasComments": false,
   "disqusUrl": null,
   "wishlistUrl": "http://zoi.stage.kiiiosk.ru/wishlist",
