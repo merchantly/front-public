@@ -3165,8 +3165,6 @@ var CartListItem = function (_Component) {
           _ref$sellingByWeight = _ref.sellingByWeight,
           sellingByWeight = _ref$sellingByWeight === undefined ? false : _ref$sellingByWeight;
 
-      console.log("CartListItem", this.props);
-
       return _react2.default.createElement(
         'li',
         { className: 'b-cart__item' },
