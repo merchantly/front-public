@@ -35,13 +35,13 @@ class Userbar extends Component {
 
     const className = classNames({
       'Userbar': true,
-      'TwoBubbles': hasWishlist && wishlistUrl
+      'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
     });
 
     return (
       <div>
         <div className={className}>
-          {hasWishlist && wishlistUrl &&
+          {hasWishlist && wishlistUrl && wishlistItemsCount > 0 &&
             <WishlistButton
               itemsCount={wishlistItemsCount}
               text={wishlistText}
