@@ -23870,7 +23870,7 @@ var Userbar = function (_Component) {
 
       var className = (0, _classnames2.default)({
         'Userbar': true,
-        'TwoBubbles': hasWishlist && wishlistUrl
+        'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
       });
 
       return _react2.default.createElement(
@@ -23879,7 +23879,7 @@ var Userbar = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: className },
-          hasWishlist && wishlistUrl && _react2.default.createElement(_WishlistButton.WishlistButton, {
+          hasWishlist && wishlistUrl && wishlistItemsCount > 0 && _react2.default.createElement(_WishlistButton.WishlistButton, {
             itemsCount: wishlistItemsCount,
             text: wishlistText,
             url: wishlistUrl
