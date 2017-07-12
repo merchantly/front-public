@@ -16,10 +16,12 @@ import CartListImage from './CartListImage';
 import tinycolor from 'tinycolor2';
 import { SortableHandle } from 'react-sortable-hoc';
 import Icon from 'rc/common/Icon';
+import connectToRedux from 'rc/HoC/connectToRedux';
+import { connect } from 'react-redux';
 
 const WEIGHT_STEP = 0.01;
 
-const DragHandle = SortableHandle(() => <AssetImage src="images/updown.png" style={{opacity: 0.5, width: "8px", cursor: "ns-resize"}} />);
+const DragHandle = SortableHandle(() => <img src="/images/updown.png" style={{opacity: 0.5, width: "8px", cursor: "ns-resize"}} />);
 
 class CartListItem extends Component {
   changeWeight(ev) {
@@ -155,6 +157,7 @@ class CartListItem extends Component {
       item,
       price,
       t,
+      sortedCart,
     } = this.props;
     const {
       image,
@@ -167,7 +170,7 @@ class CartListItem extends Component {
     return (
       <li className="b-cart__item"> 
         <div style={{position: "absolute", marginLeft: "2px"}}>
-          <DragHandle/ >
+          { sortedCart ? <DragHandle/ > : null }
         </div>
         <div className="b-cart__item__col-img">
           <CartListImage
@@ -218,6 +221,11 @@ CartListItem.propTypes = {
   item: PropTypes.object.isRequired,
   price: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
+  sortedCart: PropTypes.bool.isRequired,
 };
 
-export default CartListItem;
+export default connectToRedux(connect(
+  (state) => ({
+    sortedCart : state.clientState.data.sortedCart,
+  })
+)(CartListItem));
