@@ -142,13 +142,14 @@ export default provideTranslations(connectToRedux(connect(
         items: cartItems=[],
         packageItem,
         totalPrice: cartTotalPrice={},
+        showCouponCode,
       },
       isFetching: cartIsFetching=false,
       amounts={},
       coupon,
       packageCount,
-      selectedPackage,
-    } = cart;
+      selectedPackage,    
+    } = cart;    
     const {
       packages=[],
       isFetching: packagesIsFetching=false,
@@ -186,6 +187,7 @@ export default provideTranslations(connectToRedux(connect(
       cartIsFetching,
       cartItems,
       couponCode,
+      showCouponCode,
       isBelowMinimalPrice,
       packageCount,
       packagePrice,

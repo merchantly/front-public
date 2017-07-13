@@ -79,6 +79,7 @@ class Cart extends Component {
       selectedPackage,
       t,
       totalPrice,
+      showCouponCode,
     } = this.props;
     const hasErrors = isBelowMinimalPrice ||
       size(omit(cartErrors, 'minimalPrice')) > 0;
@@ -188,9 +189,9 @@ class Cart extends Component {
                       >
                         {t('vendor.cart.clear')}
                       </a>
-                    </div>
+                    </div>                    
                     <div className="b-cart__action__col-right">
-                      <CartCoupon code={couponCode} t={t} />
+                      { showCouponCode && <CartCoupon code={couponCode} t={t} /> }
                       <div className="b-cart__action__col-submit">
                         <input
                           className="b-cart__action__submit b-btn element--active-opacity"
@@ -201,9 +202,9 @@ class Cart extends Component {
                           onClick={this.startProcessing}
                           type="submit"
                           value={t('vendor.order.submit')}
-                        />
+                        />                        
                       </div>
-                    </div>
+                    </div>                    
                   </div>
                 </div>
               </form>
