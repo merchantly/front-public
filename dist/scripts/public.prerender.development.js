@@ -2157,7 +2157,8 @@ var Cart = function (_Component) {
           selectPackage = _props2.selectPackage,
           selectedPackage = _props2.selectedPackage,
           t = _props2.t,
-          totalPrice = _props2.totalPrice;
+          totalPrice = _props2.totalPrice,
+          showCouponCode = _props2.showCouponCode;
 
       var hasErrors = isBelowMinimalPrice || (0, _lodash.size)((0, _lodash.omit)(cartErrors, 'minimalPrice')) > 0;
       var isProcessing = this.state.isProcessing;
@@ -2303,7 +2304,7 @@ var Cart = function (_Component) {
                 _react2.default.createElement(
                   'div',
                   { className: 'b-cart__action__col-right' },
-                  _react2.default.createElement(_CartCoupon.CartCoupon, { code: couponCode, t: t }),
+                  showCouponCode && _react2.default.createElement(_CartCoupon.CartCoupon, { code: couponCode, t: t }),
                   _react2.default.createElement(
                     'div',
                     { className: 'b-cart__action__col-submit' },
@@ -4089,6 +4090,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
       packageItem = _cart$cart.packageItem,
       _cart$cart$totalPrice = _cart$cart.totalPrice,
       cartTotalPrice = _cart$cart$totalPrice === undefined ? {} : _cart$cart$totalPrice,
+      showCouponCode = _cart$cart.showCouponCode,
       _cart$isFetching = cart.isFetching,
       cartIsFetching = _cart$isFetching === undefined ? false : _cart$isFetching,
       _cart$amounts = cart.amounts,
@@ -4131,6 +4133,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     cartIsFetching: cartIsFetching,
     cartItems: cartItems,
     couponCode: couponCode,
+    showCouponCode: showCouponCode,
     isBelowMinimalPrice: isBelowMinimalPrice,
     packageCount: packageCount,
     packagePrice: packagePrice,
@@ -17508,7 +17511,7 @@ var ProductBulk = function (_Component) {
       _this.state = {
         price: {
           cents: _this.getPrice(props.product.weightOfPrice),
-          currencyIsoCode: _this.good().actualPrice.currencyIsoCode
+          currencyIsoCode: _this.good().actualPrice && _this.good().actualPrice.currencyIsoCode
         }
       };
     }
@@ -17543,7 +17546,7 @@ var ProductBulk = function (_Component) {
   }, {
     key: 'getPrice',
     value: function getPrice(weight) {
-      return this.good().actualPrice.cents * weight / parseFloat(this.props.product.weightOfPrice);
+      return this.good().actualPrice && this.good().actualPrice.cents * weight / parseFloat(this.props.product.weightOfPrice) || 0;
     }
   }, {
     key: 'render',
