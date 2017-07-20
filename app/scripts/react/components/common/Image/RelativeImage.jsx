@@ -64,9 +64,22 @@ RelativeImage.propTypes = {
   maxHeight: PropTypes.number,
   maxWidth: PropTypes.number,
 };
+
 RelativeImage.defaultProps = {
   maxHeight: null,
   maxWidth: null,
 };
+// Для Firefox: Обертываем компонент в div
+// по умолчанию <span> и <a> display: inline
+// и тогда не правильно считается parent.offsetHeight, parent.offsetWidth
+class RelativeImageWrapper extends Component {
+  render() {
+    return (
+      <div>
+        <RelativeImage {...this.props} />
+      </div>
+    )
+  }
+}
 
-export default RelativeImage;
+export default RelativeImageWrapper;
