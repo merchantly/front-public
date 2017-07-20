@@ -28305,12 +28305,37 @@ RelativeImage.propTypes = {
   maxHeight: _react.PropTypes.number,
   maxWidth: _react.PropTypes.number
 };
+
 RelativeImage.defaultProps = {
   maxHeight: null,
   maxWidth: null
 };
+// Для Firefox: Обертываем компонент в div
+// по умолчанию <span> и <a> display: inline
+// и тогда не правильно считается parent.offsetHeight, parent.offsetWidth
 
-exports.default = RelativeImage;
+var RelativeImageWrapper = function (_Component2) {
+  (0, _inherits3.default)(RelativeImageWrapper, _Component2);
+
+  function RelativeImageWrapper() {
+    (0, _classCallCheck3.default)(this, RelativeImageWrapper);
+    return (0, _possibleConstructorReturn3.default)(this, (RelativeImageWrapper.__proto__ || (0, _getPrototypeOf2.default)(RelativeImageWrapper)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(RelativeImageWrapper, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(RelativeImage, this.props)
+      );
+    }
+  }]);
+  return RelativeImageWrapper;
+}(_react.Component);
+
+exports.default = RelativeImageWrapper;
 module.exports = exports['default'];
 
 },{"../../../schemas":330,"./Image":262,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/extends":369,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"react":"react","react-dom":"react-dom"}],264:[function(require,module,exports){
