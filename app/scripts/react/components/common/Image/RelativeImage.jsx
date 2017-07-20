@@ -64,9 +64,20 @@ RelativeImage.propTypes = {
   maxHeight: PropTypes.number,
   maxWidth: PropTypes.number,
 };
+
 RelativeImage.defaultProps = {
   maxHeight: null,
   maxWidth: null,
 };
 
-export default RelativeImage;
+class RelativeImageWrapper extends Component {
+  render() {
+    return (
+      <div>
+        <RelativeImage {...this.props} />
+      </div>
+    )
+  }
+}
+
+export default RelativeImageWrapper;
