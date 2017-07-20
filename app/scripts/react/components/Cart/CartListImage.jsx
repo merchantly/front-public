@@ -51,14 +51,14 @@ class CartListImage extends Component {
         <a
           data-lightbox
           data-fancybox-group={image.productId}
-          href={image.url}
-        >
+          href={image.url}          
+        >          
           <RelativeImage
             className="b-cart__item__img"
             image={image || {}}
             maxHeight={size}
             maxWidth={size}
-          />
+          />          
         </a>
         {CartListImage.fancyboxImages(image, images)}
       </div>

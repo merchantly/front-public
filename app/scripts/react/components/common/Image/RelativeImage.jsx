@@ -20,11 +20,11 @@ class RelativeImage extends Component {
   }
   getParentWithSize(elt) {
     let current = elt;
-
+    
     while (current.parentNode) {
       current = current.parentNode;
 
-      if (current.offsetHeight || current.offsetWidth) {
+      if ((current.offsetHeight || current.offsetWidth) && current.nodeName != "A") {
         return current;
       }
     }
