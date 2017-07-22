@@ -29,6 +29,7 @@ AppLink.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.array,
+    PropTypes.string,
   ]).isRequired,
   href: PropTypes.string.isRequired,
   hash: PropTypes.string,
