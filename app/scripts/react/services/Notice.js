@@ -64,8 +64,8 @@ const NoticeService = {
     } else {
       message = `Network error: ${response.statusText}`;
     }
-    if (typeof this.notifyError === 'function')
-      this.notifyError(message, timeout);
+
+    this.notifyError(message, timeout);
   },
 
   close() {
