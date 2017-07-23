@@ -8,7 +8,10 @@ const ProductBadge = ({ status, text }) => (
 );
 
 ProductBadge.propTypes = {
-  status: PropTypes.string.isRequired,
+  status: PropTypes.oneOfType([    
+    PropTypes.array,
+    PropTypes.string,
+  ]).isRequired,
   text: PropTypes.string.isRequired,
 };
 
