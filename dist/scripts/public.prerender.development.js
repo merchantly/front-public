@@ -16846,7 +16846,7 @@ var ProductBadge = function ProductBadge(_ref) {
 };
 
 ProductBadge.propTypes = {
-  status: _react.PropTypes.string.isRequired,
+  status: _react.PropTypes.oneOfType([_react.PropTypes.array, _react.PropTypes.string]).isRequired,
   text: _react.PropTypes.string.isRequired
 };
 
@@ -23840,12 +23840,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Userbar = function (_Component) {
   (0, _inherits3.default)(Userbar, _Component);
 
-  function Userbar() {
+  function Userbar(props) {
     (0, _classCallCheck3.default)(this, Userbar);
-    return (0, _possibleConstructorReturn3.default)(this, (Userbar.__proto__ || (0, _getPrototypeOf2.default)(Userbar)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Userbar.__proto__ || (0, _getPrototypeOf2.default)(Userbar)).call(this, props));
+
+    _this.state = { launchFromIFrame: false };
+    return _this;
   }
 
   (0, _createClass3.default)(Userbar, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var launchFromIFrame = window && window != window.top && window.top.KioskOperatorApp;
+      this.setState({ launchFromIFrame: launchFromIFrame });
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -23871,6 +23881,8 @@ var Userbar = function (_Component) {
           wishlistUrl = _props.wishlistUrl;
 
 
+      var launchFromIFrame = this.state.launchFromIFrame;
+
       var className = (0, _classnames2.default)({
         'Userbar': true,
         'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
@@ -23887,7 +23899,7 @@ var Userbar = function (_Component) {
             text: wishlistText,
             url: wishlistUrl
           }),
-          hasOperator && operatorUrl && _react2.default.createElement(_OperatorButton.OperatorButton, {
+          hasOperator && operatorUrl && !launchFromIFrame && _react2.default.createElement(_OperatorButton.OperatorButton, {
             text: operatorText,
             url: operatorUrl
           }),
@@ -27453,7 +27465,7 @@ var AppLink = function (_Component) {
 }(_react.Component);
 
 AppLink.propTypes = {
-  children: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.array]).isRequired,
+  children: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.array, _react.PropTypes.string]).isRequired,
   href: _react.PropTypes.string.isRequired,
   hash: _react.PropTypes.string,
   state: _react.PropTypes.object

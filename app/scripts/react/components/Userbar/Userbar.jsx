@@ -9,6 +9,18 @@ import DesignPreview from '../DesignPreview';
 import classNames from 'classnames';
 
 class Userbar extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = { launchFromIFrame: false }
+  }
+
+  componentWillMount() {
+    const launchFromIFrame = window && window != window.top && window.top.KioskOperatorApp;
+    this.setState( { launchFromIFrame: launchFromIFrame } );
+  }
+
   render() {
     const {
       authUrl,
@@ -33,10 +45,12 @@ class Userbar extends Component {
       wishlistUrl,
     } = this.props;
 
+    const launchFromIFrame = this.state.launchFromIFrame
+
     const className = classNames({
       'Userbar': true,
       'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
-    });
+    });    
 
     return (
       <div>
@@ -48,7 +62,7 @@ class Userbar extends Component {
               url={wishlistUrl}
             />
           }
-          {hasOperator && operatorUrl &&
+          {hasOperator && operatorUrl && !launchFromIFrame &&
             <OperatorButton
               text={operatorText}
               url={operatorUrl}
