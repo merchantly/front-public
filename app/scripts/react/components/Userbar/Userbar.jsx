@@ -38,6 +38,8 @@ class Userbar extends Component {
       'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
     });
 
+    const launchFromIFrame = window != window.top && window.top.KioskOperatorApp;
+
     return (
       <div>
         <div className={className}>
@@ -48,7 +50,7 @@ class Userbar extends Component {
               url={wishlistUrl}
             />
           }
-          {hasOperator && operatorUrl &&
+          {hasOperator && operatorUrl && !launchFromIFrame &&
             <OperatorButton
               text={operatorText}
               url={operatorUrl}
