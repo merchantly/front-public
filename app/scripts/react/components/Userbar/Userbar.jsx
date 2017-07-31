@@ -43,6 +43,7 @@ class Userbar extends Component {
       wishlistItemsCount,
       wishlistText,
       wishlistUrl,
+      isDesignSettingOpen,
     } = this.props;
 
     const launchFromIFrame = this.state.launchFromIFrame
@@ -50,7 +51,7 @@ class Userbar extends Component {
     const className = classNames({
       'Userbar': true,
       'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
-    });    
+    });
 
     return (
       <div>
@@ -62,19 +63,19 @@ class Userbar extends Component {
               url={wishlistUrl}
             />
           }
-          {hasOperator && operatorUrl && !launchFromIFrame &&
+          {hasOperator && operatorUrl && !launchFromIFrame && !isDesignSettingOpen &&
             <OperatorButton
               text={operatorText}
               url={operatorUrl}
             />
           }
-          {hasDesign &&
+          {hasDesign && !isDesignSettingOpen &&
             <DesignButton
               onClick={openDesignSettingsPopup}
               text={designText}
             />
           }
-          {hasCabinet && cabinetUrl &&
+          {hasCabinet && cabinetUrl && !isDesignSettingOpen &&
             <CabinetButton
               text={cabinetText}
               url={cabinetUrl}
