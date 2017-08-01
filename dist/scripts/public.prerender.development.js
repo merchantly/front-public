@@ -794,8 +794,11 @@ exports.openPopup = openPopup;
 exports.closePopup = closePopup;
 exports.openDesignSettingsPopup = openDesignSettingsPopup;
 exports.closeDesignSettingsPopup = closeDesignSettingsPopup;
+exports.isDesignOpened = isDesignOpened;
 
 var _actionTypes = require('../constants/actionTypes');
+
+var _lodash = require('lodash');
 
 function openPopup(style, props) {
   return {
@@ -820,7 +823,13 @@ function closeDesignSettingsPopup() {
   return closePopup('DesignSettings');
 }
 
-},{"../constants/actionTypes":288}],15:[function(require,module,exports){
+function isDesignOpened(popups) {
+  return (0, _lodash.some)(popups, function (popup) {
+    return popup.style === 'DesignSettings';
+  });
+}
+
+},{"../constants/actionTypes":288,"lodash":"lodash"}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8617,6 +8626,8 @@ var _connectToRedux2 = _interopRequireDefault(_connectToRedux);
 
 var _lodash = require('lodash');
 
+var _popupActions = require('../../actions/popupActions');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _jss2.default.use(_jssNested2.default);
@@ -8755,7 +8766,7 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.attachSheet();
-      if (this.isPopupOpened(this.props)) {
+      if ((0, _popupActions.isDesignOpened)(this.props.popups)) {
         this.apply(this.props.design.current);
       }
     }
@@ -8770,13 +8781,6 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
     value: function componentWillUnmount() {
       this.sheet.detach();
       this.sheet = null;
-    }
-  }, {
-    key: 'isPopupOpened',
-    value: function isPopupOpened(props) {
-      return (0, _lodash.some)(props.popups, function (popup) {
-        return popup.style === 'DesignSettings';
-      });
     }
   }, {
     key: 'attachSheet',
@@ -8897,7 +8901,7 @@ var DesignPreview = (_dec = (0, _reactRedux.connect)(function (state) {
 exports.default = (0, _connectToRedux2.default)(DesignPreview);
 module.exports = exports['default'];
 
-},{"../HoC/connectToRedux":99,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/core-js/object/keys":361,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/defineProperty":368,"babel-runtime/helpers/extends":369,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"jquery":"jquery","jss":"jss","jss-nested":524,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],81:[function(require,module,exports){
+},{"../../actions/popupActions":14,"../HoC/connectToRedux":99,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/core-js/object/keys":361,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/defineProperty":368,"babel-runtime/helpers/extends":369,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"jquery":"jquery","jss":"jss","jss-nested":524,"lodash":"lodash","react":"react","react-redux":"react-redux","tinycolor2":"tinycolor2"}],81:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23878,7 +23882,8 @@ var Userbar = function (_Component) {
           vendorIsPublished = _props.vendorIsPublished,
           wishlistItemsCount = _props.wishlistItemsCount,
           wishlistText = _props.wishlistText,
-          wishlistUrl = _props.wishlistUrl;
+          wishlistUrl = _props.wishlistUrl,
+          isDesignSettingOpen = _props.isDesignSettingOpen;
 
 
       var launchFromIFrame = this.state.launchFromIFrame;
@@ -23894,20 +23899,20 @@ var Userbar = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: className },
-          hasWishlist && wishlistUrl && wishlistItemsCount > 0 && _react2.default.createElement(_WishlistButton.WishlistButton, {
+          hasWishlist && wishlistUrl && wishlistItemsCount > 0 && !isDesignSettingOpen && _react2.default.createElement(_WishlistButton.WishlistButton, {
             itemsCount: wishlistItemsCount,
             text: wishlistText,
             url: wishlistUrl
           }),
-          hasOperator && operatorUrl && !launchFromIFrame && _react2.default.createElement(_OperatorButton.OperatorButton, {
+          hasOperator && operatorUrl && !launchFromIFrame && !isDesignSettingOpen && _react2.default.createElement(_OperatorButton.OperatorButton, {
             text: operatorText,
             url: operatorUrl
           }),
-          hasDesign && _react2.default.createElement(_DesignButton.DesignButton, {
+          hasDesign && !isDesignSettingOpen && _react2.default.createElement(_DesignButton.DesignButton, {
             onClick: openDesignSettingsPopup,
             text: designText
           }),
-          hasCabinet && cabinetUrl && _react2.default.createElement(_CabinetButton.CabinetButton, {
+          hasCabinet && cabinetUrl && !isDesignSettingOpen && _react2.default.createElement(_CabinetButton.CabinetButton, {
             text: cabinetText,
             url: cabinetUrl
           }),
@@ -24035,6 +24040,8 @@ var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
 var _dom = require('../../helpers/dom');
 
+var _lodash = require('lodash');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -24056,7 +24063,8 @@ var UserbarContainer = function (_Component) {
           designMode = _props.designMode,
           fetchClientState = _props.fetchClientState,
           fetchOperatorState = _props.fetchOperatorState,
-          openDesignSettingsPopup = _props.openDesignSettingsPopup;
+          openDesignSettingsPopup = _props.openDesignSettingsPopup,
+          isDesignSettingOpen = _props.isDesignSettingOpen;
 
 
       if (designMode) {
@@ -24139,7 +24147,10 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   var _state$clientState$da = state.clientState.data,
       hasWishlist = _state$clientState$da.hasWishlist,
       wishlistItemsCount = _state$clientState$da.wishlistItemsCount;
+  var popups = state.popup.popups;
 
+
+  var isDesignSettingOpen = (0, _popupActions.isDesignOpened)(popups);
 
   return (0, _assign2.default)({}, ownProps, {
     designMode: designMode,
@@ -24147,7 +24158,8 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     hasOperator: hasOperator,
     hasWishlist: hasWishlist,
     wishlistItemsCount: wishlistItemsCount,
-    vendorIsPublished: vendorIsPublished
+    vendorIsPublished: vendorIsPublished,
+    isDesignSettingOpen: isDesignSettingOpen
   });
 }, {
   openDesignSettingsPopup: _popupActions.openDesignSettingsPopup,
@@ -24155,7 +24167,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   fetchOperatorState: _OperatorStateActions.fetchOperatorState
 })(UserbarContainer)));
 
-},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":8,"../../actions/popupActions":14,"../../constants/cookieKeys":289,"../../helpers/dom":299,"../HoC/connectToRedux":99,"../HoC/provideTranslations":100,"./Userbar":218,"babel-runtime/core-js/object/assign":356,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/extends":369,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"cookies-js":"cookies-js","react":"react","react-redux":"react-redux"}],220:[function(require,module,exports){
+},{"../../actions/ClientStateActions":5,"../../actions/OperatorStateActions":8,"../../actions/popupActions":14,"../../constants/cookieKeys":289,"../../helpers/dom":299,"../HoC/connectToRedux":99,"../HoC/provideTranslations":100,"./Userbar":218,"babel-runtime/core-js/object/assign":356,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/extends":369,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"cookies-js":"cookies-js","lodash":"lodash","react":"react","react-redux":"react-redux"}],220:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
