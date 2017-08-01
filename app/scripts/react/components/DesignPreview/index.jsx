@@ -6,6 +6,7 @@ import nested from 'jss-nested';
 import tinycolor from 'tinycolor2';
 import connectToRedux from '../HoC/connectToRedux';
 import { some, reduce, merge } from 'lodash';
+import { isDesignOpened } from 'r/actions/popupActions';
 
 jss.use(nested);
 
@@ -136,9 +137,9 @@ class DesignPreview extends Component {
     pageType: PropTypes.string.isRequired,
   }
   componentDidMount() {
-    this.attachSheet();
-    if (this.isPopupOpened(this.props)) {
-      this.apply(this.props.design.current);
+    this.attachSheet();    
+    if (isDesignOpened(this.props.popups)) {
+      this.apply(this.props.design.current);      
     }
   }
   componentWillUpdate(nextProps) {
@@ -148,11 +149,6 @@ class DesignPreview extends Component {
   componentWillUnmount() {
     this.sheet.detach();
     this.sheet = null;
-  }
-  isPopupOpened(props) {
-    return some(props.popups, (popup) => (
-      popup.style === 'DesignSettings'
-    ));
   }
   attachSheet() {
     this.sheet = jss.createStyleSheet({}, { named: false }).attach();

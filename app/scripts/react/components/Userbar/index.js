@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {
-  openDesignSettingsPopup,
+  openDesignSettingsPopup, isDesignOpened
 } from 'r/actions/popupActions';
 import {
   fetchClientState,
@@ -110,7 +110,7 @@ export default provideTranslations(connectToRedux(connect(
       popups
     } = state.popup;
     
-    const isDesignSettingOpen = filter(popups, {'style' : 'DesignSettings'}).length;    
+    const isDesignSettingOpen = isDesignOpened(popups);    
 
     return Object.assign({}, ownProps, {
       designMode,
