@@ -56,7 +56,7 @@ class Userbar extends Component {
     return (
       <div>
         <div className={className}>
-          {hasWishlist && wishlistUrl && wishlistItemsCount > 0 &&
+          {hasWishlist && wishlistUrl && wishlistItemsCount > 0 && !isDesignSettingOpen &&
             <WishlistButton
               itemsCount={wishlistItemsCount}
               text={wishlistText}
