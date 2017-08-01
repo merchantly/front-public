@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {
-  openDesignSettingsPopup,
+  openDesignSettingsPopup, isDesignOpened
 } from 'r/actions/popupActions';
 import {
   fetchClientState,
@@ -15,6 +15,7 @@ import Cookies from 'cookies-js';
 import * as cookieKeys from 'r/constants/cookieKeys';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import { canUseDOM } from 'r/helpers/dom';
+import { filter } from 'lodash';
 
 class UserbarContainer extends Component {
   componentWillMount() {
@@ -25,6 +26,7 @@ class UserbarContainer extends Component {
       fetchClientState,
       fetchOperatorState,
       openDesignSettingsPopup,
+      isDesignSettingOpen,
     } = this.props;
 
     if (designMode) {
@@ -104,6 +106,11 @@ export default provideTranslations(connectToRedux(connect(
       hasWishlist,
       wishlistItemsCount,
     } = state.clientState.data;
+    const {
+      popups
+    } = state.popup;
+    
+    const isDesignSettingOpen = isDesignOpened(popups);    
 
     return Object.assign({}, ownProps, {
       designMode,
@@ -112,6 +119,7 @@ export default provideTranslations(connectToRedux(connect(
       hasWishlist,
       wishlistItemsCount,
       vendorIsPublished,
+      isDesignSettingOpen,
     });
   },
   {
