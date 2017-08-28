@@ -8125,7 +8125,6 @@ Clientbar.propTypes = {
 
 Clientbar.defaultProps = {
   hasCabinet: false,
-  hasCart: false,
   hasWishlist: false,
   showFullBasketCount: false
 };
