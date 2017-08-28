@@ -50,7 +50,6 @@ WidgetLayout.defaultProps = {
   clientBarProps: {
     cartUrl: '/cart',
     showFullBasketCount: false,
-    hasCart: true,
   },
   showClientBar: true,
 };
