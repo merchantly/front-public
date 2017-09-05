@@ -33535,7 +33535,7 @@ var NoticeService = {
     var data = { type: type, text: text, timeout: timeout };
 
     (0, _reactDom.unmountComponentAtNode)(container);
-    (0, _reactDom.render)(_react2.default.createElement(_Notice2.default, (0, _extends3.default)({}, data, { onClose: this.close.bind(this) })), container);
+    (0, _reactDom.render)(_react2.default.createElement(_Notice2.default, (0, _extends3.default)({}, data, { onClose: this.close })), container);
   },
   notifyInfo: function notifyInfo(text, timeout) {
     this.notify('info', text, timeout);
@@ -33575,6 +33575,13 @@ var NoticeService = {
     (0, _reactDom.unmountComponentAtNode)(container);
   }
 };
+
+NoticeService.notifyError = NoticeService.notifyError.bind(NoticeService);
+NoticeService.notifySuccess = NoticeService.notifySuccess.bind(NoticeService);
+NoticeService.notifyInfo = NoticeService.notifyInfo.bind(NoticeService);
+NoticeService.close = NoticeService.close.bind(NoticeService);
+NoticeService.getTimeoutForText = NoticeService.getTimeoutForText.bind(NoticeService);
+NoticeService.getContainer = NoticeService.getContainer.bind(NoticeService);
 
 global.NoticeService = NoticeService;
 

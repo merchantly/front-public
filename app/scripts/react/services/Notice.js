@@ -29,7 +29,7 @@ const NoticeService = {
     const data = {type, text, timeout};
 
     unmountComponentAtNode(container);
-    render(<Notice {...data} onClose={this.close.bind(this)} />, container);
+    render(<Notice {...data} onClose={this.close} />, container);
   },
 
   notifyInfo(text, timeout) {
@@ -73,6 +73,13 @@ const NoticeService = {
     unmountComponentAtNode(container);
   },
 };
+
+NoticeService.notifyError = NoticeService.notifyError.bind(NoticeService);
+NoticeService.notifySuccess = NoticeService.notifySuccess.bind(NoticeService);
+NoticeService.notifyInfo = NoticeService.notifyInfo.bind(NoticeService);
+NoticeService.close = NoticeService.close.bind(NoticeService);
+NoticeService.getTimeoutForText = NoticeService.getTimeoutForText.bind(NoticeService);
+NoticeService.getContainer = NoticeService.getContainer.bind(NoticeService);
 
 global.NoticeService = NoticeService;
 
