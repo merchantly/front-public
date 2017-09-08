@@ -19133,7 +19133,7 @@ var ProductCardSimilarProducts = function ProductCardSimilarProducts(_ref) {
     'section',
     { className: 'b-item-list b-item-list_additional' },
     _react2.default.createElement(
-      'h1',
+      'h3',
       { className: 'b-item-list__title' },
       t('vendor.similar_product.title')
     ),
