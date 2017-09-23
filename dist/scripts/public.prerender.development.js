@@ -17433,7 +17433,7 @@ var ProductBlockCartFormButton = function (_Component) {
 ProductBlockCartFormButton.propTypes = {
   addGood: _react.PropTypes.func.isRequired,
   isFetching: _react.PropTypes.bool.isRequired,
-  goodId: _react.PropTypes.number.isRequired,
+  goodId: _react.PropTypes.string.isRequired,
   product: _react.PropTypes.object.isRequired,
   resetGoodState: _react.PropTypes.func.isRequired,
   showQuantity: _react.PropTypes.bool,

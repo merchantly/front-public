@@ -91,7 +91,7 @@ class ProductBlockCartFormButton extends Component {
 ProductBlockCartFormButton.propTypes = {
   addGood: PropTypes.func.isRequired,
   isFetching: PropTypes.bool.isRequired,
-  goodId: PropTypes.number.isRequired,
+  goodId: PropTypes.string.isRequired,
   product: PropTypes.object.isRequired,
   resetGoodState: PropTypes.func.isRequired,
   showQuantity: PropTypes.bool,
