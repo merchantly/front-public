@@ -63,6 +63,8 @@ export default class ProductCart extends Component {
             <ProductBulk
               good={good}
               product={product}
+              onChangeAmount={this.props.onChangeAmount}
+              amount={this.props.amount}
               t={t}
             />
           </div>

@@ -53,10 +53,11 @@ class InstagramContainer extends Component {
 
 InstagramContainer.propTypes = {
   entriesLimit: PropTypes.number,
-  isVisible: PropTypes.bool.isRequired
+  isVisible: PropTypes.bool
 };
 InstagramContainer.defaultProps = {
-  entriesLimit: 10
+  entriesLimit: 10,
+  isVisible: false
 };
 
 export default InstagramContainer;
