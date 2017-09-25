@@ -1,13 +1,23 @@
 {
   "presets": [
-    "es2015",
     "react",
-    "stage-2"
+    ["env",
+      {
+       "targets" : {
+          "browsers": ["last 3 versions", "ie >= 8"],
+          "node": "current"
+        },
+        "debug": false
+      }
+    ]
   ],
   "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
     "transform-runtime",
     "add-module-exports",
-    "transform-decorators-legacy", ["module-resolver", {
+    "transform-decorators-legacy",
+    ["module-resolver", {
       "root": ["./"],
       "alias": {
         "scripts": "./app/scripts",

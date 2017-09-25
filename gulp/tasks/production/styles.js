@@ -1,6 +1,6 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-import minifyCss from 'gulp-minify-css';
+import cleanCss from 'gulp-clean-css';
 import rename from 'gulp-rename';
 import autoprefixer from 'gulp-autoprefixer';
 import handleErrors from '../../util/handleErrors';
@@ -20,7 +20,7 @@ gulp.task('[Production] Styles', () => {
       ],
     }))
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(minifyCss())
+    .pipe(cleanCss({compatibility: 'ie9'}))
     .pipe(rename(config.production.outputName))
     .pipe(gulp.dest(config.production.dest));
 });

@@ -17,8 +17,8 @@
 // =====================================================================
 
 // Bootstrap variables/mixins
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // =====================================================================
 // Global: Variables/Mixins and etc.
@@ -36,28 +36,28 @@
 // =====================================================================
 
 // Bootstrap components
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tooltip";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/tooltip";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
+@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
 
 // jQuery.mmenu
-@import "jQuery.mmenu/src/scss/jquery.mmenu.all";
+@import "~jQuery.mmenu/src/scss/jquery.mmenu.all";
 
 // OwlCarousel
-@import "OwlCarousel/owl-carousel/scss/carousel";
-@import "OwlCarousel/owl-carousel/scss/theme";
-@import "OwlCarousel/owl-carousel/scss/transitions";
+@import "~OwlCarousel/owl-carousel/scss/carousel";
+@import "~OwlCarousel/owl-carousel/scss/theme";
+@import "~OwlCarousel/owl-carousel/scss/transitions";
 
 // Entypo Plus
-@import "entypo-plus/scss/entypo-plus";
+@import "~entypo-plus/scss/entypo-plus";
 
 // Rodal
-@import "rodal/lib/rodal";
+@import "~rodal/lib/rodal";
 
 // =====================================================================
 // Vendors
