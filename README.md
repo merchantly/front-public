@@ -24,14 +24,17 @@
   ```
 
 
-Запуск
-------
+Запуск develop-сервера
+---------------------
 
   ```sh
   # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
 
   OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api yarn start
   ```
+
+
+Заходим на `http://localhost:9000/`
 
 Зразработка
 -----------
