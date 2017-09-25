@@ -3,12 +3,12 @@ var webpack = require('webpack');
 var baseConfig = require('./webpack.config.base');
 
 module.exports = {...baseConfig,
-    devtool: 'source-map',
-    output: {
-      path: path.resolve(__dirname, 'build/scripts'),
-      filename: '[name].js',
-    },
+   // Было так
+  // devtool: 'source-map',
+  // В доке рекомендуют так
+    devtool: 'inline-source-map',
     plugins: [
+      // new CleanWebpackPlugin(['dist']),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': '"development"',
@@ -18,4 +18,9 @@ module.exports = {...baseConfig,
         'process.env.FONTS_PATH': '"../fonts"',
       }),
     ],
+    output: {
+       path: path.resolve(__dirname, 'dist'),
+      // path: path.resolve(__dirname, 'build/scripts'),
+      filename: '[name].js',
+    },
 };

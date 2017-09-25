@@ -8,6 +8,7 @@ var rules = [
     loader: 'babel-loader',
     exclude: /(node_modules|bower_components)/,
   },
+  { test: /\.haml$/, loader: "haml-haml-loader" },
   {
     test: /\.(sass|scss)$/,
     use: [{
@@ -61,6 +62,7 @@ var rules = [
 module.exports = {
   entry: {
     'widget': widgetPath,
+    'index': './app/haml/index.haml',
   },
   module: {
     // preLoaders: preLoaders,
