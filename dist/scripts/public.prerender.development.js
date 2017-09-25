@@ -11334,10 +11334,11 @@ var InstagramContainer = function (_Component) {
 
 InstagramContainer.propTypes = {
   entriesLimit: _react.PropTypes.number,
-  isVisible: _react.PropTypes.bool.isRequired
+  isVisible: _react.PropTypes.bool
 };
 InstagramContainer.defaultProps = {
-  entriesLimit: 10
+  entriesLimit: 10,
+  isVisible: false
 };
 
 exports.default = InstagramContainer;
@@ -20639,6 +20640,8 @@ var ProductCart = (_temp = _class = function (_Component) {
             _react2.default.createElement(_ProductBulk2.default, {
               good: good,
               product: product,
+              onChangeAmount: this.props.onChangeAmount,
+              amount: this.props.amount,
               t: t
             })
           )
