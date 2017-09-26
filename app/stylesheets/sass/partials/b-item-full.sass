@@ -84,16 +84,23 @@ $articulColor: #828282
     box-sizing: border-box
     letter-spacing: normal
     word-spacing: normal
+
     input[type=number]
+      margin-bottom: 0.5em
+      margin-top: 0.2em
       resize: none
       background: #fff
       border-radius: 2px
-      border: 1px solid #CFCFCF
-      padding: 6px
       width: 100%
       box-shadow: none
       height: auto
+      border: 1px solid #e2e2e2
+      padding: 14px 3px 13px 12px
       box-sizing: border-box
+      @include grid-media-query("palm")
+        text-align: center
+        margin: 0 0 10px
+
 
   &__price
     font-size: 2em
@@ -308,7 +315,7 @@ $articulColor: #828282
       @include grid-media-query((palm))
         width: 100%
 .no-select__for-childs > *
-  user-select: none  
-// для drag and drop, потому что элемент при этом выносится в корень 
+  user-select: none
+// для drag and drop, потому что элемент при этом выносится в корень
 body > .b-item-full__multiple-choice__form__row > .b-item-full__multiple-choice__form__row__items
-  width: 100%  
+  width: 100%

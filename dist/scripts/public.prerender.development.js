@@ -12693,7 +12693,7 @@ var MenuTopDesktop = function (_Component) {
           items.map(function (item, idx) {
             return item.children && item.children.length ? _react2.default.createElement(_MenuTopDesktopWithChildren2.default, {
               checkIfActive: _this2.isActive,
-              isLast: idx === items.length - 1,
+              isRight: idx === items.length - 1,
               item: item,
               key: 'menu-top-' + idx
             }) : _react2.default.createElement(_MenuTopDesktopSingle2.default, {
@@ -12999,19 +12999,52 @@ var _AppLink2 = _interopRequireDefault(_AppLink);
 
 var _app = require('../../../routes/app');
 
+var _reactDom = require('react-dom');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var POSITION_CENTER = 'center';
+var POSITION_RIGHT = 'right';
+var SPLIT_LENGTH = 6; // Больше стольки пунктов разбиваются на 2 колонки
+
+// 940 ширина контейнера меню
+// 550 ширина двойного подпункта меню (в две колонки)
+
 var MenuTopDeskTopWithChildren = function (_Component) {
   (0, _inherits3.default)(MenuTopDeskTopWithChildren, _Component);
 
-  function MenuTopDeskTopWithChildren() {
+  function MenuTopDeskTopWithChildren(props) {
     (0, _classCallCheck3.default)(this, MenuTopDeskTopWithChildren);
-    return (0, _possibleConstructorReturn3.default)(this, (MenuTopDeskTopWithChildren.__proto__ || (0, _getPrototypeOf2.default)(MenuTopDeskTopWithChildren)).apply(this, arguments));
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (MenuTopDeskTopWithChildren.__proto__ || (0, _getPrototypeOf2.default)(MenuTopDeskTopWithChildren)).call(this, props));
+
+    _this.state = { position: undefined };
+    return _this;
   }
 
   (0, _createClass3.default)(MenuTopDeskTopWithChildren, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var $node = $((0, _reactDom.findDOMNode)(this));
+      var $children = $((0, _reactDom.findDOMNode)(this.refs.children));
+      var $parent = $node.offsetParent();
+
+      var width = $children.width();
+      var containerWidth = $parent.width();
+      var left = $node.offset().left - $parent.offset().left;
+      var right = left + $children.width();
+
+      if (right > containerWidth) {
+        if (left < width) {
+          this.setState({ position: POSITION_CENTER });
+        } else {
+          this.setState({ position: POSITION_RIGHT });
+        }
+      }
+    }
+  }, {
     key: 'renderChildrenSingleColumn',
     value: function renderChildrenSingleColumn(id, children) {
       var _this2 = this;
@@ -13065,9 +13098,10 @@ var MenuTopDeskTopWithChildren = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var position = this.state.position;
       var _props = this.props,
           checkIfActive = _props.checkIfActive,
-          isLast = _props.isLast,
+          isRight = _props.isRight,
           item = _props.item;
       var id = item.id,
           children = item.children,
@@ -13077,13 +13111,15 @@ var MenuTopDeskTopWithChildren = function (_Component) {
       var liClasses = (0, _classnames2.default)({
         'b-nav__item': true,
         'b-nav__item_has-sub': true,
-        'b-nav__item_has-sub_reverse': isLast,
+        'b-nav__item_has-sub_center': position === POSITION_CENTER,
+        'b-nav__item_has-sub_reverse': isRight || position === POSITION_RIGHT,
         'b-nav__item__active': checkIfActive(item)
       });
 
       return _react2.default.createElement(
         'li',
         {
+          style: this.state.style,
           className: liClasses,
           id: 'menu_item_li_' + id,
           key: 'menu-item-with-children-' + id
@@ -13099,8 +13135,8 @@ var MenuTopDeskTopWithChildren = function (_Component) {
         ),
         _react2.default.createElement(
           'ul',
-          { className: 'b-nav__list b-nav__list_sub' },
-          children.length < 6 ? this.renderChildrenSingleColumn(id, children) : this.renderChildrenTwoColumns(id, children)
+          { ref: 'children', className: 'b-nav__list b-nav__list_sub' },
+          children.length < SPLIT_LENGTH ? this.renderChildrenSingleColumn(id, children) : this.renderChildrenTwoColumns(id, children)
         )
       );
     }
@@ -13110,14 +13146,14 @@ var MenuTopDeskTopWithChildren = function (_Component) {
 
 MenuTopDeskTopWithChildren.propTypes = {
   checkIfActive: _react.PropTypes.func.isRequired,
-  isLast: _react.PropTypes.bool.isRequired,
+  isRight: _react.PropTypes.bool.isRequired,
   item: schemas.menuItem.isRequired
 };
 
 exports.default = MenuTopDeskTopWithChildren;
 module.exports = exports['default'];
 
-},{"../../../routes/app":351,"../../schemas":330,"../common/AppLink":253,"./MenuTopDesktopChild":118,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"classnames":"classnames","react":"react"}],121:[function(require,module,exports){
+},{"../../../routes/app":351,"../../schemas":330,"../common/AppLink":253,"./MenuTopDesktopChild":118,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"classnames":"classnames","react":"react","react-dom":"react-dom"}],121:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

@@ -1,0 +1,872 @@
+{
+  "items":[
+    {
+      "id":"5709-category",
+      "type":"Category",
+      "title":"ПТИЦА",
+      "url":"http://chestnayaferma.ru/categories/5709-ptitsa",
+      "productsCount":30,
+      "children":[
+        {
+          "id":"6086-category",
+          "type":"Category",
+          "title":"Курица",
+          "url":"http://chestnayaferma.ru/kuritsa",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6087-category",
+          "type":"Category",
+          "title":"Индейка",
+          "url":"http://chestnayaferma.ru/categories/indeyka",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6089-category",
+          "type":"Category",
+          "title":"Утка",
+          "url":"http://chestnayaferma.ru/categories/utka",
+          "productsCount":5,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6088-category",
+          "type":"Category",
+          "title":"Перепелка",
+          "url":"http://chestnayaferma.ru/categories/6088-ptitsa-perepelka",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8063-category",
+          "type":"Category",
+          "title":"Цесарка",
+          "url":"http://chestnayaferma.ru/categories/8063-ptitsa-tsesarka",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6090-category",
+          "type":"Category",
+          "title":"Гусь",
+          "url":"http://chestnayaferma.ru/categories/6090-ptitsa-gus",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6166-category",
+          "type":"Category",
+          "title":"Яйца",
+          "url":"http://chestnayaferma.ru/categories/yaytsa",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6194-category",
+          "type":"Category",
+          "title":"Деликатесы",
+          "url":"http://chestnayaferma.ru/categories/6194-ptitsa-delikatesy",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6085-category",
+          "type":"Category",
+          "title":"Субпродукты",
+          "url":"http://chestnayaferma.ru/categories/6085-ptitsa-subprodukty",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6084-category",
+          "type":"Category",
+          "title":"Полуфабрикаты",
+          "url":"http://chestnayaferma.ru/categories/6084-ptitsa-polufabrikaty",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5708-category",
+      "type":"Category",
+      "title":"МЯСО",
+      "url":"http://chestnayaferma.ru/categories/5708-myaso",
+      "productsCount":85,
+      "children":[
+        {
+          "id":"6077-category",
+          "type":"Category",
+          "title":"Говядина",
+          "url":"http://chestnayaferma.ru/categories/6077-myaso-govyadina",
+          "productsCount":13,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6079-category",
+          "type":"Category",
+          "title":"Свинина",
+          "url":"http://chestnayaferma.ru/categories/6079-myaso-svinina",
+          "productsCount":12,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6083-category",
+          "type":"Category",
+          "title":"Телятина",
+          "url":"http://chestnayaferma.ru/categories/6083-myaso-telyatina",
+          "productsCount":3,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6076-category",
+          "type":"Category",
+          "title":"Баранина",
+          "url":"http://chestnayaferma.ru/categories/6076-myaso-baranina",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6080-category",
+          "type":"Category",
+          "title":"Мясо кролика",
+          "url":"http://chestnayaferma.ru/categories/6080-myaso-myaso-krolika",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6195-category",
+          "type":"Category",
+          "title":"Деликатесы",
+          "url":"http://chestnayaferma.ru/categories/6195-myaso-delikatesy",
+          "productsCount":37,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8626-category",
+          "type":"Category",
+          "title":"Дичь",
+          "url":"http://chestnayaferma.ru/categories/8626-myaso-dich",
+          "productsCount":17,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6081-category",
+          "type":"Category",
+          "title":"Субпродукты",
+          "url":"http://chestnayaferma.ru/categories/6081-myaso-subprodukty",
+          "productsCount":7,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6082-category",
+          "type":"Category",
+          "title":"Полуфабрикаты",
+          "url":"http://chestnayaferma.ru/categories/6082-myaso-polufabrikaty",
+          "productsCount":19,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6987-category",
+          "type":"Category",
+          "title":"Для питомцев",
+          "url":"http://chestnayaferma.ru/categories/dlya-pitomtsev",
+          "productsCount":10,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"8058-category",
+      "type":"Category",
+      "title":"ПОЛУФАБРИКАТЫ",
+      "url":"http://chestnayaferma.ru/polufabrikaty",
+      "productsCount":10,
+      "children":[
+        {
+          "id":"6091-category",
+          "type":"Category",
+          "title":"Пельмени",
+          "url":"http://chestnayaferma.ru/categories/6091-polufabrikaty-pelmeni",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6092-category",
+          "type":"Category",
+          "title":"Вареники",
+          "url":"http://chestnayaferma.ru/categories/6092-polufabrikaty-vareniki",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6097-category",
+          "type":"Category",
+          "title":"Хинкали",
+          "url":"http://chestnayaferma.ru/categories/6097-polufabrikaty-hinkali",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6096-category",
+          "type":"Category",
+          "title":"Манты",
+          "url":"http://chestnayaferma.ru/categories/6096-polufabrikaty-manty",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6094-category",
+          "type":"Category",
+          "title":"Димсамы",
+          "url":"http://chestnayaferma.ru/categories/6094-polufabrikaty-dimsamy",
+          "productsCount":2,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6093-category",
+          "type":"Category",
+          "title":"Гедза",
+          "url":"http://chestnayaferma.ru/categories/6093-polufabrikaty-gedza",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6095-category",
+          "type":"Category",
+          "title":"Квари",
+          "url":"http://chestnayaferma.ru/categories/6095-polufabrikaty-kvari",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5986-category",
+      "type":"Category",
+      "title":"МОЛОЧНЫЕ ПРОДУКТЫ",
+      "url":"http://chestnayaferma.ru/categories/5986-molochnye-produkty",
+      "productsCount":30,
+      "children":[
+        {
+          "id":"6108-category",
+          "type":"Category",
+          "title":"Сыр",
+          "url":"http://chestnayaferma.ru/categories/syr",
+          "productsCount":18,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6111-category",
+          "type":"Category",
+          "title":"Масло сливочное",
+          "url":"http://chestnayaferma.ru/categories/6111-molochnye-produkty-maslo-slivochnoe",
+          "productsCount":3,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6110-category",
+          "type":"Category",
+          "title":"Кисломолочные продукты",
+          "url":"http://chestnayaferma.ru/categories/6110-molochnye-produkty-kislomolochnye-produkty",
+          "productsCount":6,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6109-category",
+          "type":"Category",
+          "title":"Молоко и сливки",
+          "url":"http://chestnayaferma.ru/categories/6109-molochnye-produkty-moloko-i-slivki",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8665-category",
+          "type":"Category",
+          "title":"Аннушкина ферма",
+          "url":"http://chestnayaferma.ru/categories/annushkina-ferma",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5816-category",
+      "type":"Category",
+      "title":"РЫБА",
+      "url":"http://chestnayaferma.ru/categories/5816-ryba",
+      "productsCount":70,
+      "children":[
+        {
+          "id":"6105-category",
+          "type":"Category",
+          "title":"Рыба свежая",
+          "url":"http://chestnayaferma.ru/categories/6105-ryba-ryba-svezhaya",
+          "productsCount":28,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6106-category",
+          "type":"Category",
+          "title":"Рыба копченая / соленая",
+          "url":"http://chestnayaferma.ru/categories/6106-ryba-ryba-kopchenaya-solenaya",
+          "productsCount":14,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6128-category",
+          "type":"Category",
+          "title":"Морепродукты",
+          "url":"http://chestnayaferma.ru/categories/6128-ryba-moreprodukty",
+          "productsCount":20,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6107-category",
+          "type":"Category",
+          "title":"Икра",
+          "url":"http://chestnayaferma.ru/categories/6107-ryba-ikra",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5814-category",
+      "type":"Category",
+      "title":"ОВОЩИ / ФРУКТЫ",
+      "url":"http://chestnayaferma.ru/categories/5814-ovoschi-frukty",
+      "productsCount":151,
+      "children":[
+        {
+          "id":"13508-category",
+          "type":"Category",
+          "title":"Фруктово-овощные букеты",
+          "url":"http://chestnayaferma.ru/categories/13508-ovoschi-frukty-fruktovo-ovoschnye-bukety",
+          "productsCount":14,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6129-category",
+          "type":"Category",
+          "title":"Овощи",
+          "url":"http://chestnayaferma.ru/categories/6129-ovoschi-frukty-ovoschi",
+          "productsCount":44,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6130-category",
+          "type":"Category",
+          "title":"Фрукты",
+          "url":"http://chestnayaferma.ru/categories/6130-ovoschi-frukty-frukty",
+          "productsCount":48,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6131-category",
+          "type":"Category",
+          "title":"Зелень",
+          "url":"http://chestnayaferma.ru/categories/6131-ovoschi-frukty-zelen",
+          "productsCount":25,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6132-category",
+          "type":"Category",
+          "title":"Ягоды",
+          "url":"http://chestnayaferma.ru/categories/yagody",
+          "productsCount":13,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6133-category",
+          "type":"Category",
+          "title":"Грибы",
+          "url":"http://chestnayaferma.ru/categories/6133-ovoschi-frukty-griby",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5993-category",
+      "type":"Category",
+      "title":"КУЛИНАРИЯ",
+      "url":"http://chestnayaferma.ru/categories/5993-kulinariya",
+      "productsCount":97,
+      "children":[
+        {
+          "id":"9368-category",
+          "type":"Category",
+          "title":"Plov.com",
+          "url":"http://chestnayaferma.ru/categories/9368-kulinariya-plov-com",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8975-category",
+          "type":"Category",
+          "title":"Щепка",
+          "url":"http://chestnayaferma.ru/categories/8975-kulinariya-schepka",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8915-category",
+          "type":"Category",
+          "title":"Кулинарная лавка \"Оджахури\"",
+          "url":"http://chestnayaferma.ru/categories/8915-kulinariya-kulinarnaya-lavka-odzhahuri",
+          "productsCount":24,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8730-category",
+          "type":"Category",
+          "title":"Самса",
+          "url":"http://chestnayaferma.ru/categories/8730-kulinariya-samsa",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6249-category",
+          "type":"Category",
+          "title":"Соленья",
+          "url":"http://chestnayaferma.ru/categories/6249-kulinariya-solenya",
+          "productsCount":30,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8065-category",
+          "type":"Category",
+          "title":"Соусы домашние",
+          "url":"http://chestnayaferma.ru/categories/8065-kulinariya-sousy-domashnie",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7869-category",
+          "type":"Category",
+          "title":"Сладости",
+          "url":"http://chestnayaferma.ru/categories/7869-kulinariya-sladosti",
+          "productsCount":28,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7501-category",
+          "type":"Category",
+          "title":"Пироги",
+          "url":"http://chestnayaferma.ru/categories/pirogi",
+          "productsCount":18,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7485-category",
+          "type":"Category",
+          "title":"Дагестанское чуду",
+          "url":"http://chestnayaferma.ru/categories/7485-kulinariya-dagestanskoe-chudu",
+          "productsCount":3,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"6065-category",
+      "type":"Category",
+      "title":"БАКАЛЕЯ",
+      "url":"http://chestnayaferma.ru/categories/6065-bakaleya",
+      "productsCount":194,
+      "children":[
+        {
+          "id":"8815-category",
+          "type":"Category",
+          "title":"Мюсли / Хлопья / Отруби",
+          "url":"http://chestnayaferma.ru/categories/8815-bakaleya-myusli-hlopya-otrubi",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"8733-category",
+          "type":"Category",
+          "title":"Кофе",
+          "url":"http://chestnayaferma.ru/categories/8733-bakaleya-kofe",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6198-category",
+          "type":"Category",
+          "title":"Специи",
+          "url":"http://chestnayaferma.ru/categories/6198-bakaleya-spetsii",
+          "productsCount":38,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6197-category",
+          "type":"Category",
+          "title":"Сухофрукты",
+          "url":"http://chestnayaferma.ru/categories/6197-bakaleya-suhofrukty",
+          "productsCount":25,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6196-category",
+          "type":"Category",
+          "title":"Орехи",
+          "url":"http://chestnayaferma.ru/categories/6196-bakaleya-orehi",
+          "productsCount":16,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6115-category",
+          "type":"Category",
+          "title":"Крупы",
+          "url":"http://chestnayaferma.ru/categories/6115-bakaleya-krupy",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6116-category",
+          "type":"Category",
+          "title":"Макаронные изделия / Лапша",
+          "url":"http://chestnayaferma.ru/categories/6116-bakaleya-makaronnye-izdeliya-lapsha",
+          "productsCount":20,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6199-category",
+          "type":"Category",
+          "title":"Мед",
+          "url":"http://chestnayaferma.ru/categories/6199-bakaleya-med",
+          "productsCount":13,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6226-category",
+          "type":"Category",
+          "title":"Чай",
+          "url":"http://chestnayaferma.ru/categories/6226-bakaleya-chay",
+          "productsCount":8,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7573-category",
+          "type":"Category",
+          "title":"Консервы",
+          "url":"http://chestnayaferma.ru/categories/7573-bakaleya-konservy",
+          "productsCount":19,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7923-category",
+          "type":"Category",
+          "title":"Варенье / Джемы / Урбеч",
+          "url":"http://chestnayaferma.ru/categories/7923-bakaleya-varenie-dzhemy-urbech",
+          "productsCount":3,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7922-category",
+          "type":"Category",
+          "title":"Соусы",
+          "url":"http://chestnayaferma.ru/categories/7922-bakaleya-sousy",
+          "productsCount":22,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7921-category",
+          "type":"Category",
+          "title":"Соль / Сахар",
+          "url":"http://chestnayaferma.ru/categories/7921-bakaleya-sol-sahar",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"7574-category",
+          "type":"Category",
+          "title":"Уксус",
+          "url":"http://chestnayaferma.ru/categories/7574-bakaleya-uksus",
+          "productsCount":4,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6117-category",
+          "type":"Category",
+          "title":"Масло растительное",
+          "url":"http://chestnayaferma.ru/categories/6117-bakaleya-maslo-rastitelnoe",
+          "productsCount":13,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"6114-category",
+      "type":"Category",
+      "title":"ХЛЕБ",
+      "url":"http://chestnayaferma.ru/categories/hleb",
+      "productsCount":3,
+      "children":[
+        {
+          "id":"7484-category",
+          "type":"Category",
+          "title":"Хлеб",
+          "url":"http://chestnayaferma.ru/categories/7484-hleb-hleb",
+          "productsCount":3,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    },
+    {
+      "id":"5988-category",
+      "type":"Category",
+      "title":"НАПИТКИ",
+      "url":"http://chestnayaferma.ru/categories/5988-napitki",
+      "productsCount":6,
+      "children":[
+        {
+          "id":"7602-category",
+          "type":"Category",
+          "title":"Компоты / Лимонады",
+          "url":"http://chestnayaferma.ru/categories/kompoty",
+          "productsCount":1,
+          "children":[
+
+          ],
+          "linkTarget":null
+        },
+        {
+          "id":"6155-category",
+          "type":"Category",
+          "title":"Вода",
+          "url":"http://chestnayaferma.ru/categories/6155-napitki-voda",
+          "productsCount":5,
+          "children":[
+
+          ],
+          "linkTarget":null
+        }
+      ],
+      "linkTarget":null
+    }
+  ],
+  "activeItems": [
+    {
+    "id":"5709-category",
+    "type":"Category",
+    "title":"ПТИЦА",
+    "url":"http://chestnayaferma.ru/categories/5709-ptitsa",
+    "children": []
+    }
+  ]
+}

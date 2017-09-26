@@ -11,7 +11,13 @@ import productMultiChoice from '../../test/fixtures/products/multiple-choice';
 import productWeight from '../../test/fixtures/products/weight';
 import productDoesntSell from '../../test/fixtures/products/3917';
 import productNoGoods from '../../test/fixtures/products/no-goods';
+
 import menuTopSample1 from 'test/fixtures/menuTop/sample1';
+
+// Много пунктов в ширину и в глубину.
+// Есть пункты с подпунктами с краев.
+import menuTopSample0 from 'test/fixtures/menuTop/sample0';
+
 import menuTopStickySample from 'test/fixtures/menuTop/sticky';
 import menuTopSample2 from 'test/fixtures/menuTop/sample2';
 import menuBottomSample from 'test/fixtures/menuBottom/sample';
@@ -40,7 +46,7 @@ global.ProductCardMultiChoice = () => React.createElement(global.ProductCard, pr
 global.ProductCardDoesntSell = () => React.createElement(global.ProductCard, productDoesntSell);
 global.ProductCardWeight = () => React.createElement(global.ProductCard, productWeight);
 global.ProductCardNoGoods = () => React.createElement(global.ProductCard, productNoGoods);
-global.MenuTopSample1 = () => React.createElement(global.MenuTop, menuTopSample1);
+global.MenuTopSample1 = () => React.createElement(global.MenuTop, menuTopSample0);
 global.MenuTopSample2 = () => React.createElement(global.MenuTop, menuTopSample2);
 global.MenuTopStickySample = () => React.createElement(global.MenuTop, menuTopStickySample);
 global.MenuBottomSample = () => React.createElement(global.MenuBottom, menuBottomSample);

@@ -34,7 +34,7 @@ class MenuTopDesktop extends Component {
             ? (
               <MenuTopDesktopWithChildren
                 checkIfActive={this.isActive}
-                isLast={idx === items.length - 1}
+                isRight={idx === items.length - 1}
                 item={item}
                 key={`menu-top-${idx}`}
               />

@@ -4,8 +4,41 @@ import * as schemas from 'r/schemas';
 import MenuTopDesktopChild from './MenuTopDesktopChild';
 import AppLink from 'rc/common/AppLink';
 import { categoryRoute } from 'scripts/routes/app';
+import { findDOMNode } from 'react-dom';
+
+const POSITION_CENTER = 'center';
+const POSITION_RIGHT = 'right';
+const SPLIT_LENGTH = 6; // Больше стольки пунктов разбиваются на 2 колонки
+
+// 940 ширина контейнера меню
+// 550 ширина двойного подпункта меню (в две колонки)
 
 class MenuTopDeskTopWithChildren extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { position: undefined };
+  }
+
+  componentDidMount() {
+    const $node = $(findDOMNode(this));
+    const $children = $(findDOMNode(this.refs.children));
+    const $parent = $node.offsetParent();
+
+    const width = $children.width();
+    const containerWidth = $parent.width();
+    const left = $node.offset().left - $parent.offset().left;
+    const right = left + $children.width();
+
+    if (right > containerWidth) {
+      if (left < width) {
+        this.setState( { position: POSITION_CENTER } );
+      } else {
+        this.setState( { position: POSITION_RIGHT } );
+      }
+    }
+  }
+
   renderChildrenSingleColumn(id, children) {
     return (
       <li className="b-nav__list__col" id={`menu_item_li_${id}_children_group`}>
@@ -48,8 +81,11 @@ class MenuTopDeskTopWithChildren extends Component {
   }
   render() {
     const {
+      position
+    } = this.state;
+    const {
       checkIfActive,
-      isLast,
+      isRight,
       item,
     } = this.props;
     const {
@@ -61,12 +97,14 @@ class MenuTopDeskTopWithChildren extends Component {
     const liClasses = classNames({
       'b-nav__item': true,
       'b-nav__item_has-sub': true,
-      'b-nav__item_has-sub_reverse': isLast,
+      'b-nav__item_has-sub_center': position === POSITION_CENTER,
+      'b-nav__item_has-sub_reverse': isRight || position === POSITION_RIGHT,
       'b-nav__item__active': checkIfActive(item),
     });
 
     return (
       <li
+        style={this.state.style}
         className={liClasses}
         id={`menu_item_li_${id}`}
         key={`menu-item-with-children-${id}`}
@@ -78,8 +116,8 @@ class MenuTopDeskTopWithChildren extends Component {
         >
           {title}
         </AppLink>
-        <ul className="b-nav__list b-nav__list_sub">
-          {children.length < 6 ?
+        <ul ref="children" className="b-nav__list b-nav__list_sub">
+          {children.length < SPLIT_LENGTH ?
             this.renderChildrenSingleColumn(id, children) :
             this.renderChildrenTwoColumns(id, children)
           }
@@ -91,7 +129,7 @@ class MenuTopDeskTopWithChildren extends Component {
 
 MenuTopDeskTopWithChildren.propTypes = {
   checkIfActive: PropTypes.func.isRequired,
-  isLast: PropTypes.bool.isRequired,
+  isRight: PropTypes.bool.isRequired,
   item: schemas.menuItem.isRequired,
 };
 
