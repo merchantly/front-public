@@ -1,0 +1,192 @@
+{
+    "id": 21109638,
+    "totalPrice": {
+        "cents": 350000,
+        "currencyIsoCode": "RUB"
+    },
+    "totalWithDeliveryPrice": {
+        "cents": 380000,
+        "currencyIsoCode": "RUB"
+    },
+    "productsWithPackagePrice": {
+        "cents": 350000,
+        "currencyIsoCode": "RUB"
+    },
+    "productsPrice": {
+        "cents": 350000,
+        "currencyIsoCode": "RUB"
+    },
+    "deliveryPrice": {
+        "cents": 30000,
+        "currencyIsoCode": "RUB"
+    },
+    "packagePrice": {
+        "cents": 0,
+        "currencyIsoCode": "RUB"
+    },
+    "items": [
+        {
+            "id": 284298,
+            "good": {
+                "id": 24462,
+                "article": "B004-11/RU",
+                "updatedAt": "2017-09-26T08:23:31.778+03:00",
+                "createdAt": "2015-06-02T20:22:25.116+03:00",
+                "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzI0NDYy",
+                "type": "Product",
+                "title": "Браслет цепочка Крест с цирконами серебряный р",
+                "attributes": [
+                    {
+                        "propertyId": 89,
+                        "type": "AttributeDictionary",
+                        "title": "Цвет покрытия",
+                        "value": "родий",
+                        "colorHex": null,
+                        "productsUrl": "http://wanna-be.ru/entities/44-rodiy"
+                    },
+                    {
+                        "propertyId": 91,
+                        "type": "AttributeDictionary",
+                        "title": "Цвет вставок",
+                        "value": "белый",
+                        "colorHex": null,
+                        "productsUrl": "http://wanna-be.ru/entities/38-belyy"
+                    },
+                    {
+                        "propertyId": 93,
+                        "type": "AttributeDictionary",
+                        "title": "Металл, проба",
+                        "value": "Серебро 925",
+                        "colorHex": null,
+                        "productsUrl": "http://wanna-be.ru/entities/37-serebro-925"
+                    },
+                    {
+                        "propertyId": 99,
+                        "type": "AttributeDictionary",
+                        "title": "Вставки",
+                        "value": "куб. циркон",
+                        "colorHex": null,
+                        "productsUrl": "http://wanna-be.ru/entities/65-kub-tsirkon"
+                    }
+                ],
+                "image": {
+                    "url": "https://kiiiosk-prod.s3.eu-central-1.amazonaws.com/uploads/shop/5/uploads/product_image/image/30758/a21e1d7a-4ea8-4084-b273-d9f5b19e195c.jpg",
+                    "product_id": 24462,
+                    "vendor_id": 5,
+                    "id": 30758
+                },
+                "images": [
+                    {
+                        "title": "Браслет цепочка Крест с цирконами серебряный р",
+                        "url": "https://kiiiosk-prod.s3.eu-central-1.amazonaws.com/uploads/shop/5/uploads/product_image/image/30758/a21e1d7a-4ea8-4084-b273-d9f5b19e195c.jpg",
+                        "uid": "3e5d500ca72959fa3bf6b72bb64fc475af8fce3208d2a9068dd9fd46b104b1c2"
+                    },
+                    {
+                        "title": "Браслет цепочка Крест с цирконами серебряный р",
+                        "url": "https://kiiiosk-prod.s3.eu-central-1.amazonaws.com/uploads/shop/5/uploads/product_image/image/25528/7a6f6c7b-7f06-4bfd-bda6-5abc8573d336.jpg",
+                        "uid": "ed571fc2fe0cd02a21f42d64670a08f8700fcccb0a9c516c991b1a38c0cf2084"
+                    }
+                ],
+                "customAttributes": {
+                    "Цвет покрытия": "родий",
+                    "Цвет вставок": "белый",
+                    "Металл, проба": "Серебро 925",
+                    "Вставки": "куб. циркон"
+                },
+                "defaultUrl": "http://wanna-be.ru/products/24462-braslet-tsepochka-krest-s-tsirkonami-serebryanyy-r",
+                "addToCartUrl": "http://wanna-be.ru/cart/items?cart_item%5Bgood_id%5D=Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzI0NDYy",
+                "quantityUnit": {
+                    "id": "pcs",
+                    "short": "шт."
+                },
+                "category": {
+                    "id": 614,
+                    "name": "Браслет",
+                    "full_name": "Браслеты/Браслет",
+                    "parent_id": 635,
+                    "updated_at": "2017-09-26T08:32:43.335+03:00",
+                    "position": 28,
+                    "has_children": false,
+                    "is_root": {
+                        "id": 612,
+                        "vendor_id": 5,
+                        "created_at": "2014-12-09T18:12:35.117+03:00",
+                        "updated_at": "2017-09-26T08:33:34.439+03:00",
+                        "position": 803,
+                        "ancestry": null,
+                        "products_count": 872,
+                        "published_products_count": 50,
+                        "ms_uuid": null,
+                        "stock_synced_at": null,
+                        "stock_dump": null,
+                        "externalcode": null,
+                        "deleted_at": null,
+                        "vk_album_id": null,
+                        "active_products_count": 311,
+                        "deep_products_count": 2120,
+                        "deep_published_products_count": 773,
+                        "deep_active_products_count": 1355,
+                        "stock_description": null,
+                        "meta_title": null,
+                        "meta_keywords": null,
+                        "meta_description": null,
+                        "h1": null,
+                        "image": {
+                            "url": "https://assets.kiiiosk.ru/images/fallback/product-none.png"
+                        },
+                        "cached_default_slug": "kornevaya-kategoriya",
+                        "vk_synced_at": null,
+                        "stock_title": null,
+                        "show_children_products": false,
+                        "custom_title_translations": {
+                            "ru": "Корневая категория"
+                        },
+                        "description_translations": {
+                            "ru": null
+                        },
+                        "bottom_text_translations": null,
+                        "cached_title_translations": {
+                            "ru": "Корневая категория"
+                        },
+                        "next_resource_id": null
+                    },
+                    "products_count": 110
+                },
+                "quantity": 35,
+                "count": 35,
+                "description": "Символ креста имеет для каждого собственное значение. Для кого-то это знак веры и высшей роли Божественного, для других символ свободы творчества. Для третьих это образ рок-звезды. Выбери тот, который подходит тебе.",
+                "stockSyncedAt": "2017-09-26T08:15:10.806+03:00",
+                "maxOrderableQuantity": 35,
+                "hasOrderingGoods": true,
+                "sku": "B004-11/RU",
+                "ms_uuid": "fa48ff37-0940-11e5-90a2-8ecb000ca797",
+                "isArchived": false,
+                "isSale": false,
+                "actualPrice": {
+                    "cents": 350000,
+                    "currencyIsoCode": "RUB"
+                },
+                "price": {
+                    "cents": 350000,
+                    "currencyIsoCode": "RUB"
+                },
+                "sellingByWeight": false,
+                "weightOfPrice": 0
+            },
+            "quantity": 1,
+            "weight": null,
+            "count": 1,
+            "destroy_path": "/cart/items/284298",
+            "errors": {}
+        }
+    ],
+    "packageItem": null,
+    "itemsAmount": 1,
+    "showCouponCode": true,
+    "couponCode": "",
+    "defaultUrl": "http://wanna-be.ru/cart",
+    "errors": {},
+    "updatedAt": "2017-09-25T22:10:22.688+03:00",
+    "createdAt": "2017-04-07T12:54:01.360+03:00",
+    "sessionId": "ce0e9a27378bd8c479870aa839b73bfc"
+}
