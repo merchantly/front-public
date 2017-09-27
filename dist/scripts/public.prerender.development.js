@@ -4238,10 +4238,11 @@ var CatalogFilter = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: containerClasses },
-        isFilterToggleVisible && _react2.default.createElement(_CatalogFilterToggle2.default, {
+        _react2.default.createElement(_CatalogFilterToggle2.default, {
           handleFilterToggle: handleFilterToggle,
           isOpen: isOpen,
-          t: t
+          t: t,
+          isVisible: isFilterToggleVisible
         }),
         _react2.default.createElement(
           'div',

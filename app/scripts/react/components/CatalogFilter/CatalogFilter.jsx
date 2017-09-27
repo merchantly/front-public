@@ -20,11 +20,12 @@ class CatalogFilter extends Component {
 
     return (
       <div className={containerClasses}>
-        {isFilterToggleVisible && <CatalogFilterToggle
+        <CatalogFilterToggle
           handleFilterToggle={handleFilterToggle}
           isOpen={isOpen}
           t={t}
-        />}
+          isVisible={isFilterToggleVisible}
+        />
         <div className="b-item-list__filter">
           <form action={filterUrl} method="get">
             <div className="b-full-filter">
