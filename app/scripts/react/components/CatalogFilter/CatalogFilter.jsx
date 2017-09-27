@@ -20,12 +20,11 @@ class CatalogFilter extends Component {
 
     return (
       <div className={containerClasses}>
-        <CatalogFilterToggle
+        {isFilterToggleVisible && <CatalogFilterToggle
           handleFilterToggle={handleFilterToggle}
           isOpen={isOpen}
-          isVisible={isFilterToggleVisible}
           t={t}
-        />
+        />}
         <div className="b-item-list__filter">
           <form action={filterUrl} method="get">
             <div className="b-full-filter">
@@ -39,6 +38,7 @@ class CatalogFilter extends Component {
 }
 
 CatalogFilter.propTypes = {
+  hideInMobileByDefault: PropTypes.bool,
   filterName: PropTypes.string,
   filterUrl: PropTypes.string.isRequired,
   handleFilterToggle: PropTypes.func.isRequired,

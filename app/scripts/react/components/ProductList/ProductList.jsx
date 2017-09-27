@@ -26,12 +26,14 @@ class ProductList extends Component {
       showQuantity,
       t,
       title,
+      isFilterOpenByDefault
     } = this.props;
 
     return (
       <ItemListCatalog
         catalogFilterProps={catalogFilterProps}
         showCatalogFilter={showCatalogFilter}
+        isOpenByDefault={isFilterOpenByDefault}
         t={t}
       >
         {title && (
@@ -90,6 +92,11 @@ ProductList.propTypes = {
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
+  isFilterOpenByDefault: PropTypes.bool,
 };
+
+ProductList.defaultProps = {
+  isFilterOpenByDefault: false
+}
 
 export default ProductList;

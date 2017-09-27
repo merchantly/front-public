@@ -25,12 +25,14 @@ class ProductGroup extends Component {
       showQuantity,
       t,
       title,
+      isFilterOpenByDefault,
     } = this.props;
 
     return (
       <ItemListCatalog
         catalogFilterProps={catalogFilterProps}
         showCatalogFilter={showCatalogFilter}
+        isOpenByDefault={isFilterOpenByDefault}
         t={t}
       >
         {title && (
@@ -71,12 +73,14 @@ ProductGroup.propTypes = {
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorCategoryPath: PropTypes.string.isRequired,
+  isFilterOpenByDefault: PropTypes.bool,
 };
 
 ProductGroup.defaultProps = {
   showCartButton: false,
   showCatalogFilter: false,
   showQuantity: false,
+  isFilterOpenByDefault: false
 };
 
 export default ProductGroup;

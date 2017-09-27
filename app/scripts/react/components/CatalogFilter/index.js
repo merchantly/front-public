@@ -10,6 +10,7 @@ class CatalogFilterContainer extends Component {
 }
 
 CatalogFilterContainer.propTypes = {
+  hideInMobileByDefault: PropTypes.bool,
   filterName: PropTypes.string,
   filterUrl: PropTypes.string.isRequired,
   isFilterToggleVisible: PropTypes.bool,
@@ -26,6 +27,7 @@ CatalogFilterContainer.propTypes = {
 };
 
 CatalogFilterContainer.defaultProps = {
+  hideInMobileByDefault: true,
   filterUrl: '',
   isFilterToggleVisible: true,
   options: [],

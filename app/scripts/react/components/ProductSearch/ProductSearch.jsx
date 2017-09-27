@@ -16,6 +16,7 @@ class ProductSearch extends Component {
       showQuantity,
       t,
       vendorRootPath,
+      isFilterOpenByDefault,
     } = this.props;
 
     return products.items.length
@@ -37,6 +38,7 @@ class ProductSearch extends Component {
         <ItemListCatalog
           catalogFilterProps={catalogFilterProps}
           showCatalogFilter={showCatalogFilter}
+          isOpenByDefault={isFilterOpenByDefault}
           t={t}
         >
           <div className="b-text b-text_center">
@@ -65,6 +67,11 @@ ProductSearch.propTypes = {
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
   vendorRootPath: PropTypes.string,
+  isFilterOpenByDefault: PropTypes.bool,
+};
+
+ProductSearch.defaultProps = {
+  isFilterOpenByDefault: false
 };
 
 export default ProductSearch;

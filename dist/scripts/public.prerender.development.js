@@ -4238,10 +4238,9 @@ var CatalogFilter = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: containerClasses },
-        _react2.default.createElement(_CatalogFilterToggle2.default, {
+        isFilterToggleVisible && _react2.default.createElement(_CatalogFilterToggle2.default, {
           handleFilterToggle: handleFilterToggle,
           isOpen: isOpen,
-          isVisible: isFilterToggleVisible,
           t: t
         }),
         _react2.default.createElement(
@@ -4265,6 +4264,7 @@ var CatalogFilter = function (_Component) {
 
 
 CatalogFilter.propTypes = {
+  hideInMobileByDefault: _react.PropTypes.bool,
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
   handleFilterToggle: _react.PropTypes.func.isRequired,
@@ -5379,6 +5379,7 @@ var CatalogFilterContainer = function (_Component) {
 
 
 CatalogFilterContainer.propTypes = {
+  hideInMobileByDefault: _react.PropTypes.bool,
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
   isFilterToggleVisible: _react.PropTypes.bool,
@@ -5392,6 +5393,7 @@ CatalogFilterContainer.propTypes = {
 };
 
 CatalogFilterContainer.defaultProps = {
+  hideInMobileByDefault: true,
   filterUrl: '',
   isFilterToggleVisible: true,
   options: [],
@@ -11505,6 +11507,8 @@ var _CatalogFilter2 = _interopRequireDefault(_CatalogFilter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var MIN_DESKTOP_WIDTH = 1024;
+
 var ItemListCatalog = function (_Component) {
   (0, _inherits3.default)(ItemListCatalog, _Component);
 
@@ -11516,12 +11520,19 @@ var ItemListCatalog = function (_Component) {
     _this.handleFilterToggle = _this.handleFilterToggle.bind(_this);
 
     _this.state = {
-      isOpen: true
+      isOpen: _this.props.isOpenByDefault
     };
     return _this;
   }
 
   (0, _createClass3.default)(ItemListCatalog, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if ($(document).width() >= MIN_DESKTOP_WIDTH) {
+        this.setState({ isOpen: true });
+      }
+    }
+  }, {
     key: 'handleFilterToggle',
     value: function handleFilterToggle() {
       this.setState({ isOpen: !this.state.isOpen });
@@ -11559,10 +11570,16 @@ var ItemListCatalog = function (_Component) {
 }(_react.Component);
 
 ItemListCatalog.propTypes = {
+  isOpenByDefault: _react.PropTypes.bool,
   catalogFilterProps: _react.PropTypes.shape((0, _extends3.default)({}, _CatalogFilter2.default.propTypes)),
   children: _react.PropTypes.oneOfType([_react.PropTypes.node, _react.PropTypes.arrayOf(_react.PropTypes.node)]),
   showCatalogFilter: _react.PropTypes.bool,
   t: _react.PropTypes.func.isRequired
+};
+
+ItemListCatalog.defaultProps = {
+  isOpenByDefault: false,
+  showCatalogFilter: false
 };
 
 exports.default = ItemListCatalog;
@@ -22531,7 +22548,8 @@ var ProductGroup = function (_Component) {
           showCatalogFilter = _props.showCatalogFilter,
           showQuantity = _props.showQuantity,
           t = _props.t,
-          title = _props.title;
+          title = _props.title,
+          isFilterOpenByDefault = _props.isFilterOpenByDefault;
 
 
       return _react2.default.createElement(
@@ -22539,6 +22557,7 @@ var ProductGroup = function (_Component) {
         {
           catalogFilterProps: catalogFilterProps,
           showCatalogFilter: showCatalogFilter,
+          isOpenByDefault: isFilterOpenByDefault,
           t: t
         },
         title && _react2.default.createElement(
@@ -22587,13 +22606,15 @@ ProductGroup.propTypes = {
   showQuantity: _react.PropTypes.bool.isRequired,
   t: _react.PropTypes.func.isRequired,
   title: _react.PropTypes.string,
-  vendorCategoryPath: _react.PropTypes.string.isRequired
+  vendorCategoryPath: _react.PropTypes.string.isRequired,
+  isFilterOpenByDefault: _react.PropTypes.bool
 };
 
 ProductGroup.defaultProps = {
   showCartButton: false,
   showCatalogFilter: false,
-  showQuantity: false
+  showQuantity: false,
+  isFilterOpenByDefault: false
 };
 
 exports.default = ProductGroup;
@@ -22790,7 +22811,8 @@ var ProductList = function (_Component) {
           showPagination = _props.showPagination,
           showQuantity = _props.showQuantity,
           t = _props.t,
-          title = _props.title;
+          title = _props.title,
+          isFilterOpenByDefault = _props.isFilterOpenByDefault;
 
 
       return _react2.default.createElement(
@@ -22798,6 +22820,7 @@ var ProductList = function (_Component) {
         {
           catalogFilterProps: catalogFilterProps,
           showCatalogFilter: showCatalogFilter,
+          isOpenByDefault: isFilterOpenByDefault,
           t: t
         },
         title && _react2.default.createElement(
@@ -22857,7 +22880,12 @@ ProductList.propTypes = {
   showPagination: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool,
   t: _react.PropTypes.func.isRequired,
-  title: _react.PropTypes.string
+  title: _react.PropTypes.string,
+  isFilterOpenByDefault: _react.PropTypes.bool
+};
+
+ProductList.defaultProps = {
+  isFilterOpenByDefault: false
 };
 
 exports.default = ProductList;
@@ -23218,7 +23246,8 @@ var ProductSearch = function (_Component) {
           showNextButton = _props.showNextButton,
           showQuantity = _props.showQuantity,
           t = _props.t,
-          vendorRootPath = _props.vendorRootPath;
+          vendorRootPath = _props.vendorRootPath,
+          isFilterOpenByDefault = _props.isFilterOpenByDefault;
 
 
       return products.items.length ? _react2.default.createElement(_ProductList2.default, {
@@ -23237,6 +23266,7 @@ var ProductSearch = function (_Component) {
         {
           catalogFilterProps: catalogFilterProps,
           showCatalogFilter: showCatalogFilter,
+          isOpenByDefault: isFilterOpenByDefault,
           t: t
         },
         _react2.default.createElement(
@@ -23271,7 +23301,12 @@ ProductSearch.propTypes = {
   showNextButton: _react.PropTypes.bool,
   showQuantity: _react.PropTypes.bool.isRequired,
   t: _react.PropTypes.func.isRequired,
-  vendorRootPath: _react.PropTypes.string
+  vendorRootPath: _react.PropTypes.string,
+  isFilterOpenByDefault: _react.PropTypes.bool
+};
+
+ProductSearch.defaultProps = {
+  isFilterOpenByDefault: false
 };
 
 exports.default = ProductSearch;
