@@ -16,7 +16,8 @@
     "dist:test": "node ./dist_tests/prerender",
     "dist:widget": "webpack --config webpack.config.production.js",
     "deploy": "gulp deploy",
-    "start": "npm run build:widget & gulp server"
+    "start": "npm run build:widget & npm run server",
+    "server": "gulp server"
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
