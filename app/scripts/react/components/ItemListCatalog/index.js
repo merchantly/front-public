@@ -11,19 +11,22 @@ class ItemListCatalog extends Component {
     this.handleFilterToggle = this.handleFilterToggle.bind(this);
 
     this.state = {
-      isOpen: this.props.isOpenByDefault
+      isOpen: false
     };
   }
 
   componentDidMount() {
-    if ($(document).width() >= MIN_DESKTOP_WIDTH) {
-      this.setState({ isOpen: true });
-    }
+    // В мобильнов варианте автоматически закрываем
+    // Сразу закрытым делать нельзя, потому что тогда не правильно
+    // отрисовываются размеры изображение в галерее.
+    // Они задаются больше и тогда изображения сдвигаются за контейнер.
+    this.setState({ isOpen: ($(document).width() >= MIN_DESKTOP_WIDTH) });
   }
 
   handleFilterToggle() {
     this.setState({ isOpen: !this.state.isOpen });
   }
+
   render() {
     const {
       children,
@@ -69,7 +72,7 @@ ItemListCatalog.propTypes = {
 };
 
 ItemListCatalog.defaultProps = {
-  isOpenByDefault: false,
+  isOpenByDefault: true,
   showCatalogFilter: false
 };
 

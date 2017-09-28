@@ -4265,7 +4265,6 @@ var CatalogFilter = function (_Component) {
 
 
 CatalogFilter.propTypes = {
-  hideInMobileByDefault: _react.PropTypes.bool,
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
   handleFilterToggle: _react.PropTypes.func.isRequired,
@@ -5380,7 +5379,6 @@ var CatalogFilterContainer = function (_Component) {
 
 
 CatalogFilterContainer.propTypes = {
-  hideInMobileByDefault: _react.PropTypes.bool,
   filterName: _react.PropTypes.string,
   filterUrl: _react.PropTypes.string.isRequired,
   isFilterToggleVisible: _react.PropTypes.bool,
@@ -5394,7 +5392,6 @@ CatalogFilterContainer.propTypes = {
 };
 
 CatalogFilterContainer.defaultProps = {
-  hideInMobileByDefault: true,
   filterUrl: '',
   isFilterToggleVisible: true,
   options: [],
@@ -11521,7 +11518,7 @@ var ItemListCatalog = function (_Component) {
     _this.handleFilterToggle = _this.handleFilterToggle.bind(_this);
 
     _this.state = {
-      isOpen: _this.props.isOpenByDefault
+      isOpen: false
     };
     return _this;
   }
@@ -11529,9 +11526,11 @@ var ItemListCatalog = function (_Component) {
   (0, _createClass3.default)(ItemListCatalog, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      if ($(document).width() >= MIN_DESKTOP_WIDTH) {
-        this.setState({ isOpen: true });
-      }
+      // В мобильнов варианте автоматически закрываем
+      // Сразу закрытым делать нельзя, потому что тогда не правильно
+      // отрисовываются размеры изображение в галерее.
+      // Они задаются больше и тогда изображения сдвигаются за контейнер.
+      this.setState({ isOpen: $(document).width() >= MIN_DESKTOP_WIDTH });
     }
   }, {
     key: 'handleFilterToggle',
@@ -11579,7 +11578,7 @@ ItemListCatalog.propTypes = {
 };
 
 ItemListCatalog.defaultProps = {
-  isOpenByDefault: false,
+  isOpenByDefault: true,
   showCatalogFilter: false
 };
 
