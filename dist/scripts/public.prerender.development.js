@@ -11517,8 +11517,11 @@ var ItemListCatalog = function (_Component) {
 
     _this.handleFilterToggle = _this.handleFilterToggle.bind(_this);
 
+    // Сразу закрытым делать нельзя, потому что тогда не правильно
+    // отрисовываются размеры изображение в галерее.
+    // Они задаются больше и тогда изображения сдвигаются за контейнер.
     _this.state = {
-      isOpen: false
+      isOpen: true // По-умолчанию должен показываться
     };
     return _this;
   }
@@ -11527,9 +11530,6 @@ var ItemListCatalog = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       // В мобильнов варианте автоматически закрываем
-      // Сразу закрытым делать нельзя, потому что тогда не правильно
-      // отрисовываются размеры изображение в галерее.
-      // Они задаются больше и тогда изображения сдвигаются за контейнер.
       this.setState({ isOpen: $(document).width() >= MIN_DESKTOP_WIDTH });
     }
   }, {
