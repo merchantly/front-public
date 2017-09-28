@@ -39,7 +39,6 @@ class CatalogFilter extends Component {
 }
 
 CatalogFilter.propTypes = {
-  hideInMobileByDefault: PropTypes.bool,
   filterName: PropTypes.string,
   filterUrl: PropTypes.string.isRequired,
   handleFilterToggle: PropTypes.func.isRequired,
