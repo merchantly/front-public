@@ -13,9 +13,9 @@ export default class PropertyListItemColor extends Component {
     return (
       <div className="b-item-full__form__row">
         <div className="b-item-full__form__option b-item-full__form__option_full">
-          <h3 className="b-item-full__form__title">
+          <div className="b-item-full__form__title">
             {this.props.propertyTitle}
-          </h3>
+          </div>
           <RadioColor
             name={this.props.name}
             onChange={this.props.onChange}

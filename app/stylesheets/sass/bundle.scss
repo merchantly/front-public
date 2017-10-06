@@ -87,6 +87,7 @@
 // Partials
 // =====================================================================
 
+@import "partials/utils"; // Личный кабинет
 @import "partials/b-layout"; // Лейаут
 @import "partials/b-btn"; // Кнопочки
 @import "partials/b-alert"; // Алерты
@@ -136,6 +137,7 @@
 @import "partials/b-product-properties"; // Форма выбора характеристик в карточке
 @import "partials/b-wishlist"; // Страница список желаний
 @import "partials/b-modal"; // модалка
+@import "partials/b-cabinet"; // Личный кабинет
 
 // Global layout blocks
 @import "partials/b-page"; // Основная страница

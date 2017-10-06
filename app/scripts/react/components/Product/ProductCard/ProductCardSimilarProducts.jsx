@@ -7,9 +7,9 @@ import ProductBlock from '../ProductBlock';
 const ProductCardSimilarProducts = ({ products, t }) => (
   products && products.length
     ? <section className="b-item-list b-item-list_additional">
-        <h3 className="b-item-list__title">
+        <div className="b-item-list__title">
           {t('vendor.similar_product.title')}
-        </h3>
+        </div>
         <div className="b-item-list__content">
           {products.map(product =>
             <ProductBlock key={product.id} product={product} t={t} />)}

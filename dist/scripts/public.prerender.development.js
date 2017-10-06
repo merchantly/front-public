@@ -1634,7 +1634,7 @@ var Cabinet = function (_Component) {
             { className: 'b-cabinet b-cart__content' },
             _react2.default.createElement(
               'div',
-              { className: 'b-cabinet_title' },
+              { className: 'b-cabinet__title' },
               t('vendor.client.cabinet.title'),
               ' ',
               name,
@@ -1653,8 +1653,8 @@ var Cabinet = function (_Component) {
               'div',
               null,
               _react2.default.createElement(
-                'h3',
-                null,
+                'div',
+                { className: 'b-cabinet__orders_title' },
                 t('vendor.client.cabinet.orders')
               ),
               _react2.default.createElement(
@@ -10729,7 +10729,7 @@ var ErrorPage = function (_Component) {
             { className: "lead-icon" },
             _react2.default.createElement("i", { className: "icon-tools" })
           ),
-          _react2.default.createElement("h3", { dangerouslySetInnerHTML: { __html: subject } }),
+          _react2.default.createElement("h1", { className: "b-page__title b-page-error__title", dangerouslySetInnerHTML: { __html: subject } }),
           _react2.default.createElement(
             "p",
             null,
@@ -17295,7 +17295,7 @@ var ProductBlock = function ProductBlock(_ref) {
           href: product.publicUrl
         },
         _react2.default.createElement(
-          'h3',
+          'div',
           { className: 'b-item__name' },
           product.title
         ),
@@ -18390,9 +18390,13 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
           'span',
           null,
           _react2.default.createElement(
-            'h3',
+            'noindex',
             null,
-            t('vendor.other_product.title')
+            _react2.default.createElement(
+              'h1',
+              { className: 'b-item-full__other-title' },
+              t('vendor.other_product.title')
+            )
           ),
           _react2.default.createElement(
             'ul',
@@ -19187,7 +19191,7 @@ var ProductCardSimilarProducts = function ProductCardSimilarProducts(_ref) {
     'section',
     { className: 'b-item-list b-item-list_additional' },
     _react2.default.createElement(
-      'h3',
+      'div',
       { className: 'b-item-list__title' },
       t('vendor.similar_product.title')
     ),
@@ -20051,8 +20055,8 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
                 'div',
                 { className: 'col-md-12' },
                 _react2.default.createElement(
-                  'h3',
-                  null,
+                  'div',
+                  { className: 'u-title' },
                   emptyTitle
                 )
               )
@@ -20067,9 +20071,13 @@ var ProductCartMultipleChoice = (_temp = _class = function (_Component) {
                   'div',
                   { className: 'col-md-12' },
                   _react2.default.createElement(
-                    'h3',
+                    'noindex',
                     null,
-                    t('vendor.cart.selected_products')
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'u-title' },
+                      t('vendor.cart.selected_products')
+                    )
                   )
                 )
               ),
@@ -21573,7 +21581,7 @@ var PropertyListItemColor = (_temp = _class = function (_Component) {
           'div',
           { className: 'b-item-full__form__option b-item-full__form__option_full' },
           _react2.default.createElement(
-            'h3',
+            'div',
             { className: 'b-item-full__form__title' },
             this.props.propertyTitle
           ),
@@ -21656,7 +21664,7 @@ var PropertyListItemDictionary = (_temp = _class = function (_Component) {
           'div',
           { className: 'b-item-full__form__option b-item-full__form__option_full' },
           _react2.default.createElement(
-            'h3',
+            'div',
             { className: 'b-item-full__form__title' },
             this.props.propertyTitle
           ),
@@ -22235,10 +22243,15 @@ var ProductArchived = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'b-text b-text_center' },
-          _react2.default.createElement('h3', {
-            dangerouslySetInnerHTML: { __html: t('vendor.product.sold_out_message_html', { title: title }) },
-            title: title
-          }),
+          _react2.default.createElement(
+            'noindex',
+            null,
+            _react2.default.createElement('div', {
+              className: 'u-title',
+              dangerouslySetInnerHTML: { __html: t('vendor.product.sold_out_message_html', { title: title }) },
+              title: title
+            })
+          ),
           category && _react2.default.createElement(
             'div',
             null,

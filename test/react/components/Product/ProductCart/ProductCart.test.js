@@ -287,7 +287,7 @@ describe('[Component] ProductCart', () => {
       const labels = colorOption.querySelectorAll('label.radiobtn.radiobtn--color');
       const firstLabelInput = labels[0].querySelector('input');
 
-      expect(colorOption.querySelector('h3').textContent).contains(colorTitle);
+      expect(colorOption.querySelector('.b-item-full__form__title').textContent).contains(colorTitle);
       expect(labels.length).equals(props.product.properties[0].items.length);
       expect(firstLabelInput.value).equals(props.product.properties[0].items[0].value);
     });

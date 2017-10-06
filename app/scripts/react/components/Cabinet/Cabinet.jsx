@@ -23,7 +23,7 @@ class Cabinet extends Component {
       <div className="b-page__content__inner b-page__content__inner_content">
         <section className="b-cart">
           <div className="b-cabinet b-cart__content">
-            <div className="b-cabinet_title">
+            <div className="b-cabinet__title">
               {t('vendor.client.cabinet.title')}
               {' '}
               {name}
@@ -38,7 +38,7 @@ class Cabinet extends Component {
             </div>
             {items ? (
               <div>
-                <h3>{t('vendor.client.cabinet.orders')}</h3>
+                <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
                 <ul className="b-cart__list">
                   {items.map((order) => <CabinetOrder {...order} key={order.id} />)}
                 </ul>

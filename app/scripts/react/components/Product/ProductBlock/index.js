@@ -23,9 +23,9 @@ const ProductBlock = ({ showCartButton, showQuantity, product, t }) => (
         hash={productRoute(product.id)}
         href={product.publicUrl}
       >
-        <h3 className="b-item__name">
+        <div className="b-item__name">
           {product.title}
-        </h3>
+        </div>
         {Boolean(product.shortDetails) &&
           <div className="b-item__details">
             {product.shortDetails}

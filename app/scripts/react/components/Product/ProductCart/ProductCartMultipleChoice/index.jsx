@@ -25,12 +25,12 @@ const SortableItem = SortableElement(({key, count, properties, good, onRemove, o
 });
 
 const SortableList = SortableContainer(({items}) => {
-  return (    
-    <div className="col-md-12 b-item-full__multiple-choice__form__table">    
+  return (
+    <div className="col-md-12 b-item-full__multiple-choice__form__table">
     {items.map((value, index) => (
       <SortableItem key={`item-${index}`} index={index} {...value} />
     ))}
-    </div>   
+    </div>
   );
 });
 
@@ -90,7 +90,7 @@ class ProductCartMultipleChoice extends Component {
   deleteFromItems = (globalId) => {
     let items = [...this.state.items];
     for (var i = 0; i < items.length; i ++) {
-      if (items[i].key === globalId) {        
+      if (items[i].key === globalId) {
         items.splice(i, 1);
       }
     }
@@ -106,7 +106,7 @@ class ProductCartMultipleChoice extends Component {
   onAdd = (good, count = 1, changing = false) => {
     this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good }
     this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
-        
+
     if (changing) {
       this.changeAmmount(good.globalId, count)
     } else {
@@ -138,7 +138,7 @@ class ProductCartMultipleChoice extends Component {
             {empty &&
               <div className="row">
                 <div className="col-md-12">
-                  <h3>{emptyTitle}</h3>
+                  <div className="u-title">{emptyTitle}</div>
                 </div>
               </div>
             }
@@ -146,14 +146,14 @@ class ProductCartMultipleChoice extends Component {
               <div>
                 <div className="row">
                   <div className="col-md-12">
-                    <h3>{t('vendor.cart.selected_products')}</h3>
+                    <noindex><div className="u-title">{t('vendor.cart.selected_products')}</div></noindex>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-12 b-item-full__multiple-choice__form__table">                    
+                  <div className="col-md-12 b-item-full__multiple-choice__form__table">
                   </div>
                 </div>
-                <div className="row">                  
+                <div className="row">
                   <SortableList items={items} lockAxis="y" onSortEnd={this.onSortEnd} useDragHandle={true}/>
                 </div>
                 <div className="row">

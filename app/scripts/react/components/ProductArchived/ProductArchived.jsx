@@ -21,10 +21,13 @@ class ProductArchived extends Component {
         {schemaOrgMarkup(product)}
         <meta content={h1(product)} itemProp="description" />
         <div className="b-text b-text_center">
-          <h3
-            dangerouslySetInnerHTML={{ __html: t('vendor.product.sold_out_message_html', { title }) }}
-            title={title}
-          />
+          <noindex>
+            <div
+              className="u-title"
+              dangerouslySetInnerHTML={{ __html: t('vendor.product.sold_out_message_html', { title }) }}
+              title={title}
+            />
+          </noindex>
           {category && (
             <div>
               <p>
