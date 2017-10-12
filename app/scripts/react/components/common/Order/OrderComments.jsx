@@ -10,14 +10,14 @@ class OrderComments extends Component {
 
     return comments.length
     ? (
-      <div className="feed-activity-list m-b">
-        <table style={{ width: '100%' }}>
+      <div className="comments">
+        <table style={{ width: '100%' }} className="comments__table">
           <tbody>
             {comments.map(({ body, author, createdAt }, idx) => (
-              <tr className="feed-element" key={`order-comment-${idx}`}>
+              <tr className="comment__line" key={`order-comment-${idx}`}>
                 <td>
-                  <div className="small text-muted">
-                    <FaIcon name="clock-o" />
+                  <div className="comment__message">
+                    <FaIcon name="clock-o" className="comment__message__time" />
                     {createdAt}
                   </div>
                 </td>

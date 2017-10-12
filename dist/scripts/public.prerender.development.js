@@ -29341,10 +29341,10 @@ var OrderComments = function (_Component) {
 
       return comments.length ? _react2.default.createElement(
         'div',
-        { className: 'feed-activity-list m-b' },
+        { className: 'comments' },
         _react2.default.createElement(
           'table',
-          { style: { width: '100%' } },
+          { style: { width: '100%' }, className: 'comments__table' },
           _react2.default.createElement(
             'tbody',
             null,
@@ -29354,14 +29354,14 @@ var OrderComments = function (_Component) {
                   createdAt = _ref.createdAt;
               return _react2.default.createElement(
                 'tr',
-                { className: 'feed-element', key: 'order-comment-' + idx },
+                { className: 'comment__line', key: 'order-comment-' + idx },
                 _react2.default.createElement(
                   'td',
                   null,
                   _react2.default.createElement(
                     'div',
-                    { className: 'small text-muted' },
-                    _react2.default.createElement(_FaIcon2.default, { name: 'clock-o' }),
+                    { className: 'comment__message' },
+                    _react2.default.createElement(_FaIcon2.default, { name: 'clock-o', className: 'comment__message__time' }),
                     createdAt
                   )
                 ),
