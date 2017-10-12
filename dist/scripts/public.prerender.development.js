@@ -29363,7 +29363,7 @@ var OrderComments = function (_Component) {
                 ),
                 _react2.default.createElement(
                   'td',
-                  { className: 'comment__message_text' },
+                  { className: 'comment__message__text' },
                   body,
                   author && _react2.default.createElement(
                     'span',

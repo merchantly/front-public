@@ -19,7 +19,7 @@ class OrderComments extends Component {
                   <FaIcon name="clock-o" />
                   {createdAt}
                 </td>
-                <td className="comment__message_text">
+                <td className="comment__message__text">
                     {body}
                     {author && (
                       <span className="comment__message__author">
