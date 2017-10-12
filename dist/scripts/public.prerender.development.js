@@ -29357,30 +29357,22 @@ var OrderComments = function (_Component) {
                 { className: 'comment__line', key: 'order-comment-' + idx },
                 _react2.default.createElement(
                   'td',
-                  null,
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'comment__message' },
-                    _react2.default.createElement(_FaIcon2.default, { name: 'clock-o', className: 'comment__message__time' }),
-                    createdAt
-                  )
+                  { className: 'comment__message__time' },
+                  _react2.default.createElement(_FaIcon2.default, { name: 'clock-o' }),
+                  createdAt
                 ),
                 _react2.default.createElement(
                   'td',
-                  { style: { textAlign: 'left' } },
-                  _react2.default.createElement(
+                  { className: 'comment__message_text' },
+                  body,
+                  author && _react2.default.createElement(
                     'span',
-                    null,
-                    body,
-                    author && _react2.default.createElement(
-                      'span',
+                    { className: 'comment__message__author' },
+                    '\u2014',
+                    _react2.default.createElement(
+                      'strong',
                       null,
-                      '\u2014',
-                      _react2.default.createElement(
-                        'strong',
-                        null,
-                        author
-                      )
+                      author
                     )
                   )
                 )

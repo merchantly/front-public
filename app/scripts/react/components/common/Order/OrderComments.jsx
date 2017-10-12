@@ -15,24 +15,20 @@ class OrderComments extends Component {
           <tbody>
             {comments.map(({ body, author, createdAt }, idx) => (
               <tr className="comment__line" key={`order-comment-${idx}`}>
-                <td>
-                  <div className="comment__message">
-                    <FaIcon name="clock-o" className="comment__message__time" />
-                    {createdAt}
-                  </div>
+                <td className="comment__message__time">
+                  <FaIcon name="clock-o" />
+                  {createdAt}
                 </td>
-                <td style={{ textAlign: 'left' }}>
-                  <span>
+                <td className="comment__message_text">
                     {body}
                     {author && (
-                      <span>
+                      <span className="comment__message__author">
                         {'\u2014'}
                         <strong>
                           {author}
                         </strong>
                       </span>
                     )}
-                  </span>
                 </td>
               </tr>
             ))}
