@@ -14840,9 +14840,13 @@ var OrderCancelled = function (_Component) {
             { className: 'b-cart__message' },
             _react2.default.createElement(_OrderComments2.default, { comments: adminComments }),
             !isCurrentClientPresent && _react2.default.createElement(
-              'a',
-              { className: 'b-btn', href: vendorRootPath },
-              t('vendor.order.continue_shopping')
+              'p',
+              null,
+              _react2.default.createElement(
+                'a',
+                { className: 'b-btn', href: vendorRootPath },
+                t('vendor.order.continue_shopping')
+              )
             )
           )
         ),
@@ -16005,6 +16009,10 @@ var _OrderState = require('../common/Order/OrderState');
 
 var _OrderState2 = _interopRequireDefault(_OrderState);
 
+var _OrderComments = require('../common/Order/OrderComments');
+
+var _OrderComments2 = _interopRequireDefault(_OrderComments);
+
 var _money = require('../../helpers/money');
 
 var _schemas = require('../../schemas');
@@ -16039,7 +16047,8 @@ var OrderShow = function (_Component) {
           paymentUrl = order.paymentUrl,
           _order$paymentType = order.paymentType,
           paymentType = _order$paymentType === undefined ? {} : _order$paymentType,
-          workflowState = order.workflowState;
+          workflowState = order.workflowState,
+          adminComments = order.adminComments;
 
       var _ref = orderDelivery || {},
           trackingId = _ref.trackingId,
@@ -16063,6 +16072,7 @@ var OrderShow = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'b-cart__message' },
+            _react2.default.createElement(_OrderComments2.default, { comments: adminComments }),
             _react2.default.createElement(
               'p',
               null,
@@ -16118,7 +16128,7 @@ OrderShow.propTypes = {
 exports.default = OrderShow;
 module.exports = exports['default'];
 
-},{"../../helpers/money":300,"../../schemas":330,"../common/Order/OrderContents":273,"../common/Order/OrderState":278,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"react":"react"}],145:[function(require,module,exports){
+},{"../../helpers/money":300,"../../schemas":330,"../common/Order/OrderComments":272,"../common/Order/OrderContents":273,"../common/Order/OrderState":278,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"react":"react"}],145:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

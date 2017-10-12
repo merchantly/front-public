@@ -34,10 +34,13 @@ class OrderCancelled extends Component {
           </h1>
           <div className="b-cart__message">
             <OrderComments comments={adminComments} />
+
             {!isCurrentClientPresent && (
-              <a className="b-btn" href={vendorRootPath}>
-                {t('vendor.order.continue_shopping')}
-              </a>
+              <p>
+                <a className="b-btn" href={vendorRootPath}>
+                  {t('vendor.order.continue_shopping')}
+                </a>
+              </p>
             )}
           </div>
         </div>

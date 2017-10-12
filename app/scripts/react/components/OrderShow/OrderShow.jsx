@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import OrderContents from 'rc/common/Order/OrderContents';
 import OrderState from 'rc/common/Order/OrderState';
+import OrderComments from 'rc/common/Order/OrderComments';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import * as schemas from 'r/schemas';
 
@@ -20,6 +21,7 @@ class OrderShow extends Component {
       paymentUrl,
       paymentType={},
       workflowState,
+      adminComments,
     } = order;
     const {
       trackingId,
@@ -38,6 +40,7 @@ class OrderShow extends Component {
             {t('vendor.order.title', { number: externalId })}
           </h1>
           <div className="b-cart__message">
+            <OrderComments comments={adminComments} />
             <p>
               <OrderState state={workflowState} />
               <br />
