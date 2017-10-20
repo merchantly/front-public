@@ -138,6 +138,7 @@ export default provideTranslations(connectToRedux(connect(
 
     const {
       cart: {
+        cleanCartUrl: cleanCartUrl,
         defaultUrl: cartDefaultUrl='',
         errors: cartErrors={},
         items: cartItems=[],

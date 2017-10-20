@@ -2149,6 +2149,7 @@ var Cart = function (_Component) {
       var _props2 = this.props,
           amounts = _props2.amounts,
           cartDefaultUrl = _props2.cartDefaultUrl,
+          cleanCartUrl = _props2.cleanCartUrl,
           cartErrors = _props2.cartErrors,
           cartItems = _props2.cartItems,
           changeAmount = _props2.changeAmount,
@@ -2304,7 +2305,7 @@ var Cart = function (_Component) {
                       'data-confirm': t('vendor.alerts.confirm'),
                       'data-disable-with': t('vendor.button.disable_with.waiting'),
                       'data-method': 'delete',
-                      href: cartDefaultUrl,
+                      href: cleanCartUrl,
                       onClick: this.startProcessing
                     },
                     t('vendor.cart.clear')
@@ -2342,6 +2343,7 @@ var Cart = function (_Component) {
 Cart.propTypes = {
   amounts: _react.PropTypes.object.isRequired,
   cartDefaultUrl: _react.PropTypes.string.isRequired,
+  cleanCartUrl: _react.PropTypes.string.isRequired,
   cartErrors: _react.PropTypes.object.isRequired,
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
@@ -4047,6 +4049,7 @@ CartContainer.propTypes = {
   // calculated props
   amounts: _react.PropTypes.object.isRequired,
   cartDefaultUrl: _react.PropTypes.string.isRequired,
+  cleanCartUrl: _react.PropTypes.string.isRequired,
   cartErrors: _react.PropTypes.object.isRequired,
   cartIsFetching: _react.PropTypes.bool.isRequired,
   cartItems: _react.PropTypes.array.isRequired,
@@ -4090,6 +4093,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
       packagesStore = _ref.packages;
 
   var _cart$cart = cart.cart,
+      cleanCartUrl = _cart$cart.cleanCartUrl,
       _cart$cart$defaultUrl = _cart$cart.defaultUrl,
       cartDefaultUrl = _cart$cart$defaultUrl === undefined ? '' : _cart$cart$defaultUrl,
       _cart$cart$errors = _cart$cart.errors,
@@ -4138,6 +4142,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   return {
     amounts: amounts,
     cartDefaultUrl: cartDefaultUrl,
+    cleanCartUrl: cleanCartUrl,
     cartErrors: cartErrors,
     cartIsFetching: cartIsFetching,
     cartItems: cartItems,

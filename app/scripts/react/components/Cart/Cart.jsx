@@ -61,6 +61,7 @@ class Cart extends Component {
     const {
       amounts,
       cartDefaultUrl,
+      cleanCartUrl,
       cartErrors,
       cartItems,
       changeAmount,
