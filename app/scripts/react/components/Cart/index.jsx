@@ -88,6 +88,7 @@ CartContainer.propTypes = {
   // calculated props
   amounts: PropTypes.object.isRequired,
   cartDefaultUrl: PropTypes.string.isRequired,
+  cleanCartUrl: PropTypes.string.isRequired,
   cartErrors: PropTypes.object.isRequired,
   cartIsFetching: PropTypes.bool.isRequired,
   cartItems: PropTypes.array.isRequired,
@@ -148,8 +149,8 @@ export default provideTranslations(connectToRedux(connect(
       amounts={},
       coupon,
       packageCount,
-      selectedPackage,    
-    } = cart;    
+      selectedPackage,
+    } = cart;
     const {
       packages=[],
       isFetching: packagesIsFetching=false,
@@ -183,6 +184,7 @@ export default provideTranslations(connectToRedux(connect(
     return {
       amounts,
       cartDefaultUrl,
+      cleanCartUrl,
       cartErrors,
       cartIsFetching,
       cartItems,

@@ -184,12 +184,12 @@ class Cart extends Component {
                         data-confirm={t('vendor.alerts.confirm')}
                         data-disable-with={t('vendor.button.disable_with.waiting')}
                         data-method="delete"
-                        href={cartDefaultUrl}
+                        href={cleanCartUrl}
                         onClick={this.startProcessing}
                       >
                         {t('vendor.cart.clear')}
                       </a>
-                    </div>                    
+                    </div>
                     <div className="b-cart__action__col-right">
                       { showCouponCode && <CartCoupon code={couponCode} t={t} /> }
                       <div className="b-cart__action__col-submit">
@@ -202,9 +202,9 @@ class Cart extends Component {
                           onClick={this.startProcessing}
                           type="submit"
                           value={t('vendor.order.submit')}
-                        />                        
+                        />
                       </div>
-                    </div>                    
+                    </div>
                   </div>
                 </div>
               </form>
@@ -219,6 +219,7 @@ class Cart extends Component {
 Cart.propTypes = {
   amounts: PropTypes.object.isRequired,
   cartDefaultUrl: PropTypes.string.isRequired,
+  cleanCartUrl: PropTypes.string.isRequired,
   cartErrors: PropTypes.object.isRequired,
   cartIsFetching: PropTypes.bool.isRequired,
   cartItems: PropTypes.array.isRequired,
