@@ -26,7 +26,7 @@ class Instagram extends Component {
         {!isError && !isLoading &&
           <div className="Instagram-content">
             {hashtag &&
-              <h2 className="Instagram-hashtag b-item-list__title">
+              <div className="Instagram-hashtag b-item-list__title">
                 <a
                   className="Instagram-hashtagLink"
                   href={profileUrl}
@@ -35,7 +35,7 @@ class Instagram extends Component {
                 >
                   {hashtag}
                 </a>
-              </h2>
+              </div>
             }
             <InstagramEntries {...this.props} />
           </div>

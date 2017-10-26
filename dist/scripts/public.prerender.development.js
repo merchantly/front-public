@@ -11180,7 +11180,7 @@ var Instagram = function (_Component) {
           'div',
           { className: 'Instagram-content' },
           hashtag && _react2.default.createElement(
-            'h2',
+            'div',
             { className: 'Instagram-hashtag b-item-list__title' },
             _react2.default.createElement(
               'a',
