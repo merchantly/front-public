@@ -69,7 +69,7 @@ export default class ProductCardDetails extends Component {
     if (otherProducts.length > 0) {
       return (
         <span>
-          <noindex><h1 className="b-item-full__other-title">{t('vendor.other_product.title')}</h1></noindex>
+          <noindex><div className="b-item-full__other-title">{t('vendor.other_product.title')}</div></noindex>
           <ul className="b-item-full__other-products">
             {
               otherProducts.map((product) => (

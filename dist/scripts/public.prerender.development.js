@@ -18487,7 +18487,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
             'noindex',
             null,
             _react2.default.createElement(
-              'h1',
+              'div',
               { className: 'b-item-full__other-title' },
               t('vendor.other_product.title')
             )
