@@ -140,14 +140,14 @@
         "sellingByWeight": false,
         "weightOfPrice": null,
         "indexImage": {
-          "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
-          "width": 1500,
-          "height": 1500
-        },
-        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
           "width": 750,
           "height": 936
+        },
+        "secondImage": {
+          "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
+          "width": 1500,
+          "height": 1500
         },
         "publicUrl": "http://saharokstore.ru/products/20943-koltso-anna-m-objects",
         "shortDetails": "Серебро",
@@ -547,9 +547,9 @@
           "height": 1500
         },
         "secondImage": {
-          "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
-          "width": 640,
-          "height": 640
+          "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
+          "width": 750,
+          "height": 936
         },
         "publicUrl": "http://saharokstore.ru/products/33644-braslet-him-re",
         "shortDetails": "Шелковая нить, Серебро, Серебро",

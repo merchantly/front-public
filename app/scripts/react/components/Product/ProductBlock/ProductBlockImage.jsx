@@ -9,23 +9,39 @@ class ProductBlockImage extends Component {
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
 
     this.state = {
-      isHover: false,
+      showSecond: false
     };
   }
   getCurrentImage() {
+    const { containerIsHover } = this.props;
     const {
       indexImage,
       secondImage,
     } = this.props.product;
-    const { isHover } = this.state;
+    const {
+      showSecond
+    } = this.state;
 
-    return isHover && secondImage ? secondImage : indexImage;
+    if (!secondImage) {
+      return indexImage;
+    }
+    return (showSecond) ? secondImage : indexImage;
+  }
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.containerIsHover) {
+      this.setState({ showSecond: false });
+    }
+  }
+  changeHover(value) {
+    if (value) {
+      this.setState({ showSecond: true });
+    }
   }
   handleMouseEnter() {
-    this.setState({ isHover: true });
+    this.changeHover(true);
   }
   handleMouseLeave() {
-    this.setState({ isHover: false });
+    this.changeHover(false);
   }
   render() {
     const {
@@ -68,10 +84,12 @@ class ProductBlockImage extends Component {
 ProductBlockImage.propTypes = {
   product: PropTypes.object.isRequired,
   maxWidth: PropTypes.number,
+  containerIsHover: PropTypes.bool,
 };
 
 ProductBlockImage.defaultProps = {
   maxWidth: 458,
+  containerIsHover: false
 };
 
 export default ProductBlockImage;

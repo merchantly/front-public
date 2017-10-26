@@ -17166,7 +17166,7 @@ var ProductBlockImage = function (_Component) {
     _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
 
     _this.state = {
-      isHover: false
+      showSecond: false
     };
     return _this;
   }
@@ -17174,23 +17174,41 @@ var ProductBlockImage = function (_Component) {
   (0, _createClass3.default)(ProductBlockImage, [{
     key: 'getCurrentImage',
     value: function getCurrentImage() {
+      var containerIsHover = this.props.containerIsHover;
       var _props$product = this.props.product,
           indexImage = _props$product.indexImage,
           secondImage = _props$product.secondImage;
-      var isHover = this.state.isHover;
+      var showSecond = this.state.showSecond;
 
 
-      return isHover && secondImage ? secondImage : indexImage;
+      if (!secondImage) {
+        return indexImage;
+      }
+      return showSecond ? secondImage : indexImage;
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      if (!nextProps.containerIsHover) {
+        this.setState({ showSecond: false });
+      }
+    }
+  }, {
+    key: 'changeHover',
+    value: function changeHover(value) {
+      if (value) {
+        this.setState({ showSecond: true });
+      }
     }
   }, {
     key: 'handleMouseEnter',
     value: function handleMouseEnter() {
-      this.setState({ isHover: true });
+      this.changeHover(true);
     }
   }, {
     key: 'handleMouseLeave',
     value: function handleMouseLeave() {
-      this.setState({ isHover: false });
+      this.changeHover(false);
     }
   }, {
     key: 'render',
@@ -17232,11 +17250,13 @@ var ProductBlockImage = function (_Component) {
 
 ProductBlockImage.propTypes = {
   product: _react.PropTypes.object.isRequired,
-  maxWidth: _react.PropTypes.number
+  maxWidth: _react.PropTypes.number,
+  containerIsHover: _react.PropTypes.bool
 };
 
 ProductBlockImage.defaultProps = {
-  maxWidth: 458
+  maxWidth: 458,
+  containerIsHover: false
 };
 
 exports.default = ProductBlockImage;
@@ -17248,6 +17268,26 @@ module.exports = exports['default'];
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
@@ -17281,67 +17321,106 @@ var _app = require('../../../../routes/app');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ProductBlock = function ProductBlock(_ref) {
-  var showCartButton = _ref.showCartButton,
-      showQuantity = _ref.showQuantity,
-      product = _ref.product,
-      t = _ref.t;
-  return _react2.default.createElement(
-    'div',
-    { className: 'b-item-list__item' },
-    _react2.default.createElement(
-      'div',
-      { className: 'b-item' },
-      _react2.default.createElement(
-        _AppLink2.default,
-        {
-          className: 'b-item__pic-wrap',
-          hash: (0, _app.productRoute)(product.id),
-          href: product.publicUrl
-        },
-        _react2.default.createElement(_ProductBlockImage2.default, { product: product }),
-        _react2.default.createElement(_ProductBlockBadges2.default, { product: product, t: t })
-      ),
-      _react2.default.createElement(
-        _AppLink2.default,
-        {
-          className: 'b-item__info',
-          hash: (0, _app.productRoute)(product.id),
-          href: product.publicUrl
+var ProductBlock = function (_Component) {
+  (0, _inherits3.default)(ProductBlock, _Component);
+
+  function ProductBlock(props) {
+    (0, _classCallCheck3.default)(this, ProductBlock);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ProductBlock.__proto__ || (0, _getPrototypeOf2.default)(ProductBlock)).call(this, props));
+
+    _this.handleMouseEnter = _this.handleMouseEnter.bind(_this);
+    _this.handleMouseLeave = _this.handleMouseLeave.bind(_this);
+
+    _this.state = {
+      isHover: false
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(ProductBlock, [{
+    key: 'handleMouseEnter',
+    value: function handleMouseEnter() {
+      this.setState({ isHover: true });
+    }
+  }, {
+    key: 'handleMouseLeave',
+    value: function handleMouseLeave() {
+      this.setState({ isHover: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _props = this.props,
+          showCartButton = _props.showCartButton,
+          showQuantity = _props.showQuantity,
+          product = _props.product,
+          t = _props.t;
+      var isHover = this.state.isHover;
+
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'b-item-list__item',
+          onMouseEnter: this.handleMouseEnter,
+          onMouseLeave: this.handleMouseLeave
         },
         _react2.default.createElement(
           'div',
-          { className: 'b-item__name' },
-          product.title
-        ),
-        Boolean(product.shortDetails) && _react2.default.createElement(
-          'div',
-          { className: 'b-item__details' },
-          product.shortDetails
-        ),
-        _react2.default.createElement(_ProductPrices2.default, { product: product, t: t })
-      ),
-      showCartButton && product.hasOrderingGoods && _react2.default.createElement(
-        'div',
-        { className: 'b-item__cart-form' },
-        product.goods.length === 1 && _react2.default.createElement(_ProductBlockCartFormButton2.default, {
-          product: product,
-          showQuantity: showQuantity,
-          t: t
-        }),
-        product.goods.length > 1 && _react2.default.createElement(
-          _AppLink2.default,
-          {
-            className: 'b-btn element--active',
-            hash: (0, _app.productRoute)(product.id),
-            href: product.publicUrl
-          },
-          t('vendor.more')
+          { className: 'b-item' },
+          _react2.default.createElement(
+            _AppLink2.default,
+            {
+              className: 'b-item__pic-wrap',
+              hash: (0, _app.productRoute)(product.id),
+              href: product.publicUrl
+            },
+            _react2.default.createElement(_ProductBlockImage2.default, { product: product, containerIsHover: isHover }),
+            _react2.default.createElement(_ProductBlockBadges2.default, { product: product, t: t })
+          ),
+          _react2.default.createElement(
+            _AppLink2.default,
+            {
+              className: 'b-item__info',
+              hash: (0, _app.productRoute)(product.id),
+              href: product.publicUrl
+            },
+            _react2.default.createElement(
+              'div',
+              { className: 'b-item__name' },
+              product.title
+            ),
+            Boolean(product.shortDetails) && _react2.default.createElement(
+              'div',
+              { className: 'b-item__details' },
+              product.shortDetails
+            ),
+            _react2.default.createElement(_ProductPrices2.default, { product: product, t: t })
+          ),
+          showCartButton && product.hasOrderingGoods && _react2.default.createElement(
+            'div',
+            { className: 'b-item__cart-form' },
+            product.goods.length === 1 && _react2.default.createElement(_ProductBlockCartFormButton2.default, {
+              product: product,
+              showQuantity: showQuantity,
+              t: t
+            }),
+            product.goods.length > 1 && _react2.default.createElement(
+              _AppLink2.default,
+              {
+                className: 'b-btn element--active',
+                hash: (0, _app.productRoute)(product.id),
+                href: product.publicUrl
+              },
+              t('vendor.more')
+            )
+          )
         )
-      )
-    )
-  );
-};
+      );
+    }
+  }]);
+  return ProductBlock;
+}(_react.Component);
 
 ProductBlock.propTypes = {
   product: _react.PropTypes.object.isRequired,
@@ -17358,7 +17437,7 @@ ProductBlock.defaultProps = {
 exports.default = (0, _provideTranslations2.default)(ProductBlock);
 module.exports = exports['default'];
 
-},{"../../../../routes/app":351,"../../HoC/provideTranslations":100,"../../common/AppLink":253,"../ProductBlockCartForm/ProductBlockCartFormButton":162,"../ProductPrices":195,"./ProductBlockBadges":159,"./ProductBlockImage":160,"react":"react"}],162:[function(require,module,exports){
+},{"../../../../routes/app":351,"../../HoC/provideTranslations":100,"../../common/AppLink":253,"../ProductBlockCartForm/ProductBlockCartFormButton":162,"../ProductPrices":195,"./ProductBlockBadges":159,"./ProductBlockImage":160,"babel-runtime/core-js/object/get-prototype-of":360,"babel-runtime/helpers/classCallCheck":366,"babel-runtime/helpers/createClass":367,"babel-runtime/helpers/inherits":370,"babel-runtime/helpers/possibleConstructorReturn":372,"react":"react"}],162:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
