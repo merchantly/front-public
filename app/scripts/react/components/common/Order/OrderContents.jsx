@@ -97,7 +97,7 @@ class OrderContents extends Component {
           {t('vendor.order.contents')}
         </h4>
         <ul className="b-cart__list">
-          {items.map((item) => <OrderItem item={item} key={`order-item-${item.good.id}`} />)}
+          {items.map((item) => <OrderItem item={item} t={t} key={`order-item-${item.good.id}`} />)}
           {packageGood && this.renderPackageGood(packageGood, packagePrice)}
           {coupon && (
             <li className="b-cart__item">

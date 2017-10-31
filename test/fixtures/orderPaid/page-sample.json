@@ -693,6 +693,10 @@
           "id": "pcs",
           "short": "шт."
         },
+        "isDigital": true,
+        "isDownloadingAvailable": true,
+        "downloadUrl": "http://localhost/download",
+
         "good": {
           "id": 15369,
           "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",

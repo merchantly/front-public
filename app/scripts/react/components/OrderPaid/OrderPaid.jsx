@@ -28,7 +28,9 @@ class OrderPaid extends Component {
         <div className="b-cart__content">
           <h1 className="b-cart__title">
             {t('vendor.order.title', { number: externalId })}
-            <OrderState state={workflowState} />
+            <span className="b-cart__state">
+              <OrderState state={workflowState} />
+            </span>
           </h1>
           <div className="b-cart__message">
             <OrderComments comments={adminComments} />
@@ -37,23 +39,29 @@ class OrderPaid extends Component {
                 number: trackingId,
               })}
             </p>
+            <ul className="b-cart__actions">
             {trackingUrl && (
-              <a
-                className="b-btn"
-                href={trackingUrl}
-                target="_blank"
-              >
-                {t('vendor.order.check_state')}
-              </a>
+              <li className="b-cart__actions__element">
+                <a
+                  className="b-btn"
+                  href={trackingUrl}
+                  target="_blank"
+                >
+                  {t('vendor.order.check_state')}
+                </a>
+              </li>
             )}
             {!isCurrentClientPresent && (
-              <a
-                className="b-btn"
-                href={vendorRootPath}
-              >
-                {t('vendor.order.continue_shopping')}
-              </a>
-            )}
+              <li className="b-cart__actions__element">
+                <a
+                  className="b-btn"
+                  href={vendorRootPath}
+                >
+                  {t('vendor.order.continue_shopping')}
+                </a>
+              </li>
+              )}
+            </ul>
           </div>
         </div>
         <OrderContents order={order} t={t} />

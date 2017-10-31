@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Image } from 'rc/common/Image';
 import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurrency';
 import * as schemas from 'r/schemas';
@@ -12,6 +12,8 @@ class OrderItem extends Component {
       item: {
         count,
         title,
+        downloadUrl,
+        isDownloadingAvailable,
         good: {
           defaultUrl,
           article,
@@ -20,6 +22,7 @@ class OrderItem extends Component {
         totalPrice,
         quantityUnit,
       },
+      t,
     } = this.props;
 
     return (
@@ -33,14 +36,21 @@ class OrderItem extends Component {
           />
         </div>
         <div className="b-cart__item__col-content">
-          <h2 className="b-cart__item__title">
+          <div className="b-cart__item__title">
             <a href={defaultUrl} target="_blank">
               {title}
             </a>
-          </h2>
+          </div>
           <div className="text-muted text-small">
             {article}
           </div>
+          {isDownloadingAvailable &&
+            <div className="b-cart__item__download">
+              <a href={downloadUrl} className="b-btn">
+                {t('vendor.order.download_button')}
+              </a>
+            </div>
+          }
         </div>
         <div className="b-cart__item__col-quantity">
           {`${count} ${quantityUnit.short}`}
@@ -57,6 +67,7 @@ class OrderItem extends Component {
 
 OrderItem.propTypes = {
   item: schemas.orderItem.isRequired,
+  t: PropTypes.func.isRequired,
 };
 
 OrderItem.defaultProps = {

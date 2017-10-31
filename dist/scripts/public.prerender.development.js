@@ -15452,7 +15452,11 @@ var OrderPaid = function (_Component) {
             'h1',
             { className: 'b-cart__title' },
             t('vendor.order.title', { number: externalId }),
-            _react2.default.createElement(_OrderState2.default, { state: workflowState })
+            _react2.default.createElement(
+              'span',
+              { className: 'b-cart__state' },
+              _react2.default.createElement(_OrderState2.default, { state: workflowState })
+            )
           ),
           _react2.default.createElement(
             'div',
@@ -15465,22 +15469,34 @@ var OrderPaid = function (_Component) {
                 number: trackingId
               })
             ),
-            trackingUrl && _react2.default.createElement(
-              'a',
-              {
-                className: 'b-btn',
-                href: trackingUrl,
-                target: '_blank'
-              },
-              t('vendor.order.check_state')
-            ),
-            !isCurrentClientPresent && _react2.default.createElement(
-              'a',
-              {
-                className: 'b-btn',
-                href: vendorRootPath
-              },
-              t('vendor.order.continue_shopping')
+            _react2.default.createElement(
+              'ul',
+              { className: 'b-cart__actions' },
+              trackingUrl && _react2.default.createElement(
+                'li',
+                { className: 'b-cart__actions__element' },
+                _react2.default.createElement(
+                  'a',
+                  {
+                    className: 'b-btn',
+                    href: trackingUrl,
+                    target: '_blank'
+                  },
+                  t('vendor.order.check_state')
+                )
+              ),
+              !isCurrentClientPresent && _react2.default.createElement(
+                'li',
+                { className: 'b-cart__actions__element' },
+                _react2.default.createElement(
+                  'a',
+                  {
+                    className: 'b-btn',
+                    href: vendorRootPath
+                  },
+                  t('vendor.order.continue_shopping')
+                )
+              )
             )
           )
         ),
@@ -29652,7 +29668,7 @@ var OrderContents = function (_Component) {
           'ul',
           { className: 'b-cart__list' },
           items.map(function (item) {
-            return _react2.default.createElement(_OrderItem2.default, { item: item, key: 'order-item-' + item.good.id });
+            return _react2.default.createElement(_OrderItem2.default, { item: item, t: t, key: 'order-item-' + item.good.id });
           }),
           packageGood && this.renderPackageGood(packageGood, packagePrice),
           coupon && _react2.default.createElement(
@@ -29914,15 +29930,19 @@ var OrderItem = function (_Component) {
   (0, _createClass3.default)(OrderItem, [{
     key: 'render',
     value: function render() {
-      var _props$item = this.props.item,
+      var _props = this.props,
+          _props$item = _props.item,
           count = _props$item.count,
           title = _props$item.title,
+          downloadUrl = _props$item.downloadUrl,
+          isDownloadingAvailable = _props$item.isDownloadingAvailable,
           _props$item$good = _props$item.good,
           defaultUrl = _props$item$good.defaultUrl,
           article = _props$item$good.article,
           imageUrl = _props$item.imageUrl,
           totalPrice = _props$item.totalPrice,
-          quantityUnit = _props$item.quantityUnit;
+          quantityUnit = _props$item.quantityUnit,
+          t = _props.t;
 
 
       return _react2.default.createElement(
@@ -29942,7 +29962,7 @@ var OrderItem = function (_Component) {
           'div',
           { className: 'b-cart__item__col-content' },
           _react2.default.createElement(
-            'h2',
+            'div',
             { className: 'b-cart__item__title' },
             _react2.default.createElement(
               'a',
@@ -29954,6 +29974,15 @@ var OrderItem = function (_Component) {
             'div',
             { className: 'text-muted text-small' },
             article
+          ),
+          isDownloadingAvailable && _react2.default.createElement(
+            'div',
+            { className: 'b-cart__item__download' },
+            _react2.default.createElement(
+              'a',
+              { href: downloadUrl, className: 'b-btn' },
+              t('vendor.order.download_button')
+            )
           )
         ),
         _react2.default.createElement(
@@ -29977,7 +30006,8 @@ var OrderItem = function (_Component) {
 }(_react.Component);
 
 OrderItem.propTypes = {
-  item: schemas.orderItem.isRequired
+  item: schemas.orderItem.isRequired,
+  t: _react.PropTypes.func.isRequired
 };
 
 OrderItem.defaultProps = {
