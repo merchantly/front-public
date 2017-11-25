@@ -10,7 +10,7 @@ export default class ProductCardBreadcrumbs extends Component {
   render() {
     const { className, product } = this.props;
 
-    if (product.categories && product.categories.length) {
+    if (product.category) {
       return (
         <div className={classNames('b-breadcrumbs', className)}>
           {productCategoryPath(product)}

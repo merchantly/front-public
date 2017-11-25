@@ -2,10 +2,7 @@ import React from 'react';
 import AppLink from 'rc/common/AppLink';
 import { categoryRoute } from 'scripts/routes/app';
 
-export function productCategoryPath({ categories }) {
-  const notRootCategories = categories.filter((el) => el.isRoot === false);
-  const category = notRootCategories[0];
-
+export function productCategoryPath({ category }) {
   if (!category) return;
 
   let path = [];

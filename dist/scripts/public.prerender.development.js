@@ -18222,7 +18222,7 @@ var ProductCardBreadcrumbs = (_temp = _class = function (_Component) {
           product = _props.product;
 
 
-      if (product.categories && product.categories.length) {
+      if (product.category) {
         return _react2.default.createElement(
           'div',
           { className: (0, _classnames2.default)('b-breadcrumbs', className) },
@@ -31390,7 +31390,7 @@ function schemaOrgMarkup(product) {
     _react2.default.createElement('meta', { itemProp: 'name', content: (0, _seo.h1)(product) }),
     product.article && _react2.default.createElement('span', { itemProp: 'productID', content: (0, _seo.schemaOrgProductArticle)(product) }),
     product.goods && product.goods.length && product.goods.map(function (el) {
-      return schemaOrgGoodPrice(el, product.mainCategory);
+      return schemaOrgGoodPrice(el, product.category);
     })
   );
 }
@@ -31601,12 +31601,7 @@ var _app = require('../../routes/app');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function productCategoryPath(_ref) {
-  var categories = _ref.categories;
-
-  var notRootCategories = categories.filter(function (el) {
-    return el.isRoot === false;
-  });
-  var category = notRootCategories[0];
+  var category = _ref.category;
 
   if (!category) return;
 

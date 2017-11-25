@@ -19,7 +19,7 @@ export function schemaOrgMarkup(product) {
       }
       {product.goods
         && product.goods.length
-        && product.goods.map((el) => schemaOrgGoodPrice(el, product.mainCategory))
+        && product.goods.map((el) => schemaOrgGoodPrice(el, product.category))
       }
     </div>
   );
