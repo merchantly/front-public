@@ -9,7 +9,6 @@ if (!window.jQuery) {
 }
 require('owlCarousel');
 require('fancybox');
-require('fancybox.wannabe');
 const numeral = require('numeral');
 const language = require('numeral/languages/ru');
 
