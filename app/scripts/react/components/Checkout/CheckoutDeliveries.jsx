@@ -35,7 +35,10 @@ class CheckoutDeliveries extends Component {
               {title}
             </div>
             <div className="b-cart__form__delivery-price">
-              <HumanizedMoneyWithCurrency money={price} />
+              <HumanizedMoneyWithCurrency
+                money={price}
+                noMoneyTitle={t('vendor.order.no_price_delivery')}
+              />
             </div>
             {threshold && threshold.cents
               ? <div
