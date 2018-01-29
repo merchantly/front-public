@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import CheckoutField from './CheckoutField';
 import { camelize } from 'humps';
 import { getIn } from 'timm';
+import { pick, mapValues } from 'lodash';
 
 class CheckoutFields extends Component {
   render() {
@@ -16,17 +17,24 @@ class CheckoutFields extends Component {
       <span>
         {items.map((item) => {
           const value = getIn(itemValues, [item.name, 'value']);
-          console.log("items item", item.name);
+
+          const belongs = getIn(deliveryType, ['selects', camelize(item.name), 'belongs'])
+
+          const belongsData = mapValues(
+            pick(itemValues, belongs),
+            (v) => getIn(v, ['value'])
+          );
 
           return (
             <div className="b-form__row__widget" key={item.name}>
               <CheckoutField
                 deliveryType={deliveryType}
+                belongsData={belongsData}
                 item={item}
                 value={value}
                 onChange={onChange}
-                />
-                </div>
+              />
+            </div>
           );
         })}
       </span>

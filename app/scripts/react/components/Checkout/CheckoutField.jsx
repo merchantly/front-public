@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import CheckoutFieldSelect from './CheckoutFieldSelect';
+import CheckoutFieldSelectAjax from './CheckoutFieldSelectAjax';
 import { camelize } from 'humps';
 import { getIn } from 'timm';
 
@@ -14,6 +16,7 @@ class CheckoutField extends Component {
       value,
       deliveryType,
       onChange,
+      belongsData,
     } = this.props;
     const {
       errorMessage='',
@@ -28,10 +31,11 @@ class CheckoutField extends Component {
     const itemId = `vendor_order_${name}`;
     const itemName = `vendor_order[${name}]`;
 
-    let itemContent = null;
+    console.log('belongsData', itemName, belongsData)
+
     switch(type) {
       case STRING_TYPE:
-        itemContent = (
+        return (
           <div className="form-group string">
             <label className="string control-label" htmlFor={itemId}>
               {title}
@@ -53,7 +57,7 @@ class CheckoutField extends Component {
         );
         break;
       case TEXTAREA_TYPE:
-        itemContent = (
+        return (
           <div className="form-group text">
             <label className="text control-label" htmlFor={itemId}>
               {title}
@@ -74,30 +78,50 @@ class CheckoutField extends Component {
         );
         break;
       case SELECT_TYPE:
-        const options =
-          getIn(deliveryType, ['options', camelize(name)]).
-          map((option) => <option key={option.id} value={option.id}>{option.title}</option>);
-        itemContent = (
-          <div className="b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln">
-            <label className="text control-label" htmlFor={itemId}>
-              {title}
-            </label>
-            <select
-              disabled={isDisabled}
-              id={itemId}
-              name={itemName}
-              onChange={(ev) => onChange(name, ev.target.value)}
-              >
-              {options}
-             </select>
-            {errorMessage &&
-              <span className="help-block">{errorMessage}</span>
-            }
-          </div>
-        );
-      break;
+        const options = getIn(deliveryType, ['selects', camelize(name)]);
+        switch (options['type']) {
+          case 'options':
+            return (
+              <CheckoutFieldSelect
+                title={title}
+                disabled={isDisabled}
+                id={itemId}
+                name={name}
+                value={value}
+                itemName={itemName}
+                items={options.items}
+                onChange={onChange}
+                errorMessage={errorMessage}
+                defaultTitle={options.defaultTitle}
+              />
+          );
+          case 'ajax':
+            const requestData = { ...belongsData, vendor_delivery_id: deliveryType.id };
+            console.log('ajax requestData', requestData);
+
+            return (
+              <CheckoutFieldSelectAjax
+                requestData={requestData}
+                title={title}
+                disabled={isDisabled}
+                id={itemId}
+                name={name}
+                itemName={itemName}
+                belongsRequired={options.belongsRequired}
+                requiredTitle={options.requiredTitle}
+                onChange={onChange}
+                errorMessage={errorMessage}
+                collectionUrl={options.collectionUrl}
+                defaultTitle={options.defaultTitle}
+              />
+          );
+          default:
+            return (
+              <div>UNKNOWN select field type "{options['type']}"</div>
+          )
+        };
       case HIDDEN_TYPE:
-        itemContent = (
+        return (
           <input
             type={HIDDEN_TYPE}
             id={itemId}
@@ -107,19 +131,17 @@ class CheckoutField extends Component {
         );
         break;
       default:
-        itemContent = (
-          <div>Unknown field type {type}</div>
+        return (
+          <div>Unknown field type '{type}'</div>
         );
     }
-
-    console.log('CheckoutField', type, itemId, itemName, value);
-    return itemContent;
   }
 }
 
 CheckoutField.propTypes = {
   deliveryType: PropTypes.object.isRequired,
   item: PropTypes.object.isRequired,
+  belongsData: PropTypes.object,
   value:  PropTypes.oneOfType([
     PropTypes.string.isRequired,
     PropTypes.number.isRequired

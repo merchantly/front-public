@@ -810,33 +810,52 @@
       }
     },
     {
-      "id": 1755,
-      "title": "Самовывоз в ARTPLAY!",
-      "description": "Москва, Центр дизайна ARTPLAY, ул. Нижняя Сыромятническая, 10, стр.9, подъезд D, 3-й этаж.\r\nВремя работы: пн-вс, с 11 до 21.\r\n\r\nСрок бронирования украшения - 3 дня.\r\n\r\nОбратите внимание, что обмен и возврат купленных украшений осуществляется в течение 14 дней с момента покупки.",
+      "id": 15827,
+      "title": "Через пункт выдачи",
+      "description": "Выберите город и пункт выдачи",
       "price": {
         "cents": null,
         "currencyIsoCode": "RUB"
       },
-      "options": {
-        "deliveryCityId": [
-          { "title": "Москва", "id": 1 },
-          { "title": "Питер", "id": 2 },
-          { "title": "Чебоксары", "id": 3 }
-        ],
+      "selects": {
+        "deliveryCityId": {
+          "defaultTitle": "Выберите город доставки",
+          "type": "ajax",
+          "collectionUrl": "/v1/delivery_cities.json"
+        },
+        "pickupPointId": {
+          "defaultTitle": "Выберите пункт выдачи",
+          "type": "ajax",
+          "collectionUrl": "/v1/pickup_points.json",
+          "belongs": ["delivery_city_id"],
+          "belongsRequired": ["delivery_city_id"],
+          "requiredTitle": "Выберите город доставки"
+        },
+        "test": {
+          "type": "select",
+          "defaultTitle": "Выберите",
+          "items": [
+            { "title": "Москва", "id": 1 },
+            { "title": "Питер", "id": 2 },
+            { "title": "Чебоксары", "id": 3 }
+          ]
+        }
       },
       "fields": [
         "name",
         "phone",
         "email",
         "comment",
-        "delivery_city_id"
+        "delivery_city_id",
+        "pickup_point_id"
       ],
       "requiredFields": [
         "name",
         "phone",
         "email",
         "comment",
-        "delivery_city_id"
+        "delivery_city_id",
+        "pickup_point_id"
       ],
       "availablePayments": [
         105,
@@ -901,8 +920,13 @@
       "name": "delivery_city_id",
       "type": "select",
       "value": "",
-      "title": "Город",
-      "errorMessage": "не может быть пустым"
+      "title": "Город"
+    },
+    {
+      "name": "pickup_point_id",
+      "type": "select",
+      "value": "",
+      "title": "Пункт выдачи"
     },
     {
       "name": "address",
