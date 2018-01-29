@@ -85,6 +85,10 @@ function externalDependencies(env, bundler) {
   });
 }
 
+gulp.task('show-env', function() {
+  console.log('process.env', process.env);
+});
+
 gulp.task('[Static] Client scripts', () => {
   let bundler = browserify({
     cache: {},

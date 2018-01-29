@@ -3,12 +3,17 @@ import CheckoutFieldSelect from './CheckoutFieldSelect';
 import * as apiRoutes from '../../../routes/api';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import { diff } from 'deep-diff';
+import { find } from 'lodash';
 
 const DEFAULT_STATE = 'default';
 const REQUIRED_STATE = 'required';
 const LOADING_STATE = 'loading';
 const LOADED_STATE = 'loaded';
 const ERROR_STATE = 'error';
+
+const findEmptyValue = (requires, data) => {
+  return find(requires || [], (v) => !data[v]);
+}
 
 class CheckoutFieldSelectAjax extends Component {
   state = {
@@ -29,22 +34,24 @@ class CheckoutFieldSelectAjax extends Component {
     if (diff(nextProps.requestData, this.props.requestData)) this.loadItems({requestData: nextProps.requestData});
   }
   loadItems({requestData}) {
-    // if belongsRequired exists makeRequest
-    // else setState required
-    this.makeRequest({requestData})
-      .then((data) => {
-        this.setState({
-          items: data,
-          status: LOADED_STATE
-        })
-      })
-      .fail((xhr, textStatus) => {
-        if (textStatus !== 'abort') {
+    if (findEmptyValue(this.props.belongs, requestData)) {
+      this.setState({status: REQUIRED_STATE});
+    } else {
+      this.makeRequest({requestData})
+        .then((data) => {
           this.setState({
-            status: ERROR_STATE
+            items: data,
+            status: LOADED_STATE
           })
-        }
-      });
+        })
+        .fail((xhr, textStatus) => {
+          if (textStatus !== 'abort') {
+            this.setState({
+              status: ERROR_STATE
+            })
+          }
+        });
+    };
   }
 
   makeRequest({requestData}) {
@@ -59,8 +66,6 @@ class CheckoutFieldSelectAjax extends Component {
     this.setState({
       status: LOADING_STATE
     });
-
-    console.log("makeRequest", collectionUrl, requestData);
 
     this.pendingRequest = $.ajax({
       url: apiRoutes.publicUrl() + collectionUrl,
@@ -80,6 +85,8 @@ render() {
     onChange,
     errorMessage,
     defaultTitle,
+    loadingTitle,
+    requiredTitle,
     value,
     disabled,
     t
@@ -87,16 +94,15 @@ render() {
 
   const {
     status,
-    items,
-    requiredTitle
+    items
   } = this.state;
 
   switch(status) {
     case DEFAULT_STATE:
-      case LOADING_STATE:
-      return (<div>{t('vendor.ajax.loading')}</div>);
+    case LOADING_STATE:
+      return (<div className="alert alert-info">{loadingTitle}</div>);
     case REQUIRED_STATE:
-      return (<div>{requiredTitle}</div>);
+      return (<div className="alert alert-info">{requiredTitle}</div>);
     case LOADED_STATE:
       return (
         <CheckoutFieldSelect
@@ -113,9 +119,9 @@ render() {
         />
     );
     case ERROR_STATE:
-      return (<div>{t('vendor.ajax.error')}</div>);
+      return (<div className="alert alert-danger">{t('vendor.ajax.error')}</div>);
     default:
-      return (<div>Unknown status {status}</div>)
+      return (<div className="alert alert-danger">Unknown status {status}</div>)
   }
 }
 }

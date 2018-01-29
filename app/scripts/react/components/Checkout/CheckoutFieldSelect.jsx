@@ -24,12 +24,12 @@ class CheckoutFieldSelect extends Component {
         <label className="text control-label" htmlFor={id}>{title}</label>
         <select
           disabled={disabled}
-          defaultValue={value}
+          defaultValue={value || ""}
           id={id}
           name={itemName}
           onChange={myOnChange}
         >
-          {defaultTitle && <option value="" disabled>{defaultTitle}</option>}
+          {defaultTitle && options.length> 1 && <option value="" key="default" disabled={true}>{defaultTitle}</option>}
           {options}
         </select>
         {errorMessage &&

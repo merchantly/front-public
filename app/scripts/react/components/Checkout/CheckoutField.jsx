@@ -31,8 +31,6 @@ class CheckoutField extends Component {
     const itemId = `vendor_order_${name}`;
     const itemName = `vendor_order[${name}]`;
 
-    console.log('belongsData', itemName, belongsData)
-
     switch(type) {
       case STRING_TYPE:
         return (
@@ -79,7 +77,7 @@ class CheckoutField extends Component {
         break;
       case SELECT_TYPE:
         const options = getIn(deliveryType, ['selects', camelize(name)]);
-        switch (options['type']) {
+        switch (options.type) {
           case 'options':
             return (
               <CheckoutFieldSelect
@@ -97,7 +95,6 @@ class CheckoutField extends Component {
           );
           case 'ajax':
             const requestData = { ...belongsData, vendor_delivery_id: deliveryType.id };
-            console.log('ajax requestData', requestData);
 
             return (
               <CheckoutFieldSelectAjax
@@ -107,8 +104,9 @@ class CheckoutField extends Component {
                 id={itemId}
                 name={name}
                 itemName={itemName}
-                belongsRequired={options.belongsRequired}
+                belongs={options.belongs}
                 requiredTitle={options.requiredTitle}
+                loadingTitle={options.loadingTitle}
                 onChange={onChange}
                 errorMessage={errorMessage}
                 collectionUrl={options.collectionUrl}

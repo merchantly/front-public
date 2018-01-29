@@ -6757,8 +6757,6 @@ var CheckoutField = function (_Component) {
       var itemId = 'vendor_order_' + name;
       var itemName = 'vendor_order[' + name + ']';
 
-      console.log('belongsData', itemName, belongsData);
-
       switch (type) {
         case STRING_TYPE:
           return _react2.default.createElement(
@@ -6817,7 +6815,7 @@ var CheckoutField = function (_Component) {
           break;
         case SELECT_TYPE:
           var options = (0, _timm.getIn)(deliveryType, ['selects', (0, _humps.camelize)(name)]);
-          switch (options['type']) {
+          switch (options.type) {
             case 'options':
               return _react2.default.createElement(_CheckoutFieldSelect2.default, {
                 title: title,
@@ -6833,7 +6831,6 @@ var CheckoutField = function (_Component) {
               });
             case 'ajax':
               var requestData = (0, _extends3.default)({}, belongsData, { vendor_delivery_id: deliveryType.id });
-              console.log('ajax requestData', requestData);
 
               return _react2.default.createElement(_CheckoutFieldSelectAjax2.default, {
                 requestData: requestData,
@@ -6842,8 +6839,9 @@ var CheckoutField = function (_Component) {
                 id: itemId,
                 name: name,
                 itemName: itemName,
-                belongsRequired: options.belongsRequired,
+                belongs: options.belongs,
                 requiredTitle: options.requiredTitle,
+                loadingTitle: options.loadingTitle,
                 onChange: _onChange,
                 errorMessage: errorMessage,
                 collectionUrl: options.collectionUrl,
@@ -6977,14 +6975,14 @@ var CheckoutFieldSelect = function (_Component) {
           'select',
           {
             disabled: disabled,
-            defaultValue: value,
+            defaultValue: value || "",
             id: id,
             name: itemName,
             onChange: myOnChange
           },
-          defaultTitle && _react2.default.createElement(
+          defaultTitle && options.length > 1 && _react2.default.createElement(
             'option',
-            { value: '', disabled: true },
+            { value: '', key: 'default', disabled: true },
             defaultTitle
           ),
           options
@@ -7054,6 +7052,8 @@ var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
 var _deepDiff = require('deep-diff');
 
+var _lodash = require('lodash');
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -7063,6 +7063,12 @@ var REQUIRED_STATE = 'required';
 var LOADING_STATE = 'loading';
 var LOADED_STATE = 'loaded';
 var ERROR_STATE = 'error';
+
+var findEmptyValue = function findEmptyValue(requires, data) {
+  return (0, _lodash.find)(requires || [], function (v) {
+    return !data[v];
+  });
+};
 
 var CheckoutFieldSelectAjax = function (_Component) {
   (0, _inherits3.default)(CheckoutFieldSelectAjax, _Component);
@@ -7109,20 +7115,22 @@ var CheckoutFieldSelectAjax = function (_Component) {
 
       var requestData = _ref2.requestData;
 
-      // if belongsRequired exists makeRequest
-      // else setState required
-      this.makeRequest({ requestData: requestData }).then(function (data) {
-        _this2.setState({
-          items: data,
-          status: LOADED_STATE
-        });
-      }).fail(function (xhr, textStatus) {
-        if (textStatus !== 'abort') {
+      if (findEmptyValue(this.props.belongs, requestData)) {
+        this.setState({ status: REQUIRED_STATE });
+      } else {
+        this.makeRequest({ requestData: requestData }).then(function (data) {
           _this2.setState({
-            status: ERROR_STATE
+            items: data,
+            status: LOADED_STATE
           });
-        }
-      });
+        }).fail(function (xhr, textStatus) {
+          if (textStatus !== 'abort') {
+            _this2.setState({
+              status: ERROR_STATE
+            });
+          }
+        });
+      };
     }
   }, {
     key: 'makeRequest',
@@ -7138,8 +7146,6 @@ var CheckoutFieldSelectAjax = function (_Component) {
       this.setState({
         status: LOADING_STATE
       });
-
-      console.log("makeRequest", collectionUrl, requestData);
 
       this.pendingRequest = $.ajax({
         url: apiRoutes.publicUrl() + collectionUrl,
@@ -7160,13 +7166,14 @@ var CheckoutFieldSelectAjax = function (_Component) {
           onChange = _props.onChange,
           errorMessage = _props.errorMessage,
           defaultTitle = _props.defaultTitle,
+          loadingTitle = _props.loadingTitle,
+          requiredTitle = _props.requiredTitle,
           value = _props.value,
           disabled = _props.disabled,
           t = _props.t;
       var _state = this.state,
           status = _state.status,
-          items = _state.items,
-          requiredTitle = _state.requiredTitle;
+          items = _state.items;
 
 
       switch (status) {
@@ -7174,13 +7181,13 @@ var CheckoutFieldSelectAjax = function (_Component) {
         case LOADING_STATE:
           return _react2.default.createElement(
             'div',
-            null,
-            t('vendor.ajax.loading')
+            { className: 'alert alert-info' },
+            loadingTitle
           );
         case REQUIRED_STATE:
           return _react2.default.createElement(
             'div',
-            null,
+            { className: 'alert alert-info' },
             requiredTitle
           );
         case LOADED_STATE:
@@ -7199,13 +7206,13 @@ var CheckoutFieldSelectAjax = function (_Component) {
         case ERROR_STATE:
           return _react2.default.createElement(
             'div',
-            null,
+            { className: 'alert alert-danger' },
             t('vendor.ajax.error')
           );
         default:
           return _react2.default.createElement(
             'div',
-            null,
+            { className: 'alert alert-danger' },
             'Unknown status ',
             status
           );
@@ -7225,7 +7232,7 @@ CheckoutFieldSelectAjax.defaultProps = {};
 exports.default = (0, _provideTranslations2.default)(CheckoutFieldSelectAjax);
 module.exports = exports['default'];
 
-},{"../../../routes/api":353,"../HoC/provideTranslations":103,"./CheckoutFieldSelect":63,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"deep-diff":"deep-diff","react":"react"}],65:[function(require,module,exports){
+},{"../../../routes/api":353,"../HoC/provideTranslations":103,"./CheckoutFieldSelect":63,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"deep-diff":"deep-diff","lodash":"lodash","react":"react"}],65:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

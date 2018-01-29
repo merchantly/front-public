@@ -810,7 +810,7 @@
       }
     },
     {
-      "id": 15827,
+      "id": 2852,
       "title": "Через пункт выдачи",
       "description": "Выберите город и пункт выдачи",
       "price": {
@@ -821,15 +821,16 @@
         "deliveryCityId": {
           "defaultTitle": "Выберите город доставки",
           "type": "ajax",
-          "collectionUrl": "/v1/delivery_cities.json"
+          "collectionUrl": "/v1/delivery_cities.json",
+          "loadingTitle": "Загружаю список городов.."
         },
         "pickupPointId": {
           "defaultTitle": "Выберите пункт выдачи",
           "type": "ajax",
           "collectionUrl": "/v1/pickup_points.json",
           "belongs": ["delivery_city_id"],
-          "belongsRequired": ["delivery_city_id"],
-          "requiredTitle": "Выберите город доставки"
+          "requiredTitle": "Выберите город доставки",
+          "loadingTitle": "Загружаю список пунктов выдачи.."
         },
         "test": {
           "type": "select",
