@@ -4,9 +4,6 @@ import {
 import {
   CALL_API,
 } from '../middleware/api';
-import {
-  camelizeKeys,
-} from 'humps';
 
 export const CART_REQUEST = 'CART_REQUEST';
 export const CART_SUCCESS = 'CART_SUCCESS';
@@ -59,7 +56,7 @@ export function selectPayment(id) {
 export function initCart(initialCart) {
   return {
     type: CART_SUCCESS,
-    response: camelizeKeys(initialCart),
+    response: initialCart,
   };
 }
 
@@ -81,7 +78,7 @@ export function initCheckout(params) {
     cart,
     coupon,
     fields,
-  } = camelizeKeys(params);
+  } = params;
 
   return {
     type: CART_INIT_CHECKOUT,

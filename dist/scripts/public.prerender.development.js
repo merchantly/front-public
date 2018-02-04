@@ -163,8 +163,6 @@ var _api = require('../../routes/api');
 
 var _api2 = require('../middleware/api');
 
-var _humps = require('humps');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CART_REQUEST = exports.CART_REQUEST = 'CART_REQUEST';
@@ -218,7 +216,7 @@ function selectPayment(id) {
 function initCart(initialCart) {
   return {
     type: CART_SUCCESS,
-    response: (0, _humps.camelizeKeys)(initialCart)
+    response: initialCart
   };
 }
 
@@ -231,15 +229,15 @@ function changeFieldValue(name, value) {
 }
 
 function initCheckout(params) {
-  var _camelizeKeys = (0, _humps.camelizeKeys)(params),
-      deliveryTypes = _camelizeKeys.deliveryTypes,
-      deliveryTypeId = _camelizeKeys.deliveryTypeId,
-      paymentTypes = _camelizeKeys.paymentTypes,
-      paymentTypeId = _camelizeKeys.paymentTypeId,
-      formValues = _camelizeKeys.formValues,
-      cart = _camelizeKeys.cart,
-      coupon = _camelizeKeys.coupon,
-      fields = _camelizeKeys.fields;
+  var deliveryTypes = params.deliveryTypes,
+      deliveryTypeId = params.deliveryTypeId,
+      paymentTypes = params.paymentTypes,
+      paymentTypeId = params.paymentTypeId,
+      formValues = params.formValues,
+      cart = params.cart,
+      coupon = params.coupon,
+      fields = params.fields;
+
 
   return {
     type: CART_INIT_CHECKOUT,
@@ -270,7 +268,7 @@ function fetchCart() {
   };
 }
 
-},{"../../routes/api":354,"../middleware/api":309,"babel-runtime/helpers/defineProperty":372,"humps":511}],5:[function(require,module,exports){
+},{"../../routes/api":354,"../middleware/api":309,"babel-runtime/helpers/defineProperty":372}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -384,8 +382,6 @@ function addGoods(productGlobalId, items) {
     data[param_key(item.good.globalId, 'count')] = item.count;
     data[param_key(item.good.globalId, 'weight')] = item.weight;
   });
-
-  console.log("addGoods", data);
 
   return _ref = {}, (0, _defineProperty3.default)(_ref, _api2.CALL_API, {
     endpoint: apiRoutes.cartItems(),
@@ -6834,6 +6830,7 @@ var CheckoutField = function (_Component) {
             belongs: ajaxSettings.belongs,
             requiredTitle: ajaxSettings.requiredTitle,
             loadingTitle: ajaxSettings.loadingTitle,
+            value: value,
             onChange: _onChange,
             errorMessage: errorMessage,
             collectionUrl: ajaxSettings.collectionUrl,
@@ -6909,6 +6906,8 @@ var _provideTranslations = require('../HoC/provideTranslations');
 
 var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var CheckoutFieldSelect = function (_Component) {
@@ -6946,7 +6945,9 @@ var CheckoutFieldSelect = function (_Component) {
         );
       });
 
-      console.log('select', name, inputName);
+      var currentValue = !!(0, _lodash.find)(items, function (i) {
+        return value && i.id.toString() == value.toString();
+      }) ? value : '';
 
       return _react2.default.createElement(
         'div',
@@ -6960,7 +6961,7 @@ var CheckoutFieldSelect = function (_Component) {
           'select',
           {
             disabled: disabled,
-            defaultValue: value || "",
+            defaultValue: currentValue || '',
             id: id,
             name: inputName,
             onChange: myOnChange
@@ -6992,7 +6993,7 @@ CheckoutFieldSelect.defaultProps = {};
 exports.default = (0, _provideTranslations2.default)(CheckoutFieldSelect);
 module.exports = exports['default'];
 
-},{"../HoC/provideTranslations":103,"babel-runtime/core-js/object/get-prototype-of":364,"babel-runtime/helpers/classCallCheck":370,"babel-runtime/helpers/createClass":371,"babel-runtime/helpers/inherits":374,"babel-runtime/helpers/possibleConstructorReturn":376,"react":"react"}],64:[function(require,module,exports){
+},{"../HoC/provideTranslations":103,"babel-runtime/core-js/object/get-prototype-of":364,"babel-runtime/helpers/classCallCheck":370,"babel-runtime/helpers/createClass":371,"babel-runtime/helpers/inherits":374,"babel-runtime/helpers/possibleConstructorReturn":376,"lodash":"lodash","react":"react"}],64:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32757,7 +32758,10 @@ var actionMap = (_actionMap = {}, (0, _defineProperty3.default)(_actionMap, _Car
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_DELIVERY, function (state, _ref8) {
   var id = _ref8.id;
 
-  return (0, _timm.set)(state, 'selectedDeliveryType', id);
+  var newState = (0, _timm.set)(state, 'selectedDeliveryType', id);
+  // Очищаем delivery_city_id при переключении доставки
+  var n = (0, _timm.setIn)(newState, ['formValues', 'delivery_city_id'], null);
+  return n;
 }), (0, _defineProperty3.default)(_actionMap, _CartActions.CART_SELECT_PAYMENT, function (state, _ref9) {
   var id = _ref9.id;
 

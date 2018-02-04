@@ -100,6 +100,7 @@ class CheckoutField extends Component {
             belongs={ajaxSettings.belongs}
             requiredTitle={ajaxSettings.requiredTitle}
             loadingTitle={ajaxSettings.loadingTitle}
+            value={value}
             onChange={onChange}
             errorMessage={errorMessage}
             collectionUrl={ajaxSettings.collectionUrl}

@@ -391,7 +391,7 @@
         }
     },
     "formAuthenticity": {
-        "token": "A+DyDOIT+LMClmHM+KqsEig8bLWhyEKNOcghrsQfz13UKTxAlqc8PvCm2N2zSVdn5lzM1qMKnpL/1j2gYVqxsA==",
+        "token": "FqpLk9UHjnH8T8K1G89qOQfEjPHdPcBZKbIDy5vurkrBY4XfobNK/A5/e6RQLJFMyaQskt//HEbvrB/FPqvQpw==",
         "field": "authenticity_token"
     },
     "cart": {
@@ -933,7 +933,7 @@
                     "type": "ajax_select",
                     "title": "Город пункта выдачи",
                     "placeholder": "translation missing: ru.order.placeholders.delivery_city_id",
-                    "errorMessage": "не может быть пустым",
+                    "errorMessage": "",
                     "reservedValue": null,
                     "isDisabled": false,
                     "isRequired": true,
@@ -952,13 +952,13 @@
                     "type": "ajax_select",
                     "title": "Пункт выдачи",
                     "placeholder": "translation missing: ru.order.placeholders.pickup_point_id",
-                    "errorMessage": "не может быть пустым",
+                    "errorMessage": "",
                     "reservedValue": null,
                     "isDisabled": false,
                     "isRequired": true,
                     "ajaxSettings": {
                         "defaultTitle": "Выберите пункт выдачи",
-                        "requiredTitle": "Выберите город доставки",
+                        "requiredTitle": "Укажите город доставки, чтобы выбрать пункт выдачи",
                         "loadingTitle": "Загружаю список пунктов выдачи..",
                         "type": "ajax",
                         "collectionUrl": "/v1/pickup_points.json",
@@ -1048,7 +1048,7 @@
                     "type": "ajax_select",
                     "title": "Город пункта выдачи",
                     "placeholder": "translation missing: ru.order.placeholders.delivery_city_id",
-                    "errorMessage": "не может быть пустым",
+                    "errorMessage": "",
                     "reservedValue": null,
                     "isDisabled": false,
                     "isRequired": true,
@@ -1067,13 +1067,13 @@
                     "type": "ajax_select",
                     "title": "Пункт выдачи",
                     "placeholder": "translation missing: ru.order.placeholders.pickup_point_id",
-                    "errorMessage": "не может быть пустым",
+                    "errorMessage": "",
                     "reservedValue": null,
                     "isDisabled": false,
                     "isRequired": true,
                     "ajaxSettings": {
                         "defaultTitle": "Выберите пункт выдачи",
-                        "requiredTitle": "Выберите город доставки",
+                        "requiredTitle": "Укажите город доставки, чтобы выбрать пункт выдачи",
                         "loadingTitle": "Загружаю список пунктов выдачи..",
                         "type": "ajax",
                         "collectionUrl": "/v1/pickup_points.json",
@@ -1147,8 +1147,8 @@
         "email": "",
         "city_title": null,
         "address": null,
-        "delivery_city_id": null,
-        "pickup_point_id": null,
+        "delivery_city_id": 3,
+        "pickup_point_id": 6,
         "comment": "TEST_COMENTwer"
     },
     "coupon": {

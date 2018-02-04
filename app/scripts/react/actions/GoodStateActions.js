@@ -26,8 +26,6 @@ export function addGoods(productGlobalId, items, count=1, weight=null) {
     data[param_key(item.good.globalId, 'weight')] = item.weight;
   });
 
-  console.log("addGoods", data);
-
   return {
     [CALL_API]: {
       endpoint: apiRoutes.cartItems(),
