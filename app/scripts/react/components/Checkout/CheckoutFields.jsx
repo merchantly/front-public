@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import CheckoutField from './CheckoutField';
-import { camelize } from 'humps';
+import { decamelizeKeys } from 'humps';
 import { getIn } from 'timm';
 import { pick, mapValues, includes } from 'lodash';
 
@@ -9,7 +9,7 @@ const buildRequestData = ({belongs = [], requestData = {}}, values) => {
     pick(values, belongs || []),
     (v) => getIn(v, ['value'])
   );
-  return { ...belongsData, ...requestData };
+  return decamelizeKeys({ ...belongsData, ...requestData });
 }
 
 class CheckoutFields extends Component {
@@ -25,6 +25,8 @@ class CheckoutFields extends Component {
         {fields.map((field) => {
           const value = getIn(values, [field.name, 'value']);
           const requestData = buildRequestData(field.ajaxSettings || {}, values)
+
+          console.log(field.name, requestData, field.ajaxSettings);
 
           return (
             <div className="b-form__row__widget" key={field.name}>

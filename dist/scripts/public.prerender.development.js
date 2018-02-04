@@ -7272,7 +7272,7 @@ var buildRequestData = function buildRequestData(_ref, values) {
   var belongsData = (0, _lodash.mapValues)((0, _lodash.pick)(values, belongs || []), function (v) {
     return (0, _timm.getIn)(v, ['value']);
   });
-  return (0, _extends3.default)({}, belongsData, requestData);
+  return (0, _humps.decamelizeKeys)((0, _extends3.default)({}, belongsData, requestData));
 };
 
 var CheckoutFields = function (_Component) {
@@ -7298,6 +7298,8 @@ var CheckoutFields = function (_Component) {
         fields.map(function (field) {
           var value = (0, _timm.getIn)(values, [field.name, 'value']);
           var requestData = buildRequestData(field.ajaxSettings || {}, values);
+
+          console.log(field.name, requestData, field.ajaxSettings);
 
           return _react2.default.createElement(
             'div',
