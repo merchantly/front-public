@@ -33,7 +33,6 @@ class OrderContainer extends Component {
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
-      debugger
       initCheckout(initialProps);
       storeInitialized = true;
     }
@@ -67,8 +66,6 @@ class OrderContainer extends Component {
       totalCount,
       totalPrice,
     } = this.props;
-
-    console.log('render formValues', formValues, this.props);
 
     return (
       <Order
@@ -130,7 +127,6 @@ OrderContainer.defaultProps = {
 
 export default provideTranslations(connectToRedux(connect(
   (state, ownProps) => {
-    debugger
     const { cart } = storeInitialized
       ? state
       : ({ // TODO: move to store initialization when/if root component created
@@ -148,8 +144,6 @@ export default provideTranslations(connectToRedux(connect(
       selectedDeliveryType: selectedDeliveryTypeId,
       selectedPaymentType: selectedPaymentTypeId,
     } = cart;
-
-    console.log('provideTranslations formValues', cart, formValues);
 
     const selectedDeliveryType = find(
       deliveryTypes,

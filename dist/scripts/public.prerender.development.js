@@ -7266,9 +7266,7 @@ var buildRequestData = function buildRequestData(_ref, values) {
       _ref$requestData = _ref.requestData,
       requestData = _ref$requestData === undefined ? {} : _ref$requestData;
 
-  var belongsData = (0, _lodash.mapValues)((0, _lodash.pick)(values, belongs || []), function (v) {
-    return getIn(v, ['value']);
-  });
+  var belongsData = (0, _lodash.pick)(values, belongs || []);
   return (0, _humps.decamelizeKeys)((0, _extends3.default)({}, belongsData, requestData));
 };
 
@@ -15053,7 +15051,6 @@ var OrderContainer = function (_Component) {
 
 
       if (!storeInitialized && (0, _dom.canUseDOM)()) {
-        debugger;
         initCheckout(initialProps);
         storeInitialized = true;
       }
@@ -15094,8 +15091,6 @@ var OrderContainer = function (_Component) {
           totalCount = _props2.totalCount,
           totalPrice = _props2.totalPrice;
 
-
-      console.log('render formValues', formValues, this.props);
 
       return _react2.default.createElement(_Order2.default, {
         backUrl: backUrl,
@@ -15156,8 +15151,6 @@ OrderContainer.defaultProps = {
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
-  debugger;
-
   var _ref = storeInitialized ? state : { // TODO: move to store initialization when/if root component created
     cart: (0, _extends3.default)({}, state.cart, (0, _CartActions.initCheckout)(ownProps))
   },
@@ -15177,8 +15170,6 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
       selectedDeliveryTypeId = cart.selectedDeliveryType,
       selectedPaymentTypeId = cart.selectedPaymentType;
 
-
-  console.log('provideTranslations formValues', cart, formValues);
 
   var selectedDeliveryType = (0, _lodash.find)(deliveryTypes, function (t) {
     return t.id === selectedDeliveryTypeId;

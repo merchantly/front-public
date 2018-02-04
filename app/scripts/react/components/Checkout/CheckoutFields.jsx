@@ -1,13 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import CheckoutField from './CheckoutField';
 import { decamelizeKeys } from 'humps';
-import { pick, mapValues, includes } from 'lodash';
+import { pick } from 'lodash';
 
 const buildRequestData = ({belongs = [], requestData = {}}, values) => {
-  const belongsData = mapValues(
-    pick(values, belongs || []),
-    (v) => getIn(v, ['value'])
-  );
+  const belongsData = pick(values, belongs || []);
   return decamelizeKeys({ ...belongsData, ...requestData });
 }
 
