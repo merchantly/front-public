@@ -2,36 +2,36 @@ import React, { Component, PropTypes } from 'react';
 import CheckoutField from './CheckoutField';
 import { camelize } from 'humps';
 import { getIn } from 'timm';
-import { pick, mapValues } from 'lodash';
+import { pick, mapValues, includes } from 'lodash';
+
+const buildRequestData = ({belongs = [], requestData = {}}, values) => {
+  const belongsData = mapValues(
+    pick(values, belongs || []),
+    (v) => getIn(v, ['value'])
+  );
+  return { ...belongsData, ...requestData };
+}
 
 class CheckoutFields extends Component {
   render() {
     const {
-      deliveryType,
-      items,
-      itemValues,
+      fields,
+      values,
       onChange,
     } = this.props;
 
     return (
       <span>
-        {items.map((item) => {
-          const value = getIn(itemValues, [item.name, 'value']);
-
-          const belongs = getIn(deliveryType, ['selects', camelize(item.name), 'belongs'])
-
-          const belongsData = mapValues(
-            pick(itemValues, belongs),
-            (v) => getIn(v, ['value'])
-          );
+        {fields.map((field) => {
+          const value = getIn(values, [field.name, 'value']);
+          const requestData = buildRequestData(field.ajaxSettings || {}, values)
 
           return (
-            <div className="b-form__row__widget" key={item.name}>
+            <div className="b-form__row__widget" key={field.name}>
               <CheckoutField
-                deliveryType={deliveryType}
-                belongsData={belongsData}
-                item={item}
-                value={value}
+                requestData={requestData}
+                field={field}
+                value={field.reservedValue || value}
                 onChange={onChange}
               />
             </div>
@@ -43,9 +43,8 @@ class CheckoutFields extends Component {
 }
 
 CheckoutFields.propTypes = {
-  deliveryType: PropTypes.object.isRequired,
-  items: PropTypes.array.isRequired,
-  itemValues: PropTypes.object.isRequired,
+  fields: PropTypes.array.isRequired,
+  values: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 

@@ -1,0 +1,3736 @@
+{
+    "deliveryTypeId": 2853,
+    "paymentTypeId": 3306,
+    "i18n": {
+        "locale": "ru",
+        "translations": {
+            "vendor": {
+                "ajax": {
+                    "error": "Ошибка выполнения AJAX-запроса"
+                },
+                "menu": {
+                    "all_products": "Все товары"
+                },
+                "blog_post": {
+                    "prev_post": "Предыдущий пост",
+                    "next_post": "Следующий пост"
+                },
+                "not_published": "Магазин временно не работает",
+                "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                "tasty_product_button_text": "Купить",
+                "more": "Подробнее",
+                "entities": {
+                    "product": "%{count} товар",
+                    "product_2": "%{count} товара",
+                    "product_5": "%{count} товаров"
+                },
+                "badges": {
+                    "new": "Новинка",
+                    "sale_percent": "SALE - %{percent}%",
+                    "not_available": "Не продается",
+                    "sale": "SALE",
+                    "sold": "Продано"
+                },
+                "gallery": {
+                    "close": "Закрыть",
+                    "next": "Вперёд",
+                    "prev": "Назад"
+                },
+                "search": {
+                    "results_title": "Результаты поиска (%{count})",
+                    "nothing_found": "К сожалению, ничего не найдено."
+                },
+                "seconds_count": "%{count} секунду",
+                "seconds_count_2": "%{count} секунды",
+                "seconds_count_5": "%{count} секунд",
+                "locales": {
+                    "ru": "Русский",
+                    "en": "English"
+                },
+                "activemodel": {
+                    "errors": {
+                        "models": {
+                            "vendor_order_form": {
+                                "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                "attributes": {
+                                    "address": {
+                                        "blank": "не может быть пустым"
+                                    },
+                                    "email": {
+                                        "email": "не является email адресом"
+                                    },
+                                    "city_title": {
+                                        "blank": "не может быть пустым"
+                                    },
+                                    "phone": {
+                                        "blank": "не может быть пустым"
+                                    },
+                                    "name": {
+                                        "blank": "не может быть пустым"
+                                    },
+                                    "public_offer_accepted": {
+                                        "blank": "Необходимо принять условия публичной оферты"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "validators": {
+                    "available_quantity": {
+                        "no_quantity": {
+                            "one": "На складе осталась всего 1 штука. Измените количество.",
+                            "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                            "many": "На складе осталось всего %{count} штук. Измените количество.",
+                            "other": "На складе осталось всего %{count} штук. Измените количество."
+                        },
+                        "not_available": "Данный товар закончился"
+                    }
+                },
+                "errors": {
+                    "cart": {
+                        "empty": "В корзине нет товаров",
+                        "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                        "not_ordering": "В корзине лежат товары не доступные к заказу"
+                    },
+                    "coupon": {
+                        "not_found": "Несуществующий промокод %{code}",
+                        "expired": "Промокод просрочен %{code}"
+                    },
+                    "order": {
+                        "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                        "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                        "has_unorderable_goods": "В заказе лежат недоступные товары",
+                        "no_items": "В заказе нет товаров",
+                        "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                        "comment": "Комментарий не может быть пустым"
+                    }
+                },
+                "placeholders": {
+                    "coupon": "Промо-код (если есть)",
+                    "search": "Поиск"
+                },
+                "alerts": {
+                    "confirm": "Точно очистить?"
+                },
+                "flashes": {
+                    "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                    "goods_added_to_basket": "Товары добавлены в корзину",
+                    "client": {
+                        "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                        "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                        "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                        "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                    }
+                },
+                "mails": {
+                    "signature": "С уважением, интернет-магазин \"%{name}\""
+                },
+                "auto_menu_items": {
+                    "blog": "Блог"
+                },
+                "top_banner": {
+                    "default_content": "Мы открылись!"
+                },
+                "order": {
+                    "no_price_delivery": "Цена не указана",
+                    "fields": {
+                        "phone": "Телефон",
+                        "name": "Полное имя",
+                        "email": "Email",
+                        "city_title": "Город доставки",
+                        "address": "Адрес доставки",
+                        "comment": "Выбор интервала",
+                        "coupon_code": "Промокод",
+                        "delivery_city_id": "Город пункта выдачи",
+                        "pickup_point_id": "Пункт выдачи"
+                    },
+                    "placeholders": {
+                        "city_title": "Москва",
+                        "phone": "Например, +7 913 123 32 10",
+                        "name": "Ф.И.О.",
+                        "address": "Например, Академика Вавилова 12-10",
+                        "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                        "email": "Email"
+                    },
+                    "submit": "Оформить заказ",
+                    "pickup_address": "Адрес самовывоза:",
+                    "title": "Заказ №%{number} в %{vendor}",
+                    "payment_type": "Способ оплаты: %{title}",
+                    "delivery_type": "Способ доставки: %{title}",
+                    "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                    "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                    "go_back": "Вернуться назад",
+                    "next": "Продолжить",
+                    "download_button": "Загрузить файл",
+                    "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                    "check_state": "Проверить статус доставки",
+                    "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                    "created": {
+                        "title": "Спасибо за заказ",
+                        "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                    },
+                    "new": {
+                        "delivery_title": "Выберите тип доставки.",
+                        "payment_title": "Способы оплаты",
+                        "contacts_title": "Введите данные",
+                        "sum": "на сумму"
+                    },
+                    "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                    "redirecting": "Переправляю на сайт оплаты",
+                    "go_to_payment": "Перейти к оплате",
+                    "continue_shopping": "Продолжить покупки",
+                    "contents": "Состав заказа:",
+                    "delivery_price": "Стоимость доставки",
+                    "pay": "Оплатить",
+                    "discount": "Скидка",
+                    "free_delivery_tooltip": "Бесплатная доставка",
+                    "processing": "Заказ оформляется. Подождите минутку",
+                    "wait": "Подождите..."
+                },
+                "blog": {
+                    "read_more": "Читать далее.."
+                },
+                "notice": {
+                    "catalog_filter": {
+                        "selected_products": "Выбрано вариантов",
+                        "show_products": "Показать"
+                    }
+                },
+                "coupon": {
+                    "discount": "Скидка - %{discount}",
+                    "discount_products_include": "на товары: %{products}",
+                    "discount_categories_include": "на категории: %{categories}",
+                    "discount_products_exclude": "кроме товаров: %{products}",
+                    "discount_categories_exclude": "кроме категорий: %{categories}",
+                    "invalid": "Купон \"%{value}\" НЕ действующий",
+                    "checking": "Проверяю купон..",
+                    "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                },
+                "cart": {
+                    "basket_button": "Корзина",
+                    "amount": "Количество",
+                    "weight": "Вес",
+                    "overall": "Итого:",
+                    "title": "Корзина",
+                    "clear": "Очистить корзину",
+                    "not_available": "Больше не продается",
+                    "empty": "Пока тут ничего нет",
+                    "wait": "Подождите...",
+                    "continue_shopping": "Продолжить выбор",
+                    "selected_products": "Выбранные товары",
+                    "not_selected_products": "Не выбрано ни одного товара",
+                    "just_added": "Товары добавлены в корзину"
+                },
+                "wishlist": {
+                    "add_item": "Добавить в список желаний",
+                    "wishlist_button": "Список желаний",
+                    "private_title": "Ваш список желаний",
+                    "foreign_title": "Чей-то список желаний",
+                    "empty": "Пока тут ничего нет",
+                    "no_price": "Не продается"
+                },
+                "packaging": {
+                    "add": "Добавить",
+                    "add_gift_package": "Добавить к заказу",
+                    "no_package": "Не добавлять"
+                },
+                "payment": {
+                    "w1": {
+                        "failure": {
+                            "title": "Оплата не прошла",
+                            "desc": "Оплата заказа не была произведена"
+                        },
+                        "success": {
+                            "title": "Спасибо за заказ",
+                            "desc": "Оплата заказа была произведена"
+                        }
+                    }
+                },
+                "category": {
+                    "continue_shopping": "Продолжить покупки",
+                    "empty": "Ой, а здесь ничего нет. Пока."
+                },
+                "dictionary_entity": {
+                    "continue_shopping": "Продолжить покупки",
+                    "empty": "Ой, а здесь ничего нет. Пока."
+                },
+                "similar_product": {
+                    "title": "С этим товаром покупают также"
+                },
+                "other_product": {
+                    "title": "Другие товары"
+                },
+                "product": {
+                    "title": "Товар",
+                    "blank_price": "Цена неизвестна",
+                    "run_out": "Нет в наличии",
+                    "not_available": "Не продается",
+                    "available": "Можно купить",
+                    "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                    "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                    "category_title": "Категория",
+                    "show_other_products": "Посмотреть другие товары",
+                    "show_all": "Показать все",
+                    "weight": "Вес",
+                    "kg": "кг."
+                },
+                "properties": {
+                    "empty": "Нет характеристик для вывода"
+                },
+                "property": {
+                    "unknown_type": "Неизвестный тип характеристики",
+                    "defaults": {
+                        "size": "Размер",
+                        "color": "Цвет"
+                    }
+                },
+                "pages": {
+                    "titles": {
+                        "cart": "Корзина",
+                        "order": "Оформление заказа",
+                        "payment": "Оплата",
+                        "payment_success": "Успешная оплата",
+                        "payment_error": "Ошибка оплаты"
+                    }
+                },
+                "filter": {
+                    "order_by_price": {
+                        "title": "Сотрировать товары",
+                        "desc": "Сначала дорогие",
+                        "asc": "Дорогие в конце",
+                        "preset": "В установленном порядке"
+                    },
+                    "availability": "Доступность",
+                    "price_range": "Ценовой диапазон",
+                    "expand_button": {
+                        "expand": "Развернуть список",
+                        "turn": "Свернуть список"
+                    },
+                    "selected_options": {
+                        "availability": "Доступность",
+                        "price_range": "Цена от %{from} до %{to} %{currency}"
+                    },
+                    "selected_availability": {
+                        "all": "Все",
+                        "available": "В наличии",
+                        "run_out": "Под заказ",
+                        "sale": "Распродажа",
+                        "unknown": "unknown"
+                    },
+                    "hide": "Свернуть",
+                    "show": "Развернуть"
+                },
+                "button": {
+                    "to_cart": "В корзину",
+                    "select_good": "Выберите характеристику",
+                    "go_wishlist": "Перейти в \"Список желаний\"",
+                    "to_wishlist": "Добавить в \"Список желаний\"",
+                    "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                    "adding_to_wish_list": "Добавляю..",
+                    "already": "Уже в корзине",
+                    "publish_shop": {
+                        "text": "Опубликовать",
+                        "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                    },
+                    "disable_with": {
+                        "sending": "Отправляем...",
+                        "saving": "Сохраняем...",
+                        "waiting": "Подождите...",
+                        "adding": "Добавляем..."
+                    }
+                },
+                "products": {
+                    "others": "Остальные",
+                    "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                },
+                "cabinet_order": {
+                    "items_count": "%{itemsCount} поз."
+                },
+                "client": {
+                    "auth": "Личный кабинет",
+                    "placeholders": {
+                        "phone": "Номер телефона",
+                        "pin": "Пин-код"
+                    },
+                    "pin_alert": {
+                        "send": "Отправить код",
+                        "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                    },
+                    "submit": "Войти",
+                    "no_account": "Нет аккаунта?",
+                    "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                    "continue_logged": "Продолжить под этим именем..",
+                    "create_account": "Создать",
+                    "logout": "Выйти",
+                    "cabinet": {
+                        "title": "Личный кабинет",
+                        "orders": "Список заказов",
+                        "button": "Кабинет",
+                        "create": "Создаем личный кабинет",
+                        "send_pin_code": "Выслать пин-код",
+                        "disable_with": "Высылаем..."
+                    }
+                },
+                "money": {
+                    "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                },
+                "product_list": {
+                    "next_button": {
+                        "text": "%{title}"
+                    }
+                },
+                "subscription_email": {
+                    "title": "Подписаться на новостную рассылку",
+                    "text": "",
+                    "submit_button_text": "Подписаться",
+                    "unknown_error": "Неизвестная ошибка",
+                    "success_text": "Спасибо за подписку!"
+                }
+            }
+        }
+    },
+    "formAuthenticity": {
+        "token": "HvJzDnhqAKS0H+Obq+4CNKXEv3g+6QvB/6oPN8jfTSPJO71CDN7EKUYvWorgDflBa6QfGzwr1945tBM5bZozzg==",
+        "field": "authenticity_token"
+    },
+    "cart": {
+        "totalCount": 1,
+        "totalPrice": {
+            "cents": 32500,
+            "currencyIsoCode": "RUB"
+        }
+    },
+    "deliveryTypes": [
+        {
+            "id": 2853,
+            "title": "Курьерская по Москве",
+            "description": "Время доставки на следующий день после оформления заказа.\r\nПри заказе после 18.00 доставка осуществляется через сутки.\r\n\r\nВременные  интервалы доставки по будням с 10 до 21:\r\n10-13.00;\r\n11-14.00;\r\n12-15.00;\r\n13-16.00;\r\n14-17.00;\r\n15-18.00;\r\n16-19.00;\r\n17-20.00;\r\n18-21.00;\r\n\r\nВременные интервал доставки в субботу:  \r\n10-13.00;\r\n11-14.00;\r\n12-15.00;\r\n13-16.00;\r\n14-17.00\r\n15-18.00;\r\n\r\nВременные доставки в воскресенье:\r\n10-18.00 в черте города.\r\n\r\nВ праздники доставка осуществляется по двойному тарифу. ",
+            "price": {
+                "cents": 35000,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "city_title",
+                    "type": "string",
+                    "value": "Москва",
+                    "title": "Город доставки",
+                    "placeholder": "Москва",
+                    "errorMessage": "",
+                    "reservedValue": "Москва",
+                    "isDisabled": true,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "address",
+                    "type": "string",
+                    "value": null,
+                    "title": "Адрес доставки",
+                    "placeholder": "Например, Академика Вавилова 12-10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                3306,
+                19672,
+                20376,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 16037,
+            "title": "Курьерская по МО (до 50 км от МКАД)",
+            "description": "350 рублей+100 рублей для каждых 10 км за МКАД (в том числе неполных)\r\n\r\nВремя доставки на следующий день после оформления заказа.\r\nПри заказе после 18.00 доставка осуществляется через сутки.\r\n\r\nВремя доставки на следующий день после оформления заказа.\r\nПри заказе после 18.00 доставка осуществляется через сутки.\r\n\r\nВременные  интервалы доставки по будням с 10 до 21 в пределах 50 км от МКАД:\r\n10-13.00;\r\n11-14.00;\r\n12-15.00;\r\n13-16.00;\r\n14-17.00;\r\n15-18.00;\r\n16-19.00;\r\n17-20.00;\r\n18-21.00;\r\n\r\nВременные интервал доставки в субботу в пределах 10 км от МКАД:  \r\n10-13.00;\r\n11-14.00;\r\n12-15.00;\r\n13-16.00;\r\n14-17.00\r\n15-18.00;\r\n\r\nВ воскресенье доставка за МКАД не осуществляется",
+            "price": {
+                "cents": 35000,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "city_title",
+                    "type": "string",
+                    "value": "Москва",
+                    "title": "Город доставки",
+                    "placeholder": "Москва",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "address",
+                    "type": "string",
+                    "value": null,
+                    "title": "Адрес доставки",
+                    "placeholder": "Например, Академика Вавилова 12-10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                3306,
+                19672,
+                20376,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 16038,
+            "title": "Курьерская по СПБ",
+            "description": "Время доставки в течении 4-6 рабочих дней после оформления заказа.\r\nВременные  интервалы доставки:\r\n10-13.00;\r\n13-16.00;\r\n16-19.00;\r\n19 - 21.00; \r\nВ субботу : в прежних временных интервалах до 18.00\r\nВ воскресенье доставка не осуществляется.\r\nВ праздники действует двойной тариф на доставку",
+            "price": {
+                "cents": 35000,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "city_title",
+                    "type": "string",
+                    "value": "Москва",
+                    "title": "Город доставки",
+                    "placeholder": "Москва",
+                    "errorMessage": "",
+                    "reservedValue": "Санкт-Петербург",
+                    "isDisabled": true,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "address",
+                    "type": "string",
+                    "value": null,
+                    "title": "Адрес доставки",
+                    "placeholder": "Например, Академика Вавилова 12-10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                3306,
+                19672,
+                20376,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 16039,
+            "title": "Курьерская по Ленинградской области (до 30 км от КАД)",
+            "description": "350 рублей+100 рублей для каждых 10 км за КАД (в том числе неполных)\r\n\r\nВремя доставки в течении 4-6 рабочих дней после оформления заказа.\r\nДоставка только по будням. Временные  интервалы доставки:\r\n10-13.00;\r\n13-16.00;\r\n16-19.00;\r\n19 - 21.00; ",
+            "price": {
+                "cents": 35000,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "city_title",
+                    "type": "string",
+                    "value": "Москва",
+                    "title": "Город доставки",
+                    "placeholder": "Москва",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "address",
+                    "type": "string",
+                    "value": null,
+                    "title": "Адрес доставки",
+                    "placeholder": "Например, Академика Вавилова 12-10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                3306,
+                19672,
+                20376,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 2851,
+            "title": "Доставка по России Почта России",
+            "description": "",
+            "price": {
+                "cents": 0,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "city_title",
+                    "type": "string",
+                    "value": "Москва",
+                    "title": "Город доставки",
+                    "placeholder": "Москва",
+                    "errorMessage": "",
+                    "reservedValue": "",
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "address",
+                    "type": "string",
+                    "value": null,
+                    "title": "Адрес доставки",
+                    "placeholder": "Например, Академика Вавилова 12-10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                19672,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 2852,
+            "title": "Самовывоз из пунктов \"Почтальон сервиса\" по Москве и СПб",
+            "description": "Время доставки на следующий день после оформления заказа.\r\nПри заказе после 18.00 доставка осуществляется через сутки.\r\n\r\nЗаказ хранится на пункте выдачи в течение 7 календарных дней, как только заказ поступит на пункт выдачи вы получите смс-оповещение.",
+            "price": {
+                "cents": 12000,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "delivery_city_id",
+                    "type": "ajax_select",
+                    "value": null,
+                    "title": "Город пункта выдачи",
+                    "placeholder": "translation missing: ru.order.placeholders.delivery_city_id",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": {
+                        "defaultTitle": "Выберите город доставки",
+                        "loadingTitle": "Загружаю список городов..",
+                        "type": "ajax",
+                        "collectionUrl": "/v1/delivery_cities.json"
+                    }
+                },
+                {
+                    "name": "pickup_point_id",
+                    "type": "ajax_select",
+                    "value": null,
+                    "title": "Пункт выдачи",
+                    "placeholder": "translation missing: ru.order.placeholders.pickup_point_id",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": {
+                        "defaultTitle": "Выберите пункт выдачи",
+                        "requiredTitle": "Выберите город доставки",
+                        "loadingTitle": "Загружаю список пунктов выдачи..",
+                        "type": "ajax",
+                        "collectionUrl": "/v1/pickup_points.json",
+                        "belongs": [
+                            "delivery_city_id"
+                        ],
+                        "requestData": {
+                            "vendor_delivery_id": 2852
+                        }
+                    }
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                    "placeholder": "Выбор интервала",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                3306,
+                19672,
+                20356,
+                20638
+            ],
+            "freeDeliveryThreshold": null
+        },
+        {
+            "id": 16209,
+            "title": "Самовывоз из пунктов выдачи Boxberry",
+            "description": "",
+            "price": {
+                "cents": 0,
+                "currencyIsoCode": "RUB"
+            },
+            "fields": [
+                {
+                    "name": "cart_cookie",
+                    "type": "hidden",
+                    "value": null,
+                    "title": null,
+                    "placeholder": null,
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": null,
+                    "title": "Полное имя",
+                    "placeholder": "Ф.И.О.",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "phone",
+                    "type": "string",
+                    "value": null,
+                    "title": "Телефон",
+                    "placeholder": "Например, +7 913 123 32 10",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "value": null,
+                    "title": "Email",
+                    "placeholder": "Email",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": null
+                },
+                {
+                    "name": "delivery_city_id",
+                    "type": "ajax_select",
+                    "value": null,
+                    "title": "Город пункта выдачи",
+                    "placeholder": "translation missing: ru.order.placeholders.delivery_city_id",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": {
+                        "defaultTitle": "Выберите город доставки",
+                        "loadingTitle": "Загружаю список городов..",
+                        "type": "ajax",
+                        "collectionUrl": "/v1/delivery_cities.json"
+                    }
+                },
+                {
+                    "name": "pickup_point_id",
+                    "type": "ajax_select",
+                    "value": null,
+                    "title": "Пункт выдачи",
+                    "placeholder": "translation missing: ru.order.placeholders.pickup_point_id",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": true,
+                    "ajaxSettings": {
+                        "defaultTitle": "Выберите пункт выдачи",
+                        "requiredTitle": "Выберите город доставки",
+                        "loadingTitle": "Загружаю список пунктов выдачи..",
+                        "type": "ajax",
+                        "collectionUrl": "/v1/pickup_points.json",
+                        "belongs": [
+                            "delivery_city_id"
+                        ],
+                        "requestData": {
+                            "vendor_delivery_id": 16209
+                        }
+                    }
+                },
+                {
+                    "name": "comment",
+                    "type": "textarea",
+                    "value": null,
+                    "title": "Комментарий",
+                    "placeholder": "Напишите что-нибудь, если желаете",
+                    "errorMessage": "",
+                    "reservedValue": null,
+                    "isDisabled": false,
+                    "isRequired": false,
+                    "ajaxSettings": null
+                }
+            ],
+            "availablePayments": [
+                19672
+            ],
+            "freeDeliveryThreshold": null
+        }
+    ],
+    "paymentTypes": [
+        {
+            "id": 3306,
+            "title": "Оплата наличными",
+            "description": "",
+            "icon_url": "/images/payment_icons/order_payment_direct.png",
+            "show_icon": false
+        },
+        {
+            "id": 19672,
+            "title": "Оплата картой онлайн",
+            "description": "",
+            "icon_url": "/images/payment_icons/order_payment_cloud_payments.png",
+            "show_icon": false
+        },
+        {
+            "id": 20356,
+            "title": "Оплата картой на ПВЗ",
+            "description": "",
+            "icon_url": "/images/payment_icons/order_payment_direct.png",
+            "show_icon": false
+        },
+        {
+            "id": 20376,
+            "title": "Оплата картой курьеру",
+            "description": "",
+            "icon_url": "/images/payment_icons/order_payment_direct.png",
+            "show_icon": false
+        },
+        {
+            "id": 20638,
+            "title": "Перечислением (для юридических лиц)",
+            "description": "Для выставления счета отправьте реквизиты на почту info@motivation-shop.ru",
+            "icon_url": "/images/payment_icons/order_payment_direct.png",
+            "show_icon": false
+        }
+    ],
+    "fields": [
+
+    ],
+    "coupon": {
+        "show": false
+    },
+    "publicOffer": {
+        "show": false
+    },
+    "errorMessage": "",
+    "submitOrderUrl": "/orders/complete",
+    "layoutProps": {
+        "i18n": {
+            "locale": "ru",
+            "translations": {
+                "vendor": {
+                    "ajax": {
+                        "error": "Ошибка выполнения AJAX-запроса"
+                    },
+                    "menu": {
+                        "all_products": "Все товары"
+                    },
+                    "blog_post": {
+                        "prev_post": "Предыдущий пост",
+                        "next_post": "Следующий пост"
+                    },
+                    "not_published": "Магазин временно не работает",
+                    "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                    "tasty_product_button_text": "Купить",
+                    "more": "Подробнее",
+                    "entities": {
+                        "product": "%{count} товар",
+                        "product_2": "%{count} товара",
+                        "product_5": "%{count} товаров"
+                    },
+                    "badges": {
+                        "new": "Новинка",
+                        "sale_percent": "SALE - %{percent}%",
+                        "not_available": "Не продается",
+                        "sale": "SALE",
+                        "sold": "Продано"
+                    },
+                    "gallery": {
+                        "close": "Закрыть",
+                        "next": "Вперёд",
+                        "prev": "Назад"
+                    },
+                    "search": {
+                        "results_title": "Результаты поиска (%{count})",
+                        "nothing_found": "К сожалению, ничего не найдено."
+                    },
+                    "seconds_count": "%{count} секунду",
+                    "seconds_count_2": "%{count} секунды",
+                    "seconds_count_5": "%{count} секунд",
+                    "locales": {
+                        "ru": "Русский",
+                        "en": "English"
+                    },
+                    "activemodel": {
+                        "errors": {
+                            "models": {
+                                "vendor_order_form": {
+                                    "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                    "attributes": {
+                                        "address": {
+                                            "blank": "не может быть пустым"
+                                        },
+                                        "email": {
+                                            "email": "не является email адресом"
+                                        },
+                                        "city_title": {
+                                            "blank": "не может быть пустым"
+                                        },
+                                        "phone": {
+                                            "blank": "не может быть пустым"
+                                        },
+                                        "name": {
+                                            "blank": "не может быть пустым"
+                                        },
+                                        "public_offer_accepted": {
+                                            "blank": "Необходимо принять условия публичной оферты"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "validators": {
+                        "available_quantity": {
+                            "no_quantity": {
+                                "one": "На складе осталась всего 1 штука. Измените количество.",
+                                "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                                "many": "На складе осталось всего %{count} штук. Измените количество.",
+                                "other": "На складе осталось всего %{count} штук. Измените количество."
+                            },
+                            "not_available": "Данный товар закончился"
+                        }
+                    },
+                    "errors": {
+                        "cart": {
+                            "empty": "В корзине нет товаров",
+                            "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                            "not_ordering": "В корзине лежат товары не доступные к заказу"
+                        },
+                        "coupon": {
+                            "not_found": "Несуществующий промокод %{code}",
+                            "expired": "Промокод просрочен %{code}"
+                        },
+                        "order": {
+                            "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                            "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                            "has_unorderable_goods": "В заказе лежат недоступные товары",
+                            "no_items": "В заказе нет товаров",
+                            "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                            "comment": "Комментарий не может быть пустым"
+                        }
+                    },
+                    "placeholders": {
+                        "coupon": "Промо-код (если есть)",
+                        "search": "Поиск"
+                    },
+                    "alerts": {
+                        "confirm": "Точно очистить?"
+                    },
+                    "flashes": {
+                        "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                        "goods_added_to_basket": "Товары добавлены в корзину",
+                        "client": {
+                            "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                            "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                            "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                            "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                        }
+                    },
+                    "mails": {
+                        "signature": "С уважением, интернет-магазин \"%{name}\""
+                    },
+                    "auto_menu_items": {
+                        "blog": "Блог"
+                    },
+                    "top_banner": {
+                        "default_content": "Мы открылись!"
+                    },
+                    "order": {
+                        "no_price_delivery": "Цена не указана",
+                        "fields": {
+                            "phone": "Телефон",
+                            "name": "Полное имя",
+                            "email": "Email",
+                            "city_title": "Город доставки",
+                            "address": "Адрес доставки",
+                            "comment": "Выбор интервала",
+                            "coupon_code": "Промокод",
+                            "delivery_city_id": "Город пункта выдачи",
+                            "pickup_point_id": "Пункт выдачи"
+                        },
+                        "placeholders": {
+                            "city_title": "Москва",
+                            "phone": "Например, +7 913 123 32 10",
+                            "name": "Ф.И.О.",
+                            "address": "Например, Академика Вавилова 12-10",
+                            "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                            "email": "Email"
+                        },
+                        "submit": "Оформить заказ",
+                        "pickup_address": "Адрес самовывоза:",
+                        "title": "Заказ №%{number} в %{vendor}",
+                        "payment_type": "Способ оплаты: %{title}",
+                        "delivery_type": "Способ доставки: %{title}",
+                        "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                        "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                        "go_back": "Вернуться назад",
+                        "next": "Продолжить",
+                        "download_button": "Загрузить файл",
+                        "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                        "check_state": "Проверить статус доставки",
+                        "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                        "created": {
+                            "title": "Спасибо за заказ",
+                            "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                        },
+                        "new": {
+                            "delivery_title": "Выберите тип доставки.",
+                            "payment_title": "Способы оплаты",
+                            "contacts_title": "Введите данные",
+                            "sum": "на сумму"
+                        },
+                        "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                        "redirecting": "Переправляю на сайт оплаты",
+                        "go_to_payment": "Перейти к оплате",
+                        "continue_shopping": "Продолжить покупки",
+                        "contents": "Состав заказа:",
+                        "delivery_price": "Стоимость доставки",
+                        "pay": "Оплатить",
+                        "discount": "Скидка",
+                        "free_delivery_tooltip": "Бесплатная доставка",
+                        "processing": "Заказ оформляется. Подождите минутку",
+                        "wait": "Подождите..."
+                    },
+                    "blog": {
+                        "read_more": "Читать далее.."
+                    },
+                    "notice": {
+                        "catalog_filter": {
+                            "selected_products": "Выбрано вариантов",
+                            "show_products": "Показать"
+                        }
+                    },
+                    "coupon": {
+                        "discount": "Скидка - %{discount}",
+                        "discount_products_include": "на товары: %{products}",
+                        "discount_categories_include": "на категории: %{categories}",
+                        "discount_products_exclude": "кроме товаров: %{products}",
+                        "discount_categories_exclude": "кроме категорий: %{categories}",
+                        "invalid": "Купон \"%{value}\" НЕ действующий",
+                        "checking": "Проверяю купон..",
+                        "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                    },
+                    "cart": {
+                        "basket_button": "Корзина",
+                        "amount": "Количество",
+                        "weight": "Вес",
+                        "overall": "Итого:",
+                        "title": "Корзина",
+                        "clear": "Очистить корзину",
+                        "not_available": "Больше не продается",
+                        "empty": "Пока тут ничего нет",
+                        "wait": "Подождите...",
+                        "continue_shopping": "Продолжить выбор",
+                        "selected_products": "Выбранные товары",
+                        "not_selected_products": "Не выбрано ни одного товара",
+                        "just_added": "Товары добавлены в корзину"
+                    },
+                    "wishlist": {
+                        "add_item": "Добавить в список желаний",
+                        "wishlist_button": "Список желаний",
+                        "private_title": "Ваш список желаний",
+                        "foreign_title": "Чей-то список желаний",
+                        "empty": "Пока тут ничего нет",
+                        "no_price": "Не продается"
+                    },
+                    "packaging": {
+                        "add": "Добавить",
+                        "add_gift_package": "Добавить к заказу",
+                        "no_package": "Не добавлять"
+                    },
+                    "payment": {
+                        "w1": {
+                            "failure": {
+                                "title": "Оплата не прошла",
+                                "desc": "Оплата заказа не была произведена"
+                            },
+                            "success": {
+                                "title": "Спасибо за заказ",
+                                "desc": "Оплата заказа была произведена"
+                            }
+                        }
+                    },
+                    "category": {
+                        "continue_shopping": "Продолжить покупки",
+                        "empty": "Ой, а здесь ничего нет. Пока."
+                    },
+                    "dictionary_entity": {
+                        "continue_shopping": "Продолжить покупки",
+                        "empty": "Ой, а здесь ничего нет. Пока."
+                    },
+                    "similar_product": {
+                        "title": "С этим товаром покупают также"
+                    },
+                    "other_product": {
+                        "title": "Другие товары"
+                    },
+                    "product": {
+                        "title": "Товар",
+                        "blank_price": "Цена неизвестна",
+                        "run_out": "Нет в наличии",
+                        "not_available": "Не продается",
+                        "available": "Можно купить",
+                        "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                        "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                        "category_title": "Категория",
+                        "show_other_products": "Посмотреть другие товары",
+                        "show_all": "Показать все",
+                        "weight": "Вес",
+                        "kg": "кг."
+                    },
+                    "properties": {
+                        "empty": "Нет характеристик для вывода"
+                    },
+                    "property": {
+                        "unknown_type": "Неизвестный тип характеристики",
+                        "defaults": {
+                            "size": "Размер",
+                            "color": "Цвет"
+                        }
+                    },
+                    "pages": {
+                        "titles": {
+                            "cart": "Корзина",
+                            "order": "Оформление заказа",
+                            "payment": "Оплата",
+                            "payment_success": "Успешная оплата",
+                            "payment_error": "Ошибка оплаты"
+                        }
+                    },
+                    "filter": {
+                        "order_by_price": {
+                            "title": "Сотрировать товары",
+                            "desc": "Сначала дорогие",
+                            "asc": "Дорогие в конце",
+                            "preset": "В установленном порядке"
+                        },
+                        "availability": "Доступность",
+                        "price_range": "Ценовой диапазон",
+                        "expand_button": {
+                            "expand": "Развернуть список",
+                            "turn": "Свернуть список"
+                        },
+                        "selected_options": {
+                            "availability": "Доступность",
+                            "price_range": "Цена от %{from} до %{to} %{currency}"
+                        },
+                        "selected_availability": {
+                            "all": "Все",
+                            "available": "В наличии",
+                            "run_out": "Под заказ",
+                            "sale": "Распродажа",
+                            "unknown": "unknown"
+                        },
+                        "hide": "Свернуть",
+                        "show": "Развернуть"
+                    },
+                    "button": {
+                        "to_cart": "В корзину",
+                        "select_good": "Выберите характеристику",
+                        "go_wishlist": "Перейти в \"Список желаний\"",
+                        "to_wishlist": "Добавить в \"Список желаний\"",
+                        "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                        "adding_to_wish_list": "Добавляю..",
+                        "already": "Уже в корзине",
+                        "publish_shop": {
+                            "text": "Опубликовать",
+                            "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                        },
+                        "disable_with": {
+                            "sending": "Отправляем...",
+                            "saving": "Сохраняем...",
+                            "waiting": "Подождите...",
+                            "adding": "Добавляем..."
+                        }
+                    },
+                    "products": {
+                        "others": "Остальные",
+                        "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                    },
+                    "cabinet_order": {
+                        "items_count": "%{itemsCount} поз."
+                    },
+                    "client": {
+                        "auth": "Личный кабинет",
+                        "placeholders": {
+                            "phone": "Номер телефона",
+                            "pin": "Пин-код"
+                        },
+                        "pin_alert": {
+                            "send": "Отправить код",
+                            "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                        },
+                        "submit": "Войти",
+                        "no_account": "Нет аккаунта?",
+                        "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                        "continue_logged": "Продолжить под этим именем..",
+                        "create_account": "Создать",
+                        "logout": "Выйти",
+                        "cabinet": {
+                            "title": "Личный кабинет",
+                            "orders": "Список заказов",
+                            "button": "Кабинет",
+                            "create": "Создаем личный кабинет",
+                            "send_pin_code": "Выслать пин-код",
+                            "disable_with": "Высылаем..."
+                        }
+                    },
+                    "money": {
+                        "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                    },
+                    "product_list": {
+                        "next_button": {
+                            "text": "%{title}"
+                        }
+                    },
+                    "subscription_email": {
+                        "title": "Подписаться на новостную рассылку",
+                        "text": "",
+                        "submit_button_text": "Подписаться",
+                        "unknown_error": "Неизвестная ошибка",
+                        "success_text": "Спасибо за подписку!"
+                    }
+                }
+            }
+        },
+        "flash": [
+
+        ],
+        "menuBottomProps": {
+            "i18n": {
+                "locale": "ru",
+                "translations": {
+                    "vendor": {
+                        "ajax": {
+                            "error": "Ошибка выполнения AJAX-запроса"
+                        },
+                        "menu": {
+                            "all_products": "Все товары"
+                        },
+                        "blog_post": {
+                            "prev_post": "Предыдущий пост",
+                            "next_post": "Следующий пост"
+                        },
+                        "not_published": "Магазин временно не работает",
+                        "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                        "tasty_product_button_text": "Купить",
+                        "more": "Подробнее",
+                        "entities": {
+                            "product": "%{count} товар",
+                            "product_2": "%{count} товара",
+                            "product_5": "%{count} товаров"
+                        },
+                        "badges": {
+                            "new": "Новинка",
+                            "sale_percent": "SALE - %{percent}%",
+                            "not_available": "Не продается",
+                            "sale": "SALE",
+                            "sold": "Продано"
+                        },
+                        "gallery": {
+                            "close": "Закрыть",
+                            "next": "Вперёд",
+                            "prev": "Назад"
+                        },
+                        "search": {
+                            "results_title": "Результаты поиска (%{count})",
+                            "nothing_found": "К сожалению, ничего не найдено."
+                        },
+                        "seconds_count": "%{count} секунду",
+                        "seconds_count_2": "%{count} секунды",
+                        "seconds_count_5": "%{count} секунд",
+                        "locales": {
+                            "ru": "Русский",
+                            "en": "English"
+                        },
+                        "activemodel": {
+                            "errors": {
+                                "models": {
+                                    "vendor_order_form": {
+                                        "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                        "attributes": {
+                                            "address": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "email": {
+                                                "email": "не является email адресом"
+                                            },
+                                            "city_title": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "phone": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "name": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "public_offer_accepted": {
+                                                "blank": "Необходимо принять условия публичной оферты"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "validators": {
+                            "available_quantity": {
+                                "no_quantity": {
+                                    "one": "На складе осталась всего 1 штука. Измените количество.",
+                                    "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                                    "many": "На складе осталось всего %{count} штук. Измените количество.",
+                                    "other": "На складе осталось всего %{count} штук. Измените количество."
+                                },
+                                "not_available": "Данный товар закончился"
+                            }
+                        },
+                        "errors": {
+                            "cart": {
+                                "empty": "В корзине нет товаров",
+                                "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                                "not_ordering": "В корзине лежат товары не доступные к заказу"
+                            },
+                            "coupon": {
+                                "not_found": "Несуществующий промокод %{code}",
+                                "expired": "Промокод просрочен %{code}"
+                            },
+                            "order": {
+                                "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                                "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                                "has_unorderable_goods": "В заказе лежат недоступные товары",
+                                "no_items": "В заказе нет товаров",
+                                "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                                "comment": "Комментарий не может быть пустым"
+                            }
+                        },
+                        "placeholders": {
+                            "coupon": "Промо-код (если есть)",
+                            "search": "Поиск"
+                        },
+                        "alerts": {
+                            "confirm": "Точно очистить?"
+                        },
+                        "flashes": {
+                            "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                            "goods_added_to_basket": "Товары добавлены в корзину",
+                            "client": {
+                                "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                                "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                                "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                                "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                            }
+                        },
+                        "mails": {
+                            "signature": "С уважением, интернет-магазин \"%{name}\""
+                        },
+                        "auto_menu_items": {
+                            "blog": "Блог"
+                        },
+                        "top_banner": {
+                            "default_content": "Мы открылись!"
+                        },
+                        "order": {
+                            "no_price_delivery": "Цена не указана",
+                            "fields": {
+                                "phone": "Телефон",
+                                "name": "Полное имя",
+                                "email": "Email",
+                                "city_title": "Город доставки",
+                                "address": "Адрес доставки",
+                                "comment": "Выбор интервала",
+                                "coupon_code": "Промокод",
+                                "delivery_city_id": "Город пункта выдачи",
+                                "pickup_point_id": "Пункт выдачи"
+                            },
+                            "placeholders": {
+                                "city_title": "Москва",
+                                "phone": "Например, +7 913 123 32 10",
+                                "name": "Ф.И.О.",
+                                "address": "Например, Академика Вавилова 12-10",
+                                "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                                "email": "Email"
+                            },
+                            "submit": "Оформить заказ",
+                            "pickup_address": "Адрес самовывоза:",
+                            "title": "Заказ №%{number} в %{vendor}",
+                            "payment_type": "Способ оплаты: %{title}",
+                            "delivery_type": "Способ доставки: %{title}",
+                            "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "go_back": "Вернуться назад",
+                            "next": "Продолжить",
+                            "download_button": "Загрузить файл",
+                            "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                            "check_state": "Проверить статус доставки",
+                            "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                            "created": {
+                                "title": "Спасибо за заказ",
+                                "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                            },
+                            "new": {
+                                "delivery_title": "Выберите тип доставки.",
+                                "payment_title": "Способы оплаты",
+                                "contacts_title": "Введите данные",
+                                "sum": "на сумму"
+                            },
+                            "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                            "redirecting": "Переправляю на сайт оплаты",
+                            "go_to_payment": "Перейти к оплате",
+                            "continue_shopping": "Продолжить покупки",
+                            "contents": "Состав заказа:",
+                            "delivery_price": "Стоимость доставки",
+                            "pay": "Оплатить",
+                            "discount": "Скидка",
+                            "free_delivery_tooltip": "Бесплатная доставка",
+                            "processing": "Заказ оформляется. Подождите минутку",
+                            "wait": "Подождите..."
+                        },
+                        "blog": {
+                            "read_more": "Читать далее.."
+                        },
+                        "notice": {
+                            "catalog_filter": {
+                                "selected_products": "Выбрано вариантов",
+                                "show_products": "Показать"
+                            }
+                        },
+                        "coupon": {
+                            "discount": "Скидка - %{discount}",
+                            "discount_products_include": "на товары: %{products}",
+                            "discount_categories_include": "на категории: %{categories}",
+                            "discount_products_exclude": "кроме товаров: %{products}",
+                            "discount_categories_exclude": "кроме категорий: %{categories}",
+                            "invalid": "Купон \"%{value}\" НЕ действующий",
+                            "checking": "Проверяю купон..",
+                            "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                        },
+                        "cart": {
+                            "basket_button": "Корзина",
+                            "amount": "Количество",
+                            "weight": "Вес",
+                            "overall": "Итого:",
+                            "title": "Корзина",
+                            "clear": "Очистить корзину",
+                            "not_available": "Больше не продается",
+                            "empty": "Пока тут ничего нет",
+                            "wait": "Подождите...",
+                            "continue_shopping": "Продолжить выбор",
+                            "selected_products": "Выбранные товары",
+                            "not_selected_products": "Не выбрано ни одного товара",
+                            "just_added": "Товары добавлены в корзину"
+                        },
+                        "wishlist": {
+                            "add_item": "Добавить в список желаний",
+                            "wishlist_button": "Список желаний",
+                            "private_title": "Ваш список желаний",
+                            "foreign_title": "Чей-то список желаний",
+                            "empty": "Пока тут ничего нет",
+                            "no_price": "Не продается"
+                        },
+                        "packaging": {
+                            "add": "Добавить",
+                            "add_gift_package": "Добавить к заказу",
+                            "no_package": "Не добавлять"
+                        },
+                        "payment": {
+                            "w1": {
+                                "failure": {
+                                    "title": "Оплата не прошла",
+                                    "desc": "Оплата заказа не была произведена"
+                                },
+                                "success": {
+                                    "title": "Спасибо за заказ",
+                                    "desc": "Оплата заказа была произведена"
+                                }
+                            }
+                        },
+                        "category": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "dictionary_entity": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "similar_product": {
+                            "title": "С этим товаром покупают также"
+                        },
+                        "other_product": {
+                            "title": "Другие товары"
+                        },
+                        "product": {
+                            "title": "Товар",
+                            "blank_price": "Цена неизвестна",
+                            "run_out": "Нет в наличии",
+                            "not_available": "Не продается",
+                            "available": "Можно купить",
+                            "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                            "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                            "category_title": "Категория",
+                            "show_other_products": "Посмотреть другие товары",
+                            "show_all": "Показать все",
+                            "weight": "Вес",
+                            "kg": "кг."
+                        },
+                        "properties": {
+                            "empty": "Нет характеристик для вывода"
+                        },
+                        "property": {
+                            "unknown_type": "Неизвестный тип характеристики",
+                            "defaults": {
+                                "size": "Размер",
+                                "color": "Цвет"
+                            }
+                        },
+                        "pages": {
+                            "titles": {
+                                "cart": "Корзина",
+                                "order": "Оформление заказа",
+                                "payment": "Оплата",
+                                "payment_success": "Успешная оплата",
+                                "payment_error": "Ошибка оплаты"
+                            }
+                        },
+                        "filter": {
+                            "order_by_price": {
+                                "title": "Сотрировать товары",
+                                "desc": "Сначала дорогие",
+                                "asc": "Дорогие в конце",
+                                "preset": "В установленном порядке"
+                            },
+                            "availability": "Доступность",
+                            "price_range": "Ценовой диапазон",
+                            "expand_button": {
+                                "expand": "Развернуть список",
+                                "turn": "Свернуть список"
+                            },
+                            "selected_options": {
+                                "availability": "Доступность",
+                                "price_range": "Цена от %{from} до %{to} %{currency}"
+                            },
+                            "selected_availability": {
+                                "all": "Все",
+                                "available": "В наличии",
+                                "run_out": "Под заказ",
+                                "sale": "Распродажа",
+                                "unknown": "unknown"
+                            },
+                            "hide": "Свернуть",
+                            "show": "Развернуть"
+                        },
+                        "button": {
+                            "to_cart": "В корзину",
+                            "select_good": "Выберите характеристику",
+                            "go_wishlist": "Перейти в \"Список желаний\"",
+                            "to_wishlist": "Добавить в \"Список желаний\"",
+                            "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                            "adding_to_wish_list": "Добавляю..",
+                            "already": "Уже в корзине",
+                            "publish_shop": {
+                                "text": "Опубликовать",
+                                "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                            },
+                            "disable_with": {
+                                "sending": "Отправляем...",
+                                "saving": "Сохраняем...",
+                                "waiting": "Подождите...",
+                                "adding": "Добавляем..."
+                            }
+                        },
+                        "products": {
+                            "others": "Остальные",
+                            "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                        },
+                        "cabinet_order": {
+                            "items_count": "%{itemsCount} поз."
+                        },
+                        "client": {
+                            "auth": "Личный кабинет",
+                            "placeholders": {
+                                "phone": "Номер телефона",
+                                "pin": "Пин-код"
+                            },
+                            "pin_alert": {
+                                "send": "Отправить код",
+                                "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                            },
+                            "submit": "Войти",
+                            "no_account": "Нет аккаунта?",
+                            "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                            "continue_logged": "Продолжить под этим именем..",
+                            "create_account": "Создать",
+                            "logout": "Выйти",
+                            "cabinet": {
+                                "title": "Личный кабинет",
+                                "orders": "Список заказов",
+                                "button": "Кабинет",
+                                "create": "Создаем личный кабинет",
+                                "send_pin_code": "Выслать пин-код",
+                                "disable_with": "Высылаем..."
+                            }
+                        },
+                        "money": {
+                            "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                        },
+                        "product_list": {
+                            "next_button": {
+                                "text": "%{title}"
+                            }
+                        },
+                        "subscription_email": {
+                            "title": "Подписаться на новостную рассылку",
+                            "text": "",
+                            "submit_button_text": "Подписаться",
+                            "unknown_error": "Неизвестная ошибка",
+                            "success_text": "Спасибо за подписку!"
+                        }
+                    }
+                }
+            },
+            "leftItems": [
+                {
+                    "id": "21121-content_page",
+                    "type": "ContentPage",
+                    "title": "Оферта",
+                    "url": "/pages/21121-oferta",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "21115-content_page",
+                    "type": "ContentPage",
+                    "title": "Варианты оплаты",
+                    "url": "/pages/21115-varianty-oplaty",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "1394-content_page",
+                    "type": "ContentPage",
+                    "title": "Виды доставки",
+                    "url": "/pages/1394-vidy-dostavki",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "21125-content_page",
+                    "type": "ContentPage",
+                    "title": "Порядок возврата товаров",
+                    "url": "/pages/21125-poryadok-vozvrata-tovarov",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "21126-content_page",
+                    "type": "ContentPage",
+                    "title": "Контакты. Шоу-рум.",
+                    "url": "/pages/21126-kontakty-shou-rum",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "19619-content_page",
+                    "type": "ContentPage",
+                    "title": "Информация о компании",
+                    "url": "/pages/19619-informatsiya-o-kompanii",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "19620-content_page",
+                    "type": "ContentPage",
+                    "title": "Правила оплаты банковскими картами | Гарантии безопасности",
+                    "url": "/pages/19620-pravila-oplaty-bankovskimi-kartami-garantii-bezopasnosti",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "19621-content_page",
+                    "type": "ContentPage",
+                    "title": "Политика конфиденциальности персональных данных",
+                    "url": "/politika",
+                    "productsCount": null,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                }
+            ],
+            "leftActiveItems": [
+
+            ],
+            "rightItems": [
+
+            ],
+            "rightActiveItems": [
+
+            ],
+            "locales": [
+
+            ],
+            "currentLocale": "ru",
+            "currenciesIsoCodes": [
+                "RUB"
+            ],
+            "currentCurrency": "RUB",
+            "isVendorLandingLinkDisabled": false,
+            "vendorLandingLink": "https://kiiiosk.ru/?utm_source=kiosk_shop&utm_campaign=motivation-shop.ru",
+            "footerMenuMiddleHtml": null,
+            "showEmailOptIn": false
+        },
+        "menuTopProps": {
+            "i18n": {
+                "locale": "ru",
+                "translations": {
+                    "vendor": {
+                        "ajax": {
+                            "error": "Ошибка выполнения AJAX-запроса"
+                        },
+                        "menu": {
+                            "all_products": "Все товары"
+                        },
+                        "blog_post": {
+                            "prev_post": "Предыдущий пост",
+                            "next_post": "Следующий пост"
+                        },
+                        "not_published": "Магазин временно не работает",
+                        "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                        "tasty_product_button_text": "Купить",
+                        "more": "Подробнее",
+                        "entities": {
+                            "product": "%{count} товар",
+                            "product_2": "%{count} товара",
+                            "product_5": "%{count} товаров"
+                        },
+                        "badges": {
+                            "new": "Новинка",
+                            "sale_percent": "SALE - %{percent}%",
+                            "not_available": "Не продается",
+                            "sale": "SALE",
+                            "sold": "Продано"
+                        },
+                        "gallery": {
+                            "close": "Закрыть",
+                            "next": "Вперёд",
+                            "prev": "Назад"
+                        },
+                        "search": {
+                            "results_title": "Результаты поиска (%{count})",
+                            "nothing_found": "К сожалению, ничего не найдено."
+                        },
+                        "seconds_count": "%{count} секунду",
+                        "seconds_count_2": "%{count} секунды",
+                        "seconds_count_5": "%{count} секунд",
+                        "locales": {
+                            "ru": "Русский",
+                            "en": "English"
+                        },
+                        "activemodel": {
+                            "errors": {
+                                "models": {
+                                    "vendor_order_form": {
+                                        "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                        "attributes": {
+                                            "address": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "email": {
+                                                "email": "не является email адресом"
+                                            },
+                                            "city_title": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "phone": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "name": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "public_offer_accepted": {
+                                                "blank": "Необходимо принять условия публичной оферты"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "validators": {
+                            "available_quantity": {
+                                "no_quantity": {
+                                    "one": "На складе осталась всего 1 штука. Измените количество.",
+                                    "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                                    "many": "На складе осталось всего %{count} штук. Измените количество.",
+                                    "other": "На складе осталось всего %{count} штук. Измените количество."
+                                },
+                                "not_available": "Данный товар закончился"
+                            }
+                        },
+                        "errors": {
+                            "cart": {
+                                "empty": "В корзине нет товаров",
+                                "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                                "not_ordering": "В корзине лежат товары не доступные к заказу"
+                            },
+                            "coupon": {
+                                "not_found": "Несуществующий промокод %{code}",
+                                "expired": "Промокод просрочен %{code}"
+                            },
+                            "order": {
+                                "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                                "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                                "has_unorderable_goods": "В заказе лежат недоступные товары",
+                                "no_items": "В заказе нет товаров",
+                                "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                                "comment": "Комментарий не может быть пустым"
+                            }
+                        },
+                        "placeholders": {
+                            "coupon": "Промо-код (если есть)",
+                            "search": "Поиск"
+                        },
+                        "alerts": {
+                            "confirm": "Точно очистить?"
+                        },
+                        "flashes": {
+                            "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                            "goods_added_to_basket": "Товары добавлены в корзину",
+                            "client": {
+                                "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                                "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                                "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                                "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                            }
+                        },
+                        "mails": {
+                            "signature": "С уважением, интернет-магазин \"%{name}\""
+                        },
+                        "auto_menu_items": {
+                            "blog": "Блог"
+                        },
+                        "top_banner": {
+                            "default_content": "Мы открылись!"
+                        },
+                        "order": {
+                            "no_price_delivery": "Цена не указана",
+                            "fields": {
+                                "phone": "Телефон",
+                                "name": "Полное имя",
+                                "email": "Email",
+                                "city_title": "Город доставки",
+                                "address": "Адрес доставки",
+                                "comment": "Выбор интервала",
+                                "coupon_code": "Промокод",
+                                "delivery_city_id": "Город пункта выдачи",
+                                "pickup_point_id": "Пункт выдачи"
+                            },
+                            "placeholders": {
+                                "city_title": "Москва",
+                                "phone": "Например, +7 913 123 32 10",
+                                "name": "Ф.И.О.",
+                                "address": "Например, Академика Вавилова 12-10",
+                                "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                                "email": "Email"
+                            },
+                            "submit": "Оформить заказ",
+                            "pickup_address": "Адрес самовывоза:",
+                            "title": "Заказ №%{number} в %{vendor}",
+                            "payment_type": "Способ оплаты: %{title}",
+                            "delivery_type": "Способ доставки: %{title}",
+                            "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "go_back": "Вернуться назад",
+                            "next": "Продолжить",
+                            "download_button": "Загрузить файл",
+                            "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                            "check_state": "Проверить статус доставки",
+                            "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                            "created": {
+                                "title": "Спасибо за заказ",
+                                "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                            },
+                            "new": {
+                                "delivery_title": "Выберите тип доставки.",
+                                "payment_title": "Способы оплаты",
+                                "contacts_title": "Введите данные",
+                                "sum": "на сумму"
+                            },
+                            "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                            "redirecting": "Переправляю на сайт оплаты",
+                            "go_to_payment": "Перейти к оплате",
+                            "continue_shopping": "Продолжить покупки",
+                            "contents": "Состав заказа:",
+                            "delivery_price": "Стоимость доставки",
+                            "pay": "Оплатить",
+                            "discount": "Скидка",
+                            "free_delivery_tooltip": "Бесплатная доставка",
+                            "processing": "Заказ оформляется. Подождите минутку",
+                            "wait": "Подождите..."
+                        },
+                        "blog": {
+                            "read_more": "Читать далее.."
+                        },
+                        "notice": {
+                            "catalog_filter": {
+                                "selected_products": "Выбрано вариантов",
+                                "show_products": "Показать"
+                            }
+                        },
+                        "coupon": {
+                            "discount": "Скидка - %{discount}",
+                            "discount_products_include": "на товары: %{products}",
+                            "discount_categories_include": "на категории: %{categories}",
+                            "discount_products_exclude": "кроме товаров: %{products}",
+                            "discount_categories_exclude": "кроме категорий: %{categories}",
+                            "invalid": "Купон \"%{value}\" НЕ действующий",
+                            "checking": "Проверяю купон..",
+                            "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                        },
+                        "cart": {
+                            "basket_button": "Корзина",
+                            "amount": "Количество",
+                            "weight": "Вес",
+                            "overall": "Итого:",
+                            "title": "Корзина",
+                            "clear": "Очистить корзину",
+                            "not_available": "Больше не продается",
+                            "empty": "Пока тут ничего нет",
+                            "wait": "Подождите...",
+                            "continue_shopping": "Продолжить выбор",
+                            "selected_products": "Выбранные товары",
+                            "not_selected_products": "Не выбрано ни одного товара",
+                            "just_added": "Товары добавлены в корзину"
+                        },
+                        "wishlist": {
+                            "add_item": "Добавить в список желаний",
+                            "wishlist_button": "Список желаний",
+                            "private_title": "Ваш список желаний",
+                            "foreign_title": "Чей-то список желаний",
+                            "empty": "Пока тут ничего нет",
+                            "no_price": "Не продается"
+                        },
+                        "packaging": {
+                            "add": "Добавить",
+                            "add_gift_package": "Добавить к заказу",
+                            "no_package": "Не добавлять"
+                        },
+                        "payment": {
+                            "w1": {
+                                "failure": {
+                                    "title": "Оплата не прошла",
+                                    "desc": "Оплата заказа не была произведена"
+                                },
+                                "success": {
+                                    "title": "Спасибо за заказ",
+                                    "desc": "Оплата заказа была произведена"
+                                }
+                            }
+                        },
+                        "category": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "dictionary_entity": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "similar_product": {
+                            "title": "С этим товаром покупают также"
+                        },
+                        "other_product": {
+                            "title": "Другие товары"
+                        },
+                        "product": {
+                            "title": "Товар",
+                            "blank_price": "Цена неизвестна",
+                            "run_out": "Нет в наличии",
+                            "not_available": "Не продается",
+                            "available": "Можно купить",
+                            "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                            "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                            "category_title": "Категория",
+                            "show_other_products": "Посмотреть другие товары",
+                            "show_all": "Показать все",
+                            "weight": "Вес",
+                            "kg": "кг."
+                        },
+                        "properties": {
+                            "empty": "Нет характеристик для вывода"
+                        },
+                        "property": {
+                            "unknown_type": "Неизвестный тип характеристики",
+                            "defaults": {
+                                "size": "Размер",
+                                "color": "Цвет"
+                            }
+                        },
+                        "pages": {
+                            "titles": {
+                                "cart": "Корзина",
+                                "order": "Оформление заказа",
+                                "payment": "Оплата",
+                                "payment_success": "Успешная оплата",
+                                "payment_error": "Ошибка оплаты"
+                            }
+                        },
+                        "filter": {
+                            "order_by_price": {
+                                "title": "Сотрировать товары",
+                                "desc": "Сначала дорогие",
+                                "asc": "Дорогие в конце",
+                                "preset": "В установленном порядке"
+                            },
+                            "availability": "Доступность",
+                            "price_range": "Ценовой диапазон",
+                            "expand_button": {
+                                "expand": "Развернуть список",
+                                "turn": "Свернуть список"
+                            },
+                            "selected_options": {
+                                "availability": "Доступность",
+                                "price_range": "Цена от %{from} до %{to} %{currency}"
+                            },
+                            "selected_availability": {
+                                "all": "Все",
+                                "available": "В наличии",
+                                "run_out": "Под заказ",
+                                "sale": "Распродажа",
+                                "unknown": "unknown"
+                            },
+                            "hide": "Свернуть",
+                            "show": "Развернуть"
+                        },
+                        "button": {
+                            "to_cart": "В корзину",
+                            "select_good": "Выберите характеристику",
+                            "go_wishlist": "Перейти в \"Список желаний\"",
+                            "to_wishlist": "Добавить в \"Список желаний\"",
+                            "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                            "adding_to_wish_list": "Добавляю..",
+                            "already": "Уже в корзине",
+                            "publish_shop": {
+                                "text": "Опубликовать",
+                                "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                            },
+                            "disable_with": {
+                                "sending": "Отправляем...",
+                                "saving": "Сохраняем...",
+                                "waiting": "Подождите...",
+                                "adding": "Добавляем..."
+                            }
+                        },
+                        "products": {
+                            "others": "Остальные",
+                            "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                        },
+                        "cabinet_order": {
+                            "items_count": "%{itemsCount} поз."
+                        },
+                        "client": {
+                            "auth": "Личный кабинет",
+                            "placeholders": {
+                                "phone": "Номер телефона",
+                                "pin": "Пин-код"
+                            },
+                            "pin_alert": {
+                                "send": "Отправить код",
+                                "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                            },
+                            "submit": "Войти",
+                            "no_account": "Нет аккаунта?",
+                            "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                            "continue_logged": "Продолжить под этим именем..",
+                            "create_account": "Создать",
+                            "logout": "Выйти",
+                            "cabinet": {
+                                "title": "Личный кабинет",
+                                "orders": "Список заказов",
+                                "button": "Кабинет",
+                                "create": "Создаем личный кабинет",
+                                "send_pin_code": "Выслать пин-код",
+                                "disable_with": "Высылаем..."
+                            }
+                        },
+                        "money": {
+                            "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                        },
+                        "product_list": {
+                            "next_button": {
+                                "text": "%{title}"
+                            }
+                        },
+                        "subscription_email": {
+                            "title": "Подписаться на новостную рассылку",
+                            "text": "",
+                            "submit_button_text": "Подписаться",
+                            "unknown_error": "Неизвестная ошибка",
+                            "success_text": "Спасибо за подписку!"
+                        }
+                    }
+                }
+            },
+            "items": [
+                {
+                    "id": "17433-category",
+                    "type": "Category",
+                    "title": "РАЗВИТИЕ РЕЧИ",
+                    "url": "/categories/17433-razvitie-rechi",
+                    "productsCount": 85,
+                    "children": [
+                        {
+                            "id": "36717-category",
+                            "type": "Category",
+                            "title": "ФИЛЬМЫ О ЗАПУСКЕ РЕЧИ",
+                            "url": "/categories/36717-filmy-o-zapuske-rechi",
+                            "productsCount": 5,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17486-category",
+                            "type": "Category",
+                            "title": "РАЗВИТИЕ АРТИКУЛЯЦИИ",
+                            "url": "/categories/17486-razvitie-artikulyatsii",
+                            "productsCount": 13,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17487-category",
+                            "type": "Category",
+                            "title": "ЗАПУСК РЕЧИ (ЗВУКИ И СЛОВА)",
+                            "url": "/categories/17487-zapusk-rechi-zvuki-i-slova",
+                            "productsCount": 40,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17488-category",
+                            "type": "Category",
+                            "title": "ЗАПУСК РЕЧИ (ФРАЗОВАЯ РЕЧЬ)",
+                            "url": "/categories/17488-zapusk-rechi-frazovaya-rech",
+                            "productsCount": 31,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17489-category",
+                            "type": "Category",
+                            "title": "ЧТЕНИЕ И ПИСЬМО",
+                            "url": "/categories/17489-chtenie-i-pismo",
+                            "productsCount": 1,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "17432-category",
+                    "type": "Category",
+                    "title": "РАЗВИТИЕ МЫШЛЕНИЯ",
+                    "url": "/categories/17432-razvitie-myshleniya",
+                    "productsCount": 39,
+                    "children": [
+                        {
+                            "id": "45228-category",
+                            "type": "Category",
+                            "title": "ШНУРОВКИ",
+                            "url": "/categories/45228-shnurovki",
+                            "productsCount": 2,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "36904-category",
+                            "type": "Category",
+                            "title": "МАТЕМАТИЧЕСКИЕ ПРЕДСТАВЛЕНИЯ",
+                            "url": "/categories/36904-matematicheskie-predstavleniya",
+                            "productsCount": 6,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "36903-category",
+                            "type": "Category",
+                            "title": "ПАЗЛЫ",
+                            "url": "/categories/36903-pazly",
+                            "productsCount": 6,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17490-category",
+                            "type": "Category",
+                            "title": "СОРТЕРЫ",
+                            "url": "/categories/17490-sortery",
+                            "productsCount": 8,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17491-category",
+                            "type": "Category",
+                            "title": "ВКЛАДЫШИ",
+                            "url": "/categories/17491-vkladyshi",
+                            "productsCount": 2,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17492-category",
+                            "type": "Category",
+                            "title": "ПИРАМИДКИ",
+                            "url": "/categories/17492-piramidki",
+                            "productsCount": 5,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17493-category",
+                            "type": "Category",
+                            "title": "КОНСТРУКТОРЫ",
+                            "url": "/categories/17493-konstruktory",
+                            "productsCount": 11,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "15639-category",
+                    "type": "Category",
+                    "title": "РАЗВИТИЕ ДВИЖЕНИЯ",
+                    "url": "/categories/15639-razvitie-dvizheniya",
+                    "productsCount": 33,
+                    "children": [
+                        {
+                            "id": "17494-category",
+                            "type": "Category",
+                            "title": "КРУПНАЯ МОТОРИКА",
+                            "url": "/categories/17494-krupnaya-motorika",
+                            "productsCount": 8,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17495-category",
+                            "type": "Category",
+                            "title": "РУЧНАЯ МОТОРИКА",
+                            "url": "/categories/17495-ruchnaya-motorika",
+                            "productsCount": 24,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "17483-category",
+                    "type": "Category",
+                    "title": "СЕНСОРНОЕ РАЗВИТИЕ",
+                    "url": "/categories/17483-sensornoe-razvitie",
+                    "productsCount": 65,
+                    "children": [
+                        {
+                            "id": "17496-category",
+                            "type": "Category",
+                            "title": "ТАКТИЛЬНЫЕ ОЩУЩЕНИЯ",
+                            "url": "/categories/17496-taktilnye-oschuscheniya",
+                            "productsCount": 24,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17497-category",
+                            "type": "Category",
+                            "title": "ГЛУБОКИЕ ОЩУЩЕНИЯ",
+                            "url": "/categories/17497-glubokie-oschuscheniya",
+                            "productsCount": 6,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17498-category",
+                            "type": "Category",
+                            "title": "ВЕСТИБУЛЯРНЫЕ ОЩУЩЕНИЯ",
+                            "url": "/categories/17498-vestibulyarnye-oschuscheniya",
+                            "productsCount": 3,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17499-category",
+                            "type": "Category",
+                            "title": "СЛУХОВОЕ ВОСПРИЯТИЕ",
+                            "url": "/categories/17499-sluhovoe-vospriyatie",
+                            "productsCount": 18,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17500-category",
+                            "type": "Category",
+                            "title": "ВИЗУАЛЬНОЕ ВОСПРИЯТИЕ",
+                            "url": "/categories/17500-vizualnoe-vospriyatie",
+                            "productsCount": 14,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "17485-category",
+                    "type": "Category",
+                    "title": "ТОВАРЫ ДЛЯ ЗАНЯТИЙ АВА",
+                    "url": "/categories/17485-tovary-dlya-zanyatiy-ava",
+                    "productsCount": 83,
+                    "children": [
+                        {
+                            "id": "36905-category",
+                            "type": "Category",
+                            "title": "РАЗВИТИЕ ИМИТАЦИИ",
+                            "url": "/categories/36905-razvitie-imitatsii",
+                            "productsCount": 29,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "17503-category",
+                            "type": "Category",
+                            "title": "ЖЕТОНЫ, ТАЙМЕРЫ, ОРГАНАЙЗЕРЫ",
+                            "url": "/categories/17503-zhetony-taymery-organayzery",
+                            "productsCount": 8,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "36906-category",
+                    "type": "Category",
+                    "title": "ИГРЫ",
+                    "url": "/categories/36906-igry",
+                    "productsCount": 28,
+                    "children": [
+                        {
+                            "id": "37425-category",
+                            "type": "Category",
+                            "title": "НАСТОЛЬНЫЕ ИГРЫ",
+                            "url": "/categories/37425-nastolnye-igry",
+                            "productsCount": 6,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "36909-category",
+                            "type": "Category",
+                            "title": "КОМПЬЮТЕРНЫЕ ИГРЫ",
+                            "url": "/categories/36909-kompyuternye-igry",
+                            "productsCount": 5,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "36908-category",
+                            "type": "Category",
+                            "title": "ДЛЯ ГРУППОВЫХ ЗАНЯТИЙ",
+                            "url": "/categories/36908-dlya-gruppovyh-zanyatiy",
+                            "productsCount": 4,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        },
+                        {
+                            "id": "36907-category",
+                            "type": "Category",
+                            "title": "РОЛЕВЫЕ ИГРЫ",
+                            "url": "/categories/36907-rolevye-igry",
+                            "productsCount": 14,
+                            "children": [
+
+                            ],
+                            "linkTarget": null
+                        }
+                    ],
+                    "linkTarget": null
+                },
+                {
+                    "id": "36910-category",
+                    "type": "Category",
+                    "title": "МАТЕРИАЛЫ ДЛЯ ТВОРЧЕСТВА",
+                    "url": "/categories/36910-materialy-dlya-tvorchestva",
+                    "productsCount": 4,
+                    "children": [
+
+                    ],
+                    "linkTarget": null
+                }
+            ],
+            "activeItems": [
+
+            ],
+            "vendorCabinetPath": "/cabinet",
+            "hasClientCabinet": true,
+            "isMenuTopDesktopSticky": false
+        },
+        "navBarProps": {
+            "i18n": {
+                "locale": "ru",
+                "translations": {
+                    "vendor": {
+                        "ajax": {
+                            "error": "Ошибка выполнения AJAX-запроса"
+                        },
+                        "menu": {
+                            "all_products": "Все товары"
+                        },
+                        "blog_post": {
+                            "prev_post": "Предыдущий пост",
+                            "next_post": "Следующий пост"
+                        },
+                        "not_published": "Магазин временно не работает",
+                        "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                        "tasty_product_button_text": "Купить",
+                        "more": "Подробнее",
+                        "entities": {
+                            "product": "%{count} товар",
+                            "product_2": "%{count} товара",
+                            "product_5": "%{count} товаров"
+                        },
+                        "badges": {
+                            "new": "Новинка",
+                            "sale_percent": "SALE - %{percent}%",
+                            "not_available": "Не продается",
+                            "sale": "SALE",
+                            "sold": "Продано"
+                        },
+                        "gallery": {
+                            "close": "Закрыть",
+                            "next": "Вперёд",
+                            "prev": "Назад"
+                        },
+                        "search": {
+                            "results_title": "Результаты поиска (%{count})",
+                            "nothing_found": "К сожалению, ничего не найдено."
+                        },
+                        "seconds_count": "%{count} секунду",
+                        "seconds_count_2": "%{count} секунды",
+                        "seconds_count_5": "%{count} секунд",
+                        "locales": {
+                            "ru": "Русский",
+                            "en": "English"
+                        },
+                        "activemodel": {
+                            "errors": {
+                                "models": {
+                                    "vendor_order_form": {
+                                        "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                        "attributes": {
+                                            "address": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "email": {
+                                                "email": "не является email адресом"
+                                            },
+                                            "city_title": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "phone": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "name": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "public_offer_accepted": {
+                                                "blank": "Необходимо принять условия публичной оферты"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "validators": {
+                            "available_quantity": {
+                                "no_quantity": {
+                                    "one": "На складе осталась всего 1 штука. Измените количество.",
+                                    "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                                    "many": "На складе осталось всего %{count} штук. Измените количество.",
+                                    "other": "На складе осталось всего %{count} штук. Измените количество."
+                                },
+                                "not_available": "Данный товар закончился"
+                            }
+                        },
+                        "errors": {
+                            "cart": {
+                                "empty": "В корзине нет товаров",
+                                "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                                "not_ordering": "В корзине лежат товары не доступные к заказу"
+                            },
+                            "coupon": {
+                                "not_found": "Несуществующий промокод %{code}",
+                                "expired": "Промокод просрочен %{code}"
+                            },
+                            "order": {
+                                "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                                "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                                "has_unorderable_goods": "В заказе лежат недоступные товары",
+                                "no_items": "В заказе нет товаров",
+                                "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                                "comment": "Комментарий не может быть пустым"
+                            }
+                        },
+                        "placeholders": {
+                            "coupon": "Промо-код (если есть)",
+                            "search": "Поиск"
+                        },
+                        "alerts": {
+                            "confirm": "Точно очистить?"
+                        },
+                        "flashes": {
+                            "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                            "goods_added_to_basket": "Товары добавлены в корзину",
+                            "client": {
+                                "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                                "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                                "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                                "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                            }
+                        },
+                        "mails": {
+                            "signature": "С уважением, интернет-магазин \"%{name}\""
+                        },
+                        "auto_menu_items": {
+                            "blog": "Блог"
+                        },
+                        "top_banner": {
+                            "default_content": "Мы открылись!"
+                        },
+                        "order": {
+                            "no_price_delivery": "Цена не указана",
+                            "fields": {
+                                "phone": "Телефон",
+                                "name": "Полное имя",
+                                "email": "Email",
+                                "city_title": "Город доставки",
+                                "address": "Адрес доставки",
+                                "comment": "Выбор интервала",
+                                "coupon_code": "Промокод",
+                                "delivery_city_id": "Город пункта выдачи",
+                                "pickup_point_id": "Пункт выдачи"
+                            },
+                            "placeholders": {
+                                "city_title": "Москва",
+                                "phone": "Например, +7 913 123 32 10",
+                                "name": "Ф.И.О.",
+                                "address": "Например, Академика Вавилова 12-10",
+                                "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                                "email": "Email"
+                            },
+                            "submit": "Оформить заказ",
+                            "pickup_address": "Адрес самовывоза:",
+                            "title": "Заказ №%{number} в %{vendor}",
+                            "payment_type": "Способ оплаты: %{title}",
+                            "delivery_type": "Способ доставки: %{title}",
+                            "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "go_back": "Вернуться назад",
+                            "next": "Продолжить",
+                            "download_button": "Загрузить файл",
+                            "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                            "check_state": "Проверить статус доставки",
+                            "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                            "created": {
+                                "title": "Спасибо за заказ",
+                                "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                            },
+                            "new": {
+                                "delivery_title": "Выберите тип доставки.",
+                                "payment_title": "Способы оплаты",
+                                "contacts_title": "Введите данные",
+                                "sum": "на сумму"
+                            },
+                            "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                            "redirecting": "Переправляю на сайт оплаты",
+                            "go_to_payment": "Перейти к оплате",
+                            "continue_shopping": "Продолжить покупки",
+                            "contents": "Состав заказа:",
+                            "delivery_price": "Стоимость доставки",
+                            "pay": "Оплатить",
+                            "discount": "Скидка",
+                            "free_delivery_tooltip": "Бесплатная доставка",
+                            "processing": "Заказ оформляется. Подождите минутку",
+                            "wait": "Подождите..."
+                        },
+                        "blog": {
+                            "read_more": "Читать далее.."
+                        },
+                        "notice": {
+                            "catalog_filter": {
+                                "selected_products": "Выбрано вариантов",
+                                "show_products": "Показать"
+                            }
+                        },
+                        "coupon": {
+                            "discount": "Скидка - %{discount}",
+                            "discount_products_include": "на товары: %{products}",
+                            "discount_categories_include": "на категории: %{categories}",
+                            "discount_products_exclude": "кроме товаров: %{products}",
+                            "discount_categories_exclude": "кроме категорий: %{categories}",
+                            "invalid": "Купон \"%{value}\" НЕ действующий",
+                            "checking": "Проверяю купон..",
+                            "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                        },
+                        "cart": {
+                            "basket_button": "Корзина",
+                            "amount": "Количество",
+                            "weight": "Вес",
+                            "overall": "Итого:",
+                            "title": "Корзина",
+                            "clear": "Очистить корзину",
+                            "not_available": "Больше не продается",
+                            "empty": "Пока тут ничего нет",
+                            "wait": "Подождите...",
+                            "continue_shopping": "Продолжить выбор",
+                            "selected_products": "Выбранные товары",
+                            "not_selected_products": "Не выбрано ни одного товара",
+                            "just_added": "Товары добавлены в корзину"
+                        },
+                        "wishlist": {
+                            "add_item": "Добавить в список желаний",
+                            "wishlist_button": "Список желаний",
+                            "private_title": "Ваш список желаний",
+                            "foreign_title": "Чей-то список желаний",
+                            "empty": "Пока тут ничего нет",
+                            "no_price": "Не продается"
+                        },
+                        "packaging": {
+                            "add": "Добавить",
+                            "add_gift_package": "Добавить к заказу",
+                            "no_package": "Не добавлять"
+                        },
+                        "payment": {
+                            "w1": {
+                                "failure": {
+                                    "title": "Оплата не прошла",
+                                    "desc": "Оплата заказа не была произведена"
+                                },
+                                "success": {
+                                    "title": "Спасибо за заказ",
+                                    "desc": "Оплата заказа была произведена"
+                                }
+                            }
+                        },
+                        "category": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "dictionary_entity": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "similar_product": {
+                            "title": "С этим товаром покупают также"
+                        },
+                        "other_product": {
+                            "title": "Другие товары"
+                        },
+                        "product": {
+                            "title": "Товар",
+                            "blank_price": "Цена неизвестна",
+                            "run_out": "Нет в наличии",
+                            "not_available": "Не продается",
+                            "available": "Можно купить",
+                            "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                            "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                            "category_title": "Категория",
+                            "show_other_products": "Посмотреть другие товары",
+                            "show_all": "Показать все",
+                            "weight": "Вес",
+                            "kg": "кг."
+                        },
+                        "properties": {
+                            "empty": "Нет характеристик для вывода"
+                        },
+                        "property": {
+                            "unknown_type": "Неизвестный тип характеристики",
+                            "defaults": {
+                                "size": "Размер",
+                                "color": "Цвет"
+                            }
+                        },
+                        "pages": {
+                            "titles": {
+                                "cart": "Корзина",
+                                "order": "Оформление заказа",
+                                "payment": "Оплата",
+                                "payment_success": "Успешная оплата",
+                                "payment_error": "Ошибка оплаты"
+                            }
+                        },
+                        "filter": {
+                            "order_by_price": {
+                                "title": "Сотрировать товары",
+                                "desc": "Сначала дорогие",
+                                "asc": "Дорогие в конце",
+                                "preset": "В установленном порядке"
+                            },
+                            "availability": "Доступность",
+                            "price_range": "Ценовой диапазон",
+                            "expand_button": {
+                                "expand": "Развернуть список",
+                                "turn": "Свернуть список"
+                            },
+                            "selected_options": {
+                                "availability": "Доступность",
+                                "price_range": "Цена от %{from} до %{to} %{currency}"
+                            },
+                            "selected_availability": {
+                                "all": "Все",
+                                "available": "В наличии",
+                                "run_out": "Под заказ",
+                                "sale": "Распродажа",
+                                "unknown": "unknown"
+                            },
+                            "hide": "Свернуть",
+                            "show": "Развернуть"
+                        },
+                        "button": {
+                            "to_cart": "В корзину",
+                            "select_good": "Выберите характеристику",
+                            "go_wishlist": "Перейти в \"Список желаний\"",
+                            "to_wishlist": "Добавить в \"Список желаний\"",
+                            "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                            "adding_to_wish_list": "Добавляю..",
+                            "already": "Уже в корзине",
+                            "publish_shop": {
+                                "text": "Опубликовать",
+                                "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                            },
+                            "disable_with": {
+                                "sending": "Отправляем...",
+                                "saving": "Сохраняем...",
+                                "waiting": "Подождите...",
+                                "adding": "Добавляем..."
+                            }
+                        },
+                        "products": {
+                            "others": "Остальные",
+                            "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                        },
+                        "cabinet_order": {
+                            "items_count": "%{itemsCount} поз."
+                        },
+                        "client": {
+                            "auth": "Личный кабинет",
+                            "placeholders": {
+                                "phone": "Номер телефона",
+                                "pin": "Пин-код"
+                            },
+                            "pin_alert": {
+                                "send": "Отправить код",
+                                "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                            },
+                            "submit": "Войти",
+                            "no_account": "Нет аккаунта?",
+                            "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                            "continue_logged": "Продолжить под этим именем..",
+                            "create_account": "Создать",
+                            "logout": "Выйти",
+                            "cabinet": {
+                                "title": "Личный кабинет",
+                                "orders": "Список заказов",
+                                "button": "Кабинет",
+                                "create": "Создаем личный кабинет",
+                                "send_pin_code": "Выслать пин-код",
+                                "disable_with": "Высылаем..."
+                            }
+                        },
+                        "money": {
+                            "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                        },
+                        "product_list": {
+                            "next_button": {
+                                "text": "%{title}"
+                            }
+                        },
+                        "subscription_email": {
+                            "title": "Подписаться на новостную рассылку",
+                            "text": "",
+                            "submit_button_text": "Подписаться",
+                            "unknown_error": "Неизвестная ошибка",
+                            "success_text": "Спасибо за подписку!"
+                        }
+                    }
+                }
+            },
+            "clientBarProps": {
+                "cartUrl": "/cart",
+                "showFullBasketCount": false
+            },
+            "logoProps": {
+                "linkUrl": "http://igrolog-school.kiiiosk.dev",
+                "logoText": "Мотивация. Магазин игрушек и товаров для абилитации.",
+                "imageAlt": "Мотивация. Магазин игрушек и товаров для абилитации.",
+                "logoUrl": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/favicons/logof1.png"
+            },
+            "searchQuery": null,
+            "vendor": {
+                "title": "<span style=\"font-size: 18pt;\">+7 (499) 450-27-68<br />+7 (800) 550-11-94</span>",
+                "h1": null,
+                "contacts": [
+                    {
+                        "type": "email",
+                        "value": "info@motivation-shop.ru",
+                        "link": "mailto:info@motivation-shop.ru"
+                    }
+                ],
+                "searchProductsPath": "/products/search",
+                "customAfterContentHtml": "",
+                "customAppendHtml": "",
+                "preProductsText": "",
+                "postProductsText": "<p>&nbsp;</p>\r\n<hr />",
+                "sliderImages": [
+                    {
+                        "image": {
+                            "url": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/uploads/slider_image/image/5575/bit.png",
+                            "height": 602,
+                            "width": 1600
+                        },
+                        "url": "",
+                        "target": "_blank"
+                    },
+                    {
+                        "image": {
+                            "url": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/uploads/slider_image/image/5576/pisha.png",
+                            "height": 602,
+                            "width": 1600
+                        },
+                        "url": "",
+                        "target": "_blank"
+                    }
+                ]
+            }
+        },
+        "publishShopUrl": "http://igrolog-school.kiiiosk.dev/operator/publish_shop",
+        "scrollToTopProps": {
+            "offset": 200
+        },
+        "showClientBar": true,
+        "showInstagramContainer": false,
+        "showMenuTop": false,
+        "showTopBanner": false,
+        "topBannerProps": {
+            "content": "МЫ ОТКРЫЛИСЬ",
+            "url": ""
+        },
+        "userbarProps": {
+            "i18n": {
+                "locale": "ru",
+                "translations": {
+                    "vendor": {
+                        "ajax": {
+                            "error": "Ошибка выполнения AJAX-запроса"
+                        },
+                        "menu": {
+                            "all_products": "Все товары"
+                        },
+                        "blog_post": {
+                            "prev_post": "Предыдущий пост",
+                            "next_post": "Следующий пост"
+                        },
+                        "not_published": "Магазин временно не работает",
+                        "made_in_kiiiosk": "© 2001-2017 ATRIA MAGNA",
+                        "tasty_product_button_text": "Купить",
+                        "more": "Подробнее",
+                        "entities": {
+                            "product": "%{count} товар",
+                            "product_2": "%{count} товара",
+                            "product_5": "%{count} товаров"
+                        },
+                        "badges": {
+                            "new": "Новинка",
+                            "sale_percent": "SALE - %{percent}%",
+                            "not_available": "Не продается",
+                            "sale": "SALE",
+                            "sold": "Продано"
+                        },
+                        "gallery": {
+                            "close": "Закрыть",
+                            "next": "Вперёд",
+                            "prev": "Назад"
+                        },
+                        "search": {
+                            "results_title": "Результаты поиска (%{count})",
+                            "nothing_found": "К сожалению, ничего не найдено."
+                        },
+                        "seconds_count": "%{count} секунду",
+                        "seconds_count_2": "%{count} секунды",
+                        "seconds_count_5": "%{count} секунд",
+                        "locales": {
+                            "ru": "Русский",
+                            "en": "English"
+                        },
+                        "activemodel": {
+                            "errors": {
+                                "models": {
+                                    "vendor_order_form": {
+                                        "invalid_phone": "Неверный формат телефона. Прим.: +7 913 123 32 10",
+                                        "attributes": {
+                                            "address": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "email": {
+                                                "email": "не является email адресом"
+                                            },
+                                            "city_title": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "phone": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "name": {
+                                                "blank": "не может быть пустым"
+                                            },
+                                            "public_offer_accepted": {
+                                                "blank": "Необходимо принять условия публичной оферты"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "validators": {
+                            "available_quantity": {
+                                "no_quantity": {
+                                    "one": "На складе осталась всего 1 штука. Измените количество.",
+                                    "few": "На складе осталось всего %{count} штуки. Измените количество.",
+                                    "many": "На складе осталось всего %{count} штук. Измените количество.",
+                                    "other": "На складе осталось всего %{count} штук. Измените количество."
+                                },
+                                "not_available": "Данный товар закончился"
+                            }
+                        },
+                        "errors": {
+                            "cart": {
+                                "empty": "В корзине нет товаров",
+                                "minimal_price": "Минимальная стоимость заказа составляет %{minimal_price}",
+                                "not_ordering": "В корзине лежат товары не доступные к заказу"
+                            },
+                            "coupon": {
+                                "not_found": "Несуществующий промокод %{code}",
+                                "expired": "Промокод просрочен %{code}"
+                            },
+                            "order": {
+                                "no_price_delivery": "Стоимость доставки расчитывается после заказа",
+                                "invalid_form": "Заказ еще не принят, исправьте ошибки в форме",
+                                "has_unorderable_goods": "В заказе лежат недоступные товары",
+                                "no_items": "В заказе нет товаров",
+                                "unavailable_currency": "Невозможно сделать заказ в выбранной валюте",
+                                "comment": "Комментарий не может быть пустым"
+                            }
+                        },
+                        "placeholders": {
+                            "coupon": "Промо-код (если есть)",
+                            "search": "Поиск"
+                        },
+                        "alerts": {
+                            "confirm": "Точно очистить?"
+                        },
+                        "flashes": {
+                            "good_added_to_basket": "Товар \"%{title}\" добавлен в корзину",
+                            "goods_added_to_basket": "Товары добавлены в корзину",
+                            "client": {
+                                "sms_sending_error": "Ошибка отправки SMS. Попробуйте позже или сообщите в магазин",
+                                "sms_money_reached": "Отправка SMS отключена, обратитесь в магазин",
+                                "pin_code_sent": "Пин-код отправлен на Ваш номер",
+                                "not_found_html": "Вы ещё не покупали в нашем магазине. <a href=\"%{url}\">Исправить!</a>"
+                            }
+                        },
+                        "mails": {
+                            "signature": "С уважением, интернет-магазин \"%{name}\""
+                        },
+                        "auto_menu_items": {
+                            "blog": "Блог"
+                        },
+                        "top_banner": {
+                            "default_content": "Мы открылись!"
+                        },
+                        "order": {
+                            "no_price_delivery": "Цена не указана",
+                            "fields": {
+                                "phone": "Телефон",
+                                "name": "Полное имя",
+                                "email": "Email",
+                                "city_title": "Город доставки",
+                                "address": "Адрес доставки",
+                                "comment": "Выбор интервала",
+                                "coupon_code": "Промокод",
+                                "delivery_city_id": "Город пункта выдачи",
+                                "pickup_point_id": "Пункт выдачи"
+                            },
+                            "placeholders": {
+                                "city_title": "Москва",
+                                "phone": "Например, +7 913 123 32 10",
+                                "name": "Ф.И.О.",
+                                "address": "Например, Академика Вавилова 12-10",
+                                "comment": "Запишите в форму удобный ДЕНЬ и интервал доставки",
+                                "email": "Email"
+                            },
+                            "submit": "Оформить заказ",
+                            "pickup_address": "Адрес самовывоза:",
+                            "title": "Заказ №%{number} в %{vendor}",
+                            "payment_type": "Способ оплаты: %{title}",
+                            "delivery_type": "Способ доставки: %{title}",
+                            "free_delivery_text_html": "Бесплатная доставка при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "checkout_free_delivery_text_html": "Бесплатно при заказе свыше <nobr>%{free_delivery_threshold}</nobr>",
+                            "go_back": "Вернуться назад",
+                            "next": "Продолжить",
+                            "download_button": "Загрузить файл",
+                            "delivery_tracking_id": "Трекинг-номер доставки: %{number}",
+                            "check_state": "Проверить статус доставки",
+                            "public_offer_accepted_html": "Согласен с условиями <u><a href=\"%{url}\" target=\"_blank\">публичной оферты</a></u>",
+                            "created": {
+                                "title": "Спасибо за заказ",
+                                "desc_html": "В ближайшее время менеджер свяжется с вами для подтверждения заказа. <br> Ваш телефон %{phone} <br> Ваш заказ %{link} на сумму %{price}\n"
+                            },
+                            "new": {
+                                "delivery_title": "Выберите тип доставки.",
+                                "payment_title": "Способы оплаты",
+                                "contacts_title": "Введите данные",
+                                "sum": "на сумму"
+                            },
+                            "redirect": "В течение 5-и секунд вы будете переправлены на страницу оплаты.",
+                            "redirecting": "Переправляю на сайт оплаты",
+                            "go_to_payment": "Перейти к оплате",
+                            "continue_shopping": "Продолжить покупки",
+                            "contents": "Состав заказа:",
+                            "delivery_price": "Стоимость доставки",
+                            "pay": "Оплатить",
+                            "discount": "Скидка",
+                            "free_delivery_tooltip": "Бесплатная доставка",
+                            "processing": "Заказ оформляется. Подождите минутку",
+                            "wait": "Подождите..."
+                        },
+                        "blog": {
+                            "read_more": "Читать далее.."
+                        },
+                        "notice": {
+                            "catalog_filter": {
+                                "selected_products": "Выбрано вариантов",
+                                "show_products": "Показать"
+                            }
+                        },
+                        "coupon": {
+                            "discount": "Скидка - %{discount}",
+                            "discount_products_include": "на товары: %{products}",
+                            "discount_categories_include": "на категории: %{categories}",
+                            "discount_products_exclude": "кроме товаров: %{products}",
+                            "discount_categories_exclude": "кроме категорий: %{categories}",
+                            "invalid": "Купон \"%{value}\" НЕ действующий",
+                            "checking": "Проверяю купон..",
+                            "error": "Ошибка при проверке купона. Попробуйте еще раз"
+                        },
+                        "cart": {
+                            "basket_button": "Корзина",
+                            "amount": "Количество",
+                            "weight": "Вес",
+                            "overall": "Итого:",
+                            "title": "Корзина",
+                            "clear": "Очистить корзину",
+                            "not_available": "Больше не продается",
+                            "empty": "Пока тут ничего нет",
+                            "wait": "Подождите...",
+                            "continue_shopping": "Продолжить выбор",
+                            "selected_products": "Выбранные товары",
+                            "not_selected_products": "Не выбрано ни одного товара",
+                            "just_added": "Товары добавлены в корзину"
+                        },
+                        "wishlist": {
+                            "add_item": "Добавить в список желаний",
+                            "wishlist_button": "Список желаний",
+                            "private_title": "Ваш список желаний",
+                            "foreign_title": "Чей-то список желаний",
+                            "empty": "Пока тут ничего нет",
+                            "no_price": "Не продается"
+                        },
+                        "packaging": {
+                            "add": "Добавить",
+                            "add_gift_package": "Добавить к заказу",
+                            "no_package": "Не добавлять"
+                        },
+                        "payment": {
+                            "w1": {
+                                "failure": {
+                                    "title": "Оплата не прошла",
+                                    "desc": "Оплата заказа не была произведена"
+                                },
+                                "success": {
+                                    "title": "Спасибо за заказ",
+                                    "desc": "Оплата заказа была произведена"
+                                }
+                            }
+                        },
+                        "category": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "dictionary_entity": {
+                            "continue_shopping": "Продолжить покупки",
+                            "empty": "Ой, а здесь ничего нет. Пока."
+                        },
+                        "similar_product": {
+                            "title": "С этим товаром покупают также"
+                        },
+                        "other_product": {
+                            "title": "Другие товары"
+                        },
+                        "product": {
+                            "title": "Товар",
+                            "blank_price": "Цена неизвестна",
+                            "run_out": "Нет в наличии",
+                            "not_available": "Не продается",
+                            "available": "Можно купить",
+                            "sold_out_message_html": "&laquo;%{title}&raquo; сейчас не продается",
+                            "nothing_found_by_criteria": "Сожалеем, ничего не найдено. Попробуйте изменить критерии поиска.",
+                            "category_title": "Категория",
+                            "show_other_products": "Посмотреть другие товары",
+                            "show_all": "Показать все",
+                            "weight": "Вес",
+                            "kg": "кг."
+                        },
+                        "properties": {
+                            "empty": "Нет характеристик для вывода"
+                        },
+                        "property": {
+                            "unknown_type": "Неизвестный тип характеристики",
+                            "defaults": {
+                                "size": "Размер",
+                                "color": "Цвет"
+                            }
+                        },
+                        "pages": {
+                            "titles": {
+                                "cart": "Корзина",
+                                "order": "Оформление заказа",
+                                "payment": "Оплата",
+                                "payment_success": "Успешная оплата",
+                                "payment_error": "Ошибка оплаты"
+                            }
+                        },
+                        "filter": {
+                            "order_by_price": {
+                                "title": "Сотрировать товары",
+                                "desc": "Сначала дорогие",
+                                "asc": "Дорогие в конце",
+                                "preset": "В установленном порядке"
+                            },
+                            "availability": "Доступность",
+                            "price_range": "Ценовой диапазон",
+                            "expand_button": {
+                                "expand": "Развернуть список",
+                                "turn": "Свернуть список"
+                            },
+                            "selected_options": {
+                                "availability": "Доступность",
+                                "price_range": "Цена от %{from} до %{to} %{currency}"
+                            },
+                            "selected_availability": {
+                                "all": "Все",
+                                "available": "В наличии",
+                                "run_out": "Под заказ",
+                                "sale": "Распродажа",
+                                "unknown": "unknown"
+                            },
+                            "hide": "Свернуть",
+                            "show": "Развернуть"
+                        },
+                        "button": {
+                            "to_cart": "В корзину",
+                            "select_good": "Выберите характеристику",
+                            "go_wishlist": "Перейти в \"Список желаний\"",
+                            "to_wishlist": "Добавить в \"Список желаний\"",
+                            "remove_from_wish_list": "Удалить из \"Списка желаний\"",
+                            "adding_to_wish_list": "Добавляю..",
+                            "already": "Уже в корзине",
+                            "publish_shop": {
+                                "text": "Опубликовать",
+                                "title": "Магазин отключен. Нажмите чтобы опубликовать"
+                            },
+                            "disable_with": {
+                                "sending": "Отправляем...",
+                                "saving": "Сохраняем...",
+                                "waiting": "Подождите...",
+                                "adding": "Добавляем..."
+                            }
+                        },
+                        "products": {
+                            "others": "Остальные",
+                            "nothing_found_by_criteria": "По данным критериям ничего не найдено"
+                        },
+                        "cabinet_order": {
+                            "items_count": "%{itemsCount} поз."
+                        },
+                        "client": {
+                            "auth": "Личный кабинет",
+                            "placeholders": {
+                                "phone": "Номер телефона",
+                                "pin": "Пин-код"
+                            },
+                            "pin_alert": {
+                                "send": "Отправить код",
+                                "timeout": "SMS должна прийти в течение минуты<br>Запросить код повторно можно через"
+                            },
+                            "submit": "Войти",
+                            "no_account": "Нет аккаунта?",
+                            "logged_in_with": "Вы уже авторизованы под именем<br /> <b>%{name}</b>.",
+                            "continue_logged": "Продолжить под этим именем..",
+                            "create_account": "Создать",
+                            "logout": "Выйти",
+                            "cabinet": {
+                                "title": "Личный кабинет",
+                                "orders": "Список заказов",
+                                "button": "Кабинет",
+                                "create": "Создаем личный кабинет",
+                                "send_pin_code": "Выслать пин-код",
+                                "disable_with": "Высылаем..."
+                            }
+                        },
+                        "money": {
+                            "unknown_iso_code": "Неизвестный тип валюты %{isoCode}"
+                        },
+                        "product_list": {
+                            "next_button": {
+                                "text": "%{title}"
+                            }
+                        },
+                        "subscription_email": {
+                            "title": "Подписаться на новостную рассылку",
+                            "text": "",
+                            "submit_button_text": "Подписаться",
+                            "unknown_error": "Неизвестная ошибка",
+                            "success_text": "Спасибо за подписку!"
+                        }
+                    }
+                }
+            },
+            "authUrl": "http://igrolog-school.kiiiosk.dev/operator?backurl=http://igrolog-school.kiiiosk.dev?design=open",
+            "pageType": "welcome",
+            "productPageUrl": "http://igrolog-school.kiiiosk.dev/products/256483-skachat-film-na-svoy-kompyuter?design=open",
+            "categoryPageUrl": "http://igrolog-school.kiiiosk.dev/categories/45223-ergoterapevticheskie-tovary?design=open",
+            "operatorText": "Управление магазином",
+            "operatorUrl": "http://igrolog-school.kiiiosk.dev/operator/shop",
+            "designText": "Дизайн",
+            "publishShopUrl": "http://igrolog-school.kiiiosk.dev/operator/publish_shop",
+            "cabinetText": "",
+            "cabinetUrl": "/cabinet",
+            "hasCabinet": true,
+            "wishlistText": "",
+            "wishlistUrl": "/wishlist"
+        },
+        "vendor": {
+            "title": "<span style=\"font-size: 18pt;\">+7 (499) 450-27-68<br />+7 (800) 550-11-94</span>",
+            "h1": null,
+            "contacts": [
+                {
+                    "type": "email",
+                    "value": "info@motivation-shop.ru",
+                    "link": "mailto:info@motivation-shop.ru"
+                }
+            ],
+            "searchProductsPath": "/products/search",
+            "customAfterContentHtml": "",
+            "customAppendHtml": "",
+            "preProductsText": "",
+            "postProductsText": "<p>&nbsp;</p>\r\n<hr />",
+            "sliderImages": [
+                {
+                    "image": {
+                        "url": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/uploads/slider_image/image/5575/bit.png",
+                        "height": 602,
+                        "width": 1600
+                    },
+                    "url": "",
+                    "target": "_blank"
+                },
+                {
+                    "image": {
+                        "url": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/uploads/slider_image/image/5576/pisha.png",
+                        "height": 602,
+                        "width": 1600
+                    },
+                    "url": "",
+                    "target": "_blank"
+                }
+            ]
+        },
+        "logoProps": {
+            "linkUrl": "http://igrolog-school.kiiiosk.dev",
+            "logoText": "Мотивация. Магазин игрушек и товаров для абилитации.",
+            "imageAlt": "Мотивация. Магазин игрушек и товаров для абилитации.",
+            "logoUrl": "https://kiiiosk-test.s3.eu-central-1.amazonaws.com/uploads/shop/2298/favicons/logof1.png"
+        },
+        "w1ptEnabled": "WalletOneRUB,QiwiWalletRUB,YandexMoneyRUB,CreditCardRUB,BeelineRUB,MegafonRUB,MtsRUB"
+    },
+    "showCouponCode": false
+}

@@ -6676,10 +6676,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -6712,16 +6708,13 @@ var _CheckoutFieldSelectAjax = require('./CheckoutFieldSelectAjax');
 
 var _CheckoutFieldSelectAjax2 = _interopRequireDefault(_CheckoutFieldSelectAjax);
 
-var _humps = require('humps');
-
-var _timm = require('timm');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var STRING_TYPE = 'string';
 var TEXTAREA_TYPE = 'textarea';
 var HIDDEN_TYPE = 'hidden';
 var SELECT_TYPE = 'select';
+var AJAX_SELECT_TYPE = 'ajax_select';
 
 var CheckoutField = function (_Component) {
   (0, _inherits3.default)(CheckoutField, _Component);
@@ -6735,27 +6728,27 @@ var CheckoutField = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          item = _props.item,
+          field = _props.field,
           value = _props.value,
-          deliveryType = _props.deliveryType,
           _onChange = _props.onChange,
-          belongsData = _props.belongsData;
-      var _item$errorMessage = item.errorMessage,
-          errorMessage = _item$errorMessage === undefined ? '' : _item$errorMessage,
-          _item$name = item.name,
-          name = _item$name === undefined ? '' : _item$name,
-          _item$type = item.type,
-          type = _item$type === undefined ? STRING_TYPE : _item$type,
-          _item$placeholder = item.placeholder,
-          placeholder = _item$placeholder === undefined ? '' : _item$placeholder,
-          _item$title = item.title,
-          title = _item$title === undefined ? '' : _item$title;
-      // const isRequired = includes(deliveryType.requiredFields || [], name);
+          requestData = _props.requestData;
+      var _field$ajaxSettings = field.ajaxSettings,
+          ajaxSettings = _field$ajaxSettings === undefined ? {} : _field$ajaxSettings,
+          _field$errorMessage = field.errorMessage,
+          errorMessage = _field$errorMessage === undefined ? '' : _field$errorMessage,
+          _field$name = field.name,
+          name = _field$name === undefined ? '' : _field$name,
+          _field$type = field.type,
+          type = _field$type === undefined ? STRING_TYPE : _field$type,
+          _field$placeholder = field.placeholder,
+          placeholder = _field$placeholder === undefined ? '' : _field$placeholder,
+          isRequired = field.isRequired,
+          isDisabled = field.isDisabled,
+          _field$title = field.title,
+          title = _field$title === undefined ? '' : _field$title;
 
-      var reservedValue = (0, _timm.getIn)(deliveryType, ['reservedFieldValues', (0, _humps.camelize)(name)]);
-      var isDisabled = !!reservedValue;
-      var itemId = 'vendor_order_' + name;
-      var itemName = 'vendor_order[' + name + ']';
+      var inputId = 'vendor_order_' + name;
+      var inputFieldName = 'vendor_order[' + name + ']';
 
       switch (type) {
         case STRING_TYPE:
@@ -6764,20 +6757,21 @@ var CheckoutField = function (_Component) {
             { className: 'form-group string' },
             _react2.default.createElement(
               'label',
-              { className: 'string control-label', htmlFor: itemId },
+              { className: 'string control-label', htmlFor: inputId },
               title
             ),
             _react2.default.createElement('input', {
               className: 'string form-control',
               disabled: isDisabled,
-              id: itemId,
-              name: itemName,
+              id: inputId,
+              name: inputFieldName,
               onChange: function onChange(ev) {
                 return _onChange(name, ev.target.value);
               },
               placeholder: placeholder,
+              required: isRequired,
               type: 'text',
-              value: reservedValue || value
+              value: value
             }),
             errorMessage && _react2.default.createElement(
               'span',
@@ -6792,14 +6786,15 @@ var CheckoutField = function (_Component) {
             { className: 'form-group text' },
             _react2.default.createElement(
               'label',
-              { className: 'text control-label', htmlFor: itemId },
+              { className: 'text control-label', htmlFor: inputId },
               title
             ),
             _react2.default.createElement('textarea', {
               className: 'text form-control',
               disabled: isDisabled,
-              id: itemId,
-              name: itemName,
+              required: isRequired,
+              id: inputId,
+              name: inputFieldName,
               onChange: function onChange(ev) {
                 return _onChange(name, ev.target.value);
               },
@@ -6814,53 +6809,43 @@ var CheckoutField = function (_Component) {
           );
           break;
         case SELECT_TYPE:
-          var options = (0, _timm.getIn)(deliveryType, ['selects', (0, _humps.camelize)(name)]);
-          switch (options.type) {
-            case 'options':
-              return _react2.default.createElement(_CheckoutFieldSelect2.default, {
-                title: title,
-                disabled: isDisabled,
-                id: itemId,
-                name: name,
-                value: value,
-                itemName: itemName,
-                items: options.items,
-                onChange: _onChange,
-                errorMessage: errorMessage,
-                defaultTitle: options.defaultTitle
-              });
-            case 'ajax':
-              var requestData = (0, _extends3.default)({}, belongsData, { vendor_delivery_id: deliveryType.id });
-
-              return _react2.default.createElement(_CheckoutFieldSelectAjax2.default, {
-                requestData: requestData,
-                title: title,
-                disabled: isDisabled,
-                id: itemId,
-                name: name,
-                itemName: itemName,
-                belongs: options.belongs,
-                requiredTitle: options.requiredTitle,
-                loadingTitle: options.loadingTitle,
-                onChange: _onChange,
-                errorMessage: errorMessage,
-                collectionUrl: options.collectionUrl,
-                defaultTitle: options.defaultTitle
-              });
-            default:
-              return _react2.default.createElement(
-                'div',
-                null,
-                'UNKNOWN select field type "',
-                options['type'],
-                '"'
-              );
-          };
+          return _react2.default.createElement(_CheckoutFieldSelect2.default, {
+            title: title,
+            disabled: isDisabled,
+            required: isRequired,
+            id: inputId,
+            name: name,
+            value: value,
+            inputName: inputFieldName,
+            items: ajaxSettings.items,
+            onChange: _onChange,
+            errorMessage: errorMessage,
+            defaultTitle: ajaxSettings.defaultTitle
+          });
+          break;
+        case AJAX_SELECT_TYPE:
+          return _react2.default.createElement(_CheckoutFieldSelectAjax2.default, {
+            requestData: requestData,
+            required: isRequired,
+            title: title,
+            disabled: isDisabled,
+            id: inputId,
+            name: name,
+            inputName: inputFieldName,
+            belongs: ajaxSettings.belongs,
+            requiredTitle: ajaxSettings.requiredTitle,
+            loadingTitle: ajaxSettings.loadingTitle,
+            onChange: _onChange,
+            errorMessage: errorMessage,
+            collectionUrl: ajaxSettings.collectionUrl,
+            defaultTitle: ajaxSettings.defaultTitle
+          });
+          break;
         case HIDDEN_TYPE:
           return _react2.default.createElement('input', {
             type: HIDDEN_TYPE,
-            id: itemId,
-            name: itemName,
+            id: inputId,
+            name: inputFieldName,
             value: value
           });
           break;
@@ -6879,9 +6864,8 @@ var CheckoutField = function (_Component) {
 }(_react.Component);
 
 CheckoutField.propTypes = {
-  deliveryType: _react.PropTypes.object.isRequired,
-  item: _react.PropTypes.object.isRequired,
-  belongsData: _react.PropTypes.object,
+  field: _react.PropTypes.object.isRequired,
+  isRequired: _react.PropTypes.bool,
   value: _react.PropTypes.oneOfType([_react.PropTypes.string.isRequired, _react.PropTypes.number.isRequired]),
   onChange: _react.PropTypes.func.isRequired
 };
@@ -6891,7 +6875,7 @@ CheckoutField.defaultProps = {};
 exports.default = CheckoutField;
 module.exports = exports['default'];
 
-},{"./CheckoutFieldSelect":63,"./CheckoutFieldSelectAjax":64,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/extends":372,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"humps":510,"react":"react","timm":"timm"}],63:[function(require,module,exports){
+},{"./CheckoutFieldSelect":63,"./CheckoutFieldSelectAjax":64,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"react":"react"}],63:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -6944,7 +6928,7 @@ var CheckoutFieldSelect = function (_Component) {
           title = _props.title,
           disabled = _props.disabled,
           name = _props.name,
-          itemName = _props.itemName,
+          inputName = _props.inputName,
           items = _props.items,
           onChange = _props.onChange,
           errorMessage = _props.errorMessage,
@@ -6977,7 +6961,7 @@ var CheckoutFieldSelect = function (_Component) {
             disabled: disabled,
             defaultValue: value || "",
             id: id,
-            name: itemName,
+            name: inputName,
             onChange: myOnChange
           },
           defaultTitle && options.length > 1 && _react2.default.createElement(
@@ -7259,6 +7243,10 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _extends2 = require('babel-runtime/helpers/extends');
+
+var _extends3 = _interopRequireDefault(_extends2);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -7275,6 +7263,18 @@ var _lodash = require('lodash');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var buildRequestData = function buildRequestData(_ref, values) {
+  var _ref$belongs = _ref.belongs,
+      belongs = _ref$belongs === undefined ? [] : _ref$belongs,
+      _ref$requestData = _ref.requestData,
+      requestData = _ref$requestData === undefined ? {} : _ref$requestData;
+
+  var belongsData = (0, _lodash.mapValues)((0, _lodash.pick)(values, belongs || []), function (v) {
+    return (0, _timm.getIn)(v, ['value']);
+  });
+  return (0, _extends3.default)({}, belongsData, requestData);
+};
+
 var CheckoutFields = function (_Component) {
   (0, _inherits3.default)(CheckoutFields, _Component);
 
@@ -7287,32 +7287,25 @@ var CheckoutFields = function (_Component) {
     key: 'render',
     value: function render() {
       var _props = this.props,
-          deliveryType = _props.deliveryType,
-          items = _props.items,
-          itemValues = _props.itemValues,
+          fields = _props.fields,
+          values = _props.values,
           onChange = _props.onChange;
 
 
       return _react2.default.createElement(
         'span',
         null,
-        items.map(function (item) {
-          var value = (0, _timm.getIn)(itemValues, [item.name, 'value']);
-
-          var belongs = (0, _timm.getIn)(deliveryType, ['selects', (0, _humps.camelize)(item.name), 'belongs']);
-
-          var belongsData = (0, _lodash.mapValues)((0, _lodash.pick)(itemValues, belongs), function (v) {
-            return (0, _timm.getIn)(v, ['value']);
-          });
+        fields.map(function (field) {
+          var value = (0, _timm.getIn)(values, [field.name, 'value']);
+          var requestData = buildRequestData(field.ajaxSettings || {}, values);
 
           return _react2.default.createElement(
             'div',
-            { className: 'b-form__row__widget', key: item.name },
+            { className: 'b-form__row__widget', key: field.name },
             _react2.default.createElement(_CheckoutField2.default, {
-              deliveryType: deliveryType,
-              belongsData: belongsData,
-              item: item,
-              value: value,
+              requestData: requestData,
+              field: field,
+              value: field.reservedValue || value,
               onChange: onChange
             })
           );
@@ -7324,9 +7317,8 @@ var CheckoutFields = function (_Component) {
 }(_react.Component);
 
 CheckoutFields.propTypes = {
-  deliveryType: _react.PropTypes.object.isRequired,
-  items: _react.PropTypes.array.isRequired,
-  itemValues: _react.PropTypes.object.isRequired,
+  fields: _react.PropTypes.array.isRequired,
+  values: _react.PropTypes.object.isRequired,
   onChange: _react.PropTypes.func.isRequired
 };
 
@@ -7335,7 +7327,7 @@ CheckoutFields.defaultProps = {};
 exports.default = CheckoutFields;
 module.exports = exports['default'];
 
-},{"./CheckoutField":62,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"humps":510,"lodash":"lodash","react":"react","timm":"timm"}],66:[function(require,module,exports){
+},{"./CheckoutField":62,"babel-runtime/core-js/object/get-prototype-of":363,"babel-runtime/helpers/classCallCheck":369,"babel-runtime/helpers/createClass":370,"babel-runtime/helpers/extends":372,"babel-runtime/helpers/inherits":373,"babel-runtime/helpers/possibleConstructorReturn":375,"humps":510,"lodash":"lodash","react":"react","timm":"timm"}],66:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -7804,8 +7796,8 @@ var Checkout = function (_Component) {
               { number: 2, title: t('vendor.order.new.contacts_title') },
               _react2.default.createElement(_CheckoutFields2.default, {
                 deliveryType: deliveryType,
-                itemValues: fieldValues,
-                items: fields,
+                values: fieldValues,
+                fields: fields,
                 onChange: onFieldChange
               }),
               !!coupon.show && _react2.default.createElement(_CheckoutCoupon2.default, { code: coupon.value, t: t })
@@ -7843,7 +7835,7 @@ Checkout.propTypes = {
   deliveryTypes: _react.PropTypes.array.isRequired,
   errorMessage: _react.PropTypes.string,
   fieldValues: _react.PropTypes.object.isRequired,
-  fields: _react.PropTypes.array.isRequired,
+  fields: _react.PropTypes.arrayOf(schemas.checkoutField).isRequired,
   formAuthenticity: schemas.formAuthenticity,
   onDeliveryChange: _react.PropTypes.func.isRequired,
   onFieldChange: _react.PropTypes.func.isRequired,
@@ -15133,7 +15125,6 @@ OrderContainer.propTypes = {
   deliveryTypes: _react.PropTypes.array.isRequired,
   selectedDeliveryType: _react.PropTypes.object.isRequired,
   fieldValues: _react.PropTypes.object.isRequired,
-  fields: _react.PropTypes.array.isRequired,
   paymentTypes: _react.PropTypes.array.isRequired,
   initCheckout: _react.PropTypes.func.isRequired,
   selectedPaymentType: _react.PropTypes.object.isRequired,
@@ -15145,7 +15136,6 @@ OrderContainer.propTypes = {
     deliveryTypeId: _react.PropTypes.number,
     deliveryTypes: _react.PropTypes.arrayOf(schemas.deliveryType),
     errorMessage: _react.PropTypes.string,
-    fields: _react.PropTypes.arrayOf(schemas.checkoutField),
     formAuthenticity: schemas.formAuthenticity,
     paymentTypeId: _react.PropTypes.number,
     paymentTypes: _react.PropTypes.arrayOf(schemas.paymentType),
@@ -15192,14 +15182,17 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
   var _selectedDeliveryType = selectedDeliveryType.availablePayments,
       availablePayments = _selectedDeliveryType === undefined ? [] : _selectedDeliveryType,
       _selectedDeliveryType2 = selectedDeliveryType.fields,
-      availableFields = _selectedDeliveryType2 === undefined ? [] : _selectedDeliveryType2;
+      fields = _selectedDeliveryType2 === undefined ? [] : _selectedDeliveryType2;
+
 
   var paymentTypes = (cart.paymentTypes || []).filter(function (p) {
     return (0, _lodash.includes)(availablePayments, p.id);
   });
+
   var selectedPaymentType = (0, _lodash.find)(paymentTypes, function (p) {
     return p.id === selectedPaymentTypeId;
   }) || (0, _lodash.head)(paymentTypes) || {};
+
   var totalPrice = (0, _timm.updateIn)(cartTotalPrice, ['cents'], function (cents) {
     if (cents == null) {
       return cents;
@@ -15209,9 +15202,6 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
     var deliveryPrice = (0, _timm.getIn)(selectedDeliveryType, ['price', 'cents']) || 0;
 
     return cents + (threshold == null || threshold > cents ? deliveryPrice : 0);
-  });
-  var fields = checkoutFields.filter(function (f) {
-    return (0, _lodash.includes)(availableFields, f.name);
   });
 
   return {
@@ -33371,6 +33361,10 @@ var _money = require('./money');
 
 var _money2 = _interopRequireDefault(_money);
 
+var _checkoutField = require('./checkoutField');
+
+var _checkoutField2 = _interopRequireDefault(_checkoutField);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react.PropTypes.shape({
@@ -33378,15 +33372,14 @@ exports.default = _react.PropTypes.shape({
   title: _react.PropTypes.string,
   description: _react.PropTypes.string,
   price: _money2.default,
-  fields: _react.PropTypes.arrayOf(_react.PropTypes.string),
+  fields: _react.PropTypes.arrayOf(_checkoutField2.default).isRequired,
   requiredFields: _react.PropTypes.arrayOf(_react.PropTypes.string),
   availablePayments: _react.PropTypes.arrayOf(_react.PropTypes.number),
-  freeDeliveryThreshold: _money2.default,
-  reservedFieldValues: _react.PropTypes.object
+  freeDeliveryThreshold: _money2.default
 });
 module.exports = exports['default'];
 
-},{"./money":336,"react":"react"}],330:[function(require,module,exports){
+},{"./checkoutField":324,"./money":336,"react":"react"}],330:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

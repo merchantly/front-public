@@ -8,7 +8,7 @@ class CheckoutFieldSelect extends Component {
       title,
       disabled,
       name,
-      itemName,
+      inputName,
       items,
       onChange,
       errorMessage,
@@ -26,7 +26,7 @@ class CheckoutFieldSelect extends Component {
           disabled={disabled}
           defaultValue={value || ""}
           id={id}
-          name={itemName}
+          name={inputName}
           onChange={myOnChange}
         >
           {defaultTitle && options.length> 1 && <option value="" key="default" disabled={true}>{defaultTitle}</option>}

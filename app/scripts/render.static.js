@@ -39,6 +39,9 @@ import {
   PAYMENT_SUCCESS,
 } from 'rc/Payment';
 
+import pageWithCouponProps from 'test/fixtures/order/page-with-coupon.json';
+import orderPageProps from 'test/fixtures/order/page.json';
+
 global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
 global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.ProductCardMultiSelect = () => React.createElement(global.ProductCard, productMultiSelect);
@@ -76,7 +79,11 @@ global.WelcomePageSample = () => React.createElement(global.WelcomePage, require
 global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessionNewPage, require('test/fixtures/clientSessionNew/page-sample.json'));
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
-global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
+
+// localhost:9000/react/checkout.html
+// global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
+global.OrderPageSample = () => React.createElement(global.OrderPage, orderPageProps);
+
 global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
 global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));
 global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));

@@ -65,8 +65,8 @@ class Checkout extends Component {
             <CheckoutStep number={2} title={t('vendor.order.new.contacts_title')}>
               <CheckoutFields
                 deliveryType={deliveryType}
-                itemValues={fieldValues}
-                items={fields}
+                values={fieldValues}
+                fields={fields}
                 onChange={onFieldChange}
               />
               {!!coupon.show &&
@@ -101,7 +101,7 @@ Checkout.propTypes = {
   deliveryTypes: PropTypes.array.isRequired,
   errorMessage: PropTypes.string,
   fieldValues: PropTypes.object.isRequired,
-  fields: PropTypes.array.isRequired,
+  fields: PropTypes.arrayOf(schemas.checkoutField).isRequired,
   formAuthenticity: schemas.formAuthenticity,
   onDeliveryChange: PropTypes.func.isRequired,
   onFieldChange: PropTypes.func.isRequired,

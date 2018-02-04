@@ -100,7 +100,6 @@ OrderContainer.propTypes = {
   deliveryTypes: PropTypes.array.isRequired,
   selectedDeliveryType: PropTypes.object.isRequired,
   fieldValues: PropTypes.object.isRequired,
-  fields: PropTypes.array.isRequired,
   paymentTypes: PropTypes.array.isRequired,
   initCheckout: PropTypes.func.isRequired,
   selectedPaymentType: PropTypes.object.isRequired,
@@ -112,7 +111,6 @@ OrderContainer.propTypes = {
     deliveryTypeId: PropTypes.number,
     deliveryTypes: PropTypes.arrayOf(schemas.deliveryType),
     errorMessage: PropTypes.string,
-    fields: PropTypes.arrayOf(schemas.checkoutField),
     formAuthenticity: schemas.formAuthenticity,
     paymentTypeId: PropTypes.number,
     paymentTypes: PropTypes.arrayOf(schemas.paymentType),
@@ -155,14 +153,17 @@ export default provideTranslations(connectToRedux(connect(
     ) || head(deliveryTypes) || {};
     const {
       availablePayments=[],
-      fields: availableFields=[],
+      fields=[],
     } = selectedDeliveryType;
+
     const paymentTypes = (cart.paymentTypes || [])
       .filter((p) => includes(availablePayments, p.id));
+
     const selectedPaymentType = find(
       paymentTypes,
       (p) => p.id === selectedPaymentTypeId
     ) || head(paymentTypes) || {};
+
     const totalPrice = updateIn(cartTotalPrice, ['cents'], (cents) => {
         if (cents == null) {
           return cents;
@@ -172,10 +173,7 @@ export default provideTranslations(connectToRedux(connect(
         const deliveryPrice = getIn(selectedDeliveryType, ['price', 'cents']) || 0;
 
         return cents + ((threshold == null || threshold > cents) ? deliveryPrice : 0);
-      });
-    const fields = checkoutFields
-      .filter((f) => includes(availableFields, f.name));
-
+    });
 
     return {
       coupon,

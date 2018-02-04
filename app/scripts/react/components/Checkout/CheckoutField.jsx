@@ -1,52 +1,51 @@
 import React, { Component, PropTypes } from 'react';
 import CheckoutFieldSelect from './CheckoutFieldSelect';
 import CheckoutFieldSelectAjax from './CheckoutFieldSelectAjax';
-import { camelize } from 'humps';
-import { getIn } from 'timm';
 
 const STRING_TYPE = 'string';
 const TEXTAREA_TYPE = 'textarea';
 const HIDDEN_TYPE = 'hidden';
 const SELECT_TYPE = 'select';
+const AJAX_SELECT_TYPE = 'ajax_select';
 
 class CheckoutField extends Component {
   render() {
     const {
-      item,
+      field,
       value,
-      deliveryType,
       onChange,
-      belongsData,
+      requestData,
     } = this.props;
     const {
+      ajaxSettings = {},
       errorMessage='',
       name='',
       type=STRING_TYPE,
       placeholder='',
+      isRequired,
+      isDisabled,
       title='',
-    } = item;
-    // const isRequired = includes(deliveryType.requiredFields || [], name);
-    const reservedValue = getIn(deliveryType, ['reservedFieldValues', camelize(name)]);
-    const isDisabled = !!reservedValue;
-    const itemId = `vendor_order_${name}`;
-    const itemName = `vendor_order[${name}]`;
+    } = field;
+    const inputId = `vendor_order_${name}`;
+    const inputFieldName = `vendor_order[${name}]`;
 
     switch(type) {
       case STRING_TYPE:
         return (
           <div className="form-group string">
-            <label className="string control-label" htmlFor={itemId}>
+            <label className="string control-label" htmlFor={inputId}>
               {title}
             </label>
             <input
               className="string form-control"
               disabled={isDisabled}
-              id={itemId}
-              name={itemName}
+              id={inputId}
+              name={inputFieldName}
               onChange={(ev) => onChange(name, ev.target.value)}
               placeholder={placeholder}
+              required={isRequired}
               type="text"
-              value={reservedValue || value}
+              value={value}
             />
             {errorMessage &&
               <span className="help-block">{errorMessage}</span>
@@ -57,14 +56,15 @@ class CheckoutField extends Component {
       case TEXTAREA_TYPE:
         return (
           <div className="form-group text">
-            <label className="text control-label" htmlFor={itemId}>
+            <label className="text control-label" htmlFor={inputId}>
               {title}
             </label>
             <textarea
               className="text form-control"
               disabled={isDisabled}
-              id={itemId}
-              name={itemName}
+              required={isRequired}
+              id={inputId}
+              name={inputFieldName}
               onChange={(ev) => onChange(name, ev.target.value)}
               placeholder={placeholder}
               value={value}
@@ -76,54 +76,48 @@ class CheckoutField extends Component {
         );
         break;
       case SELECT_TYPE:
-        const options = getIn(deliveryType, ['selects', camelize(name)]);
-        switch (options.type) {
-          case 'options':
-            return (
-              <CheckoutFieldSelect
-                title={title}
-                disabled={isDisabled}
-                id={itemId}
-                name={name}
-                value={value}
-                itemName={itemName}
-                items={options.items}
-                onChange={onChange}
-                errorMessage={errorMessage}
-                defaultTitle={options.defaultTitle}
-              />
-          );
-          case 'ajax':
-            const requestData = { ...belongsData, vendor_delivery_id: deliveryType.id };
-
-            return (
-              <CheckoutFieldSelectAjax
-                requestData={requestData}
-                title={title}
-                disabled={isDisabled}
-                id={itemId}
-                name={name}
-                itemName={itemName}
-                belongs={options.belongs}
-                requiredTitle={options.requiredTitle}
-                loadingTitle={options.loadingTitle}
-                onChange={onChange}
-                errorMessage={errorMessage}
-                collectionUrl={options.collectionUrl}
-                defaultTitle={options.defaultTitle}
-              />
-          );
-          default:
-            return (
-              <div>UNKNOWN select field type "{options['type']}"</div>
-          )
-        };
+        return (
+          <CheckoutFieldSelect
+            title={title}
+            disabled={isDisabled}
+            required={isRequired}
+            id={inputId}
+            name={name}
+            value={value}
+            inputName={inputFieldName}
+            items={ajaxSettings.items}
+            onChange={onChange}
+            errorMessage={errorMessage}
+            defaultTitle={ajaxSettings.defaultTitle}
+          />
+        );
+        break;
+      case AJAX_SELECT_TYPE:
+        return (
+          <CheckoutFieldSelectAjax
+            requestData={requestData}
+            required={isRequired}
+            title={title}
+            disabled={isDisabled}
+            id={inputId}
+            name={name}
+            inputName={inputFieldName}
+            belongs={ajaxSettings.belongs}
+            requiredTitle={ajaxSettings.requiredTitle}
+            loadingTitle={ajaxSettings.loadingTitle}
+            onChange={onChange}
+            errorMessage={errorMessage}
+            collectionUrl={ajaxSettings.collectionUrl}
+            defaultTitle={ajaxSettings.defaultTitle}
+          />
+        );
+        break;
       case HIDDEN_TYPE:
         return (
           <input
             type={HIDDEN_TYPE}
-            id={itemId}
-            name={itemName}
+            id={inputId}
+            name={inputFieldName}
             value={value}
           />
         );
@@ -137,9 +131,8 @@ class CheckoutField extends Component {
 }
 
 CheckoutField.propTypes = {
-  deliveryType: PropTypes.object.isRequired,
-  item: PropTypes.object.isRequired,
-  belongsData: PropTypes.object,
+  field: PropTypes.object.isRequired,
+  isRequired: PropTypes.bool,
   value:  PropTypes.oneOfType([
     PropTypes.string.isRequired,
     PropTypes.number.isRequired
