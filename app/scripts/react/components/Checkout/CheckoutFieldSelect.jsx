@@ -19,6 +19,8 @@ class CheckoutFieldSelect extends Component {
     const myOnChange = (ev) => onChange(name, ev.target.value);
     const options = items.map( (item) => <option key={item.id} value={item.id} disabled={item.disabled}>{item.title}</option>);
 
+    console.log('select', name, inputName);
+
     return (
       <div className="b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln">
         <label className="text control-label" htmlFor={id}>{title}</label>

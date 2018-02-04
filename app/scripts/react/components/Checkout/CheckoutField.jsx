@@ -1,12 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import CheckoutFieldSelect from './CheckoutFieldSelect';
 import CheckoutFieldSelectAjax from './CheckoutFieldSelectAjax';
-
-const STRING_TYPE = 'string';
-const TEXTAREA_TYPE = 'textarea';
-const HIDDEN_TYPE = 'hidden';
-const SELECT_TYPE = 'select';
-const AJAX_SELECT_TYPE = 'ajax_select';
+import fieldTypes from '../../schemas/checkoutFieldTypes';
 
 class CheckoutField extends Component {
   render() {
@@ -30,7 +25,7 @@ class CheckoutField extends Component {
     const inputFieldName = `vendor_order[${name}]`;
 
     switch(type) {
-      case STRING_TYPE:
+      case fieldTypes.string:
         return (
           <div className="form-group string">
             <label className="string control-label" htmlFor={inputId}>
@@ -53,7 +48,7 @@ class CheckoutField extends Component {
           </div>
         );
         break;
-      case TEXTAREA_TYPE:
+      case fieldTypes.textarea:
         return (
           <div className="form-group text">
             <label className="text control-label" htmlFor={inputId}>
@@ -75,7 +70,7 @@ class CheckoutField extends Component {
           </div>
         );
         break;
-      case SELECT_TYPE:
+      case fieldTypes.select:
         return (
           <CheckoutFieldSelect
             title={title}
@@ -92,7 +87,7 @@ class CheckoutField extends Component {
           />
         );
         break;
-      case AJAX_SELECT_TYPE:
+      case fieldTypes.ajax_select:
         return (
           <CheckoutFieldSelectAjax
             requestData={requestData}
@@ -112,10 +107,10 @@ class CheckoutField extends Component {
           />
         );
         break;
-      case HIDDEN_TYPE:
+      case fieldTypes.hidden:
         return (
           <input
-            type={HIDDEN_TYPE}
+            type='hidden'
             id={inputId}
             name={inputFieldName}
             value={value}

@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import CheckoutField from './CheckoutField';
 import { decamelizeKeys } from 'humps';
-import { getIn } from 'timm';
 import { pick, mapValues, includes } from 'lodash';
 
 const buildRequestData = ({belongs = [], requestData = {}}, values) => {
@@ -23,10 +22,8 @@ class CheckoutFields extends Component {
     return (
       <span>
         {fields.map((field) => {
-          const value = getIn(values, [field.name, 'value']);
+          const value = values[field.name];
           const requestData = buildRequestData(field.ajaxSettings || {}, values)
-
-          console.log(field.name, requestData, field.ajaxSettings);
 
           return (
             <div className="b-form__row__widget" key={field.name}>

@@ -21,7 +21,7 @@ class CheckoutFieldSelectAjax extends Component {
     items: []
   }
   componentDidMount() {
-    this.loadItems({requestData: this.props.requestData})
+    this.loadItems(this.props.requestData)
   }
   //shouldComponentUpdate(nextProps, nextState) {
     //if (this.state.status != nextState.status || this.state.items != nextState.items) {
@@ -31,9 +31,9 @@ class CheckoutFieldSelectAjax extends Component {
     //return !!diff(nextProps.requestData, this.props.requestData);
   //}
   componentWillReceiveProps(nextProps) {
-    if (diff(nextProps.requestData, this.props.requestData)) this.loadItems({requestData: nextProps.requestData});
+    if (diff(nextProps.requestData, this.props.requestData)) this.loadItems(nextProps.requestData);
   }
-  loadItems({requestData}) {
+  loadItems(requestData) {
     if (findEmptyValue(this.props.belongs, requestData)) {
       this.setState({status: REQUIRED_STATE});
     } else {
@@ -81,7 +81,7 @@ render() {
     id,
     title,
     name,
-    itemName,
+    inputName,
     onChange,
     errorMessage,
     defaultTitle,
@@ -110,7 +110,7 @@ render() {
           disabled={disabled}
           defaultTitle={defaultTitle}
           id={id}
-          itemName={itemName}
+          inputName={inputName}
           name={name}
           value={value}
           items={items}

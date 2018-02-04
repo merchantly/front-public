@@ -77,6 +77,7 @@ export function initCheckout(params) {
     deliveryTypeId,
     paymentTypes,
     paymentTypeId,
+    formValues,
     cart,
     coupon,
     fields,
@@ -85,11 +86,11 @@ export function initCheckout(params) {
   return {
     type: CART_INIT_CHECKOUT,
     data: {
+      formValues,
       deliveryTypes,
       paymentTypes,
       cart,
       coupon,
-      checkoutFields: fields,
       selectedDeliveryType: deliveryTypeId,
       selectedPaymentType: paymentTypeId,
     },

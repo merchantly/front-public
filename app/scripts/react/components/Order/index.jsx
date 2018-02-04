@@ -11,9 +11,6 @@ import {
   selectPayment,
 } from '../../actions/CartActions';
 import {
-  initCheckoutCartStore,
-} from '../../reducers/cart';
-import {
   canUseDOM,
 } from '../../helpers/dom';
 import { find, head, includes } from 'lodash';
@@ -36,6 +33,7 @@ class OrderContainer extends Component {
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
+      debugger
       initCheckout(initialProps);
       storeInitialized = true;
     }
@@ -53,7 +51,7 @@ class OrderContainer extends Component {
     const {
       coupon,
       fields,
-      fieldValues,
+      formValues,
       deliveryTypes,
       selectedDeliveryType,
       paymentTypes,
@@ -70,6 +68,8 @@ class OrderContainer extends Component {
       totalPrice,
     } = this.props;
 
+    console.log('render formValues', formValues, this.props);
+
     return (
       <Order
         backUrl={backUrl}
@@ -77,7 +77,7 @@ class OrderContainer extends Component {
         deliveryType={selectedDeliveryType}
         deliveryTypes={deliveryTypes}
         errorMessage={errorMessage}
-        fieldValues={fieldValues}
+        fieldValues={formValues}
         fields={fields}
         formAuthenticity={formAuthenticity}
         onDeliveryChange={this.selectDelivery}
@@ -99,7 +99,7 @@ OrderContainer.propTypes = {
   coupon: PropTypes.object.isRequired,
   deliveryTypes: PropTypes.array.isRequired,
   selectedDeliveryType: PropTypes.object.isRequired,
-  fieldValues: PropTypes.object.isRequired,
+  formValues: PropTypes.object.isRequired,
   paymentTypes: PropTypes.array.isRequired,
   initCheckout: PropTypes.func.isRequired,
   selectedPaymentType: PropTypes.object.isRequired,
@@ -111,6 +111,7 @@ OrderContainer.propTypes = {
     deliveryTypeId: PropTypes.number,
     deliveryTypes: PropTypes.arrayOf(schemas.deliveryType),
     errorMessage: PropTypes.string,
+    formValues: PropTypes.object.isRequired,
     formAuthenticity: schemas.formAuthenticity,
     paymentTypeId: PropTypes.number,
     paymentTypes: PropTypes.arrayOf(schemas.paymentType),
@@ -124,17 +125,18 @@ OrderContainer.propTypes = {
 
 OrderContainer.defaultProps = {
   deliveryTypes: [],
-  paymentTypes: [],
-  fields: [],
+  paymentTypes: []
 };
 
 export default provideTranslations(connectToRedux(connect(
   (state, ownProps) => {
+    debugger
     const { cart } = storeInitialized
       ? state
       : ({ // TODO: move to store initialization when/if root component created
-        cart: initCheckoutCartStore(state.cart, initCheckout(ownProps)),
+          cart: { ...state.cart, ...initCheckout(ownProps) },
       });
+
     const {
       coupon={},
       deliveryTypes=[],
@@ -142,15 +144,18 @@ export default provideTranslations(connectToRedux(connect(
         totalCount=0,
         totalPrice: cartTotalPrice={},
       }={},
-      checkoutFields=[],
-      checkoutFieldValues: fieldValues=[],
+      formValues,
       selectedDeliveryType: selectedDeliveryTypeId,
       selectedPaymentType: selectedPaymentTypeId,
     } = cart;
+
+    console.log('provideTranslations formValues', cart, formValues);
+
     const selectedDeliveryType = find(
       deliveryTypes,
       (t) => t.id === selectedDeliveryTypeId
     ) || head(deliveryTypes) || {};
+
     const {
       availablePayments=[],
       fields=[],
@@ -178,7 +183,7 @@ export default provideTranslations(connectToRedux(connect(
     return {
       coupon,
       fields,
-      fieldValues,
+      formValues,
       deliveryTypes,
       selectedDeliveryType,
       paymentTypes,
