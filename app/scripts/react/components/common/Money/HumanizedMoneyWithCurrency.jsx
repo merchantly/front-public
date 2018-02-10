@@ -7,10 +7,10 @@ import HumanizedMoney from './HumanizedMoney';
 
 class HumanizedMoneyWithCurrency extends Component {
   render() {
-    const { money } = this.props;
+    const { money, noMoneyTitle } = this.props;
 
-    if (!money || money.cents === 0) {
-      return <span>-</span>;
+    if (!money || money.cents == null) {
+      return <span>{noMoneyTitle}</span>;
     }
 
     if (!isCurrencyExists(money)) {
@@ -27,6 +27,12 @@ class HumanizedMoneyWithCurrency extends Component {
 
 HumanizedMoneyWithCurrency.propTypes = {
   money: schemas.money,
+  noMoneyTitle: PropTypes.string,
 };
+
+HumanizedMoneyWithCurrency.defaultProps = {
+  noMoneyTitle: '-'
+};
+
 
 export default HumanizedMoneyWithCurrency;

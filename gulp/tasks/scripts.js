@@ -41,7 +41,6 @@ const baseDependencies = {
   'eventEmitter': './app/bower_components/eventEmitter/EventEmitter',
   'owlCarousel': './app/bower_components/OwlCarousel/owl-carousel/owl.carousel',
   'fancybox': './app/bower_components/fancybox/source/jquery.fancybox',
-  'fancybox.wannabe': './app/bower_components/fancybox-wannabe-fix/index',
   'accounting': './app/bower_components/accounting.js/accounting',
 };
 const staticDependencies = {
@@ -85,6 +84,10 @@ function externalDependencies(env, bundler) {
     bundler.external(dep);
   });
 }
+
+gulp.task('show-env', function() {
+  console.log('process.env', process.env);
+});
 
 gulp.task('[Static] Client scripts', () => {
   let bundler = browserify({

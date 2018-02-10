@@ -1,287 +1,348 @@
 {
-  "deliveryTypeId": 177,
-  "paymentTypeId": 105,
+  "deliveryTypeId": 2852,
+  "paymentTypeId": 3306,
+  "i18n": {
+
+  },
   "formAuthenticity": {
-    "token": "REFKvsEf/pWfNDoRM3LPVHNgTIY5d32YR4P/xACndXk=",
+    "token": "h20I\/ReJA+4LYuigEbLhcBvyIqd+O79J+oYvSwJ7utt7L5e6TWEeSBoO65DdqDt6kGkc\/tITJMLGaiWiG5OS5A==",
     "field": "authenticity_token"
   },
   "cart": {
     "totalCount": 1,
     "totalPrice": {
-      "cents": 495000,
+      "cents": 250000,
       "currencyIsoCode": "RUB"
     }
   },
   "deliveryTypes": [
     {
-      "id": 110,
-      "title": "Москва – доставка курьером (2-3 дня)",
+      "id": 2852,
+      "title": "\u0421\u0430\u043c\u043e\u0432\u044b\u0432\u043e\u0437",
       "description": "",
-      "price": {
-        "cents": 23000,
-        "currencyIsoCode": "RUB"
-      },
-      "fields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "availablePayments": [
-        105,
-        69
-      ],
-      "freeDeliveryThreshold": {
-        "cents": 1000000,
-        "currencyIsoCode": "RUB"
-      },
-      "reservedFieldValues": {
-        "cityTitle": "Москва"
-      }
-    },
-    {
-      "id": 910,
-      "title": "Срочная доставка",
-      "description": "Доставка в течение 3 часов с момента подтверждения заказа оператором магазина. \r\nВ будние дни, в пределах МКАД. \r\nПредоплата или наличные курьеру при получении.\r\nАкция \" От 10000 р. доставка бесплатно\"  на срочную не распространяется.",
-      "price": {
-        "cents": 35000,
-        "currencyIsoCode": "RUB"
-      },
-      "fields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "availablePayments": [
-        105,
-        69
-      ],
-      "freeDeliveryThreshold": null,
-      "reservedFieldValues": {
-        "cityTitle": "Москва"
-      }
-    },
-    {
-      "id": 177,
-      "title": "Санкт-Петербург - доставка курьером (2-3 дня)",
-      "description": "",
-      "price": {
-        "cents": 28000,
-        "currencyIsoCode": "RUB"
-      },
-      "fields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "availablePayments": [
-        105
-      ],
-      "freeDeliveryThreshold": {
-        "cents": 1000000,
-        "currencyIsoCode": "RUB"
-      },
-      "reservedFieldValues": {
-        "cityTitle": "Санкт-Петербург"
-      }
-    },
-    {
-      "id": 111,
-      "title": "Регионы – доставка курьером (3-10 рабочих дней. Возможен больший срок для отдаленных пунктов)",
-      "description": "",
-      "price": {
-        "cents": 50000,
-        "currencyIsoCode": "RUB"
-      },
-      "fields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "city_title",
-        "address",
-        "comment"
-      ],
-      "availablePayments": [
-        105
-      ],
-      "freeDeliveryThreshold": {
-        "cents": 1000000,
-        "currencyIsoCode": "RUB"
-      },
-      "reservedFieldValues": {}
-    },
-    {
-      "id": 1754,
-      "title": "Самовывоз на Никитской",
-      "description": "Москва, ул. Б. Никитская, 35, кв.1, код подъезда #423.\r\nВремя работы: пн-вс, с 11 до 21.\r\n\r\nСрок бронирования украшения - 3 дня.\r\n\r\nОбратите внимание, что обмен и возврат купленных украшений осуществляется в течение 14 дней с момента покупки.",
       "price": {
         "cents": 0,
         "currencyIsoCode": "RUB"
       },
       "fields": [
-        "name",
-        "phone",
-        "email",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "comment"
+        {
+          "name": "name",
+          "type": "string",
+          "value": null,
+          "title": "\u041f\u043e\u043b\u043d\u043e\u0435 \u0438\u043c\u044f",
+          "placeholder": "\u0424.\u0418.\u041e.",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "value": null,
+          "title": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, +7 913 123 32 10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "value": null,
+          "title": "Email",
+          "placeholder": "Email",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "comment",
+          "type": "textarea",
+          "value": null,
+          "title": "\u041e \u0447\u0435\u043c \u043d\u0430\u043c \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c",
+          "placeholder": "\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "cart_cookie",
+          "type": "hidden",
+          "value": null,
+          "title": "translation missing: ru.order.fields.cart_cookie",
+          "placeholder": "translation missing: ru.order.placeholders.cart_cookie",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "address",
+          "type": "string",
+          "value": null,
+          "title": "\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0412\u0430\u0432\u0438\u043b\u043e\u0432\u0430 12-10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "city_title",
+          "type": "string",
+          "value": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "title": "\u0413\u043e\u0440\u043e\u0434 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "errorMessage": "",
+          "reservedValue": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "isDisabled": true,
+          "isRequired": true,
+          "ajaxSettings": null
+        }
       ],
       "availablePayments": [
-        105,
-        69
+        3306,
+        19672
       ],
-      "freeDeliveryThreshold": null,
-      "reservedFieldValues": {
-        "cityTitle": "Москва"
-      }
+      "freeDeliveryThreshold": null
     },
     {
-      "id": 1755,
-      "title": "Самовывоз в ARTPLAY",
-      "description": "Москва, Центр дизайна ARTPLAY, ул. Нижняя Сыромятническая, 10, стр.9, подъезд D, 3-й этаж.\r\nВремя работы: пн-вс, с 11 до 21.\r\n\r\nСрок бронирования украшения - 3 дня.\r\n\r\nОбратите внимание, что обмен и возврат купленных украшений осуществляется в течение 14 дней с момента покупки.",
+      "id": 2853,
+      "title": "\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u043a\u0443\u0440\u044c\u0435\u0440\u043e\u043c",
+      "description": "",
       "price": {
         "cents": 0,
         "currencyIsoCode": "RUB"
       },
       "fields": [
-        "name",
-        "phone",
-        "email",
-        "comment"
-      ],
-      "requiredFields": [
-        "name",
-        "phone",
-        "email",
-        "comment"
+        {
+          "name": "name",
+          "type": "string",
+          "value": null,
+          "title": "\u041f\u043e\u043b\u043d\u043e\u0435 \u0438\u043c\u044f",
+          "placeholder": "\u0424.\u0418.\u041e.",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "value": null,
+          "title": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, +7 913 123 32 10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "value": null,
+          "title": "Email",
+          "placeholder": "Email",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "comment",
+          "type": "textarea",
+          "value": null,
+          "title": "\u041e \u0447\u0435\u043c \u043d\u0430\u043c \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c",
+          "placeholder": "\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "cart_cookie",
+          "type": "hidden",
+          "value": null,
+          "title": "translation missing: ru.order.fields.cart_cookie",
+          "placeholder": "translation missing: ru.order.placeholders.cart_cookie",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "address",
+          "type": "string",
+          "value": null,
+          "title": "\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0412\u0430\u0432\u0438\u043b\u043e\u0432\u0430 12-10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "city_title",
+          "type": "string",
+          "value": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "title": "\u0413\u043e\u0440\u043e\u0434 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "errorMessage": "",
+          "reservedValue": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "isDisabled": true,
+          "isRequired": true,
+          "ajaxSettings": null
+        }
       ],
       "availablePayments": [
-        105,
-        69
+        3306,
+        19672
       ],
-      "freeDeliveryThreshold": null,
-      "reservedFieldValues": {
-        "cityTitle": "Москва"
-      }
+      "freeDeliveryThreshold": null
+    },
+    {
+      "id": 2851,
+      "title": "\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u041f\u043e\u0447\u0442\u043e\u0439 \u0420\u043e\u0441\u0441\u0438\u0438",
+      "description": "",
+      "price": {
+        "cents": 0,
+        "currencyIsoCode": "RUB"
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "string",
+          "value": null,
+          "title": "\u041f\u043e\u043b\u043d\u043e\u0435 \u0438\u043c\u044f",
+          "placeholder": "\u0424.\u0418.\u041e.",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "value": null,
+          "title": "\u0422\u0435\u043b\u0435\u0444\u043e\u043d",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, +7 913 123 32 10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "value": null,
+          "title": "Email",
+          "placeholder": "Email",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "comment",
+          "type": "textarea",
+          "value": null,
+          "title": "\u041e \u0447\u0435\u043c \u043d\u0430\u043c \u043d\u0443\u0436\u043d\u043e \u0437\u043d\u0430\u0442\u044c",
+          "placeholder": "\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "cart_cookie",
+          "type": "hidden",
+          "value": null,
+          "title": "translation missing: ru.order.fields.cart_cookie",
+          "placeholder": "translation missing: ru.order.placeholders.cart_cookie",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "address",
+          "type": "string",
+          "value": null,
+          "title": "\u0410\u0434\u0440\u0435\u0441 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u0410\u043a\u0430\u0434\u0435\u043c\u0438\u043a\u0430 \u0412\u0430\u0432\u0438\u043b\u043e\u0432\u0430 12-10",
+          "errorMessage": "",
+          "reservedValue": null,
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        },
+        {
+          "name": "city_title",
+          "type": "string",
+          "value": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "title": "\u0413\u043e\u0440\u043e\u0434 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0438",
+          "placeholder": "\u041c\u043e\u0441\u043a\u0432\u0430",
+          "errorMessage": "",
+          "reservedValue": "",
+          "isDisabled": false,
+          "isRequired": true,
+          "ajaxSettings": null
+        }
+      ],
+      "availablePayments": [
+        19672
+      ],
+      "freeDeliveryThreshold": null
     }
   ],
   "paymentTypes": [
     {
-      "id": 105,
-      "title": "Оплата банковской картой, через терминал или салон связи",
-      "description": "Безопасная оплата любым удобным способом",
-      "iconUrl": "/images/payment_icons/order_payment_w1.png",
-      "showIcon": false
+      "id": 3306,
+      "title": "\u041e\u043f\u043b\u0430\u0442\u0430 \u043d\u0430\u043b\u0438\u0447\u043d\u044b\u043c\u0438",
+      "description": "",
+      "icon_url": "\/images\/payment_icons\/order_payment_direct.png",
+      "show_icon": false
     },
     {
-      "id": 69,
-      "title": "Наличные при получении",
+      "id": 19672,
+      "title": "\u041e\u043f\u043b\u0430\u0442\u0430 \u043a\u0430\u0440\u0442\u043e\u0439 \u043e\u043d\u043b\u0430\u0439\u043d",
       "description": "",
-      "iconUrl": "/images/payment_icons/order_payment_w1.png",
-      "showIcon": false
+      "icon_url": "\/images\/payment_icons\/order_payment_cloud_payments.png",
+      "show_icon": false
     }
   ],
   "fields": [
-    {
-      "name": "name",
-      "type": "string",
-      "value": "Test Name",
-      "title": "Полное имя",
-      "placeholder": "Имя",
-      "errorMessage": ""
-    },
-    {
-      "name": "phone",
-      "type": "string",
-      "value": "",
-      "title": "Телефон",
-      "placeholder": "Например, +7 913 123 32 10",
-      "errorMessage": ""
-    },
-    {
-      "name": "email",
-      "type": "string",
-      "value": "",
-      "title": "Email",
-      "placeholder": "Email",
-      "errorMessage": ""
-    },
-    {
-      "name": "city_title",
-      "type": "string",
-      "value": "Санкт-Петербург",
-      "title": "Город доставки",
-      "placeholder": "Москва",
-      "errorMessage": ""
-    },
-    {
-      "name": "address",
-      "type": "string",
-      "value": "",
-      "title": "Адрес доставки",
-      "placeholder": "Например, Академика Вавилова 12-10",
-      "errorMessage": ""
-    },
-    {
-      "name": "comment",
-      "type": "textarea",
-      "value": null,
-      "title": "Оставьте свой телефон и имя, наш сотрудник свяжется с вами для уточнения информации о заказе",
-      "placeholder": "О чем нам нужно знать",
-      "errorMessage": ""
-    }
+
   ],
   "coupon": {
-    "show": false,
-    "value": ""
+    "show": false
   },
   "publicOffer": {
     "show": false
   },
   "errorMessage": "",
-  "submitOrderUrl": "/orders"
+  "submitOrderUrl": "\/orders\/complete",
+  "layoutProps": null,
+  "showCouponCode": false
 }

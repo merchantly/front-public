@@ -30,8 +30,7 @@ const initialState = {
   selectedDeliveryType: null,
   paymentTypes: [],
   selectedPaymentType: null,
-  checkoutFields: [],
-  checkoutFieldValues: {},
+  formValues: {},
   isFetching: false,
   error: null,
 };
@@ -58,15 +57,6 @@ export function initCartStore(state, { response }) {
     isFetching: false,
     error: null,
   });
-}
-
-export function initCheckoutCartStore(state, { data }) {
-  const checkoutFieldValues = reduce(data.checkoutFields, (result, field) => {
-    result[field.name] = { value: field.value };
-    return result;
-  }, {});
-
-  return merge(state, data, { checkoutFieldValues });
 }
 
 const actionMap = {
@@ -107,16 +97,19 @@ const actionMap = {
     return set(state, 'packageCount', count);
   },
 
-  [CART_INIT_CHECKOUT](state, action) {
-    return initCheckoutCartStore(state, action);
+  [CART_INIT_CHECKOUT](state, { data }) {
+    return merge(state, data);
   },
 
   [CART_SET_FIELD_VALUE](state, { name, value }) {
-    return setIn(state, ['checkoutFieldValues', name, 'value'], value);
+    return setIn(state, ['formValues', name], value);
   },
 
   [CART_SELECT_DELIVERY](state, { id }) {
-    return set(state, 'selectedDeliveryType', id);
+    const newState = set(state, 'selectedDeliveryType', id);
+    // Очищаем delivery_city_id при переключении доставки
+    const n = setIn( newState, ['formValues', 'delivery_city_id'], null );
+    return n;
   },
 
   [CART_SELECT_PAYMENT](state, { id }) {

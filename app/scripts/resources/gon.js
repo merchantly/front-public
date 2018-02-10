@@ -1,3 +1,6 @@
+// const root_url = 'http://wannabe.kiiiosk.dev';
+const root_url = 'http://igrolog-school.kiiiosk.dev';
+
 global.gon = {
   default_logo_url: 'http://assets.kiiiosk.ru/assets/fallback/product-none.png',
   fallback_product_image_url: 'http://assets.kiiiosk.ru/assets/fallback/product-none.png',
@@ -361,11 +364,11 @@ global.gon = {
       decimal: ',',
     },
   },
-  root_url: process.env.ROOT_URL || 'http://wannabe.kiiiosk.dev',
-  public_api_url: process.env.PUBLIC_API_URL || 'http://wannabe.kiiiosk.dev/api',
-  operator_api_url: process.env.OPERATOR_API_URL || 'http://wannabe.kiiiosk.dev/operator/api',
+  root_url: process.env.ROOT_URL || root_url,
+  public_api_url: process.env.PUBLIC_API_URL || root_url + '/api',
+  operator_api_url: process.env.OPERATOR_API_URL || root_url + '/operator/api',
   max_items_count: 100,
-  asset_host: 'assets.stage.kiiiosk.ru',
+  asset_host: 'assets.kiiiosk.ru',
   __data: {
     design: {
       activeElementsColor: '#000000',

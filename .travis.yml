@@ -1,9 +1,5 @@
 language: node_js
 cache: yarn
-node_js:
-  - "8.5"
 install:
   - yarn install
-  - ./node_modules/bower/bin/bower -v
-  - ./node_modules/bower/bin/bower install
 script: yarn dist

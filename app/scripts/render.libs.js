@@ -15,7 +15,6 @@ require('jquery.sticky-kit');
 require('bootstrapSass');
 require('owlCarousel');
 require('fancybox');
-require('fancybox.wannabe');
 require('nouislider');
 
 window.accounting.settings = gon.accounting_settings || {

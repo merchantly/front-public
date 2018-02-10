@@ -1,6 +1,10 @@
 const pUrl = (global.mrch) ? global.mrch.config.public_api_url : global.gon.public_api_url;
 const oUrl = (global.mrch) ? global.mrch.config.operator_api_url : global.gon.operator_api_url;
 
+export function publicUrl() {
+  return pUrl;
+}
+
 export function designSettings() {
   return oUrl + '/v1/design_settings';
 }
@@ -51,4 +55,8 @@ export function operatorState() {
 
 export function subscriptionEmails() {
   return `${pUrl}/v1/subscription_emails.json`;
+}
+
+export function pickupPoints() {
+  return `${pUrl}/v1/pickup_points.json`;
 }

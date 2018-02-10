@@ -16,7 +16,9 @@ require('bootstrapSass');
 require('jquery.mmenu');
 require('owlCarousel');
 require('fancybox');
-require('fancybox.wannabe');
+// Отключил вообще fancybox.wannabe
+// Если это нужно будет, то нужно клонировать
+// fancybox и вносить в него правки
 jQuery.noConflict(true);
 
 import WelcomeWidget from 'rc/Welcome/WelcomeWidget';
