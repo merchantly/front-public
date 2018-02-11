@@ -18,8 +18,7 @@ class CheckoutFieldSelect extends Component {
     } = this.props;
 
     const myOnChange = (ev) => onChange(name, ev.target.value);
-    const options = items.map( (item) => <option key={item.id} value={item.id} disabled={item.disabled}>{item.title}</option>);
-
+    const options = (items || []).map( (item) => <option key={item.id} value={item.id} disabled={item.disabled}>{item.title}</option>);
     const currentValue = !!find(items, (i) => value && i.id.toString() == value.toString()) ? value : '';
 
     return (
@@ -45,9 +44,11 @@ class CheckoutFieldSelect extends Component {
 
 CheckoutFieldSelect.propTypes = {
   onChange: PropTypes.func.isRequired,
+  items: PropTypes.array.isRequired,
 };
 
 CheckoutFieldSelect.defaultProps = {
+  items: []
 };
 
 export default provideTranslations(CheckoutFieldSelect);

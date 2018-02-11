@@ -3,7 +3,9 @@ import * as schemas from '../../schemas';
 import connectToRedux from '../HoC/connectToRedux';
 import provideTranslations from '../HoC/provideTranslations';
 import { connect } from 'react-redux';
+import get from 'lodash/get';
 import Order from './Order';
+import { diff } from 'deep-diff';
 import {
   changeFieldValue,
   initCheckout,
@@ -25,6 +27,9 @@ class OrderContainer extends Component {
     this.selectDelivery = this.selectDelivery.bind(this);
     this.selectPayment = this.selectPayment.bind(this);
     this.changeFieldValue = this.changeFieldValue.bind(this);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return !!diff(this.props, nextProps);
   }
   componentWillMount() {
     const {
@@ -127,11 +132,10 @@ OrderContainer.defaultProps = {
 
 export default provideTranslations(connectToRedux(connect(
   (state, ownProps) => {
-    const { cart } = storeInitialized
-      ? state
-      : ({ // TODO: move to store initialization when/if root component created
-          cart: { ...state.cart, ...initCheckout(ownProps) },
-      });
+
+    const cart = storeInitialized ?
+      state.cart :
+      { ...state.cart, ...initCheckout(ownProps).data }; // TODO: move to store initialization when/if root component created
 
     const {
       coupon={},

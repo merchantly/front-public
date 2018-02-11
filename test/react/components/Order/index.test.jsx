@@ -5,7 +5,6 @@ import { render } from 'enzyme';
 import t from '../../../mocks/t';
 import OrderContainer from '../../../../app/scripts/react/components/Order';
 import orderWithCoupon from '../../../fixtures/order/with-coupon';
-import orderNoCoupon from '../../../fixtures/order/no-coupon';
 
 describe('[Component] OrderContainer', () => {
   it('should render valid component with correct props', () => {

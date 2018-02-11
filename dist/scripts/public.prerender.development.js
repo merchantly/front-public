@@ -242,13 +242,14 @@ function initCheckout(params) {
   return {
     type: CART_INIT_CHECKOUT,
     data: {
-      formValues: formValues,
       deliveryTypes: deliveryTypes,
+      selectedDeliveryType: deliveryTypeId,
       paymentTypes: paymentTypes,
+      selectedPaymentType: paymentTypeId,
+      formValues: formValues,
       cart: cart,
       coupon: coupon,
-      selectedDeliveryType: deliveryTypeId,
-      selectedPaymentType: paymentTypeId
+      fields: fields
     }
   };
 }
@@ -6729,12 +6730,14 @@ var CheckoutField = function (_Component) {
           requestData = _props.requestData;
       var _field$ajaxSettings = field.ajaxSettings,
           ajaxSettings = _field$ajaxSettings === undefined ? {} : _field$ajaxSettings,
+          _field$settings = field.settings,
+          settings = _field$settings === undefined ? {} : _field$settings,
           _field$errorMessage = field.errorMessage,
           errorMessage = _field$errorMessage === undefined ? '' : _field$errorMessage,
           _field$name = field.name,
           name = _field$name === undefined ? '' : _field$name,
           _field$type = field.type,
-          type = _field$type === undefined ? STRING_TYPE : _field$type,
+          type = _field$type === undefined ? _checkoutFieldTypes2.default.string : _field$type,
           _field$placeholder = field.placeholder,
           placeholder = _field$placeholder === undefined ? '' : _field$placeholder,
           isRequired = field.isRequired,
@@ -6812,10 +6815,10 @@ var CheckoutField = function (_Component) {
             name: name,
             value: value,
             inputName: inputFieldName,
-            items: ajaxSettings.items,
+            items: settings.items,
             onChange: _onChange,
             errorMessage: errorMessage,
-            defaultTitle: ajaxSettings.defaultTitle
+            defaultTitle: settings.defaultTitle
           });
           break;
         case _checkoutFieldTypes2.default.ajax_select:
@@ -6937,14 +6940,13 @@ var CheckoutFieldSelect = function (_Component) {
       var myOnChange = function myOnChange(ev) {
         return onChange(name, ev.target.value);
       };
-      var options = items.map(function (item) {
+      var options = (items || []).map(function (item) {
         return _react2.default.createElement(
           'option',
           { key: item.id, value: item.id, disabled: item.disabled },
           item.title
         );
       });
-
       var currentValue = !!(0, _lodash.find)(items, function (i) {
         return value && i.id.toString() == value.toString();
       }) ? value : '';
@@ -6985,10 +6987,13 @@ var CheckoutFieldSelect = function (_Component) {
 }(_react.Component);
 
 CheckoutFieldSelect.propTypes = {
-  onChange: _react.PropTypes.func.isRequired
+  onChange: _react.PropTypes.func.isRequired,
+  items: _react.PropTypes.array.isRequired
 };
 
-CheckoutFieldSelect.defaultProps = {};
+CheckoutFieldSelect.defaultProps = {
+  items: []
+};
 
 exports.default = (0, _provideTranslations2.default)(CheckoutFieldSelect);
 module.exports = exports['default'];
@@ -7102,11 +7107,17 @@ var CheckoutFieldSelectAjax = function (_Component) {
       if (findEmptyValue(this.props.belongs, requestData)) {
         this.setState({ status: REQUIRED_STATE });
       } else {
-        this.makeRequest({ requestData: requestData }).then(function (data) {
-          _this2.setState({
-            items: data,
-            status: LOADED_STATE
-          });
+        this.makeRequest({ requestData: requestData }).done(function (data) {
+          if (Array.isArray(data)) {
+            _this2.setState({
+              items: data,
+              status: LOADED_STATE
+            });
+          } else {
+            _this2.setState({
+              status: ERROR_STATE
+            });
+          };
         }).fail(function (xhr, textStatus) {
           if (textStatus !== 'abort') {
             _this2.setState({
@@ -7284,9 +7295,12 @@ var CheckoutFields = function (_Component) {
     value: function render() {
       var _props = this.props,
           fields = _props.fields,
-          values = _props.values,
+          _props$values = _props.values,
+          values = _props$values === undefined ? {} : _props$values,
           onChange = _props.onChange;
 
+
+      console.log('CheckoutFields', fields, values);
 
       return _react2.default.createElement(
         'span',
@@ -7318,7 +7332,9 @@ CheckoutFields.propTypes = {
   onChange: _react.PropTypes.func.isRequired
 };
 
-CheckoutFields.defaultProps = {};
+CheckoutFields.defaultProps = {
+  values: {}
+};
 
 exports.default = CheckoutFields;
 module.exports = exports['default'];
@@ -15011,9 +15027,15 @@ var _provideTranslations2 = _interopRequireDefault(_provideTranslations);
 
 var _reactRedux = require('react-redux');
 
+var _get = require('lodash/get');
+
+var _get2 = _interopRequireDefault(_get);
+
 var _Order = require('./Order');
 
 var _Order2 = _interopRequireDefault(_Order);
+
+var _deepDiff = require('deep-diff');
 
 var _CartActions = require('../../actions/CartActions');
 
@@ -15044,6 +15066,11 @@ var OrderContainer = function (_Component) {
   }
 
   (0, _createClass3.default)(OrderContainer, [{
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate(nextProps, nextState) {
+      return !!(0, _deepDiff.diff)(this.props, nextProps);
+    }
+  }, {
     key: 'componentWillMount',
     value: function componentWillMount() {
       var _props = this.props,
@@ -15152,10 +15179,8 @@ OrderContainer.defaultProps = {
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
-  var _ref = storeInitialized ? state : { // TODO: move to store initialization when/if root component created
-    cart: (0, _extends3.default)({}, state.cart, (0, _CartActions.initCheckout)(ownProps))
-  },
-      cart = _ref.cart;
+
+  var cart = storeInitialized ? state.cart : (0, _extends3.default)({}, state.cart, (0, _CartActions.initCheckout)(ownProps).data); // TODO: move to store initialization when/if root component created
 
   var _cart$coupon = cart.coupon,
       coupon = _cart$coupon === undefined ? {} : _cart$coupon,
@@ -15224,7 +15249,7 @@ exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.defaul
 })(OrderContainer)));
 module.exports = exports['default'];
 
-},{"../../actions/CartActions":4,"../../helpers/dom":302,"../../schemas":334,"../HoC/connectToRedux":102,"../HoC/provideTranslations":103,"./Order":131,"babel-runtime/core-js/object/assign":360,"babel-runtime/core-js/object/get-prototype-of":364,"babel-runtime/helpers/classCallCheck":370,"babel-runtime/helpers/createClass":371,"babel-runtime/helpers/extends":373,"babel-runtime/helpers/inherits":374,"babel-runtime/helpers/possibleConstructorReturn":376,"lodash":"lodash","react":"react","react-redux":"react-redux","timm":"timm"}],135:[function(require,module,exports){
+},{"../../actions/CartActions":4,"../../helpers/dom":302,"../../schemas":334,"../HoC/connectToRedux":102,"../HoC/provideTranslations":103,"./Order":131,"babel-runtime/core-js/object/assign":360,"babel-runtime/core-js/object/get-prototype-of":364,"babel-runtime/helpers/classCallCheck":370,"babel-runtime/helpers/createClass":371,"babel-runtime/helpers/extends":373,"babel-runtime/helpers/inherits":374,"babel-runtime/helpers/possibleConstructorReturn":376,"deep-diff":"deep-diff","lodash":"lodash","lodash/get":726,"react":"react","react-redux":"react-redux","timm":"timm"}],135:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

@@ -83,13 +83,14 @@ export function initCheckout(params) {
   return {
     type: CART_INIT_CHECKOUT,
     data: {
-      formValues,
       deliveryTypes,
+      selectedDeliveryType: deliveryTypeId,
       paymentTypes,
+      selectedPaymentType: paymentTypeId,
+      formValues,
       cart,
       coupon,
-      selectedDeliveryType: deliveryTypeId,
-      selectedPaymentType: paymentTypeId,
+      fields
     },
   };
 }
