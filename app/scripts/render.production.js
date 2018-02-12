@@ -29,5 +29,5 @@ if (typeof Bugsnag !== 'undefined') {
 $(() => {
   $.ajaxSetup({ cache: true });
   $('[autosubmit]').submit();
-  $('.alert:not(.coupon-info):not(.cart-info)').delay(5000).fadeOut(400);
+  $('.alert.alert-autohide').delay(5000).fadeOut(400);
 });
