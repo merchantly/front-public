@@ -16569,7 +16569,8 @@ var OrderShow = function (_Component) {
           _order$paymentType = order.paymentType,
           paymentType = _order$paymentType === undefined ? {} : _order$paymentType,
           workflowState = order.workflowState,
-          adminComments = order.adminComments;
+          adminComments = order.adminComments,
+          deliveryComment = order.deliveryComment;
 
       var _ref = orderDelivery || {},
           trackingId = _ref.trackingId,
@@ -16593,6 +16594,11 @@ var OrderShow = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'b-cart__message' },
+            deliveryComment && _react2.default.createElement(
+              'div',
+              { className: 'alert alert-warning' },
+              deliveryComment
+            ),
             _react2.default.createElement(_OrderComments2.default, { comments: adminComments }),
             _react2.default.createElement(
               'p',

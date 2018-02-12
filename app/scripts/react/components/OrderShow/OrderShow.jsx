@@ -22,6 +22,7 @@ class OrderShow extends Component {
       paymentType={},
       workflowState,
       adminComments,
+      deliveryComment
     } = order;
     const {
       trackingId,
@@ -40,6 +41,7 @@ class OrderShow extends Component {
             {t('vendor.order.title', { number: externalId })}
           </h1>
           <div className="b-cart__message">
+            {deliveryComment && <div className="alert alert-warning">{deliveryComment}</div>}
             <OrderComments comments={adminComments} />
             <p>
               <OrderState state={workflowState} />
