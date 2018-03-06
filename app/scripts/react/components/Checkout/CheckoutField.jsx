@@ -13,9 +13,10 @@ class CheckoutField extends Component {
     } = this.props;
     const {
       ajaxSettings = {},
+      settings = {},
       errorMessage='',
       name='',
-      type=STRING_TYPE,
+      type=fieldTypes.string,
       placeholder='',
       isRequired,
       isDisabled,
@@ -80,10 +81,10 @@ class CheckoutField extends Component {
             name={name}
             value={value}
             inputName={inputFieldName}
-            items={ajaxSettings.items}
+            items={settings.items}
             onChange={onChange}
             errorMessage={errorMessage}
-            defaultTitle={ajaxSettings.defaultTitle}
+            defaultTitle={settings.defaultTitle}
           />
         );
         break;

@@ -83,6 +83,7 @@ global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPag
 // localhost:9000/react/checkout.html
 // global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
 global.OrderPageSample = () => React.createElement(global.OrderPage, orderPageProps);
+global.OrderPageSampleWithCoupon = () => React.createElement(global.OrderPage, pageWithCouponProps);
 
 global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
 global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));

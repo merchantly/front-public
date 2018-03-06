@@ -12,9 +12,11 @@ class CheckoutFields extends Component {
   render() {
     const {
       fields,
-      values,
+      values={},
       onChange,
     } = this.props;
+
+    console.log('CheckoutFields', fields, values);
 
     return (
       <span>
@@ -45,6 +47,7 @@ CheckoutFields.propTypes = {
 };
 
 CheckoutFields.defaultProps = {
+  values: {}
 };
 
 export default CheckoutFields;

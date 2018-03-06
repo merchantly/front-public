@@ -38,11 +38,17 @@ class CheckoutFieldSelectAjax extends Component {
       this.setState({status: REQUIRED_STATE});
     } else {
       this.makeRequest({requestData})
-        .then((data) => {
+      .done((data) => {
+        if (Array.isArray(data)) {
           this.setState({
             items: data,
             status: LOADED_STATE
           })
+        } else {
+          this.setState({
+            status: ERROR_STATE
+          });
+        };
         })
         .fail((xhr, textStatus) => {
           if (textStatus !== 'abort') {
