@@ -93,7 +93,8 @@ class ProductCard extends Component {
       similarProducts,
       otherProducts,
       t,
-      multipleChoice
+      multipleChoice,
+      deliveryRestrictionMessages
     } = this.props;
     const {
       good,
@@ -118,7 +119,9 @@ class ProductCard extends Component {
               <ProductCardTitle product={product} />
               <ProductCardBadges product={product} t={t} />
             </div>
-
+            {deliveryRestrictionMessages &&
+              deliveryRestrictionMessages.map((message) => <span className="delivery-restriction-messages">{message}</span>)
+            }
             <div className="b-item-full__content">
               <div className="b-item-full__gallery">
                 <ProductCardGallery
@@ -202,6 +205,7 @@ ProductCard.propTypes = {
   isOneClickBuy: PropTypes.bool,
   newOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
+  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProductCard.defaultProps = {
@@ -213,6 +217,7 @@ ProductCard.defaultProps = {
   isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
+  deliveryRestrictionMessages: []
 };
 
 export default provideTranslations(connectToRedux(connect(

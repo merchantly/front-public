@@ -81,6 +81,7 @@ class Cart extends Component {
       t,
       totalPrice,
       showCouponCode,
+      deliveryRestrictionMessages,
     } = this.props;
     const hasErrors = isBelowMinimalPrice ||
       size(omit(cartErrors, 'minimalPrice')) > 0;
@@ -153,6 +154,9 @@ class Cart extends Component {
                 )}
                 <FormAuthenticity {...formAuthenticity} />
                 {hasErrors && this.renderErrors('top')}
+                {deliveryRestrictionMessages &&
+                  deliveryRestrictionMessages.map((message) => <span className="delivery-restriction-messages">{message}</span>)
+                }
                 <CartList
                   amounts={amounts}
                   changeAmount={changeAmount}
@@ -241,6 +245,7 @@ Cart.propTypes = {
   selectedPackage: PropTypes.string,
   t: PropTypes.func.isRequired,
   totalPrice: PropTypes.object.isRequired,
+  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Cart;

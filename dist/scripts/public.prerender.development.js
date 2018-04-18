@@ -2166,7 +2166,8 @@ var Cart = function (_Component) {
           selectedPackage = _props2.selectedPackage,
           t = _props2.t,
           totalPrice = _props2.totalPrice,
-          showCouponCode = _props2.showCouponCode;
+          showCouponCode = _props2.showCouponCode,
+          deliveryRestrictionMessages = _props2.deliveryRestrictionMessages;
 
       var hasErrors = isBelowMinimalPrice || (0, _lodash.size)((0, _lodash.omit)(cartErrors, 'minimalPrice')) > 0;
       var isProcessing = this.state.isProcessing;
@@ -2259,6 +2260,13 @@ var Cart = function (_Component) {
             ),
             _react2.default.createElement(_FormAuthenticity2.default, formAuthenticity),
             hasErrors && this.renderErrors('top'),
+            deliveryRestrictionMessages && deliveryRestrictionMessages.map(function (message) {
+              return _react2.default.createElement(
+                'span',
+                { className: 'delivery-restriction-messages' },
+                message
+              );
+            }),
             _react2.default.createElement(_CartList2.default, {
               amounts: amounts,
               changeAmount: changeAmount,
@@ -2361,7 +2369,8 @@ Cart.propTypes = {
   selectPackage: _react.PropTypes.func.isRequired,
   selectedPackage: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired,
-  totalPrice: _react.PropTypes.object.isRequired
+  totalPrice: _react.PropTypes.object.isRequired,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
 };
 
 exports.default = Cart;
@@ -3858,7 +3867,8 @@ var CartPage = function (_Component) {
           layoutProps = _props.layoutProps,
           minimalPrice = _props.minimalPrice,
           isHeaderButtons = _props.isHeaderButtons,
-          continueShoppingUrl = _props.continueShoppingUrl;
+          continueShoppingUrl = _props.continueShoppingUrl,
+          deliveryRestrictionMessages = _props.deliveryRestrictionMessages;
 
 
       return _react2.default.createElement(
@@ -3875,7 +3885,8 @@ var CartPage = function (_Component) {
           initialCart: initialCart,
           initialPackages: initialPackages,
           isTesting: isTesting,
-          minimalPrice: minimalPrice
+          minimalPrice: minimalPrice,
+          deliveryRestrictionMessages: deliveryRestrictionMessages
         })
       );
     }
@@ -3891,10 +3902,13 @@ CartPage.propTypes = {
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
   continueShoppingUrl: _react.PropTypes.string,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string),
   layoutProps: _react.PropTypes.shape.apply(_react.PropTypes, (0, _toConsumableArray3.default)(_VendorLayout2.default.propTypes)).isRequired
 };
 
-CartPage.defaultProps = {};
+CartPage.defaultProps = {
+  deliveryRestrictionMessages: []
+};
 
 exports.default = CartPage;
 module.exports = exports['default'];
@@ -4043,6 +4057,7 @@ CartContainer.propTypes = {
   isHeaderButtons: _react.PropTypes.bool,
   isTesting: _react.PropTypes.bool,
   minimalPrice: schemas.money,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string),
 
   // calculated props
   amounts: _react.PropTypes.object.isRequired,
@@ -4074,7 +4089,8 @@ CartContainer.defaultProps = {
   isHeaderButtons: false,
   formAuthenticity: {
     method: 'patch'
-  }
+  },
+  deliveryRestrictionMessages: []
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state, ownProps) {
@@ -18481,7 +18497,8 @@ var ProductCard = function (_Component) {
           similarProducts = _props2.similarProducts,
           otherProducts = _props2.otherProducts,
           t = _props2.t,
-          multipleChoice = _props2.multipleChoice;
+          multipleChoice = _props2.multipleChoice,
+          deliveryRestrictionMessages = _props2.deliveryRestrictionMessages;
       var _state2 = this.state,
           good = _state2.good,
           product = _state2.product;
@@ -18511,6 +18528,13 @@ var ProductCard = function (_Component) {
               _react2.default.createElement(_ProductCardTitle2.default, { product: product }),
               _react2.default.createElement(_ProductCardBadges2.default, { product: product, t: t })
             ),
+            deliveryRestrictionMessages && deliveryRestrictionMessages.map(function (message) {
+              return _react2.default.createElement(
+                'span',
+                { className: 'delivery-restriction-messages' },
+                message
+              );
+            }),
             _react2.default.createElement(
               'div',
               { className: 'b-item-full__content' },
@@ -18600,7 +18624,8 @@ ProductCard.propTypes = {
   multipleChoice: _react.PropTypes.bool,
   isOneClickBuy: _react.PropTypes.bool,
   newOrderUrl: _react.PropTypes.string,
-  t: _react.PropTypes.func.isRequired
+  t: _react.PropTypes.func.isRequired,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
 };
 
 ProductCard.defaultProps = {
@@ -18611,7 +18636,8 @@ ProductCard.defaultProps = {
   multipleChoice: false,
   isOneClickBuy: false,
   similarProducts: [],
-  otherProducts: []
+  otherProducts: [],
+  deliveryRestrictionMessages: []
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
@@ -19659,7 +19685,8 @@ var ProductCardPage = function (_Component) {
           wishlistUrl = _props.wishlistUrl,
           isOneClickBuy = _props.isOneClickBuy,
           newOrderUrl = _props.newOrderUrl,
-          multipleChoice = _props.multipleChoice;
+          multipleChoice = _props.multipleChoice,
+          deliveryRestrictionMessages = _props.deliveryRestrictionMessages;
 
 
       return _react2.default.createElement(
@@ -19679,7 +19706,8 @@ var ProductCardPage = function (_Component) {
           similarProducts: similarProducts,
           newOrderUrl: newOrderUrl,
           wishlistUrl: wishlistUrl,
-          multipleChoice: multipleChoice
+          multipleChoice: multipleChoice,
+          deliveryRestrictionMessages: deliveryRestrictionMessages
         })
       );
     }
@@ -19702,7 +19730,8 @@ ProductCardPage.propTypes = {
   otherProducts: _react.PropTypes.arrayOf(schemas.product),
   multipleChoice: _react.PropTypes.bool,
   isOneClickBuy: _react.PropTypes.bool,
-  wishlistUrl: _react.PropTypes.string
+  wishlistUrl: _react.PropTypes.string,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -19712,7 +19741,8 @@ ProductCardPage.defaultProps = {
   multipleChoice: false,
   isOneClickBuy: false,
   similarProducts: [],
-  otherProducts: []
+  otherProducts: [],
+  deliveryRestrictionMessages: []
 };
 
 exports.default = ProductCardPage;
