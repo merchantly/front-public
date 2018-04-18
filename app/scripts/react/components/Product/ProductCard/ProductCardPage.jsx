@@ -20,7 +20,8 @@ class ProductCardPage extends Component {
       wishlistUrl,
       isOneClickBuy,
       newOrderUrl,
-      multipleChoice
+      multipleChoice,
+      deliveryRestrictionMessages
     } = this.props;
 
     return (
@@ -39,7 +40,8 @@ class ProductCardPage extends Component {
           similarProducts,
           newOrderUrl,
           wishlistUrl,
-          multipleChoice
+          multipleChoice,
+          deliveryRestrictionMessages
         }} />
       </VendorLayoutContainer>
     );
@@ -62,6 +64,7 @@ ProductCardPage.propTypes = {
   multipleChoice: PropTypes.bool,
   isOneClickBuy: PropTypes.bool,
   wishlistUrl: PropTypes.string,
+  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string)
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -72,6 +75,7 @@ ProductCardPage.defaultProps = {
   isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
+  deliveryRestrictionMessages: []
 };
 
 export default ProductCardPage;

@@ -42,7 +42,7 @@ class CartContainer extends Component {
       initCart,
       initialCart,
       initPackages,
-      initialPackages,
+      initialPackages
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
@@ -84,6 +84,7 @@ CartContainer.propTypes = {
   isHeaderButtons: PropTypes.bool,
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
+  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
 
   // calculated props
   amounts: PropTypes.object.isRequired,
@@ -108,7 +109,7 @@ CartContainer.propTypes = {
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
   t: PropTypes.func.isRequired,
-  totalPrice: PropTypes.object.isRequired,
+  totalPrice: PropTypes.object.isRequired
 };
 
 CartContainer.defaultProps = {
@@ -116,6 +117,7 @@ CartContainer.defaultProps = {
   formAuthenticity: {
     method: 'patch',
   },
+  deliveryRestrictionMessages: []
 };
 
 export default provideTranslations(connectToRedux(connect(
