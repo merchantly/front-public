@@ -119,9 +119,6 @@ class ProductCard extends Component {
               <ProductCardTitle product={product} />
               <ProductCardBadges product={product} t={t} />
             </div>
-            {deliveryRestrictionMessages &&
-              deliveryRestrictionMessages.map((message) => <span className="delivery-restriction-messages">{message}</span>)
-            }
             <div className="b-item-full__content">
               <div className="b-item-full__gallery">
                 <ProductCardGallery
@@ -162,6 +159,7 @@ class ProductCard extends Component {
                   otherProducts={otherProducts}
                   product={product}
                   t={t}
+                  deliveryRestrictionMessages={deliveryRestrictionMessages}
                 />
               </div>
               <ProductCardVideo product={product} />

@@ -1190,5 +1190,5 @@
   "disqusUrl": null,
   "wishlistUrl": "http://chestnayaferma.ru/wishlist",
   "addWishlistUrl": "http://chestnayaferma.ru/wishlist/items",
-  "deliveryRestrictionMessages": ["Данный товар доступен по доставкам: Почта России", "Данный товар не доступен по доставкам: RedExpres"]
+  "deliveryRestrictionMessages": ["Данный товар доступен по доставкам: Почта России, RedExpress"]
 }
