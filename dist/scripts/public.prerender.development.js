@@ -18528,13 +18528,6 @@ var ProductCard = function (_Component) {
               _react2.default.createElement(_ProductCardTitle2.default, { product: product }),
               _react2.default.createElement(_ProductCardBadges2.default, { product: product, t: t })
             ),
-            deliveryRestrictionMessages && deliveryRestrictionMessages.map(function (message) {
-              return _react2.default.createElement(
-                'span',
-                { className: 'delivery-restriction-messages' },
-                message
-              );
-            }),
             _react2.default.createElement(
               'div',
               { className: 'b-item-full__content' },
@@ -18582,7 +18575,8 @@ var ProductCard = function (_Component) {
                 _react2.default.createElement(_ProductCardDetails2.default, {
                   otherProducts: otherProducts,
                   product: product,
-                  t: t
+                  t: t,
+                  deliveryRestrictionMessages: deliveryRestrictionMessages
                 })
               ),
               _react2.default.createElement(_ProductCardVideo2.default, { product: product })
@@ -19066,9 +19060,22 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
       return null;
     }
   }, {
+    key: 'renderDeliveryInfo',
+    value: function renderDeliveryInfo(deliveryRestrictionMessages) {
+      return deliveryRestrictionMessages && deliveryRestrictionMessages.map(function (message) {
+        return _react2.default.createElement(
+          'div',
+          { className: 'b-item-full__text e-description' },
+          message
+        );
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var product = this.props.product;
+      var _props2 = this.props,
+          product = _props2.product,
+          deliveryRestrictionMessages = _props2.deliveryRestrictionMessages;
 
 
       if (product) {
@@ -19076,6 +19083,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
           'span',
           null,
           _react2.default.createElement('span', { dangerouslySetInnerHTML: { __html: product.customProductHtml } }),
+          this.renderDeliveryInfo(deliveryRestrictionMessages),
           this.renderDescription(product),
           this.renderAttributes(product),
           this.renderTextBlocks(product),
@@ -19090,7 +19098,8 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
 }(_react.Component), _class.propTypes = {
   product: _react.PropTypes.object.isRequired,
   otherProducts: _react.PropTypes.array,
-  t: _react.PropTypes.func
+  t: _react.PropTypes.func,
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
 }, _class.defaultProps = {
   otherProducts: []
 }, _temp);

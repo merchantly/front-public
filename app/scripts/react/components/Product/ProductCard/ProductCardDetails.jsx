@@ -10,6 +10,7 @@ export default class ProductCardDetails extends Component {
     product: PropTypes.object.isRequired,
     otherProducts: PropTypes.array,
     t: PropTypes.func,
+    deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   };
   static defaultProps = {
     otherProducts: [],
@@ -92,13 +93,21 @@ export default class ProductCardDetails extends Component {
 
     return null;
   }
+
+  renderDeliveryInfo(deliveryRestrictionMessages) {
+    return(
+      deliveryRestrictionMessages && deliveryRestrictionMessages.map((message) => <div className="b-item-full__text e-description">{message}</div>)
+    );
+  }
+
   render() {
-    const { product } = this.props;
+    const { product, deliveryRestrictionMessages } = this.props;
 
     if (product) {
       return (
         <span>
           <span dangerouslySetInnerHTML={{ __html: product.customProductHtml }} />
+          {this.renderDeliveryInfo(deliveryRestrictionMessages)}
           {this.renderDescription(product)}
           {this.renderAttributes(product)}
           {this.renderTextBlocks(product)}
