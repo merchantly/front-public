@@ -96,7 +96,7 @@ export default class ProductCardDetails extends Component {
 
   renderDeliveryInfo(deliveryRestrictionMessages) {
     return(
-      deliveryRestrictionMessages && deliveryRestrictionMessages.map((message) => <div className="b-item-full__text e-description">{message}</div>)
+      deliveryRestrictionMessages && deliveryRestrictionMessages.map((message) => <div className="product-delivery-restriction b-item-full__text e-description">{message}</div>)
     );
   }
 

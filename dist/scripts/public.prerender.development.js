@@ -19065,7 +19065,7 @@ var ProductCardDetails = (_temp = _class = function (_Component) {
       return deliveryRestrictionMessages && deliveryRestrictionMessages.map(function (message) {
         return _react2.default.createElement(
           'div',
-          { className: 'b-item-full__text e-description' },
+          { className: 'product-delivery-restriction b-item-full__text e-description' },
           message
         );
       });
