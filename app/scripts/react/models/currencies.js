@@ -8,14 +8,14 @@ const currencies = {
     "symbol": "Br",
     "disambiguate_symbol": "BYR",
     "alternate_symbols": ["бел. руб.", "б.р.", "руб.", "р."],
-    "subunit": null,
-    "subunit_to_unit": 1,
+    "subunit": 'Kopeck',
+    "subunit_to_unit": 100,
     "symbol_first": false,
     "html_entity": "",
     "decimal_mark": ",",
     "thousands_separator": " ",
     "iso_numeric": "974",
-    "smallest_denomination": 50
+    "smallest_denomination": 1
   },
   "eur": {
     "priority": 2,
