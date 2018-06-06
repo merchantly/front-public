@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { CabinetButton } from '../buttons/CabinetButton';
 import { DesignButton } from '../buttons/DesignButton';
 import { OperatorButton } from '../buttons/OperatorButton';

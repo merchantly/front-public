@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Rodal from 'rodal';
-import Spinner from 'react-spinjs';
+import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
 import CheckoutPublicOffer from './CheckoutPublicOffer';
 
@@ -47,7 +48,7 @@ class CheckoutActions extends Component {
         >
           <div className="b-modal__container">
             <div className="b-modal__spinner-container">
-              <Spinner />
+              <ReactSpinner />
             </div>
             {t(`vendor.order.${isProcessing ? 'processing' : 'wait'}`)}
           </div>

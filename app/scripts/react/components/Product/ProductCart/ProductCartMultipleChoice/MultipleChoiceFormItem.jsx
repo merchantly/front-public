@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { getOptions } from 'r/components/Product/ProductProperties/utils';
 import MultipleChoiceItem from './MultipleChoiceItem';
 import AssetImage from 'r/components/common/AssetImage';

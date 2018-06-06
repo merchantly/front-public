@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import { getFilter } from './utils';
 import { showFilteredCount } from '../../actions/catalogFilterActions';

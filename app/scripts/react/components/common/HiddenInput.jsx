@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class HiddenInput extends Component {
   render() {
@@ -10,7 +11,7 @@ HiddenInput.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
-    PropTypes.string,
+    PropTypes.string, 
     PropTypes.number
   ]),
 };

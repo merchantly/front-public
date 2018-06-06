@@ -1,12 +1,13 @@
 import classNames from 'classnames';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class AccordionItemBody extends Component {
   static propTypes = {
     bodyClassName: PropTypes.string,
     maxHeight: PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+      PropTypes.string,
+      PropTypes.number,
     ]),
     overflow: PropTypes.string,
     uuid: PropTypes.string,

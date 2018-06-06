@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CheckoutField from './CheckoutField';
 import { decamelizeKeys } from 'humps';
 import { pick } from 'lodash';

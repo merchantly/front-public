@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductArchived from './ProductArchived';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
