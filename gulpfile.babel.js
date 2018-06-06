@@ -5,7 +5,7 @@ import runSequence from 'run-sequence';
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('dist', ['[Shared] Test with build'], (cb) => {
+gulp.task('dist', [], (cb) => {
   runSequence(
     [
       '[Shared] Clean',
@@ -32,6 +32,12 @@ gulp.task('build', ['[Shared] Clean'], (cb) => {
     '[Static] Styles',
     '[Static] Fonts',
     '[Static] Images',
+  ], cb);
+});
+
+gulp.task('test', ['[Shared] Clean'], (cb) => {
+  runSequence([
+    '[Static] Test scripts',
   ], cb);
 });
 

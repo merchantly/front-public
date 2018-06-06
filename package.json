@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.857",
+  "version": "0.0.858",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
@@ -14,7 +14,7 @@
     "dist": "npm run dist:static && npm run dist:widget && npm run dist:test",
     "dist:static": "mkdir -p ./dist && ENV=production gulp dist",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
-    "dist:test": "node ./dist_tests/prerender",
+    "dist:test": "gulp test && node ./dist_tests/prerender",
     "dist:widget": "webpack --config webpack.config.production.js",
     "deploy": "gulp deploy",
     "start": "npm run build:widget & npm run server",
