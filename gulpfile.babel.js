@@ -35,10 +35,21 @@ gulp.task('build', ['[Shared] Clean'], (cb) => {
   ], cb);
 });
 
-gulp.task('test', ['[Shared] Clean'], (cb) => {
-  runSequence([
-    '[Static] Test scripts',
-  ], cb);
+gulp.task('test', ['[Shared] Test with build'], (cb) => {
+  runSequence(
+    [
+      '[Shared] Clean',
+      '[Shared] Bump',
+    ], [
+      '[Production] Styles',
+      '[Production] Fonts',
+      '[Production] Images',
+    ], [
+      '[Production] Scripts',
+      '[Production] Components scripts',
+      '[Development] Components scripts',
+    ],
+    cb);
 });
 
 gulp.task('deploy', ['build'], () => {
