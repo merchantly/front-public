@@ -44,11 +44,11 @@ const baseDependencies = {
   'accounting': './app/bower_components/accounting.js/accounting',
 };
 const staticDependencies = {
-  'react-addons-test-utils': './node_modules/react-addons-test-utils',
+  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
   // 'reactUjs': './app/scripts/lib/ReactRailsUJS',
 };
 const testDependencies = {
-  'react-addons-test-utils': './node_modules/react-addons-test-utils',
+  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
 };
 const prerenderDependencies = {
   // For now we will use client version of i18next, but later

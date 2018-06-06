@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderIntoDocument } from 'react-addons-test-utils';
+import { renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
 import { PHOTO_CHANGE } from '../../../../../app/scripts/react/constants/globalEventKeys';
 import ProductCardGallerySlider from '../../../../../app/scripts/react/components/Product/ProductCard/ProductCardGallerySlider';
