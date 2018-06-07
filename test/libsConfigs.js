@@ -1,6 +1,10 @@
 import i18n from 'i18next';
 import translations from './mocks/translations';
 import React, { Component } from 'react';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-15';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 Component.defaultProps = {
   hello: 'ok',
