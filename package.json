@@ -35,24 +35,6 @@
     "@bower_components/jquery-mousewheel": "jquery/jquery-mousewheel#~3.1.3",
     "@bower_components/jquery.role": "git://github.com/merchantly/role.git",
     "@bower_components/sticky-kit": "leafo/sticky-kit#~1.1.2",
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "babel-polyfill": "^6.13.0",
     "classnames": "^2.1.2",
     "cookies-js": "^1.2.2",
@@ -79,6 +61,7 @@
     "react-sortable-hoc": "^0.6.5",
     "react-spinjs": "^3.0.0",
     "react-stickynode": "^1.2.1",
+    "react-test-renderer": "^15.4.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
     "reqwest": "^2.0.5",
