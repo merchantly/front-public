@@ -107,9 +107,9 @@ const actionMap = {
 
   [CART_SELECT_DELIVERY](state, { id }) {
     const newState = set(state, 'selectedDeliveryType', id);
-    // Очищаем delivery_city_id при переключении доставки
+    // Очищаем delivery_city_id и city_title при переключении доставки
     const n = setIn( newState, ['formValues', 'delivery_city_id'], null );
-    return n;
+    return setIn( n, ['formValues', 'city_title'], null );
   },
 
   [CART_SELECT_PAYMENT](state, { id }) {
