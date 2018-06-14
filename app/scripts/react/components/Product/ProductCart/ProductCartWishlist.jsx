@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import Icon from '../../common/Icon';
 import URI from 'urijs';
 import { wishlistCall } from 'r/actions/WishlistStateActions';

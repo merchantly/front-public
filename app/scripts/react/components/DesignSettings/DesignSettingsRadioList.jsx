@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import tinycolor from 'tinycolor2';
 import * as designTypes from '../../constants/designTypes';

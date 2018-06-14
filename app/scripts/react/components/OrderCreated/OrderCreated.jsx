@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import OrderComments from 'rc/common/Order/OrderComments';
 import OrderSelfDeliveryMessage from 'rc/common/Order/OrderSelfDeliveryMessage';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';

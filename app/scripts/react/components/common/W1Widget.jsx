@@ -1,5 +1,5 @@
 /*global W1 */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 
 class W1Widget extends Component {
   componentDidMount() {

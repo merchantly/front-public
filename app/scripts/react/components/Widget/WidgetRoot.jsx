@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import layoutProps from 'test/fixtures/widget/widget-layout.json';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';

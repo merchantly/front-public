@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ImageSlider from 'rc/common/ImageSlider';
 import PostProducts from 'rc/common/PostProducts';
 import ProductList from 'rc/ProductList/ProductList';

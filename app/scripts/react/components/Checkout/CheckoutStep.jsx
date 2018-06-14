@@ -1,9 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 
 class CheckoutStep extends Component {
   render() {
     const { children, number, title } = this.props;
-
     return (
       <div className="b-form__row b-cart__form__data-row">
         <div className="b-form__row__num">

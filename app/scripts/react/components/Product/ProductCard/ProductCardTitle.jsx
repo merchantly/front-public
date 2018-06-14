@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { h1 } from '../../../helpers/seo';
 

@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import OrderCreated from './OrderCreated';
 import * as schemas from 'r/schemas';
 import provideTranslations from 'rc/HoC/provideTranslations';

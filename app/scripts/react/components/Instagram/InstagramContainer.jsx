@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { loadEntries } from '../../actions/instagramActions';
 import { ERROR_STATE, LOADING_STATE, READY_STATE } from './InstagramContainer.constants';
 import Instagram from './Instagram';

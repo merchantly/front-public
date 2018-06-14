@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ClientSessionNew from './ClientSessionNew';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';

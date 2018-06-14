@@ -1,5 +1,5 @@
 /*global Bugsnag */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
 
 const CONTACT_TYPE_TEXT = 'text';

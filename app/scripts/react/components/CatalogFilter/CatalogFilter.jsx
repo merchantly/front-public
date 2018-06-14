@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unused-prop-types */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import provideTranslations from '../HoC/provideTranslations';
 import CatalogFilterOptions from './CatalogFilterOptions';

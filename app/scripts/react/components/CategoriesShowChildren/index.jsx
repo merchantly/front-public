@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ChildrenProducts from 'rc/ChildrenProducts';
 import CategoriesShowChildren from './CategoriesShowChildren';
 import provideTranslations from 'rc/HoC/provideTranslations';

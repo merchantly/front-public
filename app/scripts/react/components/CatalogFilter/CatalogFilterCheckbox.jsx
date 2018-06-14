@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import { COLLAPSED_VISIBLE_COUNT, MAX_VISIBLE_LIMIT } from './CatalogFilterCheckbox.constants';

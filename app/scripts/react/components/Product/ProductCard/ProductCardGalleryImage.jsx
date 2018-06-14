@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import RelativeImage from '../../common/Image/RelativeImage';
 

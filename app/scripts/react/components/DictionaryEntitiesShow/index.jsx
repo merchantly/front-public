@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import ProductList from 'rc/ProductList';
 import DictionaryEntitiesShow from './DictionaryEntitiesShow';
 import provideTranslations from 'rc/HoC/provideTranslations';

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import Cookies from 'cookies-js';
 import store from 'store';
 import { bindActionCreators } from 'redux';

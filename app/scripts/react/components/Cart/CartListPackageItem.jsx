@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import AssetImage from 'rc/common/AssetImage';
 import { RelativeImage } from 'rc/common/Image';
 import CartListPackagePrice from './CartListPackagePrice';

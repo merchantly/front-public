@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import uuid from 'uuid';
 

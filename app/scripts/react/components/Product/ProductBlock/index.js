@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import provideTranslations from '../../HoC/provideTranslations';
 import ProductBlockImage from './ProductBlockImage';
 import ProductBlockBadges from './ProductBlockBadges';

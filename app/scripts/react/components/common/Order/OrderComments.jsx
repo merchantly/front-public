@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import FaIcon from 'rc/common/FaIcon';
 import * as schemas from 'r/schemas';
 

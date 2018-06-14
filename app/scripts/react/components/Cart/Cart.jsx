@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { CartCoupon } from './CartCoupon';
 import CartList from './CartList';
 import FormAuthenticity from '../common/FormAuthenticity';

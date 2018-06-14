@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react'; import PropTypes from 'prop-types';
 import { load } from '../../../actions/productCardActions';
 import { ERROR_STATE, LOADING_STATE, READY_STATE } from './ProductCardContainer.constants';
 import ProductCard from './ProductCard';
