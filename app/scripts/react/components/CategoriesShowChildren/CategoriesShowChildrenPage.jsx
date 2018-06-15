@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ChildrenProducts from 'rc/ChildrenProducts';
 import CategoriesShowChildrenContainer from './index';
 import VendorLayoutContainer from 'rc/VendorLayout';

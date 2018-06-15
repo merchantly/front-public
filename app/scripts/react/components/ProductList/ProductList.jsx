@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductBlock from 'rc/Product/ProductBlock';
 import Pagination from 'rc/Pagination';
 import CatalogFilterContainer from 'rc/CatalogFilter';

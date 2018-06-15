@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Bubble from '../Bubble';
 import { cartRoute } from 'scripts/routes/app';
 

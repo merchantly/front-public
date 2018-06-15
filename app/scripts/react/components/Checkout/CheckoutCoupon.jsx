@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import * as apiRoutes from '../../../routes/api';
 import TextInput from '../common/TextInput';

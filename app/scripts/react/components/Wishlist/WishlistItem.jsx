@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
 import AssetImage from 'rc/common/AssetImage';
 import Image from 'rc/common/Image/Image';

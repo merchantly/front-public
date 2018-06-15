@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { getOptions } from 'r/components/Product/ProductProperties/utils';
 import tinycolor from 'tinycolor2';
 

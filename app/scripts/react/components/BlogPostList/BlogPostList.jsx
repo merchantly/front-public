@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Pagination from '../Pagination';
 import BlogPostListItem from './BlogPostListItem';
 

@@ -1,5 +1,6 @@
 /*global gon */
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import i18next from 'i18next';
 import localeLanguages from '../../constants/localeLanguages';
 

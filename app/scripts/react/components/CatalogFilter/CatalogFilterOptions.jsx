@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CatalogFilterSelectedOptions from './CatalogFilterSelectedOptions';
 import CatalogFilterCheckbox from './CatalogFilterCheckbox';
 import CatalogFilterRadio from './CatalogFilterRadio';

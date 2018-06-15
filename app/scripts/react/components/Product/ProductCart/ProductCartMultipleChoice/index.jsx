@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import provideTranslations from 'r/components/HoC/provideTranslations';
 import MultipleChoiceItem from './MultipleChoiceItem';
 import MultipleChoiceFormItem from './MultipleChoiceFormItem';

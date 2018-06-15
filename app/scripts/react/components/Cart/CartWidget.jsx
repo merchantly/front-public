@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WidgetLayout from 'rc/Widget/WidgetLayout';
 import CartContainer from './index';
 import {

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CartListItem from './CartListItem';
 import CartListPackageItem from './CartListPackageItem';
 import CartListPackages from './CartListPackages';

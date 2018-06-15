@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
 import CabinetContainer from './index';
 import CabinetOrder from './CabinetOrder';

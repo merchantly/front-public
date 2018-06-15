@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import designOptions from '../../models/designOptions';
 
 import Scroller from '../common/Scroller';

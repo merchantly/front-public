@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export const PAYMENT_SUCCESS = 'success';
 export const PAYMENT_FAILURE = 'failure';

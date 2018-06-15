@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductSearchForm from 'rc/common/ProductSearchForm';
 import { schemaOrgMarkup } from 'r/helpers/product';
 import { h1 } from 'r/helpers/seo';

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import OrderContents from 'rc/common/Order/OrderContents';
 import OrderComments from 'rc/common/Order/OrderComments';
 import OrderState from 'rc/common/Order/OrderState';

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProductSearch from './ProductSearch';
 import * as schemas from 'r/schemas';
 import CatalogFilterContainer from 'rc/CatalogFilter';

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
 import MenuBottomLink from './MenuBottomLink';
 import provideTranslations from 'rc/HoC/provideTranslations';

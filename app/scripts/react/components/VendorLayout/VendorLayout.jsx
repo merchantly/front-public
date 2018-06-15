@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TopBanner from 'rc/TopBanner';
 import NavBar, {
   externalPropTypes as navBarPropTypes,

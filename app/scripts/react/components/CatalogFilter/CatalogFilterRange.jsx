@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import NoUiSlider from 'react-nouislider';
 import { getFilter } from './utils';

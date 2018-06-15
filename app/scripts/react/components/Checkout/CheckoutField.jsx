@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import CheckoutFieldSelect from './CheckoutFieldSelect';
 import CheckoutFieldSelectAjax from './CheckoutFieldSelectAjax';
 import fieldTypes from '../../schemas/checkoutFieldTypes';

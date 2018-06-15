@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, { Component } from 'react'; import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { diff } from 'deep-diff';
 import ErrorService from '../../../services/Error';
 import { getInitialGood, getInitialValues, getMatchedGood, getUpdatedValues } from './utils';
