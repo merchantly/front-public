@@ -114,10 +114,10 @@ class CatalogFilterCheckbox extends Component {
 }
 
 CatalogFilterCheckbox.propTypes = {
-  filterName: React.PropTypes.string,
-  items: React.PropTypes.array.isRequired,
-  paramName: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
+  filterName: PropTypes.string,
+  items: PropTypes.array.isRequired,
+  paramName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default CatalogFilterCheckbox;
