@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import comment from './comment';
 import orderItem from './orderItem';
 import money from './money';

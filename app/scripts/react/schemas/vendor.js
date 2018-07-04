@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import vendorContact from './vendorContact';
 import slide from './slide';
 

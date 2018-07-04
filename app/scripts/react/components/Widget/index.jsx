@@ -1,7 +1,8 @@
 /*eslint react/jsx-sort-props:0 */
 import 'styles/widget.scss';
 import 'styles/lib/cleanslate.css';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { render } from 'react-dom';
 import { Router, IndexRoute, Route, hashHistory } from 'react-router';
 import WidgetRoot from './WidgetRoot';

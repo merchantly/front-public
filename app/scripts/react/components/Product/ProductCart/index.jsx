@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { vendorCartItems } from '../../../../routes/app';
 import CSRFToken from '../../common/CSRFToken';
 import HiddenInput from '../../common/HiddenInput';

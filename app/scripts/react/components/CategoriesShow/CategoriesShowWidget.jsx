@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WidgetLayout from 'rc/Widget/WidgetLayout';
 import CategoriesShow from './CategoriesShow';
 import props1 from 'test/fixtures/widget/category-1.json';

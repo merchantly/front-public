@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WelcomeContainer from './index';
 import WidgetLayout from 'rc/Widget/WidgetLayout';
 import CatalogFilterContainer from 'rc/CatalogFilter';

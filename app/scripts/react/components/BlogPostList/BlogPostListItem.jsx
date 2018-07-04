@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import ThumborService from 'r/services/Thumbor';
 

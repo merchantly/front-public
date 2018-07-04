@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Logo from 'rc/Logo';
 import W1Widget from 'rc/common/W1Widget';
 import LayoutMessages from 'rc/common/LayoutMessages';
