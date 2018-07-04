@@ -11,7 +11,7 @@ HiddenInput.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
-    PropTypes.string,
+    PropTypes.string, 
     PropTypes.number
   ]),
 };
