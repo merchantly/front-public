@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.859",
+  "version": "0.0.880",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
@@ -48,13 +48,12 @@
     "jquery-ujs": "^1.2.2",
     "jss": "^2.3.5",
     "jss-nested": "^0.2.0",
-    "lodash": "^4.16.6",
+    "lodash": "^4.17.10",
     "nouislider": "^11.1.0",
     "numeral": "^1.5.3",
     "perfect-scrollbar": "^0.6.2",
     "prop-types": "^15.6.1",
     "react": "~16.2.0",
-    "react-disqus-thread": "^0.4.0",
     "react-dom": "~16.2.0",
     "react-nouislider": "^2.0.1",
     "react-redux": "~5.0.6",
