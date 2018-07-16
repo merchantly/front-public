@@ -3528,6 +3528,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Select = require('../common/Select');
 
 var _Select2 = _interopRequireDefault(_Select);
@@ -3602,17 +3606,17 @@ function CartListPackagePrice(props) {
 }
 
 CartListPackagePrice.propTypes = {
-  globalId: _react.PropTypes.string.isRequired,
-  changePackageCount: _react.PropTypes.func.isRequired,
-  packageCount: _react.PropTypes.number.isRequired,
+  globalId: _propTypes2.default.string.isRequired,
+  changePackageCount: _propTypes2.default.func.isRequired,
+  packageCount: _propTypes2.default.number.isRequired,
   packagePrice: schemas.money,
-  t: _react.PropTypes.func.isRequired
+  t: _propTypes2.default.func.isRequired
 };
 
 exports.default = CartListPackagePrice;
 module.exports = exports['default'];
 
-},{"../../schemas":333,"../common/Money/HumanizedMoneyWithCurrency":273,"../common/Select":285,"lodash":"lodash","react":"react"}],36:[function(require,module,exports){
+},{"../../schemas":333,"../common/Money/HumanizedMoneyWithCurrency":273,"../common/Select":285,"lodash":"lodash","prop-types":764,"react":"react"}],36:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
