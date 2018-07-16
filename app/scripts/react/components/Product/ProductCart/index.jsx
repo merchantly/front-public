@@ -24,6 +24,12 @@ export default class ProductCart extends Component {
     t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
     multipleChoice: PropTypes.bool,
+    notAvailableLinks: PropTypes.arrayOf(
+      PropTypes.shape({
+        url: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+      }),
+    ).isOptional,
   }
   static defaultProps = {
     formAuthenticity: {},
