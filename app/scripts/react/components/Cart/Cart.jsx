@@ -6,7 +6,7 @@ import FormAuthenticity from '../common/FormAuthenticity';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
-import Spinner from 'react-spinjs';
+import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
 import { chain, size, omit } from 'lodash';
 
@@ -99,7 +99,7 @@ class Cart extends Component {
         >
           <div className="b-modal__container">
             <div className="b-modal__spinner-container">
-              <Spinner />
+              <ReactSpinner />
             </div>
             {t('vendor.cart.wait')}
           </div>

@@ -24,7 +24,7 @@ const baseDependencies = {
   'react-dom': './node_modules/react-dom',
   'react-nouislider': './node_modules/react-nouislider',
   'react-redux': './node_modules/react-redux',
-  'react-spinjs': './node_modules/react-spinjs',
+  'react16-spinjs': './node_modules/react16-spinjs',
   'react-stickynode': './node_modules/react-stickynode',
   'redux': './node_modules/redux',
   'redux-thunk': './node_modules/redux-thunk',
