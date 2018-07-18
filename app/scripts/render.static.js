@@ -89,6 +89,7 @@ global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, req
 global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));
 global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
 global.ProductCardWithDeliveryMessages = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/delivery-messages.json'));
+global.ProductCardWithNotAvailableLinks = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/not-available-links.json'));
 global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
 global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPage, require('test/fixtures/orderPayment/page-sample.json'));
 global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
