@@ -20889,7 +20889,7 @@ var ProductCartNotAvailable = function (_Component) {
             onClose: this.hideModal,
             visible: this.state.modalVisible
           },
-          _react2.default.createElement('div', { className: 'b-modal__container', style: { letterSpacing: 'normal' }, dangerouslySetInnerHTML: { __html: notAvailableContent } })
+          _react2.default.createElement('div', { className: 'b-modal__container', style: { letterSpacing: 'normal', wordSpacing: 'normal' }, dangerouslySetInnerHTML: { __html: notAvailableContent } })
         )
       );
     }
