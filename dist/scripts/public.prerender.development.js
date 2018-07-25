@@ -18619,7 +18619,8 @@ ProductCard.propTypes = {
   isOneClickBuy: _react.PropTypes.bool,
   newOrderUrl: _react.PropTypes.string,
   t: _react.PropTypes.func.isRequired,
-  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string),
+  notAvailableContent: _react.PropTypes.string
 };
 
 ProductCard.defaultProps = {
@@ -18631,7 +18632,8 @@ ProductCard.defaultProps = {
   isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
-  deliveryRestrictionMessages: []
+  deliveryRestrictionMessages: [],
+  notAvailableContent: ''
 };
 
 exports.default = (0, _provideTranslations2.default)((0, _connectToRedux2.default)((0, _reactRedux.connect)(function (state) {
@@ -19695,7 +19697,8 @@ var ProductCardPage = function (_Component) {
           isOneClickBuy = _props.isOneClickBuy,
           newOrderUrl = _props.newOrderUrl,
           multipleChoice = _props.multipleChoice,
-          deliveryRestrictionMessages = _props.deliveryRestrictionMessages;
+          deliveryRestrictionMessages = _props.deliveryRestrictionMessages,
+          notAvailableContent = _props.notAvailableContent;
 
 
       return _react2.default.createElement(
@@ -19716,7 +19719,8 @@ var ProductCardPage = function (_Component) {
           newOrderUrl: newOrderUrl,
           wishlistUrl: wishlistUrl,
           multipleChoice: multipleChoice,
-          deliveryRestrictionMessages: deliveryRestrictionMessages
+          deliveryRestrictionMessages: deliveryRestrictionMessages,
+          notAvailableContent: notAvailableContent
         })
       );
     }
@@ -19740,7 +19744,8 @@ ProductCardPage.propTypes = {
   multipleChoice: _react.PropTypes.bool,
   isOneClickBuy: _react.PropTypes.bool,
   wishlistUrl: _react.PropTypes.string,
-  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string)
+  deliveryRestrictionMessages: _react.PropTypes.arrayOf(_react.PropTypes.string),
+  notAvailableContent: _react.PropTypes.string
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -19751,7 +19756,8 @@ ProductCardPage.defaultProps = {
   isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
-  deliveryRestrictionMessages: []
+  deliveryRestrictionMessages: [],
+  notAvailableContent: ''
 };
 
 exports.default = ProductCardPage;
@@ -20791,10 +20797,35 @@ module.exports = exports['default'];
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = undefined;
+
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
 
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _rodal = require('rodal');
+
+var _rodal2 = _interopRequireDefault(_rodal);
 
 var _ProductCartWishlist = require('./ProductCartWishlist');
 
@@ -20802,27 +20833,74 @@ var _ProductCartWishlist2 = _interopRequireDefault(_ProductCartWishlist);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var ProductCartNotAvailable = function ProductCartNotAvailable(props) {
-  return _react2.default.createElement(
-    'div',
-    { className: 'b-item-full__form__row b-item-full__form__row_fixed' },
-    _react2.default.createElement(
-      'div',
-      { className: 'b-item-full__form__submit' },
-      _react2.default.createElement(
+var ProductCartNotAvailable = function (_Component) {
+  (0, _inherits3.default)(ProductCartNotAvailable, _Component);
+
+  function ProductCartNotAvailable(props) {
+    (0, _classCallCheck3.default)(this, ProductCartNotAvailable);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ProductCartNotAvailable.__proto__ || (0, _getPrototypeOf2.default)(ProductCartNotAvailable)).call(this, props));
+
+    _this.state = {
+      modalVisible: false
+    };
+
+    _this.showModal = _this.showModal.bind(_this);
+    _this.hideModal = _this.hideModal.bind(_this);
+    return _this;
+  }
+
+  (0, _createClass3.default)(ProductCartNotAvailable, [{
+    key: 'showModal',
+    value: function showModal() {
+      this.setState({ modalVisible: true });
+    }
+  }, {
+    key: 'hideModal',
+    value: function hideModal() {
+      this.setState({ modalVisible: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var notAvailableContent = this.props.notAvailableContent;
+
+
+      return _react2.default.createElement(
         'div',
-        { className: 'b-btn b-btn_trans' },
-        props.t('vendor.product.not_available')
-      )
-    ),
-    _react2.default.createElement(_ProductCartWishlist2.default, { t: props.t, product: props.product })
-  );
-};
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'b-item-full__form__row b-item-full__form__row_fixed' },
+          _react2.default.createElement(
+            'div',
+            { className: 'b-item-full__form__submit' },
+            _react2.default.createElement(
+              'div',
+              { className: 'b-btn b-btn_trans', onClick: this.showModal },
+              this.props.t('vendor.product.not_available')
+            )
+          ),
+          _react2.default.createElement(_ProductCartWishlist2.default, { t: this.props.t, product: this.props.product })
+        ),
+        notAvailableContent && _react2.default.createElement(
+          _rodal2.default,
+          {
+            onClose: this.hideModal,
+            visible: this.state.modalVisible
+          },
+          _react2.default.createElement('div', { className: 'b-modal__container', style: { letterSpacing: 'normal' }, dangerouslySetInnerHTML: { __html: notAvailableContent } })
+        )
+      );
+    }
+  }]);
+  return ProductCartNotAvailable;
+}(_react.Component);
 
 exports.default = ProductCartNotAvailable;
 module.exports = exports['default'];
 
-},{"./ProductCartWishlist":189,"react":"react"}],189:[function(require,module,exports){
+},{"./ProductCartWishlist":189,"babel-runtime/core-js/object/get-prototype-of":364,"babel-runtime/helpers/classCallCheck":370,"babel-runtime/helpers/createClass":371,"babel-runtime/helpers/inherits":374,"babel-runtime/helpers/possibleConstructorReturn":376,"react":"react","rodal":"rodal"}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21410,7 +21488,8 @@ var ProductCart = (_temp = _class = function (_Component) {
   product: _react.PropTypes.object.isRequired,
   t: _react.PropTypes.func.isRequired,
   wishlistUrl: _react.PropTypes.string,
-  multipleChoice: _react.PropTypes.bool
+  multipleChoice: _react.PropTypes.bool,
+  notAvailableContent: _react.PropTypes.string
 }, _class.defaultProps = {
   formAuthenticity: {}
 }, _temp);
