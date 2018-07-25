@@ -1,5 +1,5 @@
 import React, { Component, PropTypes} from 'react';
-
+import Rodal from 'rodal';
 import ProductCartWishlist from './ProductCartWishlist';
 
 export default class ProductCartNotAvailable extends Component {
@@ -28,21 +28,21 @@ export default class ProductCartNotAvailable extends Component {
     } = this.props;
 
     return (
-      <div className="b-item-full__form__row b-item-full__form__row_fixed">
-        <div className="b-item-full__form__submit">
-          <div className="b-btn b-btn_trans" onClick={this.showModal}>
-            {this.props.t('vendor.product.not_available')}
+      <div>
+        <div className="b-item-full__form__row b-item-full__form__row_fixed">
+          <div className="b-item-full__form__submit">
+            <div className="b-btn b-btn_trans" onClick={this.showModal}>
+              {this.props.t('vendor.product.not_available')}
+            </div>
           </div>
+          <ProductCartWishlist t={this.props.t} product={this.props.product} />
         </div>
-        <ProductCartWishlist t={this.props.t} product={this.props.product} />
         {notAvailableContent && (
           <Rodal
             onClose={this.hideModal}
             visible={this.state.modalVisible}
           >
-            <div className="b-modal__container">
-              <div className="b-modal__spinner-container dangerouslySetInnerHTML={{__html: notAvailableContent}}">
-              </div>
+            <div className="b-modal__container" style={{letterSpacing: 'normal'}} dangerouslySetInnerHTML={{__html: notAvailableContent}}>
             </div>
           </Rodal>
         )}
