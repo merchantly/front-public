@@ -1,5 +1,5 @@
 import React, { Component, PropTypes} from 'react';
-import Rodal from 'rodal';
+import Modal from 'react-modal';
 import ProductCartWishlist from './ProductCartWishlist';
 
 export default class ProductCartNotAvailable extends Component {
@@ -27,6 +27,19 @@ export default class ProductCartNotAvailable extends Component {
       notAvailableContent
     } = this.props;
 
+    const modalCustomStyles = {
+      content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)',
+        letterSpacing: 'normal',
+        wordSpacing: 'normal'
+      }
+    };
+
     return (
       <div>
         <div className="b-item-full__form__row b-item-full__form__row_fixed">
@@ -38,13 +51,14 @@ export default class ProductCartNotAvailable extends Component {
           <ProductCartWishlist t={this.props.t} product={this.props.product} />
         </div>
         {notAvailableContent && (
-          <Rodal
-            onClose={this.hideModal}
-            visible={this.state.modalVisible}
+          <Modal
+            onRequestClose={this.hideModal}
+            isOpen={this.state.modalVisible}
+            style={modalCustomStyles}
           >
-            <div className="b-modal__container" style={{letterSpacing: 'normal', wordSpacing: 'normal'}} dangerouslySetInnerHTML={{__html: notAvailableContent}}>
+            <div dangerouslySetInnerHTML={{__html: notAvailableContent}}>
             </div>
-          </Rodal>
+          </Modal>
         )}
       </div>
     );
