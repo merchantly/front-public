@@ -14,6 +14,8 @@ class OrderItem extends Component {
         title,
         downloadUrl,
         isDownloadingAvailable,
+        digitalKeyString,
+        isDigitalKeyAvailable,
         good: {
           defaultUrl,
           article,
@@ -49,6 +51,13 @@ class OrderItem extends Component {
               <a href={downloadUrl} className="b-btn">
                 {t('vendor.order.download_button')}
               </a>
+            </div>
+          }
+          {isDigitalKeyAvailable &&
+            <div className="b-cart__item__digital_key">
+              <h4>
+                {digitalKeyString}
+              </h4>
             </div>
           }
         </div>

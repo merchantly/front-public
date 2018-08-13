@@ -30581,6 +30581,8 @@ var OrderItem = function (_Component) {
           title = _props$item.title,
           downloadUrl = _props$item.downloadUrl,
           isDownloadingAvailable = _props$item.isDownloadingAvailable,
+          digitalKeyString = _props$item.digitalKeyString,
+          isDigitalKeyAvailable = _props$item.isDigitalKeyAvailable,
           _props$item$good = _props$item.good,
           defaultUrl = _props$item$good.defaultUrl,
           article = _props$item$good.article,
@@ -30627,6 +30629,15 @@ var OrderItem = function (_Component) {
               'a',
               { href: downloadUrl, className: 'b-btn' },
               t('vendor.order.download_button')
+            )
+          ),
+          isDigitalKeyAvailable && _react2.default.createElement(
+            'div',
+            { className: 'b-cart__item__digital_key' },
+            _react2.default.createElement(
+              'h4',
+              null,
+              digitalKeyString
             )
           )
         ),
