@@ -55,9 +55,9 @@ class OrderItem extends Component {
           }
           {isDigitalKeyAvailable &&
             <div className="b-cart__item__digital_key">
-              <h4>
+              <h2>
                 {digitalKeyString}
-              </h4>
+              </h2>
             </div>
           }
         </div>

@@ -30635,7 +30635,7 @@ var OrderItem = function (_Component) {
             'div',
             { className: 'b-cart__item__digital_key' },
             _react2.default.createElement(
-              'h4',
+              'h2',
               null,
               digitalKeyString
             )
