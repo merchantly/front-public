@@ -25,6 +25,7 @@ export default class ProductCart extends Component {
     t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
     multipleChoice: PropTypes.bool,
+    notAvailableContent: PropTypes.string,
   }
   static defaultProps = {
     formAuthenticity: {},

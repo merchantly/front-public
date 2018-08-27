@@ -187,7 +187,8 @@ ProductCard.propTypes = {
   isOneClickBuy: PropTypes.bool,
   newOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
-  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string)
+  deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
+  notAvailableContent: PropTypes.string
 };
 
 ProductCard.defaultProps = {
@@ -198,7 +199,8 @@ ProductCard.defaultProps = {
   isOneClickBuy: false,
   similarProducts: [],
   otherProducts: [],
-  deliveryRestrictionMessages: []
+  deliveryRestrictionMessages: [],
+  notAvailableContent: ''
 };
 
 export default provideTranslations(connectToRedux(connect(
