@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.1.2",
+  "version": "0.0.893",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
@@ -8,13 +8,13 @@
     "url": "git@github.com:BrandyMint/kiosk-public-static-v2.git"
   },
   "scripts": {
-    "build": "dist",
+    "build": "npm run build:snippet && npm run build:widget",
     "build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
     "build:widget": "webpack --config webpack.config.development.js --watch",
     "dist": "npm run dist:static && npm run dist:widget && npm run dist:test",
     "dist:static": "mkdir -p ./dist && ENV=production gulp dist",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
-    "dist:test": "node ./dist_tests/prerender",
+    "dist:test": "gulp test && node ./dist_tests/prerender",
     "dist:widget": "webpack --config webpack.config.production.js",
     "deploy": "gulp deploy",
     "start": "npm run build:widget & npm run server",
@@ -53,8 +53,10 @@
     "numeral": "^1.5.3",
     "perfect-scrollbar": "^0.6.2",
     "prop-types": "^15.6.1",
+    "rc-slider": "^8.6.1",
     "react": "~16.2.0",
     "react-dom": "~16.2.0",
+    "react-input-range": "^1.3.0",
     "react-nouislider": "^2.0.1",
     "react-redux": "~5.0.6",
     "react-router": "^4.3.1",
@@ -66,13 +68,14 @@
     "redux-form": "~7.2.1",
     "redux-thunk": "^2.1.0",
     "reqwest": "^2.0.5",
-    "rodal": "~1.5.6",
+    "rodal": "^1.5.0",
     "store": "^1.3.17",
     "timm": "^1.1.3",
     "tinycolor2": "^1.1.2",
     "urijs": "^1.17.0",
     "uuid": "^2.0.1"
   },
+  "style": "./assets/index.css",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-eslint": "^6.1.2",
@@ -91,7 +94,7 @@
     "browserify": "^13.1.0",
     "chai": "^3.2.0",
     "coffee-reactify": "^2.4.1",
-    "css-loader": "^0.23.0",
+    "css-loader": "^0.23.1",
     "del": "^1.2.0",
     "envify": "^3.4.0",
     "enzyme": "^3.3.0",
@@ -138,11 +141,10 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2",
-    "react-modal": "v3.5.1"
+    "webpack-dev-server": "^1.16.2"
   },
   "engines": {
-    "node": "v8.9.3",
+    "node": "v9.3.0",
     "yarn": ">= 1.0.0"
   }
 }
