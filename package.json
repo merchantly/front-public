@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.0.893",
+  "version": "0.0.894",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
@@ -141,7 +141,8 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-server": "^1.16.2",
+    "react-modal": "v3.5.1"
   },
   "engines": {
     "node": "v9.3.0",
