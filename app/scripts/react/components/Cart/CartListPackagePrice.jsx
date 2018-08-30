@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Select from 'rc/common/Select';
 import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurrency';
 import * as schemas from 'r/schemas';

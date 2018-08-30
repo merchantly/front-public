@@ -1,5 +1,5 @@
 import React from 'react';
-import { scryRenderedComponentsWithType, renderIntoDocument } from 'react-addons-test-utils';
+import { scryRenderedComponentsWithType, renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
 
 import then from '../../../utils/then';

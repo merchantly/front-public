@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import provideTranslations from '../../HoC/provideTranslations';
 import ProductCart from '../ProductCart';
 import ProductPrices from '../ProductPrices';
@@ -10,8 +11,6 @@ import ProductCardSchema from './ProductCardSchema';
 import ProductCardSimilarProducts from './ProductCardSimilarProducts';
 import ProductCardTitle from './ProductCardTitle';
 import ProductCardVideo from './ProductCardVideo';
-import ReactDisqusThread from 'react-disqus-thread';
-import { DISQUS_IDENTIFIER } from './ProductCard.constants';
 import * as schemas from 'r/schemas';
 import {
   addGood,
@@ -73,20 +72,7 @@ class ProductCard extends Component {
         : addGood(good, amount);
     }
   }
-  renderDisqus(product) {
-    let disqusIdentifier = DISQUS_IDENTIFIER + product.id;
 
-    if (this.props.hasComments && this.props.disqusUrl && this.props.disqusUrl.trim()) {
-      return (
-        <ReactDisqusThread
-          identifier={disqusIdentifier}
-          shortname={this.props.disqusUrl}
-        />
-      );
-    }else{
-      return null;
-    }
-  }
   render() {
     const {
       goodState,
@@ -178,7 +164,6 @@ class ProductCard extends Component {
               </div>
             }
             <ProductCardSimilarProducts products={similarProducts} t={t} />
-            {this.renderDisqus(product)}
           </div>
         </div>
       </div>
@@ -193,7 +178,6 @@ ProductCard.propTypes = {
   goodState: PropTypes.object.isRequired,
   hasWishlist: PropTypes.bool,
   hasComments: PropTypes.bool,
-  disqusUrl: PropTypes.string,
   isWishlisted: PropTypes.bool,
   product: schemas.product,
   similarProducts: PropTypes.arrayOf(schemas.product),
@@ -210,7 +194,6 @@ ProductCard.propTypes = {
 ProductCard.defaultProps = {
   formAuthenticity: {},
   hasComments: false,
-  disqusUrl: '',
   product: {},
   multipleChoice: false,
   isOneClickBuy: false,

@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import numeral from 'numeral';
-import NoUiSlider from 'react-nouislider';
+import { Range } from 'rc-slider';
 import { getFilter } from './utils';
 import { showFilteredCount } from '../../actions/catalogFilterActions';
 
@@ -9,8 +10,9 @@ class CatalogFilterRange extends Component {
     super(props);
 
     this.handleSlide = this.handleSlide.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
+    this.handleChange = this.handleChange.bind(this); 
+}
+
   state = {
     from: this.props.valueFrom || this.props.from,
     to: this.props.valueTo || this.props.to
@@ -72,13 +74,12 @@ class CatalogFilterRange extends Component {
               {numeral(to).format('0,0[.]00')} <span dangerouslySetInnerHTML={{__html: units}} />
             </div>
             <div className="b-full-filter__slider__embed">
-              <NoUiSlider
-                connect
-                onChange={this.handleChange}
-                onSlide={this.handleSlide}
-                range={{ min: initFrom, max: initTo }}
-                start={[from, to]}
-                step={step}
+              <Range
+                min={initFrom}
+                max={initTo}
+                defaultValue={[initFrom, initTo]}
+                onChange={this.handleSlide}
+                onAfterChange={this.handleChange} 
               />
             </div>
           </div>

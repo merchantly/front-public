@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PinAlert from './PinAlert';
 import FormAuthenticity from 'rc/common/FormAuthenticity';
 import * as schemas from 'r/schemas';

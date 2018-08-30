@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
 import ProductCard from './ProductCard';
 import * as schemas from 'r/schemas';

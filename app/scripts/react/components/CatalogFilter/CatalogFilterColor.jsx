@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import { getFilter } from './utils';
 import { showFilteredCount } from '../../actions/catalogFilterActions';
@@ -48,10 +49,10 @@ class CatalogFilterColor extends Component {
 }
 
 CatalogFilterColor.propTypes = {
-  filterName: React.PropTypes.string,
-  items: React.PropTypes.array.isRequired,
-  paramName: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
+  filterName: PropTypes.string,
+  items: PropTypes.array.isRequired,
+  paramName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default CatalogFilterColor;

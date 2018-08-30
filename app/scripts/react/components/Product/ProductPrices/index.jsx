@@ -1,5 +1,6 @@
 /*global Bugsnag */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { diff } from 'deep-diff';
 import ProductGoodPrice from './ProductGoodPrice';
 import ProductGoodPrices from './ProductGoodPrices';

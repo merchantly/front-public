@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import { PropTypes } from 'prop-types';
 import { ALL } from './checkoutFieldTypes';
 
 export default PropTypes.shape({

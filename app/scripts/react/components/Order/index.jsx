@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import * as schemas from '../../schemas';
 import connectToRedux from '../HoC/connectToRedux';
 import provideTranslations from '../HoC/provideTranslations';

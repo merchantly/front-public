@@ -24,7 +24,7 @@ const baseDependencies = {
   'react-dom': './node_modules/react-dom',
   'react-nouislider': './node_modules/react-nouislider',
   'react-redux': './node_modules/react-redux',
-  'react-spinjs': './node_modules/react-spinjs',
+  'react16-spinjs': './node_modules/react16-spinjs',
   'react-stickynode': './node_modules/react-stickynode',
   'redux': './node_modules/redux',
   'redux-thunk': './node_modules/redux-thunk',
@@ -44,11 +44,11 @@ const baseDependencies = {
   'accounting': './app/bower_components/accounting.js/accounting',
 };
 const staticDependencies = {
-  'react-addons-test-utils': './node_modules/react-addons-test-utils',
+  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
   // 'reactUjs': './app/scripts/lib/ReactRailsUJS',
 };
 const testDependencies = {
-  'react-addons-test-utils': './node_modules/react-addons-test-utils',
+  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
 };
 const prerenderDependencies = {
   // For now we will use client version of i18next, but later

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import OrderComments from 'rc/common/Order/OrderComments';
 import OrderContents from 'rc/common/Order/OrderContents';
 import * as schemas from 'r/schemas';

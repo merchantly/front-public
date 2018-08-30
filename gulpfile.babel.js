@@ -21,7 +21,6 @@ gulp.task('dist', ['[Shared] Test with build'], (cb) => {
     ],
     cb);
 });
-
 gulp.task('build', ['[Shared] Clean'], (cb) => {
   runSequence([
     '[Static] Client scripts',
@@ -34,7 +33,6 @@ gulp.task('build', ['[Shared] Clean'], (cb) => {
     '[Static] Images',
   ], cb);
 });
-
 gulp.task('deploy', ['build'], () => {
   gulp.start('[Shared] GithubPages');
 });

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { camelizeKeys } from 'humps';
 import Payment from './Payment';
 import provideTranslations from 'rc/HoC/provideTranslations';

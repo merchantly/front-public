@@ -1,5 +1,6 @@
 /*global gon */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
