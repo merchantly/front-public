@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
-import NoUiSlider from 'react-nouislider';
-
-// import 'rc-slider/assets/index.css';
-// import 'rc-tooltip/assets/bootstrap.css';
-
 import { Range } from 'rc-slider';
 import { getFilter } from './utils';
 import { showFilteredCount } from '../../actions/catalogFilterActions';
