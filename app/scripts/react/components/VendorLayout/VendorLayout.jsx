@@ -16,6 +16,10 @@ import ScrollToTop from 'rc/ScrollToTop';
 import * as schemas from 'r/schemas';
 
 class VendorLayout extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     const {
       children,
