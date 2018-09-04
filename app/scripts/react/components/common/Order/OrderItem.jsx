@@ -17,6 +17,7 @@ class OrderItem extends Component {
         isDownloadingAvailable,
         digitalKeyString,
         isDigitalKeyAvailable,
+        couponImageUrl,
         good: {
           defaultUrl,
           article,
@@ -59,6 +60,13 @@ class OrderItem extends Component {
               <h2>
                 {digitalKeyString}
               </h2>
+            </div>
+          }
+          {couponImageUrl &&
+            <div className="b-cart__item__digital_key_download">
+              <a href={couponImageUrl} className="b-btn">
+                {t('vendor.order.download_button')}
+              </a>
             </div>
           }
         </div>
