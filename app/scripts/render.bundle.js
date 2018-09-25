@@ -89,5 +89,6 @@ global.LookbookPage = require('rc/Lookbook/LookbookPage');
 global.PaymentPage = require('rc/Payment/PaymentPage');
 global.ContentPagePage = require('rc/ContentPage/ContentPagePage');
 global.ErrorPagePage = require('rc/ErrorPage/ErrorPagePage');
+global.ClientRegistrationPage = require('rc/ClientRegistration/ClientRegistrationPage');
 
 import './react/application';

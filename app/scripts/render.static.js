@@ -100,5 +100,6 @@ global.LookbookPageSample = () => React.createElement(global.LookbookPage, { lay
 global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
 global.ErrorPagePageSample = () => React.createElement(global.ErrorPagePage, require('test/fixtures/errorPage/page-sample.json'));
+global.ClientRegistrationPageSample = () => React.createElement(global.ClientRegistrationPage, require('test/fixtures/clientRegistration/page-sample.json'));
 
 import './lib/ReactRailsUJS';
