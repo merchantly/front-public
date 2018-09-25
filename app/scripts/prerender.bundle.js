@@ -100,3 +100,4 @@ LookbookPage = require('./react/components/Lookbook/LookbookPage');
 PaymentPage = require('./react/components/Payment/PaymentPage');
 ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage');
 ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
+ClientRegistrationPage = require('./react/components/ClientRegistration/ClientRegistrationPage');
