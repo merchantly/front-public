@@ -34,7 +34,7 @@ class ClientSessionNew extends Component {
                   name="client_login_form[login]"
                   placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
-                  value={phoneValue}
+                  defaultValue={phoneValue}
                   disabled={!!phoneValue}
                 />
               </div>

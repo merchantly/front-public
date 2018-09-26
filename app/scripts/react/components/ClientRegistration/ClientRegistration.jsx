@@ -34,7 +34,7 @@ class ClientRegistration extends Component {
                   name="client_registration_form[name]"
                   placeholder={t('vendor.client.placeholders.name')}
                   type="text"
-                  value={inputFields['name'].value}
+                  defaultValue={inputFields['name'].value}
                 />
                 {inputFields['name'].errorMessage &&
                   <span className="help-block">{inputFields['name'].errorMessage}</span>
@@ -48,7 +48,7 @@ class ClientRegistration extends Component {
                   name="client_registration_form[phone]"
                   placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
-                  value={inputFields['phone'].value}
+                  defaultValue={inputFields['phone'].value}
                 />
                 {inputFields['phone'].errorMessage &&
                   <span className="help-block">{inputFields['phone'].errorMessage}</span>

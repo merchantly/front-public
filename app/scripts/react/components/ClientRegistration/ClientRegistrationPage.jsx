@@ -47,7 +47,7 @@ ClientRegistrationPage.defaultProps = {
       errorMessage: ''
     },
     phone: {
-      phone: '',
+      value: '',
       errorMessage: ''
     }
   }
