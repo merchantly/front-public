@@ -35,7 +35,6 @@ class ClientSessionNew extends Component {
                   placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
                   defaultValue={phoneValue}
-                  disabled={!!phoneValue}
                 />
               </div>
               <PinAlert t={t} timeout={timeout} />
