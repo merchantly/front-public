@@ -304,6 +304,7 @@ global.gon = {
           'placeholders': {
             'phone': 'Номер телефона',
             'pin': 'Пин-код',
+            'name': 'Ваше Имя'
           },
           'pin_alert': {
             'send': 'Отправить код',
