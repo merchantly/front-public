@@ -311,6 +311,7 @@ global.gon = {
             'timeout': 'SMS должна прийти в течение минуты<br>Запросить код повторно можно через',
           },
           'submit': 'Войти',
+          'registration_submit': 'ОК',
           'no_account': 'Нет аккаунта?',
           'logged_in_with': 'Вы уже авторизованы под именем<br /> <b>%{name}</b>.',
           'continue_logged': 'Продолжить под этим именем..',

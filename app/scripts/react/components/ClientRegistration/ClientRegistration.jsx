@@ -60,7 +60,7 @@ class ClientRegistration extends Component {
                 className="b-btn"
                 name="commit"
                 type="submit"
-                value={t('vendor.client.submit')}
+                value={t('vendor.client.registration_submit')}
               />
             </div>
           </form>
