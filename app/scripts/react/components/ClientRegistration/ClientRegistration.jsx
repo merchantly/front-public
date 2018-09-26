@@ -37,6 +37,16 @@ class ClientRegistration extends Component {
               </div>
             </div>
             <div className="b-form__row__widget">
+              <div className="form-group-first">
+                <input
+                  id="client_registration_form_name"
+                  name="client_registration_form[name]"
+                  placeholder={t('vendor.client.placeholders.name')}
+                  type="text"
+                />
+              </div>
+            </div>
+            <div className="b-form__row__widget">
               <input
                 className="b-btn"
                 name="commit"
