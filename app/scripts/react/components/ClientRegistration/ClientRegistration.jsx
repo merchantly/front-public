@@ -11,6 +11,7 @@ class ClientRegistration extends Component {
       t,
       timeout,
       vendorRegistrationPath,
+      inputFields,
     } = this.props;
 
     return (
@@ -29,21 +30,29 @@ class ClientRegistration extends Component {
             <div className="b-form__row__widget">
               <div className="form-group-first">
                 <input
-                  id="client_registration_form_phone"
-                  name="client_registration_form[phone]"
-                  placeholder={t('vendor.client.placeholders.phone')}
+                  id="client_registration_form_name"
+                  name="client_registration_form[name]"
+                  placeholder={t('vendor.client.placeholders.name')}
                   type="text"
+                  value={inputFields['name'].value}
                 />
+                {inputFields['name'].errorMessage &&
+                  <span className="help-block">{inputFields['name'].errorMessage}</span>
+                }
               </div>
             </div>
             <div className="b-form__row__widget">
               <div className="form-group-first">
                 <input
-                  id="client_registration_form_name"
-                  name="client_registration_form[name]"
-                  placeholder={t('vendor.client.placeholders.name')}
+                  id="client_registration_form_phone"
+                  name="client_registration_form[phone]"
+                  placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
+                  value={inputFields['phone'].value}
                 />
+                {inputFields['phone'].errorMessage &&
+                  <span className="help-block">{inputFields['phone'].errorMessage}</span>
+                }
               </div>
             </div>
             <div className="b-form__row__widget">
@@ -65,6 +74,7 @@ ClientRegistration.propTypes = {
   formAuthenticity: schemas.formAuthenticity.isRequired,
   t: PropTypes.func.isRequired,
   vendorRegistrationPath: PropTypes.string.isRequired,
+  inputFields: PropTypes.object,
 };
 
 export default provideTranslations(ClientRegistration);

@@ -11,6 +11,7 @@ class ClientSessionNew extends Component {
       t,
       timeout,
       vendorClientSessionsPath,
+      phoneValue,
     } = this.props;
 
     return (
@@ -33,6 +34,8 @@ class ClientSessionNew extends Component {
                   name="client_login_form[login]"
                   placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
+                  value={phoneValue}
+                  disabled={!!phoneValue}
                 />
               </div>
               <PinAlert t={t} timeout={timeout} />
@@ -63,6 +66,7 @@ ClientSessionNew.propTypes = {
   t: PropTypes.func.isRequired,
   timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
+  phoneValue: PropTypes.string,
 };
 
 ClientSessionNew.defaultProps = {

@@ -12,6 +12,7 @@ class ClientRegistrationPage extends Component {
       layoutProps,
       timeout,
       vendorRegistrationPath,
+      inputFields,
     } = this.props;
 
     return (
@@ -21,6 +22,7 @@ class ClientRegistrationPage extends Component {
           i18n,
           timeout,
           vendorRegistrationPath,
+          inputFields,
         }}
         />
       </VendorLayoutContainer>
@@ -34,6 +36,21 @@ ClientRegistrationPage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   timeout: PropTypes.number,
   vendorRegistrationPath: PropTypes.string.isRequired,
+  inputFields: PropTypes.object,
+
+};
+
+ClientRegistrationPage.defaultProps = {
+  inputFields: {
+    name: {
+      value: '',
+      errorMessage: ''
+    },
+    phone: {
+      phone: '',
+      errorMessage: ''
+    }
+  }
 };
 
 export default ClientRegistrationPage;

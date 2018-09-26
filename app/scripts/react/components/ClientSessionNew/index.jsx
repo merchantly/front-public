@@ -15,6 +15,7 @@ ClientSessionNewContainer.propTypes = {
   t: PropTypes.func.isRequired,
   timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
+  phoneValue: PropTypes.string,
 };
 
 ClientSessionNewContainer.defaultProps = {
