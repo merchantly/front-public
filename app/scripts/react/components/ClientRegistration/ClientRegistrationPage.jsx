@@ -49,6 +49,10 @@ ClientRegistrationPage.defaultProps = {
     phone: {
       value: '',
       errorMessage: ''
+    },
+    email: {
+      value: '',
+      errorMessage: ''
     }
   }
 };

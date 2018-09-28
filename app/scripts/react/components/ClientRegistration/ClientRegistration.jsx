@@ -56,6 +56,20 @@ class ClientRegistration extends Component {
               </div>
             </div>
             <div className="b-form__row__widget">
+              <div className="form-group-first">
+                <input
+                  id="client_registration_form_email"
+                  name="client_registration_form[email]"
+                  placeholder={t('vendor.client.placeholders.email')}
+                  type="text"
+                  defaultValue={inputFields['email'].value}
+                />
+                {inputFields['email'].errorMessage &&
+                  <span className="help-block">{inputFields['email'].errorMessage}</span>
+                }
+              </div>
+            </div>
+            <div className="b-form__row__widget">
               <input
                 className="b-btn"
                 name="commit"
