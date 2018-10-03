@@ -28,9 +28,10 @@ class ClientResetPassword extends Component {
             </h1>
             <div className="b-form__row__widget">
               <div className="form-group-first">
+                <HiddenInput name="_method" value="put" />
                 <input
                   id="client_form_password"
-                  name="client_form[passsword]"
+                  name="client_form[password]"
                   placeholder={t('vendor.client.placeholders.new_password')}
                   type="password"
                   defaultValue={password.value}
