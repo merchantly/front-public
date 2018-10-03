@@ -307,7 +307,8 @@ global.gon = {
             'pin': 'Пин-код',
             'name': 'Ваше Имя',
             'email': 'Email',
-            'password': 'Пароль'
+            'password': 'Пароль',
+            'new_password': 'Новый пароль',
           },
           'pin_alert': {
             'send': 'Отправить код',

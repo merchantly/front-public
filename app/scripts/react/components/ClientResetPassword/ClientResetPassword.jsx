@@ -31,7 +31,7 @@ class ClientResetPassword extends Component {
                 <input
                   id="client_form_password"
                   name="client_form[passsword]"
-                  placeholder={t('vendor.client.placeholders.password')}
+                  placeholder={t('vendor.client.placeholders.new_password')}
                   type="password"
                   defaultValue={password.value}
                 />
