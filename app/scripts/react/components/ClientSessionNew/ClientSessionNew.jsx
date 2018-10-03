@@ -37,20 +37,7 @@ class ClientSessionNew extends Component {
                   defaultValue={phoneValue}
                 />
               </div>
-              <div className='row'>
-                <div className='col-md-2'>
-                  <PinAlert t={t} timeout={timeout} />
-                </div>
-                <div className='col-md-2'>
-                  <p>
-                    <span className="reset-password">
-                      <button className="b-btn" name="send_reset_password" type="submit">
-                        {t('vendor.client.reset_password.send')}
-                      </button>
-                    </span>
-                  </p>
-                </div>
-              </div>
+              <PinAlert t={t} timeout={timeout} />
             </div>
             <input
               id="client_login_form_password"

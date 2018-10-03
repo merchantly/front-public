@@ -46,7 +46,7 @@ class PinAlert extends Component {
           <span className="pin-alert-base">
             <button
               className="b-btn"
-              name="send_pin_code"
+              name="send_password"
               type="submit"
             >
               {t('vendor.client.pin_alert.send')}
