@@ -101,3 +101,4 @@ PaymentPage = require('./react/components/Payment/PaymentPage');
 ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage');
 ContentPagePage = require('./react/components/ContentPage/ContentPagePage');
 ClientRegistrationPage = require('./react/components/ClientRegistration/ClientRegistrationPage');
+ClientResetPasswordPage = require('./react/components/ClientResetPassword/ClientResetPasswordPage');

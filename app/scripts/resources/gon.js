@@ -301,15 +301,20 @@ global.gon = {
         },
         'client': {
           'auth': 'Личный кабинет',
+          'reset_password': 'Новый пароль',
           'placeholders': {
             'phone': 'Номер телефона',
             'pin': 'Пин-код',
             'name': 'Ваше Имя',
-            'email': 'Email'
+            'email': 'Email',
+            'password': 'Пароль'
           },
           'pin_alert': {
             'send': 'Отправить код',
             'timeout': 'SMS должна прийти в течение минуты<br>Запросить код повторно можно через',
+          },
+          'reset_password': {
+            'send': 'Сбросить пароль',
           },
           'submit': 'Войти',
           'registration_submit': 'ОК',
@@ -325,6 +330,7 @@ global.gon = {
             'send_pin_code': 'Выслать пин-код',
             'disable_with': 'Высылаем...',
           },
+          'reset_password_submit': 'Сохранить',
         },
         'money': {
           'unknown_iso_code': 'Неизвестный тип валюты %{isoCode}',

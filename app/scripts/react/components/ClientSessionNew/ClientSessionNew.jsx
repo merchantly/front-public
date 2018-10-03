@@ -32,17 +32,30 @@ class ClientSessionNew extends Component {
                 <input
                   id="client_login_form_login"
                   name="client_login_form[login]"
-                  placeholder={t('vendor.client.placeholders.phone')}
+                  placeholder={t('vendor.client.placeholders.login')}
                   type="text"
                   defaultValue={phoneValue}
                 />
               </div>
-              <PinAlert t={t} timeout={timeout} />
+              <div className='row'>
+                <div className='col-md-2'>
+                  <PinAlert t={t} timeout={timeout} />
+                </div>
+                <div className='col-md-2'>
+                  <p>
+                    <span className="reset-password">
+                      <button className="b-btn" name="send_reset_password" type="submit">
+                        {t('vendor.client.reset_password.send')}
+                      </button>
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             <input
               id="client_login_form_password"
               name="client_login_form[password]"
-              placeholder={t('vendor.client.placeholders.pin')}
+              placeholder={t('vendor.client.placeholders.password')}
               type="password"
             />
             <div className="b-form__row__widget">

@@ -101,5 +101,6 @@ global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layou
 global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
 global.ErrorPagePageSample = () => React.createElement(global.ErrorPagePage, require('test/fixtures/errorPage/page-sample.json'));
 global.ClientRegistrationPageSample = () => React.createElement(global.ClientRegistrationPage, require('test/fixtures/clientRegistration/page-sample.json'));
+global.ClientResetPasswordPageSample = () => React.createElement(global.ClientResetPasswordPage, require('test/fixtures/clientResetPasswordPage/page-sample.json'));
 
 import './lib/ReactRailsUJS';
