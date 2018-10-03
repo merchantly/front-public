@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import FormAuthenticity from 'rc/common/FormAuthenticity';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
+import HiddenInput from '../common/HiddenInput';
 
 class ClientResetPassword extends Component {
   render() {
