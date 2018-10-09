@@ -53,7 +53,17 @@ ClientRegistrationPage.defaultProps = {
     email: {
       value: '',
       errorMessage: ''
-    }
+    },
+    occupation: {
+      presence: false,
+      value: '',
+      errorMessage: ''
+    },
+    company_name: {
+      presence: false,
+      value: '',
+      errorMessage: ''
+    },
   }
 };
 

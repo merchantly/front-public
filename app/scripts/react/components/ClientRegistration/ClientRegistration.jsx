@@ -69,6 +69,38 @@ class ClientRegistration extends Component {
                 }
               </div>
             </div>
+            {inputFields['occupation'].presence &&
+              <div className="b-form__row__widget">
+                <div className="form-group-first">
+                  <input
+                    id="client_registration_form_occupation"
+                    name="client_registration_form[occupation]"
+                    placeholder={t('vendor.client.placeholders.occupation')}
+                    type="text"
+                    defaultValue={inputFields['occupation'].value}
+                  />
+                  {inputFields['occupation'].errorMessage &&
+                    <span className="help-block">{inputFields['occupation'].errorMessage}</span>
+                  }
+                </div>
+              </div>
+            }
+            {inputFields['company_name'].presence &&
+              <div className="b-form__row__widget">
+                <div className="form-group-first">
+                  <input
+                    id="client_registration_form_company_name"
+                    name="client_registration_form[company_name]"
+                    placeholder={t('vendor.client.placeholders.company_name')}
+                    type="text"
+                    defaultValue={inputFields['company_name'].value}
+                  />
+                  {inputFields['company_name'].errorMessage &&
+                    <span className="help-block">{inputFields['company_name'].errorMessage}</span>
+                  }
+                </div>
+              </div>
+            }
             <div className="b-form__row__widget">
               <input
                 className="b-btn"
