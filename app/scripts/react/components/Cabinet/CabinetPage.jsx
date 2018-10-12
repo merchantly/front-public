@@ -30,9 +30,10 @@ CabinetPage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   client: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    phones: PropTypes.arrayOf(PropTypes.string).isOptional,
-    emails: PropTypes.arrayOf(PropTypes.string).isOptional,
+    phones: PropTypes.arrayOf(PropTypes.object).isOptional,
+    emails: PropTypes.arrayOf(PropTypes.object).isOptional,
     logoutUrl: PropTypes.string.isRequired,
+    resetPasswordUrl: PropTypes.string.isRequired,
   }).isRequired,
   orders: PropTypes.shape({
     currentPage: Pagination.propTypes.currentPage,

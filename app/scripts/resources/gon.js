@@ -324,14 +324,19 @@ global.gon = {
           'continue_logged': 'Продолжить под этим именем..',
           'create_account': 'Создать',
           'logout': 'Выйти',
+          'reset_password': 'Сбросить пароль',
           'cabinet': {
             'title': 'Личный кабинет',
             'button': 'Кабинет',
             'create': 'Создаем личный кабинет',
             'send_pin_code': 'Выслать пин-код',
             'disable_with': 'Высылаем...',
+            'emails': 'Email-ы',
+            'phones': 'Номера телефонов',
           },
           'reset_password_submit': 'Сохранить',
+          'confirmed': 'Подтвержден',
+          'no_confirmed': 'Не подтвержден'
         },
         'money': {
           'unknown_iso_code': 'Неизвестный тип валюты %{isoCode}',
