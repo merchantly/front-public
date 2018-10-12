@@ -45,7 +45,7 @@ class Cabinet extends Component {
               </div>
               <div className='row'>
                 <div className='col-md-3'>
-                  <h4>{t('vendor.cabinet.phones')}</h4>
+                  <h4>{t('vendor.client.cabinet.phones')}</h4>
                 </div>
               </div>
               <div className='row'>
@@ -56,7 +56,7 @@ class Cabinet extends Component {
                         phones.map((phone) => (
                           <tr>
                             <td>{phone.value}</td>
-                            <td>{phone.isConfirmed ? t('vendor.client.confirmed') : ('vendor.client.no_confirmed')}</td>
+                            <td>{phone.isConfirmed ? t('vendor.client.confirmed') : t('vendor.client.no_confirmed')}</td>
                           </tr>
                         ))
                       }
@@ -66,7 +66,7 @@ class Cabinet extends Component {
               </div>
               <div className='row'>
                 <div className='col-md-3'>
-                  <h4>{t('vendor.cabinet.emails')}</h4>
+                  <h4>{t('vendor.client.cabinet.emails')}</h4>
                 </div>
               </div>
               <div className='row'>
@@ -77,7 +77,7 @@ class Cabinet extends Component {
                         emails.map((email) => (
                           <tr>
                             <td>{email.value}</td>
-                            <td>{email.isConfirmed ? t('vendor.client.confirmed') : ('vendor.client.no_confirmed')}</td>
+                            <td>{email.isConfirmed ? t('vendor.client.confirmed') : t('vendor.client.no_confirmed')}</td>
                           </tr>
                         ))
                       }
