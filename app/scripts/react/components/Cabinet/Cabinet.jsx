@@ -11,6 +11,7 @@ class Cabinet extends Component {
         phones,
         emails,
         logoutUrl,
+        resetPasswordUrl,
       },
       orders: {
         currentPage,
@@ -25,19 +26,67 @@ class Cabinet extends Component {
         <section className="b-cart">
           <div className="b-cabinet b-cart__content">
             <div className="b-cabinet__title">
-              {t('vendor.client.cabinet.title')}
-              {' '}
-              {name}
-              {' '}
-              {phones.join('\n')}
-              {' '}
-              {emails.join('\n')}
-              {' '}
-              <a className="pull-right" href={logoutUrl}>
-                {t('vendor.client.logout')}
-              </a>
+              <div className='row'>
+                <div className='col-md-4'>
+                  <h2>{t('vendor.client.cabinet.title', { name: name })}</h2>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-2'>
+                  <a className='btn btn-info' href={resetPasswordUrl}>
+                    {t('vendor.client.reset_password')}
+                  </a>
+                </div>
+                <div className='col-md-1'>
+                  <a className='btn btn-warning' href={logoutUrl}>
+                    {t('vendor.client.logout')}
+                  </a>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-3'>
+                  <h4>{t('vendor.cabinet.phones')}</h4>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-6'>
+                  <table className='table table-striped'>
+                    <tbody>
+                      {
+                        phones.map((phone) => (
+                          <tr>
+                            <td>{phone.value}</td>
+                            <td>{phone.isConfirmed ? t('vendor.client.confirmed') : ('vendor.client.no_confirmed')}</td>
+                          </tr>
+                        ))
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-3'>
+                  <h4>{t('vendor.cabinet.emails')}</h4>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col-md-6'>
+                  <table className='table table-striped'>
+                    <tbody>
+                      {
+                        emails.map((email) => (
+                          <tr>
+                            <td>{email.value}</td>
+                            <td>{email.isConfirmed ? t('vendor.client.confirmed') : ('vendor.client.no_confirmed')}</td>
+                          </tr>
+                        ))
+                      }
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            {items ? (
+            {items.length ? (
               <div>
                 <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
                 <ul className="b-cart__list">
@@ -63,9 +112,10 @@ class Cabinet extends Component {
 Cabinet.propTypes = {
   client: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    phones: PropTypes.arrayOf(PropTypes.string).isOptional,
-    emails: PropTypes.arrayOf(PropTypes.string).isOptional,
+    phones: PropTypes.arrayOf(PropTypes.object).isOptional,
+    emails: PropTypes.arrayOf(PropTypes.object).isOptional,
     logoutUrl: PropTypes.string.isRequired,
+    resetPasswordUrl: PropTypes.string.isRequired,
   }).isRequired,
   orders: PropTypes.shape({
     currentPage: Pagination.propTypes.currentPage,

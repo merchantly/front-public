@@ -632,14 +632,27 @@
   "client": {
     "name": "example name",
     "phones": [
-      "666666",
-      "666666"
+      { 
+        "value": "666666",
+        "isConfirmed": true,
+      },
+      { 
+        "value": "666666",
+        "isConfirmed": false,
+      },
     ],
     "emails": [
-      "example@example",
-      "example@example"
+      { 
+        "value": "klondaiker@bk.ru",
+        "isConfirmed": true,
+      },
+      { 
+        "value": "klondaiker@bk.ru",
+        "isConfirmed": false,
+      },
     ],
-    "logoutUrl": "/vendor/logout"
+    "logoutUrl": "/vendor/logout",
+    "resetPasswordUrl": "/reset_passwords/jkqoasfjir",
   },
   "orders": {
     "currentPage": 2,
