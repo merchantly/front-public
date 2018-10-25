@@ -27,7 +27,7 @@ class Pagination extends Component {
 
     const showArrows = (totalPages >= WINDOW_SIZE)
 
-    if (totalPages == 1) {
+    if ((totalPages == 1) || (currentPage > totalPages)) {
       return null;
     }
 
