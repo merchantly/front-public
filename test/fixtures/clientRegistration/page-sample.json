@@ -633,5 +633,35 @@
   "formAuthenticity": {
     "token": "eeeeee"
   },
-  "vendorRegistrationPath": "/vendor/registration"
+  "vendorRegistrationPath": "/vendor/registration",
+  "occupations": [{"name": "Инженер", "id": 1}, {"name": "Директор", "id": 2}],
+  "inputFields": {
+    "name": {
+      "value": "",
+      "errorMessage": ""
+    },
+    "phone": {
+      "value": "",
+      "errorMessage": ""
+    },
+    "email": {
+      "value": "",
+      "errorMessage": ""
+    },
+    "occupation_name": {
+      "presence": true,
+      "value": "",
+      "errorMessage": ""
+    },
+    "occupation_id": {
+      "presence": true,
+      "value": "",
+      "errorMessage": ""
+    },
+    "company_name": {
+      "presence": true,
+      "value": "",
+      "errorMessage": ""
+    },
+  },
 }

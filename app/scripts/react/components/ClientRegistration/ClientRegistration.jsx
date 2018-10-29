@@ -3,8 +3,21 @@ import PropTypes from 'prop-types';
 import FormAuthenticity from 'rc/common/FormAuthenticity';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
+import Select from '../common/Select';
 
 class ClientRegistration extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      occupationId: props.inputFields['occupation_id'].value,
+    };
+  }
+
+  changeOccupation(occupationId) {
+    this.setState({ occupationId: occupationId });
+  }
+
   render() {
     const {
       formAuthenticity,
@@ -12,7 +25,12 @@ class ClientRegistration extends Component {
       timeout,
       vendorRegistrationPath,
       inputFields,
+      occupations
     } = this.props;
+
+    const {
+      occupationId,
+    } = this.state
 
     return (
       <div className="b-cart__content">
@@ -69,19 +87,35 @@ class ClientRegistration extends Component {
                 }
               </div>
             </div>
-            {inputFields['occupation'].presence &&
+            {inputFields['occupation_name'].presence &&
               <div className="b-form__row__widget">
                 <div className="form-group-first">
-                  <input
-                    id="client_registration_form_occupation"
-                    name="client_registration_form[occupation]"
-                    placeholder={t('vendor.client.placeholders.occupation')}
-                    type="text"
-                    defaultValue={inputFields['occupation'].value}
-                  />
-                  {inputFields['occupation'].errorMessage &&
-                    <span className="help-block">{inputFields['occupation'].errorMessage}</span>
-                  }
+                  {occupations.length ? (
+                    <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
+                      <Select
+                        name="client_registration_form[occupation_id]"
+                        options={occupations.map((i) => ({ value: i.id, title: i.name, }))}
+                        onChange={this.changeOccupation.bind(this)}
+                        value={occupationId}
+                      />
+                      {inputFields['occupation_id'].errorMessage &&
+                        <span className="help-block">{inputFields['occupation_id'].errorMessage}</span>
+                      }
+                    </div>
+                  ) : (
+                    <div>
+                      <input
+                        id="client_registration_form_occupation_name"
+                        name="client_registration_form[occupation_name]"
+                        placeholder={t('vendor.client.placeholders.occupation')}
+                        type="text"
+                        defaultValue={inputFields['occupation_name'].value}
+                      />
+                      {inputFields['occupation_name'].errorMessage &&
+                        <span className="help-block">{inputFields['occupation_name'].errorMessage}</span>
+                      }
+                    </div>
+                  )}
                 </div>
               </div>
             }
@@ -121,6 +155,7 @@ ClientRegistration.propTypes = {
   t: PropTypes.func.isRequired,
   vendorRegistrationPath: PropTypes.string.isRequired,
   inputFields: PropTypes.object,
+  occupations: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default provideTranslations(ClientRegistration);

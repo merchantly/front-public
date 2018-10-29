@@ -13,6 +13,7 @@ class ClientRegistrationPage extends Component {
       timeout,
       vendorRegistrationPath,
       inputFields,
+      occupations
     } = this.props;
 
     return (
@@ -23,6 +24,7 @@ class ClientRegistrationPage extends Component {
           timeout,
           vendorRegistrationPath,
           inputFields,
+          occupations,
         }}
         />
       </VendorLayoutContainer>
@@ -37,7 +39,7 @@ ClientRegistrationPage.propTypes = {
   timeout: PropTypes.number,
   vendorRegistrationPath: PropTypes.string.isRequired,
   inputFields: PropTypes.object,
-
+  occupations:  PropTypes.arrayOf(PropTypes.object),
 };
 
 ClientRegistrationPage.defaultProps = {
@@ -54,7 +56,12 @@ ClientRegistrationPage.defaultProps = {
       value: '',
       errorMessage: ''
     },
-    occupation: {
+    occupation_name: {
+      presence: false,
+      value: '',
+      errorMessage: ''
+    },
+    occupation_id: {
       presence: false,
       value: '',
       errorMessage: ''
@@ -64,7 +71,8 @@ ClientRegistrationPage.defaultProps = {
       value: '',
       errorMessage: ''
     },
-  }
+  },
+  occupations: [],
 };
 
 export default ClientRegistrationPage;
