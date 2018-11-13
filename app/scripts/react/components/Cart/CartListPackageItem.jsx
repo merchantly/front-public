@@ -12,7 +12,7 @@ import * as schemas from 'r/schemas';
 
 class CartListPackageItem extends Component {
   componentDidMount() {
-    CartListImage.initEvent($(findDOMNode(this)), this.props.t);
+    CartListImage.initFancybox($(findDOMNode(this)), this.props.t);
   }
   renderGoodDetails() {
     const customAttributes = getIn(this.props.item, ['good', 'customAttributes']) || {};
