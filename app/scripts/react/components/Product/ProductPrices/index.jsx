@@ -13,7 +13,7 @@ class ProductPrices extends Component {
       const good = goods[i];
 
       if (good.actualPrice != null && typeof good.actualPrice === 'object') {
-        if (good.actualPrice.cents < minPrice.cents) {
+        if (good.actualPrice.price.cents < minPrice.cents) {
           minPrice = good.actualPrice;
         }
       }
@@ -28,7 +28,7 @@ class ProductPrices extends Component {
       const good = goods[i];
 
       if (good.actualPrice != null && typeof good.actualPrice === 'object') {
-        if (good.actualPrice.cents > maxPrice.cents) {
+        if (good.actualPrice.price.cents > maxPrice.cents) {
           maxPrice = good.actualPrice;
         }
       }

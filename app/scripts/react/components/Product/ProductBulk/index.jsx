@@ -11,7 +11,7 @@ class ProductBulk extends Component {
       this.state = {
         price: {
           cents: this.getPrice(props.product.weightOfPrice),
-          currencyIsoCode: this.good().actualPrice && this.good().actualPrice.currencyIsoCode,
+          currencyIsoCode: this.good().actualPrice && this.good().actualPrice.price.currencyIsoCode,
         },
       };
     }

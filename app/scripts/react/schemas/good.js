@@ -14,7 +14,7 @@ export default PropTypes.shape({
   isSale: PropTypes.bool.isRequired,
   image: image,
   price: money,
-  actualPrice: money,
+  actualPrice: PropTypes.object,
   addToCartUrl: PropTypes.string,
   defaultUrl: PropTypes.string,
   sellingByWeight: PropTypes.bool,
