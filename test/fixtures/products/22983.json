@@ -279,24 +279,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 5330000,
-          "toF": 53300,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 5330000,
+            "toF": 53300,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       },
       {
         "title": "Велосипед Giant «Rapid 2 Triple» (2015), белый, размер ML",
@@ -333,24 +336,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 5330000,
-          "toF": 53300,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 5330000,
+            "toF": 53300,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       }
     ],
     "images": [

@@ -279,24 +279,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 345000,
-          "toF": 3450,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 345000,
+            "toF": 3450,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       },
       {
         "title": "Муфта для рук Teutonia Grey Leatherette серая кожа",
@@ -333,24 +336,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 345000,
-          "toF": 3450,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 345000,
+            "toF": 3450,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       },
       {
         "title": "Муфта для рук Teutonia",
@@ -387,24 +393,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 285000,
-          "toF": 2850,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 345000,
+            "toF": 3450,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       }
     ],
     "images": [

@@ -257,23 +257,26 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 1000,
-          "toF": 10,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 1000,
+            "toF": 10,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
         }
       },
       {
@@ -313,23 +316,26 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 1000,
-          "toF": 10,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 1000,
+            "toF": 10,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
         }
       },
       {
@@ -369,23 +375,26 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 1000,
-          "toF": 10,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 1000,
+            "toF": 10,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
         }
       }
     ],
@@ -498,24 +507,27 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 5909000,
-            "toF": 59090,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
+            "id": 123,
+            "price": {
+              "cents": 5909000,
+              "toF": 59090,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
             },
-            "currencyIsoCode": "RUB"
-          }
+          },
         }
       ]
     },
@@ -564,24 +576,27 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 359000,
-            "toF": 3590,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
+            "id": 123,
+            "price": {
+              "cents": 359000,
+              "toF": 3590,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
             },
-            "currencyIsoCode": "RUB"
-          }
+          },
         }
       ]
     }

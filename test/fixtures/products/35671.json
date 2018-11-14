@@ -241,24 +241,27 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 59900,
-          "toF": 599,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
+          "id": 123,
+          "price": {
+            "cents": 59900,
+            "toF": 599,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
           },
-          "currencyIsoCode": "RUB"
-        }
+        },
       }
     ],
     "images": [
@@ -328,24 +331,27 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 59900,
-            "toF": 599,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
+            "id": 123,
+            "price": {
+              "cents": 59900,
+              "toF": 599,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
             },
-            "currencyIsoCode": "RUB"
-          }
+          },
         }
       ]
     },
@@ -394,24 +400,27 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 59900,
-            "toF": 599,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
+            "id": 123,
+            "price": {
+              "cents": 59900,
+              "toF": 599,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
             },
-            "currencyIsoCode": "RUB"
-          }
+          },
         }
       ]
     }

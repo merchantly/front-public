@@ -79,8 +79,11 @@ describe('[Component] ProductCart', () => {
                 currencyIsoCode: 'RUB',
               },
               actualPrice: {
-                cents: 120000,
-                currencyIsoCode: 'RUB',
+                id: 123,
+                price: {
+                  cents: 120000,
+                  currencyIsoCode: 'RUB',                  
+                }
               },
             },
           ],
@@ -126,8 +129,11 @@ describe('[Component] ProductCart', () => {
               currencyIsoCode: 'RUB',
             },
             actualPrice: {
-              cents: 120000,
-              currencyIsoCode: 'RUB',
+              id: 123,
+              price: {
+                cents: 120000,
+                currencyIsoCode: 'RUB',                  
+              }
             },
           },
           {
@@ -152,8 +158,11 @@ describe('[Component] ProductCart', () => {
               currencyIsoCode: 'RUB',
             },
             actualPrice: {
-              cents: 120000,
-              currencyIsoCode: 'RUB',
+              id: 123,
+              price: {
+                cents: 120000,
+                currencyIsoCode: 'RUB',                  
+              }
             },
           }
         ],
