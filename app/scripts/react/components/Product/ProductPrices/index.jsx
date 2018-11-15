@@ -14,7 +14,7 @@ class ProductPrices extends Component {
 
       if (good.actualPrice != null && typeof good.actualPrice === 'object') {
         if (good.actualPrice.price.cents < minPrice.cents) {
-          minPrice = good.actualPrice;
+          minPrice = good.actualPrice.price;
         }
       }
     }
@@ -29,7 +29,7 @@ class ProductPrices extends Component {
 
       if (good.actualPrice != null && typeof good.actualPrice === 'object') {
         if (good.actualPrice.price.cents > maxPrice.cents) {
-          maxPrice = good.actualPrice;
+          maxPrice = good.actualPrice.price;
         }
       }
     }
