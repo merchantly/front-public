@@ -33,12 +33,12 @@ class ProductBulk extends Component {
     this.setState({
       price: {
         cents: this.getPrice(value),
-        currencyIsoCode: this.good().actualPrice.currencyIsoCode,
+        currencyIsoCode: this.good().actualPrice.price.currencyIsoCode,
       },
     });
   }
   getPrice(weight){
-    return this.good().actualPrice && this.good().actualPrice.cents * weight / parseFloat(this.props.product.weightOfPrice) || 0;
+    return this.good().actualPrice && this.good().actualPrice.price.cents * weight / parseFloat(this.props.product.weightOfPrice) || 0;
   }
   render() {
     const {
