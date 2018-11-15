@@ -24,6 +24,7 @@ export function addGoods(productGlobalId, items, count=1, weight=null) {
   each(items, (item) => {
     data[param_key(item.good.globalId, 'count')] = item.count;
     data[param_key(item.good.globalId, 'weight')] = item.weight;
+    data[param_key(item.good.globalId, 'product_price_id')] = item.good.actualPrice.id;
   });
 
   return {
@@ -57,6 +58,7 @@ export function addGood(good, count=1, weight=null) {
         method: 'post',
         data: {
           'cart_item[good_id]': good.globalId,
+          'cart_item[product_price_id]': good.actualPrice.id,
           count,
           weight,
         },
