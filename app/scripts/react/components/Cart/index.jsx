@@ -170,7 +170,7 @@ export default provideTranslations(connectToRedux(connect(
         return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
       });
     const selectedPackageMoney = selectedPackage &&
-      getIn(find(packages, (p) => p.globalId === selectedPackage), ['price', 'price']);
+      getIn(find(packages, (p) => p.globalId === selectedPackage), ['price']);
     const selectedPackagePrice = getIn(selectedPackageMoney, ['cents']) || 0;
     const packagePriceCents = !isEmpty(packageItem)
       ? getIn(packageItem, ['good', 'actualPrice', 'price', 'cents']) * packageCount
