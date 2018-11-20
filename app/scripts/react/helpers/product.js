@@ -39,8 +39,8 @@ export function schemaOrgGoodPrice(good, category) {
       <meta itemProp="availability" content={schemaOrgGoodAvailability(good)} />
       {good.actualPrice &&
         <div itemProp="price">
-          <meta itemProp="priceCurrency" content={good.actualPrice.currencyIsoCode} />
-          <div>{money(good.actualPrice)}</div>
+          <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode} />
+          <div>{money(good.actualPrice.price)}</div>
         </div>
       }
     </div>
@@ -51,7 +51,7 @@ export function goodOrderTitle(product, good) {
   let title = good.title;
 
   if (hasDifferentPrices(product)) {
-    title += ` (${humanizedMoneyWithCurrency(good.actualPrice)})`;
+    title += ` (${humanizedMoneyWithCurrency(good.actualPrice.price)})`;
   }
 
   if (good.isRunOut) {
@@ -123,7 +123,7 @@ export function attributeValue(attribute) {
 function hasDifferentPrices(product) {
   const diffCents = product.goods.reduce((prev, good) => {
     if (good.actualPrice) {
-      const actualCents = good.actualPrice.cents;
+      const actualCents = good.actualPrice.price.cents;
 
       if (prev.indexOf(actualCents) === -1) {
         return prev.concat([actualCents]);

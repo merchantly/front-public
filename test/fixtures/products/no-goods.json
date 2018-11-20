@@ -63,8 +63,11 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 5000,
-          "currencyIsoCode": "RUB"
+          "id": 123,
+          "price": {
+            "cents": 5000,
+            "currencyIsoCode": "RUB"
+          }
         }
       }
     ],
@@ -112,8 +115,11 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 100,
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 100,
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]

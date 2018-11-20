@@ -719,8 +719,11 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 69000,
-          "currencyIsoCode": "RUB"
+          "id": 123,
+          "price": {
+            "cents": 69000,
+            "currencyIsoCode": "RUB"
+          }
         }
       }
     ],
@@ -768,8 +771,11 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 7000,
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 7000,
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]
@@ -804,8 +810,11 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 3000,
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 3000,
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]
@@ -840,8 +849,11 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 20000,
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 20000,
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]
@@ -876,8 +888,11 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 40000,
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 40000,
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]

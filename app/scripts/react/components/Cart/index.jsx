@@ -163,7 +163,7 @@ export default provideTranslations(connectToRedux(connect(
 
     const prices = mapValues(amounts, (amount, itemId) => {
         const item = find(cartItems, (i) => String(i.id) === itemId) || {};
-        const actualPrice = getIn(item, ['good', 'actualPrice']) || {};
+        const actualPrice = getIn(item, ['good', 'actualPrice', 'price']) || {};
         const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
         const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
 
@@ -173,7 +173,7 @@ export default provideTranslations(connectToRedux(connect(
       getIn(find(packages, (p) => p.globalId === selectedPackage), ['price']);
     const selectedPackagePrice = getIn(selectedPackageMoney, ['cents']) || 0;
     const packagePriceCents = !isEmpty(packageItem)
-      ? getIn(packageItem, ['good', 'actualPrice', 'cents']) * packageCount
+      ? getIn(packageItem, ['good', 'actualPrice', 'price', 'cents']) * packageCount
       : selectedPackagePrice * packageCount;
     const totalPrice = set(
       cartTotalPrice,
@@ -182,7 +182,7 @@ export default provideTranslations(connectToRedux(connect(
     );
     const isBelowMinimalPrice = !!minimalPrice && ((totalPrice.cents || 0) < minimalPrice.cents);
     const packagePrice = !isEmpty(packageItem)
-      ? set(packageItem.good.actualPrice, 'cents', packagePriceCents)
+      ? set(packageItem.good.actualPrice, 'price', 'cents', packagePriceCents)
       : set(selectedPackageMoney, 'cents', packagePriceCents);
 
     return {

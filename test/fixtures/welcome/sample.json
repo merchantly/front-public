@@ -146,242 +146,140 @@
         "shortDetails": "Серебро",
         "goods": [
           {
-            "id": 45116,
+            "id": 27025,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80NTExNg",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzAyNQ",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 42791,
+            "id": 27689,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5MQ",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY4OQ",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 42792,
+            "id": 27690,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80Mjc5Mg",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MA",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 15370,
+            "id": 27691,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MA",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yNzY5MQ",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 15378,
+            "id": 28474,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OA",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODQ3NA",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 15366,
+            "id": 28503,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Ng",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8yODUwMw",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 15367,
+            "id": 31854,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2Nw",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8zMTg1NA",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
-            "id": 15369,
+            "id": 42665,
             "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OQ",
+            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS80MjY2NQ",
             "isSale": false,
             "price": {
-              "cents": 100000,
+              "cents": 450000,
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15371,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3MQ",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
             },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15372,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mg",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15373,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Mw",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15374,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NA",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15375,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3NQ",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15376,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Ng",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15377,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3Nw",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15379,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM3OQ",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
-          },
-          {
-            "id": 15368,
-            "type": "ProductItem",
-            "globalId": "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xNTM2OA",
-            "isSale": false,
-            "price": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            },
-            "actualPrice": {
-              "cents": 100000,
-              "currencyIsoCode": "RUB"
-            }
           }
         ]
       },
@@ -419,9 +317,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 27689,
@@ -433,9 +334,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 27690,
@@ -447,9 +351,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 27691,
@@ -461,9 +368,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 28474,
@@ -475,9 +385,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 28503,
@@ -489,9 +402,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 31854,
@@ -503,9 +419,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           },
           {
             "id": 42665,
@@ -517,9 +436,12 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 450000,
-              "currencyIsoCode": "RUB"
-            }
+              "id": 123,
+              "price": {
+                "cents": 450000,
+                "currencyIsoCode": "RUB"
+              }
+            },
           }
         ]
       },
@@ -557,8 +479,11 @@
               "currencyIsoCode": "RUB"
             },
             "actualPrice": {
-              "cents": 200000,
-              "currencyIsoCode": "RUB"
+              "id": 123,
+              "price": {
+                "cents": 200000,
+                "currencyIsoCode": "RUB"
+              }
             }
           }
         ]

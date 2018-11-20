@@ -255,23 +255,26 @@
           "currencyIsoCode": "RUB"
         },
         "actualPrice": {
-          "cents": 260000,
-          "toF": 2600,
-          "currency": {
-            "isoCode": "RUB",
-            "isoNumeric": "643",
-            "name": "Russian Ruble",
-            "symbol": "₽",
-            "htmlName": "руб.",
-            "humanName": "Российские рубли",
-            "symbolFirst": false,
-            "thousandsSeparator": " ",
-            "decimalMark": ",",
-            "subunitToUnit": 100,
-            "smallestDenomination": 1,
-            "exponent": 2
-          },
-          "currencyIsoCode": "RUB"
+          "id": 123,
+          "price": {
+            "cents": 260000,
+            "toF": 2600,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
+          }
         }
       }
     ],
@@ -342,23 +345,26 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 260000,
-            "toF": 2600,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
-            },
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 260000,
+              "toF": 2600,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]
@@ -408,23 +414,26 @@
             "currencyIsoCode": "RUB"
           },
           "actualPrice": {
-            "cents": 260000,
-            "toF": 2600,
-            "currency": {
-              "isoCode": "RUB",
-              "isoNumeric": "643",
-              "name": "Russian Ruble",
-              "symbol": "₽",
-              "htmlName": "руб.",
-              "humanName": "Российские рубли",
-              "symbolFirst": false,
-              "thousandsSeparator": " ",
-              "decimalMark": ",",
-              "subunitToUnit": 100,
-              "smallestDenomination": 1,
-              "exponent": 2
-            },
-            "currencyIsoCode": "RUB"
+            "id": 123,
+            "price": {
+              "cents": 260000,
+              "toF": 2600,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
+            }
           }
         }
       ]
