@@ -95,10 +95,16 @@ class ProductProperties extends Component {
       values,
     } = this.state;
 
-    const hiddenInput = good && (
+    const hiddenInputGood = good && (
         <HiddenInput
           name="cart_item[good_id]"
           value={good.globalId}
+        />
+      );
+    const hiddenInputProductPrice = good && (
+        <HiddenInput
+          name="cart_item[product_price_id]"
+          value={good.actualPrice.id}
         />
       );
     const addToCartButton = (
@@ -119,7 +125,8 @@ class ProductProperties extends Component {
           t={t}
           values={values}
         />
-        {hiddenInput}
+        {hiddenInputGood}
+        {hiddenInputProductPrice}
         <div className="b-item-full__form__row b-item-full__form__submit">
           {addToCartButton}
         </div>
