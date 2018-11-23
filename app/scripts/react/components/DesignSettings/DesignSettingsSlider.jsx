@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Slider from '../common/Slider';
+// import Slider from '../common/Slider';
+import Slider, { Range } from 'rc-slider';
 
 export default class DesignSettingsSlider extends Component {
   static propTypes = {
