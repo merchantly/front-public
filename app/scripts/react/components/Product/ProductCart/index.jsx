@@ -27,13 +27,14 @@ export default class ProductCart extends Component {
     multipleChoice: PropTypes.bool,
     notAvailableContent: PropTypes.string,
     showAuthForBuyButton: PropTypes.bool,
+    vendorClientSigninPath: PropTypes.string,
   }
   static defaultProps = {
     formAuthenticity: {},
   }
 
   redirectToSignIn() {
-    window.location.href = '/signin'
+    window.location.href = this.props.vendorClientSigninPath
   }
 
   renderContent(product, t, showAuthForBuyButton) {

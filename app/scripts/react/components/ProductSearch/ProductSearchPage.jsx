@@ -14,6 +14,7 @@ class ProductSearchPage extends Component {
       products,
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
       vendorRootPath,
@@ -27,6 +28,7 @@ class ProductSearchPage extends Component {
           products={products}
           showCartButton={showCartButton}
           showAuthForBuyButton={showAuthForBuyButton}
+          vendorClientSigninPath={vendorClientSigninPath}
           showCatalogFilter={showCatalogFilter}
           showQuantity={showQuantity}
           vendorRootPath={vendorRootPath}
@@ -44,6 +46,7 @@ ProductSearchPage.propTypes = {
   showCatalogFilter: PropTypes.bool,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   vendorRootPath: PropTypes.string,
 };

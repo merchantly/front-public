@@ -14,6 +14,7 @@ class ChildrenProducts extends Component {
       i18n,
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
       title,
@@ -38,6 +39,7 @@ class ChildrenProducts extends Component {
             products={{ items: products }}
             showCartButton={showCartButton}
             showAuthForBuyButton={showAuthForBuyButton}
+            vendorClientSigninPath={vendorClientSigninPath}
             showCatalogFilter={showCatalogFilter && idx === 0}
             showQuantity={showQuantity}
             title={title}
@@ -56,6 +58,7 @@ ChildrenProducts.propTypes = {
   i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
@@ -67,6 +70,7 @@ ChildrenProducts.defaultProps = {
   childrenProducts: [],
   showCartButton: false,
   showAuthForBuyButton: false,
+  vendorClientSigninPath: '/signin',
   showCatalogFilter: false,
   showQuantity: false,
 };

@@ -18,6 +18,7 @@ ProductSearchContainer.propTypes = {
   showCatalogFilter: PropTypes.bool.isRequired,
   showCartButton: PropTypes.bool.isRequired,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
   vendorRootPath: PropTypes.string,
@@ -31,6 +32,7 @@ ProductSearchContainer.defaultProps = {
   showCatalogFilter: false,
   showCartButton: false,
   showAuthForBuyButton: false,
+  vendorClientSigninPath: '',
   showQuantity: false,
 };
 

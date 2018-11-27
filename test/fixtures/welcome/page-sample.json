@@ -1284,6 +1284,7 @@
   "showPaginationOnWelcome": true,
   "showCartButton": true,
   "showAuthForBuyButton": true,
+  "vendorClientSigninPath": "/signin?backurl=123",
   "showQuantity": false,
   "showWelcomeSlider": true,
   "vendor": {

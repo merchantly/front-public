@@ -81,7 +81,8 @@ class ProductCard extends Component {
       t,
       multipleChoice,
       deliveryRestrictionMessages,
-      showAuthForBuyButton
+      showAuthForBuyButton,
+      vendorClientSigninPath
     } = this.props;
     const {
       good,
@@ -191,6 +192,7 @@ ProductCard.propTypes = {
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   notAvailableContent: PropTypes.string,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
 };
 
 ProductCard.defaultProps = {
@@ -204,6 +206,7 @@ ProductCard.defaultProps = {
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
   showAuthForBuyButton: false,
+  vendorClientSigninPath: ''
 };
 
 export default provideTranslations(connectToRedux(connect(

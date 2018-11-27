@@ -23,6 +23,7 @@ class ProductGroup extends Component {
       },
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
       t,
@@ -52,6 +53,7 @@ class ProductGroup extends Component {
               product={item}
               showCartButton={showCartButton}
               showAuthForBuyButton={showAuthForBuyButton}
+              vendorClientSigninPath={vendorClientSigninPath}
               showQuantity={showQuantity}
             />
           ))}
@@ -72,6 +74,7 @@ ProductGroup.propTypes = {
   products: PropTypes.object.isRequired,
   showCartButton: PropTypes.bool.isRequired,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,

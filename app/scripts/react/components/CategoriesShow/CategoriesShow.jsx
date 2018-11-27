@@ -16,6 +16,7 @@ class CategoriesShow extends Component {
       catalogFilterProps,
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showPagination,
       showQuantity,
@@ -34,6 +35,7 @@ class CategoriesShow extends Component {
           catalogFilterProps={catalogFilterProps}
           showCartButton={showCartButton}
           showAuthForBuyButton={showAuthForBuyButton}
+          vendorClientSigninPath={vendorClientSigninPath}
           showCatalogFilter={showCatalogFilter}
           showPagination={showPagination}
           showQuantity={showQuantity}
@@ -56,6 +58,7 @@ CategoriesShow.propTypes = {
   container: ProductList.propTypes.container,
   showCartButton: ProductList.propTypes.showCartButton,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: ProductList.propTypes.showCatalogFilter,
   showPagination: ProductList.propTypes.showPagination,
   showQuantity: ProductList.propTypes.showQuantity,

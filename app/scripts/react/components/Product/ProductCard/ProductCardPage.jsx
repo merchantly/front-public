@@ -24,7 +24,8 @@ class ProductCardPage extends Component {
       multipleChoice,
       deliveryRestrictionMessages,
       notAvailableContent,
-      showAuthForBuyButton
+      showAuthForBuyButton,
+      vendorClientSigninPath,
     } = this.props;
 
     return (
@@ -46,7 +47,8 @@ class ProductCardPage extends Component {
           multipleChoice,
           deliveryRestrictionMessages,
           notAvailableContent,
-          showAuthForBuyButton
+          showAuthForBuyButton,
+          vendorClientSigninPath
         }} />
       </VendorLayoutContainer>
     );
@@ -72,6 +74,7 @@ ProductCardPage.propTypes = {
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   notAvailableContent: PropTypes.string,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -84,7 +87,8 @@ ProductCardPage.defaultProps = {
   otherProducts: [],
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
-  showAuthForBuyButton: false
+  showAuthForBuyButton: false,
+  vendorClientSigninPath: ''
 };
 
 export default ProductCardPage;

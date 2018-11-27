@@ -15,6 +15,7 @@ WelcomeChildrenContainer.propTypes = {
   vendor: schemas.vendor,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool
 };

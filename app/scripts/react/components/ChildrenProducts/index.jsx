@@ -16,6 +16,7 @@ ChildrenProductsContainer.propTypes = {
   i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
@@ -25,6 +26,7 @@ ChildrenProductsContainer.defaultProps = {
   childrenProducts: [],
   showCartButton: false,
   showAuthForBuyButton: false,
+  vendorClientSigninPath: '/signin',
   showCatalogFilter: false,
   showQuantity: false,
 };

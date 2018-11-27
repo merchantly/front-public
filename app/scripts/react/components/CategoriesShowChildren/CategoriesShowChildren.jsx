@@ -8,6 +8,7 @@ class CategoriesShowChildren extends Component {
       childrenProducts,
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showQuantity,
       t,
       title,
@@ -21,6 +22,7 @@ class CategoriesShowChildren extends Component {
           childrenProducts={childrenProducts}
           showCartButton={showCartButton}
           showAuthForBuyButton={showAuthForBuyButton}
+          vendorClientSigninPath={vendorClientSigninPath}
           showQuantity={showQuantity}
           title={title}
           container={container}
@@ -43,6 +45,7 @@ CategoriesShowChildren.propTypes = {
   childrenProducts: PropTypes.array.isRequired,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,

@@ -27,7 +27,7 @@ class ProductBlock extends Component {
   }
 
   redirectToSignIn() {
-    window.location.href = '/signin'
+    window.location.href =  this.props.vendorClientSigninPath
   }
 
   render () {
@@ -109,6 +109,7 @@ ProductBlock.propTypes = {
   product: PropTypes.object.isRequired,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
 };
@@ -116,6 +117,7 @@ ProductBlock.propTypes = {
 ProductBlock.defaultProps = {
   showCartButton: false,
   showAuthForBuyButton: false,
+  vendorClientSigninPath: '',
   showQuantity: false,
 };
 

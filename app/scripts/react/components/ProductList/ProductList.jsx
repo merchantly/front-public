@@ -23,6 +23,7 @@ class ProductList extends Component {
       },
       showCartButton,
       showAuthForBuyButton,
+      vendorClientSigninPath,
       showNextButton,
       showPagination,
       showQuantity,
@@ -53,6 +54,7 @@ class ProductList extends Component {
                 product={item}
                 showCartButton={showCartButton}
                 showAuthForBuyButton={showAuthForBuyButton}
+                vendorClientSigninPath={vendorClientSigninPath}
                 showQuantity={showQuantity}
               />
             ))
@@ -91,6 +93,7 @@ ProductList.propTypes = {
   }).isRequired,
   showCartButton: PropTypes.bool,
   showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showPagination: PropTypes.bool,
   showQuantity: PropTypes.bool,
