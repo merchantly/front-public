@@ -17,6 +17,7 @@ ProductSearchContainer.propTypes = {
   products: schemas.productList.isRequired,
   showCatalogFilter: PropTypes.bool.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showAuthForBuyButton: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,
   vendorRootPath: PropTypes.string,
@@ -29,6 +30,7 @@ ProductSearchContainer.defaultProps = {
   },
   showCatalogFilter: false,
   showCartButton: false,
+  showAuthForBuyButton: false,
   showQuantity: false,
 };
 

@@ -14,6 +14,7 @@ WelcomeChildrenContainer.propTypes = {
   showWelcomeSlider: PropTypes.bool,
   vendor: schemas.vendor,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool
 };

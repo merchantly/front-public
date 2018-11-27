@@ -15,6 +15,7 @@ class Welcome extends Component {
       nextButton,
       products,
       showCartButton,
+      showAuthForBuyButton,
       showCatalogFilter,
       showNextButton,
       showPaginationOnWelcome,
@@ -57,6 +58,7 @@ class Welcome extends Component {
               nextButton={nextButton}
               products={products}
               showCartButton={showCartButton}
+              showAuthForBuyButton={showAuthForBuyButton}
               showCatalogFilter={showCatalogFilter}
               showNextButton={showNextButton}
               showPagination={showPaginationOnWelcome}
@@ -84,6 +86,7 @@ Welcome.propTypes = {
   nextButton: PropTypes.object,
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool.isRequired,
   showNextButton: PropTypes.bool,
   showPaginationOnWelcome: PropTypes.bool.isRequired,

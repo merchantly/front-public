@@ -7,6 +7,7 @@ class CategoriesShowChildren extends Component {
     const {
       childrenProducts,
       showCartButton,
+      showAuthForBuyButton,
       showQuantity,
       t,
       title,
@@ -19,6 +20,7 @@ class CategoriesShowChildren extends Component {
         <ChildrenProducts
           childrenProducts={childrenProducts}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
           showQuantity={showQuantity}
           title={title}
           container={container}
@@ -40,6 +42,7 @@ class CategoriesShowChildren extends Component {
 CategoriesShowChildren.propTypes = {
   childrenProducts: PropTypes.array.isRequired,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,

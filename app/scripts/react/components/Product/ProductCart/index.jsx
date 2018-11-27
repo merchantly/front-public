@@ -26,35 +26,51 @@ export default class ProductCart extends Component {
     wishlistUrl: PropTypes.string,
     multipleChoice: PropTypes.bool,
     notAvailableContent: PropTypes.string,
+    showAuthForBuyButton: PropTypes.bool,
   }
   static defaultProps = {
     formAuthenticity: {},
   }
-  renderContent(product, t) {
-    if (product.hasOrderingGoods) {
-      if (product.goods.length === 1) {
-        return (
-          <ProductCartForProduct
-            {...this.props}
-            good={product.goods[0]}
-            t={t}
-          />
-        );
-      } else {
-        if (this.props.multipleChoice) {
+
+  redirectToSignIn() {
+    window.location.href = '/signin'
+  }
+
+  renderContent(product, t, showAuthForBuyButton) {
+    if (showAuthForBuyButton) {
+      return (
+        <div className="b-item-full__form__submit">
+          <div className="b-btn b-btn_trans" onClick={this.redirectToSignIn.bind(this)}>
+            {this.props.t('vendor.button.auth_for_buy')}
+          </div>
+        </div>
+      )
+    } else {
+      if (product.hasOrderingGoods) {
+        if (product.goods.length === 1) {
           return (
-            <ProductCartMultipleChoice isAddingGood={this.props.isAddingGood} productGlobalId={product.globalId} goods={product.goods} properties={product.properties} t={t} />
+            <ProductCartForProduct
+              {...this.props}
+              good={product.goods[0]}
+              t={t}
+            />
           );
         } else {
-          return (
-            <ProductCartForProductItems {...this.props} t={t} />
-          );
+          if (this.props.multipleChoice) {
+            return (
+              <ProductCartMultipleChoice isAddingGood={this.props.isAddingGood} productGlobalId={product.globalId} goods={product.goods} properties={product.properties} t={t} />
+            );
+          } else {
+            return (
+              <ProductCartForProductItems {...this.props} t={t} />
+            );
+          }
         }
+      } else {
+        return (
+          <ProductCartNotAvailable {...this.props} t={t} />
+        );
       }
-    } else {
-      return (
-        <ProductCartNotAvailable {...this.props} t={t} />
-      );
     }
   }
   renderProductBulkInput(product, good, t){
@@ -81,7 +97,8 @@ export default class ProductCart extends Component {
       t,
       good,
       onSubmit,
-      formAuthenticity
+      formAuthenticity,
+      showAuthForBuyButton
     } = this.props;
 
     return (
@@ -97,7 +114,7 @@ export default class ProductCart extends Component {
           <CSRFToken {...formAuthenticity} />
         </div>
         {this.renderProductBulkInput(product, good, t)}
-        {this.renderContent(product, t)}
+        {this.renderContent(product, t, showAuthForBuyButton)}
       </form>
     );
   }

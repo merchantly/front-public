@@ -22,6 +22,7 @@ class ProductGroup extends Component {
         items,
       },
       showCartButton,
+      showAuthForBuyButton,
       showCatalogFilter,
       showQuantity,
       t,
@@ -50,6 +51,7 @@ class ProductGroup extends Component {
               key={`product-block-${item.id}`}
               product={item}
               showCartButton={showCartButton}
+              showAuthForBuyButton={showAuthForBuyButton}
               showQuantity={showQuantity}
             />
           ))}
@@ -69,6 +71,7 @@ ProductGroup.propTypes = {
   i18n: PropTypes.object,
   products: PropTypes.object.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool.isRequired,
   t: PropTypes.func.isRequired,

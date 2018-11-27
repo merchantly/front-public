@@ -23,7 +23,8 @@ class ProductCardPage extends Component {
       newOrderUrl,
       multipleChoice,
       deliveryRestrictionMessages,
-      notAvailableContent
+      notAvailableContent,
+      showAuthForBuyButton
     } = this.props;
 
     return (
@@ -44,7 +45,8 @@ class ProductCardPage extends Component {
           wishlistUrl,
           multipleChoice,
           deliveryRestrictionMessages,
-          notAvailableContent
+          notAvailableContent,
+          showAuthForBuyButton
         }} />
       </VendorLayoutContainer>
     );
@@ -68,7 +70,8 @@ ProductCardPage.propTypes = {
   isOneClickBuy: PropTypes.bool,
   wishlistUrl: PropTypes.string,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-  notAvailableContent: PropTypes.string
+  notAvailableContent: PropTypes.string,
+  showAuthForBuyButton: PropTypes.bool,
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -80,7 +83,8 @@ ProductCardPage.defaultProps = {
   similarProducts: [],
   otherProducts: [],
   deliveryRestrictionMessages: [],
-  notAvailableContent: ''
+  notAvailableContent: '',
+  showAuthForBuyButton: false
 };
 
 export default ProductCardPage;

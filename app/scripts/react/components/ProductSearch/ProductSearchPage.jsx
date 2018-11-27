@@ -13,6 +13,7 @@ class ProductSearchPage extends Component {
       layoutProps,
       products,
       showCartButton,
+      showAuthForBuyButton,
       showCatalogFilter,
       showQuantity,
       vendorRootPath,
@@ -25,6 +26,7 @@ class ProductSearchPage extends Component {
           i18n={i18n}
           products={products}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
           showCatalogFilter={showCatalogFilter}
           showQuantity={showQuantity}
           vendorRootPath={vendorRootPath}
@@ -41,6 +43,7 @@ ProductSearchPage.propTypes = {
   products: schemas.productList.isRequired,
   showCatalogFilter: PropTypes.bool,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showQuantity: PropTypes.bool,
   vendorRootPath: PropTypes.string,
 };

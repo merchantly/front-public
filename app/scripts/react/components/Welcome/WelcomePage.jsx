@@ -14,6 +14,7 @@ class WelcomePage extends Component {
       layoutProps,
       products,
       showCartButton,
+      showAuthForBuyButton,
       showCatalogFilter,
       showPaginationOnWelcome,
       showQuantity,
@@ -29,6 +30,7 @@ class WelcomePage extends Component {
           isFilterDirty={isFilterDirty}
           products={products}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
           showCatalogFilter={showCatalogFilter}
           showPaginationOnWelcome={showPaginationOnWelcome}
           showQuantity={showQuantity}
@@ -47,6 +49,7 @@ WelcomePage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool.isRequired,
   showPaginationOnWelcome: PropTypes.bool.isRequired,
   showQuantity: PropTypes.bool.isRequired,

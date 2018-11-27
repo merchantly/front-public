@@ -13,6 +13,7 @@ class WelcomeChildrenPage extends Component {
       showWelcomeSlider,
       vendor,
       showCartButton,
+      showAuthForBuyButton,
       showCatalogFilter,
       showQuantity
     } = this.props;
@@ -24,6 +25,7 @@ class WelcomeChildrenPage extends Component {
           showWelcomeSlider={showWelcomeSlider}
           vendor={vendor}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
           showCatalogFilter={showCatalogFilter}
           showQuantity={showQuantity}
         />
@@ -35,6 +37,7 @@ class WelcomeChildrenPage extends Component {
 WelcomeChildrenPage.propTypes = {
   childrenProducts: schemas.childrenProducts,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   i18n: PropTypes.object,

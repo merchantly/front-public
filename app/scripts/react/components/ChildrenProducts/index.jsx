@@ -15,6 +15,7 @@ ChildrenProductsContainer.propTypes = {
   childrenProducts: schemas.childrenProducts.isRequired,
   i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
@@ -23,6 +24,7 @@ ChildrenProductsContainer.propTypes = {
 ChildrenProductsContainer.defaultProps = {
   childrenProducts: [],
   showCartButton: false,
+  showAuthForBuyButton: false,
   showCatalogFilter: false,
   showQuantity: false,
 };

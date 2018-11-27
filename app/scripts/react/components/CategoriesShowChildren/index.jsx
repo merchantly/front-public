@@ -15,6 +15,7 @@ CategoriesShowChildrenContainer.propTypes = {
   childrenProducts: ChildrenProducts.propTypes.childrenProducts,
   container: schemas.container.isRequired,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
   showQuantity: PropTypes.bool,
   t: PropTypes.func,
   title: PropTypes.string,
@@ -25,6 +26,7 @@ CategoriesShowChildrenContainer.defaultProps = {
   container: {},
   childrenProducts: [],
   showCartButton: false,
+  showAuthForBuyButton: false,
   showQuantity: false,
   vendorRootPath: '',
 };

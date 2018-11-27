@@ -80,7 +80,8 @@ class ProductCard extends Component {
       otherProducts,
       t,
       multipleChoice,
-      deliveryRestrictionMessages
+      deliveryRestrictionMessages,
+      showAuthForBuyButton
     } = this.props;
     const {
       good,
@@ -188,7 +189,8 @@ ProductCard.propTypes = {
   newOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-  notAvailableContent: PropTypes.string
+  notAvailableContent: PropTypes.string,
+  showAuthForBuyButton: PropTypes.bool,
 };
 
 ProductCard.defaultProps = {
@@ -200,7 +202,8 @@ ProductCard.defaultProps = {
   similarProducts: [],
   otherProducts: [],
   deliveryRestrictionMessages: [],
-  notAvailableContent: ''
+  notAvailableContent: '',
+  showAuthForBuyButton: false,
 };
 
 export default provideTranslations(connectToRedux(connect(
