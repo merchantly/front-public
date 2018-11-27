@@ -4,6 +4,7 @@ import FormAuthenticity from 'rc/common/FormAuthenticity';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
 import Select from '../common/Select';
+import MaskedInput from 'react-maskedinput'
 
 class ClientRegistration extends Component {
   constructor(props) {
@@ -61,12 +62,12 @@ class ClientRegistration extends Component {
             </div>
             <div className="b-form__row__widget">
               <div className="form-group-first">
-                <input
+                <MaskedInput
                   id="client_registration_form_phone"
                   name="client_registration_form[phone]"
-                  placeholder={t('vendor.client.placeholders.phone')}
                   type="text"
                   defaultValue={inputFields['phone'].value}
+                  mask="+7(111)-111-11-11"
                 />
                 {inputFields['phone'].errorMessage &&
                   <span className="help-block">{inputFields['phone'].errorMessage}</span>
