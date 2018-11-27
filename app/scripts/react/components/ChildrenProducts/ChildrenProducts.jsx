@@ -13,6 +13,8 @@ class ChildrenProducts extends Component {
       childrenProducts,
       i18n,
       showCartButton,
+      showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
       title,
@@ -36,6 +38,8 @@ class ChildrenProducts extends Component {
             key={`product-group-${idx}`}
             products={{ items: products }}
             showCartButton={showCartButton}
+            showAuthForBuyButton={showAuthForBuyButton}
+            vendorClientSigninPath={vendorClientSigninPath}
             showCatalogFilter={showCatalogFilter && idx === 0}
             showQuantity={showQuantity}
             title={title}
@@ -53,6 +57,8 @@ ChildrenProducts.propTypes = {
   childrenProducts: schemas.childrenProducts.isRequired,
   i18n: PropTypes.object,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
@@ -63,6 +69,8 @@ ChildrenProducts.defaultProps = {
   container: {},
   childrenProducts: [],
   showCartButton: false,
+  showAuthForBuyButton: false,
+  vendorClientSigninPath: '/signin',
   showCatalogFilter: false,
   showQuantity: false,
 };

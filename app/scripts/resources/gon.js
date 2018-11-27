@@ -285,6 +285,7 @@ global.gon = {
           'go_wishlist': 'Перейти в "Список желаний"',
           'to_wishlist': 'Хочу!',
           'already': 'Уже в корзине',
+          'auth_for_buy': 'Войдите, чтобы купить',
           'publish_shop': {
             'text': 'Опубликовать'
           },

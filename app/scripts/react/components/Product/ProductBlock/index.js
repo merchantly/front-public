@@ -25,8 +25,13 @@ class ProductBlock extends Component {
   handleMouseLeave() {
     this.setState({ isHover: false });
   }
+
+  redirectToSignIn() {
+    window.location.href =  this.props.vendorClientSigninPath
+  }
+
   render () {
-    const { showCartButton, showQuantity, product, t } = this.props;
+    const { showCartButton, showAuthForBuyButton, showQuantity, product, t } = this.props;
     const { isHover } = this.state;
 
     return (
@@ -59,23 +64,39 @@ class ProductBlock extends Component {
             <ProductPrices product={product} t={t} />
           </AppLink>
           {(showCartButton && product.hasOrderingGoods) && (
-            <div className="b-item__cart-form">
-              {(product.goods.length === 1) && (
-                <ProductBlockCartFormButton
-                  product={product}
-                  showQuantity={showQuantity}
-                  t={t}
-                />
-              )}
-              {(product.goods.length > 1) && (
-                <AppLink
-                  className="b-btn element--active"
-                  hash={productRoute(product.id)}
-                  href={product.publicUrl}
-                >
-                  {t('vendor.more')}
-                </AppLink>
-              )}
+            <div>
+              {showAuthForBuyButton 
+                ? (
+                  <div className="b-item__cart-form">
+                    <button
+                      className="b-btn element--active"
+                      onClick={this.redirectToSignIn.bind(this)}
+                    >
+                      {t('vendor.button.auth_for_buy')}
+                    </button>
+                  </div>
+                ) 
+                : (
+                  <div className="b-item__cart-form">
+                    {(product.goods.length === 1) && (
+                      <ProductBlockCartFormButton
+                        product={product}
+                        showQuantity={showQuantity}
+                        t={t}
+                      />
+                    )}
+                    {(product.goods.length > 1) && (
+                      <AppLink
+                        className="b-btn element--active"
+                        hash={productRoute(product.id)}
+                        href={product.publicUrl}
+                      >
+                        {t('vendor.more')}
+                      </AppLink>
+                    )}
+                  </div>
+                )
+              }
             </div>
           )}
         </div>
@@ -87,12 +108,16 @@ class ProductBlock extends Component {
 ProductBlock.propTypes = {
   product: PropTypes.object.isRequired,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
 };
 
 ProductBlock.defaultProps = {
   showCartButton: false,
+  showAuthForBuyButton: false,
+  vendorClientSigninPath: '',
   showQuantity: false,
 };
 

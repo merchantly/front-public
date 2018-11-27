@@ -1211,6 +1211,8 @@
     "token": "qGUP0Nny5BDETXmb0h2RL15mnIigaQ5pWG/U5HFKV7o=",
     "field": "authenticity_token"
   },
+  "showAuthForBuyButton": true,
+  "vendorClientSigninPath": "/signin?backurl=123",
   "hasComments": false,
   "disqusUrl": null,
   "wishlistUrl": "http://chestnayaferma.ru/wishlist",

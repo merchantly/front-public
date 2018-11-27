@@ -11,6 +11,8 @@ class CategoriesShowChildrenPage extends Component {
       i18n,
       layoutProps,
       showCartButton,
+      showAuthForBuyButton,
+      vendorClientSigninPath,
       showQuantity,
       title,
       vendorRootPath,
@@ -23,6 +25,8 @@ class CategoriesShowChildrenPage extends Component {
           childrenProducts={childrenProducts}
           i18n={i18n}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
+          vendorClientSigninPath={vendorClientSigninPath}
           showQuantity={showQuantity}
           title={title}
           vendorRootPath={vendorRootPath}
@@ -38,6 +42,8 @@ CategoriesShowChildrenPage.propTypes = {
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,

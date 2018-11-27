@@ -15,6 +15,8 @@ CategoriesShowContainer.propTypes = {
   container: schemas.container.isRequired,
   catalogFilterProps: ProductList.wrapped.propTypes.catalogFilterProps,
   showCartButton: ProductList.wrapped.propTypes.showCartButton,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: ProductList.wrapped.propTypes.showCatalogFilter,
   showPagination: ProductList.wrapped.propTypes.showPagination,
   showQuantity: ProductList.wrapped.propTypes.showQuantity,

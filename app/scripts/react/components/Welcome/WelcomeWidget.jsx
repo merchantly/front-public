@@ -25,6 +25,8 @@ class WelcomeWidget extends Component {
       isFilterDirty,
       products,
       showCartButton,
+      showAuthForBuyButton,
+      vendorClientSigninPath,
       showCatalogFilter,
       showPaginationOnWelcome,
       showQuantity,
@@ -45,6 +47,8 @@ class WelcomeWidget extends Component {
               isFilterDirty={isFilterDirty}
               products={products}
               showCartButton={showCartButton}
+              showAuthForBuyButton={showAuthForBuyButton}
+              vendorClientSigninPath={vendorClientSigninPath}
               showCatalogFilter={showCatalogFilter}
               showPaginationOnWelcome={showPaginationOnWelcome}
               showQuantity={showQuantity}
@@ -64,6 +68,8 @@ WelcomeWidget.propTypes = {
   isFilterDirty: PropTypes.bool.isRequired,
   products: schemas.productList.isRequired,
   showCartButton: PropTypes.bool.isRequired,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool.isRequired,
   showPaginationOnWelcome: PropTypes.bool.isRequired,
   showQuantity: PropTypes.bool.isRequired,

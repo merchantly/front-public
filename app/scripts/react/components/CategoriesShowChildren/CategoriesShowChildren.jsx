@@ -7,6 +7,8 @@ class CategoriesShowChildren extends Component {
     const {
       childrenProducts,
       showCartButton,
+      showAuthForBuyButton,
+      vendorClientSigninPath,
       showQuantity,
       t,
       title,
@@ -19,6 +21,8 @@ class CategoriesShowChildren extends Component {
         <ChildrenProducts
           childrenProducts={childrenProducts}
           showCartButton={showCartButton}
+          showAuthForBuyButton={showAuthForBuyButton}
+          vendorClientSigninPath={vendorClientSigninPath}
           showQuantity={showQuantity}
           title={title}
           container={container}
@@ -40,6 +44,8 @@ class CategoriesShowChildren extends Component {
 CategoriesShowChildren.propTypes = {
   childrenProducts: PropTypes.array.isRequired,
   showCartButton: PropTypes.bool,
+  showAuthForBuyButton: PropTypes.bool,
+  vendorClientSigninPath: PropTypes.string,
   showQuantity: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
