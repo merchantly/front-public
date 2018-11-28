@@ -689,5 +689,30 @@
         "deliveryState": "Отменена"
       }
     ]
-  }
+  },
+  "clientForm": {
+    "delivery": {
+      "currentDeliveryId": 1,
+      "errorMessage": "Неизвестная доставка",
+      "list": [{"title": "Почта России", "id": 1}, {"title": "Яндекс доставка", "id": 2}],
+    },
+    "payment": {
+      "currentPaymentId": 1,
+      "errorMessage": "Неизвестный тип платежа",
+      "list": [{"title": "Робокасса", "id": 1}, {"title": "Клауд", "id": 2 }],
+    },
+    "address": {
+      "value": "Миттова д 29 кв 69",
+      "errorMessage": "Неккоректный адрес",
+    },
+    "cityTitle": {
+      "value": "Чебоксары",
+      "errorMessage": "Неккоректный город",
+    },
+    "formAuthenticity": {
+      "token": "",
+      "field": "authenticity_token"
+    },
+    "clientUpdatePath": "cabinet",
+  },
 }
