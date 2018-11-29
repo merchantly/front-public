@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Select from '../common/Select';
 import * as schemas from 'r/schemas';
 import FormAuthenticity from '../common/FormAuthenticity';
+import HiddenInput from '../common/HiddenInput';
 
 class ClientForm extends Component {
   constructor(props) {
@@ -48,9 +49,10 @@ class ClientForm extends Component {
             noValidate
           >
             <h2 className="form-title">
-              {t('vendor.client.clientForm.title')}
+              {t('vendor.client.client_form.title')}
             </h2>
             <FormAuthenticity {...formAuthenticity} />
+            <HiddenInput name="_method" value="put" />
             <div className="b-form__row__widget">
               <div className="form-group-first">
                 <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
