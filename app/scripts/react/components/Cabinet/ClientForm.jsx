@@ -67,7 +67,7 @@ class ClientForm extends Component {
                 </div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_second_name"}>
                       {t('vendor.client.titles.second_name')}
                     </label>
                     <input
@@ -84,7 +84,7 @@ class ClientForm extends Component {
                 </div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_patronymic"}>
                       {t('vendor.client.titles.patronymic')}
                     </label>
                     <input
@@ -103,7 +103,7 @@ class ClientForm extends Component {
           ) : (
             <div className="b-form__row__widget">
               <div className="form-group-first">
-                <label className="string control-label" htmlFor={"client_first_name"}>
+                <label className="string control-label" htmlFor={"client_name"}>
                   {t('vendor.client.titles.name')}
                 </label>
                 <input
@@ -137,6 +137,7 @@ class ClientForm extends Component {
       house,
       room,
       slash,
+      street,
       t
     } = this.props;
 
@@ -146,7 +147,7 @@ class ClientForm extends Component {
           ? ( <div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_region"}>
                       {t('vendor.client.titles.region')}
                     </label>
                     <input
@@ -163,7 +164,24 @@ class ClientForm extends Component {
                 </div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_street"}>
+                      {t('vendor.client.titles.street')}
+                    </label>
+                    <input
+                      id="client_street"
+                      name="client[street]"
+                      placeholder={t('vendor.client.placeholders.street')}
+                      type="text"
+                      defaultValue={street.value}
+                    />
+                    {street.errorMessage &&
+                      <span className="help-block">{street.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_house"}>
                       {t('vendor.client.titles.house')}
                     </label>
                     <input
@@ -180,7 +198,7 @@ class ClientForm extends Component {
                 </div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_room"}>
                       {t('vendor.client.titles.room')}
                     </label>
                     <input
@@ -197,11 +215,11 @@ class ClientForm extends Component {
                 </div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
-                    <label className="string control-label" htmlFor={"client_first_name"}>
+                    <label className="string control-label" htmlFor={"client_slash"}>
                       {t('vendor.client.titles.slash')}
                     </label>
                     <input
-                      id="client_address"
+                      id="client_slash"
                       name="client[slash]"
                       placeholder={t('vendor.client.placeholders.slash')}
                       type="text"
@@ -216,7 +234,7 @@ class ClientForm extends Component {
           ) : (
             <div className="b-form__row__widget">
               <div className="form-group-first">
-                <label className="string control-label" htmlFor={"client_first_name"}>
+                <label className="string control-label" htmlFor={"client_address"}>
                   {t('vendor.client.titles.address')}
                 </label>
                 <input
@@ -305,7 +323,7 @@ class ClientForm extends Component {
             {this.renderName()}
             <div className="b-form__row__widget">
               <div className="form-group-first">
-                <label className="string control-label" htmlFor={"client_first_name"}>
+                <label className="string control-label" htmlFor={"client_city_title"}>
                   {t('vendor.client.titles.city_title')}
                 </label>
                 <input
@@ -357,6 +375,10 @@ ClientForm.propTypes = {
   }),
   region: PropTypes.shape({
     value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  street: PropTypes.shape({
+    value: PropTypes.integer,
     errorMessage: PropTypes.string,
   }),
   house: PropTypes.shape({

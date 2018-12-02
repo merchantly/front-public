@@ -714,6 +714,10 @@
       "value": "Чувашия",
       "errorMessage": "Некорректный регион",
     },
+    "street": {
+      "value": "Миттова",
+      "errorMessage": "Некорректная улица",
+    },
     "house": {
       "value": 29,
       "errorMessage": "Некорректный дом",
