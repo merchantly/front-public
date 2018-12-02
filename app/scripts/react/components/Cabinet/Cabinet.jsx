@@ -126,28 +126,7 @@ Cabinet.propTypes = {
     totalPages: Pagination.propTypes.totalPages,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
-  clientForm: PropTypes.shape({
-    delivery: PropTypes.shape({
-      currentDeliveryId: PropTypes.integer,
-      errorMessage: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.object),
-    }),
-    payment: PropTypes.shape({
-      currentPaymentId: PropTypes.integer,
-      errorMessage: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.object),
-    }),
-    address: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string,
-    }),
-    cityTitle: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string,
-    }),
-    formAuthenticity: schemas.formAuthenticity,
-    clientUpdatePath: PropTypes.string,
-  }),
+  clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
   t: PropTypes.func.isRequired,
 };
 

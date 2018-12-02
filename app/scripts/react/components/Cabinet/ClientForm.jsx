@@ -4,6 +4,8 @@ import Select from '../common/Select';
 import * as schemas from 'r/schemas';
 import FormAuthenticity from '../common/FormAuthenticity';
 import HiddenInput from '../common/HiddenInput';
+import { find } from 'lodash';
+
 
 class ClientForm extends Component {
   constructor(props) {
@@ -23,21 +25,232 @@ class ClientForm extends Component {
     this.setState({ paymentId: paymentId });
   }
 
+  deliveryById(deliveryId) {
+    return find(this.props.delivery.list, (d) => d.id == deliveryId)
+  }
+
+  renderName() {
+    const {
+      deliveryId,
+    } = this.state;
+
+    const {
+      firstName,
+      secondName,
+      patronymic,
+      name,
+      t
+    } = this.props;
+
+    const delivery = this.deliveryById(deliveryId);
+
+    return (
+      <div>
+        { delivery.isSeparateName 
+          ? ( <div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.first_name')}
+                    </label>
+                    <input
+                      id="client_first_name"
+                      name="client[first_name]"
+                      placeholder={t('vendor.client.placeholders.first_name')}
+                      type="text"
+                      defaultValue={firstName.value}
+                    />
+                    {firstName.errorMessage &&
+                      <span className="help-block">{firstName.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.second_name')}
+                    </label>
+                    <input
+                      id="client_second_name"
+                      name="client[second_name]"
+                      placeholder={t('vendor.client.placeholders.second_name')}
+                      type="text"
+                      defaultValue={secondName.value}
+                    />
+                    {secondName.errorMessage &&
+                      <span className="help-block">{secondName.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.patronymic')}
+                    </label>
+                    <input
+                      id="client_patronymic"
+                      name="client[patronymic]"
+                      placeholder={t('vendor.client.placeholders.patronymic')}
+                      type="text"
+                      defaultValue={patronymic.value}
+                    />
+                    {patronymic.errorMessage &&
+                      <span className="help-block">{patronymic.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+              </div>
+          ) : (
+            <div className="b-form__row__widget">
+              <div className="form-group-first">
+                <label className="string control-label" htmlFor={"client_first_name"}>
+                  {t('vendor.client.titles.name')}
+                </label>
+                <input
+                  id="client_name"
+                  name="client[name]"
+                  placeholder={t('vendor.client.placeholders.name')}
+                  type="text"
+                  defaultValue={name.value}
+                />
+                {name.errorMessage &&
+                  <span className="help-block">{name.errorMessage}</span>
+                }
+              </div>
+            </div>
+          )
+        }
+      </div>
+    )
+  }
+
+  renderAddress() {
+    const {
+      deliveryId,
+    } = this.state;
+
+    const delivery = this.deliveryById(deliveryId);
+
+    const {
+      address,
+      region,
+      house,
+      room,
+      slash,
+      t
+    } = this.props;
+
+    return (
+      <div>
+        { delivery.isSeparateAddress
+          ? ( <div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.region')}
+                    </label>
+                    <input
+                      id="client_region"
+                      name="client[region]"
+                      placeholder={t('vendor.client.placeholders.region')}
+                      type="text"
+                      defaultValue={region.value}
+                    />
+                    {region.errorMessage &&
+                      <span className="help-block">{region.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.house')}
+                    </label>
+                    <input
+                      id="client_house"
+                      name="client[house]"
+                      placeholder={t('vendor.client.placeholders.house')}
+                      type="text"
+                      defaultValue={house.value}
+                    />
+                    {house.errorMessage &&
+                      <span className="help-block">{house.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.room')}
+                    </label>
+                    <input
+                      id="client_room"
+                      name="client[room]"
+                      placeholder={t('vendor.client.placeholders.room')}
+                      type="text"
+                      defaultValue={room.value}
+                    />
+                    {room.errorMessage &&
+                      <span className="help-block">{room.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_first_name"}>
+                      {t('vendor.client.titles.slash')}
+                    </label>
+                    <input
+                      id="client_address"
+                      name="client[slash]"
+                      placeholder={t('vendor.client.placeholders.slash')}
+                      type="text"
+                      defaultValue={slash.value}
+                    />
+                    {slash.errorMessage &&
+                      <span className="help-block">{slash.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+              </div>
+          ) : (
+            <div className="b-form__row__widget">
+              <div className="form-group-first">
+                <label className="string control-label" htmlFor={"client_first_name"}>
+                  {t('vendor.client.titles.address')}
+                </label>
+                <input
+                  id="client_address"
+                  name="client[address]"
+                  placeholder={t('vendor.client.placeholders.address')}
+                  type="text"
+                  defaultValue={address.value}
+                />
+                {address.errorMessage &&
+                  <span className="help-block">{address.errorMessage}</span>
+                }
+              </div>
+            </div>
+          )
+        }
+      </div>
+    )
+  }
+
   render() {
     const {
       formAuthenticity,
       t,
       delivery,
       payment,
-      address,
       cityTitle,
-      clientUpdatePath
+      clientUpdatePath,
     } = this.props;
 
     const {
       deliveryId,
       paymentId,
-    } = this.state
+    } = this.state;
 
     return (
       <div className="b-cart__content">
@@ -55,6 +268,9 @@ class ClientForm extends Component {
             <HiddenInput name="_method" value="put" />
             <div className="b-form__row__widget">
               <div className="form-group-first">
+                <label className="string control-label" htmlFor={"client_delivery"}>
+                  {t('vendor.client.titles.delivery')}
+                </label>
                 <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
                   <Select
                     name="client[vendor_delivery_id]"
@@ -70,6 +286,9 @@ class ClientForm extends Component {
             </div>
             <div className="b-form__row__widget">
               <div className="form-group-first">
+                <label className="string control-label" htmlFor={"client_payment"}>
+                  {t('vendor.client.titles.payment')}
+                </label>
                 <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
                   <Select
                     name="client[vendor_payment_id]"
@@ -83,10 +302,14 @@ class ClientForm extends Component {
                 </div>
               </div>
             </div>
+            {this.renderName()}
             <div className="b-form__row__widget">
               <div className="form-group-first">
+                <label className="string control-label" htmlFor={"client_first_name"}>
+                  {t('vendor.client.titles.city_title')}
+                </label>
                 <input
-                  id="clinet_city_title"
+                  id="client_city_title"
                   name="client[city_title]"
                   placeholder={t('vendor.client.placeholders.city_title')}
                   type="text"
@@ -96,21 +319,8 @@ class ClientForm extends Component {
                   <span className="help-block">{cityTitle.errorMessage}</span>
                 }
               </div>
-            </div> 
-            <div className="b-form__row__widget">
-              <div className="form-group-first">
-                <input
-                  id="client_address"
-                  name="client[address]"
-                  placeholder={t('vendor.client.placeholders.address')}
-                  type="text"
-                  defaultValue={address.value}
-                />
-                {address.errorMessage &&
-                  <span className="help-block">{address.errorMessage}</span>
-                }
-              </div>
             </div>
+            {this.renderAddress()}
             <div className="b-form__row__widget">
               <input
                 className="b-btn"
@@ -142,6 +352,38 @@ ClientForm.propTypes = {
     errorMessage: PropTypes.string,
   }),
   cityTitle: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  region: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  house: PropTypes.shape({
+    value: PropTypes.integer,
+    errorMessage: PropTypes.string,
+  }),
+  room: PropTypes.shape({
+    value: PropTypes.integer,
+    errorMessage: PropTypes.string,
+  }),
+  slash: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  firstName: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  secondName: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  patronymic: PropTypes.shape({
+    value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  name: PropTypes.shape({
     value: PropTypes.string,
     errorMessage: PropTypes.string,
   }),

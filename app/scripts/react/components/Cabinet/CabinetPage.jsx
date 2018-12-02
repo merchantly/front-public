@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
 import CabinetContainer from './index';
 import CabinetOrder from './CabinetOrder';
+import ClientForm from './ClientForm'
 import Pagination from 'rc/Pagination';
 import * as schemas from 'r/schemas';
 
@@ -43,28 +44,7 @@ CabinetPage.propTypes = {
     totalPages: Pagination.propTypes.totalPages,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
-  clientForm: PropTypes.shape({
-    delivery: PropTypes.shape({
-      currentDeliveryId: PropTypes.integer,
-      errorMessage: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.object),
-    }),
-    payment: PropTypes.shape({
-      currentPaymentId: PropTypes.integer,
-      errorMessage: PropTypes.string,
-      list: PropTypes.arrayOf(PropTypes.object),
-    }),
-    address: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string,
-    }),
-    cityTitle: PropTypes.shape({
-      value: PropTypes.string,
-      errorMessage: PropTypes.string,
-    }),
-    formAuthenticity: schemas.formAuthenticity,
-    clientUpdatePath: PropTypes.string,
-  }),
+  clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired
 };
 
 export default CabinetPage;
