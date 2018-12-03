@@ -46,7 +46,7 @@ class ClientForm extends Component {
 
     return (
       <div>
-        { delivery.isSeparateName 
+        {(delivery && delivery.isSeparateName)
           ? ( <div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
@@ -144,7 +144,7 @@ class ClientForm extends Component {
 
     return (
       <div>
-        { delivery.isSeparateAddress
+        {(delivery && delivery.isSeparateAddress)
           ? ( <div>
                 <div className="b-form__row__widget">
                   <div className="form-group-first">
