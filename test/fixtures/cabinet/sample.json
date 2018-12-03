@@ -103,6 +103,10 @@
       "value": "Завгороднев Александр Олегович",
       "errorMessage": "Некорректные инициалы",
     },
+    "postalCode": {
+      "value": 112211,
+      "errorMessage": "Некорректный почтовый индекс",
+    },
     "formAuthenticity": {
       "token": "",
       "field": "authenticity_token"

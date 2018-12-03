@@ -138,6 +138,7 @@ class ClientForm extends Component {
       room,
       slash,
       street,
+      postalCode,
       t
     } = this.props;
 
@@ -227,6 +228,23 @@ class ClientForm extends Component {
                     />
                     {slash.errorMessage &&
                       <span className="help-block">{slash.errorMessage}</span>
+                    }
+                  </div>
+                </div>
+                <div className="b-form__row__widget">
+                  <div className="form-group-first">
+                    <label className="string control-label" htmlFor={"client_postalCode"}>
+                      {t('vendor.client.titles.postalCode')}
+                    </label>
+                    <input
+                      id="client_postalCode"
+                      name="client[postal_code]"
+                      placeholder={t('vendor.client.placeholders.postalCode')}
+                      type="text"
+                      defaultValue={postalCode.value}
+                    />
+                    {postalCode.errorMessage &&
+                      <span className="help-block">{postalCode.errorMessage}</span>
                     }
                   </div>
                 </div>
@@ -391,6 +409,10 @@ ClientForm.propTypes = {
   }),
   slash: PropTypes.shape({
     value: PropTypes.string,
+    errorMessage: PropTypes.string,
+  }),
+  postalCode: PropTypes.shape({
+    value: PropTypes.integer,
     errorMessage: PropTypes.string,
   }),
   firstName: PropTypes.shape({
