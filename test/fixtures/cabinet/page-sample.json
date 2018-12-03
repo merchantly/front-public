@@ -686,8 +686,74 @@
         "delivery": {
           "state": "canceled"
         },
-        "deliveryState": "Отменена"
+        "deliveryState": "Отменена",
+        "duplicatePath": "/orders/123/duplicate"
       }
-    ]
-  }
+    ],
+  },
+  "clientForm": {
+    "delivery": {
+      "currentDeliveryId": 1,
+      "errorMessage": "Неизвестная доставка",
+      "list": [{"title": "Почта России", "id": 1, "isSeparateName": true, "isSeparateAddress": true }, {"title": "Яндекс доставка", "id": 2, "isSeparateName": false, "isSeparateAddress": false  }],
+    },
+    "payment": {
+      "currentPaymentId": 1,
+      "errorMessage": "Неизвестный тип платежа",
+      "list": [{"title": "Робокасса", "id": 1}, {"title": "Клауд", "id": 2 }],
+    },
+    "address": {
+      "value": "Миттова д 29 кв 69",
+      "errorMessage": "Некорректный адрес",
+    },
+    "cityTitle": {
+      "value": "Чебоксары",
+      "errorMessage": "Некорректный город",
+    },
+    "region": {
+      "value": "Чувашия",
+      "errorMessage": "Некорректный регион",
+    },
+    "street": {
+      "value": "Миттова",
+      "errorMessage": "Некорректная улица",
+    },
+    "house": {
+      "value": 29,
+      "errorMessage": "Некорректный дом",
+    },
+    "room": {
+      "value": 69,
+      "errorMessage": "Некорректный номер квартиры",
+    },
+    "slash": {
+      "value": "1a",
+      "errorMessage": "Некорректный слэш",
+    },
+    "firstName": {
+      "value": "Александр",
+      "errorMessage": "Некорректное имя",
+    },
+    "secondName": {
+      "value": "Завгороднев",
+      "errorMessage": "Некорректная фамилия",
+    },
+    "patronymic": {
+      "value": "Олегович",
+      "errorMessage": "Некорректное отчество",
+    },
+    "name": {
+      "value": "Завгороднев Александр Олегович",
+      "errorMessage": "Некорректный дом",
+    },
+    "postalCode": {
+      "value": 112211,
+      "errorMessage": "Некорректный почтовый индекс",
+    },
+    "formAuthenticity": {
+      "token": "",
+      "field": "authenticity_token"
+    },
+    "clientUpdatePath": "cabinet",
+  },
 }

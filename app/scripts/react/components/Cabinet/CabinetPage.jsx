@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
 import CabinetContainer from './index';
 import CabinetOrder from './CabinetOrder';
+import ClientForm from './ClientForm'
 import Pagination from 'rc/Pagination';
+import * as schemas from 'r/schemas';
 
 class CabinetPage extends Component {
   render() {
@@ -12,6 +14,7 @@ class CabinetPage extends Component {
       layoutProps,
       client,
       orders,
+      clientForm,
     } = this.props;
 
     return (
@@ -19,6 +22,7 @@ class CabinetPage extends Component {
         <CabinetContainer {...{
           client,
           orders,
+          clientForm,
         }} />
       </VendorLayoutContainer>
     );
@@ -40,6 +44,7 @@ CabinetPage.propTypes = {
     totalPages: Pagination.propTypes.totalPages,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
+  clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired
 };
 
 export default CabinetPage;

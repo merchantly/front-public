@@ -28,6 +28,7 @@ class CabinetOrder extends Component {
       reservation,
       delivery,
       deliveryState,
+      duplicatePath,
       t,
     } = this.props;
 
@@ -40,7 +41,7 @@ class CabinetOrder extends Component {
             {createdDate}
           </div>
         </div>
-        <div className="b-cart__item__col-content">
+        <div className="b-cart__item__col-price">
           <h2 className="b-cart__item__title">
             <a href={clientOrderUrl}>
               <span dangerouslySetInnerHTML={{__html: title}}></span>
@@ -66,12 +67,21 @@ class CabinetOrder extends Component {
             orderPaymentType={paymentType}
           />
         </div>
-        <div className="b-cart__item__col-quantity">
-          <div className="b-cart__item__quantity__text">            
+        <div className="b-cart__item__col-price">
+          <div className="b-cart__item__quantity__text">
             {`${cityTitle} ${deliveryName}`}
           </div>
           <OrderReserveStateIcon {...reservation} />
           <OrderDeliveryIcon {...delivery} />
+        </div>
+        <div className="b-cart__item__col-remove">
+            <a
+              className="b-btn element--active-opacity"
+              data-method="post"
+              href={duplicatePath}
+            > 
+              {t('vendor.cabinet_order.duplicate')}
+            </a>
         </div>
       </li>
     );
@@ -104,6 +114,7 @@ CabinetOrder.propTypes = {
     state: PropTypes.string.isRequired,
   }),
   deliveryState: PropTypes.string.isRequired,
+  duplicatePath: PropTypes.string.isRequired,
   t: PropTypes.func.isRequired,
 };
 

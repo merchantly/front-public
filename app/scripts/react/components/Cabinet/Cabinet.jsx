@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CabinetOrder from './CabinetOrder';
 import Pagination from 'rc/Pagination';
+import ClientForm from './ClientForm';
+import * as schemas from 'r/schemas';
 
 class Cabinet extends Component {
   render() {
@@ -18,6 +20,7 @@ class Cabinet extends Component {
         totalPages,
         items,
       },
+      clientForm,
       t,
     } = this.props;
 
@@ -86,6 +89,7 @@ class Cabinet extends Component {
                 </div>
               </div>
             </div>
+            <ClientForm {...clientForm} t={t}/>
             {items.length ? (
               <div>
                 <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
@@ -122,6 +126,7 @@ Cabinet.propTypes = {
     totalPages: Pagination.propTypes.totalPages,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
+  clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
   t: PropTypes.func.isRequired,
 };
 
