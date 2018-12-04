@@ -23,7 +23,8 @@ class OrderShow extends Component {
       paymentType={},
       workflowState,
       adminComments,
-      deliveryComment
+      deliveryComment,
+      invoceUrl
     } = order;
     const {
       trackingId,
@@ -78,6 +79,17 @@ class OrderShow extends Component {
                 target="_blank"
               >
                 {t('vendor.order.pay')}
+              </a>
+            )}
+            <br />
+            <br />
+            {invoceUrl && (
+              <a
+                className="b-btn b-btn_trans"
+                href={invoceUrl}
+                target="_blank"
+              >
+                {t('vendor.order.invoice')}
               </a>
             )}
           </div>
