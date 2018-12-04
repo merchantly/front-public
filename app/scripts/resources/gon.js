@@ -133,6 +133,7 @@ global.gon = {
           'go_back': 'Вернуться назад',
           'next': 'Продолжить',
           'delivery_tracking_id': 'Трекинг-номер доставки: %{number}',
+          'invoice': 'Скачать счет в PDF',
           'check_state': 'Проверить статус доставки',
           'download_button': 'Загрузить',
           'public_offer_accepted_html': 'Согласен с условиями <u><a href="%{url}" target="_blank">публичной оферты</a></u>',

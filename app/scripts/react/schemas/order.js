@@ -16,6 +16,7 @@ const {
 export default shape({
   externalId: string,
   defaultUrl: string.isRequired, // vendor_order_path(order.external_id)
+  invoceUrl: string,
   freeDelivery: bool,
   freeDeliveryThreshold: money,
   orderDelivery: shape({
