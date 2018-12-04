@@ -633,6 +633,7 @@
     "id": 12888853,
     "externalId": 111222333,
     "defaultUrl": "http://saharok.stage.kiiiosk.ru/cart",
+    "invoceUrl": "http://saharok.kiiiosk.ru/orders/123/invoice.pdf",
     "phone": "+71112223344",
     "freeDelivery": true,
     "freeDeliveryThreshold": {

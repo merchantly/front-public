@@ -21,6 +21,7 @@ class OrderCreated extends Component {
       freeDelivery,
       freeDeliveryThreshold,
       deliveryType,
+      invoceUrl
     } = order;
     const message = t('vendor.order.created.desc_html', {
       phone,
@@ -53,6 +54,17 @@ class OrderCreated extends Component {
             {freeDeliveryMessage && (
               <p dangerouslySetInnerHTML={{ __html: freeDeliveryMessage}} />
             )}
+            {invoceUrl && (
+              <a
+                className="b-btn b-btn_trans"
+                href={invoceUrl}
+                target="_blank"
+              >
+                {t('vendor.order.invoice')}
+              </a>
+            )}
+            <br />
+            <br />
             <a className="b-btn" href={vendorRootPath}>
               {t('vendor.order.continue_shopping')}
             </a>
