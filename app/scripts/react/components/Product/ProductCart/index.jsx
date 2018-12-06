@@ -49,13 +49,21 @@ export default class ProductCart extends Component {
     } else {
       if (product.hasOrderingGoods) {
         if (product.goods.length === 1) {
-          return (
-            <ProductCartForProduct
-              {...this.props}
-              good={product.goods[0]}
-              t={t}
-            />
-          );
+          const good = product.goods[0];
+
+          if (good.actualPrice) {
+            return (
+              <ProductCartForProduct
+                {...this.props}
+                good={good}
+                t={t}
+              />
+            );
+          } else {
+            return (
+              <ProductCartNotAvailable {...this.props} t={t} />
+            );
+          }
         } else {
           if (this.props.multipleChoice) {
             return (
