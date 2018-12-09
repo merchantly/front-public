@@ -19,7 +19,7 @@
 * Установка зависимостей
 
   ```sh
-  yarn insall
+  yarn install
   ```
 
 
