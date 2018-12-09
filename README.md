@@ -19,7 +19,6 @@
 * Установка зависимостей
 
   ```sh
-  ./node_modules/bower/bin/bower install
   yarn insall
   ```
 
