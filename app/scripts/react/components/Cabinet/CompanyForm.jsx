@@ -4,7 +4,7 @@ import FormAuthenticity from '../common/FormAuthenticity';
 import HiddenInput from '../common/HiddenInput';
 import * as schemas from 'r/schemas';
 
-class ClientForm extends Component {
+class CompanyForm extends Component {
   render() {
     const {
       formAuthenticity,
@@ -113,7 +113,7 @@ class ClientForm extends Component {
   }
 }
 
-ClientForm.propTypes = {
+CompanyForm.propTypes = {
   companyName: PropTypes.shape({
     value: PropTypes.string,
     errorMessage: PropTypes.string,
@@ -135,4 +135,4 @@ ClientForm.propTypes = {
   t: PropTypes.func.isRequired,
 };
 
-export default ClientForm;
+export default CompanyForm;
