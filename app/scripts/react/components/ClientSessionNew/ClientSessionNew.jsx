@@ -11,6 +11,7 @@ class ClientSessionNew extends Component {
       t,
       timeout,
       vendorClientSessionsPath,
+      vendorClientRegistrationPath,
       phoneValue,
     } = this.props;
 
@@ -53,6 +54,11 @@ class ClientSessionNew extends Component {
                 value={t('vendor.client.submit')}
               />
             </div>
+            <div className="b-form__row__widget">
+              <a href={vendorClientRegistrationPath}>
+                {t('vendor.client.registration')}
+              </a>
+            </div>
           </form>
         </div>
       </div>
@@ -65,6 +71,7 @@ ClientSessionNew.propTypes = {
   t: PropTypes.func.isRequired,
   timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
+  vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
 };
 

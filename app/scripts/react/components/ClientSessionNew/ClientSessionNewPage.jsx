@@ -12,6 +12,7 @@ class ClientSessionNewPage extends Component {
       layoutProps,
       timeout,
       vendorClientSessionsPath,
+      vendorClientRegistrationPath,
       phoneValue,
     } = this.props;
 
@@ -22,6 +23,7 @@ class ClientSessionNewPage extends Component {
           i18n,
           timeout,
           vendorClientSessionsPath,
+          vendorClientRegistrationPath,
           phoneValue,
         }}
         />
@@ -36,6 +38,7 @@ ClientSessionNewPage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
+  vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
 };
 

@@ -633,5 +633,6 @@
   "formAuthenticity": {
     "token": "eeeeee"
   },
-  "vendorClientSessionsPath": "/vendor/path"
+  "vendorClientSessionsPath": "/vendor/path",
+  "vendorClientRegistrationPath": "/signup",
 }
