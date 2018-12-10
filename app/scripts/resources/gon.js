@@ -319,12 +319,17 @@ global.gon = {
             'address': 'Адрес',
             'region': 'Регион',
             'street': 'Улица',
+            'house': 'Дом',
             'room': 'Квартира',
             'slash': 'Дробь',
             'first_name': 'Имя',
             'second_name': 'Фамилия',
             'patronymic': 'Отчество',
-            'postalCode': 'Почтовый индекс'
+            'postalCode': 'Почтовый индекс',
+            'companyName': 'Наименование компании',
+            'inn': 'ИНН',
+            'kpp': 'КПП',
+            'ogrn': 'ОГРН'
           },
           'titles': {
             'phone': 'Номер телефона',
@@ -340,13 +345,18 @@ global.gon = {
             'address': 'Адрес',
             'region': 'Регион',
             'street': 'Улица',
+            'house': 'Дом',
             'room': 'Квартира',
             'slash': 'Дробь',
             'first_name': 'Имя',
             'second_name': 'Фамилия',
             'patronymic': 'Отчество',
-            'postalCode': 'Почтовый индекс'
-          }
+            'postalCode': 'Почтовый индекс',
+            'companyName': 'Наименование компании',
+            'inn': 'ИНН',
+            'kpp': 'КПП',
+            'ogrn': 'ОГРН'
+          },
           'pin_alert': {
             'send': 'Получить пароль',
             'timeout': 'SMS должна прийти в течение минуты<br>Запросить код повторно можно через',
@@ -374,7 +384,13 @@ global.gon = {
           },
           'reset_password_submit': 'Сохранить',
           'confirmed': 'Подтвержден',
-          'no_confirmed': 'Не подтвержден'
+          'no_confirmed': 'Не подтвержден',
+          'client_form': {
+            'title': 'Выбор доставки и платежной системы',
+          },
+          'company_form': {
+            'title': 'Реквизиты компании'
+          }
         },
         'money': {
           'unknown_iso_code': 'Неизвестный тип валюты %{isoCode}',

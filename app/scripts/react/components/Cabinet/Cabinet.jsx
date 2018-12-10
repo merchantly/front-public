@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import CabinetOrder from './CabinetOrder';
 import Pagination from 'rc/Pagination';
 import ClientForm from './ClientForm';
+import CompanyForm from './CompanyForm';
 import * as schemas from 'r/schemas';
 
 class Cabinet extends Component {
@@ -21,6 +22,7 @@ class Cabinet extends Component {
         items,
       },
       clientForm,
+      companyForm,
       t,
     } = this.props;
 
@@ -90,6 +92,7 @@ class Cabinet extends Component {
               </div>
             </div>
             <ClientForm {...clientForm} t={t}/>
+            <CompanyForm {...companyForm} t={t}/>
             {items.length ? (
               <div>
                 <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
@@ -127,6 +130,7 @@ Cabinet.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
   clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
+  companyForm: PropTypes.shape(...CompanyForm.propTypes).isRequired,
   t: PropTypes.func.isRequired,
 };
 

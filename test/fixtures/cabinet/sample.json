@@ -113,4 +113,27 @@
     },
     "clientUpdatePath": "cabinet",
   },
+  "companyForm": {
+    "companyName": {
+      "value": "ООО Большие надежды",
+      "errorMessage": "Некорректное наименование",
+    },
+    "inn": {
+      "value": "12312312",
+      "errorMessage": "Некорректное inn",
+    },
+    "kpp": {
+      "value": "123123123",
+      "errorMessage": "Некорректное kpp",
+    },
+    "ogrn": {
+      "value": "112211",
+      "errorMessage": "Некорректное ogrn",
+    },
+    "formAuthenticity": {
+      "token": "",
+      "field": "authenticity_token"
+    },
+    "companyUpdatePath": "cabinet",
+  },
 }
