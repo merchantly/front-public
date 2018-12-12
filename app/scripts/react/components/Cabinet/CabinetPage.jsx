@@ -26,6 +26,7 @@ class CabinetPage extends Component {
           orders,
           clientForm,
           companyForm,
+          i18n,
         }} />
       </VendorLayoutContainer>
     );
