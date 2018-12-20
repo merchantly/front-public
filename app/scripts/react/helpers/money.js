@@ -1,3 +1,4 @@
+/*global Bugsnag */
 import { t } from 'i18next';
 import numeral from 'numeral';
 import currencies from '../models/currencies';
@@ -8,11 +9,16 @@ function getCurrency(money) {
 }
 
 function getCurrencyID(money) {
-  const currencyID = (typeof money === 'string' ? money : money.currencyIsoCode)
+  try {
+    const currencyID = (typeof money === 'string' ? money : money.currencyIsoCode)
 
-  if (!currencyID) return '-';
-
-  return currencyID.toLowerCase();
+    return currencyID.toLowerCase();
+  } catch(e) {
+    if (typeof Bugsnag === 'object' && typeof Bugsnag.warn === 'function') {
+      Bugsnag.warn('Ошибка getCurrencyId', `money: ${money}, stacktrace: ${e.stack}`);
+    }
+    return '-';
+  }
 }
 
 export function getHTMLName(money) {
