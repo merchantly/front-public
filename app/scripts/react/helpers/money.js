@@ -1,5 +1,4 @@
 /*global Bugsnag */
-import { t } from 'i18next';
 import numeral from 'numeral';
 import currencies from '../models/currencies';
 
@@ -78,7 +77,5 @@ export function humanizedMoneyWithCurrency(money, nullValue = '-') {
 }
 
 export function unknownIsoCodeMessage(money) {
-  return t('vendor.money.unknown_iso_code', {
-    isoCode: getCurrencyID(money),
-  });
+  return `unknown iso code ${getCurrencyID(money)}`;
 }
