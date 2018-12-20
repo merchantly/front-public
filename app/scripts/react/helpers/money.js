@@ -8,7 +8,11 @@ function getCurrency(money) {
 }
 
 function getCurrencyID(money) {
-  return (typeof money === 'string' ? money : money.currencyIsoCode).toLowerCase();
+  const currencyID = (typeof money === 'string' ? money : money.currencyIsoCode)
+
+  if (!currencyID) return '-';
+
+  return currencyID.toLowerCase();
 }
 
 export function getHTMLName(money) {
