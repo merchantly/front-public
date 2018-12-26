@@ -17,7 +17,9 @@ import * as schemas from 'r/schemas';
 
 class VendorLayout extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0)
+    // FIXME временно решение проблемы со скроллом
+    // setTimeout для iOS
+    window.setTimeout(function() { window.scrollTo(0,0); }, 1);
   }
 
   render() {
