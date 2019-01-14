@@ -35,14 +35,14 @@ export default class CommonSlider extends Component {
     );
   }
 
-  handleSlide(range) {
+  handleSlide(value) {
     if (this.props.onSlide) {
-      this.props.onSlide(range);
+      this.props.onSlide(value);
     }
   }
-  handleChange(range) {
+  handleChange(value) {
     if (this.props.onChange) {
-      this.props.onChange(range);
+      this.props.onChange(value);
     }
   }
 }

@@ -12,8 +12,8 @@ export default class DesignSettingsSlider extends Component {
     to: PropTypes.number,
     value: PropTypes.number.isRequired,
   }
-  handleSlide(range) {
-    this.props.onChange(parseFloat(range[0]));
+  handleSlide(value) {
+    this.props.onChange(value);
   }
   render() {
     const { displayValue, value } = this.props;
