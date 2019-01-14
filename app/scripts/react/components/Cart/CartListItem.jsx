@@ -19,6 +19,9 @@ import { SortableHandle } from 'react-sortable-hoc';
 import Icon from 'rc/common/Icon';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
+import {
+  addGood,
+} from 'r/actions/GoodStateActions';
 
 const WEIGHT_STEP = 0.01;
 
@@ -39,7 +42,10 @@ class CartListItem extends Component {
     const {
       changeAmount,
       item,
+      addGood,
     } = this.props;
+
+    addGood(item.good, count);
 
     changeAmount(item.id, count);
   }
@@ -228,5 +234,8 @@ CartListItem.propTypes = {
 export default connectToRedux(connect(
   (state) => ({
     sortedCart : state.clientState.data.sortedCart,
-  })
+  }),
+  {
+    addGood,
+  }
 )(CartListItem));
