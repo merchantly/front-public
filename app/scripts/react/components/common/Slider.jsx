@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { findDOMNode } from 'react-dom';
-import noUiSlider from 'nouislider';
+import Slider from 'rc-slider';
 
 const MINIMUM_VALUE = 0,
       MAXIMUM_VALUE = 100,
       STEP = 1;
 
-export default class Slider extends Component {
+export default class CommonSlider extends Component {
   static propTypes = {
     from: PropTypes.number,
     to: PropTypes.number,
@@ -22,36 +21,28 @@ export default class Slider extends Component {
     to: MAXIMUM_VALUE,
     step: STEP
   }
-  componentDidMount() {
-    const slider = findDOMNode(this);
 
-    noUiSlider.create(slider, {
-      start: this.props.value,
-      range: {
-        min: this.props.from,
-        max: this.props.to
-      },
-      step: this.props.step
-    });
-
-    slider.noUiSlider.on('slide', this.handleSlide.bind(this));
-    slider.noUiSlider.on('change', this.handleChange.bind(this));
-  }
-  componentWillUnmount() {
-    const slider = findDOMNode(this);
-    slider.noUiSlider.destroy();
-  }
   render() {
-    return <div />;
+    return (
+      <Slider
+        min={this.props.from}
+        max={this.props.to}
+        value={this.props.value}
+        step={this.props.step}
+        onChange={this.handleSlide.bind(this)}
+        onAfterChange={this.handleChange.bind(this)}
+      />
+    );
   }
-  handleSlide(range) {
+
+  handleSlide(value) {
     if (this.props.onSlide) {
-      this.props.onSlide(range);
+      this.props.onSlide(value);
     }
   }
-  handleChange(range) {
+  handleChange(value) {
     if (this.props.onChange) {
-      this.props.onChange(range);
+      this.props.onChange(value);
     }
   }
 }

@@ -55,6 +55,8 @@ describe('[Component] DesignSettings', () => {
       />
     );
 
+    console.log(renderedComponent);
+
     expect(renderedComponent).to.be.an('object');
   });
 });
