@@ -1,5 +1,5 @@
 // const root_url = 'http://wannabe.kiiiosk.dev';
-const root_url = 'http://igrolog-school.kiiiosk.dev';
+const root_url = 'http://igrolog-school.kiiiosk.ru';
 
 global.gon = {
   default_logo_url: 'http://assets.kiiiosk.ru/assets/fallback/product-none.png',

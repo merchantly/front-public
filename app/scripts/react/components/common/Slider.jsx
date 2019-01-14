@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Slider as RcSlider } from 'rc-slider';
+import Slider from 'rc-slider';
 
 const MINIMUM_VALUE = 0,
       MAXIMUM_VALUE = 100,
       STEP = 1;
 
-export default class Slider extends Component {
+export default class CommonSlider extends Component {
   static propTypes = {
     from: PropTypes.number,
     to: PropTypes.number,
@@ -24,7 +24,7 @@ export default class Slider extends Component {
 
   render() {
     return (
-      <RcSlider
+      <Slider
         min={this.props.from}
         max={this.props.to}
         value={this.props.value}
@@ -32,7 +32,7 @@ export default class Slider extends Component {
         onChange={this.handleSlide.bind(this)}
         onAfterChange={this.handleChange.bind(this)}
       />
-    )
+    );
   }
 
   handleSlide(range) {
