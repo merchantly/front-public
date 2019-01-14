@@ -45,7 +45,7 @@ class CartListItem extends Component {
       addGood,
     } = this.props;
 
-    addGood(item.good, count);
+    addGood(item.good, count, null, true);
 
     changeAmount(item.id, count);
   }

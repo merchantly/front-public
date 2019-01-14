@@ -44,7 +44,7 @@ export function addGoods(productGlobalId, items, count=1, weight=null) {
     goodId: productGlobalId,
   };
 }
-export function addGood(good, count=1, weight=null) {
+export function addGood(good, count=1, weight=null, changeExistCount=false) {
   return {
     [CALL_API]: {
       endpoint: apiRoutes.cartItems(),
@@ -59,6 +59,7 @@ export function addGood(good, count=1, weight=null) {
         data: {
           'cart_item[good_id]': good.globalId,
           'cart_item[product_price_id]': good.actualPrice.id,
+          'change_exist_count': changeExistCount,
           count,
           weight,
         },
