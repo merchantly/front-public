@@ -20,6 +20,8 @@ const ThumborService = {
     const _url = normalizeUrl(url);
     const _filters = normalizeFilters(filters);
 
+    console.log(filters);
+
     return this.thumbor
       ? `${this.thumbor}/unsafe/${width}x${height}${_filters}/${_url}`
       : url;
@@ -29,6 +31,8 @@ const ThumborService = {
     const height = size.height ? size.height * 2 : '';
     const _url = normalizeUrl(url);
     const _filters = normalizeFilters(filters);
+
+    console.log(filters);
 
     return this.thumbor
       ? `${this.thumbor}/unsafe/${width}x${height}${_filters}/${_url} 2x`
