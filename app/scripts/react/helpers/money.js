@@ -23,7 +23,7 @@ function getCurrencyID(money) {
 export function getHTMLName(money) {
   const currency = getCurrency(money);
 
-  if (currency && currency.alternate_symbols.length) {
+  if (currency && currency.alternate_symbols.length && !money.showCurrencySymbol) {
     return currency.alternate_symbols[0];
   } else {
     return currency.symbol || currency.html_entity;
