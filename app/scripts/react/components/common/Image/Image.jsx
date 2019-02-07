@@ -62,6 +62,10 @@ class Image extends Component {
     } = this.props;
     const imageArguments = curry(image, maxHeight, maxWidth);
 
+    console.log(imageArguments);
+    let tmpUrl = hasRawUrl ? image.url : imageArguments(getUrl);
+    let tmpRetinaUrl = hasRawUrl ? image.url : imageArguments(getRetinaUrl);
+
     return (
       <img
         alt={title}
