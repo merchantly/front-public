@@ -43,10 +43,10 @@ const getSize = (image, maxHeight, maxWidth) => {
   };
 };
 const getUrl = (image, maxHeight, maxWidth) => (
-  ThumborService.imageUrl(image.url, getSize(image, maxHeight, maxWidth))
+  ThumborService.imageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters)
 );
 const getRetinaUrl = (image, maxHeight, maxWidth) => (
-  ThumborService.retinaImageUrl(image.url, getSize(image, maxHeight, maxWidth))
+  ThumborService.retinaImageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters)
 );
 
 class Image extends Component {
