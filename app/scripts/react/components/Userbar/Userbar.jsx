@@ -91,6 +91,7 @@ class Userbar extends Component {
           categoryPageUrl={categoryPageUrl}
           pageType={pageType}
           productPageUrl={productPageUrl}
+          t={t}
         />
         <DesignPreview pageType={pageType} />
       </div>
