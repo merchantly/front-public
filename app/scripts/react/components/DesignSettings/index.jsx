@@ -27,7 +27,7 @@ export default class DesignSettings extends Component {
     productPageUrl: PropTypes.string,
     saveChanges: PropTypes.func.isRequired,
     unsavedFields: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired
+    tr: PropTypes.func.isRequired
   }
   getProps(property) {
     const { current, changeOption } = this.props;
@@ -66,13 +66,13 @@ export default class DesignSettings extends Component {
       productPageUrl,
       saveChanges,
       unsavedFields,
-      t
+      tr
     } = this.props;
 
     return (
       <div className="design-settings">
         <header className="design-settings__header">
-          <span>{t('vendor.design_settings.title')}</span>
+          <span>{tr('vendor.design_settings.title')}</span>
           <DesignSettingsCloseButton onClick={closeDesignSettingsPopup} />
         </header>
         <div className="design-settings__body">
@@ -84,121 +84,121 @@ export default class DesignSettings extends Component {
               updateEvent="dsUpdate"
             >
               <AccordionItem
-                {...this.getAccordionItemProps(t('vendor.design_settings.main_page'))}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.main_page'))}
                 itemKey="welcome"
                 redirectUrl="/"
               >
-                <DesignSettingsOption title={t('vendor.design_settings.products_in_row')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.products_in_row')}>
                   <DesignSettingsRadioList {...this.getProps('mainPageProductsInRow')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.page_rows')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.page_rows')}>
                   <DesignSettingsSlider {...this.getProps('mainPageRows')} displayValue />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.page_filter')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_filter')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageFilter')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.page_slider')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_slider')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageSlider')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.page_random')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_random')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageRandom')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps(t('vendor.design_settings.category_page'))}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.category_page'))}
                 itemKey="categories"
                 isShow={categoryPageUrl !== null}
                 redirectUrl={categoryPageUrl}
               >
-                <DesignSettingsOption title={t('vendor.design_settings.products_in_row')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.products_in_row')}>
                   <DesignSettingsRadioList {...this.getProps('categoryPageProductsInRow')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.page_rows')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.page_rows')}>
                   <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue/>
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.page_filter')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_filter')}>
                   <DesignSettingsCheckbox {...this.getProps('categoryPageFilter')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps(t('vendor.design_settings.product_page'))}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.product_page'))}
                 isShow={productPageUrl !== null}
                 itemKey="products"
                 redirectUrl={productPageUrl}
               >
-                <DesignSettingsOption title={t('vendor.design_settings.page_photo')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.page_photo')}>
                   <DesignSettingsRadioList {...this.getProps('productPagePhoto')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.similar_products')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.similar_products')}>
                   <DesignSettingsCheckbox {...this.getProps('showSimilarProducts')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps(t('vendor.design_settings.general_settings'))}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.general_settings'))}
                 itemKey="common"
               >
-                <DesignSettingsOption inRow title={t('vendor.design_settings.show_cart_button_in_list')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.show_cart_button_in_list')}>
                   <DesignSettingsCheckbox {...this.getProps('showCartButtonInList')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.show_quantity_in_list')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.show_quantity_in_list')}>
                   <DesignSettingsCheckbox {...this.getProps('showQuantityInList')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.main_page_instagram')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_instagram')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageInstagram')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.main_page_banner')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_banner')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageBanner')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={t('vendor.design_settings.walletone_widget')}>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.walletone_widget')}>
                   <DesignSettingsCheckbox {...this.getProps('w1Widget')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
-              <AccordionItem {...this.getAccordionItemProps(t('vendor.design_settings.style'))}>
-                <DesignSettingsOption title={t('vendor.design_settings.logo')}>
+              <AccordionItem {...this.getAccordionItemProps(tr('vendor.design_settings.style'))}>
+                <DesignSettingsOption title={tr('vendor.design_settings.logo')}>
                   <DesignSettingsAttach
                     {...this.getAttachProps('logo')}
                     className="design-settings__attach--image"
-                    t={t}
+                    t={tr}
                   >
                     {(SelectFile) =>
                       <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.page_bg')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.page_bg')}>
                   <DesignSettingsAttach
                     {...this.getAttachProps('pageBg')}
                     className="design-settings__attach--image"
-                    t={t}
+                    t={tr}
                   >
                     {(SelectFile) =>
                       <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.page_bg_color')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.page_bg_color')}>
                   <DesignSettingsRadioList {...this.getProps('pageBgColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.feed_bg_color')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.feed_bg_color')}>
                   <DesignSettingsRadioList {...this.getProps('feedBgColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.feed_transparency')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.feed_transparency')}>
                   <DesignSettingsSlider {...this.getProps('feedTransparency')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.font_color')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.font_color')}>
                   <DesignSettingsRadioList {...this.getProps('fontColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.font_family')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.font_family')}>
                   <DesignSettingsRadioList {...this.getProps('fontFamily')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.font_size')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.font_size')}>
                   <DesignSettingsRadioList {...this.getProps('fontSize')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title={t('vendor.design_settings.active_elements_color')}>
+                <DesignSettingsOption title={tr('vendor.design_settings.active_elements_color')}>
                   <DesignSettingsRadioList {...this.getProps('activeElementsColor')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -210,7 +210,7 @@ export default class DesignSettings extends Component {
             isSaving={isSaving}
             onClick={saveChanges.bind(this, authUrl)}
             unsavedFields={unsavedFields}
-            t={t}
+            t={tr}
           />
         </div>
       </div>
