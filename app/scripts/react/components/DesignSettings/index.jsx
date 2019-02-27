@@ -27,6 +27,7 @@ export default class DesignSettings extends Component {
     productPageUrl: PropTypes.string,
     saveChanges: PropTypes.func.isRequired,
     unsavedFields: PropTypes.object.isRequired,
+    tr: PropTypes.func.isRequired
   }
   getProps(property) {
     const { current, changeOption } = this.props;
@@ -65,12 +66,13 @@ export default class DesignSettings extends Component {
       productPageUrl,
       saveChanges,
       unsavedFields,
+      tr
     } = this.props;
 
     return (
       <div className="design-settings">
         <header className="design-settings__header">
-          <span>Управление дизайном</span>
+          <span>{tr('vendor.design_settings.title')}</span>
           <DesignSettingsCloseButton onClick={closeDesignSettingsPopup} />
         </header>
         <div className="design-settings__body">
@@ -82,119 +84,121 @@ export default class DesignSettings extends Component {
               updateEvent="dsUpdate"
             >
               <AccordionItem
-                {...this.getAccordionItemProps('Главная страница')}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.main_page'))}
                 itemKey="welcome"
                 redirectUrl="/"
               >
-                <DesignSettingsOption title="Товаров в ряд">
+                <DesignSettingsOption title={tr('vendor.design_settings.products_in_row')}>
                   <DesignSettingsRadioList {...this.getProps('mainPageProductsInRow')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Строк товаров">
+                <DesignSettingsOption title={tr('vendor.design_settings.page_rows')}>
                   <DesignSettingsSlider {...this.getProps('mainPageRows')} displayValue />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Фильтр товаров слева">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_filter')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageFilter')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Слайдер посередине">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_slider')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageSlider')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Товары в случайном порядке">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_random')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageRandom')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps('Страница категории')}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.category_page'))}
                 itemKey="categories"
                 isShow={categoryPageUrl !== null}
                 redirectUrl={categoryPageUrl}
               >
-                <DesignSettingsOption title="Товаров в ряд">
+                <DesignSettingsOption title={tr('vendor.design_settings.products_in_row')}>
                   <DesignSettingsRadioList {...this.getProps('categoryPageProductsInRow')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Строк товаров">
+                <DesignSettingsOption title={tr('vendor.design_settings.page_rows')}>
                   <DesignSettingsSlider {...this.getProps('categoryPageRows')} displayValue/>
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Фильтр товаров слева">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.page_filter')}>
                   <DesignSettingsCheckbox {...this.getProps('categoryPageFilter')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps('Страница товара')}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.product_page'))}
                 isShow={productPageUrl !== null}
                 itemKey="products"
                 redirectUrl={productPageUrl}
               >
-                <DesignSettingsOption title="Расположение фото">
+                <DesignSettingsOption title={tr('vendor.design_settings.page_photo')}>
                   <DesignSettingsRadioList {...this.getProps('productPagePhoto')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Подобные товары снизу">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.similar_products')}>
                   <DesignSettingsCheckbox {...this.getProps('showSimilarProducts')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
               <AccordionItem
-                {...this.getAccordionItemProps('Общие настройки')}
+                {...this.getAccordionItemProps(tr('vendor.design_settings.general_settings'))}
                 itemKey="common"
               >
-                <DesignSettingsOption inRow title='Отображать кнопку "В корзину" в списке товаров'>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.show_cart_button_in_list')}>
                   <DesignSettingsCheckbox {...this.getProps('showCartButtonInList')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title='Отображать поле ввода количества в списке товаров'>
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.show_quantity_in_list')}>
                   <DesignSettingsCheckbox {...this.getProps('showQuantityInList')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Галерея Instagram снизу">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_instagram')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageInstagram')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Баннер сверху">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_banner')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageBanner')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title="Виджет W1 снизу">
+                <DesignSettingsOption inRow title={tr('vendor.design_settings.walletone_widget')}>
                   <DesignSettingsCheckbox {...this.getProps('w1Widget')} />
                 </DesignSettingsOption>
               </AccordionItem>
 
-              <AccordionItem {...this.getAccordionItemProps('Стиль')}>
-                <DesignSettingsOption title="Логотип (желательно .SVG)">
+              <AccordionItem {...this.getAccordionItemProps(tr('vendor.design_settings.style'))}>
+                <DesignSettingsOption title={tr('vendor.design_settings.logo')}>
                   <DesignSettingsAttach
                     {...this.getAttachProps('logo')}
                     className="design-settings__attach--image"
+                    t={tr}
                   >
                     {(SelectFile) =>
                       <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Фон страницы">
+                <DesignSettingsOption title={tr('vendor.design_settings.page_bg')}>
                   <DesignSettingsAttach
                     {...this.getAttachProps('pageBg')}
                     className="design-settings__attach--image"
+                    t={tr}
                   >
                     {(SelectFile) =>
                       <SelectFile className="select-file--icon select-file--icon-pencil" />
                     }
                   </DesignSettingsAttach>
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Цвет страницы">
+                <DesignSettingsOption title={tr('vendor.design_settings.page_bg_color')}>
                   <DesignSettingsRadioList {...this.getProps('pageBgColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Цвет контента">
+                <DesignSettingsOption title={tr('vendor.design_settings.feed_bg_color')}>
                   <DesignSettingsRadioList {...this.getProps('feedBgColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Прозрачность ленты">
+                <DesignSettingsOption title={tr('vendor.design_settings.feed_transparency')}>
                   <DesignSettingsSlider {...this.getProps('feedTransparency')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Цвет текста">
+                <DesignSettingsOption title={tr('vendor.design_settings.font_color')}>
                   <DesignSettingsRadioList {...this.getProps('fontColor')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Шрифт">
+                <DesignSettingsOption title={tr('vendor.design_settings.font_family')}>
                   <DesignSettingsRadioList {...this.getProps('fontFamily')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Размер шрифта">
+                <DesignSettingsOption title={tr('vendor.design_settings.font_size')}>
                   <DesignSettingsRadioList {...this.getProps('fontSize')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption title="Цвет активных элементов">
+                <DesignSettingsOption title={tr('vendor.design_settings.active_elements_color')}>
                   <DesignSettingsRadioList {...this.getProps('activeElementsColor')} />
                 </DesignSettingsOption>
               </AccordionItem>
@@ -206,6 +210,7 @@ export default class DesignSettings extends Component {
             isSaving={isSaving}
             onClick={saveChanges.bind(this, authUrl)}
             unsavedFields={unsavedFields}
+            t={tr}
           />
         </div>
       </div>

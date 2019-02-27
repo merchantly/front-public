@@ -36,6 +36,7 @@ export default class DesignSettingsAttach extends Component {
     value: PropTypes.string,
     children: PropTypes.func,
     onChange: PropTypes.func.isRequired,
+    t: PropTypes.func.isRequired
   };
   renderBox() {
     if (this.props.value) {
@@ -53,8 +54,8 @@ export default class DesignSettingsAttach extends Component {
     }
   }
   getSelectText() {
-    const { value } = this.props;
-    return value ? 'Выбрать другой файл...' : 'Выбрать файл...';
+    const { value, t } = this.props;
+    return value ? t('vendor.design_settings.select_other_file') : t('vendor.design_settings.select_file');
   }
   handleChange(e) {
     this.props.onChange(e.target.files[0]);

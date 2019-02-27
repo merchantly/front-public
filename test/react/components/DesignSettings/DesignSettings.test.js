@@ -3,6 +3,7 @@ import { renderIntoDocument } from 'react-dom/test-utils';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import DesignSettings from '../../../../app/scripts/react/components/DesignSettings';
+import t from 'test/mocks/t';
 
 const current = {
   activeElementsColor: '#000000',
@@ -52,6 +53,7 @@ describe('[Component] DesignSettings', () => {
         categoryPageUrl="http://wanna-be.ru/categories/635-braslety"
         pageType="welcome"
         productPageUrl="http://wanna-be.ru/products/33302-kulon-merkaba-s-tsirkonami-serebryanyy-r"
+        tr={t}
       />
     );
 
