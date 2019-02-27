@@ -22,6 +22,7 @@ class DesignSettingsContainer extends Component {
     dispatch: PropTypes.func.isRequired,
     pageType: PropTypes.string.isRequired,
     productPageUrl: PropTypes.string,
+    tr: PropTypes.func.isRequired
   }
   componentDidUpdate() {
     const isOpened = this.isOpened(this.props);
@@ -61,6 +62,7 @@ class DesignSettingsContainer extends Component {
       dispatch,
       pageType,
       productPageUrl,
+      tr
     } = this.props;
 
     if (this.isOpened(this.props)) {
@@ -73,6 +75,7 @@ class DesignSettingsContainer extends Component {
           onItemClick={this.onItemClick.bind(this)}
           pageType={pageType}
           productPageUrl={productPageUrl}
+          tr={tr}
         />
       );
     }
