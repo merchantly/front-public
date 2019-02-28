@@ -91,6 +91,21 @@ const currencies = {
     "thousands_separator": ",",
     "iso_numeric": "840",
     "smallest_denomination": 1
+  },
+  "sar": {
+    "priority": 100,
+    "iso_code": "SAR",
+    "name": "Saudi Riyal",
+    "symbol": "ر.س",
+    "alternate_symbols": ["SR", "﷼"],
+    "subunit": "Hallallah",
+    "subunit_to_unit": 100,
+    "symbol_first": true,
+    "html_entity": "&#xFDFC;",
+    "decimal_mark": ".",
+    "thousands_separator": ",",
+    "iso_numeric": "682",
+    "smallest_denomination": 5
   }
 };
 
