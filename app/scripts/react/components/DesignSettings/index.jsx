@@ -27,7 +27,8 @@ export default class DesignSettings extends Component {
     productPageUrl: PropTypes.string,
     saveChanges: PropTypes.func.isRequired,
     unsavedFields: PropTypes.object.isRequired,
-    tr: PropTypes.func.isRequired
+    tr: PropTypes.func.isRequired,
+    showW1Design: PropTypes.bool.isRequired,
   }
   getProps(property) {
     const { current, changeOption } = this.props;
@@ -66,7 +67,8 @@ export default class DesignSettings extends Component {
       productPageUrl,
       saveChanges,
       unsavedFields,
-      tr
+      tr,
+      showW1Design,
     } = this.props;
 
     return (
@@ -152,9 +154,12 @@ export default class DesignSettings extends Component {
                 <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_banner')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageBanner')} />
                 </DesignSettingsOption>
-                <DesignSettingsOption inRow title={tr('vendor.design_settings.walletone_widget')}>
-                  <DesignSettingsCheckbox {...this.getProps('w1Widget')} />
-                </DesignSettingsOption>
+
+                {showW1Design &&
+                  <DesignSettingsOption inRow title={tr('vendor.design_settings.walletone_widget')}>
+                    <DesignSettingsCheckbox {...this.getProps('w1Widget')} />
+                  </DesignSettingsOption>
+                }
               </AccordionItem>
 
               <AccordionItem {...this.getAccordionItemProps(tr('vendor.design_settings.style'))}>

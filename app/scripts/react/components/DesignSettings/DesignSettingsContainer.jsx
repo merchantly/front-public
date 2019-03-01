@@ -22,7 +22,8 @@ class DesignSettingsContainer extends Component {
     dispatch: PropTypes.func.isRequired,
     pageType: PropTypes.string.isRequired,
     productPageUrl: PropTypes.string,
-    tr: PropTypes.func.isRequired
+    tr: PropTypes.func.isRequired,
+    showW1Design: PropTypes.bool.isRequired,
   }
   componentDidUpdate() {
     const isOpened = this.isOpened(this.props);
@@ -62,7 +63,8 @@ class DesignSettingsContainer extends Component {
       dispatch,
       pageType,
       productPageUrl,
-      tr
+      tr,
+      showW1Design
     } = this.props;
 
     if (this.isOpened(this.props)) {
@@ -76,6 +78,7 @@ class DesignSettingsContainer extends Component {
           pageType={pageType}
           productPageUrl={productPageUrl}
           tr={tr}
+          showW1Design={showW1Design}
         />
       );
     }

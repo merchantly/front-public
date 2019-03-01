@@ -45,6 +45,7 @@ class Userbar extends Component {
       wishlistText,
       wishlistUrl,
       isDesignSettingOpen,
+      showW1Design,
     } = this.props;
 
     const launchFromIFrame = this.state.launchFromIFrame
@@ -91,6 +92,7 @@ class Userbar extends Component {
           categoryPageUrl={categoryPageUrl}
           pageType={pageType}
           productPageUrl={productPageUrl}
+          showW1Design={showW1Design}
           tr={t}
         />
         <DesignPreview pageType={pageType} />
@@ -105,6 +107,7 @@ Userbar.propTypes = {
   categoryPageUrl: PropTypes.string,
   pageType: PropTypes.string.isRequired,
   productPageUrl: PropTypes.string,
+  showW1Design: PropTypes.bool,
 
   // userbar props
   cabinetText: PropTypes.string,
@@ -133,6 +136,7 @@ Userbar.defaultProps = {
   hasDesign: false,
   hasOperator: false,
   hasWishlist: false,
+  showW1Design: true,
 };
 
 export default Userbar;
