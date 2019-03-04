@@ -35,7 +35,10 @@ class ProductCard extends Component {
     };
   }
   isKioskEnvironment() {
-    return !!(global.gon && global.gon.kiiiosk);
+    return true;
+
+    // Не совсем понятно для чего
+    // return !!(global.gon && global.gon.kiiiosk);
   }
   handleGoodChange(good) {
     const article = good && good.article || this.state.product.article;
