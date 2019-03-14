@@ -9,9 +9,10 @@ global.gon = {
   i18n: {
     locale: 'ru',
     translations: {
+      'brand_name_e': 'КИОСК',
       'vendor': {
         'not_published': 'Магазин временно не работает',
-        'made_in_kiiiosk': 'Сделано на «Киоске»',
+        'made_in_kiiiosk': 'Сделано на «%{brand_name_e}»',
         'tasty_product_button_text': 'Купить',
         'entities': {
           'product': '%{count} товар',
