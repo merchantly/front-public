@@ -71,7 +71,7 @@ class MenuBottom extends Component {
                 rel="nofollow"
                 target="_blank"
               >
-                {t('vendor.made_in_kiiiosk')}
+                {t('vendor.made_in_kiiiosk', { brand_name_e: t('brand_name_e') })}
               </a>
             </noindex>
           )}
