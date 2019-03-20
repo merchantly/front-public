@@ -108,18 +108,20 @@ class ProductGoods extends Component {
     } else {
       return (
         <span>
-          <div className="b-item-full__form__row">
-            <div className="b-item-full__form__option b-item-full__form__option_full">
-              {this.renderSelect(product)}
+          <div className="b-item-full__form__row_fixed">
+            <div className="b-item-full__form__row">
+              <div className="b-item-full__form__option b-item-full__form__option_full">
+                {this.renderSelect(product)}
+              </div>
+              <ProductCartWishlist t={t} product={product} />
             </div>
-            <ProductCartWishlist t={t} product={product} />
-          </div>
-          <div className="b-item-full__form__row b-item-full__form__submit">
-            <ProductAddToCartButton
-              isAddingGood={isAddingGood}
-              t={t}
-              text={t('vendor.button.to_cart', {title: product.title})}
-            />
+            <div className="b-item-full__form__row b-item-full__form__submit">
+              <ProductAddToCartButton
+                isAddingGood={isAddingGood}
+                t={t}
+                text={t('vendor.button.to_cart', {title: product.title})}
+              />
+            </div>
           </div>
         </span>
       );
