@@ -7,9 +7,14 @@ class WishlistAddToCartButton extends Component {
       id,
       href,
       title,
+      good,
       isInCart,
       t,
     } = this.props;
+
+    let handler = function() {
+      $(window).trigger('m.add-to-cart', good, 1);
+    };
 
     return (
       <div className="b-add-cart-button">
@@ -24,6 +29,7 @@ class WishlistAddToCartButton extends Component {
             className="b-btn b-btn-add-cart element--active-opacity"
             data-method="post"
             data-disable-with={t('vendor.button.disable_with.adding')}
+            onClick={handler}
             href={href}
           >
             {t('vendor.button.to_cart', { title })}

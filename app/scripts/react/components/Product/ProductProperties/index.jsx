@@ -19,7 +19,7 @@ class ProductProperties extends Component {
     isAddingGood: PropTypes.bool.isRequired,
     hasWishlist: PropTypes.bool,
     onGoodChange: PropTypes.func,
-    properties: PropTypes.array.isRequired,    
+    properties: PropTypes.array.isRequired,
     t: PropTypes.func.isRequired,
   }
   static defaultProps = {
@@ -111,6 +111,7 @@ class ProductProperties extends Component {
       <ProductAddToCartButton
         isAddingGood={isAddingGood}
         disabled={!good}
+        good={good}
         t={t}
         text={good ? t('vendor.button.to_cart') : t('vendor.button.select_good')}
       />

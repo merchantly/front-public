@@ -49,6 +49,7 @@ class WishlistItem extends Component {
             <WishlistAddToCartButton
               href={item.good.addToCartUrl}
               id={item.good.id}
+              good={item.good}
               isInCart={isInCart}
               t={t}
               title={item.good.title}

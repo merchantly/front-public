@@ -123,12 +123,12 @@ class ProductCartMultipleChoice extends Component {
   }
 
   render() {
-    const { goods, properties, t } = this.props;
+    const { goods, productGlobalId, properties, t } = this.props;
     const { selectedGoods, items } = this.state;
     const empty = isEmpty(selectedGoods)
 
     const emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
-
+    const currentGood = { globalId: props.productGlobalId };
     return (
       <div>
         <div className="row b-item-full__multiple-choice">
@@ -162,6 +162,7 @@ class ProductCartMultipleChoice extends Component {
                     <ProductAddToCartButton
                       isAddingGood={this.props.isAddingGood}
                       t={t}
+                      good={ currentGood }
                       text={t('vendor.button.to_cart')}
                       onClick={this.handleCartButton}
                     />

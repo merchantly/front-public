@@ -14,7 +14,7 @@ class ProductGoods extends Component {
     hasWishlist: PropTypes.bool,
     onGoodChange: PropTypes.func,
     product: PropTypes.object.isRequired,
-    t: PropTypes.func.isRequired,    
+    t: PropTypes.func.isRequired,
   }
   componentDidMount() {
     const { product, onGoodChange } = this.props;
@@ -118,6 +118,7 @@ class ProductGoods extends Component {
             <div className="b-item-full__form__row b-item-full__form__submit">
               <ProductAddToCartButton
                 isAddingGood={isAddingGood}
+                good={product}
                 t={t}
                 text={t('vendor.button.to_cart', {title: product.title})}
               />
