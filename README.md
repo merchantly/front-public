@@ -65,7 +65,7 @@ gon.public_api_url =
 -------------
 
   ```sh
-  gulp dist
+  ./node_modules/gulp/bin/gulp.js dist
   ```
 
 Процесс gulp

@@ -17,7 +17,7 @@ class ProductAddToCartButton extends Component {
 
     return (
       <button
-        className="b-btn element--active-opacity"
+        className="b-btn b-btn-add-cart element--active-opacity"
         disabled={disabled || isAddingGood}
         name="to_cart"
         onClick={onClick}

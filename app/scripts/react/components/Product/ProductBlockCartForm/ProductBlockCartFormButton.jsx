@@ -79,7 +79,7 @@ class ProductBlockCartFormButton extends Component {
       <div>
         {showQuantity && this.renderQuanity()}
         <button
-          className="b-btn element--active"
+          className="b-btn b-btn-add-cart element--active"
           disabled={isFetching}
           onClick={this.addToBasket.bind(this)}
         >
