@@ -96,6 +96,7 @@ class ProductGoods extends Component {
             </div>
             <div className="b-item-full__form__submit">
               <ProductAddToCartButton
+                good={product}
                 isAddingGood={isAddingGood}
                 t={t}
                 text={t('vendor.button.to_cart', {title: product.title})}
