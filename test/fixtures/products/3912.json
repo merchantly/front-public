@@ -300,8 +300,8 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
-        },
+          }
+        }
       },
       {
         "title": "Размер: 14",
@@ -359,8 +359,8 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
-        },
+          }
+        }
       },
       {
         "title": "Размер: 15",
@@ -418,8 +418,8 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
-        },
+          }
+        }
       },
       {
         "title": "Размер: 16",
@@ -477,8 +477,8 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
-        },
+          }
+        }
       },
       {
         "title": "Размер: 17",
@@ -536,8 +536,8 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
-        },
+          }
+        }
       }
     ],
     "images": [
@@ -682,8 +682,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         },
         {
           "id": 14236,
@@ -728,8 +728,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         },
         {
           "id": 14237,
@@ -774,8 +774,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         },
         {
           "id": 14238,
@@ -820,8 +820,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         },
         {
           "id": 14239,
@@ -866,8 +866,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         }
       ]
     },
@@ -935,8 +935,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         },
         {
           "id": 27368,

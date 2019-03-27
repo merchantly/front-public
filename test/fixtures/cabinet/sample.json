@@ -52,88 +52,88 @@
     "delivery": {
       "currentDeliveryId": 1,
       "errorMessage": "Неизвестная доставка",
-      "list": [{"title": "Почта России", "id": 1, "isSeparateName": true, "isSeparateAddress": true }, {"title": "Яндекс доставка", "id": 2, "isSeparateName": false, "isSeparateAddress": false }],
+      "list": [{"title": "Почта России", "id": 1, "isSeparateName": true, "isSeparateAddress": true }, {"title": "Яндекс доставка", "id": 2, "isSeparateName": false, "isSeparateAddress": false }]
     },
     "payment": {
       "currentPaymentId": 1,
       "errorMessage": "Неизвестный тип платежа",
-      "list": [{"title": "Робокасса", "id": 1}, {"title": "Клауд", "id": 2 }],
+      "list": [{"title": "Робокасса", "id": 1}, {"title": "Клауд", "id": 2 }]
     },
     "address": {
       "value": "Миттова д 29 кв 69",
-      "errorMessage": "Некорректный адрес",
+      "errorMessage": "Некорректный адрес"
     },
     "cityTitle": {
       "value": "Чебоксары",
-      "errorMessage": "Некорректный город",
+      "errorMessage": "Некорректный город"
     },
     "region": {
       "value": "Чувашия",
-      "errorMessage": "Некорректный регион",
+      "errorMessage": "Некорректный регион"
     },
     "street": {
       "value": "Миттова",
-      "errorMessage": "Некорректная улица",
+      "errorMessage": "Некорректная улица"
     },
     "house": {
       "value": 29,
-      "errorMessage": "Некорректный дом",
+      "errorMessage": "Некорректный дом"
     },
     "room": {
       "value": 69,
-      "errorMessage": "Некорректный номер квартиры",
+      "errorMessage": "Некорректный номер квартиры"
     },
     "slash": {
       "value": "1a",
-      "errorMessage": "Некорректный слэш",
+      "errorMessage": "Некорректный слэш"
     },
     "firstName": {
       "value": "Александр",
-      "errorMessage": "Некорректное имя",
+      "errorMessage": "Некорректное имя"
     },
     "secondName": {
       "value": "Завгороднев",
-      "errorMessage": "Некорректная фамилия",
+      "errorMessage": "Некорректная фамилия"
     },
     "patronymic": {
       "value": "Олегович",
-      "errorMessage": "Некорректное отчество",
+      "errorMessage": "Некорректное отчество"
     },
     "name": {
       "value": "Завгороднев Александр Олегович",
-      "errorMessage": "Некорректные инициалы",
+      "errorMessage": "Некорректные инициалы"
     },
     "postalCode": {
       "value": 112211,
-      "errorMessage": "Некорректный почтовый индекс",
+      "errorMessage": "Некорректный почтовый индекс"
     },
     "formAuthenticity": {
       "token": "",
       "field": "authenticity_token"
     },
-    "clientUpdatePath": "cabinet",
+    "clientUpdatePath": "cabinet"
   },
   "companyForm": {
     "companyName": {
       "value": "ООО Большие надежды",
-      "errorMessage": "Некорректное наименование",
+      "errorMessage": "Некорректное наименование"
     },
     "inn": {
       "value": "12312312",
-      "errorMessage": "Некорректное inn",
+      "errorMessage": "Некорректное inn"
     },
     "kpp": {
       "value": "123123123",
-      "errorMessage": "Некорректное kpp",
+      "errorMessage": "Некорректное kpp"
     },
     "ogrn": {
       "value": "112211",
-      "errorMessage": "Некорректное ogrn",
+      "errorMessage": "Некорректное ogrn"
     },
     "formAuthenticity": {
       "token": "",
       "field": "authenticity_token"
     },
-    "companyUpdatePath": "cabinet",
+    "companyUpdatePath": "cabinet"
   },
 }

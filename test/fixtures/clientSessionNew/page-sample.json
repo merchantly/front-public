@@ -634,5 +634,5 @@
     "token": "eeeeee"
   },
   "vendorClientSessionsPath": "/vendor/path",
-  "vendorClientRegistrationPath": "/signup",
+  "vendorClientRegistrationPath": "/signup"
 }

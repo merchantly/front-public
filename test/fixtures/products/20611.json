@@ -276,7 +276,7 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
+          }
         }
       },
       {
@@ -335,7 +335,7 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
+          }
         }
       },
       {
@@ -394,7 +394,7 @@
               "exponent": 2
             },
             "currencyIsoCode": "RUB"
-          },
+          }
         }
       }
     ],
@@ -526,8 +526,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         }
       ]
     },
@@ -595,8 +595,8 @@
                 "exponent": 2
               },
               "currencyIsoCode": "RUB"
-            },
-          },
+            }
+          }
         }
       ]
     }

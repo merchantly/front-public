@@ -160,7 +160,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27689,
@@ -177,7 +177,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27690,
@@ -194,7 +194,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27691,
@@ -211,7 +211,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 28474,
@@ -228,7 +228,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 28503,
@@ -245,7 +245,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 31854,
@@ -262,7 +262,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 42665,
@@ -279,7 +279,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           }
         ]
       },
@@ -322,7 +322,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27689,
@@ -339,7 +339,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27690,
@@ -356,7 +356,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 27691,
@@ -373,7 +373,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 28474,
@@ -390,7 +390,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 28503,
@@ -407,7 +407,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 31854,
@@ -424,7 +424,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           },
           {
             "id": 42665,
@@ -441,7 +441,7 @@
                 "cents": 450000,
                 "currencyIsoCode": "RUB"
               }
-            },
+            }
           }
         ]
       },
