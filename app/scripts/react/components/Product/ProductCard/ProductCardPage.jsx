@@ -5,6 +5,10 @@ import ProductCard from './ProductCard';
 import * as schemas from 'r/schemas';
 
 class ProductCardPage extends Component {
+  componentDidMount() {
+    $(window).trigger('m.product', [this.props.product]);
+  }
+
   render() {
     const {
       i18n,
