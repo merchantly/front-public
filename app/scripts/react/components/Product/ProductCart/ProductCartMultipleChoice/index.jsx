@@ -128,7 +128,7 @@ class ProductCartMultipleChoice extends Component {
     const empty = isEmpty(selectedGoods)
 
     const emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
-    const currentGood = { globalId: props.productGlobalId };
+    const currentGood = { globalId: this.props.productGlobalId };
     return (
       <div>
         <div className="row b-item-full__multiple-choice">
