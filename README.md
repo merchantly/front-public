@@ -148,3 +148,7 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 ## gh-pages deploy
 
 > yarn deploy
+
+## fix json
+
+> perl  -i -pe 's/},(\n?\r?\s+)([}\]])/}\n$1$2/igs'  test/fixtures/**/*.json
