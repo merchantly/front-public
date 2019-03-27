@@ -1,23 +1,24 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.1.6",
+  "version": "0.1.10",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
     "type": "git",
-    "url": "git@github.com:BrandyMint/kiosk-public-static-v2.git"
+    "url": "git@github.com:merchantly/front-public.git"
   },
   "scripts": {
-    "build": "npm run build:snippet && npm run build:widget",
+    "build": "yarn run build:snippet && yarn run build:widget",
     "build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
     "build:widget": "webpack --config webpack.config.development.js --watch",
-    "dist": "npm run dist:static && npm run dist:widget && npm run dist:test",
+    "dist": "yarn run dist:static && yarn run dist:widget",
     "dist:static": "mkdir -p ./dist && ENV=production gulp dist",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
-    "dist:test": "gulp test && node ./dist_tests/prerender",
+    "dist:test": "yarn run dist && yarn run test",
     "dist:widget": "webpack --config webpack.config.production.js",
+    "test": "gulp test && node ./dist_tests/prerender",
     "deploy": "gulp deploy",
-    "start": "npm run build:widget & npm run server",
+    "start": "yarn run build:widget & yarn run server",
     "server": "gulp server",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'app/bower_components', 'junction') } catch (e) { }\""
   },

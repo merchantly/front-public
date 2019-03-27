@@ -64,8 +64,16 @@ gon.public_api_url =
 Сборка бандла
 -------------
 
+Полная сборка:
+
   ```sh
-  ./node_modules/gulp/bin/gulp.js dist
+  yarn dist
+  ```
+
+Только статика:
+
+  ```sh
+  yarn dist:static
   ```
 
 Процесс gulp

@@ -2,4 +2,4 @@ language: node_js
 cache: yarn
 install:
   - yarn install
-script: yarn dist
+script: yarn dist:test
