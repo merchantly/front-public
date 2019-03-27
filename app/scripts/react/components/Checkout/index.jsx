@@ -84,6 +84,7 @@ class Checkout extends Component {
           </div>
           <div className="b-form__row">
             <CheckoutActions
+              cart={cart}
               backUrl={backUrl}
               publicOffer={publicOffer}
               t={t}

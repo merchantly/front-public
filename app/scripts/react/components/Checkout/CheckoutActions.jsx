@@ -17,6 +17,7 @@ class CheckoutActions extends Component {
     this.startProcessing = this.startProcessing.bind(this);
   }
   startProcessing() {
+    $(window).trigger('m.checkout', this.props.cart);
     this.setState({ isProcessing: true });
   }
   handleClick(ev) {
@@ -33,6 +34,7 @@ class CheckoutActions extends Component {
       backUrl,
       publicOffer,
       t,
+      cart,
     } = this.props;
     const {
       isProcessing,
