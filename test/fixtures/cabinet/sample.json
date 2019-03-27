@@ -45,7 +45,8 @@
         },
         "deliveryState": "Отменена",
         "duplicatePath": "/orders/123/duplicate"
-      },
+      }
+
     ]
   },
   "clientForm": {
@@ -135,5 +136,6 @@
       "field": "authenticity_token"
     },
     "companyUpdatePath": "cabinet"
-  },
+  }
+
 }

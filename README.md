@@ -151,4 +151,4 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 
 ## fix json
 
-> perl  -i -pe 's/},(\n?\r?\s+)([}\]])/}\n$1$2/igs'  test/fixtures/**/*.json
+> perl  -0777 -i -pe 's/},(\n?\r?\s+)([}\]])/}\n$1$2/igs'  test/fixtures/**/*.json

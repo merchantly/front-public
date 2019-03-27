@@ -639,7 +639,8 @@
       { 
         "value": "666666",
         "isConfirmed": false
-      },
+      }
+
     ],
     "emails": [
       { 
@@ -649,7 +650,8 @@
       { 
         "value": "klondaiker@bk.ru",
         "isConfirmed": false
-      },
+      }
+
     ],
     "logoutUrl": "/vendor/logout",
     "resetPasswordUrl": "/reset_passwords/jkqoasfjir"
@@ -778,5 +780,6 @@
       "field": "authenticity_token"
     },
     "companyUpdatePath": "cabinet"
-  },
+  }
+
 }
