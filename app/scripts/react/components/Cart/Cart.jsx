@@ -20,6 +20,7 @@ class Cart extends Component {
     this.startProcessing = this.startProcessing.bind(this);
   }
   startProcessing() {
+    $(window).trigger('m.cart-submit', this.props.cartItems, this.props.packageItem);
     this.setState({ isProcessing: true });
   }
   renderError(err, key) {

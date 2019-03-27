@@ -5,6 +5,9 @@ import OrderContainer from './index';
 import * as schemas from 'r/schemas';
 
 class OrderPage extends Component {
+  componentDidMount() {
+    $(window).trigger('m.initial-checkout', this.props.cart, this.props.coupon);
+  }
   render() {
     const {
       i18n,
