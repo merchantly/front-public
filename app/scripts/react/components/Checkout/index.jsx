@@ -31,6 +31,7 @@ class Checkout extends Component {
       publicOffer,
       submitOrderUrl,
       t,
+      cart,
     } = this.props;
 
     return (
