@@ -178,7 +178,7 @@ export default provideTranslations(connectToRedux(connect(
         if (paymentDiscounts && paymentDiscounts.length) {
           const paymentDiscount = find(
             paymentDiscounts,
-            (p) => pd.deliveryId === selectedDeliveryTypeId
+            (pd) => pd.deliveryId === selectedDeliveryTypeId
           )
 
           if (paymentDiscount) {
