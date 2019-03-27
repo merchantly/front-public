@@ -1042,7 +1042,7 @@
                 "id": 123,
                 "price": {
                   "cents": 200000,
-                  "currencyIsoCode": "RUB"     
+                  "currencyIsoCode": "RUB"
                 }
               }
             }
@@ -1493,7 +1493,7 @@
                   "cents": 450000,
                   "currencyIsoCode": "RUB"
                 }
-              },
+              }
             },
             {
               "id": 31854,
@@ -1510,7 +1510,7 @@
                   "cents": 450000,
                   "currencyIsoCode": "RUB"
                 }
-              },
+              }
             },
             {
               "id": 42665,
