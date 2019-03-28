@@ -15,14 +15,14 @@ import * as schemas from 'r/schemas';
 import {
   WISHLIST_BUTTON_ADD_TO_WISH_LIST,
   WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST,
-  WISHLIST_BUTTON_FETCHING,  
+  WISHLIST_BUTTON_FETCHING,
 } from 'r/actions/WishlistStateActions';
 //import invariant from 'invariant';
 
 class ProductCartWishlist extends Component {
-  static propTypes = {    
+  static propTypes = {
     wishlistCall: PropTypes.func.isRequired,
-    fetchClientState: PropTypes.func.isRequired,    
+    fetchClientState: PropTypes.func.isRequired,
     product: schemas.product.isRequired,
     t: PropTypes.func.isRequired,
   };
@@ -34,29 +34,30 @@ class ProductCartWishlist extends Component {
   wishApiCall(method) {
     const { wishlistCall, fetchClientState, product } = this.props;
     const global_id = product && product.globalId;
-       
-    wishlistCall(global_id, method).then((response) => {      
+
+    wishlistCall(global_id, method).then((response) => {
       fetchClientState(true);
     });
   }
 
-  addToWishListClick(event) {    
-    event.preventDefault();    
+  addToWishListClick(event) {
+    event.preventDefault();
     event.stopPropagation();
+    $(window).trigger('m.add-to-wishlist', [this.props.product]);
     this.wishApiCall('post');
   }
 
   removeToWishListClick(event) {
-    event.preventDefault();    
-    event.stopPropagation(); 
+    event.preventDefault();
+    event.stopPropagation();
     this.wishApiCall('delete');
   }
 
   render() {
-    const {          
-      wishlist,      
+    const {
+      wishlist,
       product,
-      clientState,      
+      clientState,
       t,
     } = this.props;
 
@@ -66,7 +67,7 @@ class ProductCartWishlist extends Component {
 
     if (isWidget) {
       return null;
-    }  
+    }
 
     const global_id = product && product.globalId, product_id = product && product.id;
     const hasWishlist = clientState && clientState.data && clientState.data.hasWishlist;
@@ -77,20 +78,20 @@ class ProductCartWishlist extends Component {
     if (!hasWishlist) {
       return null;
     }
-    
-    if (!global_id || !product_id) {      
+
+    if (!global_id || !product_id) {
       //invariant(false, "У компонента нет props.product!");
       return null;
-    }      
+    }
 
     if (isWishlisted) {
       wishlistButtonState = WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST;
     } else {
       wishlistButtonState = WISHLIST_BUTTON_ADD_TO_WISH_LIST;
-    }      
+    }
 
-    if (isFetching) {        
-      wishlistButtonState = WISHLIST_BUTTON_FETCHING;        
+    if (isFetching) {
+      wishlistButtonState = WISHLIST_BUTTON_FETCHING;
     }
 
     switch(wishlistButtonState) {
@@ -99,9 +100,9 @@ class ProductCartWishlist extends Component {
       case WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST:
         return (<ProductCartWishlistButtonRemove title={t('vendor.button.remove_from_wish_list')} onClick={this.removeToWishListClick.bind(this)}/>)
       case WISHLIST_BUTTON_FETCHING:
-        return (<ProductCartWishlistButtonFetching title={t('vendor.button.adding_to_wish_list')}/>)          
+        return (<ProductCartWishlistButtonFetching title={t('vendor.button.adding_to_wish_list')}/>)
       default:
-        return null;          
+        return null;
     }
   }
 }
@@ -109,7 +110,7 @@ class ProductCartWishlist extends Component {
 export default connectToRedux(connect(
   (state) => ({
     clientState: state.clientState,
-    wishlist: state.wishlist,    
+    wishlist: state.wishlist,
   }),
   {
     wishlistCall,
