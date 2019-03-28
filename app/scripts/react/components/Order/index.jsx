@@ -173,6 +173,23 @@ export default provideTranslations(connectToRedux(connect(
           return cents;
         }
 
+        const paymentDiscounts = getIn(selectedPaymentType, ['paymentDiscounts'])
+
+        if (paymentDiscounts && paymentDiscounts.length) {
+          const paymentDiscount = find(
+            paymentDiscounts,
+            (pd) => pd.deliveryId === selectedDeliveryTypeId
+          )
+
+          if (paymentDiscount) {
+            if(paymentDiscount.type == 'percent') {
+              cents = cents - (cents * paymentDiscount.discount / 100)
+            } else {
+              cents = cents - paymentDiscount.discount
+            }
+          }
+        }
+
         const threshold = getIn(selectedDeliveryType, ['freeDeliveryThreshold', 'cents']);
         const deliveryPrice = getIn(selectedDeliveryType, ['price', 'cents']) || 0;
 
