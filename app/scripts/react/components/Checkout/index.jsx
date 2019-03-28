@@ -30,6 +30,8 @@ class Checkout extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
+      totalCount,
+      totalPrice,
       t,
       cart,
     } = this.props;
@@ -86,6 +88,8 @@ class Checkout extends Component {
           <div className="b-form__row">
             <CheckoutActions
               cart={cart}
+              totalCount={totalCount}
+              totalPrice={totalPrice}
               backUrl={backUrl}
               publicOffer={publicOffer}
               t={t}
@@ -113,6 +117,8 @@ Checkout.propTypes = {
   paymentTypes: PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
   submitOrderUrl: PropTypes.string,
+  totalCount: PropTypes.number,
+  totalPrice: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
 };
 Checkout.defaultProps = {

@@ -17,7 +17,11 @@ class CheckoutActions extends Component {
     this.startProcessing = this.startProcessing.bind(this);
   }
   startProcessing() {
-    $(window).trigger('m.checkout', this.props.cart);
+    $(window).trigger('m.checkout', {
+      cart: this.props.cart,
+      totalCount: this.props.totalCount,
+      totalPrice: this.props.totalPrice
+    });
     this.setState({ isProcessing: true });
   }
   handleClick(ev) {
@@ -88,6 +92,8 @@ class CheckoutActions extends Component {
 CheckoutActions.propTypes = {
   backUrl: PropTypes.string,
   publicOffer: schemas.checkoutPublicOffer,
+  totalCount: PropTypes.number,
+  totalPrice: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
 };
 

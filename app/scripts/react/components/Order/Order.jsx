@@ -51,6 +51,8 @@ class Order extends Component {
             paymentTypes={paymentTypes}
             publicOffer={publicOffer}
             submitOrderUrl={submitOrderUrl}
+            totalCount={totalCount}
+            totalPrice={totalPrice}
             t={t}
           />
         </div>
