@@ -71,7 +71,9 @@ class OrderContainer extends Component {
       },
       totalCount,
       totalPrice,
+      items,
     } = this.props;
+
 
     return (
       <Order
@@ -91,6 +93,7 @@ class OrderContainer extends Component {
         publicOffer={publicOffer}
         submitOrderUrl={submitOrderUrl}
         t={t}
+        items={this.props.initialProps.cart.items}
         totalCount={totalCount}
         totalPrice={totalPrice}
       />
@@ -122,6 +125,7 @@ OrderContainer.propTypes = {
     submitOrderUrl: PropTypes.string,
     t: PropTypes.func.isRequired,
   }),
+  items: PropTypes.array,
   totalCount: PropTypes.number.isRequired,
   totalPrice: PropTypes.object.isRequired,
 };
@@ -145,6 +149,7 @@ export default provideTranslations(connectToRedux(connect(
         totalCount=0,
         totalPrice: cartTotalPrice={},
       }={},
+      items,
       formValues,
       selectedDeliveryType: selectedDeliveryTypeId,
       selectedPaymentType: selectedPaymentTypeId,
@@ -206,6 +211,7 @@ export default provideTranslations(connectToRedux(connect(
       selectedPaymentType,
       totalCount,
       totalPrice,
+      items
     };
   },
   {

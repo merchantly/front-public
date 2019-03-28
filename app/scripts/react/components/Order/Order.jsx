@@ -23,6 +23,7 @@ class Order extends Component {
       publicOffer,
       submitOrderUrl,
       t,
+      items,
       totalCount,
       totalPrice,
     } = this.props;
@@ -53,6 +54,7 @@ class Order extends Component {
             submitOrderUrl={submitOrderUrl}
             totalCount={totalCount}
             totalPrice={totalPrice}
+            items={items}
             t={t}
           />
         </div>
@@ -80,6 +82,7 @@ Order.propTypes = {
   t: PropTypes.func.isRequired,
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,
+  items: PropTypes.array,
 };
 
 export default Order;

@@ -34,6 +34,7 @@ class Checkout extends Component {
       totalPrice,
       t,
       cart,
+      items,
     } = this.props;
 
     return (
@@ -87,7 +88,7 @@ class Checkout extends Component {
           </div>
           <div className="b-form__row">
             <CheckoutActions
-              cart={cart}
+              items={items}
               totalCount={totalCount}
               totalPrice={totalPrice}
               backUrl={backUrl}
@@ -119,6 +120,7 @@ Checkout.propTypes = {
   submitOrderUrl: PropTypes.string,
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,
+  items: PropTypes.array,
   t: PropTypes.func.isRequired,
 };
 Checkout.defaultProps = {

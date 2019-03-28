@@ -54,6 +54,7 @@ class OrderPage extends Component {
 OrderPage.propTypes = {
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
+  cart: PropTypes.object,
 
   // OrderContainer props
   backUrl: PropTypes.string,
