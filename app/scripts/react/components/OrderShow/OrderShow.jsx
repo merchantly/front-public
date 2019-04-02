@@ -7,6 +7,11 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import * as schemas from 'r/schemas';
 
 class OrderShow extends Component {
+  componentDidMount() {
+    if (this.props.justCreated) {
+      $(window).trigger('m.order-submit', [this.props.order, false]);
+    }
+  }
   render() {
     const {
       order,
@@ -102,6 +107,7 @@ class OrderShow extends Component {
 
 OrderShow.propTypes = {
   order: schemas.order.isRequired,
+  justCreated: PropTypes.bool,
   t: PropTypes.func.isRequired,
 };
 

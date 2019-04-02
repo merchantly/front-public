@@ -6,6 +6,9 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import * as schemas from 'r/schemas';
 
 class OrderCreated extends Component {
+  componentDidMount() {
+    $(window).trigger('m.order-submit', [this.props.order, true]);
+  }
   render() {
     const {
       order,
