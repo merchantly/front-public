@@ -17,6 +17,7 @@ OrderPaymentContainer.propTypes = {
   })).isRequired,
   orderPaymentUrl: PropTypes.string.isRequired,
   shouldAutosubmit: PropTypes.bool.isRequired,
+  order: PropTypes.object,
   t: PropTypes.func.isRequired,
 };
 

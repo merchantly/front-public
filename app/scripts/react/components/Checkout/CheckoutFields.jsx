@@ -17,8 +17,6 @@ class CheckoutFields extends Component {
       onChange,
     } = this.props;
 
-    console.log('CheckoutFields', fields, values);
-
     return (
       <span>
         {fields.map((field) => {

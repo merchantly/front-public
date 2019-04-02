@@ -12,6 +12,7 @@ class OrderPaymentPage extends Component {
       fields,
       orderPaymentUrl,
       shouldAutosubmit,
+      order,
     } = this.props;
 
     return (
@@ -22,6 +23,7 @@ class OrderPaymentPage extends Component {
           fields,
           orderPaymentUrl,
           shouldAutosubmit,
+          order,
         }} />
       </VendorPaymentLayoutContainer>
     );
@@ -38,6 +40,7 @@ OrderPaymentPage.propTypes = {
   })).isRequired,
   orderPaymentUrl: PropTypes.string.isRequired,
   shouldAutosubmit: PropTypes.bool.isRequired,
+  order: PropTypes.object,
 };
 
 export default OrderPaymentPage;

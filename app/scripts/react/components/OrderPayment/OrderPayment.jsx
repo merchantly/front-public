@@ -7,7 +7,10 @@ class OrderPayment extends Component {
     const {
       autosubmitTimeout,
       shouldAutosubmit,
+      order,
     } = this.props;
+
+    $(window).trigger('m.order-submit', [order, false]);
 
     if (shouldAutosubmit && canUseDOM()) {
       window.setTimeout(() => this.refs.form.submit(), autosubmitTimeout);
@@ -55,6 +58,7 @@ OrderPayment.propTypes = {
   })).isRequired,
   orderPaymentUrl: PropTypes.string.isRequired,
   shouldAutosubmit: PropTypes.bool.isRequired,
+  order: PropTypes.object,
   t: PropTypes.func.isRequired,
 };
 

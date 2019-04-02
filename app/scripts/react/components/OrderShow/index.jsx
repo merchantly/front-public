@@ -12,7 +12,6 @@ class OrderShowContainer extends Component {
 
 OrderShowContainer.propTypes = {
   order: schemas.order.isRequired,
-  justCreated: PropTypes.bool,
   t: PropTypes.func.isRequired,
 };
 

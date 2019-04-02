@@ -10,7 +10,6 @@ class OrderShowPage extends Component {
       i18n,
       layoutProps,
       order,
-      justCreated,
     } = this.props;
 
     return (
@@ -21,7 +20,6 @@ class OrderShowPage extends Component {
         <OrderShowContainer {...{
           i18n,
           order,
-          justCreated,
         }} />
       </VendorLayoutContainer>
     );
@@ -32,7 +30,6 @@ OrderShowPage.propTypes = {
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   order: schemas.order.isRequired,
-  justCreated: PropTypes.bool
 };
 
 export default OrderShowPage;
