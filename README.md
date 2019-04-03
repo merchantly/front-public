@@ -22,6 +22,11 @@
   yarn install
   ```
 
+Документация по аналитике
+-------------------------
+
+https://github.com/merchantly/doc/blob/master/ANALYTICS.md
+
 
 Запуск develop-сервера
 ---------------------
