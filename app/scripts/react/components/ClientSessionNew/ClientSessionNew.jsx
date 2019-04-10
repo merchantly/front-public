@@ -13,11 +13,12 @@ class ClientSessionNew extends Component {
       vendorClientSessionsPath,
       vendorClientRegistrationPath,
       phoneValue,
+      clientRegistrationButtonText,
     } = this.props;
 
     return (
       <div className="b-cart__content">
-        <div className="b-form">
+        <div className="b-form b-registration_form">
           <form
             acceptCharset="UTF-8"
             action={vendorClientSessionsPath}
@@ -54,12 +55,19 @@ class ClientSessionNew extends Component {
                 value={t('vendor.client.submit')}
               />
             </div>
-            <div className="b-form__row__widget">
-              <a href={vendorClientRegistrationPath}>
-                {t('vendor.client.registration')}
-              </a>
-            </div>
           </form>
+        </div>
+        <div className="b-registration_button_block">
+          {clientRegistrationButtonText 
+            && (
+              <div className='b-registration_button_text'>
+                <p>{clientRegistrationButtonText}</p>
+              </div>
+            )
+          }
+          <a className='b-registration_button' href={vendorClientRegistrationPath}>
+            {t('vendor.client.registration')}
+          </a>
         </div>
       </div>
     );
@@ -73,6 +81,7 @@ ClientSessionNew.propTypes = {
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
+  clientRegistrationButtonText: PropTypes.string,
 };
 
 ClientSessionNew.defaultProps = {

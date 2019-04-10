@@ -25,6 +25,7 @@ class ClientSessionNewPage extends Component {
           vendorClientSessionsPath,
           vendorClientRegistrationPath,
           phoneValue,
+          clientRegistrationButtonText,
         }}
         />
       </VendorLayoutContainer>
@@ -40,6 +41,7 @@ ClientSessionNewPage.propTypes = {
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
+  clientRegistrationButtonText: PropTypes.string,
 };
 
 ClientSessionNewPage.defaultProps = {
