@@ -14,6 +14,7 @@ class ClientSessionNewPage extends Component {
       vendorClientSessionsPath,
       vendorClientRegistrationPath,
       phoneValue,
+      clientRegistrationButtonText,
     } = this.props;
 
     return (
