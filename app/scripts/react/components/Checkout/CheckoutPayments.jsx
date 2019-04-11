@@ -1,9 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { simpleFormat } from '../../helpers/text';
-import { isEmpty } from 'lodash';
+import { find, isEmpty } from 'lodash';
 
 class CheckoutPayments extends Component {
+  itemFullTitle(item) {
+    const paymentDiscounts = item.paymentDiscounts;
+
+    if (paymentDiscounts && paymentDiscounts.length) {
+      const deliveryTypeId = this.props.deliveryType.id;
+
+      const paymentDiscount = find(
+        paymentDiscounts,
+        (pd) => pd.deliveryId === deliveryTypeId
+      );
+
+      if (paymentDiscount) {
+        if(paymentDiscount.type == 'percent') {
+          return this.props.t('vendor.order.payment.discount.percent', { title: item.title, discount: paymentDiscount.discount });
+        } else {
+          return this.props.t('vendor.order.payment.discount.fixed', { title: item.title, discount: paymentDiscount.discount });
+        }
+      }
+    }
+
+    return item.title;
+  }
+
   renderItem(item) {
     const {
       current,
@@ -32,7 +55,7 @@ class CheckoutPayments extends Component {
               value={itemId}
             />
             <div className="b-cart__form__payment-name">
-              {title}
+              {this.itemFullTitle(item)}
               {!!showIcon && <img src={iconUrl} />}
             </div>
             <div
@@ -62,6 +85,8 @@ CheckoutPayments.propTypes = {
   itemFieldName: PropTypes.string,
   items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
+  deliveryType: PropTypes.object.isRequired,
+  t: PropTypes.func.isRequired
 };
 
 CheckoutPayments.defaultProps = {
