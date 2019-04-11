@@ -60,9 +60,7 @@ class ClientSessionNew extends Component {
         <div className="b-registration_button_block">
           {clientRegistrationButtonText 
             && (
-              <div className='b-registration_button_text'>
-                <p>{clientRegistrationButtonText}</p>
-              </div>
+              <div className='b-registration_button_text' dangerouslySetInnerHTML={{__html: clientRegistrationButtonText}} />
             )
           }
           <a className='b-registration_button' href={vendorClientRegistrationPath}>
