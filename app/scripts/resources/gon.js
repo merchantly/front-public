@@ -107,6 +107,12 @@ global.gon = {
           'default_content': 'Мы открылись!',
         },
         'order': {
+          'payment': {
+            'discount': {
+              'percent': '%{title} (Скидка -%{discount}%)',
+              'fixed': '%{title} (Скидка -%{discount})',
+            }
+          },
           'fields': {
             'phone': 'Телефон',
             'name': 'Имя Отчество Фамилия',
