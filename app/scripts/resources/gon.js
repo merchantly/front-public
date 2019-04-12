@@ -11,6 +11,10 @@ global.gon = {
     translations: {
       'brand_name_e': 'КИОСК',
       'vendor': {
+        'payment_discount': {
+          'percent': '%{title} (Discount -%{discount}%)',
+          'fixed': '%{title} (Discount -%{discount})'
+        },
         'not_published': 'Магазин временно не работает',
         'made_in_kiiiosk': 'Сделано на «%{brand_name_e}»',
         'tasty_product_button_text': 'Купить',
@@ -107,12 +111,6 @@ global.gon = {
           'default_content': 'Мы открылись!',
         },
         'order': {
-          'payment': {
-            'discount': {
-              'percent': '%{title} (Скидка -%{discount}%)',
-              'fixed': '%{title} (Скидка -%{discount})',
-            }
-          },
           'fields': {
             'phone': 'Телефон',
             'name': 'Имя Отчество Фамилия',
