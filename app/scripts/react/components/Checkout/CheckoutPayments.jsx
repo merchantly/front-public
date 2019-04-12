@@ -17,9 +17,9 @@ class CheckoutPayments extends Component {
 
       if (paymentDiscount) {
         if(paymentDiscount.type == 'percent') {
-          return this.props.t('vendor.order.payment.discount.percent', { title: item.title, discount: paymentDiscount.discount });
+          return this.props.t('vendor.payment_discount.percent', { title: item.title, discount: paymentDiscount.discount });
         } else {
-          return this.props.t('vendor.order.payment.discount.fixed', { title: item.title, discount: paymentDiscount.discount });
+          return this.props.t('vendor.payment_discount.fixed', { title: item.title, discount: paymentDiscount.discount });
         }
       }
     }
