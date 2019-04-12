@@ -4,7 +4,7 @@ import FormAuthenticity from 'rc/common/FormAuthenticity';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
 import Select from '../common/Select';
-import MaskedInput from 'react-maskedinput'
+import MaskedInput from 'react-text-mask'
 
 class ClientRegistration extends Component {
   constructor(props) {
@@ -67,7 +67,8 @@ class ClientRegistration extends Component {
                   name="client_registration_form[phone]"
                   type="text"
                   defaultValue={inputFields['phone'].value}
-                  mask="+7(111)-111-11-11"
+                  placeholder={'+7(___)-__-__'}
+                  mask={['+', '7', '(', /[1-9]/, /\d/, /\d/, ')', '-', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]}
                 />
                 {inputFields['phone'].errorMessage &&
                   <span className="help-block">{inputFields['phone'].errorMessage}</span>
