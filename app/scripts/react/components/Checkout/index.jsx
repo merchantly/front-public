@@ -83,6 +83,8 @@ class Checkout extends Component {
                 current={paymentType}
                 items={paymentTypes}
                 onChange={onPaymentChange}
+                deliveryType={deliveryType}
+                t={t}
               />
             </CheckoutStep>
           </div>
