@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import i18next from 'i18next';
+import XHR from 'i18next-xhr-backend';
 import localeLanguages from '../../constants/localeLanguages';
 
 const provideTranslations = (WrappedComponent) => {
@@ -10,20 +11,27 @@ const provideTranslations = (WrappedComponent) => {
   class I18nextProvider extends Component {
     componentWillMount() {
       const locale = this.getLocale();
-      const translations = this.getTranslations();
+      const xhr = new XHR(null, {
+        crossDomain: true,
+        withCredentials: true,
+      });
+      // const translations = this.getTranslations();
 
-      this.i18n = i18next.createInstance({
+      console.log("WillMount I18nextProvider");
+      this.i18n = i18next.
+        use(xhr).
+        createInstance({
         lng: locale,
         fallbackLng: 'ru',
         interpolation: {
           prefix: '%{',
           suffix: '}',
         },
-        resources: {
-          [locale]: {
-            translation: translations,
-          },
-        },
+        //resources: {
+          //[locale]: {
+            //translation: translations,
+          //},
+        //},
       }, () => {});
     }
     getLocale() {

@@ -1,11 +1,12 @@
-import i18n from 'i18next';
+import i18next from 'i18next';
 import ErrorService from './services/Error';
 
-// i18n
+// i18next
 if (gon) {
-  const { i18n: {locale = 'ru', translations = {}} } = gon;
+  const { i18next: {locale = 'ru', translations = {}} } = gon;
+  console.log("initialize i18next from gon");
 
-  i18n.init({
+  i18next.init({
     fallbackLng: 'ru',
     interpolationPrefix: '%{',
     interpolationSuffix: '}',
@@ -17,7 +18,7 @@ if (gon) {
     },
   });
 
-  // i18n.setLng(locale);
+  // i18next.setLng(locale);
 }
 
 // Console

@@ -1,6 +1,6 @@
 {
   "name": "KioskPublicStatic",
-  "version": "0.1.43",
+  "version": "0.1.45",
   "license": "BSD",
   "description": "JS application for kormilica.info",
   "repository": {
@@ -44,7 +44,8 @@
     "exenv": "^1.2.0",
     "fbjs": "^0.5.1",
     "humps": "^1.1.0",
-    "i18next": "^2.0.10",
+    "i18next": "^15.0.9",
+    "i18next-xhr-backend": "^2.0.1",
     "jquery": "^2.1.4",
     "jquery-ujs": "^1.2.2",
     "jss": "^2.3.5",
