@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/BrandyMint/merchantly-public-js.svg?branch=master)](https://travis-ci.org/BrandyMint/merchantly-public-js)
+[![Build Status](https://travis-ci.org/merchantly/front-public.svg?branch=master)](https://travis-ci.org/merchantly/front-public)
 
 Развертывание проекта
 ---------------------
