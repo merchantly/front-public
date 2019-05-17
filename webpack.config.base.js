@@ -20,7 +20,7 @@ var preLoaders = [
     },
   },
 ];
-var loaders = [
+var rules = [
   {
     test: /\.jsx?$/,
     loader: 'babel',
@@ -44,19 +44,19 @@ var loaders = [
 
 module.exports = {
   entry: {
-    'widget': widgetPath,
+    widget: widgetPath,
   },
   module: {
-    preLoaders: preLoaders,
-    loaders: loaders,
+    // preLoaders: preLoaders,
+    rules: rules,
   },
-  sassLoader: {
-    includePaths: [
-      path.resolve(__dirname, './app/stylesheets'),
-      path.resolve(__dirname, './app/bower_components'),
-      path.resolve(__dirname, './node_modules'),
-    ],
-  },
+  //sassLoader: {
+    //includePaths: [
+      //path.resolve(__dirname, './app/stylesheets'),
+      //path.resolve(__dirname, './app/bower_components'),
+      //path.resolve(__dirname, './node_modules'),
+    //],
+  //},
   resolve: {
     alias: {
       'fancybox': 'fancybox/source/jquery.fancybox',
@@ -67,10 +67,10 @@ module.exports = {
       'jquery.mmenu': 'jQuery.mmenu/src/js/jquery.mmenu.min.all',
       'jquery.role': 'jquery.role/lib/jquery.role',
     },
-    extensions: ['', '.js', '.jsx', '.json'],
-    modulesDirectories: [
-      path.join(__dirname, 'node_modules'),
-      path.join(__dirname, 'app/bower_components'),
-    ],
+    extensions: ['.js', '.jsx', '.json'],
+    //modulesDirectories: [
+      //path.join(__dirname, 'node_modules'),
+      //path.join(__dirname, 'app/bower_components'),
+    //],
   },
 };

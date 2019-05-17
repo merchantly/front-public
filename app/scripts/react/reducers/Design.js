@@ -1,5 +1,5 @@
 import store from 'store';
-import { diff } from 'deep-diff';
+import diff from 'deep-diff';
 import createReducer from '../utils/createReducer';
 import createObjectUrl from '../utils/createObjectUrl';
 import * as actionTypes from '../constants/actionTypes';

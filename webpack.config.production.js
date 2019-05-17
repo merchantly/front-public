@@ -7,7 +7,6 @@ config.output = {
   filename: '[name].js',
 };
 config.plugins = [
-  new webpack.optimize.OccurenceOrderPlugin(),
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': '"production"',
     'process.env.PUBLIC_API_URL': '"http://wannabe.kiiiosk.ru/api"',
