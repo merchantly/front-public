@@ -1,7 +1,15 @@
+require("babel-register");
 var path = require('path');
 
 module.exports = {
-  entry: './app/scripts/react/components/Widget/index.jsx',
+  entry: {
+    widget: './app/scripts/react/components/Widget/index.jsx'
+  },
+  output: {
+    path:
+    path.join(__dirname, 'dist/scripts'),
+    filename: '[name].js'
+  },
   resolve: {
     modules: [
       path.join(__dirname, 'node_modules'),
@@ -36,8 +44,17 @@ module.exports = {
       //},
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /(node_modules|bower_components)/
+        use: [
+          {
+            loader: 'babel-loader',
+            // good way to have all settings in .babelrc
+            // but we must use here this presets to available <div> and other html JSX elements
+            query: {
+              presets: ['@babel/react']
+            }
+          }
+        ],
+        exclude: /(node_modules|bower_components)/,
       }
     ]
   }
