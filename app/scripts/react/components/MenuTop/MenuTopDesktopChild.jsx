@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
 import classNames from 'classnames';
 import { categoryRoute } from 'scripts/routes/app';
-import { hashHistory } from 'react-router';
+import history from 'history';
 
 class MenuTopDesktopChild extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class MenuTopDesktopChild extends Component {
     ev.preventDefault();
     if (child && child.url) {
       if (isWidget) {
-        hashHistory.push(categoryRoute(child.id));
+        history.push(categoryRoute(child.id));
       } else {
         window.location.href = child.url;
       }

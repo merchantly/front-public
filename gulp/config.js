@@ -15,12 +15,6 @@ export default {
     },
     files: [build + '/**']
   },
-  ghPages: {
-    src: build + '/**/*',
-    options: {
-      message: 'gh-pages'
-    }
-  },
   scripts: {
     static: {
       client: {

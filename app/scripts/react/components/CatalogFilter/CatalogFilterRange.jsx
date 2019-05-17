@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
-import { Range } from 'rc-slider';
+import { Range } from 'rc-slider/dist/rc-slider.js';
 import { getFilter } from './utils';
 import { showFilteredCount } from '../../actions/catalogFilterActions';
 
@@ -10,7 +10,7 @@ class CatalogFilterRange extends Component {
     super(props);
 
     this.handleSlide = this.handleSlide.bind(this);
-    this.handleChange = this.handleChange.bind(this); 
+    this.handleChange = this.handleChange.bind(this);
 }
 
   state = {
@@ -79,7 +79,7 @@ class CatalogFilterRange extends Component {
                 max={initTo}
                 defaultValue={[initFrom, initTo]}
                 onChange={this.handleSlide}
-                onAfterChange={this.handleChange} 
+                onAfterChange={this.handleChange}
               />
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Slider from 'rc-slider';
+import Slider from 'rc-slider/dist/rc-slider.js';
 
 const MINIMUM_VALUE = 0,
       MAXIMUM_VALUE = 100,

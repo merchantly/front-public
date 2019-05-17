@@ -9,7 +9,7 @@ window.accounting = require('accounting');
 // jQuery plugins
 require('jquery.role');
 require('jquery.mmenu');
-require('jquery.sticky-kit');
+require('sticky-kit/jquery.sticky-kit');
 
 // Others
 require('bootstrapSass');

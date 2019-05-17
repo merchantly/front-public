@@ -1,17 +1,12 @@
 {
   "presets": [
-    "@babel/preset-react",
+    "@babel/react",
     [
-      "@babel/preset-env",
-      {
-        "debug": false,
-        "useBuiltIns": "usage",
-        "corejs": "2"
-      }
+      "@babel/env"
     ]
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime",
+    "@babel/transform-runtime",
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
     "@babel/plugin-proposal-class-properties",
     "add-module-exports",

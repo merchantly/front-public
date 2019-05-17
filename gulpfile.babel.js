@@ -1,19 +1,18 @@
-import gulp from 'gulp';
+import gulp, { series, parallels } from 'gulp';
 import requireDir from 'require-dir';
-import runSequence from 'run-sequence';
 
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('test', ['[Shared] Test with build'], (cb) => {
+gulp.task('test', series(['[Shared] Test with build'], (cb) => {
   //runSequence(
     //[
       //'[Shared] Clean',
     //]
   //);
-});
+}));
 
-gulp.task('dist', ['[Static] Vendor scripts'], (cb) => {
+gulp.task('dist', series(['[Static] Vendor scripts'], (cb) => {
   runSequence(
     [
       '[Shared] Clean',
@@ -28,29 +27,26 @@ gulp.task('dist', ['[Static] Vendor scripts'], (cb) => {
       '[Development] Components scripts',
     ],
     cb);
-});
-gulp.task('build', ['[Shared] Clean'], (cb) => {
-  runSequence([
-    '[Static] Client scripts',
-    '[Static] Vendor scripts',
-    '[Static] Test scripts',
-    '[Static] Haml',
-    '[Static] Html',
-    '[Static] Styles',
-    '[Static] Fonts',
-    '[Static] Images',
-  ], cb);
-});
-gulp.task('deploy', ['build'], () => {
-  gulp.start('[Shared] GithubPages');
-});
+}));
 
-gulp.task('deploy--without-build', () => {
-  gulp.start('[Shared] GithubPages');
-});
+gulp.task('build',
+          gulp.series(
+                      '[Shared] Clean',
+                      gulp.parallel(
+                                    '[Static] Client scripts',
+                                    '[Static] Vendor scripts',
+                                    '[Static] Test scripts',
+                                    '[Static] Haml',
+                                    '[Static] Html',
+                                    '[Static] Styles',
+                                    '[Static] Fonts',
+                                    '[Static] Images'
+                      )
+          )
+);
 
-gulp.task('server', ['[Shared] SetWatch', 'build'], () => {
-  gulp.start('[Shared] Watch');
-});
+//gulp.task('server', series('[Shared] SetWatch', 'build', () => {
+  //gulp.start('[Shared] Watch');
+//}));
 
-gulp.task('default', ['server']);
+//gulp.task('default', ['server']);
