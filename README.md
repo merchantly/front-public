@@ -62,7 +62,7 @@ gon.public_api_url =
 ----------------------
 
   ```sh
-  yarn deploy
+  yarn build && ./deploy.sh
   ```
 
 

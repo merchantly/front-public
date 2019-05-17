@@ -1,14 +1,14 @@
 {
-  "name": "KioskPublicStatic",
-  "version": "0.1.64",
-  "license": "BSD",
-  "description": "JS application for kormilica.info",
+  "name": "MerchantlyFrontApp",
+  "version": "0.1.69",
+  "license": "MIT",
+  "description": "JS application for merchantly",
   "repository": {
     "type": "git",
     "url": "git@github.com:merchantly/front-public.git"
   },
   "scripts": {
-    "build": "yarn run build:snippet && yarn run build:widget",
+    "build": "ENV=production gulp build && yarn run dist:widget",
     "build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
     "build:widget": "webpack --config webpack.config.development.js --watch",
     "dist": "yarn run dist:static && yarn run dist:widget",

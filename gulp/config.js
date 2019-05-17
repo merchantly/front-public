@@ -35,6 +35,12 @@ export default {
         outputName: 'vendor.js',
         extensions: ['.coffee']
       },
+      widget: {
+        baseDir: src + '/bower_components',
+        dest: build + '/scripts',
+        outputName: 'widget.js',
+        extensions: ['.coffee']
+      },
       test: {
         entries: test + '/index.js',
         dest: build + '/scripts/',
