@@ -38,6 +38,7 @@ const baseDependencies = {
   'jquery.role': './app/bower_components/jquery.role/lib/jquery.role',
   'jquery.sticky-kit': './app/bower_components/sticky-kit/jquery.sticky-kit',
   'bootstrapSass': './app/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap',
+  '~bootstrap-sass-official': './app/bower_components/bootstrap-sass-official',
   'eventEmitter': './app/bower_components/eventEmitter/EventEmitter',
   'owlCarousel': './app/bower_components/OwlCarousel/owl-carousel/owl.carousel',
   'fancybox': './app/bower_components/fancybox/source/jquery.fancybox',

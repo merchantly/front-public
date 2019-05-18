@@ -1,52 +1,52 @@
-import gulp, { series, parallels } from 'gulp';
+import { task, series, parallel } from 'gulp';
 import requireDir from 'require-dir';
 
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('test', series(['[Shared] Test with build'], (cb) => {
+task('test', series(['[Shared] Test with build'], (cb) => {
   //runSequence(
-    //[
-      //'[Shared] Clean',
-    //]
+  //[
+  //'[Shared] Clean',
+  //]
   //);
 }));
 
-gulp.task('dist', series(['[Static] Vendor scripts'], (cb) => {
+task('dist', series(['[Static] Vendor scripts'], (cb) => {
   runSequence(
-    [
-      '[Shared] Clean',
-      '[Shared] Bump',
-    ], [
-      '[Production] Styles',
-      '[Production] Fonts',
-      '[Production] Images',
-    ], [
-      '[Production] Scripts',
-      '[Production] Components scripts',
-      '[Development] Components scripts',
-    ],
-    cb);
+              [
+                '[Shared] Clean',
+                '[Shared] Bump',
+              ], [
+                '[Production] Styles',
+                '[Production] Fonts',
+                '[Production] Images',
+              ], [
+                '[Production] Scripts',
+                '[Production] Components scripts',
+                '[Development] Components scripts',
+              ],
+              cb);
 }));
 
-gulp.task('build',
-          gulp.series(
-                      '[Shared] Clean',
-                      gulp.parallel(
-                                    '[Static] Client scripts',
-                                    '[Static] Vendor scripts',
-                                    '[Static] Test scripts',
-                                    '[Static] Haml',
-                                    '[Static] Html',
-                                    '[Static] Styles',
-                                    '[Static] Fonts',
-                                    '[Static] Images'
-                      )
-          )
+task('build',
+     series(
+            '[Shared] Clean',
+            parallel(
+                     '[Static] Client scripts',
+                     '[Static] Vendor scripts',
+                     '[Static] Test scripts',
+                     '[Static] Haml',
+                     '[Static] Html',
+                     '[Static] Styles',
+                     '[Static] Fonts',
+                     '[Static] Images'
+            )
+     )
 );
 
 //gulp.task('server', series('[Shared] SetWatch', 'build', () => {
-  //gulp.start('[Shared] Watch');
+//gulp.start('[Shared] Watch');
 //}));
 
 //gulp.task('default', ['server']);
