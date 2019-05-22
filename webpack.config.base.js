@@ -47,7 +47,7 @@ module.exports = {
     'widget': widgetPath,
   },
   module: {
-    preLoaders: preLoaders,
+    // preLoaders: preLoaders,
     loaders: loaders,
   },
   sassLoader: {
