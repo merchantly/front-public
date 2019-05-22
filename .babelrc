@@ -1,13 +1,14 @@
 {
   "presets": [
-    "es2015",
-    "react",
-    "stage-2"
+    "@babel/react",
+    "@babel/env"
   ],
   "plugins": [
-    "transform-runtime",
+    "@babel/transform-runtime",
+    ["@babel/plugin-proposal-decorators", {"legacy": true}],
+    "@babel/plugin-proposal-class-properties",
     "add-module-exports",
-    "transform-decorators-legacy", ["module-resolver", {
+    ["module-resolver", {
       "root": ["./"],
       "alias": {
         "scripts": "./app/scripts",
