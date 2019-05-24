@@ -3,10 +3,7 @@ const build = './build';
 const dist = './dist';
 const test = './test';
 
-export default {
-  clean: {
-    dest: [build, dist]
-  },
+exports.default = {
   browserSync: {
     port: 9000,
     open: false,
@@ -14,12 +11,6 @@ export default {
       baseDir: [build, src]
     },
     files: [build + '/**']
-  },
-  ghPages: {
-    src: build + '/**/*',
-    options: {
-      message: 'gh-pages'
-    }
   },
   scripts: {
     static: {
@@ -58,8 +49,9 @@ export default {
     },
     production: {
       bundle: {
-        entries: src + '/scripts/render.production.js',
-        extensions: ['.jsx', '.cjsx', '.coffee'],
+        entries: src + '/scripts/vendorBundle.js',
+        // entries: 'test.js',
+        extensions: ['.js', '.jsx', '.cjsx', '.coffee'],
         dest: dist + '/scripts/',
         outputName: 'vendorBundle.js',
       },

@@ -1,14 +1,14 @@
-import gulp from 'gulp';
+import { task, src, series } from 'gulp';
 import mochaPhantomjs from 'gulp-mocha-phantomjs';
 
-gulp.task('[Shared] Test', () => {
-  return gulp.src('test/index.html').pipe(mochaPhantomjs({
+task('[Shared] Test', () => {
+  return src('test/index.html').pipe(mochaPhantomjs({
     reporter: 'spec'
   }))
 });
 
-gulp.task('[Shared] Test with build', ['[Static] Vendor scripts', '[Static] Test scripts'], () => {
-  return gulp.src('test/index.html').pipe(mochaPhantomjs({
+task('[Shared] Test with build', series(['[Static] Vendor scripts', '[Static] Test scripts'], () => {
+  return src('test/index.html').pipe(mochaPhantomjs({
     reporter: 'spec'
   }))
-});
+}));

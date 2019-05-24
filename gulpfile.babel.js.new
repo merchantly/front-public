@@ -1,0 +1,54 @@
+import { task, series, parallel, dest } from 'gulp';
+import fs from 'fs';
+import requireDir from 'require-dir';
+import del from 'del';
+import bump from 'gulp/bump';
+
+requireDir('./gulp/tasks', { recurse: true });
+
+const app_version = require('./package.json').version;
+
+const clean = (cb) => { return del(['./dist/*', './build/*'], cb); };
+
+const dist = parallel(
+  //'[Static] Vendor scripts',
+  //'[Production] Styles',
+  //'[Production] Fonts',
+  //'[Production] Images',
+  '[Production] vendorBundle.js',
+  //'[Production] public.prerender.production.js',
+  //'[Development] public.prerender.development.js'
+);
+
+const babelify_options = {
+  presets: [
+    "@babel/react",
+    "@babel/env"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-decorators", {"legacy": true}],
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "scripts": "./app/scripts",
+        "r": "./app/scripts/react",
+        "rc": "./app/scripts/react/components",
+        "test": "./test",
+        "styles": "./app/stylesheets"
+      }
+    }]
+  ],
+  ignore: [/(node_modules|bower_components|prerender.bundle\.js)/],
+};
+
+exports.dist = dist;
+exports.clean = clean;
+exports.bump = bump;
+
+exports.default = series(
+  parallel(clean, bump),
+  dist
+);
+

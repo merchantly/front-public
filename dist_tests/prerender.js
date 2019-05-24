@@ -1,4 +1,7 @@
-require('../dist/scripts/public.prerender.development');
+global.gon = {
+  public_api_url: 'localhost'
+}
+require('../dist/scripts/node/store_app');
 
 const {
   layoutProps,
@@ -12,7 +15,7 @@ const logoProps = {
 };
 
 function t(component, props) {
-  return global.ReactDOMServer.renderToString(global.React.createElement(component, props));
+  // return global.ReactDOMServer.renderToString(global.React.createElement(component, props));
 }
 
 t(global.Logo, logoProps);

@@ -1,56 +1,30 @@
-import gulp from 'gulp';
+import { task, series, parallel, dest } from 'gulp';
+import fs from 'fs';
 import requireDir from 'require-dir';
-import runSequence from 'run-sequence';
+import del from 'del';
+import bump from 'gulp/bump';
 
-// Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 
-gulp.task('test', ['[Shared] Test with build'], (cb) => {
-  //runSequence(
-    //[
-      //'[Shared] Clean',
-    //]
-  //);
-});
+const app_version = require('./package.json').version;
 
-gulp.task('dist', ['[Static] Vendor scripts'], (cb) => {
-  runSequence(
-    [
-      '[Shared] Clean',
-      '[Shared] Bump',
-    ], [
-      '[Production] Styles',
-      '[Production] Fonts',
-      '[Production] Images',
-    ], [
-      '[Production] Scripts',
-      '[Production] Components scripts',
-      '[Development] Components scripts',
-    ],
-    cb);
-});
-gulp.task('build', ['[Shared] Clean'], (cb) => {
-  runSequence([
-    '[Static] Client scripts',
-    '[Static] Vendor scripts',
-    '[Static] Test scripts',
-    '[Static] Haml',
-    '[Static] Html',
-    '[Static] Styles',
-    '[Static] Fonts',
-    '[Static] Images',
-  ], cb);
-});
-gulp.task('deploy', ['build'], () => {
-  gulp.start('[Shared] GithubPages');
-});
+const clean = (cb) => { return del(['./dist/*', './build/*'], cb); };
 
-gulp.task('deploy--without-build', () => {
-  gulp.start('[Shared] GithubPages');
-});
+const dist = parallel(
+  // '[Static] Vendor scripts',
+  //'[Production] Styles',
+  //'[Production] Fonts',
+  //'[Production] Images',
+  '[Production] vendorBundle.js',
+  //'[Production] public.prerender.production.js',
+  //'[Development] Components scripts'
+);
 
-gulp.task('server', ['[Shared] SetWatch', 'build'], () => {
-  gulp.start('[Shared] Watch');
-});
+exports.dist = dist;
+exports.clean = clean;
+exports.bump = bump;
 
-gulp.task('default', ['server']);
+exports.default = series(
+  parallel(clean, bump),
+  dist
+);

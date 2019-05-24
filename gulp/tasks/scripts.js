@@ -9,81 +9,10 @@ import sourcemaps from 'gulp-sourcemaps';
 import bundleLogger from '../util/bundleLogger';
 import handleErrors from '../util/handleErrors';
 import { scripts as config } from '../config';
+import babelifyOptions from '../babelify_options';
 
-const baseDependencies = {
-  'classnames': './node_modules/classnames',
-  'cookies-js': './node_modules/cookies-js',
-  'deep-diff': '././node_modules/deep-diff',
-  'i18next': './node_modules/i18next',
-  'jss': './node_modules/jss/lib',
-  'jquery': './node_modules/jquery/dist/jquery',
-  'lodash': './node_modules/lodash',
-  'nouislider': './node_modules/nouislider/distribute/nouislider',
-  'perfect-scrollbar': './node_modules/perfect-scrollbar',
-  'react': './node_modules/react',
-  'react-dom': './node_modules/react-dom',
-  'react-nouislider': './node_modules/react-nouislider',
-  'react-redux': './node_modules/react-redux',
-  'react16-spinjs': './node_modules/react16-spinjs',
-  'react-stickynode': './node_modules/react-stickynode',
-  'redux': './node_modules/redux',
-  'redux-thunk': './node_modules/redux-thunk',
-  'rodal': './node_modules/rodal',
-  'reqwest': './node_modules/reqwest',
-  'tinycolor2': './node_modules/tinycolor2',
-  'timm': './node_modules/timm',
-  'urijs': './node_modules/urijs/src/URI',
-
-  'jquery.mmenu': './app/bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all',
-  'jquery.role': './app/bower_components/jquery.role/lib/jquery.role',
-  'jquery.sticky-kit': './app/bower_components/sticky-kit/jquery.sticky-kit',
-  'bootstrapSass': './app/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap',
-  'eventEmitter': './app/bower_components/eventEmitter/EventEmitter',
-  'owlCarousel': './app/bower_components/OwlCarousel/owl-carousel/owl.carousel',
-  'fancybox': './app/bower_components/fancybox/source/jquery.fancybox',
-  'accounting': './app/bower_components/accounting.js/accounting',
-};
-const staticDependencies = {
-  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
-  // 'reactUjs': './app/scripts/lib/ReactRailsUJS',
-};
-const testDependencies = {
-  ' react-dom/test-utils': './node_modules/react-dom/test-utils',
-};
-const prerenderDependencies = {
-  // For now we will use client version of i18next, but later
-  // it can change to i18next-node
-  'i18next': './node_modules/i18next',
-};
-
-function getDependencies(env) {
-  switch (env) {
-    case 'static':
-      return {...baseDependencies, ...staticDependencies };
-    case 'test':
-      return {...baseDependencies, ...testDependencies };
-    case 'prerender':
-      return {...baseDependencies, ...prerenderDependencies };
-    default:
-      return baseDependencies;
-  }
-}
-
-function requireDependencies(env, bundler) {
-  const dependencies = getDependencies(env);
-
-  Object.keys(dependencies).forEach((dep) => {
-    bundler.require(dependencies[dep], { expose: dep });
-  });
-}
-
-function externalDependencies(env, bundler) {
-  const dependencies = getDependencies(env);
-
-  Object.keys(dependencies).forEach((dep) => {
-    bundler.external(dep);
-  });
-}
+import { requireDependencies } from '../dependencies';
+import babel from 'gulp-babel';
 
 gulp.task('show-env', function() {
   console.log('process.env', process.env);
@@ -113,18 +42,14 @@ gulp.task('[Static] Client scripts', () => {
 
   if (global.isWatching) {
     bundler = watchify(bundler
-      .transform('coffee-reactify')
-      .transform('babelify', {
-        ignore: /(node_modules|bower_components)/,
-      })
+      .transform('coffeeify')
+      .transform('babelify', babelifyOptions)
     );
     bundler.on('update', rebundle);
   } else {
     bundler
-      .transform('coffee-reactify')
-      .transform('babelify', {
-        ignore: /(node_modules|bower_components)/,
-      });
+      .transform('coffeeify')
+      .transform('babelify', babelifyOptions);
   }
 
   rebundle();
@@ -143,7 +68,7 @@ gulp.task('[Static] Vendor scripts', (cb) => {
   bundleLogger.start(config.static.vendor.outputName);
 
   bundler
-    .transform('coffee-reactify')
+    .transform('coffeeify')
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.static.vendor.outputName))
@@ -181,24 +106,23 @@ gulp.task('[Static] Test scripts', () => {
 
   if (global.isWatching) {
     bundler = watchify(bundler
-      .transform('coffee-reactify')
-      .transform('babelify', {
-        ignore: /(node_modules|bower_components)/,
-      })
+      .transform('coffeeify')
+      .transform('babelify', babelifyOptions)
     );
     bundler.on('update', rebundle);
   } else {
     bundler
-      .transform('coffee-reactify')
-      .transform('babelify', {
-        ignore: /(node_modules|bower_components)/,
-      });
+      .transform('coffeeify')
+      .transform('babelify', babelifyOptions );
   }
 
   return rebundle();
 });
 
-gulp.task('[Production] Scripts', () => {
+// Build vendorBundle.js from /scripts/render.production.js
+// vendorBundle.js is required on every html page in public front
+//
+gulp.task('[Production] vendorBundle.js', () => {
   const bundler = browserify({
     cache: {},
     packageCache: {},
@@ -211,21 +135,19 @@ gulp.task('[Production] Scripts', () => {
   bundleLogger.start(config.production.bundle.outputName);
 
   return bundler
-    .transform('babelify', {
-      ignore: /(node_modules|bower_components)/,
-    })
+    .transform('babelify', babelifyOptions )
     .transform('loose-envify', {
       'global': true,
       'NODE_ENV': 'production',
       'APP_VERSION': require('../../package.json').version,
     })
-    .transform('coffee-reactify')
+    .transform('coffeeify')
     .bundle()
     .on('error', handleErrors)
     .pipe(source(config.production.bundle.outputName))
     .pipe(buffer())
     .pipe(sourcemaps.init())
-    .pipe(uglify({ mangle: true }))
+    // .pipe(uglify({ mangle: true }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(config.production.bundle.dest))
     .on('end', function() {
@@ -233,7 +155,10 @@ gulp.task('[Production] Scripts', () => {
     });
 });
 
-gulp.task('[Production] Components scripts', () => {
+// Build public.prerender.production.js from scripts/prerender.production.js
+// it used to prerender in production mode
+//
+gulp.task('[Production] public.prerender.production.js', () => {
   let bundler = browserify({
     cache: {},
     packageCache: {},
@@ -246,22 +171,20 @@ gulp.task('[Production] Components scripts', () => {
   bundleLogger.start(config.production.components.outputName);
 
   return bundler
-    .transform('babelify', {
-      ignore: /(node_modules|bower_components|prerender.bundle\.js)/,
-    })
-    .transform('coffee-reactify')
-    .bundle()
-    .on('error', handleErrors)
-    .pipe(source(config.production.components.outputName))
-    .pipe(buffer())
-    .pipe(uglify({ mangle: false }))
-    .pipe(gulp.dest(config.production.components.dest))
-    .on('end', () => {
-      bundleLogger.end(config.production.components.outputName);
-    });
+  .transform('babelify', babelifyOptions )
+  .transform('coffeeify')
+  .bundle()
+  .on('error', handleErrors)
+  .pipe(source(config.production.components.outputName))
+  .pipe(buffer())
+  .pipe(uglify({ mangle: false }))
+  .pipe(gulp.dest(config.production.components.dest))
+  .on('end', () => {
+    bundleLogger.end(config.production.components.outputName);
+  });
 });
 
-gulp.task('[Development] Components scripts', () => {
+gulp.task('[Development] public.prerender.development.js', () => {
   let bundler = browserify({
     cache: {},
     packageCache: {},
@@ -274,15 +197,13 @@ gulp.task('[Development] Components scripts', () => {
   bundleLogger.start(config.development.components.outputName);
 
   return bundler
-    .transform('babelify', {
-      ignore: /(node_modules|bower_components|prerender.bundle\.js)/,
-    })
-    .transform('coffee-reactify')
-    .bundle()
-    .on('error', handleErrors)
-    .pipe(source(config.development.components.outputName))
-    .pipe(gulp.dest(config.development.components.dest))
-    .on('end', () => {
-      bundleLogger.end(config.development.components.outputName);
-    });
+  .transform('babelify', babelifyOptions)
+  .transform('coffeeify')
+  .bundle()
+  .on('error', handleErrors)
+  .pipe(source(config.development.components.outputName))
+  .pipe(gulp.dest(config.development.components.dest))
+  .on('end', () => {
+    bundleLogger.end(config.development.components.outputName);
+  });
 });

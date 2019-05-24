@@ -1,15 +1,17 @@
+// Migrate to webpack's externals - https://webpack.js.org/configuration/externals/
+//
 window._ = require('lodash');
 window.I18n = require('i18next'); // Fallback for rails I18n
 window.$ = window.jQuery = require('jquery');
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.EventEmitter = require('eventEmitter');
-window.accounting = require('accounting');
+window.accounting = require('accounting.js');
 
 // jQuery plugins
 require('jquery.role');
 require('jquery.mmenu');
-require('jquery.sticky-kit');
+require('sticky-kit/jquery.sticky-kit');
 
 // Others
 require('bootstrapSass');

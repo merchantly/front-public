@@ -1,9 +1,9 @@
-import gulp from 'gulp';
+import { task, watch, parallel } from 'gulp';
 
-gulp.task('[Shared] Watch', ['[Shared] BrowserSync'], () => {
-  gulp.watch('app/haml/**/*.haml', ['[Static] Haml']);
-  gulp.watch('app/haml/**/*.html', ['[Static] Html']);
-  gulp.watch('app/stylesheets/**/*.s?ss', ['[Static] Styles']);
-  gulp.watch('app/images/**/*', ['[Static] Images']);
-  gulp.watch('build/scripts/*.js', ['[Shared] Test']);
-});
+task('[Shared] Watch', parallel(['[Shared] BrowserSync'], () => {
+  watch('app/haml/**/*.haml', ['[Static] Haml']);
+  watch('app/haml/**/*.html', ['[Static] Html']);
+  watch('app/stylesheets/**/*.s?ss', ['[Static] Styles']);
+  watch('app/images/**/*', ['[Static] Images']);
+  watch('build/scripts/*.js', ['[Shared] Test']);
+}));

@@ -1,16 +1,12 @@
-{
-  "presets": [
+exports.default = {
+  presets: [
     "@babel/react",
     "@babel/env"
   ],
   "plugins": [
-     ["@babel/plugin-transform-spread", {
-          "loose": true
-     }],
     "@babel/plugin-transform-runtime",
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
     "@babel/plugin-proposal-class-properties",
-     "add-module-exports",
     ["module-resolver", {
       "root": ["./"],
       "alias": {
@@ -21,5 +17,8 @@
         "styles": "./app/stylesheets"
       }
     }]
-  ]
-}
+  ],
+  // ignore: [/(node_modules|bower_components|prerender.bundle\.js)/],
+};
+
+
