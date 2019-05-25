@@ -26,41 +26,12 @@ exports.default = {
         outputName: 'vendor.js',
         extensions: ['.coffee']
       },
-      widget: {
-        baseDir: src + '/bower_components',
-        dest: build + '/scripts',
-        outputName: 'widget.js',
-        extensions: ['.coffee']
-      },
       test: {
         entries: test + '/index.js',
         dest: build + '/scripts/',
         outputName: 'test.js',
         extensions: ['.jsx', '.cjsx', '.coffee']
       }
-    },
-    development: {
-      components: {
-        entries: src + '/scripts/prerender.development.js',
-        extensions: ['.jsx', '.cjsx', '.coffee'],
-        dest: dist + '/scripts/',
-        outputName: 'public.prerender.development.js',
-      },
-    },
-    production: {
-      bundle: {
-        entries: src + '/scripts/vendorBundle.js',
-        // entries: 'test.js',
-        extensions: ['.js', '.jsx', '.cjsx', '.coffee'],
-        dest: dist + '/scripts/',
-        outputName: 'vendorBundle.js',
-      },
-      components: {
-        entries: src + '/scripts/prerender.production.js',
-        extensions: ['.jsx', '.cjsx', '.coffee'],
-        dest: dist + '/scripts/',
-        outputName: 'public.prerender.production.js',
-      },
     },
   },
   styles: {

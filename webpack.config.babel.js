@@ -2,7 +2,11 @@ import webpack from 'webpack';
 import merge from 'webpack-merge';
 import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import babelifyOptions from './gulp/babelify_options';
+import babelifyOptions from './.babelrc.js';
+
+const devMode = process.env.NODE_ENV !== 'production';
+
+console.log('webpack devMode', devMode);
 
 // development
 //plugins: [
@@ -73,29 +77,34 @@ var rules = [
   {
     test: /\.(sass|scss)$/,
     use: [
+      MiniCssExtractPlugin.loader,
       {
-        loader: 'css-loader'
+        loader: 'css-loader', options: { importLoaders: 1 }
+      },
+      {
+        loader: 'postcss-loader',
       },
       {
         loader: 'sass-loader',
         options: {
           includePaths: [
               path.resolve(__dirname, './app/stylesheets'),
+              path.resolve(__dirname, './node_modules/@bower_components'),
               path.resolve(__dirname, './node_modules'),
-              path.resolve(__dirname, './node/@bower_components'),
           ]
         }
-      }
+      },
     ],
     exclude: /(node_modules|bower_components)/,
   },
   {
     test: /\.css$/,
     use: [
-      // MiniCssExtractPlugin.loader,
+      MiniCssExtractPlugin.loader,
       {
-        loader: 'css-loader'
+        loader: 'css-loader', options: { importLoaders: 1 }
       },
+      'postcss-loader'
     ],
     exclude: /(node_modules|bower_components)/,
   },
@@ -108,6 +117,9 @@ var rules = [
 ];
 
 const baseConfig = {
+  output: {
+    filename: '[name].js'
+  },
   // devtool: 'inline-source-map',
   module: {
     rules: rules,
@@ -117,43 +129,30 @@ const baseConfig = {
       path.join(__dirname, 'node_modules'),
       path.join(__dirname, 'node_modules/@bower_components'),
     ],
-
-    //
-    alias: {
-      'fancybox': 'fancybox/source/jquery.fancybox',
-      'fancybox.wannabe': 'fancybox-wannabe-fix/index',
-      'bootstrapSass': 'bootstrap-sass-official/assets/javascripts/bootstrap',
-      'jquery': 'jquery/dist/jquery',
-      'owlCarousel': 'OwlCarousel/owl-carousel/owl.carousel',
-      'jquery.mmenu': 'jQuery.mmenu/src/js/jquery.mmenu.min.all',
-      'jquery.role': 'jquery.role/lib/jquery.role',
-      'sticky-kit': 'sticky-kit/jquery.sticky-kit',
-    },
     extensions: ['.js', '.jsx', '.json', '.coffee'],
   },
 };
 
 const nodeConfig = {
-  output: {
-    path: path.join(__dirname, 'dist/scripts/node'),
-    filename: '[name].js'
-  },
   entry: {
-    store_app: path.join(__dirname, 'app/scripts/store_app_prerender')
+    store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
+    tests: path.join(__dirname, 'test/index')
   },
   target: 'node'
 }
 
 const browserConfig = {
-  output: {
-    path: path.join(__dirname, 'dist/scripts'),
-    filename: '[name].js'
-  },
   entry: {
     widget: path.join(__dirname, 'app/scripts/react/components/Widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),
+    styles: path.join(__dirname, 'app/stylesheets/production.scss'),
   },
-  target: 'web'
+  target: 'web',
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
+    })
+  ]
 }
 
 exports.default = [ merge(baseConfig, nodeConfig), merge(baseConfig, browserConfig)]

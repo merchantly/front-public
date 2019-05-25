@@ -11,13 +11,10 @@ const app_version = require('./package.json').version;
 const clean = (cb) => { return del(['./dist/*', './build/*'], cb); };
 
 const dist = parallel(
-  // '[Static] Vendor scripts',
-  //'[Production] Styles',
-  //'[Production] Fonts',
-  //'[Production] Images',
-  '[Production] vendorBundle.js',
-  //'[Production] public.prerender.production.js',
-  //'[Development] Components scripts'
+  '[Static] Vendor scripts',
+  '[Production] Styles',
+  '[Production] Fonts',
+  '[Production] Images'
 );
 
 exports.dist = dist;

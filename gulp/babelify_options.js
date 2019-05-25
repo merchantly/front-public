@@ -8,7 +8,7 @@ exports.default = {
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
     "@babel/plugin-proposal-class-properties",
     ["module-resolver", {
-      "root": ["./"],
+      "root": ["./", "./node_modules/"],
       "alias": {
         "scripts": "./app/scripts",
         "r": "./app/scripts/react",

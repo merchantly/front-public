@@ -2,8 +2,8 @@
 
 import 'es5-shim';
 
-import './render.libs';
-import './render.bundle';
+import './libs';
+import './bundle';
 
 import './lib/ReactRailsUJS';
 

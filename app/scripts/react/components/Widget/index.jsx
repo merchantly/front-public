@@ -14,11 +14,11 @@ const TEST_NODE_SELECTOR = '#kiosk-widget-test';
 
 import jQuery from 'jquery';
 global.jQuery = jQuery;
-require('jquery.role');
-require('bootstrapSass');
-require('jquery.mmenu');
-require('owlCarousel');
-require('fancybox');
+
+require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
+require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
+require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
+require('@bower_components/fancybox/source/jquery.fancybox');
 // Отключил вообще fancybox.wannabe
 // Если это нужно будет, то нужно клонировать
 // fancybox и вносить в него правки
