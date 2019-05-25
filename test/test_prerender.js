@@ -3,12 +3,11 @@
 // Enzyme.configure({ adapter: new Adapter() });
 import assert from 'assert';
 
-
 global.gon = {
   public_api_url: 'localhost'
 }
-require('../dist/scripts/node/store_app');
 
+require('dist/store_app_node');
 
 const {
   layoutProps,
