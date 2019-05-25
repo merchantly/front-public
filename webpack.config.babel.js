@@ -146,6 +146,10 @@ const browserConfig = {
     widget: path.join(__dirname, 'app/scripts/react/components/Widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),
     styles: path.join(__dirname, 'app/stylesheets/production.scss'),
+
+    // Uses for development
+    store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),
+    libs: path.join(__dirname, 'app/scripts/libs'), // ex vendor
   },
   target: 'web',
   plugins: [

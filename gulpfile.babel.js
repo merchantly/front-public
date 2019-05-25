@@ -11,8 +11,7 @@ const app_version = require('./package.json').version;
 const clean = (cb) => { return del(['./dist/*', './build/*'], cb); };
 
 const dist = parallel(
-  '[Static] Vendor scripts',
-  '[Production] Styles',
+  // '[Production] Styles',
   '[Production] Fonts',
   '[Production] Images'
 );

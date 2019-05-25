@@ -55,30 +55,6 @@ gulp.task('[Static] Client scripts', () => {
   rebundle();
 });
 
-gulp.task('[Static] Vendor scripts', (cb) => {
-  let bundler = browserify({
-    cache: {},
-    packageCache: {},
-    entries: config.static.vendor.entries,
-    extensions: config.static.vendor.extensions,
-  });
-
-  requireDependencies('static', bundler);
-
-  bundleLogger.start(config.static.vendor.outputName);
-
-  bundler
-    .transform('coffeeify')
-    .bundle()
-    .on('error', handleErrors)
-    .pipe(source(config.static.vendor.outputName))
-    .pipe(gulp.dest(config.static.vendor.dest))
-    .on('end', () => {
-      bundleLogger.end(config.static.vendor.outputName);
-      cb();
-    });
-});
-
 gulp.task('[Static] Test scripts', () => {
   let bundler = browserify({
     cache: {},
