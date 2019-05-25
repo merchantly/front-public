@@ -81,8 +81,8 @@ var rules = [
         options: {
           includePaths: [
               path.resolve(__dirname, './app/stylesheets'),
-              path.resolve(__dirname, './app/bower_components'),
               path.resolve(__dirname, './node_modules'),
+              path.resolve(__dirname, './node/@bower_components'),
           ]
         }
       }
@@ -108,16 +108,17 @@ var rules = [
 ];
 
 const baseConfig = {
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: rules,
   },
   resolve: {
     modules: [
       path.join(__dirname, 'node_modules'),
-      // path.join(__dirname, 'app/bower_components'),
       path.join(__dirname, 'node_modules/@bower_components'),
     ],
+
+    //
     alias: {
       'fancybox': 'fancybox/source/jquery.fancybox',
       'fancybox.wannabe': 'fancybox-wannabe-fix/index',
@@ -126,6 +127,7 @@ const baseConfig = {
       'owlCarousel': 'OwlCarousel/owl-carousel/owl.carousel',
       'jquery.mmenu': 'jQuery.mmenu/src/js/jquery.mmenu.min.all',
       'jquery.role': 'jquery.role/lib/jquery.role',
+      'sticky-kit': 'sticky-kit/jquery.sticky-kit',
     },
     extensions: ['.js', '.jsx', '.json', '.coffee'],
   },
