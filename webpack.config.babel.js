@@ -108,7 +108,7 @@ var rules = [
 ];
 
 const baseConfig = {
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
   module: {
     rules: rules,
   },

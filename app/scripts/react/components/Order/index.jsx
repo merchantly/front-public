@@ -6,7 +6,7 @@ import provideTranslations from '../HoC/provideTranslations';
 import { connect } from 'react-redux';
 import get from 'lodash/get';
 import Order from './Order';
-import { diff } from 'deep-diff';
+import diff from 'deep-diff';
 import {
   changeFieldValue,
   initCheckout,

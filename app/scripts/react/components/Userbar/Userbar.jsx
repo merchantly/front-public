@@ -18,7 +18,7 @@ class Userbar extends Component {
   }
 
   componentWillMount() {
-    const launchFromIFrame = window && window != window.top && window.top.KioskOperatorApp;
+    const launchFromIFrame = (typeof window !== 'undefined') && window != window.top && window.top.KioskOperatorApp;
     this.setState( { launchFromIFrame: launchFromIFrame } );
   }
 
@@ -82,7 +82,7 @@ class Userbar extends Component {
               text={cabinetText}
               url={cabinetUrl}
             />
-          }          
+          }
           {vendorIsPublished === false && (
             <PublishShopButton publishShopUrl={publishShopUrl} t={t} />
           )}

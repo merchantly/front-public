@@ -4,7 +4,9 @@ import 'styles/lib/cleanslate.css';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { render } from 'react-dom';
-import { Router, IndexRoute, Route, hashHistory } from 'react-router';
+import { Router, Route } from 'react-router';
+import { HashRouter } from 'react-router-dom';
+
 import WidgetRoot from './WidgetRoot';
 import 'r/application';
 
@@ -32,16 +34,16 @@ import DictionaryEntitiesShowWidget from 'rc/DictionaryEntitiesShow/DictionaryEn
 class Widget extends Component {
   render() {
     return (
-      <Router history={hashHistory}>
+      <HashRouter>
         <Route path="/" component={WidgetRoot}>
-          <IndexRoute component={WelcomeWidget} />
+          <Route path="" component={WelcomeWidget} />
           <Route path="product/:productId" component={ProductCardWidget} />
           <Route path="category/:categoryId" component={CategoriesShowWidget} />
           <Route path="entities/:entitiesId" component={DictionaryEntitiesShowWidget} />
           <Route path="cart" component={CartWidget} />
           <Route path="checkout" component={OrderWidget} />
         </Route>
-      </Router>
+      </HashRouter>
     );
   }
 }

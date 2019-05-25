@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CheckoutFieldSelect from './CheckoutFieldSelect';
 import * as apiRoutes from '../../../routes/api';
 import provideTranslations from 'rc/HoC/provideTranslations';
-import { diff } from 'deep-diff';
+import diff from 'deep-diff';
 import { find } from 'lodash';
 
 const DEFAULT_STATE = 'default';

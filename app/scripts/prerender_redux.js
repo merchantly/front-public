@@ -1,15 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-const thunk = require('redux-thunk').default;
-
-const DesignReducer = require('./react/reducers/Design.prerender');
-const PopupReducer = require('./react/reducers/popup');
-const cartReducer = require('./react/reducers/cart').default;
-const packagesReducer = require('./react/reducers/packages').default;
-const goodStateReducer = require('./react/reducers/goodState');
-const layoutReducer = require('./react/reducers/layout');
-const clientState = require('./react/reducers/clientState');
-const operatorState = require('./react/reducers/operatorState');
+import DesignReducer from './react/reducers/Design.prerender';
+import PopupReducer from './react/reducers/popup';
+import cartReducer from './react/reducers/cart';
+import packagesReducer from './react/reducers/packages';
+import goodStateReducer from './react/reducers/goodState';
+import layoutReducer from './react/reducers/layout';
+import clientState from './react/reducers/clientState';
+import operatorState from './react/reducers/operatorState';
 
 var prerenderReducers = combineReducers({
   cart: cartReducer,
