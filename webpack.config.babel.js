@@ -54,6 +54,26 @@ console.log('webpack devMode', devMode);
 //];
 var rules = [
   {
+    test: /\.(gif|png|jpe?g|svg)$/i,
+    use: [
+      {loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'images/'
+      }}
+    ]
+  },
+  {
+    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+    use: [{
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'fonts/'
+      }
+    }]
+  },
+  {
     test: /\.coffee$/,
     use: [
       {
@@ -75,7 +95,7 @@ var rules = [
     exclude: /(node_modules|bower_components)/,
   },
   {
-    test: /\.(sass|scss)$/,
+    test: /\.(sass|s?css)$/,
     use: [
       MiniCssExtractPlugin.loader,
       {
@@ -94,17 +114,6 @@ var rules = [
           ]
         }
       },
-    ],
-    exclude: /(node_modules|bower_components)/,
-  },
-  {
-    test: /\.css$/,
-    use: [
-      MiniCssExtractPlugin.loader,
-      {
-        loader: 'css-loader', options: { importLoaders: 1 }
-      },
-      'postcss-loader'
     ],
     exclude: /(node_modules|bower_components)/,
   },
@@ -154,6 +163,8 @@ const browserConfig = {
     // Uses for development
     store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),
     libs: path.join(__dirname, 'app/scripts/libs'), // ex vendor
+    fonts: path.join(__dirname, 'app/fonts'),
+    images: path.join(__dirname, 'app/images')
   },
   target: 'web',
   plugins: [
