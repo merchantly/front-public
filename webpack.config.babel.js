@@ -108,6 +108,10 @@ var rules = [
     ],
     exclude: /(node_modules|bower_components)/,
   },
+  {
+    test: /\.pug$/,
+    use: 'pug-loader'
+  },
   //{
     //test: /\.json$/,
     //use: [
@@ -120,7 +124,6 @@ const baseConfig = {
   output: {
     filename: '[name].js'
   },
-  // devtool: 'inline-source-map',
   module: {
     rules: rules,
   },
@@ -142,8 +145,9 @@ const nodeConfig = {
 }
 
 const browserConfig = {
+  devtool: 'inline-source-map',
   entry: {
-    widget: path.join(__dirname, 'app/scripts/react/components/Widget'),
+    widget: path.join(__dirname, 'app/scripts/widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),
     styles: path.join(__dirname, 'app/stylesheets/production.scss'),
 

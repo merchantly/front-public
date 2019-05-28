@@ -1,8 +1,8 @@
 /*global React */
 /* eslint "react/no-multi-comp": "off", "react/display-name": "off" */
-import './resources/gon';
-import './libs';
-import './bundle';
+import "app/scripts/resources/gon";
+import 'app/scripts/libs';
+import 'app/scripts/bundle';
 
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';

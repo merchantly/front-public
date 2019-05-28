@@ -65,7 +65,7 @@ class ProductBlock extends Component {
           </AppLink>
           {(showCartButton && product.hasOrderingGoods) && (
             <div>
-              {showAuthForBuyButton 
+              {showAuthForBuyButton
                 ? (
                   <div className="b-item__cart-form">
                     <button
@@ -75,7 +75,7 @@ class ProductBlock extends Component {
                       {t('vendor.button.auth_for_buy')}
                     </button>
                   </div>
-                ) 
+                )
                 : (
                   <div className="b-item__cart-form">
                     {(product.goods.length === 1) && product.goods[0].actualPrice && (

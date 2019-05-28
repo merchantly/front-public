@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CatalogFilterContainer from 'rc/CatalogFilter';
+import jQuery from 'jquery';
 
 const MIN_DESKTOP_WIDTH = 1024;
 
@@ -21,7 +22,7 @@ class ItemListCatalog extends Component {
 
   componentDidMount() {
     // В мобильнов варианте автоматически закрываем
-    this.setState({ isOpen: ($(document).width() >= MIN_DESKTOP_WIDTH) });
+    this.setState({ isOpen: (jQuery(document).width() >= MIN_DESKTOP_WIDTH) });
   }
 
   handleFilterToggle() {

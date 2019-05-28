@@ -11,12 +11,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60306/01588a96-ee2d-4f1b-b974-018034a0b744.jpg",
           "width": 600,
           "height": 600
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/70723/3549fbaf-2e95-481c-8d0c-94cbce731d02.jpg",
           "width": 750,
           "height": 937
@@ -50,12 +50,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60360/3dbe6e03-10e6-4c66-8158-54235b2827c5.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/70691/369fe539-1a9f-476e-b962-030ff9ac1c27.jpg",
           "width": 1080,
           "height": 1080
@@ -89,12 +89,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/56036/40db38a1-840b-4eea-9a2e-8c33d0333d6c.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/59757/5682dac4-4338-4715-b7f2-6104270cf52d.jpg",
           "width": 640,
           "height": 640
@@ -128,12 +128,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/53919/f710fddf-9348-422d-97d6-c5d3040c64e8.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/47518-bulavka-liza-vintova",
         "short_details": "Серебро, Гематит, кахолонг, пирит, шуагит",
         "goods": [
@@ -163,12 +163,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/53920/462136f8-48fa-4860-b19a-555689e321f1.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/47514-bulavka-liza-vintova",
         "short_details": "Серебро, Гематит, кахолонг, коралл, пирит",
         "goods": [
@@ -198,12 +198,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/43760/de208ff5-d736-4a70-8a65-058a22e669a0.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/81603/3ed2db0b-d640-4a32-a7fe-c6c15c4f6aab.jpg",
           "width": 350,
           "height": 350

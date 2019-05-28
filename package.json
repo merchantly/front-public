@@ -10,7 +10,7 @@
   "scripts": {
     "build_fake": "ENV=production gulp build && yarn run dist:widget",
     "build_fake:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
-    "devServer": "webpack-dev-server",
+    "devServer": "webpack-dev-server --mode=development",
     "dist": "mkdir -p ./dist && ENV=production gulp dist",
     "dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
     "test": "yarn test:app && yarn test:prerender",
@@ -141,6 +141,7 @@
     "postcss-preset-env": "^6.6.0",
     "postcss-scss": "^2.0.0",
     "pretty-hrtime": "^0.2.2",
+    "pug-loader": "^2.4.0",
     "raw-loader": "^2.0.0",
     "require-dir": "^0.3.2",
     "sass-loader": "^7.1.0",
