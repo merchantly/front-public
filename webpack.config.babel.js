@@ -160,13 +160,13 @@ const browserConfig = {
   entry: {
     widget: path.join(__dirname, 'app/scripts/widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),
-    styles: path.join(__dirname, 'app/stylesheets/production.scss'),
-
-    // Uses for development
-    store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),
+    store_app_styles: path.join(__dirname, 'app/stylesheets/production.scss'),
     libs: path.join(__dirname, 'app/scripts/libs'), // ex vendor
     fonts: path.join(__dirname, 'app/fonts'),
-    images: path.join(__dirname, 'app/images')
+    images: path.join(__dirname, 'app/images'),
+
+    // Uses for local development
+    store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),
   },
   target: 'web',
   plugins: [

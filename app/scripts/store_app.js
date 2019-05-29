@@ -13,6 +13,8 @@ import './lib/csrfToken';
 import './lib/eventsHelper';
 import './lib/bugsnagAjax';
 
+import 'app/stylesheets/production.scss';
+
 if (typeof Bugsnag !== 'undefined') {
   const bugsnagScript = document.querySelector('[src$="bugsnag-2.min.js"]');
 

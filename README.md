@@ -40,6 +40,14 @@ https://github.com/merchantly/doc/blob/master/ANALYTICS.md
 
 Заходим на `http://localhost:9000/`
 
+Артефакты
+---------
+
+* `store_app_node.js` - приложение запускаемое на сервере для пререндера
+  компонентов. Не должно содержать `react-server` и `react_ujs` так как они
+  подключаются отдельно на рельсовой стороне. Тестируется через `yarn
+  test:prerender`
+
 Разработка
 -----------
 
