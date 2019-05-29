@@ -59,7 +59,8 @@ var rules = [
       {loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: 'images/'
+        outputPath: 'images/',
+        filename: '[path][name].[ext]'
       }}
     ]
   },
@@ -69,7 +70,8 @@ var rules = [
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: 'fonts/'
+        outputPath: 'fonts/',
+        filename: '[path][name].[ext]'
       }
     }]
   },
