@@ -3,22 +3,14 @@
 // Enzyme.configure({ adapter: new Adapter() });
 import assert from 'assert';
 
-global.gon = {
-  public_api_url: 'localhost'
-}
+//global.gon = {
+  //public_api_url: 'localhost'
+//}
 
 require('dist/store_app_node');
 
-const {
-  layoutProps,
-} = require('../test/fixtures/vendorLayout/sample.json');
-
-const logoProps = {
-  'linkUrl': 'http://wannabe.vagrant.dev:3000',
-  'logoText': 'Wannabe Jewelry Moscow',
-  'imageAlt': 'Wannabe Jewelry Moscow',
-  'logoUrl': null,
-};
+import layoutProps from './fixtures/vendorLayout/sample.json';
+import logoProps from './fixtures/logo_props.js';
 
 function t(componentName, props) {
   const component = global[componentName];
