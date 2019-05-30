@@ -3,14 +3,14 @@ module.exports = {
     "@babel/react",
     [
       "@babel/env",
-      {
-         corejs: '2',
-         useBuiltIns: 'usage',
-        // debug: true,
-        //targets: {
-          //node: true
-        //}
-      }
+      //{
+         //corejs: '2',
+         //useBuiltIns: 'usage',
+        //// debug: true,
+        ////targets: {
+          ////node: true
+        ////}
+      //}
     ]
   ],
   "plugins": [

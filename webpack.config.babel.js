@@ -147,14 +147,13 @@ const nodeConfig = {
 	entry: {
 		store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
 		tests: path.join(__dirname, 'test/index'),
-	},
+    rt: path.join(__dirname, 'app/scripts/rt'),
+  },
+  target: 'node',
 
 	optimization: {
 		minimize: false // devMode
-	},
-	externals: {
-		'xhr2': 'xhr2'
-	},
+	}
 }
 
 const browserConfig = {
@@ -178,4 +177,5 @@ const browserConfig = {
   ]
 }
 
-exports.default = [ merge(baseConfig, nodeConfig), merge(baseConfig, browserConfig)]
+// exports.default = [ merge(baseConfig, nodeConfig), merge(baseConfig, browserConfig)]
+exports.default = [ merge(baseConfig, nodeConfig) ]

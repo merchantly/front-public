@@ -1,16 +1,11 @@
-//import Enzyme, { render } from 'enzyme';
-//import Adapter from 'enzyme-adapter-react-16.2';
-// Enzyme.configure({ adapter: new Adapter() });
 import assert from 'assert';
-
-//global.gon = {
-  //public_api_url: 'localhost'
-//}
-
-require('dist/store_app_node');
+import i18next from 'i18next';
 
 import layoutProps from './fixtures/vendorLayout/sample.json';
 import logoProps from './fixtures/logo_props.js';
+import "app/scripts/resources/gon";
+
+require('dist/store_app_node');
 
 function t(componentName, props) {
   const component = global[componentName];

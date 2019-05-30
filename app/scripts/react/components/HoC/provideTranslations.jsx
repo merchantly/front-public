@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import i18next from 'i18next';
 import localeLanguages from '../../constants/localeLanguages';
 
+const DEFAULT_LOCALE = 'ru';
+
 const provideTranslations = (WrappedComponent) => {
   let i18n;
 
@@ -14,7 +16,7 @@ const provideTranslations = (WrappedComponent) => {
 
       this.i18n = i18next.createInstance({
         lng: locale,
-        fallbackLng: 'ru',
+        fallbackLng: DEFAULT_LOCALE,
         interpolation: {
           prefix: '%{',
           suffix: '}',
@@ -32,11 +34,11 @@ const provideTranslations = (WrappedComponent) => {
       if (i18n && i18n.locale) {
         return i18n.locale;
       }
-      if (gon && gon.i18n && gon.i18n.locale) {
+      if (typeof gon !== 'undefined' && gon.i18n && gon.i18n.locale) {
         return gon.i18n.locale;
       }
 
-      return 'ru';
+      return DEFAULT_LOCALE;
     }
     getTranslations() {
       const { i18n } = this.props;
@@ -44,7 +46,7 @@ const provideTranslations = (WrappedComponent) => {
       if (i18n && i18n.translations) {
         return i18n.translations;
       }
-      if (gon && gon.i18n && gon.i18n.translations) {
+      if (typeof gon !== 'undefined'  && gon.i18n && gon.i18n.translations) {
         return gon.i18n.translations;
       }
 

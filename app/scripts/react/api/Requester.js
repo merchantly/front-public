@@ -1,4 +1,3 @@
-import reqwest from 'reqwest';
 import prepareData from '../utils/prepareData';
 
 function vendorToken () {
@@ -30,6 +29,7 @@ function request(_method, url, srcData = {}) {
       method = 'GET'; break;
   }
 
+  const reqwest = require('reqwest');
   return reqwest({ url, headers, method, data, contentType, processData });
 }
 
