@@ -14,10 +14,11 @@
     "test:browser": "mocha-chrome test/index.html",
     "test:prerender": " mocha --compilers js:@babel/register ./test/test_prerender.js",
     "test:mini_racer": " ./test/mini_racer_test.rb",
-    "build": "NODE_ENV=production webpack-cli --progress --mode production",
+    "build": "yarn clean; NODE_ENV=production webpack-cli --progress --mode production",
     "dev:test:app": "yarn mocha --compilers js:@babel/register test/index.js",
     "dev:server": "webpack-dev-server --mode=development",
     "dev:build": "webpack-cli --progress --mode development",
+    "clean": "rm -f dist/*",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'app/bower_components', 'junction') } catch (e) { }\""
   },
   "dependencies": {
