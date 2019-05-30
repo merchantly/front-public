@@ -4,8 +4,7 @@ import 'es5-shim';
 
 import './libs';
 import './bundle';
-
-import './lib/ReactRailsUJS';
+import 'react_ujs';
 
 import 'jquery-ujs';
 import './lib/csrfToken';
