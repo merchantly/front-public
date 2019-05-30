@@ -19,7 +19,7 @@ require('@bower_components/fancybox/source/jquery.fancybox');
 
 require('nouislider');
 
-window.accounting.settings = gon.accounting_settings || {
+const DEFAULT_SETTINGS = {
   currency: {
     symbol: 'руб.', // default currency symbol is '$'
     format: '%v %s', // controls output: %s = symbol, %v = value/number (can be object: see below)
@@ -33,3 +33,5 @@ window.accounting.settings = gon.accounting_settings || {
     decimal: ',',
   },
 };
+
+window.accounting.settings = (typeof gon !== 'undefined' && gon.accounting_settings) ? gon.accounting_settings : DEFAULT_SETTINGS;

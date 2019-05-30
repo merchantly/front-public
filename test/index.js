@@ -7,7 +7,9 @@ import './mocks/gon';
 import './mocks/mrch';
 import { initStore } from './mocks/redux';
 
-// Libs
+window.gon = {};
+
+//// Libs
 import './libsConfigs';
 import 'app/scripts/libs';
 
@@ -15,7 +17,7 @@ beforeEach('init redux', () => {
   global.redux = initStore();
 });
 
-// Components
+//// Components
 import './react/components/CatalogFilter/CatalogFilter.test';
 import './react/components/Userbar/index.test';
 import './react/components/Logo/Logo.test';

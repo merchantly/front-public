@@ -11,9 +11,9 @@
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script>mocha.setup('bdd')</script>
-    <script src="../build/scripts/vendor.js"></script>
-    <script src="../build/scripts/test.js"></script>
+    <script src="../dist/tests.js"></script>
     <script>
+      window.gon = {};
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
       } else {

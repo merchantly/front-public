@@ -132,6 +132,11 @@ var rules = [
 ];
 
 const baseConfig = {
+  devServer: {
+    port: 3005,
+    // contentBase: path.join(__dirname, 'dist'),
+    disableHostCheck: true
+  },
   output: {
     filename: '[name].js'
   },
@@ -150,7 +155,6 @@ const baseConfig = {
 const nodeConfig = {
   entry: {
     store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
-    tests: path.join(__dirname, 'test/index')
   },
   target: 'node',
   optimization: {
@@ -167,6 +171,7 @@ const browserConfig = {
     libs: path.join(__dirname, 'app/scripts/libs'), // ex vendor
     fonts: path.join(__dirname, 'app/fonts'),
     images: path.join(__dirname, 'app/images'),
+    tests: path.join(__dirname, 'test/index'),
 
     // Uses for local development
     store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),

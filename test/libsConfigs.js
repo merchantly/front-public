@@ -1,4 +1,4 @@
-import i18n from 'i18next';
+import i18next from 'i18next';
 import translations from './mocks/translations';
 import React, { Component } from 'react';
 import Enzyme from 'enzyme';
@@ -13,8 +13,8 @@ Component.defaultProps = {
 
 const LOCALE = 'ru';
 
-i18n.init({
-  fallbackLng: 'ru',
+i18next.init({
+  fallbackLng: LOCALE,
   interpolationPrefix: '%{',
   interpolationSuffix: '}',
   lng: LOCALE,
@@ -25,4 +25,4 @@ i18n.init({
   },
 });
 
-// i18n.setLng(LOCALE);
+// i18next.setLng(LOCALE);
