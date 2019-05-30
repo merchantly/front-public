@@ -17,6 +17,7 @@
     "test:app": "mocha ./dist/tests.js",
     "test:prerender": " mocha --compilers js:@babel/register ./test/test_prerender.js",
     "build": "NODE_ENV=production webpack-cli --progress --mode production",
+    "dev:build": "webpack-cli --progress --mode development",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'app/bower_components', 'junction') } catch (e) { }\""
   },
   "dependencies": {

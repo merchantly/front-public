@@ -4,9 +4,9 @@ import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import babelifyOptions from './.babelrc.js';
 
-const devMode = process.env.NODE_ENV !== 'production';
+const isDevMode = process.env.NODE_ENV !== 'production';
 
-console.log('webpack devMode', devMode);
+console.log('webpack isDevMode', isDevMode);
 
 // development
 //plugins: [
@@ -152,7 +152,10 @@ const nodeConfig = {
     store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
     tests: path.join(__dirname, 'test/index')
   },
-  target: 'node'
+  target: 'node',
+  optimization: {
+    minimize: !isDevMode
+  }
 }
 
 const browserConfig = {

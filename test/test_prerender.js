@@ -1,16 +1,12 @@
-//import Enzyme, { render } from 'enzyme';
-//import Adapter from 'enzyme-adapter-react-16.2';
-// Enzyme.configure({ adapter: new Adapter() });
 import assert from 'assert';
-
-//global.gon = {
-  //public_api_url: 'localhost'
-//}
-
-require('dist/store_app_node');
-
 import layoutProps from './fixtures/vendorLayout/sample.json';
 import logoProps from './fixtures/logo_props.js';
+
+global.gon = {
+  public_api_url: 'localhost'
+}
+
+require('dist/store_app_node');
 
 function t(componentName, props) {
   const component = global[componentName];
@@ -68,9 +64,9 @@ t('OrderPaymentPage', require('../test/fixtures/orderPayment/page-sample.json'))
 t('BlogPostListPage', require('../test/fixtures/blogPostList/page-sample.json'));
 t('BlogPostPage', require('../test/fixtures/blogPost/page-sample.json'));
 t('CabinetPage', require('../test/fixtures/cabinet/page-sample.json'));
-t('DictionaryPage', { layoutProps, title: 'title' });
-t('LookbookPage', Object.assign({}, { layoutProps }, require('../test/fixtures/lookbook/sample.json')));
-t('PaymentPage', { layoutProps, state: 'success', vendorUrl: '/v' });
+t('DictionaryPage', { ...layoutProps, title: 'title' });
+t('LookbookPage', Object.assign({}, layoutProps, require('../test/fixtures/lookbook/sample.json')));
+t('PaymentPage', { ...layoutProps, state: 'success', vendorUrl: '/v' });
 t('ErrorPagePage', require('../test/fixtures/errorPage/page-sample.json'));
 t('ContentPagePage', require('../test/fixtures/contentPage/page-sample.json'));
 
