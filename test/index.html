@@ -14,6 +14,8 @@
     <script src="../dist/tests.js"></script>
     <script>
       window.gon = {};
+      mocha.checkLeaks();
+      mocha.globals(['redux']);
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
       } else {
