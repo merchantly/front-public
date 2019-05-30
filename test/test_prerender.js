@@ -1,12 +1,13 @@
 import assert from 'assert';
 import layoutProps from './fixtures/vendorLayout/sample.json';
 import logoProps from './fixtures/logo_props.js';
+import ReactDOMServer from 'react-dom/server';
 
 global.gon = {
   public_api_url: 'localhost'
 }
 
-require('dist/store_app_node');
+require('dist/store_app_prerender.production');
 
 function t(componentName, props) {
   const component = global[componentName];

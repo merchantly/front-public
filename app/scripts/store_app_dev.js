@@ -1,8 +1,9 @@
 /*global React */
 /* eslint "react/no-multi-comp": "off", "react/display-name": "off" */
-import "app/scripts/resources/gon";
-import 'app/scripts/libs';
-import 'app/scripts/bundle';
+import "./resources/gon";
+import './lib/ReactRailsUJS';
+import './libs';
+import './bundle';
 
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';
@@ -102,5 +103,3 @@ global.ContentPagePageSample = () => React.createElement(global.ContentPagePage,
 global.ErrorPagePageSample = () => React.createElement(global.ErrorPagePage, require('test/fixtures/errorPage/page-sample.json'));
 global.ClientRegistrationPageSample = () => React.createElement(global.ClientRegistrationPage, require('test/fixtures/clientRegistration/page-sample.json'));
 global.ClientResetPasswordPageSample = () => React.createElement(global.ClientResetPasswordPage, require('test/fixtures/clientResetPasswordPage/page-sample.json'));
-
-import './lib/ReactRailsUJS';
