@@ -150,6 +150,8 @@ const baseConfig = {
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee'],
   },
+  plugins: [
+  ]
 };
 
 const nodeConfig = {
