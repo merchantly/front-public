@@ -119,10 +119,6 @@ var rules = [
     ],
     exclude: /(node_modules|bower_components)/,
   },
-  {
-    test: /\.pug$/,
-    use: 'pug-loader'
-  },
   //{
     //test: /\.json$/,
     //use: [
@@ -148,15 +144,21 @@ const baseConfig = {
 };
 
 const nodeConfig = {
-  entry: {
-    store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
-    tests: path.join(__dirname, 'test/index')
-  },
-  target: 'node'
+	entry: {
+		store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
+		tests: path.join(__dirname, 'test/index'),
+	},
+
+	optimization: {
+		minimize: false // devMode
+	},
+	externals: {
+		'xhr2': 'xhr2'
+	},
 }
 
 const browserConfig = {
-  devtool: 'inline-source-map',
+  // devtool: devMode ? 'inline-source-map',
   entry: {
     widget: path.join(__dirname, 'app/scripts/widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),

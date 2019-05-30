@@ -1,4 +1,4 @@
-// import reqwest from 'reqwest';
+import reqwest from 'reqwest';
 import prepareData from '../utils/prepareData';
 
 function vendorToken () {
@@ -7,7 +7,6 @@ function vendorToken () {
 }
 
 function request(_method, url, srcData = {}) {
-  const reqwest = require('reqwest');
 
   let contentType, processData, method;
   const headers = prepareData({

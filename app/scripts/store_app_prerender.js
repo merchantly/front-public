@@ -2,6 +2,9 @@
 // window = undefined;
 require('./locales/numeral/ru');
 
+global.setTimeout = () => { throw new Error('no setTimeout exists'); };
+global.setInterval = () => { throw new Error('no setInterval exists'); };
+
 global.React = require('react');
 global.ReactDOM = require('react-dom');
 global.ReactDOMServer = require('react-dom/server');

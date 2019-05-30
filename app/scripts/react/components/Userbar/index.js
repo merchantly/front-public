@@ -110,8 +110,8 @@ export default provideTranslations(connectToRedux(connect(
     const {
       popups
     } = state.popup;
-    
-    const isDesignSettingOpen = isDesignOpened(popups);    
+
+    const isDesignSettingOpen = isDesignOpened(popups);
 
     return Object.assign({}, ownProps, {
       designMode,

@@ -18,10 +18,10 @@ class OrderTitle extends Component {
 
     priceNode.classList.add('animated');
     priceNode.classList.add('bounce');
-    setTimeout(() => {
+    window.setTimeout(() => {
       priceNode.classList.remove('animated');
       priceNode.classList.remove('bounce');
-    }, 1000);
+    }, 1000)
   }
   render() {
     const {

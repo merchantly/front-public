@@ -1,16 +1,26 @@
 module.exports = {
   "presets": [
     "@babel/react",
-    "@babel/env"
+    [
+      "@babel/env",
+      {
+         corejs: '2',
+         useBuiltIns: 'usage',
+        // debug: true,
+        //targets: {
+          //node: true
+        //}
+      }
+    ]
   ],
   "plugins": [
-     ["@babel/plugin-transform-spread", {
-          "loose": true
-     }],
+    ["@babel/plugin-transform-spread", {
+      "loose": true
+    }],
     "@babel/plugin-transform-runtime",
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
     "@babel/plugin-proposal-class-properties",
-     "add-module-exports",
+    "add-module-exports",
     ["module-resolver", {
       "root": ["./", "./node_modules/@bower_components/"],
       "alias": {
