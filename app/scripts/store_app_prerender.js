@@ -4,8 +4,10 @@ require('./locales/numeral/ru');
 
 global.React = require('react');
 global.ReactDOM = require('react-dom');
-global.ReactDOMServer = require('react-dom/server');
 global.redux = require('./prerender_redux').default;
+
+global.setTimeout = () => { };
+global.setInterval = () => { };
 
 global.Logo = require('./react/components/Logo/LogoContainer').default;
 global.ProductBlock = require('./react/components/Product/ProductBlock').default;
