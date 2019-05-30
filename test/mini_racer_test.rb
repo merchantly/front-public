@@ -9,3 +9,5 @@ context = MiniRacer::Context.new
 context.eval "var global = global || this;"
 context.eval "var self = self || this;"
 context.eval File.read FILE
+
+puts 'MiniRacer is OK'

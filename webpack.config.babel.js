@@ -154,7 +154,7 @@ const baseConfig = {
 
 const nodeConfig = {
   entry: {
-    store_app_node: path.join(__dirname, 'app/scripts/store_app_prerender'),
+    store_app_prerender: path.join(__dirname, 'app/scripts/store_app_prerender'),
   },
   target: 'node',
   optimization: {

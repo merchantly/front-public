@@ -1,17 +1,13 @@
 /*global beforeEach */
 
-// Mocks
-// import 'babel-polyfill';
-
 import './mocks/gon';
 import './mocks/mrch';
 import { initStore } from './mocks/redux';
-
-window.gon = {};
-
 //// Libs
 import './libsConfigs';
 import 'app/scripts/libs';
+
+window.gon = {};
 
 beforeEach('init redux', () => {
   global.redux = initStore();
