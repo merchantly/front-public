@@ -10,12 +10,14 @@
   <body>
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <script src="../dist/tests.js"></script>
     <script>
       window.gon = {};
+      mocha.setup('bdd');
       mocha.checkLeaks();
       mocha.globals(['redux']);
+    </script>
+    <script src="../dist/tests.js"></script>
+    <script>
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
       } else {

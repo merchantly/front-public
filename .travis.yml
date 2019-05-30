@@ -3,5 +3,6 @@ cache: yarn
 install:
   - yarn install
 script:
-  - yarn dev:build
+  - yarn build
   - yarn test:prerender
+  - yarn test:browser

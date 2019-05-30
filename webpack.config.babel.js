@@ -163,7 +163,7 @@ const nodeConfig = {
 }
 
 const browserConfig = {
-  devtool: 'inline-source-map',
+  devtool: isDevMode ? 'inline-source-map' : false,
   entry: {
     widget: path.join(__dirname, 'app/scripts/widget'),
     store_app: path.join(__dirname, 'app/scripts/store_app'),
