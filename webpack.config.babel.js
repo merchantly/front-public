@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import babelifyOptions from './.babelrc.js';
 
 const isDevMode = process.env.NODE_ENV !== 'production';
-
+const env = isDevMode ? 'development' : 'production';
 console.log('webpack isDevMode', isDevMode);
 
 // development
@@ -118,17 +118,7 @@ var rules = [
       },
     ],
     exclude: /(node_modules|bower_components)/,
-  },
-  {
-    test: /\.pug$/,
-    use: 'pug-loader'
-  },
-  //{
-    //test: /\.json$/,
-    //use: [
-      //{ loader: 'json-loader' }
-    //]
-  //},
+  }
 ];
 
 const baseConfig = {
@@ -138,7 +128,7 @@ const baseConfig = {
     disableHostCheck: true
   },
   output: {
-    filename: '[name].js'
+    filename: `[name].${env}.js`
   },
   module: {
     rules: rules,

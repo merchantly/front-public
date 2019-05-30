@@ -3,7 +3,7 @@
 require 'bundler/setup'
 require 'mini_racer'
 
-FILE = './dist/store_app_prerender.js'
+FILE = './dist/store_app_prerender.development.js'
 
 context = MiniRacer::Context.new
 context.eval "var global = global || this;"
