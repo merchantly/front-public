@@ -16,7 +16,7 @@
     "test:prerender": " mocha --compilers js:@babel/register ./test/test_prerender.js",
     "test:mini_racer": " ./test/mini_racer_test.rb",
     "build": "yarn clean; yarn build:production; yarn build:development",
-    "build:production": "NODE_ENV=production webpack-cli --progress --mode production",
+    "build:production": "NODE_ENV=production webpack-cli --mode production",
     "build:development": "NODE_ENV=development webpack-cli --progress --mode development",
     "dev:test:app": "yarn mocha --compilers js:@babel/register test/index.js",
     "dev:server": "webpack-dev-server --mode=development",
