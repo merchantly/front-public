@@ -1,7 +1,61 @@
 [![Build Status](https://travis-ci.org/merchantly/front-public.svg?branch=master)](https://travis-ci.org/merchantly/front-public)
 
+
+
+Разработка
+----------
+
+> yarn install
+> yarn dev:server
+> open http://localhost:9000/
+
 Развертывание проекта
 ---------------------
+// development
+//plugins: [
+//new webpack.DefinePlugin({
+//'process.env.NODE_ENV': '"production"',
+//'process.env.PUBLIC_API_URL': '"http://wannabe.kiiiosk.ru/api"',
+//'process.env.OPERATOR_API_URL': '"http://wannabe.kiiiosk.ru/operator/api"',
+//})
+//],
+//
+//config.devtool = 'source-map';
+//config.output = {
+//path: 'build/scripts',
+//filename: '[name].js',
+//};
+//config.plugins = [
+//new webpack.optimize.OccurenceOrderPlugin(),
+//new webpack.DefinePlugin({
+//'process.env.NODE_ENV': '"development"',
+//'process.env.PUBLIC_API_URL': '"http://wannabe.3001.brandymint.ru/api"',
+//'process.env.OPERATOR_API_URL': '"http://wannabe.vagrant.dev:3000/operator/api"',
+//'process.env.IMAGES_PATH': '"../images"',
+//'process.env.FONTS_PATH': '"../fonts"',
+//}),
+//];
+
+// TODO
+//var preLoaders = [
+//{
+//test: /\.(sass|scss)$/,
+//loader: 'string-replace',
+//query: {
+//multiple: [
+//{
+//search: 'IMAGES_PATH',
+//replace: process.env.ENV === 'production' ? "'/shop/images'" : "'../images'",
+//},
+//{
+//search: 'FONTS_PATH',
+//replace: process.env.ENV === 'production' ? "'/shop/fonts'" : "'../fonts'",
+//},
+//],
+//},
+//},
+//];
+
 
 * Установка nvm (пропустить если уже установлен)
 

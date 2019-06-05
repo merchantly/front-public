@@ -18,12 +18,12 @@ require('@bower_components/fancybox/source/jquery.fancybox');
 // fancybox и вносить в него правки
 jQuery.noConflict(true);
 
-const TEST_NODE_SELECTOR = '#merchantly-widget-container';
+// const TEST_NODE_SELECTOR = '#merchantly-widget-container';
 
 (function loadCss(cb) {
-  const el = document.querySelector(TEST_NODE_SELECTOR);
-  const styles = window.getComputedStyle(el);
-  render(<Widget />, el);
+  cb();
+  //const el = document.querySelector(TEST_NODE_SELECTOR);
+  //const styles = window.getComputedStyle(el);
 
   // Загружаем widget когда CSS готова.
   // Определяем то через такой костыль

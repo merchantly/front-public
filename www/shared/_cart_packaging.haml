@@ -1,0 +1,16 @@
+%li.b-cart__item.b-cart__item_spec
+  .b-cart__item__col-img
+    %img.b-cart__item__img{:alt => "Product none", :src => "http://thumball.brandydev.ru/unsafe/184x184/http://3001.vkontraste.ru/assets/fallback/product-none.png"}
+  .b-cart__item__col-content
+    %h2.b-cart__item__title Добавить подарочную коробку
+    .b-form__radio
+      %label{:for => "cart_package_good_global_id_z2lkoi8vbwvyy2hhbnrses9qcm9kdwn0lzm5nte"}
+        %input#cart_package_good_global_id_z2lkoi8vbwvyy2hhbnrses9qcm9kdwn0lzm5nte.radio_buttons.optional{"data-package" => "true", "data-price" => "500", :name => "cart[package_good_global_id]", :type => "radio", :value => "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzM5NTE"}>
+        Маленькая коробка —
+        %b 500 руб.
+    .b-form__radio
+      %label{:for => "cart_package_good_global_id_z2lkoi8vbwvyy2hhbnrses9qcm9kdwn0lzqzmtu"}
+        %input#cart_package_good_global_id_z2lkoi8vbwvyy2hhbnrses9qcm9kdwn0lzqzmtu.radio_buttons.optional{"data-package" => "true", "data-price" => "800", :name => "cart[package_good_global_id]", :type => "radio", :value => "Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0LzQzMTU"}>
+        Большая коробка —
+        %b 800 руб.
+    %a.b-btn.b-btn_sm.b-btn_trans{"href" => "some", "data-package-submit"=>true} Добавить

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+  %body.b-page
+    .b-page__content
+      .b-page__content__inner.b-page__content__inner_navbar
+        +include 'app/haml/shared/_navbar.haml'
+
+      .b-page__content__inner.b-page__content__inner_content
+        %article.post
+          .post__date 12 августа
+          %h2.post__title Израильская группа исполнила «Звезду по имени Солнце» на иврите
+          .post__image
+            %img{src: 'https://meduza.io/image/attachments/images/000/013/389/large/xjkh7WkxggqRC0GesEe_Zw.jpg', alt: ''}
+          .post__content
+            .post__text.b-text
+              %p Израильская группа «Зе ло хашув» («Это неважно») перепела песню группы «Кино» «Звезда по имени Солнце» на иврите.
+              %p Как рассказывается в репортаже израильского 9 канала, песня Цоя на иврите уже находится в ротации местного радио и «рвет эфир».
+              %iframe{width: '100%', height: '500', src: 'https://www.youtube.com/embed/gVW9Ymgg9gQ?feature=oembed&iv_load_policy=3&showinfo=0&color=white', frameborder: '0', allowfullscreen: true}
+              %p != '<b>Смотрите также:</b> как «Звезду по имени Солнце» пели в Дагестане.'
+              %iframe{width: '100%', height: '500', src: 'https://www.youtube.com/embed/3sYyf6BrXOE', frameborder: '0', allowfullscreen: true}
+        %nav.postnav
+          .postnav__inner
+            %a.postnav__prev{href: 'blog_item.html', title: ''}
+              %span Предыдущий пост
+              Где эта квартира? Игра «Медузы» и Airbnb
+
+            %a.postnav__next{href: 'blog_item.html', title: ''}
+              %span Следующий пост
+              Худший способ разоблачить правительство
+
+      .b-page__content__inner.b-page__content__inner_footer
+        +include 'app/haml/shared/_footer.haml'
+
+    %script{src: '../scripts/vendor.js'}
+    %script{src: '../scripts/client.js'}

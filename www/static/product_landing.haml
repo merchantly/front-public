@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+  %body.b-page.b-page_landing
+    .b-page__content
+      .b-page__content__inner.b-page__content__inner_navbar
+        %header.b-header{'itemscope': '', 'itemtype': 'http://schema.org/Organization'}
+          .b-header__container
+            .b-header__content
+              .b-header__desc
+                .b-site-description{'itemprop': 'description'}
+                  Магазин мебели ручной работы
+                  %ul
+                    %li
+                      ="+7 903 595 1737"
+                    %li
+                      ="+7 903 595 1737"
+
+      .b-page__content__inner.b-page__content__inner_content
+        .b-item-full
+          .b-item-full__header
+            %h1.b-item-full__title
+              Моно-серьга лалала
+                %span.b-item-full__articul Арт. 123123
+
+            .b-item-full__price
+              .b-item__price.b_item_price_sale 99 999 руб.
+              .b-item__price.b-item__price_old 100 000 руб.
+
+          / Основной контент о товаре
+          .b-item-full__content
+            .b-item-full__gallery
+              +include 'app/haml/shared/_product-carousel.haml'
+
+            .b-item-full__description
+              .b-item-full__text
+                %p Make peace, not war! Настоящий блокбастер среди украшений - серебряная моносерьга в виде пули Wanna?Be! - попала в самое сердце столичных модниц. Инкрустированный цирконами аксессуар не оставил и знаменитую на весь мир икону стилю, Рианну.
+                %p Известная дива не раз дополняла этим аксессуаром свои образы. Рекомендуем надевать кулон вместе с белыми майками, кружевными эспадрильями и джинсами бойфренда.
+
+              %ul.b-characteristics
+                - details = [{'Серебро': '12 К'}, {'Цирконы': '10 К'}, {'Кристаллов': '1294'}, {'Вес': '3 гр' }]
+                - for obj, i in details
+                  - for key of obj
+                    %li
+                      %a{href: '#'}
+                        = "#{key}:"
+                        = obj[key]
+                %li
+                  %a.link.link--file{href: '#'} Инструкция .png (26.8 КБ)
+                %li
+                  %a.link.link--external{href: '#'} Ссылка на страницу
+
+
+            .b-item-full__video
+              %h1.b-item-full__title
+                Видео
+              %iframe{width: "100%", height: "400", src: "https://www.youtube.com/embed/NYwco_4XCzg", frameborder: "0", allowfullscreen: true}
+
+        %section.b-cart
+          .b-cart__content
+            %h1.b-cart__title Форма заказа
+
+            %form{"accept-charset" => "UTF-8", :action => "/order", :method => "post", :novalidate => "novalidate"}
+              %div{:style => "display:none"}
+                %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+                %input{:name => "authenticity_token", :type => "hidden", :value => "oBDbmcDA0JU1rJJfqNAVU8YSF425ggRQQu4MuZ8em+c="}
+
+              .b-cart__form.b-form
+                .b-alert.b-alert_danger Обнаружены ошибки, пожалуйста, взгляните на них
+                .b-cart__form__inner
+                  .b-form__row.b-cart__form__data-row
+                    .b-form__row__num 1
+                    .b-form__row__content
+                      .b-form__row__title
+                        Выберите тип доставки. Ваш город
+                        %strong Москва
+                      .b-form__row__widget
+                        %span.b-form__radio
+                          %label{:for => "vendor_order_delivery_type_id_1", :name => "vendor_order[delivery_type_id]"}
+                            %input#vendor_order_delivery_type_id_1.radio_buttons.required.form-control{:name => "vendor_order[delivery_type_id]", :type => "radio", :value => "1", data-delivery-price: 600, delivery-type: true, data-delivery-only-city: 'Москва', data-show-fields: 'courier-moscow'}>
+                            .b-cart__form__delivery-name Курьером по Москве или Области
+                            .b-cart__form__delivery-price 600 рублей
+                      .b-form__row__widget
+                        %span.b-form__radio
+                          %label{:for => "vendor_order_delivery_type_id_2", :name => "vendor_order[delivery_type_id]"}
+                            %input#vendor_order_delivery_type_id_2.radio_buttons.required.form-control{:name => "vendor_order[delivery_type_id]", :type => "radio", :value => "2", data-delivery-price: 0, delivery-type: true, 'checked': 'checked'}>
+                            .b-cart__form__delivery-name Самовывоз
+                            .b-cart__form__delivery-price 0 рублей
+                      .b-form__row__widget
+                        %span.b-form__radio
+                          %label{:for => "vendor_order_delivery_type_id_3", :name => "vendor_order[delivery_type_id]"}
+                            %input#vendor_order_delivery_type_id_3.radio_buttons.required.form-control{:name => "vendor_order[delivery_type_id]", :type => "radio", :value => "3", data-delivery-price: 200, delivery-type: true, data-show-fields: 'courier-region'}>
+                            .b-cart__form__delivery-name Курьером в Регионы
+                            .b-cart__form__delivery-price 200 рублей
+
+                  .b-form__row.b-cart__form__data-row
+                    .b-form__row__num 2
+                    .b-form__row__content
+                      .b-form__row__title Введите данные
+                      .b-form__row__widget
+                        .b-form__row__widget.string.required.vendor_order_phone.has-error
+                          %label.string.required.control-label{:for => "vendor_order_phone"} Телефон
+                          %input#vendor_order_phone.string.required.form-control{:name => "vendor_order[phone]", :placeholder => "Прим.: +7 913 123 32 10", :type => "text"}
+                          .b-alert.b-alert_danger Неверный формат телефона
+                        .b-form__row__widget.string.required.vendor_order_name
+                          %label.string.required.control-label{:for => "vendor_order_name"} Как к вам обращаться?
+                          %input#vendor_order_name.string.required.form-control{:name => "vendor_order[name]", :placeholder => "Как к вам обращаться", :type => "text"}
+                        .b-form__row__widget.select.required.vendor_order_city_id{show-courier-moscow: true, show-courier-region: true, hideable: true}
+                          %label.select.required.control-label{:for => "vendor_order_city_id"} Город доставки
+                          %input#vendor_order_name.string.required.form-control{:name => "vendor_order[city_title]", :placeholder => "Город", :type => "text", 'city-field' => true}
+
+                  .b-form__row.b-cart__form__data-row
+                    .b-form__row__num 3
+                    .b-form__row__content
+                      / .b-alert.b-alert_danger Обнаружены ошибки, пожалуйста, взгляните на них
+                      .b-form__row__title Способы оплаты
+                      .b-form__row__widget
+                        %span.b-form__radio
+                          %label{:for => "vendor_order_payment_type_id_1", :name => "vendor_order[payment_type_id]"}
+                            %input#vendor_order_payment_type_id_1.radio_buttons.required.form-control{:name => "vendor_order[payment_type_id]", :type => "radio", :value => "1"}>
+                            Банковской картой на сайте
+                      .b-form__row__widget
+                        %span.b-form__radio
+                          %label{:for => "vendor_order_payment_type_id_2", :name => "vendor_order[payment_type_id]"}
+                            %input#vendor_order_payment_type_id_2.radio_buttons.required.form-control{:name => "vendor_order[payment_type_id]", :type => "radio", :value => "2"}>
+                            Через ближайший салон связи
+                      .b-form__row__widget
+                        %span.b-form__radio{show-courier-moscow: true, hideable: true}
+                          %label{:for => "vendor_order_payment_type_id_3", :name => "vendor_order[payment_type_id]"}
+                            %input#vendor_order_payment_type_id_3.radio_buttons.required.form-control{:name => "vendor_order[payment_type_id]", :type => "radio", :value => "3"}>
+                            Наличными или банковской картой курьеру
+
+                .b-form__row
+                  .b-cart__action
+                    .b-cart__action__container
+                      .b-cart__action__col-back
+                        %a.b-cart__action__clear.b-btn.b-btn_trans{href: 'welcome.html'}
+                          Вернуться назад
+
+                      .b-cart__action__col-submit
+                        %button.b-cart__action__submit.b-btn{type: 'submit', :name => "commit", :type => "submit"} Продолжить
+
+    %script{src: '../scripts/vendor.js'}
+    %script{src: '../scripts/client.js'}
+    %script{:defer => "defer", :type => "text/javascript"}

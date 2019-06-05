@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+%html
+  %head
+    +include 'app/haml/shared/_head.haml'
+  %body.b-page
+    .b-page__content
+      .b-page__content__inner.b-page__content__inner_navbar
+        +include 'app/haml/shared/_navbar.haml'
+
+      .b-page__content__inner.b-page__content__inner_content
+        %section.posts
+          %article.post.post--short
+            .post__image
+              %a{href: 'blog_item.html', title: 'Где эта квартира? Игра «Медузы» и Airbnb'}
+                %img{src: 'https://meduza.io/image/attachments/images/000/012/024/large/r06V3ePJ9SdEHX5eJ5B_Dw.jpg', alt: ''}
+            .post__content
+              %a{href: 'blog_item.html', title: 'Где эта квартира? Игра «Медузы» и Airbnb'}
+                %h2.post__title Где эта квартира? Игра «Медузы» и Airbnb
+              .post__text.b-text
+                %p Перед вами настоящие квартиры, замки, дома и яхты, которые можно снять на Airbnb. Ваша задача — догадаться, где они находятся. Учитывайте, что географические координаты квартир указаны с точностью в 50 км, то есть точную улицу искать не надо. Играть очень просто: кликайте на карту в то место, где, как вы считаете, находится квартира или дом с фотографии — карту можно увеличивать и уменьшать. А если вы не представляете, о каком таком Airbnb идет речь, мы недавно все объяснили.
+              .post__date 13 августа
+          %article.post.post--short
+            .post__image
+              %a{href: 'blog_item.html', title: 'Израильская группа исполнила «Звезду по имени Солнце» на иврите'}
+                %img{src: 'https://meduza.io/image/attachments/images/000/013/389/large/xjkh7WkxggqRC0GesEe_Zw.jpg', alt: ''}
+            .post__content
+              %a{href: 'blog_item.html', title: 'Израильская группа исполнила «Звезду по имени Солнце» на иврите'}
+                %h2.post__title Израильская группа исполнила «Звезду по имени Солнце» на иврите
+              .post__text.b-text
+                %p
+                  Израильская группа «Зе ло хашув» («Это неважно») перепела песню группы «Кино» «Звезда по имени Солнце» на иврите.
+                  %br
+                  Как рассказывается в репортаже израильского 9 канала, песня Цоя на иврите уже находится в ротации местного радио и «рвет эфир».
+              .post__date 12 августа
+          %article.post.post--short
+            .post__image
+              %a{href: 'blog_item.html', title: 'Худший способ разоблачить правительство'}
+                %img{src: 'https://meduza.io/image/attachments/images/000/013/385/large/F72CIEaKN3QUyVNkO-qZyw.jpg', alt: ''}
+            .post__content
+              %a{href: 'blog_item.html', title: 'Худший способ разоблачить правительство'}
+                %h2.post__title Худший способ разоблачить правительство
+              .post__text.b-text
+                %p
+                  В 2012 году молодой сотрудник министерства обороны Австралии выложил на анонимный форум 4chan секретный документ, который он украл с работы. Он хотел, чтобы на документ обратили внимание СМИ, но утечку никто не заметил, а пользователи форума обозвали его вруном.
+                  %br
+                  Зато на опубликованный документ по случайности обратили внимание австралийские власти, после чего выследили несостоявшегося разоблачителя. Через три года после той публикации, летом 2015-го, он предстанет перед судом.
+              .post__date 11 августа
+
+      .b-page__content__inner.b-page__content__inner_footer
+        +include 'app/haml/shared/_footer.haml'
+
+    %script{src: '../scripts/vendor.js'}
+    %script{src: '../scripts/client.js'}
