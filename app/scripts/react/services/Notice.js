@@ -22,18 +22,18 @@ const NoticeService = {
     return text.length * multiplier;
   },
 
-  notify(type, text, timeout) {
+  notify(type, text, timeout, onClick) {
     timeout = timeout || this.getTimeoutForText(text);
 
     const container = this.getContainer();
     const data = {type, text, timeout};
 
     unmountComponentAtNode(container);
-    render(<Notice {...data} onClose={this.close} />, container);
+    render(<Notice {...data} onClose={this.close} onClick={onClick}/>, container);
   },
 
-  notifyInfo(text, timeout) {
-    this.notify('info', text, timeout);
+  notifyInfo(text, timeout, onClick) {
+    this.notify('info', text, timeout), onClick;
   },
 
   notifyError(text, timeout) {
