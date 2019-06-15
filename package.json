@@ -102,6 +102,7 @@
     "@babel/runtime": "^7.4.5",
     "@storybook/addon-actions": "^5.1.8",
     "@storybook/addon-links": "^5.1.8",
+    "@storybook/addon-viewport": "^5.1.8",
     "@storybook/addons": "^5.1.8",
     "@storybook/react": "^5.1.8",
     "apply-loader": "^2.0.0",
