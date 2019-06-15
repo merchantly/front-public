@@ -1,9 +1,11 @@
+/* TODO все перетащить в gon */
+
 /*global React */
 /* eslint "react/no-multi-comp": "off", "react/display-name": "off" */
-import "app/scripts/resources/gon";
-import 'app/scripts/libs';
-import 'app/scripts/bundle';
-import 'react_ujs';
+//import "app/scripts/resources/gon";
+//import 'app/scripts/libs';
+//import 'app/scripts/bundle';
+//import 'react_ujs';
 
 import cartSelectPackage from '../../test/fixtures/cart/select-package';
 import orderNoCoupon from '../../test/fixtures/order/no-coupon';
@@ -30,7 +32,6 @@ import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.jso
 import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/sample.json';
 import productSearchSample from 'test/fixtures/productSearch/sample.json';
 import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
-import welcomeSample from 'test/fixtures/welcome/sample.json';
 import ContentPageSample from 'test/fixtures/contentPage/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
 import {
@@ -64,7 +65,6 @@ global.CategoriesShowChildrenEmpty = () => React.createElement(global.Categories
 global.DictionaryEntitiesShowEmpty = () => React.createElement(global.DictionaryEntitiesShow, { ...dictionaryEntitiesShowSample, products: { items: [], pagination: {} }});
 global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
 global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
-global.WelcomeSample = () => React.createElement(global.Welcome, welcomeSample);
 global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
 global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
 
@@ -75,8 +75,6 @@ global.CategoriesShowPageSample = () => React.createElement(global.CategoriesSho
 global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
 global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
-global.WelcomeChildrenPageSample = () => React.createElement(global.WelcomeChildrenPage, require('test/fixtures/welcomeChildren/page-sample.json'));
-global.WelcomePageSample = () => React.createElement(global.WelcomePage, require('test/fixtures/welcome/page-sample.json'));
 global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessionNewPage, require('test/fixtures/clientSessionNew/page-sample.json'));
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
@@ -100,6 +98,5 @@ global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, {
 global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
 global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
-global.ErrorPagePageSample = () => React.createElement(global.ErrorPagePage, require('test/fixtures/errorPage/page-sample.json'));
 global.ClientRegistrationPageSample = () => React.createElement(global.ClientRegistrationPage, require('test/fixtures/clientRegistration/page-sample.json'));
 global.ClientResetPasswordPageSample = () => React.createElement(global.ClientResetPasswordPage, require('test/fixtures/clientResetPasswordPage/page-sample.json'));
