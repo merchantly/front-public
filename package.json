@@ -19,6 +19,7 @@
     "build": "yarn clean; yarn build:prerender; yarn build:production; yarn build:development",
     "build:production": "NODE_ENV=production webpack-cli --mode production",
     "build:development": "NODE_ENV=development webpack-cli --progress --mode development",
+    "profile": "NODE_ENV=production webpack-cli --profile --json > stats.json && webpack-bundle-analyzer ./stats.json",
     "dev:test:app": "yarn mocha --compilers js:@babel/register test/index.js",
     "dev:server": "webpack-dev-server --config webpack.config.dev-server.babel.js",
     "dev:build": "webpack-cli --progress --mode development",
@@ -161,6 +162,7 @@
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.2.3",
     "webpack": "^4.32.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1",
     "webpack-merge": "^4.2.1"

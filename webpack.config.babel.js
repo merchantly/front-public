@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import merge from 'webpack-merge';
 import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import rules from 'webpack/rules';
 import { env, isDevMode } from 'webpack/base';
@@ -21,6 +22,7 @@ const baseConfig = {
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
   },
   plugins: [
+    new BundleAnalyzerPlugin()
   ]
 };
 
@@ -79,7 +81,7 @@ const devConfig = {
 }
 
 exports.default = [
-  // merge(baseConfig, nodeConfig),
-  // merge(baseConfig, browserConfig),
-  devConfig
+  merge(baseConfig, nodeConfig),
+  merge(baseConfig, browserConfig),
+  // devConfig
 ]
