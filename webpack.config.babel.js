@@ -22,7 +22,7 @@ const baseConfig = {
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
   },
   plugins: [
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({ analyzerMode: 'static' })
   ]
 };
 

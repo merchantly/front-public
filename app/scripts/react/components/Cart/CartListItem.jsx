@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import {
-  range,
-  map,
-  size,
-} from 'lodash';
+import { range, map, size } from 'lodash';
 import { getIn } from 'timm';
 import {
   ORDER_IMG_SIZE,
@@ -49,7 +45,7 @@ class CartListItem extends Component {
 
     changeAmount(item.id, count);
   }
-  renderGoodDetails() {    
+  renderGoodDetails() {
     const attributes = getIn(this.props.item, ['good', 'attributes']);
     if (attributes) {
       return map(attributes, (attr) => {
@@ -59,11 +55,11 @@ class CartListItem extends Component {
           <div className="b-item-full__multiple-choice_colored-attribute" style={style}>
             {`${attr.title}: ${attr.value}`}
           </div>
-        ) 
+        )
       });
     } else {
       return null;
-    }    
+    }
   }
   renderErrors() {
     const errors = this.props.item.errors || {};
@@ -175,7 +171,7 @@ class CartListItem extends Component {
     } = (item.good || {});
 
     return (
-      <li className="b-cart__item"> 
+      <li className="b-cart__item">
         <div style={{position: "absolute", marginLeft: "2px"}}>
           { sortedCart ? <DragHandle/ > : null }
         </div>
@@ -195,7 +191,7 @@ class CartListItem extends Component {
             >
               {title}
             </a>
-          </h2>          
+          </h2>
           {this.renderGoodDetails()}
           {(size(item.errors) > 0) && this.renderErrors()}
         </div>
@@ -215,7 +211,7 @@ class CartListItem extends Component {
             href={item.destroyPath || ''}
           >
             <AssetImage src="images/cross_white.svg" />
-          </a>           
+          </a>
         </div>
       </li>
     );
