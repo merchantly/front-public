@@ -25,7 +25,8 @@ const baseConfig = {
   },
   plugins: [
     new LodashModuleReplacementPlugin,
-    new BundleAnalyzerPlugin({ analyzerMode: 'static' })
+    // С ним зависает билд, поэтому включать лучше вручную
+    // new BundleAnalyzerPlugin({ analyzerMode: 'static' })
   ]
 };
 
