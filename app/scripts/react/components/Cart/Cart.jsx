@@ -8,9 +8,12 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
 import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
-import chain from 'lodash-es/chain';
 import size from 'lodash-es/size';
 import omit from 'lodash-es/omit';
+import mapKeys from 'lodash-es/mapKeys';
+import map from 'lodash-es/map';
+import flow from 'lodash-es/flow';
+import flatten from 'lodash-es/flatten';
 
 class Cart extends Component {
   constructor(props) {
@@ -50,13 +53,15 @@ class Cart extends Component {
           minimal_price: humanizedMoneyWithCurrency(minimalPrice),
           currency: '',
         }), `minimal-price-${suffix}`)}
-        {chain(cartErrors)
-          .omit('minimalPrice')
-          .toArray()
-          .flatten(true)
-          .mapKeys((_, k) => `${k}-${suffix}`)
-          .map(this.renderError)
-          .value()
+        {
+
+        map(
+          mapKeys(
+            flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
+            (_, k) => `${k}-${suffix}`
+          ),
+          this.renderError
+        )
         }
       </span>
     );

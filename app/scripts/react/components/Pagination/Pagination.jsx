@@ -17,9 +17,13 @@ class Pagination extends Component {
       ? window.location.href
       : this.props.currentHref;
 
-    const url = new Url(href)
-    url.query['page']=page
-    return url.toString()
+    if (href) {
+      const url = new Url(href)
+      url.query['page']=page
+      return url.toString()
+    } else {
+      return '/?page=' + page.toString()
+    }
   }
   render() {
     const {

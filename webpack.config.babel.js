@@ -30,16 +30,6 @@ const baseConfig = {
   ]
 };
 
-const nodeConfig = {
-  entry: {
-    store_app_prerender: path.join(__dirname, 'app/scripts/store_app_prerender'),
-  },
-  target: 'node',
-  optimization: {
-    minimize: !isDevMode
-  }
-}
-
 const browserConfig = {
   devtool: isDevMode ? 'inline-source-map' : false,
   entry: {
@@ -89,9 +79,21 @@ const testsConfig = {
   target: 'web'
 }
 
+const nodeConfig = {
+  entry: {
+    store_app_prerender: path.join(__dirname, 'app/scripts/store_app_prerender'),
+  },
+  target: 'node',
+  resolve: {
+    alias: {
+      'reqwest': path.join(__dirname, 'webpack/noop.js')
+    }
+  }
+}
+
 exports.default = [
-  merge(baseConfig, nodeConfig),
   merge(baseConfig, browserConfig),
   merge(baseConfig, testsConfig)
+  merge(baseConfig, nodeConfig)
   // devConfig
 ]

@@ -7,7 +7,7 @@ global.gon = {
   public_api_url: 'localhost'
 }
 
-require('../dist/store_app_prerender.production.js');
+require('../dist/store_app_prerender.development.js');
 
 function t(componentName, props) {
   const component = global[componentName];
@@ -70,5 +70,3 @@ t('LookbookPage', Object.assign({}, layoutProps, require('../test/fixtures/lookb
 t('PaymentPage', { ...layoutProps, state: 'success', vendorUrl: '/v' });
 t('ErrorPagePage', require('../test/fixtures/errorPage/page-sample.json'));
 t('ContentPagePage', require('../test/fixtures/contentPage/page-sample.json'));
-
-console.log('Prerendering public components test finished successfully');

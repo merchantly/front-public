@@ -1,4 +1,4 @@
-// delete this['window']; // React-rails set window to this, it's unexpected behavior
+delete this['window']; // React-rails set window to this, it's unexpected behavior
 // window = undefined;
 require('./locales/numeral/ru');
 
