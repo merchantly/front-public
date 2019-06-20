@@ -1,6 +1,7 @@
 // Migrate to webpack's externals - https://webpack.js.org/configuration/externals/
 //
 window.I18n = require('i18next'); // Fallback for rails I18n
+window.$ = window.jQuery = require('jquery');
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.EventEmitter = require('@bower_components/eventEmitter');

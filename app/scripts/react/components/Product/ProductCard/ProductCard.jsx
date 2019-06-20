@@ -18,8 +18,7 @@ import {
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-// import URI from 'urijs';
-const URI = {}
+import Url from 'domurl';
 
 class ProductCard extends Component {
   constructor(props) {
@@ -68,8 +67,12 @@ class ProductCard extends Component {
     ev.preventDefault();
 
     if (isOneClickBuy) {
+      const url = new Url(newOrderUrl)
+
+      url.query = {'cart_item[good_id]': good.globalId, 'cart_item[product_price_id]': good.actualPrice.id}
+
       // TODO поддержка multipleChoice
-      document.location = URI(newOrderUrl).setQuery({'cart_item[good_id]': good.globalId, 'cart_item[product_price_id]': good.actualPrice.id});
+      document.location = url.toString()
     } else {
       return product.sellingByWeight
         ? addGood(good, 1, amount)

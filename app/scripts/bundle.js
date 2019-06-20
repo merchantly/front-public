@@ -8,13 +8,14 @@ import './react/libsConfigs';
 // Locales
 import './locales/numeral/ru';
 
-import './shared/app';
-import './shared/cart';
-import './shared/load_more';
+// По-моему они не нужны
+// import './shared/app';
+// import './shared/cart';
+// import './shared/load_more';
 // import './shared/lightbox';
-import './shared/jump';
-import './shared/application_slider';
-import './shared/theme_switcher';
+// import './shared/jump';
+// import './shared/application_slider';
+// import './shared/theme_switcher';
 
 // Exposing neccessary resources outside
 global.CatalogFilter = require('./react/components/CatalogFilter').CatalogFilter;

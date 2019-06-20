@@ -1,6 +1,5 @@
-// import URI from 'urijs';
-const URI = {};
 import { findDOMNode } from 'react-dom';
+import queryString from 'query-string';
 
 export default function getFilter(instance, params = {}) {
   const filter = $(findDOMNode(instance)).closest('form').serializeArray();
@@ -9,5 +8,5 @@ export default function getFilter(instance, params = {}) {
     return result;
   }, {});
 
-  return URI.buildQuery({...data, ...params});
+  return queryString.stringify({...data, ...params});
 }
