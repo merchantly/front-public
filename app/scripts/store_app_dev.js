@@ -75,7 +75,6 @@ global.CategoriesShowPageSample = () => React.createElement(global.CategoriesSho
 global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
 global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
-global.ClientSessionNewPageSample = () => React.createElement(global.ClientSessionNewPage, require('test/fixtures/clientSessionNew/page-sample.json'));
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
 
@@ -98,5 +97,3 @@ global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, {
 global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
 global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
-global.ClientRegistrationPageSample = () => React.createElement(global.ClientRegistrationPage, require('test/fixtures/clientRegistration/page-sample.json'));
-global.ClientResetPasswordPageSample = () => React.createElement(global.ClientResetPasswordPage, require('test/fixtures/clientResetPasswordPage/page-sample.json'));
