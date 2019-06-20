@@ -8,6 +8,7 @@
     "url": "git@github.com:merchantly/front-public.git"
   },
   "scripts": {
+    "deploy-storybook": "storybook-to-ghpages",
     "shell": "node -r @babel/register",
     "uuid": "yarn webpack-cli --entry ./node_modules/uuid/v4.js --mode production --output app/scripts/lib/uuid.js --output-library uuidv4 --output-library-target uuidv4",
     "build_fake:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
@@ -104,6 +105,7 @@
     "@storybook/addon-viewport": "^5.1.8",
     "@storybook/addons": "^5.1.8",
     "@storybook/react": "^5.1.8",
+    "@storybook/storybook-deployer": "^2.8.1",
     "apply-loader": "^2.0.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
