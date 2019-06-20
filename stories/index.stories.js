@@ -26,7 +26,8 @@ import MenuBottom from 'app/scripts/react/components/MenuBottom';
 import NavBar from 'app/scripts/react/components/NavBar';
 storiesOf('Menu', module)
 .add('NavBar', () => <NavBar {...require('test/fixtures/navBar/sample')} /> )
-  .add('MenuTop (v1)', () => <MenuTop {...require('test/fixtures/menuTop/sample0')} /> )
+  .add('MenuTop (v0)', () => <MenuTop {...require('test/fixtures/menuTop/sample0')} /> )
+  .add('MenuTop (v1)', () => <MenuTop {...require('test/fixtures/menuTop/sample1')} /> )
   .add('MenuTop (v2)', () => <MenuTop {...require('test/fixtures/menuTop/sample2')} /> )
   .add('MenuTop (sticky)', () => <MenuTop {...require('test/fixtures/menuTop/sticky')} /> )
   .add('MenuBottom', () => <MenuBottom {...require('test/fixtures/menuBottom/sample')} /> )
@@ -56,12 +57,31 @@ storiesOf('Content pages', module)
   .add('BlogPostListPage', () => <BlogPostListPage {...require('test/fixtures/blogPostList/page-sample.json')} /> )
   .add('LookbookPage', () => <LookbookPage { ...Object.assign({'layoutProps': layoutProps}, require('test/fixtures/lookbook/sample.json'))} /> )
 
+
+import Cart from 'app/scripts/react/components/Cart'
+import CartPage from 'app/scripts/react/components/Cart/CartPage'
+import WithlistPage from 'app/scripts/react/components/Wishlist/WishlistPage'
+storiesOf('Cart and wishlist', module)
+  .add('Cart', () => <Cart {...require('test/fixtures/cart/select-package')} /> )
+  .add('CartPage (empty)', () => <CartPage {...require('test/fixtures/cart/page-empty.json')} /> )
+  .add('CartPage (full)', () => <CartPage {...require('test/fixtures/cart/page-with-package.json')} /> )
+  .add('WithlistPage', () => <WithlistPage {...require('test/fixtures/wishlist/page-sample.json')} /> )
+
+
+import DictionaryEntitiesShowPage from 'app/scripts/react/components/DictionaryEntitiesShow/DictionaryEntitiesShowPage'
+import DictionaryPage from 'app/scripts/react/components/Dictionary/DictionaryPage'
+import DictionaryEntitiesShow from 'app/scripts/react/components/DictionaryEntitiesShow'
+storiesOf('Dictionary', module)
+  .add('DictionaryEntitiesShow (empty)', () => <DictionaryEntitiesShow {...Object.assign(require('test/fixtures/dictionaryEntitiesShow/sample.json'),  { products: { items: [], pagination: {} }})} /> )
+  .add('DictionaryEntitiesShowPage', () => <DictionaryEntitiesShowPage {...require('test/fixtures/dictionaryEntitiesShow/page-sample.json')} /> )
+  .add('DictionaryPage', () => <DictionaryPage { ...Object.assign({'layoutProps': layoutProps}, { title: 'title' }) } /> )
+
+
 // Product pages
 // Order pages
 // Catalog pages
 //
 
-  //import cartSelectPackage from '../../test/fixtures/cart/select-package';
   //import orderNoCoupon from '../../test/fixtures/order/no-coupon';
   //import productMultiSelect from '../../test/fixtures/products/multi-select';
   //import productMultiChoice from '../../test/fixtures/products/multiple-choice';
@@ -69,7 +89,6 @@ storiesOf('Content pages', module)
   //import productDoesntSell from '../../test/fixtures/products/3917';
   //import productNoGoods from '../../test/fixtures/products/no-goods';
 
-  //import menuTopSample1 from 'test/fixtures/menuTop/sample1';
 
   //// Много пунктов в ширину и в глубину.
   //// Есть пункты с подпунктами с краев.
@@ -77,7 +96,6 @@ storiesOf('Content pages', module)
   //import productGroupSample from 'test/fixtures/productGroup/sample.json';
   //import childrenProductsSample from 'test/fixtures/childrenProducts/sample.json';
   //import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.json';
-  //import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/sample.json';
   //import productSearchSample from 'test/fixtures/productSearch/sample.json';
   //import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
   //import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
@@ -121,18 +139,9 @@ storiesOf('Content pages', module)
 
   //global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 
-  //global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
-  //global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
-  //global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
-  //global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
-
   //global.CategoriesShowChildrenPageSample = () => React.createElement(global.CategoriesShowChildrenPage, require('test/fixtures/categoriesShowChildren/page-sample.json'));
   //global.CategoriesShowPageSample = () => React.createElement(global.CategoriesShowPage, require('test/fixtures/categoriesShow/page-sample.json'));
   //global.CategoriesShowEmpty = () => React.createElement(global.CategoriesShow, categoriesShowEmpty);
   //global.CategoriesShowFilterDirty = () => React.createElement(global.CategoriesShow, { ...categoriesShowEmpty, isFilterDirty: true });
   //global.CategoriesShowChildrenEmpty = () => React.createElement(global.CategoriesShowChildren, { childrenProducts: [], vendorRootPath: '/vendor/root/path' });
-
-  //global.DictionaryEntitiesShowEmpty = () => React.createElement(global.DictionaryEntitiesShow, { ...dictionaryEntitiesShowSample, products: { items: [], pagination: {} }});
-  //global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
-  //global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
 

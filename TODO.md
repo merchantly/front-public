@@ -4,6 +4,9 @@
 ** [ ] Разобаться с _.chain
 https://medium.com/making-internets/why-using-chain-is-a-mistake-9bc1f80d51ba
 
+* [ ] Починить Story/Cart
+* [ ] Починить тесты
+
 ## Проверить
 
 * [ ] Переключатель валют
