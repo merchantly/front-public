@@ -49,9 +49,6 @@ const browserConfig = {
     libs: path.join(__dirname, 'app/scripts/libs'), // ex vendor
     fonts: path.join(__dirname, 'app/fonts'),
     images: path.join(__dirname, 'app/images'),
-
-    // Uses for local development
-    store_app_dev: path.join(__dirname, 'app/scripts/store_app_dev'),
   },
   target: 'web',
   plugins: [
