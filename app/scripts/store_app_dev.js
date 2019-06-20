@@ -44,56 +44,60 @@ import {
 import pageWithCouponProps from 'test/fixtures/order/page-with-coupon.json';
 import orderPageProps from 'test/fixtures/order/page.json';
 
-global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
-global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.ProductCardMultiSelect = () => React.createElement(global.ProductCard, productMultiSelect);
 global.ProductCardMultiChoice = () => React.createElement(global.ProductCard, productMultiChoice);
 global.ProductCardDoesntSell = () => React.createElement(global.ProductCard, productDoesntSell);
 global.ProductCardWeight = () => React.createElement(global.ProductCard, productWeight);
 global.ProductCardNoGoods = () => React.createElement(global.ProductCard, productNoGoods);
-global.MenuTopSample1 = () => React.createElement(global.MenuTop, menuTopSample0);
-global.MenuTopSample2 = () => React.createElement(global.MenuTop, menuTopSample2);
-global.MenuTopStickySample = () => React.createElement(global.MenuTop, menuTopStickySample);
-global.MenuBottomSample = () => React.createElement(global.MenuBottom, menuBottomSample);
-global.NavBarSample = () => React.createElement(global.NavBar, navBarSample);
 global.ProductListSample = () => React.createElement(global.ProductList, productListSample);
 global.ProductGroupSample = () => React.createElement(global.ProductGroup, productGroupSample);
-global.ChildrenProductsSample = () => React.createElement(global.ChildrenProducts, childrenProductsSample);
-global.CategoriesShowEmpty = () => React.createElement(global.CategoriesShow, categoriesShowEmpty);
-global.CategoriesShowFilterDirty = () => React.createElement(global.CategoriesShow, { ...categoriesShowEmpty, isFilterDirty: true });
-global.CategoriesShowChildrenEmpty = () => React.createElement(global.CategoriesShowChildren, { childrenProducts: [], vendorRootPath: '/vendor/root/path' });
-global.DictionaryEntitiesShowEmpty = () => React.createElement(global.DictionaryEntitiesShow, { ...dictionaryEntitiesShowSample, products: { items: [], pagination: {} }});
 global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
 global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
-global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
-global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
-
-global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
-global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
-global.CategoriesShowChildrenPageSample = () => React.createElement(global.CategoriesShowChildrenPage, require('test/fixtures/categoriesShowChildren/page-sample.json'));
-global.CategoriesShowPageSample = () => React.createElement(global.CategoriesShowPage, require('test/fixtures/categoriesShow/page-sample.json'));
-global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
 global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
 global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
+global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
+global.ProductCardWithDeliveryMessages = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/delivery-messages.json'));
+global.ProductCardWithNotAvailableLinks = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/not-available-links.json'));
+global.ChildrenProductsSample = () => React.createElement(global.ChildrenProducts, childrenProductsSample);
+
+global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
+global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
 global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
 global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
-
 // localhost:9000/react/checkout.html
 // global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
 global.OrderPageSample = () => React.createElement(global.OrderPage, orderPageProps);
 global.OrderPageSampleWithCoupon = () => React.createElement(global.OrderPage, pageWithCouponProps);
-
 global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
 global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));
-global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
-global.ProductCardWithDeliveryMessages = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/delivery-messages.json'));
-global.ProductCardWithNotAvailableLinks = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/not-available-links.json'));
-global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
 global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPage, require('test/fixtures/orderPayment/page-sample.json'));
+
+global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
+
+global.CartContainerSelectPackage = () => React.createElement(global.CartContainer, cartSelectPackage);
+global.CartPageEmpty = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-empty.json'));
+global.CartPageWithPackage = () => React.createElement(global.CartPage, require('test/fixtures/cart/page-with-package.json'));
+global.WishlistPageSample = () => React.createElement(global.WishlistPage, require('test/fixtures/wishlist/page-sample.json'));
+
+global.CategoriesShowChildrenPageSample = () => React.createElement(global.CategoriesShowChildrenPage, require('test/fixtures/categoriesShowChildren/page-sample.json'));
+global.CategoriesShowPageSample = () => React.createElement(global.CategoriesShowPage, require('test/fixtures/categoriesShow/page-sample.json'));
+global.CategoriesShowEmpty = () => React.createElement(global.CategoriesShow, categoriesShowEmpty);
+global.CategoriesShowFilterDirty = () => React.createElement(global.CategoriesShow, { ...categoriesShowEmpty, isFilterDirty: true });
+global.CategoriesShowChildrenEmpty = () => React.createElement(global.CategoriesShowChildren, { childrenProducts: [], vendorRootPath: '/vendor/root/path' });
+
+global.DictionaryEntitiesShowEmpty = () => React.createElement(global.DictionaryEntitiesShow, { ...dictionaryEntitiesShowSample, products: { items: [], pagination: {} }});
+global.DictionaryEntitiesShowPageSample = () => React.createElement(global.DictionaryEntitiesShowPage, require('test/fixtures/dictionaryEntitiesShow/page-sample.json'));
+global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
+
+global.MenuTopSample1 = () => React.createElement(global.MenuTop, menuTopSample0);
+global.MenuTopSample2 = () => React.createElement(global.MenuTop, menuTopSample2);
+global.MenuTopStickySample = () => React.createElement(global.MenuTop, menuTopStickySample);
+global.MenuBottomSample = () => React.createElement(global.MenuBottom, menuBottomSample);
+
+global.NavBarSample = () => React.createElement(global.NavBar, navBarSample);
+global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
+
 global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
 global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, require('test/fixtures/blogPost/page-sample.json'));
-global.CabinetPageSample = () => React.createElement(global.CabinetPage, require('test/fixtures/cabinet/page-sample.json'));
-global.DictionaryPageSample = () => React.createElement(global.DictionaryPage, { layoutProps, title: 'title' });
 global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
-global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
 global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));

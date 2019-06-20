@@ -25,7 +25,16 @@ import ClientRegistrationPage from 'app/scripts/react/components/ClientRegistrat
 import ClientResetPasswordPage from 'app/scripts/react/components/ClientResetPassword/ClientResetPasswordPage';
 import ClientSessionNewPage from 'app/scripts/react/components/ClientSessionNew/ClientSessionNewPage';
 
+import CabinetPage from 'app/scripts/react/components/Cabinet/CabinetPage';
+
 storiesOf('Client pages',module)
   .add('ClientRegistrationPage', () => <ClientRegistrationPage {...require('test/fixtures/clientRegistration/page-sample.json')} /> )
   .add('ClientResetPasswordPage', () => <ClientResetPasswordPage {...require('test/fixtures/clientResetPasswordPage/page-sample.json')} /> )
   .add('ClientSessionNewPage', () => <ClientSessionNewPage {...require('test/fixtures/clientSessionNew/page-sample.json')} /> )
+  .add('CabinetPage', () => <CabinetPage {...require('test/fixtures/cabinet/page-sample.json')} /> )
+
+
+// Product pages
+// Order pages
+// Catalog pages
+//
