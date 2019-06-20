@@ -4,7 +4,7 @@ import { getOptions } from 'r/components/Product/ProductProperties/utils';
 import MultipleChoiceItem from './MultipleChoiceItem';
 import AssetImage from 'r/components/common/AssetImage';
 import InputNumberSpinner from 'r/components/common/InputNumberSpinner';
-import { partial } from 'lodash';
+import { partial } from 'lodash-es';
 import {
   SortableHandle,
 } from 'react-sortable-hoc';

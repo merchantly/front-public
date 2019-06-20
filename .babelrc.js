@@ -4,6 +4,7 @@ module.exports = {
     "@babel/env"
   ],
   "plugins": [
+     "lodash",
      ["@babel/plugin-transform-spread", {
           "loose": true
      }],

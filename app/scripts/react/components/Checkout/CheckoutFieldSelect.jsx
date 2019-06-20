@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import provideTranslations from 'rc/HoC/provideTranslations';
-import { find } from 'lodash';
+import { find } from 'lodash-es';
 
 class CheckoutFieldSelect extends Component {
   render() {

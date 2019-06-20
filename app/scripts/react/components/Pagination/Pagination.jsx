@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PaginationCurrentWindow from './PaginationCurrentWindow';
-import uri from 'urijs';
+// import URI from 'urijs';
 import { canUseDOM } from 'r/helpers/dom';
+
+const URI = {};
 
 export const WINDOW_SIZE = 4;
 
@@ -17,7 +19,7 @@ class Pagination extends Component {
       ? window.location.href
       : this.props.currentHref;
 
-    return uri(href).setSearch('page', page);
+    return URI(href).setSearch('page', page);
   }
   render() {
     const {

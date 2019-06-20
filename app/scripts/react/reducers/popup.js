@@ -1,7 +1,7 @@
 import createReducer from '../utils/createReducer';
 import * as actionTypes from '../constants/actionTypes';
 import { addFirst, removeAt, updateIn } from 'timm';
-import { findIndex } from 'lodash';
+import { findIndex } from 'lodash-es';
 
 const initialState = {
   popups: [],

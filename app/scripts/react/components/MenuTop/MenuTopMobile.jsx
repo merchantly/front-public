@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
 import MenuTopToggleButton from './MenuTopToggleButton';
-import $ from 'jquery';
 import AppLink from 'rc/common/AppLink';
 import { categoryRoute } from 'scripts/routes/app';
 

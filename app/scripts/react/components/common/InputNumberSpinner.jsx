@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import $ from 'jquery';
 
 export default class InputNumberSpinner extends Component {
   static propTypes = {

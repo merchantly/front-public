@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import CatalogFilterContainer, { CatalogFilterProps } from 'rc/CatalogFilter';
-import jQuery from 'jquery';
 
 const MIN_DESKTOP_WIDTH = 1024;
 

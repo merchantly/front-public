@@ -6,7 +6,7 @@ import './libs';
 import './bundle';
 import 'react_ujs';
 
-import 'jquery-ujs';
+// import 'jquery-ujs';
 import './lib/csrfToken';
 
 import './lib/eventsHelper';

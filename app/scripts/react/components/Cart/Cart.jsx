@@ -8,7 +8,9 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
 import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
-import { chain, size, omit } from 'lodash';
+import chain from 'lodash-es/chain';
+import size from 'lodash-es/size';
+import omit from 'lodash-es/omit';
 
 class Cart extends Component {
   constructor(props) {

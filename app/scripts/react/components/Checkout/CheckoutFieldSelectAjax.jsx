@@ -4,7 +4,7 @@ import CheckoutFieldSelect from './CheckoutFieldSelect';
 import * as apiRoutes from '../../../routes/api';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import diff from 'deep-diff';
-import { find } from 'lodash';
+import { find } from 'lodash-es';
 
 const DEFAULT_STATE = 'default';
 const REQUIRED_STATE = 'required';

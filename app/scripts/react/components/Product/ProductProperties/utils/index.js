@@ -28,7 +28,7 @@
 //   ]
 // }
 
-import { includes } from 'lodash';
+import { includes } from 'lodash-es';
 
 export function getOptions(properties, goods, filters) {
   return properties.reduce((prev, property) => {

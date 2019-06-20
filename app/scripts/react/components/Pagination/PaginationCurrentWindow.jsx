@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { WINDOW_SIZE } from '././Pagination.jsx';
-import { range } from 'lodash';
+import { range } from 'lodash-es';
 import classNames from 'classnames';
 
 function PaginationCurrentWindow(props) {

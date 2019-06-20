@@ -1,4 +1,4 @@
-import { isArray, isObject } from 'lodash';
+import { isArray, isObject } from 'lodash-es';
 
 export default function buildParams(prefix, obj, traditional, add) {
   let name, i, v,

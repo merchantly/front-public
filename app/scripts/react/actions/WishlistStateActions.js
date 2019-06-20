@@ -1,6 +1,6 @@
 import { wishlistItems, wishlistShow } from 'scripts/routes/api';
 import { CALL_API } from 'r/middleware/api';
-import { each } from 'lodash';
+import { each } from 'lodash-es';
 
 export const WISHLIST_ADD_REQUEST = 'WISHLIST_ADD_REQUEST';
 export const WISHLIST_ADD_SUCCESS = 'WISHLIST_ADD_SUCCESS';

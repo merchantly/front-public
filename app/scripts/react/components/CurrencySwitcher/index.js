@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import URI from 'urijs';
+// import URI from 'urijs';
+const URI = {};
 
 import CurrencySwitcher from './CurrencySwitcher';
 

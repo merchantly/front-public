@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import $ from 'jquery';
 
 let Ps;
 

@@ -5,11 +5,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import Widget from 'app/scripts/react/components/Widget';
 
-import jQuery from 'jquery';
-global.jQuery = jQuery;
-global.$ = jQuery;
+// import jQuery from 'jquery';
+// global.jQuery = jQuery;
+// global.$ = jQuery;
 
-require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
+// require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
 require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
 require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
 require('@bower_components/fancybox/source/jquery.fancybox');

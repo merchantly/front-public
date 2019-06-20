@@ -7,6 +7,8 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import rules from 'webpack/rules';
 import { env, isDevMode } from 'webpack/base';
 
+import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
+
 const baseConfig = {
   output: {
     filename: `[name].${env}.js`
@@ -22,6 +24,7 @@ const baseConfig = {
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
   },
   plugins: [
+    new LodashModuleReplacementPlugin,
     new BundleAnalyzerPlugin({ analyzerMode: 'static' })
   ]
 };

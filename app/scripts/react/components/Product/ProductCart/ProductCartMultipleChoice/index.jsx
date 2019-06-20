@@ -9,7 +9,7 @@ import {
 } from 'r/actions/GoodStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
-import { isEmpty, values, map } from 'lodash';
+import { isEmpty, values, map } from 'lodash-es';
 import { SortableContainer, SortableElement, arrayMove } from 'react-sortable-hoc';
 
 const SortableItem = SortableElement(({key, count, properties, good, onRemove, onChangeAmount}) => {

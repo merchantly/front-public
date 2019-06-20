@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import URI from 'urijs';
+// import URI from 'urijs';
+const URI = {};
 import { findDOMNode } from 'react-dom';
 
 export default function getFilter(instance, params = {}) {

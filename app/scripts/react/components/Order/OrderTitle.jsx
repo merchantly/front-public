@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { isEmpty } from 'lodash';
+import { isEmpty } from 'lodash-es';
 
 class OrderTitle extends Component {
   componentWillUpdate(nextProps) {

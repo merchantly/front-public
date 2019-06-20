@@ -219,3 +219,10 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 ## fix json
 
 > perl  -0777 -i -pe 's/},(\n?\r?\s+)([}\]])/}\n$1$2/igs'  test/fixtures/**/*.json
+
+## Требования jQuery
+
+* OwlCarousel >=1.8.3
+* jQuery.mmenu >= 1.7.0
+* fancybox               "jquery": ">=1.10",, "jquery-mousewheel": "~3.1.3"
+* sticky-kit => ?

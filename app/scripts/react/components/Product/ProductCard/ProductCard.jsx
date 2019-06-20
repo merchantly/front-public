@@ -18,7 +18,8 @@ import {
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-import URI from 'urijs';
+// import URI from 'urijs';
+const URI = {}
 
 class ProductCard extends Component {
   constructor(props) {

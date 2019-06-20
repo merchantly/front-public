@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import Timer from '../../entities/Timer';
-import $ from 'jquery';
 
 export default class Notice extends Component {
   static propTypes = {

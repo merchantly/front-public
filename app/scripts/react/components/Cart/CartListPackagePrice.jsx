@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Select from 'rc/common/Select';
 import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurrency';
 import * as schemas from 'r/schemas';
-import { range } from 'lodash';
+import { range } from 'lodash-es';
 
 function CartListPackagePrice(props) {
   const {

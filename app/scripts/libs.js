@@ -1,8 +1,6 @@
 // Migrate to webpack's externals - https://webpack.js.org/configuration/externals/
 //
-window._ = require('lodash');
 window.I18n = require('i18next'); // Fallback for rails I18n
-window.$ = window.jQuery = require('jquery');
 window.React = require('react');
 window.ReactDOM = require('react-dom');
 window.EventEmitter = require('@bower_components/eventEmitter');
@@ -13,7 +11,8 @@ require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
 require('@bower_components/sticky-kit/jquery.sticky-kit');
 
 // Others
-require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
+// Не понял где он используется
+// require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
 require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
 require('@bower_components/fancybox/source/jquery.fancybox');
 
