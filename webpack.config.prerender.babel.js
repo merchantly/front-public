@@ -8,7 +8,12 @@ const nodeConfig = {
   entry: {
     store_app_prerender: path.join(__dirname, 'app/scripts/store_app_prerender'),
   },
-  target: 'node'
+  target: 'node',
+  resolve: {
+    alias: {
+      'reqwest': path.join(__dirname, 'webpack/noop.js')
+    }
+  }
 }
 
 exports.default = [
