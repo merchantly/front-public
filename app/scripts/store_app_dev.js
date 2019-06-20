@@ -32,7 +32,6 @@ import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.jso
 import dictionaryEntitiesShowSample from 'test/fixtures/dictionaryEntitiesShow/sample.json';
 import productSearchSample from 'test/fixtures/productSearch/sample.json';
 import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
-import ContentPageSample from 'test/fixtures/contentPage/sample.json';
 import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
 import {
   layoutProps,
@@ -93,11 +92,4 @@ global.MenuTopSample1 = () => React.createElement(global.MenuTop, menuTopSample0
 global.MenuTopSample2 = () => React.createElement(global.MenuTop, menuTopSample2);
 global.MenuTopStickySample = () => React.createElement(global.MenuTop, menuTopStickySample);
 global.MenuBottomSample = () => React.createElement(global.MenuBottom, menuBottomSample);
-
 global.NavBarSample = () => React.createElement(global.NavBar, navBarSample);
-global.ContentPageSample = () => React.createElement(global.ContentPage, ContentPageSample);
-
-global.BlogPostListPageSample = () => React.createElement(global.BlogPostListPage, require('test/fixtures/blogPostList/page-sample.json'));
-global.BlogPostPageSample = () => React.createElement(global.BlogPostPage, require('test/fixtures/blogPost/page-sample.json'));
-global.LookbookPageSample = () => React.createElement(global.LookbookPage, { layoutProps, ...require('test/fixtures/lookbook/sample.json')});
-global.ContentPagePageSample = () => React.createElement(global.ContentPagePage, require('test/fixtures/contentPage/page-sample.json'));
