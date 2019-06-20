@@ -93,7 +93,7 @@ const nodeConfig = {
 
 exports.default = [
   merge(baseConfig, browserConfig),
-  merge(baseConfig, testsConfig)
+  merge(baseConfig, testsConfig),
   merge(baseConfig, nodeConfig)
   // devConfig
 ]
