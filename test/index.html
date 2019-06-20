@@ -11,12 +11,12 @@
     <div id="mocha"></div>
     <script src="../node_modules/mocha/mocha.js"></script>
     <script>
-      window.gon = {};
+      window.gon = { 'i18n': { 'locale': 'ru' }};
       mocha.setup('bdd');
       mocha.checkLeaks();
       mocha.globals(['redux']);
     </script>
-    <script src="/www/test.js"></script>
+    <script src="../dist/store_app.production.js"></script>
     <script>
       if (window.mochaPhantomJS) {
         mochaPhantomJS.run();
