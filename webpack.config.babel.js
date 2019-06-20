@@ -73,7 +73,7 @@ const devConfig = {
   },
   entry: {
     // index: path.join(__dirname, 'html'),
-    www: path.join(__dirname, 'html/widget')
+    www: path.join(__dirname, 'html/widget'),
   },
   target: 'web',
   plugins: [
@@ -81,8 +81,17 @@ const devConfig = {
   ],
 }
 
+const testsConfig = {
+  devtool: 'inline-source-map',
+  entry: {
+    tests: path.join(__dirname, 'test/index')
+  },
+  target: 'web'
+}
+
 exports.default = [
   merge(baseConfig, nodeConfig),
   merge(baseConfig, browserConfig),
+  merge(baseConfig, testsConfig)
   // devConfig
 ]
