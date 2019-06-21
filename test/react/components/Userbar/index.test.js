@@ -1,8 +1,7 @@
 /*global describe, before, after, it, xit */
-import { render } from 'enzyme';
+import { render, mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
-import { mount } from 'enzyme';
 import { expect } from 'chai';
 import UserbarContainer from 'rc/Userbar';
 import openDesignSettingsPopup from 'r/actions/popupActions';
@@ -38,7 +37,11 @@ describe('[Component] UserbarContainer', function() {
     });
 
     it('renders without errors', function() {
-      expect(this.renderedComponent).to.be.an('object');
+      expect(
+        () => render(
+          <UserbarContainer operatorUrl="http://google.ru/" />
+        )
+      ).to.not.throw()
     });
 
     it.skip('triggers openDesignSettingsPopup callback', function() {
@@ -68,8 +71,11 @@ describe('[Component] UserbarContainer', function() {
     });
 
     it('renders without errors', function() {
-      expect(this.renderedComponent).to.contain(<User index={1} />)
-      expect(this.renderedComponent).to.be.an('object');
+      expect(
+        () => render(
+          <UserbarContainer operatorUrl="http://google.ru/" />
+        )
+      ).to.not.throw()
     });
 
     xit('doesn\'t triggers openDesignSettingsPopup callback', function() {
