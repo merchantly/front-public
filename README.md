@@ -1,155 +1,30 @@
 [![Build Status](https://travis-ci.org/merchantly/front-public.svg?branch=master)](https://travis-ci.org/merchantly/front-public)
 
 
+Установка
+---------
+
+> yarn install
 
 Разработка
 ----------
 
-> yarn install
-> yarn dev:server
-> open http://localhost:9000/
+> yarn storybook
 
-Развертывание проекта
----------------------
-// development
-//plugins: [
-//new webpack.DefinePlugin({
-//'process.env.NODE_ENV': '"production"',
-//'process.env.PUBLIC_API_URL': '"http://wannabe.kiiiosk.ru/api"',
-//'process.env.OPERATOR_API_URL': '"http://wannabe.kiiiosk.ru/operator/api"',
-//})
-//],
-//
-//config.devtool = 'source-map';
-//config.output = {
-//path: 'build/scripts',
-//filename: '[name].js',
-//};
-//config.plugins = [
-//new webpack.optimize.OccurenceOrderPlugin(),
-//new webpack.DefinePlugin({
-//'process.env.NODE_ENV': '"development"',
-//'process.env.PUBLIC_API_URL': '"http://wannabe.3001.brandymint.ru/api"',
-//'process.env.OPERATOR_API_URL': '"http://wannabe.vagrant.dev:3000/operator/api"',
-//'process.env.IMAGES_PATH': '"../images"',
-//'process.env.FONTS_PATH': '"../fonts"',
-//}),
-//];
+Билд дистрибутива
+-----------------
 
-// TODO
-//var preLoaders = [
-//{
-//test: /\.(sass|scss)$/,
-//loader: 'string-replace',
-//query: {
-//multiple: [
-//{
-//search: 'IMAGES_PATH',
-//replace: process.env.ENV === 'production' ? "'/shop/images'" : "'../images'",
-//},
-//{
-//search: 'FONTS_PATH',
-//replace: process.env.ENV === 'production' ? "'/shop/fonts'" : "'../fonts'",
-//},
-//],
-//},
-//},
-//];
+> yarn build
 
+Деплой storybook на gh-pages
+----------------------------
 
-* Установка nvm (пропустить если уже установлен)
-
-  [nvm installation](https://github.com/creationix/nvm#installation)
-
-* Установка нужной версии node
-
-  ```sh
-  nvm install
-  nvm use
-  ```
-
-* Установите `yarn`
-
-* Установка зависимостей
-
-  ```sh
-  yarn install
-  ```
+> yarn deploy-storybook
 
 Документация по аналитике
 -------------------------
 
 https://github.com/merchantly/doc/blob/master/ANALYTICS.md
-
-
-Запуск develop-сервера
----------------------
-
-  ```sh
-  # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
-
-  OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api yarn start
-  ```
-
-
-Заходим на `http://localhost:9000/`
-
-Артефакты
----------
-
-* `store_app_node.js` - приложение запускаемое на сервере для пререндера
-  компонентов. Не должно содержать `react-server` и `react_ujs` так как они
-  подключаются отдельно на рельсовой стороне. Тестируется через `yarn
-  test:prerender`
-
-Разработка
------------
-
-Перенаправление запросов на разработческий сервер. Например у вас запущен
-backend по адресу kiiiosk.dev, и вы хотите отправлять запросы в магазин wannabe
-(wannabe.kiiiosk.dev), то ему нужно передать адреса API. Это сделать можно или
-через перменные окружения или через окружение окружение.
-
-Через gon так:
-
-```javascript
-gon.opeartor_api_url =
-# На продакшене это выглядит так: "//wannabe.kiiiosk.ru/operator/api"
-
-gon.public_api_url =
-# На продакшене это выглядит так: public_api_url: "//wanna-be.ru/api"
-```
-
-Публикация на gh-pages
-----------------------
-
-  ```sh
-  yarn build && ./deploy.sh
-  ```
-
-
-Сборка бандла
--------------
-
-Полная сборка:
-
-  ```sh
-  yarn dist
-  ```
-
-Только статика:
-
-  ```sh
-  yarn dist:static
-  ```
-
-Процесс gulp
-------------
-
-1. Исходник `./scripts/main.coffee` билдится с помощью `browserify` и превращается в `./scripts/bundle.js`
-2. Стиль `./stylesheepts/app.sass` собирается в `./stylesheets/app.css`
-с помощью gulp-sass (node-sass, libsass).
-3. Сторонние пакеты устанавливаются через bundle в `app/bower_components` и билдятся в `./scripts/vendor.js`
 
 Управление кастомным шрифтом с иконками
 ---------------------------------------
@@ -211,10 +86,6 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 ## HTML5 FileReader
 
 * Firefox 3.6+, IE10+, and Opera 12+.# react-i18next-support
-
-## gh-pages deploy
-
-> yarn deploy
 
 ## fix json
 
