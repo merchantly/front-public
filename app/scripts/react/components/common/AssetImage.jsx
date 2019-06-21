@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function AssetImage(props) {
   return (
     <img {...props}
-      src={`//${gon.asset_host}/${props.src}`}
+      src={gon.asset_host ? `//${gon.asset_host}/${props.src}` : `/${props.src}`}
     />
   );
 }

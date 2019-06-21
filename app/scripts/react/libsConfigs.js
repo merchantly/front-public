@@ -1,24 +1,30 @@
-import i18n from 'i18next';
+import i18next from 'i18next';
 import ErrorService from './services/Error';
 
+const DEFAULT_LOCALE = 'ru';
+
+let locale = undefined;
+let translations = {};
+
 // i18n
-if (gon) {
-  const { i18n: {locale = 'ru', translations = {}} } = gon;
+if (typeof gon !== 'undefined') {
+  locale = gon.i18n.locale || DEFAULT_LOCALE;
+  translations = gon.i18n.translations || {};
+};
 
-  i18n.init({
-    fallbackLng: 'ru',
-    interpolationPrefix: '%{',
-    interpolationSuffix: '}',
-    lng: locale,
-    resStore: {
-      [locale]: {
-        translation: translations,
-      },
+i18next.init({
+  fallbackLng: DEFAULT_LOCALE,
+  interpolationPrefix: '%{',
+  interpolationSuffix: '}',
+  lng: locale || DEFAULT_LOCALE,
+  resStore: {
+    [locale || DEFAULT_LOCALE]: {
+      translation: translations,
     },
-  });
+  },
+});
 
-  // i18n.setLng(locale);
-}
+// i18n.setLng(locale);
 
 // Console
 // Rewrite original console.warn for detecting React's propTypes warnings

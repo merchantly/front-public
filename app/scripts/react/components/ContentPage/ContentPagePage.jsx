@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
+import ImageSlider from 'rc/common/ImageSlider';
 import ContentPageContainer from './index';
 
 class ContentPagePage extends Component {

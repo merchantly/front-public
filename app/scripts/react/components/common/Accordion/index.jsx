@@ -1,7 +1,6 @@
 import React, { Children, cloneElement, Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import $ from 'jquery';
 import { getTransitionEndEvent } from 'r/helpers/dom';
 
 export default class Accordion extends Component {

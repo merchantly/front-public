@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CheckoutField from './CheckoutField';
 import { decamelizeKeys } from 'humps';
-import { pick } from 'lodash';
+import { pick } from 'lodash-es';
 
 const buildRequestData = ({belongs = [], requestData = {}}, values) => {
   const belongsData = pick(values, belongs || []);

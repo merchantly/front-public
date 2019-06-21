@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-$images-path: "http://saharok.kiiiosk.ru/shop/images";
-$fonts-path: "http://saharok.kiiiosk.ru/shop/fonts";
+$images-path: "http://wannabe.kiiiosk.ru/shop/images";
+$fonts-path: "http://wannabe.kiiiosk.ru/shop/fonts";
 $fa-font-path: $fonts-path;
 $entypoPlusWebfontPath: $fonts-path;
 
@@ -13,9 +13,7 @@ $entypoPlusWebfontPath: $fonts-path;
   font-style: normal;
 }
 
-#kiosk-widget-container {
-
-
+#merchantly-widget-root {
   @import "sass/bundle";
 
   .nowrap {

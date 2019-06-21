@@ -19,7 +19,7 @@ class WidgetRoot extends Component {
   }
   render() {
     return (
-      <div id="kiosk-widget-container">
+      <div id="merchantly-widget-root">
         {this.props.children}
       </div>
     );

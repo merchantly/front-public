@@ -1,16 +1,14 @@
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import URI from 'urijs';
+import Url from 'domurl';
 
 import CurrencySwitcher from './CurrencySwitcher';
 
 class CurrencySwitcherContainer extends Component {
   handleChange(value) {
-    window.location = new URI()
-      .removeQuery('currency')
-      .addQuery('currency', value)
-      .toString();
+    const url = new Url(window.location.href)
+    url.query['currency']=value
+    window.location = url.toString()
   }
   render() {
     return (

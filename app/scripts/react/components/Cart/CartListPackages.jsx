@@ -1,8 +1,7 @@
-import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { size, map, find } from 'lodash';
+import { size, map, find } from 'lodash-es';
 import * as schemas from 'r/schemas';
 import { RelativeImage } from '../common/Image';
 import { humanizedMoneyWithCurrency } from '../../helpers/money';

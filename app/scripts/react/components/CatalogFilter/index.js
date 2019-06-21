@@ -10,7 +10,7 @@ class CatalogFilterContainer extends Component {
   }
 }
 
-CatalogFilterContainer.propTypes = {
+const CatalogFilterProps = {
   filterName: PropTypes.string,
   filterUrl: PropTypes.string.isRequired,
   isFilterToggleVisible: PropTypes.bool,
@@ -23,8 +23,9 @@ CatalogFilterContainer.propTypes = {
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
   })).isRequired,
-  t: PropTypes.func.isRequired,
 };
+
+CatalogFilterContainer.propTypes = { ... CatalogFilterProps, t: PropTypes.func.isRequired };
 
 CatalogFilterContainer.defaultProps = {
   filterUrl: '',
@@ -35,4 +36,4 @@ CatalogFilterContainer.defaultProps = {
 };
 
 export default CatalogFilterContainer;
-export { CatalogFilter };
+export { CatalogFilter, CatalogFilterProps };

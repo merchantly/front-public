@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../../common/Icon';
-import URI from 'urijs';
 import { wishlistCall } from 'r/actions/WishlistStateActions';
 import { fetchClientState } from 'r/actions/ClientStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-import { includes } from 'lodash';
+import { includes } from 'lodash-es';
 import ProductCartWishlistButton from './ProductCartWishlistButton';
 import ProductCartWishlistButtonFetching from './ProductCartWishlistButtonFetching';
 import ProductCartWishlistButtonRemove from './ProductCartWishlistButtonRemove';
@@ -72,7 +71,7 @@ class ProductCartWishlist extends Component {
     const global_id = product && product.globalId, product_id = product && product.id;
     const hasWishlist = clientState && clientState.data && clientState.data.hasWishlist;
     const isFetching = getIn(wishlist, ["data", "isFetching"]);
-    const isWishlisted = includes(clientState.data["wishlitedProductIds"], product_id);
+    const isWishlisted = (clientState && clientState.data) ? includes(clientState.data["wishlitedProductIds"], product_id) : false;
     var wishlistButtonState;
 
     if (!hasWishlist) {

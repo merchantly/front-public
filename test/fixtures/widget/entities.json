@@ -12,12 +12,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/35979/685ef390-6bb3-4adc-9a09-0b01b8fa83ab.jpg",
           "width": 1500,
           "height": 1501
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/86071/f01d16ff-1e56-4ba4-8754-3a4b0aa11502.jpg",
           "width": 4016,
           "height": 6016
@@ -247,12 +247,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/57813/26e69b74-18e9-4e9b-bc63-8e8da26818f2.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/35411-serga-anna-m-objects",
         "short_details": "Белое золото",
         "goods": [
@@ -282,12 +282,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8564/f029c4b2-8c6f-466a-be98-1cae9e3bb165.jpg",
           "width": 1500,
           "height": 1501
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/35450/2c65af6b-a725-4514-a3d4-ac8b738e9f00.jpg",
           "width": 640,
           "height": 640
@@ -517,12 +517,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/57812/94e4ec28-74e9-4c61-8e45-7be984470bfa.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/31848/42cea0b9-29aa-49bb-a508-3b5abffa4b43.jpg",
           "width": 640,
           "height": 640
@@ -556,12 +556,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60464/00042980-d573-4586-8858-7487e0943770.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72466/b342bc29-ace5-44cc-88de-374a5511dde4.jpg",
           "width": 640,
           "height": 640
@@ -777,12 +777,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60263/260d6079-0317-4dda-abde-3b9c9cef52e7.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/79353/fdb63c2c-7d42-4c43-85df-051257c292c0.jpg",
           "width": 2000,
           "height": 2000

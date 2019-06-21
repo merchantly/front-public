@@ -1,16 +1,16 @@
 import React from 'react';
 import { renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
+import { render } from 'enzyme';
 import { PHOTO_CHANGE } from '../../../../../app/scripts/react/constants/globalEventKeys';
 import ProductCardGallerySlider from '../../../../../app/scripts/react/components/Product/ProductCard/ProductCardGallerySlider';
 
 describe('[Component] ProductCardGallerySlider', () => {
   it('should render without props', () => {
-    const component = renderIntoDocument(
+    expect( () => render(
       <ProductCardGallerySlider />
-    );
-
-    expect(component).to.be.an('object');
+      )
+    ).to.not.throw()
   });
 
   it('shouldn\'t render thumbnails when images < 2', () => {
@@ -45,7 +45,7 @@ describe('[Component] ProductCardGallerySlider', () => {
       <ProductCardGallerySlider images={images} />
     );
 
-    expect(component.refs.productThumbs).to.be.defined;
+    expect(component.refs.productThumbs).to.not.be.undefined;
   });
 
   it('should update selected index when emitted "photo change" event and uid found', () => {

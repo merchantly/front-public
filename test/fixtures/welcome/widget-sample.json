@@ -115,12 +115,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/60815/d2efff73-55d4-4d8b-9221-df8c10c58d6c.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/72352/db7f6274-ac74-4886-ad21-bf75e260e9c5.jpg",
           "width": 750,
           "height": 936
@@ -361,12 +361,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/8053/6e993711-5a58-482b-b411-84648172aa32.jpg",
           "width": 1500,
           "height": 1501
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/78537/e4fc4d8a-3aaf-467b-87f2-e40263949dcd.jpg",
           "width": 2000,
           "height": 2000
@@ -490,12 +490,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/29886/f6c04ba9-cd53-432f-a187-87529e2e7204.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": {
+        "secondImage": {
           "url": "http://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/39750/72647cd5-b6a6-4769-8980-a62bc95d8589.jpg",
           "width": 640,
           "height": 640

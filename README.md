@@ -1,93 +1,30 @@
 [![Build Status](https://travis-ci.org/merchantly/front-public.svg?branch=master)](https://travis-ci.org/merchantly/front-public)
 
-Развертывание проекта
----------------------
 
-* Установка nvm (пропустить если уже установлен)
+Установка
+---------
 
-  [nvm installation](https://github.com/creationix/nvm#installation)
+> yarn install
 
-* Установка нужной версии node
+Разработка
+----------
 
-  ```sh
-  nvm install
-  nvm use
-  ```
+> yarn storybook
 
-* Установите `yarn`
+Билд дистрибутива
+-----------------
 
-* Установка зависимостей
+> yarn build
 
-  ```sh
-  yarn install
-  ```
+Деплой storybook на gh-pages
+----------------------------
+
+> yarn deploy-storybook
 
 Документация по аналитике
 -------------------------
 
 https://github.com/merchantly/doc/blob/master/ANALYTICS.md
-
-
-Запуск develop-сервера
----------------------
-
-  ```sh
-  # Адреса API указываются в окружещии, в консоли браузера через gon или в ./app/scripts/resources/gon.js
-
-  OPERATOR_API_URL=//wannabe.kiiiosk.dev/operator/api PUBLIC_API_URL=//wannabe.kiiiosk.dev/api yarn start
-  ```
-
-
-Заходим на `http://localhost:9000/`
-
-Разработка
------------
-
-Перенаправление запросов на разработческий сервер. Например у вас запущен
-backend по адресу kiiiosk.dev, и вы хотите отправлять запросы в магазин wannabe
-(wannabe.kiiiosk.dev), то ему нужно передать адреса API. Это сделать можно или
-через перменные окружения или через окружение окружение.
-
-Через gon так:
-
-```javascript
-gon.opeartor_api_url =
-# На продакшене это выглядит так: "//wannabe.kiiiosk.ru/operator/api"
-
-gon.public_api_url =
-# На продакшене это выглядит так: public_api_url: "//wanna-be.ru/api"
-```
-
-Публикация на gh-pages
-----------------------
-
-  ```sh
-  yarn build && ./deploy.sh
-  ```
-
-
-Сборка бандла
--------------
-
-Полная сборка:
-
-  ```sh
-  yarn dist
-  ```
-
-Только статика:
-
-  ```sh
-  yarn dist:static
-  ```
-
-Процесс gulp
-------------
-
-1. Исходник `./scripts/main.coffee` билдится с помощью `browserify` и превращается в `./scripts/bundle.js`
-2. Стиль `./stylesheepts/app.sass` собирается в `./stylesheets/app.css`
-с помощью gulp-sass (node-sass, libsass).
-3. Сторонние пакеты устанавливаются через bundle в `app/bower_components` и билдятся в `./scripts/vendor.js`
 
 Управление кастомным шрифтом с иконками
 ---------------------------------------
@@ -150,10 +87,13 @@ https://github.com/blueimp/jQuery-File-Upload/wiki/Browser-support
 
 * Firefox 3.6+, IE10+, and Opera 12+.# react-i18next-support
 
-## gh-pages deploy
-
-> yarn deploy
-
 ## fix json
 
 > perl  -0777 -i -pe 's/},(\n?\r?\s+)([}\]])/}\n$1$2/igs'  test/fixtures/**/*.json
+
+## Требования jQuery
+
+* OwlCarousel >=1.8.3
+* jQuery.mmenu >= 1.7.0
+* fancybox               "jquery": ">=1.10",, "jquery-mousewheel": "~3.1.3"
+* sticky-kit => ?

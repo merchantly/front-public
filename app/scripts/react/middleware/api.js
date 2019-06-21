@@ -1,6 +1,5 @@
 import { camelizeKeys } from 'humps';
 import NoticeService from '../services/Notice';
-import $ from 'jquery';
 
 export const CALL_API = Symbol('Call API');
 
@@ -41,7 +40,7 @@ export default (store) => (next) => (action) => {
   if (typeof callAPI === 'undefined') {
     return (next(action));
   }
-  
+
   let { endpoint, data } = callAPI;
   const { types } = callAPI;
 

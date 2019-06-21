@@ -11,12 +11,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89738/d29494f6-fa14-4d91-a9b8-4caf8bac0612.jpg",
           "width": 478,
           "height": 478
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/77022/5a07df4e-67fb-4f0c-bf85-ea00d3bcd02a.jpg",
           "width": 534,
           "height": 534
@@ -50,12 +50,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89341/53d39131-aad2-4a54-b7cd-5e45dfccb782.jpg",
           "width": 350,
           "height": 350
         },
-        "second_image": {
+        "secondImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/89342/1d2ba515-3b9c-4289-9d78-8564a3408e80.jpg",
           "width": 350,
           "height": 350
@@ -89,12 +89,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88870/98c0c6f2-8407-4c82-8ec4-7785b037b7e5.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/71516-podveska-natasha-gelb",
         "short_details": "Серебро, Позолота и чернение",
         "goods": [
@@ -124,12 +124,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88842/a77d1c69-7274-4c28-bcca-0af3c6d6a871.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/71952-sergi-stellar-jewellery",
         "short_details": "Серебро",
         "goods": [
@@ -159,12 +159,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88858/4c3631ab-e749-4758-b499-fd04584e9a66.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/72004-sergi-stellar-jewellery",
         "short_details": "Серебро",
         "goods": [
@@ -194,12 +194,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88844/2efbf3a2-328e-4a4e-a0b3-b277aee3146d.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/71955-sergi-stellar-jewellery",
         "short_details": "Серебро",
         "goods": [
@@ -229,12 +229,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88836/080b2428-4385-43f5-85a5-544dd51f5ba0.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/71965-serga-stellar-jewellery",
         "short_details": "Серебро",
         "goods": [
@@ -264,12 +264,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88755/f3a87d22-d5c0-46f5-8b54-83456af97531.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/72070-braslet-fianc",
         "short_details": "Серебро",
         "goods": [
@@ -299,12 +299,12 @@
         "is_sold": false,
         "selling_by_weight": false,
         "weight_of_price": null,
-        "index_image": {
+        "indexImage": {
           "url": "https://assets.kiiiosk.ru/uploads/shop/68/uploads/product_image/image/88758/bab2e022-f601-49f9-be0d-11e160475642.jpg",
           "width": 1500,
           "height": 1500
         },
-        "second_image": null,
+        "secondImage": null,
         "public_url": "http://saharokstore.ru/products/72066-braslet-fianc",
         "short_details": "Серебро",
         "goods": [

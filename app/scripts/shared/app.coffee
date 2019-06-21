@@ -5,7 +5,8 @@ $ ->
   else
     $("html").addClass "feature_no-touch"
 
-  $('[tooltip]').tooltip()
+  # Это bootstrap tooltip, не нашел где он используется
+  # $('[tooltip]').tooltip()
 
   if $("[range_slider]").length
     true

@@ -1,1 +1,1 @@
-export default ['ru', 'en', 'ua', 'kz'];
+export default ['ru', 'en', 'ua', 'kz', 'ar_SA'];

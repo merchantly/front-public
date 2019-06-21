@@ -13,15 +13,17 @@ function normalizeFilters(additional = []) {
 }
 
 const ThumborService = {
-  thumbor: global.mrch ? global.mrch.config.thumbor_url : global.gon.thumbor_url,
+  thumborUrl() {
+    return global.mrch ? global.mrch.config.thumbor_url : global.gon.thumbor_url;
+  },
   imageUrl(url, size, filters) {
     const width = size.width ? size.width : '';
     const height = size.height ? size.height : '';
     const _url = normalizeUrl(url);
     const _filters = normalizeFilters(filters);
 
-    return this.thumbor
-      ? `${this.thumbor}/unsafe/${width}x${height}${_filters}/${_url}`
+    return this.thumborUrl()
+      ? `${this.thumborUrl()}/unsafe/${width}x${height}${_filters}/${_url}`
       : url;
   },
   retinaImageUrl(url, size, filters) {
@@ -30,8 +32,8 @@ const ThumborService = {
     const _url = normalizeUrl(url);
     const _filters = normalizeFilters(filters);
 
-    return this.thumbor
-      ? `${this.thumbor}/unsafe/${width}x${height}${_filters}/${_url} 2x`
+    return this.thumborUrl()
+      ? `${this.thumborUrl()}/unsafe/${width}x${height}${_filters}/${_url} 2x`
       : url;
   },
 };

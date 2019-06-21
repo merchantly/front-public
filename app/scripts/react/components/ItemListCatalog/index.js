@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import CatalogFilterContainer from 'rc/CatalogFilter';
+import CatalogFilterContainer, { CatalogFilterProps } from 'rc/CatalogFilter';
 
 const MIN_DESKTOP_WIDTH = 1024;
 
@@ -21,7 +21,7 @@ class ItemListCatalog extends Component {
 
   componentDidMount() {
     // В мобильнов варианте автоматически закрываем
-    this.setState({ isOpen: ($(document).width() >= MIN_DESKTOP_WIDTH) });
+    this.setState({ isOpen: (jQuery(document).width() >= MIN_DESKTOP_WIDTH) });
   }
 
   handleFilterToggle() {
@@ -63,7 +63,7 @@ class ItemListCatalog extends Component {
 
 ItemListCatalog.propTypes = {
   isOpenByDefault: PropTypes.bool,
-  catalogFilterProps: PropTypes.shape({ ...CatalogFilterContainer.propTypes }),
+  catalogFilterProps: PropTypes.shape(CatalogFilterProps),
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),

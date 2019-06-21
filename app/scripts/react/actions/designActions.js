@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import NoticeService from '../services/Notice';
 import buildParams from '../utils/buildParams';
 import * as apiRoutes from '../../routes/api';

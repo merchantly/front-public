@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
-import $ from 'jquery';
 
-import size from 'lodash/size';
+import size from 'lodash-es/size';
 import * as schemas from '../../../schemas';
 
 import ImageSliderSlides from './ImageSliderSlides';

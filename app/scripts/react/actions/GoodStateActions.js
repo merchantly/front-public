@@ -1,6 +1,6 @@
 import * as apiRoutes from 'scripts/routes/api';
 import { CALL_API } from 'r/middleware/api';
-import { each } from 'lodash';
+import { each } from 'lodash-es';
 
 export const GOOD_ADD_REQUEST = 'GOOD_ADD_REQUEST';
 export const GOOD_ADD_SUCCESS = 'GOOD_ADD_SUCCESS';

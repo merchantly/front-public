@@ -4,7 +4,7 @@ import { getUpdatedValues } from 'rc/Product/ProductProperties/utils';
 
 describe('ProductProperties changing one property leaves other ones intact', () => {
   it('should ', () => {
-    expect(getUpdatedValues(
+      const values = getUpdatedValues(
       { // property
         id: 7080,
         title: 'Color',
@@ -66,9 +66,10 @@ describe('ProductProperties changing one property leaves other ones intact', () 
       { // data
         '7080': 39974,
       }
-    )).to.deep.equal({
+      );
+      expect(values).to.deep.equal({
       '7080': 39974,
       '7082': 39972,
-    });
+      });
   });
 });

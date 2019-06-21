@@ -8,7 +8,13 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
 import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
-import { chain, size, omit } from 'lodash';
+import size from 'lodash-es/size';
+import omit from 'lodash-es/omit';
+import mapKeys from 'lodash-es/mapKeys';
+import map from 'lodash-es/map';
+import transform from 'lodash-es/transform';
+import flow from 'lodash-es/flow';
+import flatten from 'lodash-es/flatten';
 
 class Cart extends Component {
   constructor(props) {
@@ -42,20 +48,34 @@ class Cart extends Component {
       t,
     } = this.props;
 
+    //const errors = map(
+      //mapKeys(
+        //flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
+        //(_, k) => `${k}-${suffix}`
+      //),
+      //this.renderError
+    //)
+
+    const buffer = mapKeys(
+      flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
+      (_, k) => `${k}-${suffix}`
+    )
+
+    const errors = transform(
+      buffer,
+      (ag, value, key) => {
+        ag.push(this.renderError(value, key))
+        return true
+      },
+      []
+    )
     return (
       <span className="help-block">
         {isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
           minimal_price: humanizedMoneyWithCurrency(minimalPrice),
           currency: '',
         }), `minimal-price-${suffix}`)}
-        {chain(cartErrors)
-          .omit('minimalPrice')
-          .toArray()
-          .flatten(true)
-          .mapKeys((_, k) => `${k}-${suffix}`)
-          .map(this.renderError)
-          .value()
-        }
+        {errors}
       </span>
     );
   }

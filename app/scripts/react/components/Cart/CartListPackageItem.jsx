@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -7,7 +6,7 @@ import { RelativeImage } from 'rc/common/Image';
 import CartListPackagePrice from './CartListPackagePrice';
 import CartListImage from './CartListImage';
 import { getIn } from 'timm';
-import { map } from 'lodash';
+import { map } from 'lodash-es';
 import * as schemas from 'r/schemas';
 
 class CartListPackageItem extends Component {

@@ -1,10 +1,10 @@
 /*global describe, before, after, it, xit */
+import { render, mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
-import { mount } from 'enzyme';
 import { expect } from 'chai';
 import UserbarContainer from 'rc/Userbar';
-import * as PopupActions from 'r/actions/popupActions';
+import openDesignSettingsPopup from 'r/actions/popupActions';
 import {
   operatorState,
 } from 'scripts/routes/api';
@@ -12,7 +12,7 @@ import { initStore } from 'test/mocks/redux';
 
 describe('[Component] UserbarContainer', function() {
   before('instantiate spy', function() {
-      this.openDesignSettingsPopup = sinon.spy(PopupActions, 'openDesignSettingsPopup');
+    // this.openDesignSettingsPopup = sinon.spy(openDesignSettingsPopup);
   });
 
   describe('with designMode == "open"', function() {
@@ -33,14 +33,18 @@ describe('[Component] UserbarContainer', function() {
 
     after('restore fakeServer state', function() {
       this.server.restore();
-      this.openDesignSettingsPopup.reset();
+      // this.openDesignSettingsPopup.reset();
     });
 
     it('renders without errors', function() {
-      expect(this.renderedComponent).to.be.an('object');
+      expect(
+        () => render(
+          <UserbarContainer operatorUrl="http://google.ru/" />
+        )
+      ).to.not.throw()
     });
 
-    xit('triggers openDesignSettingsPopup callback', function() {
+    it.skip('triggers openDesignSettingsPopup callback', function() {
       expect(this.openDesignSettingsPopup.calledOnce).to.be.true;
     });
   });
@@ -63,11 +67,15 @@ describe('[Component] UserbarContainer', function() {
 
     after('restore fakeServer state', function() {
       this.server.restore();
-      this.openDesignSettingsPopup.reset();
+      // this.openDesignSettingsPopup.reset();
     });
 
     it('renders without errors', function() {
-      expect(this.renderedComponent).to.be.an('object');
+      expect(
+        () => render(
+          <UserbarContainer operatorUrl="http://google.ru/" />
+        )
+      ).to.not.throw()
     });
 
     xit('doesn\'t triggers openDesignSettingsPopup callback', function() {

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -6,7 +5,7 @@ import jss from 'jss';
 import nested from 'jss-nested';
 import tinycolor from 'tinycolor2';
 import connectToRedux from '../HoC/connectToRedux';
-import { some, reduce, merge } from 'lodash';
+import { some, reduce, merge } from 'lodash-es';
 import { isDesignOpened } from 'r/actions/popupActions';
 
 jss.use(nested);
@@ -49,7 +48,7 @@ const _rules = {
         },
       };
     },
-    logoUrl(value) {      
+    logoUrl(value) {
       return {
         '.b-header__logo-img': {
           'content': value ? `url("${value}")` : 'none',
@@ -138,9 +137,9 @@ class DesignPreview extends Component {
     pageType: PropTypes.string.isRequired,
   }
   componentDidMount() {
-    this.attachSheet();    
+    this.attachSheet();
     if (isDesignOpened(this.props.popups)) {
-      this.apply(this.props.design.current);      
+      this.apply(this.props.design.current);
     }
   }
   componentWillUpdate(nextProps) {

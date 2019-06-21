@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'cookies-js';
@@ -12,7 +11,7 @@ import * as storageKeys from '../../constants/storageKeys';
 import * as cookieKeys from '../../constants/cookieKeys';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
 import DesignSettings from './index';
-import { some } from 'lodash';
+import { some } from 'lodash-es';
 
 class DesignSettingsContainer extends Component {
   static propTypes = {

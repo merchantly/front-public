@@ -44,7 +44,7 @@ class ProductList extends Component {
             {title}
           </h1>
         )}
-        <ProductListContainer container={container} />
+        {container && <ProductListContainer container={container} />}
         <div className="b-item-list__content">
           {items.length > 0
             ? items.map(item => (
@@ -77,7 +77,7 @@ class ProductList extends Component {
             </div>
           )}
         </div>
-        <ProductListContainerBottom container={container} />
+        {container && <ProductListContainerBottom container={container} />}
       </ItemListCatalog>
     );
   }
@@ -85,7 +85,7 @@ class ProductList extends Component {
 
 ProductList.propTypes = {
   catalogFilterProps: PropTypes.shape(...CatalogFilterContainer.propTypes),
-  container: schemas.container.isRequired,
+  container: schemas.container,
   i18n: PropTypes.object,
   products: PropTypes.shape({
     items: PropTypes.array.isRequired,

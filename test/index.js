@@ -1,20 +1,19 @@
 /*global beforeEach */
 
-// Mocks
-import 'babel-polyfill';
 import './mocks/gon';
 import './mocks/mrch';
 import { initStore } from './mocks/redux';
-
-// Libs
-import '../app/scripts/render.libs';
+//// Libs
 import './libsConfigs';
+import 'app/scripts/libs';
+
+window.gon = {};
 
 beforeEach('init redux', () => {
   global.redux = initStore();
 });
 
-// Components
+//// Components
 import './react/components/CatalogFilter/CatalogFilter.test';
 import './react/components/Userbar/index.test';
 import './react/components/Logo/Logo.test';
