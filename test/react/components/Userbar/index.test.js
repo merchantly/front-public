@@ -1,4 +1,5 @@
 /*global describe, before, after, it, xit */
+import { render } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
@@ -67,6 +68,7 @@ describe('[Component] UserbarContainer', function() {
     });
 
     it('renders without errors', function() {
+      expect(this.renderedComponent).to.contain(<User index={1} />)
       expect(this.renderedComponent).to.be.an('object');
     });
 

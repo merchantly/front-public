@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'enzyme';
 import { findDOMNode } from 'react-dom';
 import { renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
@@ -7,11 +8,10 @@ import ProductCardDetails from '../../../../../app/scripts/react/components/Prod
 describe('[Component] ProductCardDetails', () => {
   it('should render when product is empty object', () => {
     const product = {};
-    const component = renderIntoDocument(
+    expect( ()=> render(
       <ProductCardDetails product={product} />
-    );
-
-    expect(component).to.be.an('object');
+      )
+   ).to.not.throw()
   });
 
   describe('Text blocks', () => {

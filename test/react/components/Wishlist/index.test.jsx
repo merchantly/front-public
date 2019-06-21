@@ -11,7 +11,7 @@ describe('[Component] WishlistContainer', () => {
   it('should render without errors when there aren\'t any props', () => {
     const props = { t };
 
-    expect(render(<WishlistContainer {...props} />)).to.be.an('object');
+    expect(() => render(<WishlistContainer {...props} />)).to.not.throw();
   });
 
   it('should render properly when right props provided', () => {
@@ -20,7 +20,7 @@ describe('[Component] WishlistContainer', () => {
       t,
     };
 
-    expect(render(<WishlistContainer {...props} />)).to.be.an('object');
+    expect(() => render(<WishlistContainer {...props} />)).to.not.throw();
   });
 
   it('should have `already` button for goods already in the cart', () => {

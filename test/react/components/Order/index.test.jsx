@@ -10,7 +10,7 @@ describe('[Component] OrderContainer', () => {
   it('should render valid component with correct props', () => {
     const props = { ...orderWithCoupon, t };
 
-    expect(render(<OrderContainer {...props} />)).to.be.an('object');
+    expect(() => render(<OrderContainer {...props} />)).to.not.throw();
   });
 
   it('should render coupon field when coupon visibility set to true', () => {

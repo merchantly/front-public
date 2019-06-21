@@ -2,6 +2,7 @@ import React from 'react';
 import { scryRenderedComponentsWithType, renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
 
+import { render } from 'enzyme';
 import then from '../../../utils/then';
 import t from '../../../mocks/t';
 
@@ -11,11 +12,10 @@ import { CartCoupon } from '../../../../app/scripts/react/components/Cart/CartCo
 describe('[Component] CartCoupon', () => {
   it('should render without errors when there aren\'t any props', () => {
     const props = { t };
-    const component = renderIntoDocument(
+    expect( () => render(
       <CartCoupon {...props} />
-    );
-
-    expect(component).to.be.an('object');
+      )
+    ).to.not.throw()
   });
 
   it ('shouldn\'t display alert when code is empty', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { findDOMNode } from 'react-dom';
 import { renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
+import { render } from 'enzyme';
 
 import t from '../../../../mocks/t';
 
@@ -13,11 +14,10 @@ describe('[Component] ProductCart', () => {
       product: {},
       t,
     };
-    const component = renderIntoDocument(
+    expect( () => render(
       <ProductCart {...props} />
-    );
-
-    expect(component).to.be.an('object');
+      )
+    ).to.not.throw()
   });
 
   it('should render CSRF token when it\'s passed in formAuthenticity prop', () => {
@@ -82,7 +82,7 @@ describe('[Component] ProductCart', () => {
                 id: 123,
                 price: {
                   cents: 120000,
-                  currencyIsoCode: 'RUB',                  
+                  currencyIsoCode: 'RUB',
                 }
               },
             },
@@ -132,7 +132,7 @@ describe('[Component] ProductCart', () => {
               id: 123,
               price: {
                 cents: 120000,
-                currencyIsoCode: 'RUB',                  
+                currencyIsoCode: 'RUB',
               }
             },
           },
@@ -161,7 +161,7 @@ describe('[Component] ProductCart', () => {
               id: 123,
               price: {
                 cents: 120000,
-                currencyIsoCode: 'RUB',                  
+                currencyIsoCode: 'RUB',
               }
             },
           }
