@@ -77,71 +77,59 @@ storiesOf('Dictionary', module)
   .add('DictionaryPage', () => <DictionaryPage { ...Object.assign({'layoutProps': layoutProps}, { title: 'title' }) } /> )
 
 
-// Product pages
-// Order pages
-// Catalog pages
-//
+import CategoriesShowPage from 'app/scripts/react/components/CategoriesShow/CategoriesShowPage'
+import CategoriesShow from'app/scripts/react/components/CategoriesShow'
+import CategoriesShowChildrenPage from 'app/scripts/react/components/CategoriesShowChildren/CategoriesShowChildrenPage'
+import CategoriesShowChildren  from 'app/scripts/react/components/CategoriesShowChildren'
+storiesOf('Category', module)
+  .add('CategoriesShowPage', () => <CategoriesShowPage {...require('test/fixtures/categoriesShow/page-sample.json')} />)
+  .add('CategoriesShow (empty)', () => <CategoriesShow {...require('test/fixtures/categoriesShow/empty-products.json')} />)
+  .add('CategoriesShow (filter dirty)', () => <CategoriesShow {...Object.assign(require('test/fixtures/categoriesShow/empty-products.json'), { isFilterDirty: true })} />)
+  .add('CategoriesShowChildrenPage', () => <CategoriesShowChildrenPage {...require('test/fixtures/categoriesShowChildren/page-sample.json')} />)
+  .add('CategoriesShowChildren (empty)', () => <CategoriesShowChildren {...{ childrenProducts: [], vendorRootPath: '/vendor/root/path' }} />)
 
-  //import orderNoCoupon from '../../test/fixtures/order/no-coupon';
-  //import productMultiSelect from '../../test/fixtures/products/multi-select';
-  //import productMultiChoice from '../../test/fixtures/products/multiple-choice';
-  //import productWeight from '../../test/fixtures/products/weight';
-  //import productDoesntSell from '../../test/fixtures/products/3917';
-  //import productNoGoods from '../../test/fixtures/products/no-goods';
 
+import ProductCard from 'app/scripts/react/components/Product/ProductCard/ProductCard'
+import ProductList from 'app/scripts/react/components/ProductList'
+import ProductGroup from 'app/scripts/react/components/ProductGroup'
+import ProductSearch from 'app/scripts/react/components/ProductSearch'
+import ProductArchivedPage from 'app/scripts/react/components/ProductArchived/ProductArchivedPage'
+import ProductSearchPage from 'app/scripts/react/components/ProductSearch/ProductSearchPage'
+import ProductCardPage from 'app/scripts/react/components/Product/ProductCard/ProductCardPage'
+import ChildrenProducts from 'app/scripts/react/components/ChildrenProducts'
+storiesOf('Product', module)
+  .add('ProductCardMultiSelect', () => <ProductCard {...require('test/fixtures/products/multi-select.json')} />)
+  .add('ProductCardMultiChoice', () => <ProductCard {...require('test/fixtures/products/multiple-choice.json')} />)
+  .add('ProductCardDoesntSell', () => <ProductCard {...require('test/fixtures/products/3917.json')} />)
+  .add('ProductCardWeight', () => <ProductCard {...require('test/fixtures/products/weight.json')} />)
+  .add('ProductCardNoGoods', () => <ProductCard {...require('test/fixtures/products/no-goods.json')} />)
+  .add('ProductList', () => <ProductList {...require('test/fixtures/productList/sample.json')} />)
+  .add('ProductGroup', () => <ProductGroup {...require('test/fixtures/productGroup/sample.json')} />)
+  .add('ProductSearch', () => <ProductSearch {...require('test/fixtures/productSearch/sample.json')} />)
+  .add('ProductSearch (empty)', () => <ProductSearch {...require('test/fixtures/productSearch/empty.json')} />)
+  .add('ProductArchivedPage', () => <ProductArchivedPage {...require('test/fixtures/productArchived/page-sample.json')} />)
+  .add('ProductSearchPage', () => <ProductSearchPage {...require('test/fixtures/productSearch/page-sample.json')} />)
+  .add('ProductCardPage', () => <ProductCardPage {...require('test/fixtures/products/page-sample.json')} />)
+  .add('ProductCardWithDeliveryMessages', () => <ProductCardPage {...require('test/fixtures/products/delivery-messages.json')} />)
+  .add('ProductCardWithNotAvailableLinks', () => <ProductCardPage {...require('test/fixtures/products/not-available-links.json')} />)
+  .add('ChildrenProductsSample', () => <ChildrenProducts {...require('test/fixtures/childrenProducts/sample.json')} />)
 
-  //// Много пунктов в ширину и в глубину.
-  //// Есть пункты с подпунктами с краев.
-  //import productListSample from 'test/fixtures/productList/sample';
-  //import productGroupSample from 'test/fixtures/productGroup/sample.json';
-  //import childrenProductsSample from 'test/fixtures/childrenProducts/sample.json';
-  //import categoriesShowEmpty from 'test/fixtures/categoriesShow/empty-products.json';
-  //import productSearchSample from 'test/fixtures/productSearch/sample.json';
-  //import productSearchEmpty from 'test/fixtures/productSearch/empty.json';
-  //import orderPaymentProps from 'test/fixtures/orderPayment/sample.json';
-  //import {
-    //layoutProps,
-  //} from 'test/fixtures/vendorLayout/sample.json';
-  //import {
-    //PAYMENT_SUCCESS,
-  //} from 'rc/Payment';
-
-  //import pageWithCouponProps from 'test/fixtures/order/page-with-coupon.json';
-  //import orderPageProps from 'test/fixtures/order/page.json';
-
-  //global.ProductCardMultiSelect = () => React.createElement(global.ProductCard, productMultiSelect);
-  //global.ProductCardMultiChoice = () => React.createElement(global.ProductCard, productMultiChoice);
-  //global.ProductCardDoesntSell = () => React.createElement(global.ProductCard, productDoesntSell);
-  //global.ProductCardWeight = () => React.createElement(global.ProductCard, productWeight);
-  //global.ProductCardNoGoods = () => React.createElement(global.ProductCard, productNoGoods);
-  //global.ProductListSample = () => React.createElement(global.ProductList, productListSample);
-  //global.ProductGroupSample = () => React.createElement(global.ProductGroup, productGroupSample);
-  //global.ProductSearchSample = () => React.createElement(global.ProductSearch, productSearchSample);
-  //global.ProductSearchEmpty = () => React.createElement(global.ProductSearch, productSearchEmpty);
-  //global.ProductArchivedPageSample = () => React.createElement(global.ProductArchivedPage, require('test/fixtures/productArchived/page-sample.json'));
-  //global.ProductSearchPageSample = () => React.createElement(global.ProductSearchPage, require('test/fixtures/productSearch/page-sample.json'));
-  //global.ProductCardPageSample = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/page-sample.json'));
-  //global.ProductCardWithDeliveryMessages = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/delivery-messages.json'));
-  //global.ProductCardWithNotAvailableLinks = () => React.createElement(global.ProductCardPage, require('test/fixtures/products/not-available-links.json'));
-  //global.ChildrenProductsSample = () => React.createElement(global.ChildrenProducts, childrenProductsSample);
-
-  //global.OrderPaymentSample = () => React.createElement(global.OrderPayment, orderPaymentProps);
-  //global.OrderContainerNoCoupon = () => React.createElement(global.OrderContainer, orderNoCoupon);
-  //global.OrderCancelledPageSample = () => React.createElement(global.OrderCancelledPage, require('test/fixtures/orderCancelled/page-sample.json'));
-  //global.OrderCreatedPageSample = () => React.createElement(global.OrderCreatedPage, require('test/fixtures/orderCreated/page-sample.json'));
-  //// localhost:9000/react/checkout.html
-  //// global.OrderPageSample = () => React.createElement(global.OrderPage, require('test/fixtures/order/page-with-coupon.json'));
-  //global.OrderPageSample = () => React.createElement(global.OrderPage, orderPageProps);
-  //global.OrderPageSampleWithCoupon = () => React.createElement(global.OrderPage, pageWithCouponProps);
-  //global.OrderPaidPageSample = () => React.createElement(global.OrderPaidPage, require('test/fixtures/orderPaid/page-sample.json'));
-  //global.OrderShowPageSample = () => React.createElement(global.OrderShowPage, require('test/fixtures/orderShow/page-sample.json'));
-  //global.OrderPaymentPageSample = () => React.createElement(global.OrderPaymentPage, require('test/fixtures/orderPayment/page-sample.json'));
-
-  //global.PaymentPageSample = () => React.createElement(global.PaymentPage, { layoutProps, state: PAYMENT_SUCCESS, vendorUrl: '/v' });
-
-  //global.CategoriesShowChildrenPageSample = () => React.createElement(global.CategoriesShowChildrenPage, require('test/fixtures/categoriesShowChildren/page-sample.json'));
-  //global.CategoriesShowPageSample = () => React.createElement(global.CategoriesShowPage, require('test/fixtures/categoriesShow/page-sample.json'));
-  //global.CategoriesShowEmpty = () => React.createElement(global.CategoriesShow, categoriesShowEmpty);
-  //global.CategoriesShowFilterDirty = () => React.createElement(global.CategoriesShow, { ...categoriesShowEmpty, isFilterDirty: true });
-  //global.CategoriesShowChildrenEmpty = () => React.createElement(global.CategoriesShowChildren, { childrenProducts: [], vendorRootPath: '/vendor/root/path' });
-
+import OrderPayment from 'app/scripts/react/components/OrderPayment'
+import OrderContainer from 'app/scripts/react/components/Order'
+import OrderCancelledPage from 'app/scripts/react/components/OrderCancelled/OrderCancelledPage'
+import OrderCreatedPage from 'app/scripts/react/components/OrderCreated/OrderCreatedPage'
+import OrderPage from 'app/scripts/react/components/Order/OrderPage'
+import OrderPaidPage from 'app/scripts/react/components/OrderPaid/OrderPaidPage'
+import OrderShowPage from 'app/scripts/react/components/OrderShow/OrderShowPage'
+import OrderPaymentPage from 'app/scripts/react/components/OrderPayment/OrderPaymentPage'
+import PaymentPage from 'app/scripts/react/components/Payment/PaymentPage'
+storiesOf('Order', module)
+  .add('OrderPayment', () => <OrderPayment {...require('test/fixtures/orderPayment/sample.json')} />)
+  .add('Order (no coupon)', () => <OrderContainer {...require('test/fixtures/order/no-coupon.json')} />)
+  .add('OrderCancelledPage', () => <OrderCancelledPage {...require('test/fixtures/orderCancelled/page-sample.json')} />)
+  .add('OrderPage (with coupon)', () => <OrderPage {...require('test/fixtures/order/page-with-coupon.json')} />)
+  .add('OrderPage', () => <OrderPage {...require('test/fixtures/order/page.json')} />)
+  .add('OrderPaidPage', () => <OrderPaidPage {...require('test/fixtures/orderPaid/page-sample.json')} />)
+  .add('OrderShowPage', () => <OrderShowPage {...require('test/fixtures/orderShow/page-sample.json')} />)
+  .add('OrderPaymentPage', () => <OrderPaymentPage {...require('test/fixtures/orderPayment/page-sample.json')} />)
+  .add('PaymentPageSample', () => <PaymentPage {...Object.assign({'layoutProps': layoutProps}, { state: 'success', vendorUrl: '/v' })} />)
