@@ -118,7 +118,7 @@ class CartListItem extends Component {
     } = this.props;
 
     const maxAvail = Math.min(
-      gon.max_items_count,
+      gon.max_items_count || 100,
       (getIn(item, ['good', 'maxOrderableQuantity']) || 0)
     );
     const options = range(0, Math.max(amount, maxAvail))
