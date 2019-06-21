@@ -45,7 +45,7 @@ describe('[Component] ProductCardGallerySlider', () => {
       <ProductCardGallerySlider images={images} />
     );
 
-    expect(component.refs.productThumbs).to.be.defined;
+    expect(component.refs.productThumbs).to.not.be.undefined;
   });
 
   it('should update selected index when emitted "photo change" event and uid found', () => {

@@ -42,7 +42,7 @@ describe('[Component] ProductCardDetails', () => {
       );
       const textBlocks = component.refs.textBlocks;
 
-      expect(textBlocks).to.be.defined;
+      expect(textBlocks).to.not.be.undefined;
       expect(product.textBlocks.length).to.equal(textBlocks.childNodes.length);
     });
   });
@@ -54,7 +54,7 @@ describe('[Component] ProductCardDetails', () => {
         <ProductCardDetails product={product} />
       );
 
-      expect(component.refs.attributes).to.be.defined;
+      expect(component.refs.attributes).to.be.undefined;
     });
 
     it('should render AttributeDictionary attribute type', () => {
