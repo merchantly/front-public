@@ -19,7 +19,7 @@ class Pagination extends Component {
 
     if (href) {
       const url = new Url(href)
-      url.query['page']=page
+      url.query.page = page
       return url.toString()
     } else {
       return '/?page=' + page.toString()
