@@ -69,7 +69,8 @@ class ProductCard extends Component {
     if (isOneClickBuy) {
       const url = new Url(newOrderUrl)
 
-      url.query = {'cart_item[good_id]': good.globalId, 'cart_item[product_price_id]': good.actualPrice.id}
+      url.query['cart_item[good_id]'] = good.globalId
+      url.query['cart_item[product_price_id]'] = good.actualPrice.id
 
       // TODO поддержка multipleChoice
       document.location = url.toString()
