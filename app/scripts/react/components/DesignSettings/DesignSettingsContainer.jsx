@@ -11,7 +11,7 @@ import * as storageKeys from '../../constants/storageKeys';
 import * as cookieKeys from '../../constants/cookieKeys';
 import { DOM_CHANGE } from '../../constants/globalEventKeys';
 import DesignSettings from './index';
-import { some } from 'lodash-es';
+import { some } from 'lodash';
 
 class DesignSettingsContainer extends Component {
   static propTypes = {

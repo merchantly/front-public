@@ -6,7 +6,7 @@ import { fetchClientState } from 'r/actions/ClientStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-import { includes } from 'lodash-es';
+import { includes } from 'lodash';
 import ProductCartWishlistButton from './ProductCartWishlistButton';
 import ProductCartWishlistButtonFetching from './ProductCartWishlistButtonFetching';
 import ProductCartWishlistButtonRemove from './ProductCartWishlistButtonRemove';

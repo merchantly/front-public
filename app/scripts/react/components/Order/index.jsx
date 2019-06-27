@@ -4,7 +4,7 @@ import * as schemas from '../../schemas';
 import connectToRedux from '../HoC/connectToRedux';
 import provideTranslations from '../HoC/provideTranslations';
 import { connect } from 'react-redux';
-import get from 'lodash-es/get';
+import get from 'lodash/get';
 import Order from './Order';
 import diff from 'deep-diff';
 import {
@@ -16,7 +16,7 @@ import {
 import {
   canUseDOM,
 } from '../../helpers/dom';
-import { find, head, includes } from 'lodash-es';
+import { find, head, includes } from 'lodash';
 import { updateIn, getIn } from 'timm';
 
 let storeInitialized = false;

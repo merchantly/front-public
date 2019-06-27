@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import map from 'lodash-es/map';
-import size from 'lodash-es/size';
-import bind from 'lodash-es/bind';
+import map from 'lodash/map';
+import size from 'lodash/size';
+import bind from 'lodash/bind';
 import provideTranslations from '../HoC/provideTranslations';
 
 class LocaleSwitcher extends Component {

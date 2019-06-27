@@ -1,5 +1,5 @@
 import { POPUP_OPEN, POPUP_CLOSE } from '../constants/actionTypes';
-import { some } from 'lodash-es';
+import { some } from 'lodash';
 
 export function openPopup(style, props) {
   return {

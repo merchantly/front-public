@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import tinycolor from 'tinycolor2';
 import * as designTypes from '../../constants/designTypes';
-import { map } from 'lodash-es';
+import { map } from 'lodash';
 
 export default class DesignSettingsRadioList extends Component {
   static propTypes = {

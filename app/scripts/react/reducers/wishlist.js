@@ -11,7 +11,7 @@ import {
   WISHLIST_BUTTON_FETCHING,
 } from 'r/actions/WishlistStateActions';
 import { merge, set, setIn, getIn } from 'timm';
-import { reduce } from 'lodash-es';
+import { reduce } from 'lodash';
 
 const initialState = {  
   data: {

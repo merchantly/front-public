@@ -26,7 +26,7 @@ import {
 } from '../../helpers/dom';
 import * as schemas from 'r/schemas';
 import { getIn, set } from 'timm';
-import { reduce, mapValues, find, isEmpty } from 'lodash-es';
+import { reduce, mapValues, find, isEmpty } from 'lodash';
 
 let storeInitialized = false;
 

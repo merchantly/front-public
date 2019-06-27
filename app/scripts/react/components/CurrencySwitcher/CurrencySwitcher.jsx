@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import map from 'lodash-es/map';
-import size from 'lodash-es/size';
-import get from 'lodash-es/get';
-import bind from 'lodash-es/bind';
+import map from 'lodash/map';
+import size from 'lodash/size';
+import get from 'lodash/get';
+import bind from 'lodash/bind';
 
 import { getHTMLName } from '../../helpers/money';
 

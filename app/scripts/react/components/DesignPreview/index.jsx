@@ -5,7 +5,7 @@ import jss from 'jss';
 import nested from 'jss-nested';
 import tinycolor from 'tinycolor2';
 import connectToRedux from '../HoC/connectToRedux';
-import { some, reduce, merge } from 'lodash-es';
+import { some, reduce, merge } from 'lodash';
 import { isDesignOpened } from 'r/actions/popupActions';
 
 jss.use(nested);

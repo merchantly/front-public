@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import AssetImage from '../common/AssetImage';
 import Select from '../common/Select';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
-import { range, map, size } from 'lodash-es';
+import { range, map, size } from 'lodash';
 import { getIn } from 'timm';
 import {
   ORDER_IMG_SIZE,
