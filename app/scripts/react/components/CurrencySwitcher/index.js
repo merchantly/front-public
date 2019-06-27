@@ -5,14 +5,14 @@ import YouAreI from 'youarei';
 import CurrencySwitcher from './CurrencySwitcher';
 
 class CurrencySwitcherContainer extends Component {
-  handleChange(e) {
+  handleChange(value) {
     const url = new YouAreI(window.location.href);
-    url.query_set({currency: e.target.value});
+    url.query_set({currency: value});
     window.location = url.to_string();
   }
   render() {
     return (
-      <CurrencySwitcher {...this.props} onChange={this.handleChange} />
+      <CurrencySwitcher {...this.props} onChange={this.handleChange.bind(this)} />
     );
   }
 }
