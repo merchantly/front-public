@@ -18,7 +18,7 @@ import {
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-import Url from 'domurl';
+import YouAreI from 'youarei';
 
 class ProductCard extends Component {
   constructor(props) {
@@ -67,13 +67,15 @@ class ProductCard extends Component {
     ev.preventDefault();
 
     if (isOneClickBuy) {
-      const url = new Url(newOrderUrl)
+      const url = new YouAreI(newOrderUrl)
 
-      url.query['cart_item[good_id]'] = good.globalId
-      url.query['cart_item[product_price_id]'] = good.actualPrice.id
+      const params = {}
+      params['cart_item[good_id'] =  good.globalId
+      params['cart_item[product_price_id]'] =  good.actualPrice.id
+      url.query_set(params)
 
       // TODO поддержка multipleChoice
-      document.location = url.toString()
+      document.location = url.to_string()
     } else {
       return product.sellingByWeight
         ? addGood(good, 1, amount)
