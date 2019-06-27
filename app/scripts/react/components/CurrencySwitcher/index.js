@@ -5,9 +5,9 @@ import YouAreI from 'youarei';
 import CurrencySwitcher from './CurrencySwitcher';
 
 class CurrencySwitcherContainer extends Component {
-  handleChange(value) {
+  handleChange(e) {
     const url = new YouAreI(window.location.href);
-    url.query_set({currency: value});
+    url.query_set({currency: e.target.value});
     window.location = url.to_string();
   }
   render() {
