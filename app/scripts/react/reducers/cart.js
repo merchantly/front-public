@@ -15,7 +15,7 @@ import {
   GOOD_ADD_SUCCESS,
 } from 'r/actions/GoodStateActions';
 import { merge, set, setIn, getIn } from 'timm';
-import { reduce } from 'lodash-es';
+import { reduce } from 'lodash';
 
 const initialState = {
   cart: {},

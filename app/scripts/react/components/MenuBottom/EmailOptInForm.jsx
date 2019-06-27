@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { subscriptionEmails } from '../../../routes/api';
-import { isEmpty } from 'lodash-es';
+import { isEmpty } from 'lodash';
 
 class EmailOptInForm extends Component {
   constructor(props) {

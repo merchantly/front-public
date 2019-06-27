@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { map } from 'lodash-es';
+import { map } from 'lodash';
 
 class GoodDetails extends Component {
   render() {

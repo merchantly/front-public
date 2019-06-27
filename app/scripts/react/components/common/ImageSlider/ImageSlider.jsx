@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 
-import size from 'lodash-es/size';
+import size from 'lodash/size';
 import * as schemas from '../../../schemas';
 
 import ImageSliderSlides from './ImageSliderSlides';

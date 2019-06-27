@@ -1,5 +1,5 @@
 import { productsFilteredCount } from 'scripts/routes/api';
-import { includes } from 'lodash-es';
+import { includes } from 'lodash';
 
 const TIMEOUT = 10000;
 const _pendingRequests = {};

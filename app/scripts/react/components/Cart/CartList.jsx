@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CartListItem from './CartListItem';
 import CartListPackageItem from './CartListPackageItem';
 import CartListPackages from './CartListPackages';
-import { map, isEmpty } from 'lodash-es';
+import { map, isEmpty } from 'lodash';
 import * as schemas from 'r/schemas';
 import { SortableContainer, SortableElement, arrayMove } from 'react-sortable-hoc';
 

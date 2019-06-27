@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { simpleFormat } from '../../helpers/text';
-import { find, isEmpty } from 'lodash-es';
+import { find, isEmpty } from 'lodash';
 
 class CheckoutPayments extends Component {
   itemFullTitle(item) {

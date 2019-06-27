@@ -6,7 +6,7 @@ import { RelativeImage } from 'rc/common/Image';
 import CartListPackagePrice from './CartListPackagePrice';
 import CartListImage from './CartListImage';
 import { getIn } from 'timm';
-import { map } from 'lodash-es';
+import { map } from 'lodash';
 import * as schemas from 'r/schemas';
 
 class CartListPackageItem extends Component {

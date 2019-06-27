@@ -4,7 +4,7 @@ import Select from '../common/Select';
 import * as schemas from 'r/schemas';
 import FormAuthenticity from '../common/FormAuthenticity';
 import HiddenInput from '../common/HiddenInput';
-import { find } from 'lodash-es';
+import { find } from 'lodash';
 
 
 class ClientForm extends Component {

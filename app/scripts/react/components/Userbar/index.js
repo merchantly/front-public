@@ -16,7 +16,7 @@ import Cookies from 'cookies-js';
 import * as cookieKeys from 'r/constants/cookieKeys';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import { canUseDOM } from 'r/helpers/dom';
-import { filter } from 'lodash-es';
+import { filter } from 'lodash';
 
 class UserbarContainer extends Component {
   componentWillMount() {

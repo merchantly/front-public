@@ -8,13 +8,13 @@ import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
 import ReactSpinner  from 'react16-spinjs';
 import * as schemas from 'r/schemas';
-import size from 'lodash-es/size';
-import omit from 'lodash-es/omit';
-import mapKeys from 'lodash-es/mapKeys';
-import map from 'lodash-es/map';
-import transform from 'lodash-es/transform';
-import flow from 'lodash-es/flow';
-import flatten from 'lodash-es/flatten';
+import size from 'lodash/size';
+import omit from 'lodash/omit';
+import mapKeys from 'lodash/mapKeys';
+import map from 'lodash/map';
+import transform from 'lodash/transform';
+import flow from 'lodash/flow';
+import flatten from 'lodash/flatten';
 
 class Cart extends Component {
   constructor(props) {
