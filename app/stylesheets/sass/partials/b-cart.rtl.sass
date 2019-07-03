@@ -1,0 +1,63 @@
+[dir="rtl"]
+  .b-cart
+    &__actions
+      &__element
+        margin-right: 1em
+        &:first-child
+          margin-right: 0
+    &__state
+      margin-right: 1em
+      margin-left: 0
+      &__col
+        &-submit
+          padding-right: 0
+          margin-right: 2%
+          margin-left: 0
+          .b-cart__action__next,
+          .b-cart__action__submit
+            margin-right: 0
+          @include grid-media-query("palm")
+            margin-right: 0
+      &__next,
+        margin-right: 2%
+        margin-left: 0
+      &__code
+        border: 1px solid #e2e2e2
+        padding: 14px 17px 13px 3px
+      &__next
+        @include grid-media-query("palm")
+          margin-right: 0
+
+      &__submit
+        @include grid-media-query("palm")
+          margin-right: 0
+    &__item
+      &__quantity, &__weight
+        &__text
+          margin-left: 10px
+          margin-right: 0
+      &__remove
+        @include grid-media-query("palm")
+          left: 0
+          right: auto
+      &__col
+        &-content
+          @include grid-media-query("palm")
+            padding-left: 30px
+            padding-right: 0
+        &-package-price
+          padding-right: 0
+          @include grid-media-query("palm")
+            padding-left: 30px
+            padding-right: 0
+        &-package-price &-price,
+        &-package-price &-quantity
+          @include grid-media-query("palm")
+            right: 0
+            left: auto
+
+    &__form
+      @include grid-media-query("palm")
+        margin-right: 0
+        .cart__form__delivery-address
+          font-size: .875em

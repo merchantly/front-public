@@ -1,0 +1,52 @@
+[dir="rtl"]
+  .b-nav
+    &__list
+      &_sub
+        right: 15px
+        left: auto
+        .b-nav
+          &__link
+            padding: 8px 0 4px 20px
+            margin-left: 4px
+            margin-right: 0
+            &:after
+              left: 5px
+              right: auto
+      &__col
+        text-align: right
+        margin-right: 24px
+        margin-left: 0
+        &:first-child
+          margin-right: 0
+
+    &__item
+      text-align: right
+      &_has-banner
+        left: 130px
+        right: auto
+        .b-nav__link
+          padding: 10px 0 18px 14px
+          &:after
+            right: 0
+            left: auto
+      &_has-sub
+        position: relative
+        &:before
+          right: 50%
+          left: auto
+          margin-right: -6px
+          margin-left: 0
+        &_center
+          .b-nav__list_sub
+            right: -215px
+            left: auto
+            &:before
+              right: -215px
+              left: auto
+        &_reverse
+          .b-nav__list_sub
+            right: auto
+            left: 15px
+            &:before
+              right: auto
+              left: 30px

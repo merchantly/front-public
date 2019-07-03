@@ -1,0 +1,16 @@
+[dir="rtl"]
+  .b-footer
+    &__nav
+      &_soc
+        .LocaleSwitcher
+          margin-left: 15px
+          margin-right: 0
+    &__link
+      margin-left: 15px
+      margin-right: 0
+      &:last-child
+        margin-left: 0
+      @include grid-media-query("lap")
+        margin-left: 15px
+      @include grid-media-query("palm")
+        margin-left: 10px

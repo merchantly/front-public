@@ -1,0 +1,31 @@
+[dir="rtl"]
+  .b-item-list
+    &#{&}_catalog#{&}--with-filter
+      .b-item-list
+        &__filter
+          float: right
+          padding-left: 10px
+          padding-right: 0
+        &__content
+          margin-right: 210px
+          margin-left: 0
+        &__description
+          margin-right: 234px
+          margin-left: 0
+
+      @include grid-media-query((lap, palm))
+        .b-item-list
+          &__content
+            margin-right: -18px
+            margin-left: 0
+          &__description
+            margin-right: 6px
+            margin-left: 0
+      &.b-item-list--with-hidden-filter
+        .b-item-list
+          &__content
+            margin-right: -18px
+            margin-left: 0
+          &__description
+            margin-right: 6px
+            margin-left: 0
