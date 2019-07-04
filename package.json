@@ -157,7 +157,6 @@
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.23.1",
     "uglifyjs": "^2.4.10",
-    "uuid": "^3.3.2",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.2.3",

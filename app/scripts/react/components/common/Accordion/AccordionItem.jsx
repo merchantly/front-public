@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import uuidv1 from 'uuid/v1';
+import uuidv4 from 'app/scripts/lib/uuid';
 
 import AccordionItemBody from './AccordionItemBody';
 import AccordionItemTitle from './AccordionItemTitle';
@@ -30,7 +30,7 @@ export default class AccordionItem extends Component {
     };
   }
   componentWillMount() {
-    this.uuid = uuidv1();
+    this.uuid = uuidv4();
   }
   componentDidMount() {
     this.setMaxHeight();
