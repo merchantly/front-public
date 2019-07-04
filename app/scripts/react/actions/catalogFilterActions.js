@@ -7,13 +7,17 @@ export function showFilteredCount(filter, t) {
   Api.catalogFilter.getFilteredCount(filter)
     .then((count) => {
       NoticeService.notifyInfo(
-        <span>
+        (<span>
           {t('vendor.notice.catalog_filter.selected_products')}:
           {` ${count} `}
           <a href={`?${filter}`}>
             {t('vendor.notice.catalog_filter.show_products')}
           </a>
-        </span>
+        </span>),
+        300000,
+        () => {
+          window.location.href = `\?${filter}`
+        }
       )
     })
     .fail(NoticeService.errorResponse);
