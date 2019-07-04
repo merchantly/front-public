@@ -1,0 +1,17 @@
+[dir="rtl"]
+  .Clientbar
+    left: 30px
+    right: auto
+    .Bubble
+      float: right
+    .Bubble:not(:last-child)
+      margin-left: 12px
+      margin-right: 0
+    @include grid-media-query(palm)
+      left: 15px
+      right: 0
+    @include grid-media-query((lap, palm))
+      .Bubble
+        float: left
+      .Bubble:not(:last-child)
+        margin-left: 0

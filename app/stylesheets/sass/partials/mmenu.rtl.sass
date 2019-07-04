@@ -1,0 +1,23 @@
+[dir="rtl"]
+  .b-page
+    .mm-list a.mm-subopen
+      &:after
+        left: 10px
+        right: auto
+      & + a,
+      & + span
+        margin-left: 0
+
+    .mm-menu
+      .mm-subclose
+        &:before
+          margin-bottom: -4px
+          right: 6px
+          left: auto
+
+    .mmenu-open
+      right: 30px
+      left: auto
+      @include grid-media-query("palm")
+        right: 15px
+        left: auto

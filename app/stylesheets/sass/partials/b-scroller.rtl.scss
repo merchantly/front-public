@@ -1,0 +1,12 @@
+[dir="rtl"] {
+  .b-scroller {
+    >.ps-scrollbar-y-rail {
+      left: 4px;
+      right: auto;
+      >.ps-scrollbar-y {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}

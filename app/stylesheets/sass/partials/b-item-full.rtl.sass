@@ -1,0 +1,66 @@
+[dir="rtl"]
+  .b-item-full
+    .b-item__price_old
+      padding-right: 15px
+      padding-left: 0
+
+    &__other-products
+      li
+        margin: 0 0 0 10px
+    &__gallery
+      .b-status
+        right: 24px
+        left: auto
+
+    &__weight
+      padding-right: 24px
+      padding-left: 0
+
+      input[type=number]
+        padding: 14px 12px 13px 3px
+    &__price
+      &__sale
+        padding: 2px 5px 2px 2px 
+    &__sold_out_text
+      padding-right: 24px
+      padding-left: 0
+
+    &__form
+      &__row
+        & + &
+          .b-item-full__form__title
+            margin-top: 0
+
+        &_fixed
+          @include grid-media-query((lap, palm))
+            margin:
+              right: 0
+            left: 0
+            right: 0
+            .b-item-full__form__option,
+            .b-item-full__form__submit
+              padding-right: 0
+      &__option
+        &__extended
+          .radiobtn
+            margin: 0 0 7px 7px
+        &.b-item-full__form__option_pln
+          padding-right: 0
+      .radiobtn--color
+        margin: 6px 0 6px 14px
+
+    &__multiple-choice
+      &__form
+        margin-right: -15px
+        margin-left: 0
+        @include grid-media-query((lap))
+          margin-right: 0
+        &__row
+          &__items
+            display: table-cell
+            .b-item-full__multiple-choice__item
+              width: 100%
+              box-sizing: border-box
+              margin: 0 0 5px 0
+      &__item
+        margin: 0 0 5px 5px
