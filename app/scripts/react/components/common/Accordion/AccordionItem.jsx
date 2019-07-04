@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import uuidv4 from 'app/scripts/lib/uuid';
+import uuidv4 from 'uuid/v4';
 
 import AccordionItemBody from './AccordionItemBody';
 import AccordionItemTitle from './AccordionItemTitle';

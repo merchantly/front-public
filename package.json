@@ -10,7 +10,6 @@
   "scripts": {
     "deploy-storybook": "storybook-to-ghpages",
     "shell": "node -r @babel/register",
-    "uuid": "yarn webpack-cli --entry ./node_modules/uuid/v4.js --mode production --output app/scripts/lib/uuid.js --output-library uuidv4 --output-library-target uuidv4",
     "legacy_build:snippet": "WIDGETS_URL=../scripts/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > build/scripts/snippet.js",
     "legacy_dist:snippet": "WIDGETS_URL=http://assets.kiiiosk.ru/widgets envify app/scripts/embeddable/snippet.js | uglifyjs -m -c unused,booleans,conditionals,dead_code,if_return,join_vars > dist/scripts/snippet.js",
     "test": "yarn test:browser && yarn test:prerender && yarn test:mini_racer",
