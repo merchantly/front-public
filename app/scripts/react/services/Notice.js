@@ -33,7 +33,7 @@ const NoticeService = {
   },
 
   notifyInfo(text, timeout, onClick) {
-    this.notify('info', text, timeout), onClick;
+    this.notify('info', text, timeout, onClick);
   },
 
   notifyError(text, timeout) {
