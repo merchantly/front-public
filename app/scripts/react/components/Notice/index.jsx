@@ -9,6 +9,7 @@ export default class Notice extends Component {
     type: PropTypes.string.isRequired,
     timeout: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
+    onClick: PropTypes.func
   }
   componentDidMount() {
     this.timer = new Timer(this.close.bind(this), this.props.timeout);
@@ -17,10 +18,12 @@ export default class Notice extends Component {
     this.pause();
   }
   render() {
+    const onClickEvent = this.props.onClick || this.close;
+
     return (
       <div
         className={`b-notice b-notice_${this.props.type}`}
-        onClick={this.close.bind(this)}
+        onClick={onClickEvent.bind(this)}
         onMouseEnter={this.pause.bind(this)}
         onMouseLeave={this.resume.bind(this)}
       >
