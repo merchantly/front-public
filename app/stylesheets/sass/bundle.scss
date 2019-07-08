@@ -47,9 +47,10 @@
 @import "~jQuery.mmenu/src/scss/jquery.mmenu.all";
 
 // OwlCarousel
-@import "~OwlCarousel/owl-carousel/scss/carousel";
-@import "~OwlCarousel/owl-carousel/scss/theme";
-@import "~OwlCarousel/owl-carousel/scss/transitions";
+$owl-image-path: "~OwlCarousel/src/img/";
+@import "~OwlCarousel/src/scss/owl.carousel";
+@import "~OwlCarousel/src/scss/owl.theme.default";
+// @import "~OwlCarousel/src/scss/transitions";
 
 // Entypo Plus
 @import "~entypo-plus/scss/entypo-plus";

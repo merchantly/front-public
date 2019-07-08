@@ -14,7 +14,7 @@ require('@bower_components/sticky-kit/jquery.sticky-kit');
 // Others
 // Не понял где он используется
 // require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
-require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
+require('@bower_components/OwlCarousel/src/js/owl.carousel');
 require('@bower_components/fancybox/source/jquery.fancybox');
 
 require('nouislider');
