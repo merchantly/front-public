@@ -25,6 +25,7 @@ WelcomeContainer.propTypes = {
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor.isRequired,
   t: PropTypes.func.isRequired,
+  rtl: PropTypes.bool.isRequired,
 };
 
 WelcomeContainer.defaultProps = {
@@ -41,6 +42,7 @@ WelcomeContainer.defaultProps = {
   showQuantity: false,
   showWelcomeSlider: false,
   vendor: {},
+  rtl: false
 };
 
 export default provideTranslations(WelcomeContainer);

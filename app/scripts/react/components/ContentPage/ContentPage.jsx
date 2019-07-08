@@ -8,6 +8,7 @@ class ContentPage extends Component {
       title,
       text,
       images,
+      rtl,
     } = this.props;
 
     return (
@@ -25,6 +26,7 @@ class ContentPage extends Component {
             className="b-slider_promo"
             hasThumbs={images.length > 1}
             slides={images}
+            rtl={rtl}
           />
         </section>
 
@@ -39,7 +41,12 @@ class ContentPage extends Component {
 ContentPage.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  images: ImageSlider.propTypes.slides
+  images: ImageSlider.propTypes.slides,
+  rtl: PropTypes.bool.isRequired,
 };
+
+ContentPage.defaultProps = {
+  rtl: false
+}
 
 export default ContentPage;

@@ -25,9 +25,11 @@ ProductCardGallery.propTypes = {
       url: PropTypes.string.isRequired,
     }),
   ),
+  rtl: PropTypes.bool.isRequired,
 };
 ProductCardGallery.defaultProps = {
   images: [],
+  rtl: false,
 };
 
 export default ProductCardGallery;

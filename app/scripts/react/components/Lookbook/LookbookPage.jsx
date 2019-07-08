@@ -11,6 +11,7 @@ class LookbookPage extends Component {
       layoutProps,
       title,
       images,
+      rtl
     } = this.props;
 
     return (
@@ -18,6 +19,7 @@ class LookbookPage extends Component {
         <LookbookContainer {...{
           title,
           images,
+          rtl,
         }} />
       </VendorLayoutContainer>
     );
@@ -29,6 +31,11 @@ LookbookPage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   title: PropTypes.string.isRequired,
   images: ImageSlider.propTypes.slides,
+  rtl: PropTypes.bool.isRequired,
 };
+
+LookbookPage.defaultProps = {
+  rtl: false
+}
 
 export default LookbookPage;

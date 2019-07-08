@@ -7,6 +7,7 @@ class Lookbook extends Component {
     const {
       title,
       images,
+      rtl,
     } = this.props;
 
     return (
@@ -18,6 +19,7 @@ class Lookbook extends Component {
           className="b-slider_promo"
           hasThumbs={images.length > 1}
           slides={images}
+          rtl={rtl}
         />
       </section>
     );
@@ -27,6 +29,11 @@ class Lookbook extends Component {
 Lookbook.propTypes = {
   title: PropTypes.string.isRequired,
   images: ImageSlider.propTypes.slides,
+  rtl: PropTypes.bool.isRequired,
 };
+
+Lookbook.defaultProps = {
+  rtl: false
+}
 
 export default Lookbook;

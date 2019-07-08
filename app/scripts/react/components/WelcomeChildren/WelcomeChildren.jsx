@@ -19,7 +19,8 @@ class WelcomeChildren extends Component {
       showAuthForBuyButton,
       vendorClientSigninPath,
       showCatalogFilter,
-      showQuantity
+      showQuantity,
+      rtl
     } = this.props;
 
     return (
@@ -30,6 +31,7 @@ class WelcomeChildren extends Component {
               className="b-slider_promo"
               hasThumbs={false}
               slides={sliderImages}
+              rtl={rtl}
             />
           )}
         </div>
@@ -74,6 +76,11 @@ WelcomeChildren.propTypes = {
   showQuantity: PropTypes.bool,
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor,
+  rtl: PropTypes.bool.isRequired,
 };
+
+WelcomeChildren.defaultProps = {
+  rtl: false,
+}
 
 export default WelcomeChildren;

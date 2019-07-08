@@ -17,12 +17,14 @@ WelcomeChildrenContainer.propTypes = {
   showAuthForBuyButton: PropTypes.bool,
   vendorClientSigninPath: PropTypes.string,
   showCatalogFilter: PropTypes.bool,
-  showQuantity: PropTypes.bool
+  showQuantity: PropTypes.bool,
+  rtl: PropTypes.bool.isRequired,
 };
 
 WelcomeChildrenContainer.defaultProps = {
   showWelcomeSlider: false,
   vendor: {},
+  rtl: false
 };
 
 export default WelcomeChildrenContainer;

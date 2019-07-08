@@ -11,7 +11,8 @@ class ContentPagePage extends Component {
       layoutProps,
       title,
       text,
-      images
+      images,
+      rtl,
     } = this.props;
 
     return (
@@ -20,6 +21,7 @@ class ContentPagePage extends Component {
           title,
           text,
           images,
+          rtl,
         }} />
       </VendorLayoutContainer>
     );
@@ -31,7 +33,12 @@ ContentPagePage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  images: ImageSlider.propTypes.slides
+  images: ImageSlider.propTypes.slides,
+  rtl: PropTypes.bool.isRequired,
 };
+
+ContentPagePage.defaultProps = {
+  rtl: false
+}
 
 export default ContentPagePage;

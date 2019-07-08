@@ -24,6 +24,7 @@ class Welcome extends Component {
       showWelcomeSlider,
       vendor,
       t,
+      rtl,
     } = this.props;
     const {
       preProductsText,
@@ -39,6 +40,7 @@ class Welcome extends Component {
               className="b-slider_promo"
               hasThumbs={false}
               slides={sliderImages}
+              rtl={rtl}
             />
           )}
         </div>
@@ -97,10 +99,11 @@ Welcome.propTypes = {
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor.isRequired,
   t: PropTypes.func.isRequired,
+  rtl: PropTypes.bool.isRequired,
 };
 
 Welcome.defaultProps = {
-
+  rtl: false
 };
 
 export default Welcome;

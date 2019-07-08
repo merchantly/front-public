@@ -31,6 +31,11 @@ class ImageSlider extends Component {
     const $elt = $(findDOMNode(this.refs.slides));
     let options = SLIDER_OPTIONS;
 
+    options = {
+      ...options,
+      rtl: this.props.rtl,
+    }
+
     if (className) {
       if (className.match(/b-slider_promo/g)) {
         options = {
@@ -102,12 +107,14 @@ ImageSlider.propTypes = {
   slides: PropTypes.arrayOf(schemas.slide),
   thumbHeight: PropTypes.number,
   thumbWidth: PropTypes.number,
+  rtl: PropTypes.bool.isRequired,
 };
 ImageSlider.defaultProps = {
   hasThumbs: true,
   slides: [],
   thumbWidth: 200,
   thumbHeight: 100,
+  rtl: false,
 };
 
 export default ImageSlider;

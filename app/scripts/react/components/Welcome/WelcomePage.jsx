@@ -21,6 +21,7 @@ class WelcomePage extends Component {
       showQuantity,
       showWelcomeSlider,
       vendor,
+      rtl,
     } = this.props;
 
     return (
@@ -38,6 +39,7 @@ class WelcomePage extends Component {
           showQuantity={showQuantity}
           showWelcomeSlider={showWelcomeSlider}
           vendor={vendor}
+          rtl={rtl}
         />
       </VendorLayoutContainer>
     );
@@ -58,6 +60,11 @@ WelcomePage.propTypes = {
   showQuantity: PropTypes.bool.isRequired,
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor.isRequired,
+  rtl: PropTypes.bool.isRequired,
+};
+
+WelcomePage.defaultProps = {
+  rtl: false,
 };
 
 export default WelcomePage;

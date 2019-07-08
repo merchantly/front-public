@@ -60,6 +60,7 @@ class ProductCardGallerySlider extends Component {
       autoHeight: true,
       singleItem: true,
       navigation: true,
+      rtl: this.props.rtl,
     });
 
     if ($productThumbs.length) {
@@ -73,7 +74,8 @@ class ProductCardGallerySlider extends Component {
           // поэтому на всякий случай еще раз меняем изображение
           $productThumbs.trigger('owl.goTo', this.state.selectedIndex);
           $productPhoto.trigger('owl.goTo', this.state.selectedIndex);
-        }
+        },
+        rtl: this.props.rtl,
       });
     }
   }
@@ -85,6 +87,7 @@ class ProductCardGallerySlider extends Component {
       $productPhoto.data('owlCarousel').reinit({
         singleItem: true,
         afterAction: this.onAfterPhotoAction,
+        rtl: this.props.rtl,
       });
     }
 
@@ -92,6 +95,7 @@ class ProductCardGallerySlider extends Component {
       $productThumbs.data('owlCarousel').reinit({
         items: 4,
         pagination: false,
+        rtl: this.props.rtl,
       });
     }
   }
@@ -228,9 +232,11 @@ ProductCardGallerySlider.propTypes = {
       url: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  rtl: PropTypes.bool.isRequired,
 };
 ProductCardGallerySlider.defaultProps = {
   images: [],
+  rtl: false
 };
 
 export default ProductCardGallerySlider;

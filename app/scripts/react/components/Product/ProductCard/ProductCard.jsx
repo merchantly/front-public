@@ -124,6 +124,7 @@ class ProductCard extends Component {
                   isKioskEnvironment={this.isKioskEnvironment()}
                   selectedImage={selectedImage}
                   t={t}
+                  rtl={this.props.rtl}
                 />
               </div>
               <div className="b-item-full__description">
@@ -203,6 +204,7 @@ ProductCard.propTypes = {
   notAvailableContent: PropTypes.string,
   showAuthForBuyButton: PropTypes.bool,
   vendorClientSigninPath: PropTypes.string,
+  rtl: PropTypes.bool.isRequired,
 };
 
 ProductCard.defaultProps = {
@@ -216,7 +218,8 @@ ProductCard.defaultProps = {
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
   showAuthForBuyButton: false,
-  vendorClientSigninPath: ''
+  vendorClientSigninPath: '',
+  rtl: false
 };
 
 export default provideTranslations(connectToRedux(connect(
