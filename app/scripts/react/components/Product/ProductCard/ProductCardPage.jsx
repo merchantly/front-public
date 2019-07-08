@@ -30,6 +30,7 @@ class ProductCardPage extends Component {
       notAvailableContent,
       showAuthForBuyButton,
       vendorClientSigninPath,
+      rtl,
     } = this.props;
 
     return (
@@ -52,7 +53,8 @@ class ProductCardPage extends Component {
           deliveryRestrictionMessages,
           notAvailableContent,
           showAuthForBuyButton,
-          vendorClientSigninPath
+          vendorClientSigninPath,
+          rtl
         }} />
       </VendorLayoutContainer>
     );
@@ -78,7 +80,8 @@ ProductCardPage.propTypes = {
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   notAvailableContent: PropTypes.string,
   showAuthForBuyButton: PropTypes.bool,
-  vendorClientSigninPath: PropTypes.string
+  vendorClientSigninPath: PropTypes.string,
+  rtl: PropTypes.bool,
 };
 ProductCardPage.defaultProps = {
   formAuthenticity: {},
@@ -92,7 +95,8 @@ ProductCardPage.defaultProps = {
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
   showAuthForBuyButton: false,
-  vendorClientSigninPath: ''
+  vendorClientSigninPath: '',
+  rtl: false
 };
 
 export default ProductCardPage;
