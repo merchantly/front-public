@@ -128,6 +128,7 @@ global.gon = {
             'comment': 'О чем нам нужно знать',
             'email': 'Email',
           },
+          'total_vat': '(включая НДС %{total_vat})',
           'submit': 'Оформить заказ',
           'pickup_address': 'Адрес самовывоза:',
           'title': 'Заказ №%{number}',

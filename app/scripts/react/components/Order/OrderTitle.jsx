@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
+import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import { isEmpty } from 'lodash';
 
 class OrderTitle extends Component {
@@ -23,11 +24,23 @@ class OrderTitle extends Component {
       priceNode.classList.remove('bounce');
     }, 1000);
   }
+  renderTotalVat(totalVat) {
+    if (!totalVat.cents) {
+      return;
+    }
+
+    const {
+      t
+    } = this.props;
+
+    return t('vendor.order.total_vat', { total_vat: humanizedMoneyWithCurrency(totalVat) });
+  }
   render() {
     const {
       t,
       totalCount,
       totalPrice,
+      totalVat,
     } = this.props;
 
     if (totalCount || !isEmpty(totalPrice)) {
@@ -41,6 +54,7 @@ class OrderTitle extends Component {
           <strong className="b-cart__title-price" ref="price">
             <HumanizedMoneyWithCurrency money={totalPrice} />
           </strong>
+          { this.renderTotalVat(totalVat) }
         </h1>
       );
     }
@@ -53,6 +67,7 @@ OrderTitle.propTypes = {
   t: PropTypes.func.isRequired,
   totalCount: PropTypes.number.isRequired,
   totalPrice: PropTypes.object.isRequired,
+  totalVat: PropTypes.object.isRequired,
 };
 
 export default OrderTitle;

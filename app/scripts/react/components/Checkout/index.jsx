@@ -34,7 +34,7 @@ class Checkout extends Component {
       totalPrice,
       t,
       cart,
-      items,
+      items
     } = this.props;
 
     return (
@@ -123,7 +123,7 @@ Checkout.propTypes = {
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,
   items: PropTypes.array,
-  t: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired
 };
 Checkout.defaultProps = {
   formAuthenticity: {},
