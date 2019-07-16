@@ -26,6 +26,7 @@ class Order extends Component {
       items,
       totalCount,
       totalPrice,
+      totalVat
     } = this.props;
 
     return (
@@ -35,6 +36,7 @@ class Order extends Component {
             t={t}
             totalCount={totalCount}
             totalPrice={totalPrice}
+            totalVat={totalVat}
           />
           <Checkout
             backUrl={backUrl}
@@ -83,6 +85,7 @@ Order.propTypes = {
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,
   items: PropTypes.array,
+  totalVat: PropTypes.object.isRequired,
 };
 
 export default Order;

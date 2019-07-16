@@ -72,6 +72,7 @@ class OrderContainer extends Component {
       totalCount,
       totalPrice,
       items,
+      totalVat,
     } = this.props;
 
 
@@ -96,6 +97,7 @@ class OrderContainer extends Component {
         items={this.props.initialProps.cart.items}
         totalCount={totalCount}
         totalPrice={totalPrice}
+        totalVat={totalVat}
       />
     );
   }
@@ -127,7 +129,7 @@ OrderContainer.propTypes = {
   }),
   items: PropTypes.array,
   totalCount: PropTypes.number.isRequired,
-  totalPrice: PropTypes.object.isRequired,
+  totalPrice: PropTypes.object.isRequired
 };
 
 OrderContainer.defaultProps = {
@@ -148,6 +150,7 @@ export default provideTranslations(connectToRedux(connect(
       cart: {
         totalCount=0,
         totalPrice: cartTotalPrice={},
+        totalVat={},
       }={},
       items,
       formValues,
@@ -211,7 +214,8 @@ export default provideTranslations(connectToRedux(connect(
       selectedPaymentType,
       totalCount,
       totalPrice,
-      items
+      items,
+      totalVat
     };
   },
   {

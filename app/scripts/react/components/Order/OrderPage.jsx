@@ -67,7 +67,7 @@ OrderPage.propTypes = {
   paymentTypeId: PropTypes.number,
   paymentTypes: PropTypes.arrayOf(schemas.paymentType),
   publicOffer: schemas.checkoutPublicOffer,
-  submitOrderUrl: PropTypes.string,
+  submitOrderUrl: PropTypes.string
 };
 
 OrderPage.defaultProps = {
