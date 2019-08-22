@@ -31,11 +31,17 @@ export default class Select extends Component {
         value={value}
       >
         {
-          options.map((option) =>
-            <option {...option} key={option.value}>
-              {option.title}
-            </option>
-          )
+          options.map((option) => {
+            if (!option.disabled) {
+              delete option['disabled']
+            }
+
+            return (
+              <option {...option} key={option.value}>
+                {option.title}
+              </option>
+            )
+          })
         }
       </select>
     );
