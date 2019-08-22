@@ -119,7 +119,7 @@ function getOptionsForProperty(property, goods, filters) {
 
   return property.items.map((item) => ({
     ...item,
-    disabled: enabledValues.indexOf(item.value) === -1
+    disabled: (item.disabled || (enabledValues.indexOf(item.value) === -1))
   }));
 }
 
