@@ -7,7 +7,11 @@ import * as schemas from 'r/schemas';
 
 class OrderCreated extends Component {
   componentDidMount() {
-    $(window).trigger('m.order-submit', [this.props.order, true]);
+    try {
+      $(window).trigger('m.order-submit', [this.props.order, true]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
   }
   render() {
     const {

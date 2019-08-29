@@ -13,7 +13,11 @@ class WishlistAddToCartButton extends Component {
     } = this.props;
 
     let handler = function() {
-      $(window).trigger('m.add-to-cart', [good, 1]);
+      try {
+        $(window).trigger('m.add-to-cart', [good, 1]);
+      } catch (e) {
+        console.log('trigger: ', e.message);
+      }
     };
 
     return (

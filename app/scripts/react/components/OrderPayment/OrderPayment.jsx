@@ -10,7 +10,11 @@ class OrderPayment extends Component {
       order,
     } = this.props;
 
-    $(window).trigger('m.order-submit', [order, false]);
+    try {
+      $(window).trigger('m.order-submit', [order, false]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
 
     if (shouldAutosubmit && canUseDOM()) {
       window.setTimeout(() => this.refs.form.submit(), autosubmitTimeout);
