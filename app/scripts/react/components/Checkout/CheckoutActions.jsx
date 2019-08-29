@@ -17,11 +17,16 @@ class CheckoutActions extends Component {
     this.startProcessing = this.startProcessing.bind(this);
   }
   startProcessing() {
-    $(window).trigger('m.checkout', {
-      items: this.props.items,
-      totalCount: this.props.totalCount,
-      totalPrice: this.props.totalPrice
-    });
+    try {
+      $(window).trigger('m.checkout', {
+        items: this.props.items,
+        totalCount: this.props.totalCount,
+        totalPrice: this.props.totalPrice
+      });
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+
     this.setState({ isProcessing: true });
   }
   handleClick(ev) {

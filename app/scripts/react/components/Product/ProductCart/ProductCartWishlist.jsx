@@ -42,7 +42,11 @@ class ProductCartWishlist extends Component {
   addToWishListClick(event) {
     event.preventDefault();
     event.stopPropagation();
-    $(window).trigger('m.add-to-wishlist', [this.props.product]);
+    try {
+      $(window).trigger('m.add-to-wishlist', [this.props.product]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
     this.wishApiCall('post');
   }
 

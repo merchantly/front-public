@@ -6,7 +6,11 @@ import * as schemas from 'r/schemas';
 
 class OrderPage extends Component {
   componentDidMount() {
-    $(window).trigger('m.initial-checkout', [this.props.cart, this.props.coupon]);
+    try {
+      $(window).trigger('m.initial-checkout', [this.props.cart, this.props.coupon]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
   }
   render() {
     const {

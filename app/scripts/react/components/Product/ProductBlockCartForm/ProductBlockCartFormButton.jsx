@@ -39,7 +39,12 @@ class ProductBlockCartFormButton extends Component {
 
     let good = product.goods[0];
     good.title = product.title;
-    $(window).trigger('m.add-to-cart', [good, amount]);
+
+    try {
+      $(window).trigger('m.add-to-cart', [good, amount]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
 
     return product.sellingByWeight
       ? addGood(product.goods[0], 1, amount)

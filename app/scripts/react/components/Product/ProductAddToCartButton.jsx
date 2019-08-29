@@ -19,7 +19,13 @@ class ProductAddToCartButton extends Component {
     const handler = function (e) {
       // good.globalId
       // good.actualPrice.id
-      $(window).trigger('m.add-to-cart', [good, 1]);
+
+      try {
+        $(window).trigger('m.add-to-cart', [good, 1]);
+      } catch (e) {
+        console.log('trigger: ', e.message);
+      }
+
       if (onClick) { onClick(); };
     };
 

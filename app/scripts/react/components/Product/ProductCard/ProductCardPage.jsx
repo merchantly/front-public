@@ -6,7 +6,11 @@ import * as schemas from 'r/schemas';
 
 class ProductCardPage extends Component {
   componentDidMount() {
-    $(window).trigger('m.product', [this.props.product]);
+    try {
+      $(window).trigger('m.product', [this.props.product]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
   }
 
   render() {
