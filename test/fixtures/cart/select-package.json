@@ -1,4 +1,144 @@
 {
+  "recommendedProducts": [
+    {
+      "id": 16445,
+      "tags": [{"title": "tag1"}],
+      "title": "Велосипед Specialized «Pitch Comp 650B» (2015), размер S, красный",
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "indexImage": {
+        "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
+        "width": 1500,
+        "height": 1500
+      },
+      "secondImage": {
+        "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
+        "width": 1500,
+        "height": 1500
+      },
+      "publicUrl": "http://cc.kiiiosk.ru/products/16445-velosiped-specialized-pitch-comp-650b-2015-razmer-s-krasnyy",
+      "goods": [
+        {
+          "id": 22728,
+          "type": "ProductItem",
+          "isSale": false,
+          "price": {
+            "cents": 5909000,
+            "toF": 59090,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "id": 123,
+            "price": {
+              "cents": 5909000,
+              "toF": 59090,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 18589,
+      "tags": [{"title": "tag1"}],
+      "title": "Цепь Kryptonite «Evolution Series 4 1055 Mini»",
+      "isSale": false,
+      "hasOrderingGoods": true,
+      "isLabelNew": false,
+      "isRunOut": false,
+      "isSold": false,
+      "indexImage": {
+        "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png",
+        "width": 1500,
+        "height": 1500
+      },
+      "secondImage": {
+        "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg",
+        "width": 1500,
+        "height": 1500
+      },
+      "publicUrl": "http://cc.kiiiosk.ru/products/18589-tsep-kryptonite-evolution-series-4-1055-mini",
+      "goods": [
+        {
+          "id": 19206,
+          "type": "ProductItem",
+          "isSale": false,
+          "price": {
+            "cents": 359000,
+            "toF": 3590,
+            "currency": {
+              "isoCode": "RUB",
+              "isoNumeric": "643",
+              "name": "Russian Ruble",
+              "symbol": "₽",
+              "htmlName": "руб.",
+              "humanName": "Российские рубли",
+              "symbolFirst": false,
+              "thousandsSeparator": " ",
+              "decimalMark": ",",
+              "subunitToUnit": 100,
+              "smallestDenomination": 1,
+              "exponent": 2
+            },
+            "currencyIsoCode": "RUB"
+          },
+          "actualPrice": {
+            "id": 123,
+            "price": {
+              "cents": 359000,
+              "toF": 3590,
+              "currency": {
+                "isoCode": "RUB",
+                "isoNumeric": "643",
+                "name": "Russian Ruble",
+                "symbol": "₽",
+                "htmlName": "руб.",
+                "humanName": "Российские рубли",
+                "symbolFirst": false,
+                "thousandsSeparator": " ",
+                "decimalMark": ",",
+                "subunitToUnit": 100,
+                "smallestDenomination": 1,
+                "exponent": 2
+              },
+              "currencyIsoCode": "RUB"
+            }
+          }
+        }
+      ]
+    }
+  ],
   "minimalPrice": {
     "cents": 2000000,
     "currencyIsoCode": "RUB"

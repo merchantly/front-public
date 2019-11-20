@@ -16,7 +16,8 @@ class CartPage extends Component {
       minimalPrice,
       isHeaderButtons,
       continueShoppingUrl,
-      deliveryRestrictionMessages
+      deliveryRestrictionMessages,
+      recommendedProducts
     } = this.props;
 
     return (
@@ -34,6 +35,7 @@ class CartPage extends Component {
           isTesting={isTesting}
           minimalPrice={minimalPrice}
           deliveryRestrictionMessages= {deliveryRestrictionMessages}
+          recommendedProducts={recommendedProducts}
         />
       </VendorLayoutContainer>
     );
@@ -49,11 +51,13 @@ CartPage.propTypes = {
   minimalPrice: schemas.money,
   continueShoppingUrl: PropTypes.string,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
+  recommendedProducts: PropTypes.arrayOf(schemas.product),
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
 };
 
 CartPage.defaultProps = {
-  deliveryRestrictionMessages: []
+  deliveryRestrictionMessages: [],
+  recommendedProducts: [],
 };
 
 export default CartPage;

@@ -15,6 +15,7 @@ import map from 'lodash/map';
 import transform from 'lodash/transform';
 import flow from 'lodash/flow';
 import flatten from 'lodash/flatten';
+import ProductCardSimilarProducts from '../Product/ProductCard/ProductCardSimilarProducts';
 
 class Cart extends Component {
   constructor(props) {
@@ -109,6 +110,7 @@ class Cart extends Component {
       totalPrice,
       showCouponCode,
       deliveryRestrictionMessages,
+      recommendedProducts
     } = this.props;
     const hasErrors = isBelowMinimalPrice ||
       size(omit(cartErrors, 'minimalPrice')) > 0;
@@ -242,6 +244,7 @@ class Cart extends Component {
               </form>
             )
           }
+          <ProductCardSimilarProducts products={recommendedProducts} t={t} />
         </div>
       </section>
     );
@@ -273,6 +276,7 @@ Cart.propTypes = {
   t: PropTypes.func.isRequired,
   totalPrice: PropTypes.object.isRequired,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
+  recommendedProducts: PropTypes.arrayOf(schemas.product),
 };
 
 export default Cart;
