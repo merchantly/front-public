@@ -86,6 +86,7 @@ CartContainer.propTypes = {
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
+  recommendedProducts: PropTypes.arrayOf(schemas.product),
 
   // calculated props
   amounts: PropTypes.object.isRequired,
