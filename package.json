@@ -53,7 +53,7 @@
     "jquery": "^3.4.1",
     "jss": "^2.3.5",
     "jss-nested": "^0.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "nouislider": "^13.1.5",
     "numeral": "^1.5.3",
     "perfect-scrollbar": "^0.6.2",
