@@ -279,4 +279,8 @@ Cart.propTypes = {
   recommendedProducts: PropTypes.object,
 };
 
+Cart.defaultProps = {
+  recommendedProducts: { showCartButton: false, products: [] },
+};
+
 export default Cart;

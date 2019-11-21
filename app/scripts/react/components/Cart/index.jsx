@@ -86,7 +86,7 @@ CartContainer.propTypes = {
   isTesting: PropTypes.bool,
   minimalPrice: schemas.money,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-  recommendedProducts: PropTypes.arrayOf(schemas.product),
+  recommendedProducts: PropTypes.object,
 
   // calculated props
   amounts: PropTypes.object.isRequired,
@@ -119,7 +119,8 @@ CartContainer.defaultProps = {
   formAuthenticity: {
     method: 'patch',
   },
-  deliveryRestrictionMessages: []
+  deliveryRestrictionMessages: [],
+  recommendedProducts: { showCartButton: false, products: [] },
 };
 
 export default provideTranslations(connectToRedux(connect(
