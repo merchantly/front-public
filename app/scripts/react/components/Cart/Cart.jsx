@@ -244,7 +244,7 @@ class Cart extends Component {
               </form>
             )
           }
-          <ProductCardSimilarProducts products={recommendedProducts} t={t} />
+          <ProductCardSimilarProducts products={recommendedProducts.products} t={t} showCartButton={recommendedProducts.showCartButton} />
         </div>
       </section>
     );
@@ -276,7 +276,11 @@ Cart.propTypes = {
   t: PropTypes.func.isRequired,
   totalPrice: PropTypes.object.isRequired,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-  recommendedProducts: PropTypes.arrayOf(schemas.product),
+  recommendedProducts: PropTypes.object,
+};
+
+Cart.defaultProps = {
+  recommendedProducts: { showCartButton: false, products: [] },
 };
 
 export default Cart;

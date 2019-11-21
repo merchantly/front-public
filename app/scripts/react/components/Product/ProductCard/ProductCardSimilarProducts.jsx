@@ -5,7 +5,7 @@ import * as schemas from '../../../schemas';
 
 import ProductBlock from '../ProductBlock';
 
-const ProductCardSimilarProducts = ({ products, t }) => (
+const ProductCardSimilarProducts = ({ products, t, showCartButton }) => (
   products && products.length
     ? <section className="b-item-list b-item-list_additional">
         <div className="b-item-list__title">
@@ -13,7 +13,7 @@ const ProductCardSimilarProducts = ({ products, t }) => (
         </div>
         <div className="b-item-list__content">
           {products.map(product =>
-            <ProductBlock key={product.id} product={product} t={t} />)}
+            <ProductBlock key={product.id} product={product} t={t} showCartButton={showCartButton} />)}
         </div>
       </section>
     : <span />
@@ -21,10 +21,12 @@ const ProductCardSimilarProducts = ({ products, t }) => (
 
 ProductCardSimilarProducts.propTypes = {
   products: PropTypes.arrayOf(schemas.product),
+  showCartButton: PropTypes.bool,
 };
 
 ProductCardSimilarProducts.defaultProps = {
   products: [],
+  showCartButton: false
 };
 
 export default ProductCardSimilarProducts;
