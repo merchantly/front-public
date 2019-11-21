@@ -51,13 +51,13 @@ CartPage.propTypes = {
   minimalPrice: schemas.money,
   continueShoppingUrl: PropTypes.string,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-  recommendedProducts: PropTypes.arrayOf(schemas.product),
+  recommendedProducts: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
 };
 
 CartPage.defaultProps = {
   deliveryRestrictionMessages: [],
-  recommendedProducts: [],
+  recommendedProducts: { showCartButton: false, products: [] },
 };
 
 export default CartPage;
