@@ -76,7 +76,7 @@ ProductCardPage.propTypes = {
   isWishlisted: PropTypes.bool,
   product: schemas.product,
   newOrderUrl: PropTypes.string,
-  similarProducts: PropTypes.arrayOf(schemas.product),
+  similarProducts: PropTypes.object,
   otherProducts: PropTypes.arrayOf(schemas.product),
   multipleChoice: PropTypes.bool,
   isOneClickBuy: PropTypes.bool,
@@ -94,7 +94,10 @@ ProductCardPage.defaultProps = {
   product: {},
   multipleChoice: false,
   isOneClickBuy: false,
-  similarProducts: [],
+  similarProducts: {
+    showCartButton: false,
+    products: []
+  },
   otherProducts: [],
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
