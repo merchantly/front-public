@@ -176,7 +176,7 @@ class ProductCard extends Component {
                 />
               </div>
             }
-            <ProductCardSimilarProducts products={similarProducts} t={t} />
+            <ProductCardSimilarProducts products={similarProducts.products} showCartButton={similarProducts.showCartButton} t={t} />
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@ ProductCard.propTypes = {
   hasComments: PropTypes.bool,
   isWishlisted: PropTypes.bool,
   product: schemas.product,
-  similarProducts: PropTypes.arrayOf(schemas.product),
+  similarProducts: PropTypes.object,
   otherProducts: PropTypes.arrayOf(schemas.product),
   wishlistUrl: PropTypes.string,
   multipleChoice: PropTypes.bool,
@@ -213,7 +213,10 @@ ProductCard.defaultProps = {
   product: {},
   multipleChoice: false,
   isOneClickBuy: false,
-  similarProducts: [],
+  similarProducts: {
+    showCartButton: false,
+    products: []
+  },
   otherProducts: [],
   deliveryRestrictionMessages: [],
   notAvailableContent: '',
