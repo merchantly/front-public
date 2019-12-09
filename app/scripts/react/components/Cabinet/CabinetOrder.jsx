@@ -69,7 +69,7 @@ class CabinetOrder extends Component {
         </div>
         <div className="b-cart__item__col-price">
           <div className="b-cart__item__quantity__text">
-            {`${cityTitle} ${deliveryName}`}
+            {`${deliveryName}`}
           </div>
           <OrderReserveStateIcon {...reservation} />
           <OrderDeliveryIcon {...delivery} />
