@@ -92,7 +92,7 @@ class Cabinet extends Component {
               </div>
             </div>
             <ClientForm {...clientForm} t={t}/>
-            <CompanyForm {...companyForm} t={t}/>
+            { companyForm && <CompanyForm {...companyForm} t={t}/> }
             {items.length ? (
               <div>
                 <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
@@ -130,7 +130,7 @@ Cabinet.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
   clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
-  companyForm: PropTypes.shape(...CompanyForm.propTypes).isRequired,
+  companyForm: PropTypes.shape(...CompanyForm.propTypes),
   t: PropTypes.func.isRequired,
 };
 
