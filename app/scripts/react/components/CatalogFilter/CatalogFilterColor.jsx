@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import { getFilter } from './utils';
-import { showFilteredCount } from '../../actions/catalogFilterActions';
 
 class CatalogFilterColor extends Component {
   getFieldName(item) {
@@ -13,7 +11,7 @@ class CatalogFilterColor extends Component {
     }
   }
   handleChange() {
-    showFilteredCount(getFilter(this, this.props.params), this.props.t);
+    this.props.handleOptionChange(this);
   }
   render() {
     const { items, title } = this.props;
@@ -53,6 +51,7 @@ CatalogFilterColor.propTypes = {
   items: PropTypes.array.isRequired,
   paramName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  handleOptionChange: PropTypes.func.isRequired,  
 };
 
 export default CatalogFilterColor;

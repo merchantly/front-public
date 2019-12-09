@@ -19,6 +19,10 @@ require('@bower_components/fancybox/source/jquery.fancybox');
 
 require('nouislider');
 
+require('morecontent-js/dist/jquery.morecontent.js');
+
+require('bootstrap-tooltip');
+
 const DEFAULT_SETTINGS = {
   currency: {
     symbol: 'руб.', // default currency symbol is '$'

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
 import { Range } from 'rc-slider';
-import { getFilter } from './utils';
-import { showFilteredCount } from '../../actions/catalogFilterActions';
 
 class CatalogFilterRange extends Component {
   constructor(props) {
@@ -24,7 +22,7 @@ class CatalogFilterRange extends Component {
     });
   }
   handleChange() {
-    showFilteredCount(getFilter(this, this.props.params), this.props.t);
+    this.props.handleOptionChange(this);
   }
   renderHiddenRange() {
     const { filterName, paramName, from: pFrom, to: pTo } = this.props;
@@ -102,6 +100,7 @@ CatalogFilterRange.propTypes = {
   units: PropTypes.string,
   valueFrom: PropTypes.number,
   valueTo: PropTypes.number,
+  handleOptionChange: PropTypes.func.isRequired,
 };
 
 CatalogFilterRange.defaultProps = {

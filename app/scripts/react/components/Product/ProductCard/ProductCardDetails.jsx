@@ -5,6 +5,7 @@ import { attributeValue } from '../../../helpers/product';
 import ProductBlockImage from '../ProductBlock/ProductBlockImage';
 import AppLink from 'rc/common/AppLink';
 import { productRoute } from 'scripts/routes/app';
+import { findDOMNode } from 'react-dom';
 
 export default class ProductCardDetails extends Component {
   static propTypes = {
@@ -12,10 +13,30 @@ export default class ProductCardDetails extends Component {
     otherProducts: PropTypes.array,
     t: PropTypes.func,
     deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
+    moreContent: PropTypes.object
   };
   static defaultProps = {
     otherProducts: [],
   };
+
+  componentDidMount() {
+    const {
+      t,
+      moreContent,
+    } = this.props
+
+    if (moreContent.show) {
+      $('.e-description').moreContent(
+        {
+          height: moreContent.height, 
+          textOpen: t('vendor.product.more_content.close'), 
+          textClose: t('vendor.product.more_content.open'),
+          shadow: true
+        }
+      );
+    }
+  }
+
   renderAttributes(product) {
     if (product.attributes && product.attributes.length) {
       return (
