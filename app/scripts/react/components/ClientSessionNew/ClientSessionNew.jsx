@@ -48,12 +48,13 @@ class ClientSessionNew extends Component {
               type="password"
             />
             <div className="b-form__row__widget">
-              <input
+              <button
                 className="b-btn"
                 name="commit"
                 type="submit"
-                value={t('vendor.client.submit')}
-              />
+              >
+                {t('vendor.client.submit')}
+              </button>
             </div>
           </form>
         </div>

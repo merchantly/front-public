@@ -44,13 +44,12 @@ class PinAlert extends Component {
           ? <span dangerouslySetInnerHTML={{ __html: timeoutHtmlMessage }} />
           : (
           <span className="pin-alert-base">
-            <button
+            <input
               className="b-btn"
               name="send_password"
               type="submit"
-            >
-              {t('vendor.client.pin_alert.send')}
-            </button>
+              value={t('vendor.client.pin_alert.send')}
+            />
           </span>
           )
         }
