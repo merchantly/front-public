@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class ProductAddToCartButton extends Component {
   componentDidMount() {
     const $tooltip = $('.b-btn-add-cart').tooltip({
-      title: 'Товар добавлен в корзину',// this.props.t('vendor.button.added_to_cart_tooltip'),
+      title: this.props.t('vendor.tooltip.added_to_cart'),
       trigger: 'click',
       placement: 'bottom',
       trigger: 'manual',

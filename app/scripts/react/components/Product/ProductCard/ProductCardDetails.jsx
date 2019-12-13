@@ -33,8 +33,8 @@ export default class ProductCardDetails extends Component {
       $('.e-description').moreContent(
         {
           height: moreContent.height, 
-          textOpen: t('vendor.product.more_content.close'), 
-          textClose: t('vendor.product.more_content.open'),
+          textOpen: t('vendor.product.more_content.close'), // тут не перепутано
+          textClose: t('vendor.product.more_content.open'), // именно так
           shadow: true
         }
       );
