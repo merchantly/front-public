@@ -21,7 +21,7 @@ class CatalogFilter extends Component {
   }
 
   filterParamsPresent() {
-    const uri = new YouAreI(this.props.filterUrl);
+    const url = new YouAreI(this.props.filterUrl);
     const query = url.query_get();
     delete query['page'];
 
