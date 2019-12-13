@@ -13,10 +13,14 @@ export default class ProductCardDetails extends Component {
     otherProducts: PropTypes.array,
     t: PropTypes.func,
     deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
-    moreContent: PropTypes.object
+    moreContent: PropTypes.object,
   };
   static defaultProps = {
     otherProducts: [],
+    moreContent: {
+      show: false,
+      default: 300,
+    }
   };
 
   componentDidMount() {

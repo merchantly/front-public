@@ -225,7 +225,11 @@ ProductCard.defaultProps = {
   notAvailableContent: '',
   showAuthForBuyButton: false,
   vendorClientSigninPath: '',
-  rtl: false
+  rtl: false,
+  moreContent: {
+    show: false,
+    height: 300,
+  }
 };
 
 export default provideTranslations(connectToRedux(connect(
