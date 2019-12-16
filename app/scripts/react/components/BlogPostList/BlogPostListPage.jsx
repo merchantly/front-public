@@ -10,11 +10,12 @@ class BlogPostListPage extends Component {
       i18n,
       layoutProps,
       blogPosts,
+      recommendedProducts,
     } = this.props;
 
     return (
       <VendorLayoutContainer {...layoutProps} i18n={i18n}>
-        <BlogPostListContainer blogPosts={blogPosts} />
+        <BlogPostListContainer blogPosts={blogPosts} recommendedProducts={recommendedProducts}/>
       </VendorLayoutContainer>
     );
   }
@@ -24,6 +25,11 @@ BlogPostListPage.propTypes = {
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   blogPosts: BlogPostList.propTypes.blogPosts,
+  recommendedProducts: PropTypes.object,
 };
+
+BlogPostListPage.defaultProps = {
+  recommendedProducts: { showCartButton: false, products: [] },
+}
 
 export default BlogPostListPage;

@@ -33,6 +33,8 @@ CatalogFilterContainer.defaultProps = {
   options: [],
   params: {},
   selectedOptions: [],
+  filterApplyType: 'btn',
+  showFilterClearButton: false
 };
 
 export default CatalogFilterContainer;

@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class ProductAddToCartButton extends Component {
+  componentDidMount() {
+    const $tooltip = $('.b-btn-add-cart').tooltip({
+      title: this.props.t('vendor.tooltip.added_to_cart'),
+      trigger: 'click',
+      placement: 'bottom',
+      trigger: 'manual',
+      template: '<div class="tooltip tooltip-btn-add-cart" role="tooltip"><div class="tooltip-inner"></div></div>'
+    });
+
+    this.setState({tooltip: $tooltip})
+  }
+
   render() {
     const {
       disabled,
@@ -20,6 +32,16 @@ class ProductAddToCartButton extends Component {
       // good.globalId
       // good.actualPrice.id
 
+      const {
+        tooltip
+      } = this.state
+
+      tooltip.tooltip('show');
+
+      setTimeout(() => {
+        tooltip.tooltip('hide');
+      }, 3000);
+
       try {
         $(window).trigger('m.add-to-cart', [good, 1]);
       } catch (e) {
@@ -34,7 +56,7 @@ class ProductAddToCartButton extends Component {
         className="b-btn b-btn-add-cart element--active-opacity"
         disabled={disabled || isAddingGood}
         name="to_cart"
-        onClick={handler}
+        onClick={handler.bind(this)}
         type={ onClick ? 'button' : 'submit' }
       >
         {isAddingGood ? t('vendor.button.disable_with.adding') : buttonText}

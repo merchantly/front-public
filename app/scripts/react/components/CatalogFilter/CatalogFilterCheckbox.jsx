@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import classNames from 'classnames';
 import { COLLAPSED_VISIBLE_COUNT, MAX_VISIBLE_LIMIT } from './CatalogFilterCheckbox.constants';
-import { getFilter } from './utils';
-import { showFilteredCount } from '../../actions/catalogFilterActions';
 import CatalogFilterExpandButton from './CatalogFilterExpandButton';
 
 class CatalogFilterCheckbox extends Component {
@@ -34,7 +32,7 @@ class CatalogFilterCheckbox extends Component {
     this.setState({ expanded: false });
   }
   handleChange() {
-    showFilteredCount(getFilter(this, this.props.params), this.props.t);
+    this.props.handleOptionChange(this);
   }
   renderOptions() {
     const checked = [];
@@ -118,6 +116,7 @@ CatalogFilterCheckbox.propTypes = {
   items: PropTypes.array.isRequired,
   paramName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  handleOptionChange: PropTypes.func.isRequired,
 };
 
 export default CatalogFilterCheckbox;
