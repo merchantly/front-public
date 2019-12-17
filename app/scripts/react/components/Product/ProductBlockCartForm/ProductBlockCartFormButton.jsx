@@ -25,9 +25,6 @@ class ProductBlockCartFormButton extends Component {
     } = this.props;
 
     resetGoodState(goodId);
-
-    const $tooltip = addCartTooltip(this.props.t)
-    this.setState({tooltip: $tooltip})
   }
   onChangeAmount(value) {
     this.setState({ amount: value });
@@ -79,14 +76,14 @@ class ProductBlockCartFormButton extends Component {
     );
   }
 
-  onClickHandler() {
+  onClickHandler(e) {
     this.addToBasket();
-    this.state.tooltip.tooltip('show');
 
+    const tooltip = addCartTooltip($(e.target),this.props.t)
+    tooltip.tooltip('show');
     setTimeout(() => {
-      this.state.tooltip.tooltip('hide');
+      tooltip.tooltip('hide');
     }, 3000);
-
   }
 
   render() {

@@ -4,7 +4,7 @@ import { addCartTooltip } from 'r/actions/tooltipActions'
 
 class ProductAddToCartButton extends Component {
   componentDidMount() {
-    const $tooltip = addCartTooltip(this.props.t)
+    const $tooltip = addCartTooltip($('.b-btn-add-cart'), this.props.t)
 
     this.setState({tooltip: $tooltip})
   }

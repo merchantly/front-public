@@ -1,5 +1,5 @@
-export function addCartTooltip(t) {
-	return $('.b-btn-add-cart').tooltip({
+export function addCartTooltip($button, t) {
+	return $button.tooltip({
     title: t('vendor.tooltip.added_to_cart'),
     trigger: 'click',
     placement: 'bottom',
