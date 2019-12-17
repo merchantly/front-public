@@ -8,6 +8,7 @@ import InputNumberSpinner from '../../common/InputNumberSpinner';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
+import { addCartTooltip } from 'r/actions/tooltipActions'
 
 class ProductBlockCartFormButton extends Component {
   constructor(props) {
@@ -24,6 +25,9 @@ class ProductBlockCartFormButton extends Component {
     } = this.props;
 
     resetGoodState(goodId);
+
+    const $tooltip = addCartTooltip(this.props.t)
+    this.setState({tooltip: $tooltip})
   }
   onChangeAmount(value) {
     this.setState({ amount: value });
@@ -74,6 +78,17 @@ class ProductBlockCartFormButton extends Component {
       />
     );
   }
+
+  onClickHandler() {
+    this.addToBasket();
+    this.state.tooltip.tooltip('show');
+
+    setTimeout(() => {
+      this.state.tooltip.tooltip('hide');
+    }, 3000);
+
+  }
+
   render() {
     const {
       isFetching,
@@ -90,7 +105,7 @@ class ProductBlockCartFormButton extends Component {
         <button
           className="b-btn b-btn-add-cart element--active"
           disabled={isFetching}
-          onClick={this.addToBasket.bind(this)}
+          onClick={this.onClickHandler.bind(this)}
         >
           {text}
         </button>

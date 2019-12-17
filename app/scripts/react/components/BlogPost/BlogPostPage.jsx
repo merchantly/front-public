@@ -13,6 +13,7 @@ class BlogPostPage extends Component {
       text,
       prev,
       next,
+      recommendedProducts,
     } = this.props;
 
     return (
@@ -24,6 +25,7 @@ class BlogPostPage extends Component {
           text,
           prev,
           next,
+          recommendedProducts,
         }} />
       </VendorLayoutContainer>
     );
@@ -44,6 +46,11 @@ BlogPostPage.propTypes = {
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }),
+  recommendedProducts: PropTypes.object,
 };
+
+BlogPostPage.defaultProps = {
+  recommendedProducts: { showCartButton: false, products: [] },
+}
 
 export default BlogPostPage;
