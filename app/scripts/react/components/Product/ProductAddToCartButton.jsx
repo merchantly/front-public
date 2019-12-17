@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { addCartTooltip } from 'r/actions/tooltipActions'
 
 class ProductAddToCartButton extends Component {
   componentDidMount() {
-    const $tooltip = $('.b-btn-add-cart').tooltip({
-      title: this.props.t('vendor.tooltip.added_to_cart'),
-      trigger: 'click',
-      placement: 'bottom',
-      trigger: 'manual',
-      template: '<div class="tooltip tooltip-btn-add-cart" role="tooltip"><div class="tooltip-inner"></div></div>'
-    });
+    const $tooltip = addCartTooltip($('.b-btn-add-cart'), this.props.t)
 
     this.setState({tooltip: $tooltip})
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ProductCardSimilarProducts from '../Product/ProductCard/ProductCardSimilarProducts';
 
 class BlogPost extends Component {
   render() {
@@ -10,6 +11,7 @@ class BlogPost extends Component {
       prev,
       next,
       t,
+      recommendedProducts,
     } = this.props;
 
     return (
@@ -37,6 +39,7 @@ class BlogPost extends Component {
             }
           </div>
         </nav>
+        <ProductCardSimilarProducts products={recommendedProducts.products} t={t} showCartButton={recommendedProducts.showCartButton} />
       </div>
     );
   }
@@ -55,6 +58,7 @@ BlogPost.propTypes = {
     title: PropTypes.string.isRequired,
   }).isOptional,
   t: PropTypes.func.isRequired,
+  recommendedProducts: PropTypes.object,
 };
 
 export default BlogPost;
