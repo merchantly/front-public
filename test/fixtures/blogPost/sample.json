@@ -9,5 +9,9 @@
   "next": {
     "url": "/example.html",
     "title": "hello"
+  },
+  "recommendedProducts": {
+    "products": [],
+    "showCartButton": false
   }
 }
