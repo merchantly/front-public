@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
-import { getFilter } from './utils';
-import { showFilteredCount } from '../../actions/catalogFilterActions';
 
 class CatalogFilterRadio extends Component {
   state = {
@@ -20,7 +18,7 @@ class CatalogFilterRadio extends Component {
     }
   }
   handleChange(index) {
-    showFilteredCount(getFilter(this, this.props.params), this.props.t);
+    this.props.handleOptionChange(this);
     this.setState({ currentIndex: index });
   }
   render() {
@@ -62,6 +60,7 @@ CatalogFilterRadio.propTypes = {
   paramName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
+  handleOptionChange: PropTypes.func.isRequired,
 };
 
 export default CatalogFilterRadio;
