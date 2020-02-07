@@ -13,7 +13,7 @@ class CartButton extends Component {
 
     return (
       <Bubble
-        className="Bubble--cart element--active-opacity"
+        className={`Bubble--cart element--active-opacity ${itemsCount > 0 ? 'Bubble--cart-with-items' : ''}`}
         count={itemsCount}
         data={{ 'cart-button': true }}
         hash={cartRoute()}
