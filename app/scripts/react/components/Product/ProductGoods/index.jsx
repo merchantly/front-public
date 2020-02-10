@@ -29,7 +29,7 @@ class ProductGoods extends Component {
   }
   isTitlesValid(product, maxLength = 30) {
     return !product.goods.some((el) =>
-      goodOrderTitle(product, el).length > maxLength
+      goodOrderTitle(product, el, this.props.t).length > maxLength
     );
   }
   handleSelectChange(e) {
@@ -52,7 +52,7 @@ class ProductGoods extends Component {
         key={good.globalId}
         value={good.globalId}
       >
-        {goodOrderTitle(product, good)}
+        {goodOrderTitle(product, good, this.props.t)}
       </option>
     );
   }

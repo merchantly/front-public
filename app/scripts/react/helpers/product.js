@@ -47,7 +47,7 @@ export function schemaOrgGoodPrice(good, category) {
   );
 }
 
-export function goodOrderTitle(product, good) {
+export function goodOrderTitle(product, good, t) {
   let title = good.title;
 
   if (hasDifferentPrices(product)) {
@@ -55,7 +55,7 @@ export function goodOrderTitle(product, good) {
   }
 
   if (good.isRunOut) {
-    title += ' - нет в наличии';
+    title += t('vendor.product.add_run_out');
   }
 
   return title;
