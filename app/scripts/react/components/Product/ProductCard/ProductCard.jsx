@@ -136,7 +136,7 @@ class ProductCard extends Component {
                 </div>
                 <div className="b-item-full__price p-price">
                   <ProductPrices
-                    good={good}
+                    good={(multipleChoice ? null : good)} // При multipleChoice показываем всегда диапазон цен
                     product={product}
                     t={t}
                   />
