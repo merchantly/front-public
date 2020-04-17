@@ -78,7 +78,7 @@ class CheckoutActions extends Component {
               {t('vendor.order.go_back')}
             </a>
           </div>
-          <div className="b-cart__action__col-submit">
+          <div className="b-cart__action__col-submit b-cart__action__col-submit-continue">
             <input
               className="b-btn b-cart__action__next element--active-opacity"
               data-disable-with={t('vendor.button.disable_with.waiting')}
