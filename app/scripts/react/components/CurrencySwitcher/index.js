@@ -8,7 +8,7 @@ class CurrencySwitcherContainer extends Component {
   handleChange(value) {
     const url = new YouAreI(window.location.href);
     url.query_set({currency: value});
-    window.location = url.to_string();
+    document.location = url.to_string();
   }
   render() {
     return (
