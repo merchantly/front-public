@@ -61,7 +61,7 @@ class OrderContents extends Component {
 
     return (
       <div className="text-warning">
-        {discount > 0 && (
+        {discount.length > 0 && (
           <span>
             <FaIcon name="level-down" />
             {'\u2014'}
