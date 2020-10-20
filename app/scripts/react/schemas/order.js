@@ -47,9 +47,10 @@ export default shape({
   totalWithDeliveryPrice: money.isRequired,
   phone: string,
   coupon: shape({
-    discount: number,
+    discount: string,
     fixed: bool,
     fixedDiscount: money,
     freeDelivery: bool,
+    discountPercents: number
   }),
 });

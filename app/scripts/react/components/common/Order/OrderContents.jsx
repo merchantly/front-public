@@ -57,6 +57,7 @@ class OrderContents extends Component {
       fixed: isFixed,
       fixedDiscount,
       freeDelivery,
+      discountPercents,
     } = coupon;
 
     return (
@@ -67,7 +68,7 @@ class OrderContents extends Component {
             {'\u2014'}
             {isFixed
               ? <HumanizedMoneyWithCurrency money={fixedDiscount} />
-              : `${discount} %`
+              : `${discountPercents} %`
             }
           </span>
         )}
