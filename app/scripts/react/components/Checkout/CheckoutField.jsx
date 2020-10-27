@@ -86,6 +86,7 @@ class CheckoutField extends Component {
             onChange={onChange}
             errorMessage={errorMessage}
             defaultTitle={settings.defaultTitle}
+            defaultValue={settings.defaultValue}
           />
         );
         break;

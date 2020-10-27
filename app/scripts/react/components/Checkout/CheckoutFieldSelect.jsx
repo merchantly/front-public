@@ -15,7 +15,8 @@ class CheckoutFieldSelect extends Component {
       onChange,
       errorMessage,
       defaultTitle,
-      value
+      value,
+      defaultValue
     } = this.props;
 
     const myOnChange = (ev) => onChange(name, ev.target.value);
@@ -27,7 +28,7 @@ class CheckoutFieldSelect extends Component {
         <label className="text control-label" htmlFor={id}>{title}</label>
         <select
           disabled={disabled}
-          defaultValue={currentValue || ''}
+          defaultValue={currentValue || defaultValue}
           id={id}
           name={inputName}
           onChange={myOnChange}
