@@ -44,6 +44,7 @@ class ClientSessionNew extends Component {
                   placeholder={t('vendor.client.placeholders.login')}
                   type="text"
                   defaultValue={phoneValue}
+                  onKeyPress={this.handleKeyPress}
                 />
               </div>
               <PinAlert t={t} timeout={timeout} />
