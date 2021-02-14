@@ -5,6 +5,13 @@ import FormAuthenticity from 'rc/common/FormAuthenticity';
 import * as schemas from 'r/schemas';
 
 class ClientSessionNew extends Component {
+  handleKeyPress(event) {
+    if(event.key === 'Enter'){
+      event.preventDefault();
+      document.getElementById('loginSubmit').click();
+    }
+  }
+
   render() {
     const {
       formAuthenticity,
@@ -37,6 +44,7 @@ class ClientSessionNew extends Component {
                   placeholder={t('vendor.client.placeholders.login')}
                   type="text"
                   defaultValue={phoneValue}
+                  onKeyPress={this.handleKeyPress}
                 />
               </div>
               <PinAlert t={t} timeout={timeout} />
@@ -46,12 +54,14 @@ class ClientSessionNew extends Component {
               name="client_login_form[password]"
               placeholder={t('vendor.client.placeholders.password')}
               type="password"
+              onKeyPress={this.handleKeyPress}
             />
             <div className="b-form__row__widget">
               <button
                 className="b-btn"
                 name="commit"
                 type="submit"
+                id="loginSubmit"
               >
                 {t('vendor.client.submit')}
               </button>
@@ -59,7 +69,7 @@ class ClientSessionNew extends Component {
           </form>
         </div>
         <div className="b-registration_button_block">
-          {clientRegistrationButtonText 
+          {clientRegistrationButtonText
             && (
               <div className='b-registration_button_text' dangerouslySetInnerHTML={{__html: clientRegistrationButtonText}} />
             )
