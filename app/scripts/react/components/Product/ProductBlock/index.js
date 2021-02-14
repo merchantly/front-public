@@ -7,6 +7,7 @@ import ProductPrices from '../ProductPrices';
 import ProductBlockCartFormButton from '../ProductBlockCartForm/ProductBlockCartFormButton';
 import AppLink from 'rc/common/AppLink';
 import { productRoute } from 'scripts/routes/app';
+import { tomorrowDate } from 'scripts/lib/datesHelper'
 
 class ProductBlock extends Component {
   constructor(props) {
@@ -35,10 +36,14 @@ class ProductBlock extends Component {
     const { isHover } = this.state;
 
     return (
-      <div className="b-item-list__item"
+      <div className="b-item-list__item" itemscope itemtype="https://schema.org/Product"
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         >
+        <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Sold Out"} />
+        <meta itemProp="priceValidUntil" content={tomorrowDate.toJSON().slice(0,10)} />
+        {product.article && <meta itemProp="sku" content={product.article} />}
+
         <div className="b-item">
           <AppLink
             className="b-item__pic-wrap"
@@ -53,11 +58,11 @@ class ProductBlock extends Component {
             hash={productRoute(product.id)}
             href={product.publicUrl}
           >
-            <div className="b-item__name">
+            <div className="b-item__name" itemprop="name">
               {product.title}
             </div>
             {Boolean(product.shortDetails) &&
-              <div className="b-item__details">
+              <div className="b-item__details" itemprop="description">
                 {product.shortDetails}
               </div>
             }
@@ -91,6 +96,7 @@ class ProductBlock extends Component {
                         hash={productRoute(product.id)}
                         href={product.publicUrl}
                       >
+                        <meta itemProp="url" content={product.publicUrl} />
                         {t('vendor.more')}
                       </AppLink>
                     )}

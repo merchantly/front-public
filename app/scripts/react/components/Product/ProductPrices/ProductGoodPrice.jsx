@@ -26,7 +26,9 @@ class ProductGoodPrice extends Component {
     if (good.isSale) {
       return (
         <span>
-          <div className="b-item__price b_item_price_sale">
+          <div className="b-item__price b_item_price_sale" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            {good.actualPrice && <meta itemProp="price" content={good.actualPrice.cents}/>}
+            {good.actualPrice && <meta itemProp="currency" content={good.actualPrice.currency}/>}
             <ProductGoodActualPrice good={good} t={t} />
             {this.renderWeightOfPrice(product, t)}
           </div>
@@ -41,7 +43,9 @@ class ProductGoodPrice extends Component {
       });
 
       return (
-        <div className={priceClasses}>
+        <div className={priceClasses} itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          {good.actualPrice && <meta itemProp="price" content={good.actualPrice.cents}/>}
+          {good.actualPrice && <meta itemProp="currency" content={good.actualPrice.currency}/>}
           <ProductGoodActualPrice good={good} product={product} t={t} />
           {this.renderWeightOfPrice(product, t)}
         </div>
