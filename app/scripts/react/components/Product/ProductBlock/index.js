@@ -35,11 +35,10 @@ class ProductBlock extends Component {
     const { isHover } = this.state;
 
     return (
-      <div className="b-item-list__item" itemscope itemtype="https://schema.org/Product"
+      <div className="b-item-list__item" itemScope itemtype="https://schema.org/Product"
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         >
-        <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Sold Out"} />
         {product.article && <meta itemProp="sku" content={product.article} />}
 
         <div className="b-item">

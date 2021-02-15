@@ -109,7 +109,7 @@ class MenuTopDeskTopWithChildren extends Component {
         className={liClasses}
         id={`menu_item_li_${id}`}
         key={`menu-item-with-children-${id}`}
-        itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+        itemprop="itemListElement" itemScope itemtype="https://schema.org/ListItem"
       >
         <meta itemProp="item" content={url} />
         <meta itemProp="name" content={title} />

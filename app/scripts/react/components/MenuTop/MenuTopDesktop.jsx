@@ -30,7 +30,7 @@ class MenuTopDesktop extends Component {
 
     return (
       <nav className="b-nav">
-        <ul className="b-nav__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ul className="b-nav__list" itemScope itemtype="https://schema.org/BreadcrumbList">
           {items.map((item, idx) => (item.children && item.children.length)
             ? (
               <MenuTopDesktopWithChildren

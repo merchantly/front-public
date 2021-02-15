@@ -12,9 +12,10 @@ export default class ProductGoodPrices extends Component {
     const { minPrice, maxPrice } = this.props;
 
     return (
-      <div className="b-item__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <div className="b-item__price" itemprop="offers" itemScope itemtype="https://schema.org/Offer">
         <meta itemprop="price" content={minPrice.cents} />
         <meta itemProp="priceCurrency" content={minPrice.currencyIsoCode} />
+        <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Sold Out"} />
         <HumanizedMoney money={minPrice} />
         {' - '}
         <HumanizedMoneyWithCurrency money={maxPrice} />

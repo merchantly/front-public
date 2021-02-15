@@ -17,7 +17,7 @@ class NavBarContacts extends Component {
 
     if (type === CONTACT_TYPE_TEXT) {
       return (
-        <li key={`navbar-contact-${idx}`} itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <li key={`navbar-contact-${idx}`} itemprop="address" itemScope itemtype="https://schema.org/PostalAddress">
           <meta itemprop="addressLocality" content={value} />
           {value}
         </li>
@@ -60,7 +60,7 @@ class NavBarContacts extends Component {
     } = this.props;
 
     return (
-      <div className="b-site-description" itemscope itemtype="https://schema.org/Organization">
+      <div className="b-site-description" itemScope itemtype="https://schema.org/Organization">
         <div dangerouslySetInnerHTML={{ __html: vendorTitle }} />
         {vendorContacts.length > 0 && (
           <ul>
