@@ -41,7 +41,7 @@ class ProductBlock extends Component {
         onMouseLeave={this.handleMouseLeave}
         >
         <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Sold Out"} />
-        <meta itemProp="priceValidUntil" content={tomorrowDate.toJSON().slice(0,10)} />
+        <meta itemProp="priceValidUntil" content={tomorrowDate().toJSON().slice(0,10)} />
         {product.article && <meta itemProp="sku" content={product.article} />}
 
         <div className="b-item">
