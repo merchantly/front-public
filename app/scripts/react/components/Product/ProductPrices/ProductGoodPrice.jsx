@@ -28,7 +28,7 @@ class ProductGoodPrice extends Component {
         <span>
           <div className="b-item__price b_item_price_sale" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
             {good.actualPrice && <meta itemProp="price" content={good.actualPrice.cents}/>}
-            {good.actualPrice && <meta itemProp="currency" content={good.actualPrice.currency}/>}
+            {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.currencyIsoCode}/>}
             <ProductGoodActualPrice good={good} t={t} />
             {this.renderWeightOfPrice(product, t)}
           </div>
@@ -45,7 +45,7 @@ class ProductGoodPrice extends Component {
       return (
         <div className={priceClasses} itemprop="offers" itemscope itemtype="https://schema.org/Offer">
           {good.actualPrice && <meta itemProp="price" content={good.actualPrice.cents}/>}
-          {good.actualPrice && <meta itemProp="currency" content={good.actualPrice.currency}/>}
+          {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.currencyIsoCode}/>}
           <ProductGoodActualPrice good={good} product={product} t={t} />
           {this.renderWeightOfPrice(product, t)}
         </div>
