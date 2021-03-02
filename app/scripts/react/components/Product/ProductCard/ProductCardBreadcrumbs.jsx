@@ -19,14 +19,14 @@ export default class ProductCardBreadcrumbs extends Component {
         <div className={classNames('b-breadcrumbs', className)} itemScope itemtype="https://schema.org/BreadcrumbList">
           {category.parent &&
             <div itemProp="itemListElement" itemScope itemtype="https://schema.org/ListItem">
-              <meta itemProp="item" content={category.parent.publicUrl}/>
+              <meta itemProp="item" content={gon.vendor_url + category.parent.publicUrl}/>
               <meta itemProp="name" content={category.parent.name}/>
               <meta itemProp="position" content={1}/>
             </div>
           }
 
           <div itemProp="itemListElement" itemScope itemtype="https://schema.org/ListItem">
-            <meta itemProp="item" content={category.publicUrl} />
+            <meta itemProp="item" content={gon.vendor_url + category.publicUrl} />
             <meta itemProp="name" content={category.name} />
             <meta itemProp="position" content={category.parent ? 2 : 1} />
           </div>
