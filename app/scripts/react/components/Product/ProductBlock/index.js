@@ -58,11 +58,14 @@ class ProductBlock extends Component {
             <div className="b-item__name" itemprop="name">
               {product.title}
             </div>
+
             {Boolean(product.shortDetails) &&
               <div className="b-item__details" itemprop="description">
                 {product.shortDetails}
               </div>
             }
+
+            {!Boolean(product.shortDetails) && <meta itemProp="description" content={product.title}/>}
             <ProductPrices product={product} t={t} />
           </AppLink>
           {(showCartButton && product.hasOrderingGoods) && (

@@ -109,11 +109,7 @@ class MenuTopDeskTopWithChildren extends Component {
         className={liClasses}
         id={`menu_item_li_${id}`}
         key={`menu-item-with-children-${id}`}
-        itemprop="itemListElement" itemScope itemtype="https://schema.org/ListItem"
       >
-        <meta itemProp="item" content={url} />
-        <meta itemProp="name" content={title} />
-        <meta itemProp="position" content={id} />
         <AppLink
           className="b-nav__link"
           hash={categoryRoute(id)}

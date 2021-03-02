@@ -29,7 +29,7 @@ class ProductGoodPrice extends Component {
           <div className="b-item__price b_item_price_sale" itemprop="offers" itemScope itemtype="https://schema.org/Offer">
             {good.actualPrice && <meta itemProp="price" content={good.actualPrice.price.cents}/>}
             {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode}/>}
-            <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Sold Out"} />
+            <meta itemProp="availability" content={product.hasOrderingGoods ? "In stock" : "Out of stock"} />
             <ProductGoodActualPrice good={good} t={t} />
             {this.renderWeightOfPrice(product, t)}
           </div>
