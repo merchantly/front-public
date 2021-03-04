@@ -70,6 +70,7 @@ class Image extends Component {
         srcSet={hasRawUrl ? void 0 : imageArguments(getRetinaUrl)}
         style={hasFixedSize ? imageArguments(getSize) : void 0}
         title={title}
+        itemprop="image"
       />
     );
   }

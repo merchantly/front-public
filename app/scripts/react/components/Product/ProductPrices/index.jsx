@@ -57,7 +57,7 @@ class ProductPrices extends Component {
 
       if (diff(minPrice, maxPrice)) {
         return (
-          <ProductGoodPrices maxPrice={maxPrice} minPrice={minPrice} />
+          <ProductGoodPrices availability={product.hasOrderingGoods} maxPrice={maxPrice} minPrice={minPrice}  />
         );
       }else {
         return (

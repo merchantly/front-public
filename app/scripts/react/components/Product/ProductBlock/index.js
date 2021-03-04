@@ -35,10 +35,12 @@ class ProductBlock extends Component {
     const { isHover } = this.state;
 
     return (
-      <div className="b-item-list__item"
+      <div className="b-item-list__item" itemScope itemtype="https://schema.org/Product"
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         >
+        {product.article && <meta itemProp="sku" content={product.article} />}
+
         <div className="b-item">
           <AppLink
             className="b-item__pic-wrap"
@@ -53,14 +55,17 @@ class ProductBlock extends Component {
             hash={productRoute(product.id)}
             href={product.publicUrl}
           >
-            <div className="b-item__name">
+            <div className="b-item__name" itemprop="name">
               {product.title}
             </div>
+
             {Boolean(product.shortDetails) &&
-              <div className="b-item__details">
+              <div className="b-item__details" itemprop="description">
                 {product.shortDetails}
               </div>
             }
+
+            {!Boolean(product.shortDetails) && <meta itemProp="description" content={product.title}/>}
             <ProductPrices product={product} t={t} />
           </AppLink>
           {(showCartButton && product.hasOrderingGoods) && (
@@ -91,6 +96,7 @@ class ProductBlock extends Component {
                         hash={productRoute(product.id)}
                         href={product.publicUrl}
                       >
+                        <meta itemProp="url" content={product.publicUrl} />
                         {t('vendor.more')}
                       </AppLink>
                     )}

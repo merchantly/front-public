@@ -114,7 +114,7 @@ class ProductCard extends Component {
         >
           <div className="b-item-full">
             <div className="b-item-full__header b-item-full__header_mobile">
-              <ProductCardBreadcrumbs product={product} />
+              <ProductCardBreadcrumbs product={product} withMetaTags={false}/>
               <ProductCardTitle product={product} />
               <ProductCardBadges product={product} t={t} />
             </div>
@@ -130,7 +130,7 @@ class ProductCard extends Component {
               </div>
               <div className="b-item-full__description">
                 <div className="b-item-full__header">
-                  <ProductCardBreadcrumbs className="p-category" product={product} />
+                  <ProductCardBreadcrumbs className="p-category" product={product} withMetaTags={true}/>
                   <ProductCardTitle className="p-name" product={product} />
                   <ProductCardBadges product={product} t={t} />
                 </div>
