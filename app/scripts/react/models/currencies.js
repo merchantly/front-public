@@ -106,7 +106,22 @@ const currencies = {
     "thousands_separator": ",",
     "iso_numeric": "682",
     "smallest_denomination": 5
-  }
+  },
+  "egp": {
+    "priority": 100,
+    "iso_code": "EGP",
+    "name": "Egyptian Pound",
+    "symbol": "ج.م",
+    "alternate_symbols": ["LE", "E£", "L.E."],
+    "subunit": "Piastre",
+    "subunit_to_unit": 100,
+    "symbol_first": true,
+    "html_entity": "&#x00A3;",
+    "decimal_mark": ".",
+    "thousands_separator": ",",
+    "iso_numeric": "818",
+    "smallest_denomination": 25
+  },
 };
 
 export default currencies;
