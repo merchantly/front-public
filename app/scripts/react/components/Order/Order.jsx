@@ -22,6 +22,7 @@ class Order extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
+      ajaxOrderCheckoutEnabled,
       t,
       items,
       totalCount,
@@ -54,6 +55,7 @@ class Order extends Component {
             paymentTypes={paymentTypes}
             publicOffer={publicOffer}
             submitOrderUrl={submitOrderUrl}
+            ajaxOrderCheckoutEnabled={ajaxOrderCheckoutEnabled}
             totalCount={totalCount}
             totalPrice={totalPrice}
             items={items}
@@ -81,6 +83,7 @@ Order.propTypes = {
   paymentTypes: PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
   submitOrderUrl: PropTypes.string,
+  ajaxOrderCheckoutEnabled: PropTypes.bool,
   t: PropTypes.func.isRequired,
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,

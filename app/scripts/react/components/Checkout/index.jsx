@@ -11,8 +11,38 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
+import * as apiRoutes from "../../../routes/api";
 
 class Checkout extends Component {
+  sendAjaxRequest() {
+    const {
+
+    } = this.props;
+
+
+    const data = {}
+
+    data[]
+
+    $.ajax({
+      url: apiRoutes.designSettings(),
+      type: 'POST',
+      data: {
+        'form_email': this.state.contactEmail,
+        'form_msg': this.state.contactMessage
+      },
+      cache: false,
+      success: function(data) {
+
+      }.bind(this),
+      error: function(xhr, status, err) {
+        this.setState({
+          fieldValues: fieldValues
+        });
+      }.bind(this)
+    });
+  }
+
   render() {
     const {
       backUrl,
@@ -30,6 +60,7 @@ class Checkout extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
+      ajaxOrderCheckoutEnabled,
       totalCount,
       totalPrice,
       t,
@@ -95,6 +126,7 @@ class Checkout extends Component {
               totalPrice={totalPrice}
               backUrl={backUrl}
               publicOffer={publicOffer}
+              sendAjaxRequest={sendAjaxRequest}
               t={t}
             />
           </div>

@@ -67,6 +67,7 @@ class OrderContainer extends Component {
         formAuthenticity,
         publicOffer,
         submitOrderUrl,
+        ajaxOrderCheckoutEnabled,
         t,
       },
       totalCount,
@@ -93,6 +94,7 @@ class OrderContainer extends Component {
         paymentTypes={paymentTypes}
         publicOffer={publicOffer}
         submitOrderUrl={submitOrderUrl}
+        ajaxOrderCheckoutEnabled={ajaxOrderCheckoutEnabled}
         t={t}
         items={this.props.initialProps.cart.items}
         totalCount={totalCount}
@@ -125,6 +127,7 @@ OrderContainer.propTypes = {
     paymentTypes: PropTypes.arrayOf(schemas.paymentType),
     publicOffer: schemas.checkoutPublicOffer,
     submitOrderUrl: PropTypes.string,
+    ajaxOrderCheckoutEnabled: PropTypes.bool,
     t: PropTypes.func.isRequired,
   }),
   items: PropTypes.array,
