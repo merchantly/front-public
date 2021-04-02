@@ -35,8 +35,10 @@ class CartListItem extends Component {
       console.log('trigger: ', e.message);
     }
 
-    e.target.dataset.method = 'delete';
-    e.target.click()
+    const link = e.target.parentElement;
+
+    link.dataset.method = 'delete';
+    link.click()
   }
 
   changeWeight(ev) {
