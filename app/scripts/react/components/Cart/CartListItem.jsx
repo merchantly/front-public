@@ -25,6 +25,10 @@ const DragHandle = SortableHandle(() => <img src="/images/updown.png" style={{op
 
 class CartListItem extends Component {
   onRemove(e) {
+    const link = e.target.parentElement;
+
+    if (link.dataset.method) return;
+
     window.last_deleted_item_e = e
 
     e.preventDefault();
@@ -34,8 +38,6 @@ class CartListItem extends Component {
     } catch (e) {
       console.log('trigger: ', e.message);
     }
-
-    const link = e.target.parentElement;
 
     link.dataset.method = 'delete';
     link.click()
