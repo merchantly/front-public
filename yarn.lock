@@ -8468,6 +8468,7 @@ number-is-nan@^1.0.0:
 numeral@^1.5.3:
   version "1.5.6"
   resolved "https://registry.yarnpkg.com/numeral/-/numeral-1.5.6.tgz#3831db968451b9cf6aff9bf95925f1ef8e37b33f"
+  integrity sha1-ODHbloRRuc9q/5v5WSXx7443sz8=
 
 oauth-sign@~0.8.1:
   version "0.8.2"

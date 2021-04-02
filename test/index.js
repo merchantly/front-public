@@ -7,7 +7,7 @@ import { initStore } from './mocks/redux';
 import './libsConfigs';
 import 'app/scripts/libs';
 
-window.gon = {};
+window.gon = { I18n: { locale: 'ru' } };
 
 beforeEach('init redux', () => {
   global.redux = initStore();

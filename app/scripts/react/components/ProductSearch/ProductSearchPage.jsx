@@ -6,6 +6,14 @@ import ProductSearchContainer from './index';
 import * as schemas from 'r/schemas';
 
 class ProductSearchPage extends Component {
+  componentDidMount() {
+    try {
+      $(window).trigger('m.search', [this.props.products.items]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+  }
+
   render() {
     const {
       catalogFilterProps,

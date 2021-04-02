@@ -5,6 +5,14 @@ import CategoriesShowChildrenContainer from './index';
 import VendorLayoutContainer from 'rc/VendorLayout';
 
 class CategoriesShowChildrenPage extends Component {
+  componentDidMount() {
+    try {
+      $(window).trigger('m.category', [this.props.childrenProducts.products]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+  }
+
   render() {
     const {
       childrenProducts,

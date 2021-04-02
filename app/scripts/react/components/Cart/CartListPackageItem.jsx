@@ -22,6 +22,14 @@ class CartListPackageItem extends Component {
       </div>
     ));
   }
+  onRemove() {
+    try {
+      $(window).trigger('m.remove-from-cart', [this.props.item.good]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+  }
+
   render() {
     const {
       destroyUrl='',
@@ -87,6 +95,7 @@ class CartListPackageItem extends Component {
             className="b-cart__item__remove"
             data-method="delete"
             href={destroyUrl}
+            onClick={this.onRemove.bind(this)}
           >
             <AssetImage src="images/cross_white.svg" />
           </a>

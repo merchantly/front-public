@@ -6,6 +6,14 @@ import CatalogFilterContainer from 'rc/CatalogFilter';
 import * as schemas from 'r/schemas';
 
 class WelcomePage extends Component {
+  componentDidMount() {
+    try {
+      $(window).trigger('m.home', [this.props.products.items]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+  }
+
   render() {
     const {
       catalogFilterProps,
