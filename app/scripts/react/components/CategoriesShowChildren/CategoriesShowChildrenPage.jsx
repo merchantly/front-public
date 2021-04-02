@@ -6,8 +6,14 @@ import VendorLayoutContainer from 'rc/VendorLayout';
 
 class CategoriesShowChildrenPage extends Component {
   componentDidMount() {
+    let products = [];
+
+    this.props.childrenProducts.forEach(function(child) {
+      products = products.concat(child.products);
+    })
+
     try {
-      $(window).trigger('m.category', [this.props.childrenProducts.products]);
+      $(window).trigger('m.category', [products]);
     } catch (e) {
       console.log('trigger: ', e.message);
     }
