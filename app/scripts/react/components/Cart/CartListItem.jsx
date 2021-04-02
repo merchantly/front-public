@@ -24,6 +24,21 @@ const WEIGHT_STEP = 0.01;
 const DragHandle = SortableHandle(() => <img src="/images/updown.png" style={{opacity: 0.5, width: "8px", cursor: "ns-resize"}} />);
 
 class CartListItem extends Component {
+  onRemove(e) {
+    window.last_deleted_item_e = e
+
+    e.preventDefault();
+
+    try {
+      $(window).trigger('m.remove-from-cart', [this.props.item.good]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+
+    e.target.dataset.method = 'delete';
+    e.target.click()
+  }
+
   changeWeight(ev) {
     const {
       changeAmount,
@@ -207,8 +222,8 @@ class CartListItem extends Component {
         <div className="b-cart__item__col-remove">
           <a
             className="b-cart__item__remove"
-            data-method="delete"
             href={item.destroyPath || ''}
+            onClick={this.onRemove.bind(this)}
           >
             <AssetImage src="images/cross_white.svg" />
           </a>
