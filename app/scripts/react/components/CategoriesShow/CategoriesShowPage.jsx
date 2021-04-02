@@ -7,7 +7,7 @@ import VendorLayoutContainer from 'rc/VendorLayout';
 class CategoriesShowPage extends Component {
   componentDidMount() {
     try {
-      $(window).trigger('m.category', [this.props.products]);
+      $(window).trigger('m.category', [this.props.products.items]);
     } catch (e) {
       console.log('trigger: ', e.message);
     }
