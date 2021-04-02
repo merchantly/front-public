@@ -13,7 +13,7 @@ class CategoriesShowChildrenPage extends Component {
     })
 
     try {
-      $(window).trigger('m.category', [products]);
+      $(window).trigger('m.category', [products.slice(0, 20)]);
     } catch (e) {
       console.log('trigger: ', e.message);
     }
