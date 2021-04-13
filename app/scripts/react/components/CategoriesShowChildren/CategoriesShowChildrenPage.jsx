@@ -5,6 +5,20 @@ import CategoriesShowChildrenContainer from './index';
 import VendorLayoutContainer from 'rc/VendorLayout';
 
 class CategoriesShowChildrenPage extends Component {
+  componentDidMount() {
+    let products = [];
+
+    this.props.childrenProducts.forEach(function(child) {
+      products = products.concat(child.products);
+    })
+
+    try {
+      $(window).trigger('m.category', [products.slice(0, 20)]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+  }
+
   render() {
     const {
       childrenProducts,

@@ -22,6 +22,25 @@ class CartListPackageItem extends Component {
       </div>
     ));
   }
+  onRemove(e) {
+    const link = e.target.parentElement;
+
+    if (link.dataset.method) return;
+
+    window.last_deleted_item_e = e
+
+    e.preventDefault();
+
+    try {
+      $(window).trigger('m.remove-from-cart', [this.props.item.good]);
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+
+    link.dataset.method = 'delete';
+    link.click()
+  }
+
   render() {
     const {
       destroyUrl='',
@@ -85,8 +104,8 @@ class CartListPackageItem extends Component {
         <div className="b-cart__item__col-remove">
           <a
             className="b-cart__item__remove"
-            data-method="delete"
             href={destroyUrl}
+            onClick={this.onRemove.bind(this)}
           >
             <AssetImage src="images/cross_white.svg" />
           </a>

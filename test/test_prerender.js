@@ -4,6 +4,7 @@ import logoProps from './fixtures/logo_props.js';
 import ReactDOMServer from 'react-dom/server';
 
 global.gon = {
+  i18n: { locale: 'ru' },
   public_api_url: 'localhost'
 }
 

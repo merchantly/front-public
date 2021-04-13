@@ -10,6 +10,7 @@ import image from './image';
 
 export default PropTypes.shape({
   globalId: PropTypes.string,
+  productId: PropTypes.number,
   customAttributes: PropTypes.object,
   isSale: PropTypes.bool.isRequired,
   image: image,
