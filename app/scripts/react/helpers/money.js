@@ -29,7 +29,7 @@ function numeralValue(value) {
     numeral.language(language);
   }
 
-  return numeral(value).format();
+  return numeral(value).format('0,0[.]00');
 }
 
 export function getHTMLName(money) {
