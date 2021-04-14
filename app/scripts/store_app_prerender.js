@@ -1,6 +1,5 @@
 delete this['window']; // React-rails set window to this, it's unexpected behavior
 // window = undefined;
-require('./locales/numeral/ru');
 
 global.React = require('react');
 global.ReactDOM = require('react-dom');

@@ -1,4 +1,5 @@
 global.gon = {
+  i18n: { locale: 'ru' },
   '__data': {
     design: {
       activeElementsColor: '#000000',

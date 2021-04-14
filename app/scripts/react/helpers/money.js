@@ -1,6 +1,7 @@
 /*global Bugsnag */
 import numeral from 'numeral';
 import currencies from '../models/currencies';
+import numeralFormats from "../../locales/numeralFormats";
 
 function getCurrency(money) {
   const currencyID = getCurrencyID(money);
@@ -18,6 +19,17 @@ function getCurrencyID(money) {
     }
     return '-';
   }
+}
+
+function numeralValue(value) {
+  const language = gon.i18n.locale;
+
+  if (numeral.currentLanguage !== language) {
+    numeral.language(language, numeralFormats[language]);
+    numeral.language(language);
+  }
+
+  return numeral(value).format();
 }
 
 export function getHTMLName(money) {
@@ -52,14 +64,15 @@ export function money(money) {
     return unknownIsoCodeMessage(money);
   }
 
-  return numeral(getUnit(money)).format('0');
+  return numeralValue(getUnit(money));
 }
 
 export function humanizedMoney(money) {
   if (!money) return '-';
   if (!isCurrencyExists(money)) return unknownIsoCodeMessage(money);
 
-  return numeral(getUnit(money)).format('0,0[.]00');
+
+  return numeralValue(getUnit(money));
 }
 
 export function humanizedMoneyWithCurrency(money, nullValue = '-') {

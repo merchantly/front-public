@@ -5,9 +5,6 @@ import './lib/console-polyfill';
 // Libs configuration
 import './react/libsConfigs';
 
-// Locales
-import './locales/numeral/ru';
-
 // По-моему они не нужны
 // import './shared/app';
 // import './shared/cart';
