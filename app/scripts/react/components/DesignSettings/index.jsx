@@ -31,17 +31,17 @@ export default class DesignSettings extends Component {
     showW1Design: PropTypes.bool.isRequired,
   }
   getProps(property) {
-    const { current, changeOption } = this.props;
+    const { current, changeOption, tr} = this.props;
     return {
-      ...designOptions[property],
+      ...designOptions(tr)[property],
       value: current[property],
       onChange: changeOption.bind(this, property),
     };
   }
   getAttachProps(property) {
-    const { current, changeImage } = this.props;
+    const { current, changeImage, tr } = this.props;
     return {
-      ...designOptions[`${property}Url`],
+      ...designOptions(tr)[`${property}Url`],
       value: current[`${property}Url`],
       onChange: changeImage.bind(this, property),
     };
@@ -147,9 +147,6 @@ export default class DesignSettings extends Component {
                 </DesignSettingsOption>
                 <DesignSettingsOption inRow title={tr('vendor.design_settings.show_quantity_in_list')}>
                   <DesignSettingsCheckbox {...this.getProps('showQuantityInList')} />
-                </DesignSettingsOption>
-                <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_instagram')}>
-                  <DesignSettingsCheckbox {...this.getProps('mainPageInstagram')} />
                 </DesignSettingsOption>
                 <DesignSettingsOption inRow title={tr('vendor.design_settings.main_page_banner')}>
                   <DesignSettingsCheckbox {...this.getProps('mainPageBanner')} />
