@@ -20,7 +20,8 @@ class WelcomeChildren extends Component {
       vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
-      rtl
+      rtl,
+      historyProducts
     } = this.props;
 
     return (
@@ -47,13 +48,14 @@ class WelcomeChildren extends Component {
         )}
         {childrenProducts && (
           <div className="b-page__content__inner b-page__content__inner_content">
-            <ChildrenProducts 
+            <ChildrenProducts
               childrenProducts={childrenProducts}
               showCartButton={showCartButton}
               showAuthForBuyButton={showAuthForBuyButton}
               vendorClientSigninPath={vendorClientSigninPath}
               showCatalogFilter={showCatalogFilter}
               showQuantity={showQuantity}
+              historyProducts={historyProducts}
             />
           </div>
         )}
@@ -77,6 +79,7 @@ WelcomeChildren.propTypes = {
   showWelcomeSlider: PropTypes.bool.isRequired,
   vendor: schemas.vendor,
   rtl: PropTypes.bool.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 WelcomeChildren.defaultProps = {

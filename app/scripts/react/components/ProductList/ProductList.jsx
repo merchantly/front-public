@@ -8,6 +8,7 @@ import { Image } from 'rc/common/Image';
 import * as schemas from 'r/schemas';
 import ProductListContainer from './ProductListContainer';
 import ProductListContainerBottom from './ProductListContainerBottom';
+import ProductCardSimilarProducts from "../Product/ProductCard/ProductCardSimilarProducts";
 
 class ProductList extends Component {
   render() {
@@ -29,7 +30,8 @@ class ProductList extends Component {
       showQuantity,
       t,
       title,
-      isFilterOpenByDefault
+      isFilterOpenByDefault,
+      historyProducts
     } = this.props;
 
     return (
@@ -77,6 +79,7 @@ class ProductList extends Component {
             </div>
           )}
         </div>
+        <ProductCardSimilarProducts products={historyProducts} t={t} showCartButton={true} title={t('vendor.history_product.title')} />
         {container && <ProductListContainerBottom container={container} />}
       </ItemListCatalog>
     );
@@ -100,10 +103,12 @@ ProductList.propTypes = {
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   isFilterOpenByDefault: PropTypes.bool,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 ProductList.defaultProps = {
-  isFilterOpenByDefault: false
+  isFilterOpenByDefault: false,
+  historyProducts: []
 }
 
 export default ProductList;

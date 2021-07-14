@@ -6,7 +6,7 @@ import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
 
 class CategoriesShowChildrenContainer extends Component {
-  render() {    
+  render() {
     return <CategoriesShowChildren {...this.props} />;
   }
 }
@@ -20,7 +20,8 @@ CategoriesShowChildrenContainer.propTypes = {
   showQuantity: PropTypes.bool,
   t: PropTypes.func,
   title: PropTypes.string,
-  vendorRootPath: PropTypes.string,  
+  vendorRootPath: PropTypes.string,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 CategoriesShowChildrenContainer.defaultProps = {

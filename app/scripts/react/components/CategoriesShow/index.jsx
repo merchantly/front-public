@@ -26,6 +26,7 @@ CategoriesShowContainer.propTypes = {
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 CategoriesShowContainer.defaultProps = {
@@ -35,6 +36,7 @@ CategoriesShowContainer.defaultProps = {
     pagination: {},
   },
   isFilterDirty: false,
+  historyProducts: []
 };
 
 export default provideTranslations(CategoriesShowContainer);

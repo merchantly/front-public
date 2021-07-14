@@ -30,7 +30,8 @@ class CategoriesShowPage extends Component {
       showPagination,
       showQuantity,
       showNextButton,
-      nextButton
+      nextButton,
+      historyProducts
     } = this.props;
 
     return (
@@ -51,6 +52,7 @@ class CategoriesShowPage extends Component {
           showQuantity={showQuantity}
           showNextButton={showNextButton}
           nextButton={nextButton}
+          historyProducts={historyProducts}
         />
       </VendorLayoutContainer>
     );
@@ -72,10 +74,11 @@ CategoriesShowPage.propTypes = {
   products: ProductList.wrapped.propTypes.products,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 CategoriesShowPage.defaultProps = {
-
+  historyProducts: []
 };
 
 export default CategoriesShowPage;

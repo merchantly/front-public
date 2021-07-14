@@ -5,6 +5,7 @@ import CatalogFilterContainer from 'rc/CatalogFilter';
 import * as schemas from 'r/schemas';
 import ProductListContainer from 'rc/ProductList/ProductListContainer';
 import ProductListContainerBottom from 'rc/ProductList/ProductListContainerBottom';
+import ProductCardSimilarProducts from "../Product/ProductCard/ProductCardSimilarProducts";
 
 class ChildrenProducts extends Component {
   render() {
@@ -19,6 +20,7 @@ class ChildrenProducts extends Component {
       showQuantity,
       title,
       container,
+      historyProducts
     } = this.props;
 
     return (
@@ -46,6 +48,7 @@ class ChildrenProducts extends Component {
             vendorCategoryPath={vendorCategoryPath}
           />
         ))}
+        <ProductCardSimilarProducts products={historyProducts} t={t} showCartButton={true} title={t('vendor.history_product.title')} />
         <ProductListContainerBottom container={container} />
       </div>
     );
@@ -63,6 +66,7 @@ ChildrenProducts.propTypes = {
   showQuantity: PropTypes.bool,
   title: PropTypes.string,
   container: schemas.container.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 ChildrenProducts.defaultProps = {

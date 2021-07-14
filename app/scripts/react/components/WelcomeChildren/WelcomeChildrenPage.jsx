@@ -17,7 +17,8 @@ class WelcomeChildrenPage extends Component {
       vendorClientSigninPath,
       showCatalogFilter,
       showQuantity,
-      rtl
+      rtl,
+      historyProducts
     } = this.props;
 
     return (
@@ -32,6 +33,7 @@ class WelcomeChildrenPage extends Component {
           showCatalogFilter={showCatalogFilter}
           showQuantity={showQuantity}
           rtl={rtl}
+          historyProducts={historyProducts}
         />
       </VendorLayoutContainer>
     );
@@ -50,10 +52,12 @@ WelcomeChildrenPage.propTypes = {
   showWelcomeSlider: PropTypes.bool,
   vendor: schemas.vendor,
   rtl: PropTypes.bool.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 WelcomeChildrenPage.defaultProps = {
   rtl: false,
+  historyProducts: []
 }
 
 export default WelcomeChildrenPage;
