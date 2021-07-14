@@ -20,6 +20,7 @@ class CategoriesShow extends Component {
       showCatalogFilter,
       showPagination,
       showQuantity,
+      historyProducts
     } = this.props;
 
     return products.items.length > 0 || isFilterDirty
@@ -39,6 +40,7 @@ class CategoriesShow extends Component {
           showCatalogFilter={showCatalogFilter}
           showPagination={showPagination}
           showQuantity={showQuantity}
+          historyProducts={historyProducts}
         />
       )
       : (

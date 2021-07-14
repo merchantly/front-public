@@ -5,11 +5,11 @@ import * as schemas from '../../../schemas';
 
 import ProductBlock from '../ProductBlock';
 
-const ProductCardSimilarProducts = ({ products, t, showCartButton }) => (
+const ProductCardSimilarProducts = ({ products, t, showCartButton, title }) => (
   products && products.length
     ? <section className="b-item-list b-item-list_additional">
         <div className="b-item-list__title">
-          {t('vendor.similar_product.title')}
+          {title || t('vendor.similar_product.title')}
         </div>
         <div className="b-item-list__content">
           {products.map(product =>

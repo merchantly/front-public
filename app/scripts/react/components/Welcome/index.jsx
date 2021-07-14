@@ -26,6 +26,7 @@ WelcomeContainer.propTypes = {
   vendor: schemas.vendor.isRequired,
   t: PropTypes.func.isRequired,
   rtl: PropTypes.bool.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 WelcomeContainer.defaultProps = {

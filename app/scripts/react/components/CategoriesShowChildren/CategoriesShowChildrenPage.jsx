@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ChildrenProducts from 'rc/ChildrenProducts';
 import CategoriesShowChildrenContainer from './index';
 import VendorLayoutContainer from 'rc/VendorLayout';
+import CategoriesShowPage from "../CategoriesShow/CategoriesShowPage";
 
 class CategoriesShowChildrenPage extends Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ class CategoriesShowChildrenPage extends Component {
       title,
       vendorRootPath,
       container,
+      historyProducts,
     } = this.props;
 
     return (
@@ -45,6 +47,7 @@ class CategoriesShowChildrenPage extends Component {
           title={title}
           vendorRootPath={vendorRootPath}
           container={container}
+          historyProducts={historyProducts}
         />
       </VendorLayoutContainer>
     );
@@ -62,6 +65,11 @@ CategoriesShowChildrenPage.propTypes = {
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
   container: PropTypes.object,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
+};
+
+CategoriesShowPage.defaultProps = {
+  historyProducts: []
 };
 
 export default CategoriesShowChildrenPage;

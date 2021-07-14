@@ -13,7 +13,8 @@ class CategoriesShowChildren extends Component {
       t,
       title,
       vendorRootPath,
-      container
+      container,
+      historyProducts
     } = this.props;
 
     return childrenProducts.length
@@ -26,6 +27,7 @@ class CategoriesShowChildren extends Component {
           showQuantity={showQuantity}
           title={title}
           container={container}
+          historyProducts={historyProducts}
         />
       )
       : (
@@ -51,6 +53,7 @@ CategoriesShowChildren.propTypes = {
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
   container: PropTypes.object,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default CategoriesShowChildren;

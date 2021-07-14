@@ -25,6 +25,7 @@ class Welcome extends Component {
       vendor,
       t,
       rtl,
+      historyProducts,
     } = this.props;
     const {
       preProductsText,
@@ -68,6 +69,7 @@ class Welcome extends Component {
               showPagination={showPaginationOnWelcome}
               showQuantity={showQuantity}
               t={t}
+              historyProducts={historyProducts}
             />
           </div>
         )}
@@ -100,6 +102,7 @@ Welcome.propTypes = {
   vendor: schemas.vendor.isRequired,
   t: PropTypes.func.isRequired,
   rtl: PropTypes.bool.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 Welcome.defaultProps = {

@@ -19,6 +19,7 @@ WelcomeChildrenContainer.propTypes = {
   showCatalogFilter: PropTypes.bool,
   showQuantity: PropTypes.bool,
   rtl: PropTypes.bool.isRequired,
+  historyProducts: PropTypes.arrayOf(PropTypes.object),
 };
 
 WelcomeChildrenContainer.defaultProps = {
