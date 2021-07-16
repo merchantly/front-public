@@ -21,7 +21,8 @@ class WelcomeChildren extends Component {
       showCatalogFilter,
       showQuantity,
       rtl,
-      historyProducts
+      historyProducts,
+      t
     } = this.props;
 
     return (
@@ -56,6 +57,7 @@ class WelcomeChildren extends Component {
               showCatalogFilter={showCatalogFilter}
               showQuantity={showQuantity}
               historyProducts={historyProducts}
+              t={t}
             />
           </div>
         )}
@@ -80,6 +82,7 @@ WelcomeChildren.propTypes = {
   vendor: schemas.vendor,
   rtl: PropTypes.bool.isRequired,
   historyProducts: PropTypes.arrayOf(PropTypes.object),
+  t: PropTypes.func.isRequired,
 };
 
 WelcomeChildren.defaultProps = {

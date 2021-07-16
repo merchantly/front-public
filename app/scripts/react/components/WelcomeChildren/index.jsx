@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import WelcomeChildren from './WelcomeChildren';
 import * as schemas from 'r/schemas';
+import provideTranslations from 'rc/HoC/provideTranslations';
 
 class WelcomeChildrenContainer extends Component {
   render() {
@@ -20,6 +21,7 @@ WelcomeChildrenContainer.propTypes = {
   showQuantity: PropTypes.bool,
   rtl: PropTypes.bool.isRequired,
   historyProducts: PropTypes.arrayOf(PropTypes.object),
+  t: PropTypes.func.isRequired
 };
 
 WelcomeChildrenContainer.defaultProps = {
@@ -28,4 +30,4 @@ WelcomeChildrenContainer.defaultProps = {
   rtl: false
 };
 
-export default WelcomeChildrenContainer;
+export default provideTranslations(WelcomeChildrenContainer);

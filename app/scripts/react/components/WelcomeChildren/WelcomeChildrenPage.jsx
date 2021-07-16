@@ -34,6 +34,7 @@ class WelcomeChildrenPage extends Component {
           showQuantity={showQuantity}
           rtl={rtl}
           historyProducts={historyProducts}
+          i18n={i18n}
         />
       </VendorLayoutContainer>
     );

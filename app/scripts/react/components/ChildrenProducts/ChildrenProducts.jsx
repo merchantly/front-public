@@ -20,7 +20,8 @@ class ChildrenProducts extends Component {
       showQuantity,
       title,
       container,
-      historyProducts
+      historyProducts,
+      t
     } = this.props;
 
     return (
@@ -67,6 +68,7 @@ ChildrenProducts.propTypes = {
   title: PropTypes.string,
   container: schemas.container.isRequired,
   historyProducts: PropTypes.arrayOf(PropTypes.object),
+  t: PropTypes.func.isRequired,
 };
 
 ChildrenProducts.defaultProps = {
