@@ -28,6 +28,7 @@ class CategoriesShowChildren extends Component {
           title={title}
           container={container}
           historyProducts={historyProducts}
+          t={t}
         />
       )
       : (
