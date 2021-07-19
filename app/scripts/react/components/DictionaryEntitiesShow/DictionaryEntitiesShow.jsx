@@ -23,6 +23,7 @@ class DictionaryEntitiesShow extends Component {
           showNextButton={showNextButton}
           showPagination
           title={title}
+          t={t}
         />
       )
       : (
