@@ -12,16 +12,90 @@ import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
 
+import scriptjs from 'scriptjs';
+
 class Checkout extends Component {
+  constructor(props) {
+    super(props);
+
+    const {
+      errorMessage,
+      fieldValues
+    } = this.state;
+
+    this.state = { errorMessage: errorMessage, fieldValues: fieldValues };
+  }
+
+  async handleSubmit(event) {
+    window.debug_checkout_event = event;
+    const { deliveryType } = this.props;
+
+    if(!deliveryType.isGeideaPayment)
+      return;
+
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    window.debug_checkout_data = data;
+
+    const { submitOrderUrl } = this.props
+
+    const response = await fetch(submitOrderUrl + '.json', {
+      method: 'POST',
+      body: data,
+    });
+    window.debug_checkout_response = response;
+
+    if (response.ok) {
+      const order = await response.json();
+      window.debug_checkout_response = order;
+      const geideaPaymentForm = deliveryType.geideaPaymentForm;
+
+      scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', function() {
+        try {
+          const onSuccess = function(_data) {
+            document.location.href = order.success_url;
+          }
+
+          const onError = function(data) {
+            alert(data.responseCode + ': ' + data.responseMessage)
+          }
+
+          const onCancel = function(_data) {
+            document.location.href = order.cancel_url;
+          }
+
+          const api = new GeideaApi(geideaPaymentForm.merchant_id, onSuccess, onError, onCancel);
+
+          api.configurePayment({
+            callbackUrl: geideaPaymentForm.callback_url,
+            amount: (geideaPaymentForm.total_price.cents / 100),
+            currency: geideaPaymentForm.total_price.currencyIsoCode,
+            merchantReferenceId: order.id,
+            styles: {
+              headerColor: geideaPaymentForm.header_color
+            },
+          });
+
+          api.startPayment();
+        } catch(err) {
+          alert(err);
+        }
+      })
+    } else {
+      let error = await response.json();
+
+      this.setState({ errorMessage: error.errorMessage, fieldValues: error.formValues })
+    }
+  }
+
   render() {
     const {
       backUrl,
       coupon,
       deliveryType,
       deliveryTypes,
-      errorMessage,
       fields,
-      fieldValues,
       formAuthenticity,
       onDeliveryChange,
       onFieldChange,
@@ -37,6 +111,11 @@ class Checkout extends Component {
       items
     } = this.props;
 
+    const {
+      errorMessage,
+      fieldValues
+    } = this.state
+
     return (
       <form
         acceptCharset="UTF-8"
@@ -44,6 +123,7 @@ class Checkout extends Component {
         className="simple_form new_vendor_order"
         id="new_vendor_order"
         method="POST"
+        onSubmit={this.handleSubmit}
         noValidate
       >
         <FormAuthenticity {...formAuthenticity} />
