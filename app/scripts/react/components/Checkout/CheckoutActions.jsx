@@ -10,8 +10,8 @@ class CheckoutActions extends Component {
     super(props);
 
     this.state = {
-      isProcessing: false,
-      isRedirecting: false,
+      isProcessing: props.isProcessing,
+      isRedirecting: props.isRedirecting,
     };
     this.handleClick = this.handleClick.bind(this);
     this.startProcessing = this.startProcessing.bind(this);
@@ -100,6 +100,8 @@ CheckoutActions.propTypes = {
   totalPrice: PropTypes.object.isRequired,
   items: PropTypes.array,
   t: PropTypes.func.isRequired,
+  isRedirecting: PropTypes.bool,
+  isProcessing: PropTypes.bool,
 };
 
 export default CheckoutActions;

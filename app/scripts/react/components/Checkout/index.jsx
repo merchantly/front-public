@@ -11,6 +11,7 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
+import Rodal from 'rodal';
 
 class Checkout extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Checkout extends Component {
       fieldValues
     } = props;
 
-    this.state = { errorMessage: errorMessage, fieldValues: fieldValues };
+    this.state = { errorMessage: errorMessage, fieldValues: fieldValues, isProcessing: false, isRedirecting: false, showGeideaPaymentForm: false };
   }
 
   async handleSubmit(event) {
@@ -46,7 +47,7 @@ class Checkout extends Component {
 
     if (response.ok) {
       const order = await response.json();
-      window.debug_checkout_response = order;
+      window.debug_checkout_order = order;
       const geideaPaymentForm = paymentType.geideaPaymentForm;
       window.debug_checkout_geidea_payment_form = geideaPaymentForm;
 
@@ -72,13 +73,15 @@ class Checkout extends Component {
             callbackUrl: geideaPaymentForm.callback_url,
             amount: (order.totalPrice.cents / 100),
             currency: order.totalPrice.currencyIsoCode,
-            merchantReferenceId: order.id,
+            merchantReferenceId: order.id.toString(),
             styles: {
               headerColor: geideaPaymentForm.header_color
             },
           });
 
-          api.startPayment();
+          api.startPayment('geidea-payment-modal');
+
+          this.setState({isProcessing: false, isRedirecting: false, showGeideaPaymentForm: true })
         } catch(err) {
           alert(err);
         }
@@ -114,7 +117,10 @@ class Checkout extends Component {
 
     const {
       errorMessage,
-      fieldValues
+      fieldValues,
+      isProcessing,
+      isRedirecting,
+      showGeideaPaymentForm,
     } = this.state
 
     return (
@@ -127,6 +133,14 @@ class Checkout extends Component {
         onSubmit={this.handleSubmit.bind(this)}
         noValidate
       >
+        <Rodal
+          onClose={() => {}}
+          showCloseButton={false}
+          visible={showGeideaPaymentForm}
+        >
+          <div id="geidea-payment-modal">
+          </div>
+        </Rodal>
         <FormAuthenticity {...formAuthenticity} />
         <div className="b-cart__form b-form">
           {errorMessage
@@ -177,6 +191,8 @@ class Checkout extends Component {
               backUrl={backUrl}
               publicOffer={publicOffer}
               t={t}
+              isProcessing={isProcessing}
+              isRedirecting={isRedirecting}
             />
           </div>
         </div>
