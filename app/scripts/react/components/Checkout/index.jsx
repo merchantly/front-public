@@ -48,13 +48,14 @@ class Checkout extends Component {
       const order = await response.json();
       window.debug_checkout_response = order;
       const geideaPaymentForm = paymentType.geideaPaymentForm;
+      window.debug_checkout_geidea_payment_form = geideaPaymentForm;
 
       const Scriptjs = require('scriptjs');
 
       Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', function() {
         try {
           const onSuccess = function(_data) {
-            document.location.href = order.success_url;
+            document.location.href = order.successUrl;
           }
 
           const onError = function(data) {
@@ -62,15 +63,15 @@ class Checkout extends Component {
           }
 
           const onCancel = function(_data) {
-            document.location.href = order.cancel_url;
+            document.location.href = order.cancelUrl;
           }
 
           const api = new GeideaApi(geideaPaymentForm.merchant_id, onSuccess, onError, onCancel);
 
           api.configurePayment({
             callbackUrl: geideaPaymentForm.callback_url,
-            amount: (geideaPaymentForm.total_price.cents / 100),
-            currency: geideaPaymentForm.total_price.currencyIsoCode,
+            amount: (order.totalPrice.cents / 100),
+            currency: order.totalPrice.currencyIsoCode,
             merchantReferenceId: order.id,
             styles: {
               headerColor: geideaPaymentForm.header_color
