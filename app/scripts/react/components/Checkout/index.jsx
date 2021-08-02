@@ -162,14 +162,8 @@ class Checkout extends Component {
         onSubmit={this.handleSubmit.bind(this)}
         noValidate
       >
-        <Rodal
-          onClose={() => {}}
-          showCloseButton={false}
-          visible={showGeideaPaymentForm}
-        >
-          <div id="geidea-payment-modal">
-          </div>
-        </Rodal>
+        <div id="geidea-payment-modal">
+        </div>
         <FormAuthenticity {...formAuthenticity} />
         <div className="b-cart__form b-form">
           {errorMessage

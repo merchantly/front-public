@@ -6,27 +6,16 @@ import * as schemas from 'r/schemas';
 import CheckoutPublicOffer from './CheckoutPublicOffer';
 
 class CheckoutActions extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isProcessing: props.isProcessing,
-      isRedirecting: props.isRedirecting,
-    }
-  }
-
   render() {
     const {
       backUrl,
       publicOffer,
       t,
       startProcessing,
-      handleClick
-    } = this.props;
-    const {
+      handleClick,
       isProcessing,
-      isRedirecting,
-    } = this.state;
+      isRedirecting
+    } = this.props;
 
     return (
       <div className="b-cart__action">
