@@ -12,37 +12,16 @@ class CheckoutActions extends Component {
     this.state = {
       isProcessing: props.isProcessing,
       isRedirecting: props.isRedirecting,
-    };
-    this.handleClick = this.handleClick.bind(this);
-    this.startProcessing = this.startProcessing.bind(this);
-  }
-  startProcessing() {
-    try {
-      $(window).trigger('m.checkout', {
-        items: this.props.items,
-        totalCount: this.props.totalCount,
-        totalPrice: this.props.totalPrice
-      });
-    } catch (e) {
-      console.log('trigger: ', e.message);
-    }
-
-    this.setState({ isProcessing: true });
-  }
-  handleClick(ev) {
-    const { backUrl } = this.props;
-
-    this.setState({ isRedirecting: true });
-    if (!backUrl) {
-      ev.preventDefault();
-      window.history.back();
     }
   }
+
   render() {
     const {
       backUrl,
       publicOffer,
       t,
+      startProcessing,
+      handleClick
     } = this.props;
     const {
       isProcessing,
@@ -73,7 +52,7 @@ class CheckoutActions extends Component {
               className="b-btn b-btn_trans b-cart__action__clear"
               data-disable-with={t('vendor.button.disable_with.waiting')}
               href={backUrl || '#'}
-              onClick={this.handleClick}
+              onClick={handleClick}
             >
               {t('vendor.order.go_back')}
             </a>
@@ -82,7 +61,7 @@ class CheckoutActions extends Component {
             <input
               className="b-btn b-cart__action__next element--active-opacity"
               data-disable-with={t('vendor.button.disable_with.waiting')}
-              onClick={this.startProcessing}
+              onClick={startProcessing}
               type="submit"
               value={t('vendor.order.next')}
             />
@@ -102,6 +81,8 @@ CheckoutActions.propTypes = {
   t: PropTypes.func.isRequired,
   isRedirecting: PropTypes.bool,
   isProcessing: PropTypes.bool,
+  startProcessing: PropTypes.func,
+  handleClick: PropTypes.func,
 };
 
 export default CheckoutActions;

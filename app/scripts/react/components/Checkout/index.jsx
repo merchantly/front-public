@@ -23,6 +23,9 @@ class Checkout extends Component {
     } = props;
 
     this.state = { errorMessage: errorMessage, fieldValues: fieldValues, isProcessing: false, isRedirecting: false, showGeideaPaymentForm: false };
+
+    this.startProcessing = this.startProcessing.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   async handleSubmit(event) {
@@ -93,6 +96,30 @@ class Checkout extends Component {
 
       this.setState({ errorMessage: error.errorMessage, fieldValues: error.formValues })
     }
+  }
+
+  handleClick(ev) {
+    const { backUrl } = this.props;
+
+    this.setState({ isRedirecting: true });
+    if (!backUrl) {
+      ev.preventDefault();
+      window.history.back();
+    }
+  }
+
+  startProcessing() {
+    try {
+      $(window).trigger('m.checkout', {
+        items: this.props.items,
+        totalCount: this.props.totalCount,
+        totalPrice: this.props.totalPrice
+      });
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+
+    this.setState({ isProcessing: true });
   }
 
   render() {
@@ -195,6 +222,8 @@ class Checkout extends Component {
               t={t}
               isProcessing={isProcessing}
               isRedirecting={isRedirecting}
+              startProcessing={this.startProcessing}
+              handleClick={this.handleClick}
             />
           </div>
         </div>
