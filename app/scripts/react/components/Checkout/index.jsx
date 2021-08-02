@@ -19,7 +19,7 @@ class Checkout extends Component {
     const {
       errorMessage,
       fieldValues
-    } = this.props;
+    } = props;
 
     this.state = { errorMessage: errorMessage, fieldValues: fieldValues };
   }
@@ -36,7 +36,7 @@ class Checkout extends Component {
     const data = new FormData(event.target);
     window.debug_checkout_data = data;
 
-    const { submitOrderUrl } = this.props
+    const { submitOrderUrl } = this.props;
 
     const response = await fetch(submitOrderUrl + '.json', {
       method: 'POST',
@@ -123,7 +123,7 @@ class Checkout extends Component {
         className="simple_form new_vendor_order"
         id="new_vendor_order"
         method="POST"
-        onSubmit={this.handleSubmit}
+        onSubmit={this.handleSubmit.bind(this)}
         noValidate
       >
         <FormAuthenticity {...formAuthenticity} />
