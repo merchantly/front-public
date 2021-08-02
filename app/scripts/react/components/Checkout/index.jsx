@@ -19,7 +19,7 @@ class Checkout extends Component {
     const {
       errorMessage,
       fieldValues
-    } = this.state;
+    } = this.props;
 
     this.state = { errorMessage: errorMessage, fieldValues: fieldValues };
   }
