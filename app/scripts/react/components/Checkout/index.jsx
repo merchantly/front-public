@@ -51,9 +51,7 @@ class Checkout extends Component {
       const geideaPaymentForm = paymentType.geideaPaymentForm;
       window.debug_checkout_geidea_payment_form = geideaPaymentForm;
 
-      const Scriptjs = require('scriptjs');
-
-      Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', function() {
+      const startPayment = function() {
         try {
           const onSuccess = function(_data) {
             document.location.href = order.successUrl;
@@ -85,7 +83,11 @@ class Checkout extends Component {
         } catch(err) {
           alert(err);
         }
-      })
+      }
+
+      const Scriptjs = require('scriptjs');
+
+      Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', startPayment.bind(this))
     } else {
       let error = await response.json();
 
