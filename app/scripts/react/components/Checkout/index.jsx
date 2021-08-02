@@ -12,8 +12,6 @@ import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
 
-import scriptjs from 'scriptjs';
-
 class Checkout extends Component {
   constructor(props) {
     super(props);
@@ -51,7 +49,9 @@ class Checkout extends Component {
       window.debug_checkout_response = order;
       const geideaPaymentForm = deliveryType.geideaPaymentForm;
 
-      scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', function() {
+      const Scriptjs = require('scriptjs');
+
+      Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', function() {
         try {
           const onSuccess = function(_data) {
             document.location.href = order.success_url;
