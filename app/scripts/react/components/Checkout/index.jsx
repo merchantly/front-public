@@ -26,9 +26,9 @@ class Checkout extends Component {
 
   async handleSubmit(event) {
     window.debug_checkout_event = event;
-    const { deliveryType } = this.props;
+    const { paymentType } = this.props;
 
-    if(!deliveryType.isGeideaPayment)
+    if(!paymentType.isGeideaPayment)
       return;
 
     event.preventDefault();
@@ -47,7 +47,7 @@ class Checkout extends Component {
     if (response.ok) {
       const order = await response.json();
       window.debug_checkout_response = order;
-      const geideaPaymentForm = deliveryType.geideaPaymentForm;
+      const geideaPaymentForm = paymentType.geideaPaymentForm;
 
       const Scriptjs = require('scriptjs');
 
