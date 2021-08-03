@@ -11,7 +11,6 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
-import Rodal from 'rodal';
 
 class Checkout extends Component {
   constructor(props) {
@@ -22,7 +21,7 @@ class Checkout extends Component {
       fieldValues
     } = props;
 
-    this.state = { errorMessage: errorMessage, fieldValues: fieldValues, isProcessing: false, isRedirecting: false, showGeideaPaymentForm: false };
+    this.state = { errorMessage: errorMessage, fieldValues: fieldValues, isProcessing: false, isRedirecting: false };
 
     this.startProcessing = this.startProcessing.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -80,9 +79,9 @@ class Checkout extends Component {
             },
           });
 
-          api.startPayment('geidea-payment-modal');
+          api.startPayment();
 
-          this.setState({isProcessing: false, isRedirecting: false, showGeideaPaymentForm: true })
+          this.setState({isProcessing: false, isRedirecting: false})
         } catch(err) {
           alert(err);
         }
@@ -148,8 +147,7 @@ class Checkout extends Component {
       errorMessage,
       fieldValues,
       isProcessing,
-      isRedirecting,
-      showGeideaPaymentForm,
+      isRedirecting
     } = this.state
 
     return (
@@ -162,8 +160,6 @@ class Checkout extends Component {
         onSubmit={this.handleSubmit.bind(this)}
         noValidate
       >
-        <div id="geidea-payment-modal">
-        </div>
         <FormAuthenticity {...formAuthenticity} />
         <div className="b-cart__form b-form">
           {errorMessage
