@@ -101,7 +101,7 @@ class Checkout extends Component {
           (t) => t.id === deliveryType.id
         ) || head(order.deliveryTypes);
 
-        this.setState({ fields: updatedDeliveryType.fields })
+        this.setState({ fields: updatedDeliveryType.fields, isProcessing: false, isRedirecting: false })
       }
     } else {
       const errorText = await response.text();
