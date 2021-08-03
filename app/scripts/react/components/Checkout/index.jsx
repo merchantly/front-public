@@ -11,6 +11,7 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
+import {find, head} from "lodash";
 
 class Checkout extends Component {
   constructor(props) {
@@ -18,10 +19,10 @@ class Checkout extends Component {
 
     const {
       errorMessage,
-      fieldValues
+      fields
     } = props;
 
-    this.state = { errorMessage: errorMessage, fieldValues: fieldValues, isProcessing: false, isRedirecting: false };
+    this.state = { errorMessage: errorMessage, fields: fields, isProcessing: false, isRedirecting: false };
 
     this.startProcessing = this.startProcessing.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -50,50 +51,62 @@ class Checkout extends Component {
     if (response.ok) {
       const order = await response.json();
       window.debug_checkout_order = order;
-      const geideaPaymentForm = paymentType.geideaPaymentForm;
-      window.debug_checkout_geidea_payment_form = geideaPaymentForm;
 
-      const startPayment = function() {
-        try {
-          const onSuccess = function(_data) {
-            document.location.href = order.successUrl;
+      if (order.id) {
+        const geideaPaymentForm = paymentType.geideaPaymentForm;
+        window.debug_checkout_geidea_payment_form = geideaPaymentForm;
+
+        const startPayment = function() {
+          try {
+            const onSuccess = function(_data) {
+              document.location.href = order.successUrl;
+            }
+
+            const onError = function(data) {
+              alert(data.responseCode + ': ' + data.responseMessage)
+            }
+
+            const onCancel = function(_data) {
+              document.location.href = order.cancelUrl;
+            }
+
+            const api = new GeideaApi(geideaPaymentForm.merchant_id, onSuccess, onError, onCancel);
+
+            api.configurePayment({
+              callbackUrl: geideaPaymentForm.callback_url,
+              amount: (order.totalPrice.cents / 100),
+              currency: order.totalPrice.currencyIsoCode,
+              merchantReferenceId: order.id.toString(),
+              styles: {
+                headerColor: geideaPaymentForm.header_color
+              },
+            });
+
+            api.startPayment();
+
+            this.setState({isProcessing: false, isRedirecting: false})
+          } catch(err) {
+            alert(err);
           }
-
-          const onError = function(data) {
-            alert(data.responseCode + ': ' + data.responseMessage)
-          }
-
-          const onCancel = function(_data) {
-            document.location.href = order.cancelUrl;
-          }
-
-          const api = new GeideaApi(geideaPaymentForm.merchant_id, onSuccess, onError, onCancel);
-
-          api.configurePayment({
-            callbackUrl: geideaPaymentForm.callback_url,
-            amount: (order.totalPrice.cents / 100),
-            currency: order.totalPrice.currencyIsoCode,
-            merchantReferenceId: order.id.toString(),
-            styles: {
-              headerColor: geideaPaymentForm.header_color
-            },
-          });
-
-          api.startPayment();
-
-          this.setState({isProcessing: false, isRedirecting: false})
-        } catch(err) {
-          alert(err);
         }
+
+        const Scriptjs = require('scriptjs');
+
+        Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', startPayment.bind(this))
+      } else {
+        const { deliveryType } = this.props;
+
+        const updatedDeliveryType = find(
+          order.deliveryTypes,
+          (t) => t.id === deliveryType.id
+        ) || head(order.deliveryTypes);
+
+        this.setState({ fields: updatedDeliveryType.fields })
       }
-
-      const Scriptjs = require('scriptjs');
-
-      Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', startPayment.bind(this))
     } else {
-      let error = await response.json();
-
-      this.setState({ errorMessage: error.errorMessage, fieldValues: error.formValues })
+      const errorText = await response.text();
+      window.debug_error_text = errorText;
+      alert('Order fetch error:' + errorText)
     }
   }
 
@@ -127,7 +140,7 @@ class Checkout extends Component {
       coupon,
       deliveryType,
       deliveryTypes,
-      fields,
+      fieldValues,
       formAuthenticity,
       onDeliveryChange,
       onFieldChange,
@@ -145,7 +158,7 @@ class Checkout extends Component {
 
     const {
       errorMessage,
-      fieldValues,
+      fields,
       isProcessing,
       isRedirecting
     } = this.state
