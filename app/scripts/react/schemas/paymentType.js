@@ -6,5 +6,5 @@ export default PropTypes.shape({
   description: PropTypes.string,
   paymentDiscounts: PropTypes.arrayOf(PropTypes.object),
   isGeideaPayment: PropTypes.bool,
-  geideaPaymentForm: PropTypes.object,
+  isEInvoice: PropTypes.bool,
 });

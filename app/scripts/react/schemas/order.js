@@ -34,6 +34,8 @@ export default shape({
   paymentType: shape({
     title: string,
     type: string.isRequired,
+    isGeideaPayment: bool,
+    geideaPaymentForm: object,
   }),
   workflowState: shape({
     bgStyle: string,

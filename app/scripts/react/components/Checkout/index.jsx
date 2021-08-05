@@ -12,6 +12,7 @@ import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
 import {find, head} from "lodash";
+import geideaPaymentWidget from 'app/scripts/lib/geideaPaymentWidget';
 
 class Checkout extends Component {
   constructor(props) {
@@ -29,16 +30,14 @@ class Checkout extends Component {
   }
 
   async handleSubmit(event) {
-    window.debug_checkout_event = event;
     const { paymentType } = this.props;
 
-    if(!paymentType.isGeideaPayment)
+    if(!paymentType.isGeideaPayment || paymentType.isEInvoice)
       return;
 
     event.preventDefault();
 
     const data = new FormData(event.target);
-    window.debug_checkout_data = data;
 
     const { submitOrderUrl } = this.props;
 
@@ -46,53 +45,13 @@ class Checkout extends Component {
       method: 'POST',
       body: data,
     });
-    window.debug_checkout_response = response;
 
     if (response.ok) {
       const order = await response.json();
-      window.debug_checkout_order = order;
 
       if (order.id) {
-        const geideaPaymentForm = paymentType.geideaPaymentForm;
-        window.debug_checkout_geidea_payment_form = geideaPaymentForm;
-
-        const startPayment = function() {
-          try {
-            const onSuccess = function(_data) {
-              document.location.href = order.successUrl;
-            }
-
-            const onError = function(data) {
-              alert(data.responseCode + ': ' + data.responseMessage)
-            }
-
-            const onCancel = function(_data) {
-              document.location.href = order.cancelUrl;
-            }
-
-            const api = new GeideaApi(geideaPaymentForm.merchant_id, onSuccess, onError, onCancel);
-
-            api.configurePayment({
-              callbackUrl: geideaPaymentForm.callback_url,
-              amount: (order.totalPrice.cents / 100),
-              currency: order.totalPrice.currencyIsoCode,
-              merchantReferenceId: order.id.toString(),
-              styles: {
-                headerColor: geideaPaymentForm.header_color
-              },
-            });
-
-            api.startPayment();
-
-            this.setState({isProcessing: false, isRedirecting: false})
-          } catch(err) {
-            alert(err);
-          }
-        }
-
-        const Scriptjs = require('scriptjs');
-
-        Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', startPayment.bind(this))
+        geideaPaymentWidget(order)
+        this.setState({ isProcessing: false, isRedirecting: false })
       } else {
         const { deliveryType } = this.props;
 
@@ -105,7 +64,6 @@ class Checkout extends Component {
       }
     } else {
       const errorText = await response.text();
-      window.debug_error_text = errorText;
       alert('Order fetch error:' + errorText)
     }
   }
