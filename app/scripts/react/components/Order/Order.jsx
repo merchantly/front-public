@@ -26,7 +26,8 @@ class Order extends Component {
       items,
       totalCount,
       totalPrice,
-      totalVat
+      totalVat,
+      totalWithoutVat
     } = this.props;
 
     return (
@@ -37,6 +38,7 @@ class Order extends Component {
             totalCount={totalCount}
             totalPrice={totalPrice}
             totalVat={totalVat}
+            totalWithoutVat={totalWithoutVat}
           />
           <Checkout
             backUrl={backUrl}

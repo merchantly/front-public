@@ -151,6 +151,7 @@ export default provideTranslations(connectToRedux(connect(
         totalCount=0,
         totalPrice: cartTotalPrice={},
         totalVat={},
+        totalWithoutVat={},
       }={},
       items,
       formValues,
@@ -215,7 +216,8 @@ export default provideTranslations(connectToRedux(connect(
       totalCount,
       totalPrice,
       items,
-      totalVat
+      totalVat,
+      totalWithoutVat
     };
   },
   {
