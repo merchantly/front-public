@@ -73,6 +73,7 @@ class OrderContainer extends Component {
       totalPrice,
       items,
       totalVat,
+      totalWithoutVat
     } = this.props;
 
 
@@ -98,6 +99,7 @@ class OrderContainer extends Component {
         totalCount={totalCount}
         totalPrice={totalPrice}
         totalVat={totalVat}
+        totalWithoutVat={totalWithoutVat}
       />
     );
   }
