@@ -88,6 +88,7 @@ Order.propTypes = {
   totalPrice: PropTypes.object.isRequired,
   items: PropTypes.array,
   totalVat: PropTypes.object.isRequired,
+  totalWithoutVat: PropTypes.object.isRequired,
 };
 
 export default Order;
