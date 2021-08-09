@@ -200,7 +200,12 @@ export default provideTranslations(connectToRedux(connect(
       ? getIn(packageItem, ['good', 'vatAmount', 'cents']) * packageCount
       : 0;
 
-    const totalVatAmount = reduce(vatAmounts, (acc, price) => acc + (price.cents || 0), packageVatCents);
+    const totalVatAmount = set(
+      totalPrice,
+      'cents',
+      reduce(vatAmounts, (acc, price) => acc + (price.cents || 0), packageVatCents)
+    );
+
     const totalWithoutAmount = set(totalPrice, 'cents', totalPrice.cents - totalVatAmount.cents);
 
     return {
