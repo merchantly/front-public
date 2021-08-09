@@ -11,16 +11,93 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
+import {find, head} from "lodash";
+import geideaPaymentWidget from 'app/scripts/lib/geideaPaymentWidget';
 
 class Checkout extends Component {
+  constructor(props) {
+    super(props);
+
+    const {
+      errorMessage,
+      fields
+    } = props;
+
+    this.state = { errorMessage: errorMessage, fields: fields, isProcessing: false, isRedirecting: false };
+
+    this.startProcessing = this.startProcessing.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  async handleSubmit(event) {
+    const { paymentType } = this.props;
+
+    if(!paymentType.isGeideaPayment || paymentType.isEInvoice)
+      return;
+
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+
+    const { submitOrderUrl } = this.props;
+
+    const response = await fetch(submitOrderUrl + '.json', {
+      method: 'POST',
+      body: data,
+    });
+
+    if (response.ok) {
+      const order = await response.json();
+
+      if (order.id) {
+        geideaPaymentWidget(order)
+        this.setState({ isProcessing: false, isRedirecting: false })
+      } else {
+        const { deliveryType } = this.props;
+
+        const updatedDeliveryType = find(
+          order.deliveryTypes,
+          (t) => t.id === deliveryType.id
+        ) || head(order.deliveryTypes);
+
+        this.setState({ fields: updatedDeliveryType.fields, isProcessing: false, isRedirecting: false })
+      }
+    } else {
+      const errorText = await response.text();
+      alert('Order fetch error:' + errorText)
+    }
+  }
+
+  handleClick(ev) {
+    const { backUrl } = this.props;
+
+    this.setState({ isRedirecting: true });
+    if (!backUrl) {
+      ev.preventDefault();
+      window.history.back();
+    }
+  }
+
+  startProcessing() {
+    try {
+      $(window).trigger('m.checkout', {
+        items: this.props.items,
+        totalCount: this.props.totalCount,
+        totalPrice: this.props.totalPrice
+      });
+    } catch (e) {
+      console.log('trigger: ', e.message);
+    }
+
+    this.setState({ isProcessing: true });
+  }
+
   render() {
     const {
       backUrl,
       coupon,
       deliveryType,
       deliveryTypes,
-      errorMessage,
-      fields,
       fieldValues,
       formAuthenticity,
       onDeliveryChange,
@@ -37,6 +114,13 @@ class Checkout extends Component {
       items
     } = this.props;
 
+    const {
+      errorMessage,
+      fields,
+      isProcessing,
+      isRedirecting
+    } = this.state
+
     return (
       <form
         acceptCharset="UTF-8"
@@ -44,6 +128,7 @@ class Checkout extends Component {
         className="simple_form new_vendor_order"
         id="new_vendor_order"
         method="POST"
+        onSubmit={this.handleSubmit.bind(this)}
         noValidate
       >
         <FormAuthenticity {...formAuthenticity} />
@@ -96,6 +181,10 @@ class Checkout extends Component {
               backUrl={backUrl}
               publicOffer={publicOffer}
               t={t}
+              isProcessing={isProcessing}
+              isRedirecting={isRedirecting}
+              startProcessing={this.startProcessing}
+              handleClick={this.handleClick}
             />
           </div>
         </div>

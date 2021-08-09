@@ -5,8 +5,24 @@ import OrderState from 'rc/common/Order/OrderState';
 import OrderComments from 'rc/common/Order/OrderComments';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import * as schemas from 'r/schemas';
+import geideaPaymentWidget from 'app/scripts/lib/geideaPaymentWidget';
 
 class OrderShow extends Component {
+  onPayClick = () => {
+    const { order } = this.props
+
+    const {
+      paymentUrl,
+      paymentType
+    } = order;
+
+    if(paymentType.isGeideaPayment) {
+      geideaPaymentWidget(order);
+    } else {
+      window.location = paymentUrl;
+    }
+  }
+
   render() {
     const {
       order,
@@ -19,7 +35,6 @@ class OrderShow extends Component {
       freeDelivery,
       freeDeliveryThreshold,
       mustBePaidOnline,
-      paymentUrl,
       paymentType={},
       workflowState,
       adminComments,
@@ -75,8 +90,7 @@ class OrderShow extends Component {
             {mustBePaidOnline && (
               <a
                 className="b-btn"
-                href={paymentUrl}
-                target="_blank"
+                onClick={this.onPayClick}
               >
                 {t('vendor.order.pay')}
               </a>
