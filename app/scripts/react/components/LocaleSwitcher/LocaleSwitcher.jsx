@@ -13,7 +13,7 @@ class LocaleSwitcher extends Component {
     this.handleChange = bind(this.handleChange, this);
   }
   handleChange(event) {
-    this.props.onChange( this.props.locales[event.target.options.selectedIndex].url );
+    this.props.onChange( event.target.selectedOptions[0].getAttribute("data-url") );
   }
   render() {
     const { locales, current, t } = this.props;
