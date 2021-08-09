@@ -171,6 +171,7 @@ export default provideTranslations(connectToRedux(connect(
 
         return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
       });
+
     const selectedPackageMoney = selectedPackage &&
       getIn(find(packages, (p) => p.globalId === selectedPackage), ['price']);
     const selectedPackagePrice = getIn(selectedPackageMoney, ['cents']) || 0;
@@ -186,6 +187,21 @@ export default provideTranslations(connectToRedux(connect(
     const packagePrice = !isEmpty(packageItem)
       ? set(packageItem.good.actualPrice, 'price', 'cents', packagePriceCents)
       : set(selectedPackageMoney, 'cents', packagePriceCents);
+
+    const vatAmounts = mapValues(amounts, (amount, itemId) => {
+      const item = find(cartItems, (i) => String(i.id) === itemId) || {};
+      const vatAmount = getIn(item, ['good', 'vatAmount']) || {};
+      const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
+      const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
+
+      return set(vatAmount, 'cents', amount * koeff * (vatAmount.cents || 0))
+    });
+    const packageVatCents = !isEmpty(packageItem)
+      ? getIn(packageItem, ['good', 'vatAmount', 'cents']) * packageCount
+      : 0;
+
+    const totalVatAmount = reduce(vatAmounts, (acc, price) => acc + (price.cents || 0), packageVatCents);
+    const totalWithoutAmount = set(totalPrice, 'cents', totalPrice.cents - totalVatAmount.cents);
 
     return {
       amounts,
@@ -204,6 +220,8 @@ export default provideTranslations(connectToRedux(connect(
       prices,
       selectedPackage,
       totalPrice,
+      totalVatAmount,
+      totalWithoutAmount,
       packageItem: packageItem || {},
     };
   },
