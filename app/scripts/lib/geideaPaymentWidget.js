@@ -34,6 +34,12 @@ export default function geideaPaymentWidget(order) {
     }
   }
 
+  const e = document.createElement("link");
+  e.rel="stylesheet";
+  e.type="text/css";
+  e.href="https://www.merchant.geidea.net/hpp/geideapay.min.css"
+  document.getElementsByTagName("HEAD")[0].appendChild(e)
+
   const Scriptjs = require('scriptjs');
 
   Scriptjs('https://www.merchant.geidea.net/hpp/geideapay.min.js', startPayment.bind(this))
