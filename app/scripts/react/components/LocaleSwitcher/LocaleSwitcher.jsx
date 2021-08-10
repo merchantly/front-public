@@ -13,6 +13,10 @@ class LocaleSwitcher extends Component {
     this.handleChange = bind(this.handleChange, this);
   }
   handleChange(event) {
+    window.debug_event = event;
+    console.log(event.target.selectedOptions[0])
+    console.log(event.target.selectedOptions[0].getAttribute("data-url"))
+
     this.props.onChange( event.target.selectedOptions[0].getAttribute("data-url") );
   }
   render() {
