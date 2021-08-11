@@ -73,6 +73,7 @@ class OrderContainer extends Component {
       totalPrice,
       items,
       totalVat,
+      totalWithoutVat
     } = this.props;
 
 
@@ -98,6 +99,7 @@ class OrderContainer extends Component {
         totalCount={totalCount}
         totalPrice={totalPrice}
         totalVat={totalVat}
+        totalWithoutVat={totalWithoutVat}
       />
     );
   }
@@ -151,6 +153,7 @@ export default provideTranslations(connectToRedux(connect(
         totalCount=0,
         totalPrice: cartTotalPrice={},
         totalVat={},
+        totalWithoutVat={},
       }={},
       items,
       formValues,
@@ -215,7 +218,8 @@ export default provideTranslations(connectToRedux(connect(
       totalCount,
       totalPrice,
       items,
-      totalVat
+      totalVat,
+      totalWithoutVat
     };
   },
   {

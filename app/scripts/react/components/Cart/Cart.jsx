@@ -108,6 +108,8 @@ class Cart extends Component {
       selectedPackage,
       t,
       totalPrice,
+      totalVatAmount,
+      totalWithoutAmount,
       showCouponCode,
       deliveryRestrictionMessages,
       recommendedProducts
@@ -200,6 +202,28 @@ class Cart extends Component {
                   selectedPackage={selectedPackage}
                   t={t}
                 />
+                {totalVatAmount && totalVatAmount.cents !== 0 &&
+                  <div className="b-cart__vat-amount">
+                    {t('vendor.cart.vat_amount')}
+                    {' '}
+                    <span>
+                      <HumanizedMoneyWithCurrency
+                        money={totalVatAmount}
+                      />
+                    </span>
+                  </div>
+                }
+                {totalWithoutAmount && totalWithoutAmount.cents !== 0 &&
+                  <div className="b-cart__total-without-amount">
+                    {t('vendor.cart.total_without_amount')}
+                    {' '}
+                    <span>
+                        <HumanizedMoneyWithCurrency
+                          money={totalWithoutAmount}
+                        />
+                      </span>
+                  </div>
+                }
                 <div className="b-cart__total-sum">
                   {t('vendor.cart.overall')}
                   {' '}
@@ -275,6 +299,8 @@ Cart.propTypes = {
   selectedPackage: PropTypes.string,
   t: PropTypes.func.isRequired,
   totalPrice: PropTypes.object.isRequired,
+  totalVatAmount: PropTypes.object,
+  totalWithoutAmount: PropTypes.object,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   recommendedProducts: PropTypes.object,
 };

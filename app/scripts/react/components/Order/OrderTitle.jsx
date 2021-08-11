@@ -24,7 +24,7 @@ class OrderTitle extends Component {
       priceNode.classList.remove('bounce');
     }, 1000);
   }
-  renderTotalVat(totalVat) {
+  renderTotalVat(totalVat, totalWithoutVat) {
     if (!totalVat.cents) {
       return;
     }
@@ -33,7 +33,7 @@ class OrderTitle extends Component {
       t
     } = this.props;
 
-    return t('vendor.order.total_vat', { total_vat: humanizedMoneyWithCurrency(totalVat) });
+    return t('vendor.order.total_vat', { total_vat: humanizedMoneyWithCurrency(totalVat), total_without_vat: humanizedMoneyWithCurrency(totalWithoutVat) });
   }
   render() {
     const {
@@ -41,6 +41,7 @@ class OrderTitle extends Component {
       totalCount,
       totalPrice,
       totalVat,
+      totalWithoutVat
     } = this.props;
 
     if (totalCount || !isEmpty(totalPrice)) {
@@ -54,7 +55,7 @@ class OrderTitle extends Component {
           <strong className="b-cart__title-price" ref="price">
             <HumanizedMoneyWithCurrency money={totalPrice} />
           </strong>
-          { this.renderTotalVat(totalVat) }
+          { this.renderTotalVat(totalVat, totalWithoutVat) }
         </h1>
       );
     }
@@ -68,6 +69,7 @@ OrderTitle.propTypes = {
   totalCount: PropTypes.number.isRequired,
   totalPrice: PropTypes.object.isRequired,
   totalVat: PropTypes.object.isRequired,
+  totalWithoutVat: PropTypes.object.isRequired,
 };
 
 export default OrderTitle;
