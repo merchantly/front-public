@@ -213,7 +213,7 @@ class Cart extends Component {
                     </span>
                   </div>
                 }
-                {totalWithoutAmount && totalWithoutAmount.cents !== 0 &&
+                {totalVatAmount && totalVatAmount.cents !== 0 &&
                   <div className="b-cart__total-without-amount">
                     {t('vendor.cart.total_without_amount')}
                     {' '}

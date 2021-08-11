@@ -29,6 +29,15 @@ class Checkout extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const {
+      errorMessage,
+      fields
+    } = nextProps;
+
+    this.setState({ errorMessage: errorMessage, fields: fields });
+  }
+
   async handleSubmit(event) {
     const { paymentType } = this.props;
 
