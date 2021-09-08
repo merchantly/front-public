@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { simpleFormat } from '../../helpers/text';
 import { find, isEmpty } from 'lodash';
+import Checkbox from "../common/Checkbox";
 
 class CheckoutPayments extends Component {
   itemFullTitle(item) {
@@ -70,11 +71,21 @@ class CheckoutPayments extends Component {
   render() {
     const {
       items,
+      orderCreditAvailable,
     } = this.props;
 
     return (
       <span>
         {items.map(item => this.renderItem(item))}
+        {orderCreditAvailable &&
+          <Checkbox
+            className="boolean m-r-sm"
+            defaultChecked={false}
+            id="vendor_order_is_credit"
+            name="vendor_order[is_credit]"
+            value="1"
+          />
+        }
       </span>
     );
   }
@@ -86,6 +97,7 @@ CheckoutPayments.propTypes = {
   items: PropTypes.array.isRequired,
   onChange: PropTypes.func.isRequired,
   deliveryType: PropTypes.object.isRequired,
+  orderCreditAvailable: PropTypes.bool,
   t: PropTypes.func.isRequired
 };
 

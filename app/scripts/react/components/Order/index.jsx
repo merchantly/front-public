@@ -67,6 +67,7 @@ class OrderContainer extends Component {
         formAuthenticity,
         publicOffer,
         submitOrderUrl,
+        orderCreditAvailable,
         t,
       },
       totalCount,
@@ -93,6 +94,7 @@ class OrderContainer extends Component {
         paymentType={selectedPaymentType}
         paymentTypes={paymentTypes}
         publicOffer={publicOffer}
+        orderCreditAvailable={orderCreditAvailable}
         submitOrderUrl={submitOrderUrl}
         t={t}
         items={this.props.initialProps.cart.items}
@@ -127,6 +129,7 @@ OrderContainer.propTypes = {
     paymentTypes: PropTypes.arrayOf(schemas.paymentType),
     publicOffer: schemas.checkoutPublicOffer,
     submitOrderUrl: PropTypes.string,
+    orderCreditAvailable: PropTypes.bool,
     t: PropTypes.func.isRequired,
   }),
   items: PropTypes.array,
