@@ -78,13 +78,16 @@ class CheckoutPayments extends Component {
       <span>
         {items.map(item => this.renderItem(item))}
         {orderCreditAvailable &&
-          <Checkbox
-            className="boolean m-r-sm"
-            defaultChecked={false}
-            id="vendor_order_is_credit"
-            name="vendor_order[is_credit]"
-            value="1"
-          />
+          <div>
+            <Checkbox
+              className="boolean m-r-sm"
+              defaultChecked={false}
+              id="vendor_order_is_credit"
+              name="vendor_order[is_credit]"
+              value="1"
+            />
+            <span>Is Credit</span>
+          </div>
         }
       </span>
     );
