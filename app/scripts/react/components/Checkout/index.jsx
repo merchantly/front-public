@@ -116,6 +116,7 @@ class Checkout extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
+      orderCreditAvailable,
       totalCount,
       totalPrice,
       t,
@@ -178,6 +179,7 @@ class Checkout extends Component {
                 items={paymentTypes}
                 onChange={onPaymentChange}
                 deliveryType={deliveryType}
+                orderCreditAvailable={orderCreditAvailable}
                 t={t}
               />
             </CheckoutStep>
@@ -217,6 +219,7 @@ Checkout.propTypes = {
   paymentType: PropTypes.object.isRequired,
   paymentTypes: PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
+  orderCreditAvailable: PropTypes.bool,
   submitOrderUrl: PropTypes.string,
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,

@@ -27,7 +27,8 @@ class OrderPage extends Component {
       paymentTypes,
       publicOffer,
       submitOrderUrl,
-      cart
+      cart,
+      orderCreditAvailable,
     } = this.props;
 
     return (
@@ -48,7 +49,8 @@ class OrderPage extends Component {
           paymentTypes,
           publicOffer,
           submitOrderUrl,
-          cart
+          cart,
+          orderCreditAvailable
         }}/>
       </VendorLayoutContainer>
     );
@@ -71,11 +73,12 @@ OrderPage.propTypes = {
   paymentTypeId: PropTypes.number,
   paymentTypes: PropTypes.arrayOf(schemas.paymentType),
   publicOffer: schemas.checkoutPublicOffer,
-  submitOrderUrl: PropTypes.string
+  submitOrderUrl: PropTypes.string,
+  orderCreditAvailable: PropTypes.bool
 };
 
 OrderPage.defaultProps = {
-
+  orderCreditAvailable: false
 };
 
 export default OrderPage;

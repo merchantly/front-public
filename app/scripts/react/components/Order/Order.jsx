@@ -21,6 +21,7 @@ class Order extends Component {
       paymentType,
       paymentTypes,
       publicOffer,
+      orderCreditAvailable,
       submitOrderUrl,
       t,
       items,
@@ -55,6 +56,7 @@ class Order extends Component {
             paymentType={paymentType}
             paymentTypes={paymentTypes}
             publicOffer={publicOffer}
+            orderCreditAvailable={orderCreditAvailable}
             submitOrderUrl={submitOrderUrl}
             totalCount={totalCount}
             totalPrice={totalPrice}
@@ -82,6 +84,7 @@ Order.propTypes = {
   paymentType: PropTypes.object.isRequired,
   paymentTypes: PropTypes.array.isRequired,
   publicOffer: schemas.checkoutPublicOffer,
+  orderCreditAvailable: PropTypes.bool,
   submitOrderUrl: PropTypes.string,
   t: PropTypes.func.isRequired,
   totalCount: PropTypes.number,
