@@ -72,21 +72,26 @@ class CheckoutPayments extends Component {
     const {
       items,
       orderCreditAvailable,
+      t
     } = this.props;
 
     return (
       <span>
         {items.map(item => this.renderItem(item))}
         {orderCreditAvailable &&
-          <div>
-            <Checkbox
-              className="boolean m-r-sm"
-              defaultChecked={false}
-              id="vendor_order_is_credit"
-              name="vendor_order[is_credit]"
-              value="1"
-            />
-            <span>Is Credit</span>
+          <div className="form-group boolean">
+            <span className="b-form__checkbox">
+              <label className="boolean optional">
+                <Checkbox
+                  className="boolean m-r-sm"
+                  defaultChecked={false}
+                  id="vendor_order_is_credit"
+                  name="vendor_order[is_credit]"
+                  value="1"
+                />
+              </label>
+              <span>{t('vendor.payment.is_credit')}</span>
+            </span>
           </div>
         }
       </span>
