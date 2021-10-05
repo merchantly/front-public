@@ -16,7 +16,7 @@ export default class ProductGoodPrices extends Component {
       <div className="b-item__price" itemprop="offers" itemScope itemtype="https://schema.org/Offer">
         <meta itemprop="price" content={minPrice.cents} />
         <meta itemProp="priceCurrency" content={minPrice.currencyIsoCode} />
-        <meta itemProp="availability" content={availability ? "in_stock" : "out_of_stock"} />
+        <meta itemProp="availability" content={availability ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"} />
         <HumanizedMoney money={minPrice} />
         {' - '}
         <HumanizedMoneyWithCurrency money={maxPrice} />
