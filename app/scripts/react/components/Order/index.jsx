@@ -199,7 +199,7 @@ export default provideTranslations(connectToRedux(connect(
             if(paymentDiscount.type == 'percent') {
               cents = cents - (cents * paymentDiscount.discount / 100)
             } else {
-              cents = cents - paymentDiscount.discount
+              cents = cents - (paymentDiscount.discount * 100)
             }
           }
         }
