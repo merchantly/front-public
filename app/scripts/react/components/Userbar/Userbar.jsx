@@ -83,7 +83,7 @@ class Userbar extends Component {
               url={cabinetUrl}
             />
           }
-          {vendorIsPublished === false && (
+          {vendorIsPublished === false && !launchFromIFrame && (
             <PublishShopButton publishShopUrl={publishShopUrl} t={t} />
           )}
         </div>
