@@ -12,9 +12,7 @@ class Alert extends Component {
     });
 
     return (
-      <div className={alertClasses}>
-        {text}
-      </div>
+      <div className={alertClasses} dangerouslySetInnerHTML={{ __html: text }} />
     );
   }
 }
