@@ -13,6 +13,7 @@ class DictionaryEntitiesShowPage extends Component {
       products,
       title,
       vendorRootPath,
+      showCartButton,
       showNextButton,
       nextButton
     } = this.props;
@@ -23,6 +24,7 @@ class DictionaryEntitiesShowPage extends Component {
           showNextButton={showNextButton}
           nextButton={nextButton}
           entity={entity}
+          showCartButton={showCartButton}
           i18n={i18n}
           products={products}
           title={title}
@@ -40,6 +42,7 @@ DictionaryEntitiesShowPage.propTypes = {
   products: ProductList.wrapped.propTypes.products,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
+  showCartButton: ProductList.wrapped.propTypes.showCartButton,
 };
 
 DictionaryEntitiesShowPage.defaultProps = {
