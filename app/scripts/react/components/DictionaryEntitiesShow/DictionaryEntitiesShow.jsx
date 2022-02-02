@@ -9,6 +9,7 @@ class DictionaryEntitiesShow extends Component {
       nextButton,
       products,
       showNextButton,
+      showCartButton,
       t,
       title,
       vendorRootPath,
@@ -21,6 +22,7 @@ class DictionaryEntitiesShow extends Component {
           nextButton={nextButton}
           products={products}
           showNextButton={showNextButton}
+          showCartButton={showCartButton}
           showPagination
           title={title}
           t={t}
@@ -43,6 +45,7 @@ DictionaryEntitiesShow.propTypes = {
   entity: PropTypes.object.isRequired,
   nextButton: PropTypes.object,
   products: PropTypes.object.isRequired,
+  showCartButton: ProductList.propTypes.showCartButton,
   showNextButton: PropTypes.bool,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,

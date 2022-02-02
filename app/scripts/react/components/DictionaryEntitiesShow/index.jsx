@@ -13,6 +13,7 @@ class DictionaryEntitiesShowContainer extends Component {
 DictionaryEntitiesShowContainer.propTypes = {
   entity: ProductList.wrapped.propTypes.container,
   products: ProductList.wrapped.propTypes.products,
+  showCartButton: ProductList.wrapped.propTypes.showCartButton,
   t: PropTypes.func.isRequired,
   title: PropTypes.string,
   vendorRootPath: PropTypes.string,
