@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import PinAlert from './PinAlert';
 import FormAuthenticity from 'rc/common/FormAuthenticity';
 import * as schemas from 'r/schemas';
 
 class ClientSessionNew extends Component {
   handleKeyPress(event) {
-    if(event.key === 'Enter'){
+    if (event.key === 'Enter') {
       event.preventDefault();
       document.getElementById('loginSubmit').click();
     }
@@ -16,11 +15,12 @@ class ClientSessionNew extends Component {
     const {
       formAuthenticity,
       t,
-      timeout,
       vendorClientSessionsPath,
       vendorClientRegistrationPath,
       phoneValue,
       clientRegistrationButtonText,
+      clientResetPasswordPath,
+      clientResetPasswordButtonText,
     } = this.props;
 
     return (
@@ -37,7 +37,7 @@ class ClientSessionNew extends Component {
               {t('vendor.client.auth')}
             </h1>
             <div className="b-form__row__widget">
-              <div className="form-group-first">
+              <div className="form-group-first client-form-login-field">
                 <input
                   id="client_login_form_login"
                   name="client_login_form[login]"
@@ -47,7 +47,6 @@ class ClientSessionNew extends Component {
                   onKeyPress={this.handleKeyPress}
                 />
               </div>
-              <PinAlert t={t} timeout={timeout} />
             </div>
             <input
               id="client_login_form_password"
@@ -65,18 +64,24 @@ class ClientSessionNew extends Component {
               >
                 {t('vendor.client.submit')}
               </button>
+              <div className="b-registration_button_block">
+                {clientRegistrationButtonText
+                  && (
+                    <div className='b-registration_button_text' dangerouslySetInnerHTML={{ __html: clientRegistrationButtonText }} />
+                  )
+                }
+                <a className='b-registration_button' href={vendorClientRegistrationPath}>
+                  {t('vendor.client.registration')}
+                </a>
+              </div>
+              <div className="b-reset_password_button_block">
+                reset password
+                <button className='b-registration_button' href={clientResetPasswordPath}>
+                  reset button
+                </button>
+              </div>
             </div>
           </form>
-        </div>
-        <div className="b-registration_button_block">
-          {clientRegistrationButtonText
-            && (
-              <div className='b-registration_button_text' dangerouslySetInnerHTML={{__html: clientRegistrationButtonText}} />
-            )
-          }
-          <a className='b-registration_button' href={vendorClientRegistrationPath}>
-            {t('vendor.client.registration')}
-          </a>
         </div>
       </div>
     );
@@ -91,6 +96,7 @@ ClientSessionNew.propTypes = {
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
   clientRegistrationButtonText: PropTypes.string,
+  clientResetPasswordPath: PropTypes.string.isRequired,
 };
 
 ClientSessionNew.defaultProps = {
