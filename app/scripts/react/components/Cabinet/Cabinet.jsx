@@ -91,8 +91,6 @@ class Cabinet extends Component {
                 </div>
               </div>
             </div>
-            <ClientForm {...clientForm} t={t}/>
-            { companyForm && <CompanyForm {...companyForm} t={t}/> }
             {items.length ? (
               <div>
                 <div className="b-cabinet__orders_title">{t('vendor.client.cabinet.orders')}</div>
@@ -101,13 +99,15 @@ class Cabinet extends Component {
                 </ul>
                 <Pagination currentPage={currentPage} totalPages={totalPages} />
               </div>
-              ) : (
+            ) : (
               <div className="b-text b-text_center">
                 <p>
                   {t('vendor.orders.empty')}
                 </p>
               </div>
             )}
+            <ClientForm {...clientForm} t={t} />
+            {companyForm && <CompanyForm {...companyForm} t={t} />}
           </div>
           <div className="b-cart__action" />
         </section>
