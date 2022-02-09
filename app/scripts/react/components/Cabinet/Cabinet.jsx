@@ -17,8 +17,7 @@ class Cabinet extends Component {
         resetPasswordUrl,
       },
       orders: {
-        currentPage,
-        totalPages,
+        pagination,
         items,
       },
       clientForm,
@@ -97,7 +96,7 @@ class Cabinet extends Component {
                 <ul className="b-cart__list">
                   {items.map((order) => <CabinetOrder {...order} key={order.id} />)}
                 </ul>
-                <Pagination currentPage={currentPage} totalPages={totalPages} />
+                <Pagination {...pagination} />
               </div>
             ) : (
               <div className="b-text b-text_center">
@@ -125,8 +124,7 @@ Cabinet.propTypes = {
     resetPasswordUrl: PropTypes.string.isRequired,
   }).isRequired,
   orders: PropTypes.shape({
-    currentPage: Pagination.propTypes.currentPage,
-    totalPages: Pagination.propTypes.totalPages,
+    pagination: PropTypes.object.isRequired,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
   clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,

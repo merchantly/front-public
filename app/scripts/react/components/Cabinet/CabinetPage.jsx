@@ -44,8 +44,7 @@ CabinetPage.propTypes = {
     resetPasswordUrl: PropTypes.string.isRequired,
   }).isRequired,
   orders: PropTypes.shape({
-    currentPage: Pagination.propTypes.currentPage,
-    totalPages: Pagination.propTypes.totalPages,
+    pagination: PropTypes.object.isRequired,
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
   clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
