@@ -33,18 +33,18 @@ class CabinetOrder extends Component {
     } = this.props;
 
     return (
-      <li className="b-cart__item">
-        <div className="b-cart__item__col-quantity">
+      <li className="row orders-list">
+        <div className="col-md-2 orders-list-element">
           {localId}
-          <OrderState state={workflowState}/>
+          <OrderState state={workflowState} />
           <div className="text-small text-muted m-t-sm">
             {createdDate}
           </div>
         </div>
-        <div className="b-cart__item__col-price">
+        <div className="col-md-2 orders-list-element">
           <h2 className="b-cart__item__title">
             <a href={clientOrderUrl}>
-              <span dangerouslySetInnerHTML={{__html: title}}></span>
+              <span dangerouslySetInnerHTML={{ __html: title }}></span>
             </a>
           </h2>
           {itemsCount > 0 && (
@@ -53,7 +53,7 @@ class CabinetOrder extends Component {
             </small>
           )}
         </div>
-        <div className="b-cart__item__col-price">
+        <div className="col-md-2 orders-list-element">
           <div className="b-cart__item__price">
             <a href={clientOrderUrl}>
               {totalWithDeliveryPrice}
@@ -67,21 +67,21 @@ class CabinetOrder extends Component {
             orderPaymentType={paymentType}
           />
         </div>
-        <div className="b-cart__item__col-price">
+        <div className="col-md-2 orders-list-element">
           <div className="b-cart__item__quantity__text">
             {`${deliveryName}`}
           </div>
           <OrderReserveStateIcon {...reservation} />
           <OrderDeliveryIcon {...delivery} />
         </div>
-        <div className="b-cart__item__col-remove">
-            <a
-              className="b-btn element--active-opacity"
-              data-method="post"
-              href={duplicatePath}
-            > 
-              {t('vendor.cabinet_order.duplicate')}
-            </a>
+        <div className="col-md-2 orders-list-element">
+          <a
+            className="b-btn element--active-opacity duplicate-button"
+            data-method="post"
+            href={duplicatePath}
+          >
+            {t('vendor.cabinet_order.duplicate')}
+          </a>
         </div>
       </li>
     );
