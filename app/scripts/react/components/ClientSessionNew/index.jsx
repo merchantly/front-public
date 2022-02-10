@@ -16,6 +16,7 @@ ClientSessionNewContainer.propTypes = {
   timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
+  vendorClientRestorePasswordPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
   clientRegistrationButtonText: PropTypes.string,
 };

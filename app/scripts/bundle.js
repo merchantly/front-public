@@ -89,5 +89,6 @@ global.ContentPagePage = require('rc/ContentPage/ContentPagePage');
 global.ErrorPagePage = require('rc/ErrorPage/ErrorPagePage');
 global.ClientRegistrationPage = require('rc/ClientRegistration/ClientRegistrationPage');
 global.ClientResetPasswordPage = require('rc/ClientResetPassword/ClientResetPasswordPage');
+global.ClientRestorePasswordPage = require('rc/ClientRestorePassword/ClientRestorePasswordPage');
 
 import './react/application';
