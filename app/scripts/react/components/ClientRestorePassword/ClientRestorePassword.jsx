@@ -9,6 +9,7 @@ class ClientRestorePassword extends Component {
     const {
       t,
       vendorClientRestorePasswordPath,
+      login,
     } = this.props;
 
     return (
@@ -31,6 +32,7 @@ class ClientRestorePassword extends Component {
                   name="client_login_form[login]"
                   placeholder={t('vendor.client.placeholders.login')}
                   type="text"
+                  defaultValue={login}
                 />
               </div>
             </div>
@@ -52,6 +54,7 @@ class ClientRestorePassword extends Component {
 ClientRestorePassword.propTypes = {
   t: PropTypes.func.isRequired,
   vendorClientRestorePasswordPath: PropTypes.string.isRequired,
+  login: PropTypes.string,
 };
 
 export default provideTranslations(ClientRestorePassword);
