@@ -63,3 +63,8 @@
 .b-footer__link {
   line-height: 24px;
 }
+
+// Чтобы в личном кабинете добавить промежуток между полем пароля и логина
+.client-form-login-field {
+  margin-bottom: 10px;
+}

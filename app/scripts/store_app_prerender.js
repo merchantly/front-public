@@ -79,3 +79,4 @@ global.ErrorPagePage = require('./react/components/ErrorPage/ErrorPagePage').def
 global.ContentPagePage = require('./react/components/ContentPage/ContentPagePage').default;
 global.ClientRegistrationPage = require('./react/components/ClientRegistration/ClientRegistrationPage').default;
 global.ClientResetPasswordPage = require('./react/components/ClientResetPassword/ClientResetPasswordPage').default;
+global.ClientRestorePasswordPage = require('./react/components/ClientRestorePassword/ClientRestorePasswordPage').default;
