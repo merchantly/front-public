@@ -10,7 +10,6 @@ class ClientSessionNewPage extends Component {
       formAuthenticity,
       i18n,
       layoutProps,
-      timeout,
       vendorClientSessionsPath,
       vendorClientRegistrationPath,
       vendorClientRestorePasswordPath,
@@ -23,7 +22,6 @@ class ClientSessionNewPage extends Component {
         <ClientSessionNewContainer {...{
           formAuthenticity,
           i18n,
-          timeout,
           vendorClientSessionsPath,
           vendorClientRegistrationPath,
           vendorClientRestorePasswordPath,
@@ -40,7 +38,6 @@ ClientSessionNewPage.propTypes = {
   formAuthenticity: schemas.formAuthenticity.isRequired,
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
-  timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   vendorClientRestorePasswordPath: PropTypes.string.isRequired,

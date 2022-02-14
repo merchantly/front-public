@@ -13,16 +13,11 @@ class ClientSessionNewContainer extends Component {
 ClientSessionNewContainer.propTypes = {
   formAuthenticity: schemas.formAuthenticity.isRequired,
   t: PropTypes.func.isRequired,
-  timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   vendorClientRestorePasswordPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
   clientRegistrationButtonText: PropTypes.string,
-};
-
-ClientSessionNewContainer.defaultProps = {
-  timeout: 0,
 };
 
 export default provideTranslations(ClientSessionNewContainer);

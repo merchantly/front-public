@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import PinAlert from './PinAlert';
 import FormAuthenticity from 'rc/common/FormAuthenticity';
 import * as schemas from 'r/schemas';
 
@@ -16,7 +15,6 @@ class ClientSessionNew extends Component {
     const {
       formAuthenticity,
       t,
-      timeout,
       vendorClientSessionsPath,
       vendorClientRegistrationPath,
       vendorClientRestorePasswordPath,
@@ -91,16 +89,11 @@ class ClientSessionNew extends Component {
 ClientSessionNew.propTypes = {
   formAuthenticity: schemas.formAuthenticity.isRequired,
   t: PropTypes.func.isRequired,
-  timeout: PropTypes.number,
   vendorClientSessionsPath: PropTypes.string.isRequired,
   vendorClientRegistrationPath: PropTypes.string.isRequired,
   phoneValue: PropTypes.string,
   clientRegistrationButtonText: PropTypes.string,
   vendorClientRestorePasswordPath: PropTypes.string.isRequired,
-};
-
-ClientSessionNew.defaultProps = {
-  timeout: 0,
 };
 
 export default ClientSessionNew;
