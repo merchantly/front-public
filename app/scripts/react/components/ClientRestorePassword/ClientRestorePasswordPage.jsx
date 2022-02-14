@@ -10,6 +10,7 @@ class ClientRestorePasswordPage extends Component {
       i18n,
       layoutProps,
       vendorClientRestorePasswordPath,
+      login,
     } = this.props;
 
     return (
@@ -17,6 +18,7 @@ class ClientRestorePasswordPage extends Component {
         <ClientRestorePassword {...{
           i18n,
           vendorClientRestorePasswordPath,
+          login,
         }}
         />
       </VendorLayoutContainer>
@@ -28,6 +30,7 @@ ClientRestorePasswordPage.propTypes = {
   i18n: PropTypes.object,
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   vendorClientRestorePasswordPath: PropTypes.string.isRequired,
+  login: PropTypes.string,
 };
 
 export default ClientRestorePasswordPage;
