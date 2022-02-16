@@ -41,7 +41,7 @@ class ClientRestorePassword extends Component {
                 className="b-btn"
                 name="commit"
                 type="submit"
-                value={t('vendor.client.reset_password_submit')}
+                value={t('vendor.client.restore_password_submit')}
               />
             </div>
           </form>
