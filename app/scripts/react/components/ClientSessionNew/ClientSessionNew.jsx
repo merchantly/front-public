@@ -65,21 +65,21 @@ class ClientSessionNew extends Component {
               </button>
             </div>
           </form>
-          <div className="b-registration_button_block">
-            {clientRegistrationButtonText
-              && (
-                <div className='b-registration_button_text' dangerouslySetInnerHTML={{ __html: clientRegistrationButtonText }} />
-              )
-            }
-            <a className='b-registration_button' href={vendorClientRegistrationPath}>
-              {t('vendor.client.registration')}
-            </a>
-          </div>
           <div className="client-restore-password-block">
             <a className='b-registration_button' href={vendorClientRestorePasswordPath}>
               {t('vendor.client.restore_password')}
             </a>
           </div>
+        </div>
+        <div className="b-registration_button_block">
+          {clientRegistrationButtonText
+            && (
+              <div className='b-registration_button_text' dangerouslySetInnerHTML={{ __html: clientRegistrationButtonText }} />
+            )
+          }
+          <a className='b-registration_button' href={vendorClientRegistrationPath}>
+            {t('vendor.client.registration')}
+          </a>
         </div>
       </div>
     );
