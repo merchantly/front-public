@@ -87,6 +87,8 @@ CartContainer.propTypes = {
   minimalPrice: schemas.money,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   recommendedProducts: PropTypes.object,
+  totalVatAmount: PropTypes.object,
+  totalWithoutAmount: PropTypes.object,
 
   // calculated props
   amounts: PropTypes.object.isRequired,
@@ -135,42 +137,42 @@ export default provideTranslations(connectToRedux(connect(
       cart,
       packages: packagesStore,
     } = storeInitialized && !isTesting
-      ? state
-      : ({
-        cart: initCartStore(state.cart, initCart(initialCart || {})),
-        packages: initPackageStore(state.packages, initPackages(initialPackages ||{})),
-      });
+        ? state
+        : ({
+          cart: initCartStore(state.cart, initCart(initialCart || {})),
+          packages: initPackageStore(state.packages, initPackages(initialPackages || {})),
+        });
 
     const {
       cart: {
         cleanCartUrl: cleanCartUrl,
-        defaultUrl: cartDefaultUrl='',
-        errors: cartErrors={},
-        items: cartItems=[],
+        defaultUrl: cartDefaultUrl = '',
+        errors: cartErrors = {},
+        items: cartItems = [],
         packageItem,
-        totalPrice: cartTotalPrice={},
+        totalPrice: cartTotalPrice = {},
         showCouponCode,
       },
-      isFetching: cartIsFetching=false,
-      amounts={},
+      isFetching: cartIsFetching = false,
+      amounts = {},
       coupon,
       packageCount,
       selectedPackage,
     } = cart;
     const {
-      packages=[],
-      isFetching: packagesIsFetching=false,
+      packages = [],
+      isFetching: packagesIsFetching = false,
     } = packagesStore;
     const couponCode = coupon && coupon.value || '';
 
     const prices = mapValues(amounts, (amount, itemId) => {
-        const item = find(cartItems, (i) => String(i.id) === itemId) || {};
-        const actualPrice = getIn(item, ['good', 'actualPrice', 'price']) || {};
-        const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
-        const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
+      const item = find(cartItems, (i) => String(i.id) === itemId) || {};
+      const actualPrice = getIn(item, ['good', 'actualPrice', 'price']) || {};
+      const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
+      const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
 
-        return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
-      });
+      return set(actualPrice, 'cents', amount * koeff * (actualPrice.cents || 0));
+    });
 
     const selectedPackageMoney = selectedPackage &&
       getIn(find(packages, (p) => p.globalId === selectedPackage), ['price']);
@@ -187,26 +189,6 @@ export default provideTranslations(connectToRedux(connect(
     const packagePrice = !isEmpty(packageItem)
       ? set(packageItem.good.actualPrice, 'price', 'cents', packagePriceCents)
       : set(selectedPackageMoney, 'cents', packagePriceCents);
-
-    const vatAmounts = mapValues(amounts, (amount, itemId) => {
-      const item = find(cartItems, (i) => String(i.id) === itemId) || {};
-      const vatAmount = getIn(item, ['good', 'vatAmount']) || {};
-      const isWeighted = getIn(item, ['good', 'sellingByWeight']) || false;
-      const koeff = isWeighted ? (1 / (getIn(item, ['good', 'weightOfPrice']) || 1)) : 1;
-
-      return set(vatAmount, 'cents', amount * koeff * (vatAmount.cents || 0))
-    });
-    const packageVatCents = !isEmpty(packageItem)
-      ? getIn(packageItem, ['good', 'vatAmount', 'cents']) * packageCount
-      : 0;
-
-    const totalVatAmount = set(
-      totalPrice,
-      'cents',
-      reduce(vatAmounts, (acc, price) => acc + (price.cents || 0), packageVatCents)
-    );
-
-    const totalWithoutAmount = set(totalPrice, 'cents', totalPrice.cents - totalVatAmount.cents);
 
     return {
       amounts,
@@ -225,8 +207,6 @@ export default provideTranslations(connectToRedux(connect(
       prices,
       selectedPackage,
       totalPrice,
-      totalVatAmount,
-      totalWithoutAmount,
       packageItem: packageItem || {},
     };
   },
