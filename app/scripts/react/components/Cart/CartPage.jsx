@@ -17,7 +17,7 @@ class CartPage extends Component {
       isHeaderButtons,
       continueShoppingUrl,
       deliveryRestrictionMessages,
-      recommendedProducts
+      recommendedProducts,
     } = this.props;
 
     return (
