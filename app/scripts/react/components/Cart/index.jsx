@@ -87,8 +87,6 @@ CartContainer.propTypes = {
   minimalPrice: schemas.money,
   deliveryRestrictionMessages: PropTypes.arrayOf(PropTypes.string),
   recommendedProducts: PropTypes.object,
-  totalVatAmount: PropTypes.object,
-  totalWithoutAmount: PropTypes.object,
 
   // calculated props
   amounts: PropTypes.object.isRequired,
@@ -152,6 +150,8 @@ export default provideTranslations(connectToRedux(connect(
         packageItem,
         totalPrice: cartTotalPrice = {},
         showCouponCode,
+        vatAmount,
+        totalWithoutVatPrice,
       },
       isFetching: cartIsFetching = false,
       amounts = {},
@@ -207,6 +207,8 @@ export default provideTranslations(connectToRedux(connect(
       prices,
       selectedPackage,
       totalPrice,
+      totalVatAmount: vatAmount,
+      totalWithoutAmount: totalWithoutVatPrice,
       packageItem: packageItem || {},
     };
   },
