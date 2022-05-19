@@ -6,7 +6,7 @@ import FormAuthenticity from '../common/FormAuthenticity';
 import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurrency';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import Rodal from 'rodal';
-import ReactSpinner  from 'react16-spinjs';
+import ReactSpinner from 'react16-spinjs';
 import * as schemas from 'r/schemas';
 import size from 'lodash/size';
 import omit from 'lodash/omit';
@@ -40,13 +40,13 @@ class Cart extends Component {
 
     return (
       <div
-        dangerouslySetInnerHTML={{__html: err}}
+        dangerouslySetInnerHTML={{ __html: err }}
         id={id}
         key={id}
       />
     );
   }
-  renderErrors(suffix='') {
+  renderErrors(suffix = '') {
     const {
       cartErrors,
       isBelowMinimalPrice,
@@ -55,11 +55,11 @@ class Cart extends Component {
     } = this.props;
 
     //const errors = map(
-      //mapKeys(
-        //flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
-        //(_, k) => `${k}-${suffix}`
-      //),
-      //this.renderError
+    //mapKeys(
+    //flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
+    //(_, k) => `${k}-${suffix}`
+    //),
+    //this.renderError
     //)
 
     const buffer = mapKeys(
@@ -123,7 +123,7 @@ class Cart extends Component {
     return (
       <section className="b-cart">
         <Rodal
-          onClose={() => {}}
+          onClose={() => { }}
           showCloseButton={false}
           visible={isProcessing}
         >
@@ -218,10 +218,10 @@ class Cart extends Component {
                     {t('vendor.cart.total_without_amount')}
                     {' '}
                     <span>
-                        <HumanizedMoneyWithCurrency
-                          money={totalWithoutAmount}
-                        />
-                      </span>
+                      <HumanizedMoneyWithCurrency
+                        money={totalWithoutAmount}
+                      />
+                    </span>
                   </div>
                 }
                 <div className="b-cart__total-sum">
@@ -249,7 +249,7 @@ class Cart extends Component {
                       </a>
                     </div>
                     <div className="b-cart__action__col-right">
-                      { showCouponCode && <CartCoupon code={couponCode} t={t} /> }
+                      {showCouponCode && <CartCoupon code={couponCode} t={t} />}
                       <div className="b-cart__action__col-submit">
                         <input
                           className="b-cart__action__submit b-btn element--active-opacity"

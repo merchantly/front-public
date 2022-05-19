@@ -34,7 +34,7 @@ class CartPage extends Component {
           initialPackages={initialPackages}
           isTesting={isTesting}
           minimalPrice={minimalPrice}
-          deliveryRestrictionMessages= {deliveryRestrictionMessages}
+          deliveryRestrictionMessages={deliveryRestrictionMessages}
           recommendedProducts={recommendedProducts}
         />
       </VendorLayoutContainer>
