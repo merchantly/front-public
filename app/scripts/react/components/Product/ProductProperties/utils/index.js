@@ -128,7 +128,7 @@ function getEnabledValues(propertyID, goods, filters) {
     if (isGoodFiltered(good, filters)) {
       const attrValue = good.attributes[propertyID];
 
-      if (typeof attrValue !== 'undefined') {
+      if (typeof attrValue !== 'undefined' && good.isOrdering) {
         const attrIndex = previous.indexOf(attrValue);
         if (attrIndex === -1) previous.push(attrValue);
       }
