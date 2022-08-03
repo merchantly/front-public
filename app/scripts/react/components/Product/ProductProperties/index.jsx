@@ -95,17 +95,17 @@ class ProductProperties extends Component {
     } = this.state;
 
     const hiddenInputGood = good && (
-        <HiddenInput
-          name="cart_item[good_id]"
-          value={good.globalId}
-        />
-      );
+      <HiddenInput
+        name="cart_item[good_id]"
+        value={good.globalId}
+      />
+    );
     const hiddenInputProductPrice = good && (
-        <HiddenInput
-          name="cart_item[product_price_id]"
-          value={good.actualPrice.id}
-        />
-      );
+      <HiddenInput
+        name="cart_item[product_price_id]"
+        value={good.actualPrice.id}
+      />
+    );
     const addToCartButton = (
       <ProductAddToCartButton
         isAddingGood={isAddingGood}
