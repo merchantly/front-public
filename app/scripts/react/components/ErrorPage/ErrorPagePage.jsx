@@ -32,8 +32,8 @@ ErrorPagePage.propTypes = {
   layoutProps: PropTypes.shape(...VendorLayoutContainer.propTypes).isRequired,
   subject: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
+  phone: PropTypes.string,
+  email: PropTypes.string
 };
 
 export default ErrorPagePage;

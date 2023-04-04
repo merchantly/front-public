@@ -21,9 +21,9 @@ class ErrorPage extends Component {
             { content }
             <br />
             <br />
-            <a href='tel:{ phone }'>{ phone }</a>
-            <span className="middot">&sdot;</span>
-            <a href='mailto: { email }'>{ email }</a>
+              { (phone) && <a href={ 'tel:' + phone }>{ phone }</a> }
+              { (phone && email) &&  <span className="middot">&sdot;</span> }
+              { (email) && <a href={ 'mailto:' + email }>{ email }</a> }
           </p>
         </div>
       </div>
@@ -34,13 +34,13 @@ class ErrorPage extends Component {
 ErrorPage.propTypes = {
   subject: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
+  phone: PropTypes.string,
+  email: PropTypes.string
 };
 
 ErrorPage.defaultProps = {
-  phone: '8(800)77-55-661',
-  email: 'support@kiiiosk.ru'
+  phone: null, // '8(800)77-55-661',
+  email: null, // 'support@kiiiosk.store'
 };
 
 export default ErrorPage;
