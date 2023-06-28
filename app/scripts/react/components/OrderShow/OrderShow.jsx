@@ -29,7 +29,7 @@ class OrderShow extends Component {
       t,
     } = this.props;
     const {
-      externalId,
+      publicId,
       orderDelivery,
       deliveryType={},
       freeDelivery,
@@ -55,7 +55,7 @@ class OrderShow extends Component {
       <section className="b-cart">
         <div className="b-cart__content">
           <h1 className="b-cart__title">
-            {t('vendor.order.title', { number: externalId })}
+            {t('vendor.order.title', { number: publicId })}
           </h1>
           <div className="b-cart__message">
             {deliveryComment && <div className="alert alert-warning">{deliveryComment}</div>}

@@ -14,7 +14,7 @@ class OrderPaid extends Component {
       vendorRootPath,
     } = this.props;
     const {
-      externalId,
+      publicId,
       adminComments,
       orderDelivery,
       workflowState,
@@ -28,7 +28,7 @@ class OrderPaid extends Component {
       <section className="b-cart">
         <div className="b-cart__content">
           <h1 className="b-cart__title">
-            {t('vendor.order.title', { number: externalId })}
+            {t('vendor.order.title', { number: publicId })}
             <span className="b-cart__state">
               <OrderState state={workflowState} />
             </span>

@@ -16,7 +16,7 @@ class OrderCancelled extends Component {
       vendorRootPath,
     } = this.props;
     const {
-      externalId,
+      publicId,
       workflowState: {
         bgStyle,
         title,
@@ -28,7 +28,7 @@ class OrderCancelled extends Component {
       <section className="b-cart">
         <div className="b-cart__content">
           <h1 className="b-cart__title">
-            {t('vendor.order.title', { number: externalId })}
+            {t('vendor.order.title', { number: publicId })}
             <span className="label label-success" ref="state">
               {title}
             </span>

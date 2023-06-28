@@ -21,7 +21,7 @@ class OrderCreated extends Component {
     } = this.props;
     const {
       phone,
-      externalId,
+      publicId,
       defaultUrl, // vendor_order_path(order.external_id)
       adminComments,
       totalWithDeliveryPrice,
@@ -32,7 +32,7 @@ class OrderCreated extends Component {
     } = order;
     const message = t('vendor.order.created.desc_html', {
       phone,
-      link: `<a href="${defaultUrl}">${externalId}</a>`,
+      link: `<a href="${defaultUrl}">${publicId}</a>`,
       price: humanizedMoneyWithCurrency(totalWithDeliveryPrice),
     });
     const freeDeliveryMessage = freeDelivery
@@ -51,7 +51,7 @@ class OrderCreated extends Component {
             <OrderComments comments={adminComments} />
             <p>
               <a href={defaultUrl}>
-                {t('vendor.order.title', { number: externalId })}
+                {t('vendor.order.title', { number: publicId })}
               </a>
             </p>
             <p dangerouslySetInnerHTML={{ __html: message }} />
