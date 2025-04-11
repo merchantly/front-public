@@ -4,6 +4,7 @@ import classNames from 'classnames';
 
 import ProductGoodActualPrice from './ProductGoodActualPrice';
 import HumanizedMoneyWithCurrency from '../../common/Money/HumanizedMoneyWithCurrency';
+import { money } from 'r/helpers/money';
 
 class ProductGoodPrice extends Component {
   static propTypes = {
@@ -27,7 +28,7 @@ class ProductGoodPrice extends Component {
       return (
         <span>
           <div className="b-item__price b_item_price_sale" itemprop="offers" itemScope itemtype="https://schema.org/Offer">
-            {good.actualPrice && <meta itemProp="price" content={good.actualPrice.price.cents}/>}
+            {good.actualPrice && <meta itemProp="price" content={money(good.actualPrice.price)}/>}
             {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode}/>}
             <meta itemProp="availability" content={product.hasOrderingGoods ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"} />
             <ProductGoodActualPrice good={good} t={t} />
@@ -45,7 +46,7 @@ class ProductGoodPrice extends Component {
 
       return (
         <div className={priceClasses} itemprop="offers" itemScope itemtype="https://schema.org/Offer">
-          {good.actualPrice && <meta itemProp="price" content={good.actualPrice.price.cents}/>}
+          {good.actualPrice && <meta itemProp="price" content={money(good.actualPrice.price)}/>}
           {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode}/>}
           <meta itemProp="availability" content={product.hasOrderingGoods ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"} />
           <ProductGoodActualPrice good={good} product={product} t={t} />

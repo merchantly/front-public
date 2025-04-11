@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import HumanizedMoney from '../../common/Money/HumanizedMoney';
 import HumanizedMoneyWithCurrency from '../../common/Money/HumanizedMoneyWithCurrency';
+import { money } from 'r/helpers/money';
 
 export default class ProductGoodPrices extends Component {
   static propTypes = {
@@ -14,7 +15,7 @@ export default class ProductGoodPrices extends Component {
 
     return (
       <div className="b-item__price" itemprop="offers" itemScope itemtype="https://schema.org/Offer">
-        <meta itemprop="price" content={minPrice.cents} />
+        <meta itemprop="price" content={money(minPrice)} />
         <meta itemProp="priceCurrency" content={minPrice.currencyIsoCode} />
         <meta itemProp="availability" content={availability ? "http://schema.org/InStock" : "http://schema.org/OutOfStock"} />
         <HumanizedMoney money={minPrice} />
