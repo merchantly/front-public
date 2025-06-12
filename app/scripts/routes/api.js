@@ -47,7 +47,7 @@ export function packages() {
 }
 
 export function clientState() {
-  return `${publicUrl()}/v1/client_state.json`;
+  return `${publicUrl()}/universal/client_state.json`;
 }
 
 export function operatorState() {
