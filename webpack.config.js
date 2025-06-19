@@ -5,12 +5,15 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import rules from './webpack/rules.js';
-import { env, isDevMode } from './webpack/base.js';
-
 import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
 
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+
+export const isDevMode = process.env.NODE_ENV !== 'production';
+export const env = isDevMode ? 'development' : 'production';
+
+console.log('webpack isDevMode', isDevMode);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
