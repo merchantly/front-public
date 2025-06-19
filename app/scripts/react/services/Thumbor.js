@@ -3,19 +3,22 @@ const MAX_POW = 12;
 function stepSize(size) {
   for (let p = 6; p<=MAX_POW; p++) {
     const pow = Math.pow(2, p);
-    if (pow <= size) {
+    if (size <= pow) {
+      console.log(`Return for size: ${size} -> ${pow}`);
       return pow;
     }
   }
-  return Math.pow(maxPow);
+  const pow = Math.pow(maxPow);
+  console.log(`Return for size: ${size} -> ${pow}`);
+  return pow;
 }
 
 function stepSizes(size, rk = 1) {
   var width, height;
   if (size.width && size.height) {
     width = stepSize(size.width) * rk;
-    const k = size.width/width;
-    height = Math.round(size.height * k) * rk;
+    const k = width/size.width;
+    height = Math.round(size.height * k);
   } else if (size.width) {
     width = stepSize(size.width) * rk;
     height = ''
@@ -23,6 +26,7 @@ function stepSizes(size, rk = 1) {
     height = stepSize(size.height) * rk;
     width = ''
   }
+  console.log(`Request size: ${size}, ${rk}, return [${width}, ${height}]`);
   return [width, height];
 }
 
