@@ -164,6 +164,7 @@
     "semver": "^6.3.1",
     "sinon": "^7.3.2",
     "source-map-support": "^0.5.12",
+    "stream-browserify": "^3.0.0",
     "string-replace-loader": "^2.1.1",
     "style-loader": "^0.23.1",
     "uglifyjs": "^2.4.10",

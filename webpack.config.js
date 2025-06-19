@@ -24,7 +24,8 @@ const baseConfig = {
   },
   resolve: {
     preferRelative: true,
-    // fallback: { "stream": require.resolve("stream-browserify") },
+    // fallback: { "stream": false },
+    fallback: { "stream": path.join(__dirname, 'node_modules/stream-browserify') },
     modules: [
       'node_modules',
       path.join(__dirname, 'node_modules/@bower_components'),
@@ -67,7 +68,8 @@ const devConfig = {
   },
   resolve: {
     preferRelative: true,
-    // fallback: { "stream": require.resolve("stream-browserify") },
+    // fallback: { "stream": false },
+    fallback: { "stream": path.join(__dirname, 'node_modules/stream-browserify') },
     modules: [
       'node_modules',
       path.join(__dirname, 'node_modules/@bower_components'),
