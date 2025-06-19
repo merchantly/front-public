@@ -23,7 +23,7 @@ jobs:
       run: yarn install
     - name: Build
       run: yarn build
-    - name: Tests
-      run: |
-        npm test:browser
-        npm test:prerender
+    - name: Test browser
+      run: yarn test:browser
+    - name: Test prerender
+      run: yarn test:prerender
