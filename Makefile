@@ -23,5 +23,6 @@ npm-purge:
 
 .PHONY: test
 test:
-	yarn test:browser
+	yarn test:mini_racer
 	yarn test:prerender
+	yarn test:browser
