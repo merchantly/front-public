@@ -20,5 +20,7 @@ jobs:
       run: yarn install
     - name: Build
       run: yarn build
-    - name: Tests
-      run: make test
+    - name: Test prerender
+      run: yarn test:prerender
+    - name: Test browser
+      run: yarn test:browser
