@@ -8,10 +8,10 @@ module.exports = {
           "loose": true
      }],
     "@babel/plugin-transform-runtime",
-    "@babel/plugin-transform-classes",
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
     "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-transform-class-properties",
+    "@babel/plugin-transform-classes",
     "add-module-exports",
     ["module-resolver", {
       "root": ["./", "./node_modules/@bower_components/"],
