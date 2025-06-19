@@ -97,7 +97,7 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.4",
-    "@babel/runtime": "^7.4.5",
+    "@babel/runtime": "^7.26.10",
     "@storybook/addon-actions": "^5.1.8",
     "@storybook/addon-links": "^5.1.8",
     "@storybook/addon-viewport": "^5.1.8",
