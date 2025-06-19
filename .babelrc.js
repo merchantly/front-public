@@ -8,9 +8,10 @@ module.exports = {
           "loose": true
      }],
     "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-classes",
     ["@babel/plugin-proposal-decorators", {"legacy": true}],
-    "@babel/plugin-proposal-class-properties",
-     "add-module-exports",
+    "@babel/proposal-class-properties",
+    "add-module-exports",
     ["module-resolver", {
       "root": ["./", "./node_modules/@bower_components/"],
       "alias": {
