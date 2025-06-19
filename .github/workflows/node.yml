@@ -24,6 +24,4 @@ jobs:
     - name: Build
       run: yarn build
     - name: Tests
-      run: |
-        npm test:browser
-        npm test:prerender
+      run: make test

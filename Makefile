@@ -1,4 +1,4 @@
-all: info clean install build
+all: info clean install build test
 
 info:
 	node --version
@@ -20,3 +20,8 @@ build:
 npm-purge:
 	npm config set registry http://registry.npmjs.org/ --global
 	npm cache clear --force
+
+.PHONY: test
+test:
+	yarn test:browser
+	yarn test:prerender
