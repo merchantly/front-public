@@ -4,12 +4,12 @@ function stepSize(size) {
   for (let p = 6; p<=MAX_POW; p++) {
     const pow = Math.pow(2, p);
     if (size <= pow) {
-      console.log(`Return for size: ${size} -> ${pow}`);
+      // console.log(`Return for size: ${size} -> ${pow}`);
       return pow;
     }
   }
   const pow = Math.pow(maxPow);
-  console.log(`Return for size: ${size} -> ${pow}`);
+  // console.log(`Return for size: ${size} -> ${pow}`);
   return pow;
 }
 
@@ -26,7 +26,7 @@ function stepSizes(size, rk = 1) {
     height = stepSize(size.height) * rk;
     width = ''
   }
-  console.log(`Request size: ${size}, ${rk}, return [${width}, ${height}]`);
+  // console.log(`Request size: ${size}, ${rk}, return [${width}, ${height}]`);
   return [width, height];
 }
 
