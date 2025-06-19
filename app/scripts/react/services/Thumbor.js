@@ -1,5 +1,7 @@
 /*global gon */
-const MAX_POW = 12;
+const MAX_POW = 9;
+const STEP = 256;
+
 function stepSize(size) {
   for (let p = 6; p<=MAX_POW; p++) {
     const pow = Math.pow(2, p);
@@ -8,9 +10,9 @@ function stepSize(size) {
       return pow;
     }
   }
-  const pow = Math.pow(maxPow);
-  // console.log(`Return for size: ${size} -> ${pow}`);
-  return pow;
+  const val = Math.ceil(size / STEP)*STEP;
+  // console.log(`Return for size: ${size} -> ${val}`);
+  return val;
 }
 
 function stepSizes(size, rk = 1) {
