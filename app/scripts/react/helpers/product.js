@@ -37,12 +37,8 @@ export function schemaOrgGoodPrice(good, category) {
       <meta itemProp="sku" content={good.article} />
       <meta itemProp="category" content={schemaOrgProductCategory(category)} />
       <meta itemProp="availability" content={schemaOrgGoodAvailability(good)} />
-      {good.actualPrice &&
-        <meta>
-          <meta itemProp="price" content={money(good.actualPrice.price)}/>
-          <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode} />
-        </meta>
-      }
+      {good.actualPrice && <meta itemProp="price" content={money(good.actualPrice.price)}/>}
+      {good.actualPrice && <meta itemProp="priceCurrency" content={good.actualPrice.price.currencyIsoCode} />}
     </div>
   );
 }
