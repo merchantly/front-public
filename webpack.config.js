@@ -23,11 +23,16 @@ const baseConfig = {
     rules: rules,
   },
   resolve: {
+    preferRelative: true,
+    // fallback: { "stream": require.resolve("stream-browserify") },
     modules: [
-      path.join(__dirname, 'node_modules'),
+      'node_modules',
       path.join(__dirname, 'node_modules/@bower_components'),
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
+    alias: {
+      'indexof': path.join(__dirname, './node_modules/component-indexof')
+    }
   },
   plugins: [
     new LodashModuleReplacementPlugin,
@@ -61,11 +66,16 @@ const devConfig = {
     rules: rules,
   },
   resolve: {
+    preferRelative: true,
+    // fallback: { "stream": require.resolve("stream-browserify") },
     modules: [
-      path.join(__dirname, 'node_modules'),
+      'node_modules',
       path.join(__dirname, 'node_modules/@bower_components'),
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
+    alias: {
+      'indexof': path.join(__dirname, './node_modules/component-indexof')
+    }
   },
   entry: {
     // index: path.join(__dirname, 'html'),
