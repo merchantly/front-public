@@ -2,7 +2,13 @@ import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import babelifyOptions from '../.babelrc.js';
 
-exports.default = [
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export default [
   {
     test: /\.(gif|png|jpe?g|svg)$/i,
     use: [
@@ -41,7 +47,7 @@ exports.default = [
       'cache-loader',
       {
         loader: 'babel-loader',
-        query: babelifyOptions
+        options: babelifyOptions
       }
     ],
     exclude: /(node_modules|bower_components)/,

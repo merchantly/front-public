@@ -1,1 +1,1 @@
-export default undefined;
+module.exports = undefined;

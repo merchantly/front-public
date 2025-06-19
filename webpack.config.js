@@ -4,10 +4,16 @@ import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-import rules from 'webpack/rules';
-import { env, isDevMode } from 'webpack/base';
+import rules from './webpack/rules.js';
+import { env, isDevMode } from './webpack/base.js';
 
 import LodashModuleReplacementPlugin from 'lodash-webpack-plugin';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const baseConfig = {
   output: {
@@ -86,12 +92,12 @@ const nodeConfig = {
   target: 'node',
   resolve: {
     alias: {
-      'reqwest': path.join(__dirname, 'webpack/noop.js')
+      'reqwest': path.join(__dirname, './webpack/noop.js')
     }
   }
 }
 
-exports.default = [
+export default [
   merge(baseConfig, browserConfig),
   merge(baseConfig, testsConfig),
   merge(baseConfig, nodeConfig)
