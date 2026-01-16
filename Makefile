@@ -1,28 +1,39 @@
-all: info clean install build test
+.PHONY: deps deps-node deps-ruby deps-chrome build test clean
 
-info:
-	node --version
-	python --version
+# Установка всех зависимостей
+deps: deps-node deps-ruby deps-chrome
 
-clean:
-	rm -fr ./node_modules
-
-install:
-	npm install -g yarn
+# Node.js зависимости
+deps-node:
 	yarn install
 
-deps:
-	arch -x86_64 pyenv install
+# Ruby зависимости (для MiniRacer)
+deps-ruby:
+	bundle install
 
+# Chrome для mocha-chrome тестов
+deps-chrome:
+	@which chromium-browser > /dev/null 2>&1 || which google-chrome > /dev/null 2>&1 || \
+		(echo "Installing Chromium..." && sudo apt-get update && sudo apt-get install -y chromium-browser)
+
+# Сборка
 build:
 	yarn build
 
-npm-purge:
-	npm config set registry http://registry.npmjs.org/ --global
-	npm cache clear --force
-
-.PHONY: test
+# Запуск всех тестов
 test:
-	yarn test:mini_racer
-	yarn test:prerender
+	yarn test
+
+# Запуск отдельных тестов
+test-browser:
 	yarn test:browser
+
+test-prerender:
+	yarn test:prerender
+
+test-mini-racer:
+	yarn test:mini_racer
+
+# Очистка
+clean:
+	yarn clean
