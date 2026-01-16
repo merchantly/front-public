@@ -61,6 +61,7 @@ class ProductBlockImage extends Component {
         <RelativeImage
           className="b-item__pic"
           image={this.getCurrentImage()}
+          loading="lazy"
           maxWidth={maxWidth}
           title={title}
         />
@@ -70,6 +71,7 @@ class ProductBlockImage extends Component {
               <RelativeImage
                 className="b-item__pic"
                 image={secondImage}
+                loading="lazy"
                 maxWidth={maxWidth}
                 title={title}
               />
