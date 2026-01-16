@@ -2,7 +2,7 @@ import i18next from 'i18next';
 import translations from './mocks/translations';
 import React, { Component } from 'react';
 import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16.2';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 
 Enzyme.configure({ adapter: new Adapter() });
 
