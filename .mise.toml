@@ -1,5 +1,5 @@
 [tools]
-node = "22"    # LTS, стабильная версия для legacy проекта
+node = "20"    # LTS, стабильная версия для legacy проекта
 bun = "latest" # Для SSR сервера (issue #265)
 yarn = "1"     # Classic yarn
 
