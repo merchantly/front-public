@@ -2,7 +2,7 @@ import {
   applyMiddleware,
   createStore,
   combineReducers,
-  compose,
+  compose
 } from 'redux';
 import * as reducers from './reducers';
 import apiMiddleware from './middleware/api';
@@ -32,7 +32,7 @@ global.Kiosk = {
 global.redux = (compose(
   applyMiddleware(
     thunkMiddleware,
-    apiMiddleware,
+    apiMiddleware
   ),
   global.devToolsExtension ? global.devToolsExtension() : (f) => f
 )(createStore))(combineReducers(reducers), data);

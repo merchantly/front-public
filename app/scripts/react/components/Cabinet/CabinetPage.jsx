@@ -48,7 +48,7 @@ CabinetPage.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape(...CabinetOrder.propTypes)).isOptional,
   }),
   clientForm: PropTypes.shape(...ClientForm.propTypes).isRequired,
-  companyForm: PropTypes.shape(...CompanyForm.propTypes)
+  companyForm: PropTypes.shape(...CompanyForm.propTypes),
 };
 
 export default CabinetPage;

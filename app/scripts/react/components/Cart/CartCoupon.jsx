@@ -11,7 +11,7 @@ export class CartCoupon extends Component {
   state = {
     code: this.props.code,
     message: this.props.message,
-  }
+  };
   componentDidMount() {
     if (this.props.code) {
       this.processCode(this.props.code);

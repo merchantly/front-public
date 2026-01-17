@@ -35,7 +35,7 @@ ErrorPage.propTypes = {
   subject: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   phone: PropTypes.string,
-  email: PropTypes.string
+  email: PropTypes.string,
 };
 
 ErrorPage.defaultProps = {

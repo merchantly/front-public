@@ -22,7 +22,7 @@ import {
 import {
   RESERVATION_TYPE_BOTH,
   RESERVATION_TYPE_REMOTE,
-  RESERVATION_TYPE_LOCAL,
+  RESERVATION_TYPE_LOCAL
 } from 'r/constants/reservationConstants';
 
 import { OrderDeliveryStateLabel, OrderPaymentStateLabel } from './OrderLabels';
@@ -30,26 +30,26 @@ import { OrderDeliveryStateLabel, OrderPaymentStateLabel } from './OrderLabels';
 
 function OrderPaymentIcon({ type, orderPaymentType }) {
   if (type == 'OrderPaymentDirect') {
-    return <FaIcon name='money' tooltip='true' title={orderPaymentType} />
+    return <FaIcon name='money' tooltip='true' title={orderPaymentType} />;
   } else {
-    return <FaIcon name='credit-card' tooltip='true' title={orderPaymentType} />
+    return <FaIcon name='credit-card' tooltip='true' title={orderPaymentType} />;
   }
 };
 
 function OrderDeliveryIcon({ state, orderDeliveryState }) {
   switch(state) {
   case DELIVERY_STATE_NEW: 
-    return <FaIcon name='hourglass' tooltip='true' title={orderDeliveryState} addClass='text-warning' />
+    return <FaIcon name='hourglass' tooltip='true' title={orderDeliveryState} addClass='text-warning' />;
   case DELIVERY_STATE_DELIVERY:
-    return <FaIcon name='truck' tooltip='true' title={orderDeliveryState} addClass='text-info' />
+    return <FaIcon name='truck' tooltip='true' title={orderDeliveryState} addClass='text-info' />;
   case DELIVERY_STATE_DONE:
-    return <FaIcon name='check' tooltip='true' title={orderDeliveryState} addClass='text-success' />
+    return <FaIcon name='check' tooltip='true' title={orderDeliveryState} addClass='text-success' />;
   case DELIVERY_STATE_NOT_NEEDED:
-    return <FaIcon name='ban' tooltip='true' title={orderDeliveryState} />
+    return <FaIcon name='ban' tooltip='true' title={orderDeliveryState} />;
   case DELIVERY_STATE_CANCELED:
-    return <FaIcon name='frown-o' tooltip='true' title={orderDeliveryState} addClass='text-warning' />  
+    return <FaIcon name='frown-o' tooltip='true' title={orderDeliveryState} addClass='text-warning' />;  
   default:
-    return <OrderDeliveryStateLabel state={state} orderDeliveryState={orderDeliveryState} />
+    return <OrderDeliveryStateLabel state={state} orderDeliveryState={orderDeliveryState} />;
   }
 };
 
@@ -57,26 +57,26 @@ const OrderPaymentStateIcon = provideTranslations(({ state, updatedAt, orderPaym
   switch(state) {
   case PAYMENT_STATE_AWAIT:
   case PAYMENT_STATE_DIRECT: 
-    return <FaIcon name='hourglass' tooltip='true' title={t('vendor.order_payment_state_icon.wait')} addClass='text-warning' />
+    return <FaIcon name='hourglass' tooltip='true' title={t('vendor.order_payment_state_icon.wait')} addClass='text-warning' />;
   case PAYMENT_STATE_CANCELED:
-    return <FaIcon name='ban' tooltip='true' title={t('vendor.order_payment_state_icon.wait')} addClass='text-danger' />
+    return <FaIcon name='ban' tooltip='true' title={t('vendor.order_payment_state_icon.wait')} addClass='text-danger' />;
   case PAYMENT_STATE_PAID:
-    return <FaIcon name='check' tooltip='true' title={t('vendor.order_payment_state_icon.paid', {updatedAt: updatedAt})} addClass='text-success' />
+    return <FaIcon name='check' tooltip='true' title={t('vendor.order_payment_state_icon.paid', {updatedAt: updatedAt})} addClass='text-success' />;
   default:
-    return <OrderPaymentStateLabel state={state} updatedAt={updatedAt} orderPaymentType={orderPaymentType} orderPaymentState={orderPaymentState} />
+    return <OrderPaymentStateLabel state={state} updatedAt={updatedAt} orderPaymentType={orderPaymentType} orderPaymentState={orderPaymentState} />;
   }
 });
 
 const OrderReserveStateIcon = provideTranslations(({ type, reservedAt, t }) => {
   switch(type) {
   case RESERVATION_TYPE_BOTH: 
-    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.both', {reservedAt: reservedAt})} addClass='text-navy' />
+    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.both', {reservedAt: reservedAt})} addClass='text-navy' />;
   case RESERVATION_TYPE_REMOTE:
-    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.remote', {reservedAt: reservedAt})} addClass='text-navy' />
+    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.remote', {reservedAt: reservedAt})} addClass='text-navy' />;
   case RESERVATION_TYPE_LOCAL:
-    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.local', {reservedAt: reservedAt})} addClass='text-warning' />
+    return <FaIcon name='shopping-cart' tooltip='true' title={t('vendor.order_reserve_state_icon.local', {reservedAt: reservedAt})} addClass='text-warning' />;
   default:
-    return <FaIcon name='calendar-minus-o' addClass='text-danger' tooltip='true' title={t('operator.order.labels.not_reserved')} />
+    return <FaIcon name='calendar-minus-o' addClass='text-danger' tooltip='true' title={t('operator.order.labels.not_reserved')} />;
   }
 });
 

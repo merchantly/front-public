@@ -14,7 +14,7 @@ import * as schemas from 'r/schemas';
 import {
   WISHLIST_BUTTON_ADD_TO_WISH_LIST,
   WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST,
-  WISHLIST_BUTTON_FETCHING,
+  WISHLIST_BUTTON_FETCHING
 } from 'r/actions/WishlistStateActions';
 //import invariant from 'invariant';
 
@@ -65,7 +65,7 @@ class ProductCartWishlist extends Component {
     } = this.props;
 
     const {
-      isWidget
+      isWidget,
     } = this.context;
 
     if (isWidget) {
@@ -99,11 +99,11 @@ class ProductCartWishlist extends Component {
 
     switch(wishlistButtonState) {
       case WISHLIST_BUTTON_ADD_TO_WISH_LIST:
-        return (<ProductCartWishlistButton title={t('vendor.button.to_wishlist')} onClick={this.addToWishListClick.bind(this)}/>)
+        return (<ProductCartWishlistButton title={t('vendor.button.to_wishlist')} onClick={this.addToWishListClick.bind(this)}/>);
       case WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST:
-        return (<ProductCartWishlistButtonRemove title={t('vendor.button.remove_from_wish_list')} onClick={this.removeToWishListClick.bind(this)}/>)
+        return (<ProductCartWishlistButtonRemove title={t('vendor.button.remove_from_wish_list')} onClick={this.removeToWishListClick.bind(this)}/>);
       case WISHLIST_BUTTON_FETCHING:
-        return (<ProductCartWishlistButtonFetching title={t('vendor.button.adding_to_wish_list')}/>)
+        return (<ProductCartWishlistButtonFetching title={t('vendor.button.adding_to_wish_list')}/>);
       default:
         return null;
     }

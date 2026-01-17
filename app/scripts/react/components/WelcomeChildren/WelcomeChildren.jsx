@@ -22,7 +22,7 @@ class WelcomeChildren extends Component {
       showQuantity,
       rtl,
       historyProducts,
-      t
+      t,
     } = this.props;
 
     return (
@@ -87,6 +87,6 @@ WelcomeChildren.propTypes = {
 
 WelcomeChildren.defaultProps = {
   rtl: false,
-}
+};
 
 export default WelcomeChildren;

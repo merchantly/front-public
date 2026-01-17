@@ -9,7 +9,7 @@ export default class PropertySingle extends Component {
     onChange: PropTypes.func.isRequired,
     properties: PropTypes.array.isRequired,
     values: PropTypes.object.isRequired,
-  }
+  };
   getItemName(propertyID) {
     return `attribute[${propertyID}]`;
   }

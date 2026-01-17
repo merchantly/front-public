@@ -6,7 +6,7 @@ import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurren
 import FaIcon from 'rc/common/FaIcon';
 import * as schemas from 'r/schemas';
 import {
-  ORDER_IMG_SIZE,
+  ORDER_IMG_SIZE
 } from 'r/constants/OrderConstants';
 
 class OrderContents extends Component {

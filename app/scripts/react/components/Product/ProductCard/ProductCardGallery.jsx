@@ -23,7 +23,7 @@ ProductCardGallery.propTypes = {
       title: PropTypes.string,
       uid: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       url: PropTypes.string.isRequired,
-    }),
+    })
   ),
   rtl: PropTypes.bool.isRequired,
 };

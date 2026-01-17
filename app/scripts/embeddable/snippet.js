@@ -33,7 +33,7 @@
         if (widget) {
           widget.render({ productCardID: productCardID, vendorID: vendorID }, node);
         }
-      })
+      });
     }
   };
 })(window, document);

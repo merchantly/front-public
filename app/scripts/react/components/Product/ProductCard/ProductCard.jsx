@@ -13,7 +13,7 @@ import ProductCardTitle from './ProductCardTitle';
 import ProductCardVideo from './ProductCardVideo';
 import * as schemas from 'r/schemas';
 import {
-  addGood,
+  addGood
 } from 'r/actions/GoodStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
@@ -56,7 +56,7 @@ class ProductCard extends Component {
     const {
       addGood,
       newOrderUrl,
-      isOneClickBuy
+      isOneClickBuy,
     } = this.props;
     const {
       amount,
@@ -67,15 +67,15 @@ class ProductCard extends Component {
     ev.preventDefault();
 
     if (isOneClickBuy) {
-      const url = new YouAreI(newOrderUrl)
+      const url = new YouAreI(newOrderUrl);
 
-      const params = {}
-      params['cart_item[good_id'] =  good.globalId
-      params['cart_item[product_price_id]'] =  good.actualPrice.id
-      url.query_set(params)
+      const params = {};
+      params['cart_item[good_id'] =  good.globalId;
+      params['cart_item[product_price_id]'] =  good.actualPrice.id;
+      url.query_set(params);
 
       // TODO поддержка multipleChoice
-      document.location = url.to_string()
+      document.location = url.to_string();
     } else {
       return product.sellingByWeight
         ? addGood(good, 1, amount)
@@ -218,7 +218,7 @@ ProductCard.defaultProps = {
   isOneClickBuy: false,
   similarProducts: {
     showCartButton: false,
-    products: []
+    products: [],
   },
   otherProducts: [],
   deliveryRestrictionMessages: [],
@@ -229,7 +229,7 @@ ProductCard.defaultProps = {
   moreContent: {
     show: false,
     height: 300,
-  }
+  },
 };
 
 export default provideTranslations(connectToRedux(connect(

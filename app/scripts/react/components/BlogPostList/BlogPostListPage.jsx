@@ -30,6 +30,6 @@ BlogPostListPage.propTypes = {
 
 BlogPostListPage.defaultProps = {
   recommendedProducts: { showCartButton: false, products: [] },
-}
+};
 
 export default BlogPostListPage;

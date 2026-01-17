@@ -8,7 +8,7 @@ import CatalogFilterExpandButton from './CatalogFilterExpandButton';
 class CatalogFilterCheckbox extends Component {
   state = {
     expanded: !this.isHugeList(),
-  }
+  };
   isHugeList() {
     return this.props.items.length > MAX_VISIBLE_LIMIT;
   }
@@ -39,7 +39,7 @@ class CatalogFilterCheckbox extends Component {
     const unchecked = [];
 
     this.props.items.forEach((item) => {
-      item.checked ? checked.push(item) : unchecked.push(item)
+      item.checked ? checked.push(item) : unchecked.push(item);
     });
 
     const items = checked.concat(unchecked);
@@ -96,7 +96,7 @@ class CatalogFilterCheckbox extends Component {
       'b-full-filter__item': true,
       'b-full-filter__item--full': expanded,
       'b-full-filter__item--short': !expanded,
-      'b-full-filter__item--huge': this.isHugeList()
+      'b-full-filter__item--huge': this.isHugeList(),
     });
 
     return (

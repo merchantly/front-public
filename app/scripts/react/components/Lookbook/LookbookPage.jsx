@@ -11,7 +11,7 @@ class LookbookPage extends Component {
       layoutProps,
       title,
       images,
-      rtl
+      rtl,
     } = this.props;
 
     return (
@@ -35,7 +35,7 @@ LookbookPage.propTypes = {
 };
 
 LookbookPage.defaultProps = {
-  rtl: false
-}
+  rtl: false,
+};
 
 export default LookbookPage;

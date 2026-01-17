@@ -8,14 +8,14 @@ export default class InputNumberSpinner extends Component {
     max: PropTypes.number,
     value: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    name: PropTypes.string
-  }
+    name: PropTypes.string,
+  };
   static defaultProps = {
     step: 1,
     min: 1,
     max: 999,
     value: 1,
-  }
+  };
   handleIncrement(e) {
     e.preventDefault();
     this.setValue(parseFloat(this.refs.input.value) + this.props.step);

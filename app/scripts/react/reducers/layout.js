@@ -2,7 +2,7 @@ import createReducer from 'r/utils/createReducer';
 import {
   LAYOUT_REQUEST,
   LAYOUT_SUCCESS,
-  LAYOUT_FAILURE,
+  LAYOUT_FAILURE
 } from 'r/actions/LayoutActions';
 
 const initialState = {};

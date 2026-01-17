@@ -15,12 +15,12 @@ export default class CommonSlider extends Component {
     reverse: PropTypes.bool,
     onSlide: PropTypes.func,
     onChange: PropTypes.func.isRequired,
-  }
+  };
   static defaultProps = {
     from: MINIMUM_VALUE,
     to: MAXIMUM_VALUE,
-    step: STEP
-  }
+    step: STEP,
+  };
 
   render() {
     return (

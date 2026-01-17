@@ -8,8 +8,8 @@ export default class RadioColor extends Component {
     name: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     options: PropTypes.array.isRequired,
-    onChange: PropTypes.func
-  }
+    onChange: PropTypes.func,
+  };
   render() {
     return (
       <span>
@@ -21,7 +21,7 @@ export default class RadioColor extends Component {
     const { value, title, color, imageUrl, disabled } = option;
     const optionClasses = classNames('radiobtn', 'radiobtn--color', {
       'radiobtn--light': tinycolor(color).isLight(),
-      '__disabled': disabled
+      '__disabled': disabled,
     });
 
     let indStyles;

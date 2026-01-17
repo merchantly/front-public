@@ -6,7 +6,7 @@ export default class Icon extends Component {
   static propTypes = {
     active: PropTypes.bool,
     name: PropTypes.string,
-  }
+  };
   render() {
     const { active, name } = this.props;
 

@@ -7,7 +7,7 @@ function selectFile(name, text, onChange) {
     static propTypes = {
       withText: PropTypes.bool,
       className: PropTypes.string,
-    }
+    };
     render() {
       return (
         <label
@@ -36,7 +36,7 @@ export default class DesignSettingsAttach extends Component {
     value: PropTypes.string,
     children: PropTypes.func,
     onChange: PropTypes.func.isRequired,
-    t: PropTypes.func.isRequired
+    t: PropTypes.func.isRequired,
   };
   renderBox() {
     if (this.props.value) {

@@ -7,15 +7,15 @@ export default class CSRFToken extends Component {
     field: PropTypes.string,
     nodeSelector: PropTypes.string,
     token: PropTypes.string,
-  }
+  };
   static defaultProps = {
     field: 'authenticity_token',
     nodeSelector: '[name="csrf-token"]',
     token: null,
-  }
+  };
   state = {
     token: this.props.token,
-  }
+  };
   componentDidMount() {
     // Node doesn't have document object, therefore we will get & render
     // token only after first mount with null value

@@ -29,7 +29,7 @@ class CatalogFilterSelectedOptions extends Component {
 }
 
 CatalogFilterSelectedOptions.propTypes = {
-  selectedOptions: PropTypes.array.isRequired
+  selectedOptions: PropTypes.array.isRequired,
 };
 
 export default CatalogFilterSelectedOptions;

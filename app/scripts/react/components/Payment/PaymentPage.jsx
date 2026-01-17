@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import VendorLayoutContainer from 'rc/VendorLayout';
 import PaymentContainer, {
   PAYMENT_SUCCESS,
-  PAYMENT_FAILURE,
+  PAYMENT_FAILURE
 } from './index';
 
 class PaymentPage extends Component {

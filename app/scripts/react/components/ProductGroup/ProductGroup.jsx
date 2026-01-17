@@ -87,7 +87,7 @@ ProductGroup.defaultProps = {
   showCartButton: false,
   showCatalogFilter: false,
   showQuantity: false,
-  isFilterOpenByDefault: false
+  isFilterOpenByDefault: false,
 };
 
 export default ProductGroup;

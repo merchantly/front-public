@@ -47,7 +47,7 @@ CatalogFilterOptions.propTypes = {
   options: PropTypes.array.isRequired,
   params: PropTypes.object,
   selectedOptions: PropTypes.array,
-  handleOptionChange: PropTypes.func.isRequired
+  handleOptionChange: PropTypes.func.isRequired,
 };
 
 export default CatalogFilterOptions;

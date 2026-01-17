@@ -7,13 +7,13 @@ export default class DesignSettingsSaveButton extends Component {
     isSaving: PropTypes.bool.isRequired,
     unsavedFields: PropTypes.object.isRequired,
     onClick: PropTypes.func.isRequired,
-    t: PropTypes.func.isRequired
-  }
+    t: PropTypes.func.isRequired,
+  };
   hasChanges() {
     return !!Object.keys(this.props.unsavedFields).length;
   }
   getTitle() {
-    const { t } = this.props
+    const { t } = this.props;
     if (this.props.isSaving) {
       return t('vendor.design_settings.saving') ;
     } else {

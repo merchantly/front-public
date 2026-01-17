@@ -118,7 +118,7 @@ class ProductCardGallerySlider extends Component {
         padding: 0,
         margin: 0,
         helpers: {
-          thumbs: { width: 8, height: 8 }
+          thumbs: { width: 8, height: 8 },
         },
         tpl: {
           closeBtn: `<a title="${t('vendor.gallery.close')}" class="fancybox-item fancybox-close" href="javascript:;"><i></i></a>`,
@@ -230,13 +230,13 @@ ProductCardGallerySlider.propTypes = {
       title: PropTypes.string,
       uid: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       url: PropTypes.string.isRequired,
-    }),
+    })
   ).isRequired,
   rtl: PropTypes.bool.isRequired,
 };
 ProductCardGallerySlider.defaultProps = {
   images: [],
-  rtl: false
+  rtl: false,
 };
 
 export default ProductCardGallerySlider;

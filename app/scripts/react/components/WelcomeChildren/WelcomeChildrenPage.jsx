@@ -18,7 +18,7 @@ class WelcomeChildrenPage extends Component {
       showCatalogFilter,
       showQuantity,
       rtl,
-      historyProducts
+      historyProducts,
     } = this.props;
 
     return (
@@ -58,7 +58,7 @@ WelcomeChildrenPage.propTypes = {
 
 WelcomeChildrenPage.defaultProps = {
   rtl: false,
-  historyProducts: []
-}
+  historyProducts: [],
+};
 
 export default WelcomeChildrenPage;

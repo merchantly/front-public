@@ -10,7 +10,7 @@ export default class Scroller extends Component {
     className: PropTypes.string,
     onScroll: PropTypes.func,
     updateEvent: PropTypes.string,
-  }
+  };
   constructor(props) {
     super(props);
 

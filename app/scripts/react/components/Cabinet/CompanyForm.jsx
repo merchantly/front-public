@@ -109,7 +109,7 @@ class CompanyForm extends Component {
           </form> 
         </div>
       </div> 
-    )
+    );
   }
 }
 

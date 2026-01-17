@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import WidgetLayout from 'rc/Widget/WidgetLayout';
 import CartContainer from './index';
 import {
-  fetchCart,
+  fetchCart
 } from 'r/actions/CartActions';
 import {
-  fetchPackages,
+  fetchPackages
 } from 'r/actions/PackagesActions';
 import { connect } from 'react-redux';
 
