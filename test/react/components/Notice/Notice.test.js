@@ -1,7 +1,6 @@
 import React from 'react';
-import { renderIntoDocument } from 'react-dom/test-utils';
 import sinon from 'sinon';
-import { render } from 'enzyme';
+import { mount, render } from 'enzyme';
 import { expect } from 'chai';
 import Notice from '../../../../app/scripts/react/components/Notice';
 
@@ -10,14 +9,6 @@ describe('[Component] Notice', function() {
     this.timeout = 3;
     this.onClose = sinon.spy();
     this.clock = sinon.useFakeTimers();
-    this.renderedComponent = renderIntoDocument(
-      <Notice
-        type="success"
-        text="Hello, world!"
-        timeout={this.timeout}
-        onClose={this.onClose}
-      />
-    );
   });
 
   afterEach(function () {

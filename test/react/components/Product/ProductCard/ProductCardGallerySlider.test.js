@@ -1,8 +1,6 @@
 import React from 'react';
-import { renderIntoDocument } from 'react-dom/test-utils';
+import { shallow, render } from 'enzyme';
 import { expect } from 'chai';
-import { render } from 'enzyme';
-import { PHOTO_CHANGE } from '../../../../../app/scripts/react/constants/globalEventKeys';
 import ProductCardGallerySlider from '../../../../../app/scripts/react/components/Product/ProductCard/ProductCardGallerySlider';
 
 describe('[Component] ProductCardGallerySlider', () => {
@@ -21,11 +19,12 @@ describe('[Component] ProductCardGallerySlider', () => {
         url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5300/image.png',
       },
     ];
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <ProductCardGallerySlider images={images} />
     );
 
-    expect(component.refs.productThumbs).to.be.undefined;
+    // Thumbnails are rendered in .b-slider_thumbs only when images.length > 1
+    expect(wrapper.find('.b-slider_thumbs').exists()).to.be.false;
   });
 
   it('should render thumbnails when images >= 2', () => {
@@ -41,11 +40,11 @@ describe('[Component] ProductCardGallerySlider', () => {
         url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg',
       }
     ];
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <ProductCardGallerySlider images={images} />
     );
 
-    expect(component.refs.productThumbs).to.not.be.undefined;
+    expect(wrapper.find('.b-slider_thumbs').exists()).to.be.true;
   });
 
   it('should update selected index when emitted "photo change" event and uid found', () => {
@@ -61,11 +60,11 @@ describe('[Component] ProductCardGallerySlider', () => {
         url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg',
       }
     ];
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <ProductCardGallerySlider images={images} selectedImage={images[1]} />
     );
 
-    expect(component.state.selectedIndex).equals(1);
+    expect(wrapper.state('selectedIndex')).to.equal(1);
   });
 
   it('shouldn\'t update selected index when emitted "photo change" event and uid not found', () => {
@@ -86,10 +85,10 @@ describe('[Component] ProductCardGallerySlider', () => {
         url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/26264/450123b4-7c9e-4ae9-a04e-05fda504d0a2.jpg',
       }
     ];
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <ProductCardGallerySlider images={images} selectedImage={nonexistentImage} />
     );
 
-    expect(component.state.selectedIndex).equals(0);
+    expect(wrapper.state('selectedIndex')).to.equal(0);
   });
 });
