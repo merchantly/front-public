@@ -1027,50 +1027,6 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@bower_components/OwlCarousel@BrandyMint/OwlCarousel#~1.3.4":
-  version "0.0.0"
-  resolved "https://codeload.github.com/BrandyMint/OwlCarousel/tar.gz/016221f9727de619a0a398758ed605a208eb438c"
-
-"@bower_components/accounting.js@openexchangerates/accounting.js#~0.3.2":
-  version "0.3.2"
-  resolved "https://codeload.github.com/openexchangerates/accounting.js/tar.gz/9ff4a4022e5c08f028d652d2b0ba1d4b65588bde"
-
-"@bower_components/bootstrap-sass-official@twbs/bootstrap-sass#~3.2.0":
-  version "3.2.0"
-  resolved "https://codeload.github.com/twbs/bootstrap-sass/tar.gz/a5f5954268779ce0faf7607b3c35191a8d0fdfe6"
-
-"@bower_components/compass-mixins@Igosuki/compass-mixins#~1.0.1":
-  version "0.12.3"
-  resolved "https://codeload.github.com/Igosuki/compass-mixins/tar.gz/10d288e9c9bb9574f833737d4a6315797262e9c0"
-
-"@bower_components/entypo-plus@chancancode/entypo-plus#*":
-  version "0.0.0"
-  resolved "https://codeload.github.com/chancancode/entypo-plus/tar.gz/39b6fad5d9fd193ba9ac70ba70a9bdd5d146d2cc"
-
-"@bower_components/eventEmitter@Olical/EventEmitter#~4.2.9":
-  version "4.2.11"
-  resolved "https://codeload.github.com/Olical/EventEmitter/tar.gz/4e1bee26addc8eb16d36d77906e5d64554fc3d16"
-
-"@bower_components/fancybox@fancyapps/fancyBox#~2.1.5":
-  version "2.1.5"
-  resolved "https://codeload.github.com/fancyapps/fancyBox/tar.gz/c00852a5394ef18517598bfa3b9e885cdf5c7450"
-
-"@bower_components/font-awesome@FortAwesome/Font-Awesome#~4.1.0":
-  version "4.1.0"
-  resolved "https://codeload.github.com/FortAwesome/Font-Awesome/tar.gz/2649d91d18629bab071449b3bc4cb02761037a57"
-
-"@bower_components/jQuery.mmenu@BeSite/jQuery.mmenu#~4.5.7":
-  version "0.0.0"
-  resolved "https://codeload.github.com/BeSite/jQuery.mmenu/tar.gz/ac79b660e3cea46a45ea98c46d97878a25d8d02c"
-
-"@bower_components/jquery-mousewheel@jquery/jquery-mousewheel#~3.1.3":
-  version "3.1.13"
-  resolved "https://codeload.github.com/jquery/jquery-mousewheel/tar.gz/67289b6b2aa0066d7d78a5807f520387135ffb22"
-
-"@bower_components/sticky-kit@leafo/sticky-kit#~1.1.2":
-  version "0.0.0"
-  resolved "https://codeload.github.com/leafo/sticky-kit/tar.gz/26416994fad49275cd65e3d5ad6998abf239ef55"
-
 "@cfaester/enzyme-adapter-react-18@^0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@cfaester/enzyme-adapter-react-18/-/enzyme-adapter-react-18-0.8.0.tgz#313814eb79658a6e74209f9f1743bcefff14a46f"
@@ -2076,6 +2032,10 @@ JSONStream@^1.0.3:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
+OwlCarousel@BrandyMint/OwlCarousel#~1.3.4:
+  version "0.0.0"
+  resolved "https://codeload.github.com/BrandyMint/OwlCarousel/tar.gz/016221f9727de619a0a398758ed605a208eb438c"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -2093,6 +2053,11 @@ accepts@~1.3.7:
   dependencies:
     mime-types "~2.1.24"
     negotiator "0.6.2"
+
+accounting@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/accounting/-/accounting-0.4.1.tgz#87dd4103eff7f4460f1e186f5c677ed6cf566883"
+  integrity sha512-RU6KY9Y5wllyaCNBo1W11ZOTnTHMMgOZkIwdOOs6W5ibMTp72i4xIbEA48djxVGqMNTUNbvrP/1nWg5Af5m2gQ==
 
 acorn-dynamic-import@^4.0.0:
   version "4.0.0"
@@ -3164,16 +3129,17 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bootstrap-sass@^3.4.3:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/bootstrap-sass/-/bootstrap-sass-3.4.3.tgz#742cc8f4286303ae9fe8e4c95237321eae73766c"
+  integrity sha512-vPgFnGMp1jWZZupOND65WS6mkR8rxhJxndT/AcMbqcq1hHMdkcH4sMPhznLzzoHOHkSCrd6J9F8pWBriPCKP2Q==
+
 bootstrap-tooltip@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/bootstrap-tooltip/-/bootstrap-tooltip-3.1.1.tgz#6f03bdffdfc397e76b07828473d1ee3e7bdfe45c"
   integrity sha1-bwO9/9/Dl+drB4KEc9HuPnvf5Fw=
   dependencies:
     jquery "~2.1.0"
-
-bower@^1.8.8:
-  version "1.8.8"
-  resolved "https://registry.yarnpkg.com/bower/-/bower-1.8.8.tgz#82544be34a33aeae7efb8bdf9905247b2cffa985"
 
 boxen@^3.0.0:
   version "3.2.0"
@@ -5323,6 +5289,10 @@ entities@^1.1.1, entities@~1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
 
+entypo-plus@chancancode/entypo-plus:
+  version "0.0.0"
+  resolved "https://codeload.github.com/chancancode/entypo-plus/tar.gz/39b6fad5d9fd193ba9ac70ba70a9bdd5d146d2cc"
+
 envify@^3.4.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/envify/-/envify-3.4.1.tgz#d7122329e8df1688ba771b12501917c9ce5cbce8"
@@ -5832,6 +5802,11 @@ eventemitter3@^3.1.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
 
+eventemitter3@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-5.0.1.tgz#53f5ffd0a492ac800721bb42c66b841de96423c4"
+  integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
+
 events@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/events/-/events-2.1.0.tgz#2a9a1e18e6106e0e812aa9ebd4a819b3c29c0ba5"
@@ -6050,6 +6025,11 @@ extract-loader@^3.1.0:
 extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
+
+fancybox@^2.1.5:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/fancybox/-/fancybox-2.1.8.tgz#413bc147d7bd54584f5b233f6d8d91ce6adfae66"
+  integrity sha512-oZDGQ06NdHO1U+7vcpo59suNUeqkBFoTJD3flgT4MtWbDURUNtVX5yH2achCj66u6ZHaO7r8bmDUpO/P5A2dJg==
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
@@ -8163,6 +8143,10 @@ jade@0.26.3:
   dependencies:
     commander "0.6.1"
     mkdirp "0.3.0"
+
+jquery.mmenu@BeSite/jQuery.mmenu#~4.5.7:
+  version "0.0.0"
+  resolved "https://codeload.github.com/BeSite/jQuery.mmenu/tar.gz/ac79b660e3cea46a45ea98c46d97878a25d8d02c"
 
 jquery@^3.4.1:
   version "3.4.1"
@@ -13049,6 +13033,11 @@ static-extend@^0.1.1:
 "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
+
+sticky-kit@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/sticky-kit/-/sticky-kit-1.1.3.tgz#dab5ace49b462cf6d4969b1d58e639fc01377570"
+  integrity sha512-3TTTqSvKP/wfgXuEY444fwN5w1jsN35PIh1yIg2/1vCNmKJh+PRAXUhvSnZqjddOq86WtpL9slNm+BcEXBrteA==
 
 stop-iteration-iterator@^1.1.0:
   version "1.1.0"

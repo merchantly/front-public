@@ -9,13 +9,9 @@ import Widget from 'app/scripts/react/components/Widget';
 // global.jQuery = jQuery;
 // global.$ = jQuery;
 
-// require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
-require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
-require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
-require('@bower_components/fancybox/source/jquery.fancybox');
-// Отключил вообще fancybox.wannabe
-// Если это нужно будет, то нужно клонировать
-// fancybox и вносить в него правки
+require('jquery.mmenu/src/js/jquery.mmenu.min.all');
+require('OwlCarousel/owl-carousel/owl.carousel');
+require('fancybox')($);
 jQuery.noConflict(true);
 
 // const TEST_NODE_SELECTOR = '#merchantly-widget-container';
