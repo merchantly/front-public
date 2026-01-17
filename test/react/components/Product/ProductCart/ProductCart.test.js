@@ -1,8 +1,6 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
-import { renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
-import { render } from 'enzyme';
+import { shallow, render } from 'enzyme';
 
 import t from '../../../../mocks/t';
 
@@ -28,12 +26,12 @@ describe('[Component] ProductCart', () => {
       product: {},
       t,
     };
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <ProductCart {...props} />
     );
-    const CSRFToken = findDOMNode(component).querySelector(`input[name="${field}"]`);
+    const CSRFToken = wrapper.find(`input[name="${field}"]`);
 
-    expect(CSRFToken).to.have.property('value').that.equals(token);
+    expect(CSRFToken.prop('value')).to.equal(token);
   });
 
   describe('has_ordering_goods = true and goods = 1', () => {
@@ -42,11 +40,11 @@ describe('[Component] ProductCart', () => {
         product: { hasOrderingGoods: false },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const button = findDOMNode(component).querySelector('.b-btn_trans');
-      expect(button.textContent).is.equals('vendor.product.not_available');
+      const button = wrapper.find('.b-btn_trans');
+      expect(button.text()).to.equal('vendor.product.not_available');
     });
   });
 
@@ -90,12 +88,12 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemInput = findDOMNode(component).querySelector(`input[name="cart_item[good_id]"]`);
+      const cartItemInput = wrapper.find(`input[name="cart_item[good_id]"]`);
 
-      expect(cartItemInput).to.have.property('value').that.equals(globalID);
+      expect(cartItemInput.prop('value')).to.equal(globalID);
     });
   });
 
@@ -179,15 +177,15 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemSelect = findDOMNode(component).querySelector(`select[name="cart_item[good_id]"]`);
-      const cartItemSelectOptions = cartItemSelect.children;
+      const cartItemSelect = wrapper.find(`select[name="cart_item[good_id]"]`);
+      const cartItemSelectOptions = cartItemSelect.find('option');
 
       expect(cartItemSelectOptions.length).to.equal(2);
-      expect(cartItemSelectOptions[0]).to.have.property('value').that.equals(firstGoodGlobalID);
-      expect(cartItemSelectOptions[1]).to.have.property('value').that.equals(secondGoodGlobalID);
+      expect(cartItemSelectOptions.at(0).prop('value')).to.equal(firstGoodGlobalID);
+      expect(cartItemSelectOptions.at(1).prop('value')).to.equal(secondGoodGlobalID);
     });
 
     it('should render option with disabled attribute when good.is_ordering = false and properties = 0', () => {
@@ -199,13 +197,13 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemSelect = findDOMNode(component).querySelector(`select[name="cart_item[good_id]"]`);
-      const cartItemSelectOptions = cartItemSelect.children;
+      const cartItemSelect = wrapper.find(`select[name="cart_item[good_id]"]`);
+      const cartItemSelectOptions = cartItemSelect.find('option');
 
-      expect(cartItemSelectOptions[1]).to.have.property('disabled').that.equals(true);
+      expect(cartItemSelectOptions.at(1).prop('disabled')).to.equal(true);
     });
 
     it('should render selects where their count is equals properties count', () => {
@@ -244,10 +242,10 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemSelects = findDOMNode(component).querySelectorAll(`select`);
+      const cartItemSelects = wrapper.find('select');
 
       expect(cartItemSelects.length).to.equal(props.product.properties.length);
     });
@@ -289,16 +287,16 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const colorOption = findDOMNode(component).querySelector('.b-item-full__form__option');
-      const labels = colorOption.querySelectorAll('label.radiobtn.radiobtn--color');
-      const firstLabelInput = labels[0].querySelector('input');
+      const colorOption = wrapper.find('.b-item-full__form__option').first();
+      const labels = colorOption.find('label.radiobtn.radiobtn--color');
+      const firstLabelInput = labels.at(0).find('input');
 
-      expect(colorOption.querySelector('.b-item-full__form__title').textContent).contains(colorTitle);
-      expect(labels.length).equals(props.product.properties[0].items.length);
-      expect(firstLabelInput.value).equals(props.product.properties[0].items[0].value);
+      expect(colorOption.find('.b-item-full__form__title').text()).to.contain(colorTitle);
+      expect(labels.length).to.equal(props.product.properties[0].items.length);
+      expect(firstLabelInput.prop('value')).to.equal(props.product.properties[0].items[0].value);
     });
 
     it('should render disabled option if there are no matched good attributes', () => {
@@ -337,13 +335,13 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemSelects = findDOMNode(component).querySelectorAll(`select`);
-      const disabledOption = cartItemSelects[1].querySelector('option[disabled]');
+      const cartItemSelects = wrapper.find('select');
+      const disabledOption = cartItemSelects.at(1).find('option[disabled=true]');
 
-      expect(disabledOption).to.have.property('value').that.equals(String(disabledOptionValue));
+      expect(disabledOption.prop('value')).to.equal(String(disabledOptionValue));
     });
 
     it('should accept equal count of goods and properties', () => {
@@ -371,7 +369,7 @@ describe('[Component] ProductCart', () => {
         },
         t,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCart {...props} />
       );
       const propertiesCount = props.product.properties.length;

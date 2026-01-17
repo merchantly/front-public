@@ -1,5 +1,5 @@
 import React from 'react';
-import { scryRenderedComponentsWithType, renderIntoDocument } from 'react-dom/test-utils';
+import { shallow } from 'enzyme';
 import { expect } from 'chai';
 
 import p3912 from '../../../../fixtures/products/3912';
@@ -24,7 +24,7 @@ function fixtureRenderer(fixture) {
       t,
     };
     const fn = () => {
-      renderIntoDocument(
+      shallow(
         <ProductCard {...props} />
       );
     };
@@ -40,7 +40,7 @@ describe('[Component] ProductCard', () => {
       t,
     };
     const fn = () => {
-      renderIntoDocument(
+      shallow(
         <ProductCard {...props} />
       );
     };

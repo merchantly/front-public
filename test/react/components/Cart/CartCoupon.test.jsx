@@ -1,12 +1,10 @@
 import React from 'react';
-import { scryRenderedComponentsWithType, renderIntoDocument } from 'react-dom/test-utils';
 import { expect } from 'chai';
+import { shallow, render } from 'enzyme';
 
-import { render } from 'enzyme';
-import then from '../../../utils/then';
 import t from '../../../mocks/t';
 
-import Alert from '../../../../app/scripts/react/components/common/Alert';
+import CartAlert from '../../../../app/scripts/react/components/Cart/CartAlert';
 import { CartCoupon } from '../../../../app/scripts/react/components/Cart/CartCoupon';
 
 describe('[Component] CartCoupon', () => {
@@ -20,47 +18,41 @@ describe('[Component] CartCoupon', () => {
 
   it ('shouldn\'t display alert when code is empty', () => {
     const props = { t };
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <CartCoupon {...props} />
     );
-    const alerts = scryRenderedComponentsWithType(component, Alert);
+    const alerts = wrapper.find(CartAlert);
 
-    expect(alerts.length).to.equals(0);
+    expect(alerts.length).to.equal(0);
   });
 
-  it ('should display alert when code isn\'t empty', (done) => {
+  it ('should display alert when code isn\'t empty', () => {
     const code = 'code';
     const message = 'message';
     const props = { t };
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <CartCoupon {...props} />
     );
 
-    component.setState({ code, message });
+    wrapper.setState({ code, message });
+    wrapper.update();
+    const alerts = wrapper.find(CartAlert);
 
-    then(() => {
-      const alerts = scryRenderedComponentsWithType(component, Alert);
-
-      expect(alerts.length).to.equals(1);
-      done();
-    });
+    expect(alerts.length).to.equal(1);
   });
 
-  it ('should display alert text in accordance to the state.message', (done) => {
+  it ('should display alert text in accordance to the state.message', () => {
     const code = 'code';
     const message = 'message';
     const props = { t };
-    const component = renderIntoDocument(
+    const wrapper = shallow(
       <CartCoupon {...props} />
     );
 
-    component.setState({ code, message });
+    wrapper.setState({ code, message });
+    wrapper.update();
+    const alerts = wrapper.find(CartAlert);
 
-    then(() => {
-      const alerts = scryRenderedComponentsWithType(component, Alert);
-
-      expect(alerts[0].props.text).to.equals(message);
-      done();
-    });
+    expect(alerts.first().prop('text')).to.equal(message);
   });
 });
