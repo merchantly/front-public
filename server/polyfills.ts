@@ -247,13 +247,41 @@ if (isServer) {
     getElementsByClassName: () => [],
   });
 
+  // Pre-create head and body elements for reuse
+  const headElement = createNoopElement();
+  headElement.tagName = 'HEAD';
+  headElement.nodeName = 'HEAD';
+
+  const bodyElement = createNoopElement();
+  bodyElement.tagName = 'BODY';
+  bodyElement.nodeName = 'BODY';
+
+  const htmlElement = createNoopElement();
+  htmlElement.tagName = 'HTML';
+  htmlElement.nodeName = 'HTML';
+
   const documentPolyfill = {
-    // Queries
-    querySelector: () => null,
-    querySelectorAll: () => [],
+    // Queries - return elements when querying for head/body
+    querySelector: (selector: string) => {
+      if (selector === 'head' || selector === 'HEAD') return headElement;
+      if (selector === 'body' || selector === 'BODY') return bodyElement;
+      if (selector === 'html' || selector === 'HTML') return htmlElement;
+      return null;
+    },
+    querySelectorAll: (selector: string) => {
+      if (selector === 'head' || selector === 'HEAD') return [headElement];
+      if (selector === 'body' || selector === 'BODY') return [bodyElement];
+      return [];
+    },
     getElementById: () => null,
     getElementsByName: () => [],
-    getElementsByTagName: () => [],
+    getElementsByTagName: (tagName: string) => {
+      const tag = tagName.toLowerCase();
+      if (tag === 'head') return [headElement];
+      if (tag === 'body') return [bodyElement];
+      if (tag === 'html') return [htmlElement];
+      return [];
+    },
     getElementsByClassName: () => [],
     elementFromPoint: () => null,
     elementsFromPoint: () => [],
@@ -263,10 +291,24 @@ if (isServer) {
       const el = createNoopElement();
       el.tagName = tagName.toUpperCase();
       el.nodeName = tagName.toUpperCase();
+      // Add sheet property for style elements (used by spin.js)
+      if (tagName.toLowerCase() === 'style') {
+        el.sheet = {
+          cssRules: [],
+          insertRule: () => 0,
+          deleteRule: () => {},
+        };
+        el.styleSheet = el.sheet;
+      }
       return el;
     },
     createElementNS: () => createNoopElement(),
-    createTextNode: () => createNoopElement(),
+    createTextNode: (text: string) => {
+      const node = createNoopElement();
+      node.textContent = text;
+      node.nodeType = 3; // TEXT_NODE
+      return node;
+    },
     createComment: () => createNoopElement(),
     createDocumentFragment: () => createNoopElement(),
     createEvent: () => ({
@@ -276,9 +318,9 @@ if (isServer) {
     }),
 
     // Special elements
-    body: createNoopElement(),
-    head: createNoopElement(),
-    documentElement: createNoopElement(),
+    body: bodyElement,
+    head: headElement,
+    documentElement: htmlElement,
 
     // Location reference
     location: windowPolyfill.location,

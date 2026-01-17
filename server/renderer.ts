@@ -12,7 +12,12 @@ import { renderToReadableStream } from 'react-dom/server.browser';
 import { renderToString } from 'react-dom/server';
 import { isCrawler, getCrawlerName } from './utils/crawlers';
 import { logger } from './utils/logger';
-import { config, getConfigForContext } from './config';
+import {
+  getComponent,
+  getComponentNames,
+  getComponentCount,
+  loadComponents,
+} from './components';
 
 // Types
 export interface RenderOptions {
@@ -39,118 +44,9 @@ export interface RenderResult {
   crawlerName: string | null;
 }
 
-// Component registry - будет заполнен при загрузке бандла
-const componentRegistry: Map<string, React.ComponentType<any>> = new Map();
-
-/**
- * Регистрирует компонент в реестре.
- * Вызывается при загрузке бандла.
- */
-export function registerComponent(name: string, component: React.ComponentType<any>): void {
-  componentRegistry.set(name, component);
-  logger.debug('Component registered', { name });
-}
-
-/**
- * Получает компонент из реестра.
- */
-export function getComponent(name: string): React.ComponentType<any> | undefined {
-  return componentRegistry.get(name);
-}
-
-/**
- * Возвращает список зарегистрированных компонентов.
- */
-export function getRegisteredComponents(): string[] {
-  return Array.from(componentRegistry.keys());
-}
-
-/**
- * Загружает компоненты из бандла в реестр.
- * Бандл должен экспортировать компоненты в global объект.
- */
-export function loadComponentsFromBundle(): void {
-  try {
-    // Бандл экспортирует компоненты в global
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('../dist/store_app_prerender.production.js');
-
-    // Собираем компоненты из global
-    const globalObj = globalThis as any;
-    const componentNames = [
-      'Logo',
-      'ProductBlock',
-      'ProductBlockSmall',
-      'ProductBlockCompact',
-      'ProductBlockLine',
-      'MenuTop',
-      'MenuBottom',
-      'NavBar',
-      'BreadCrumbs',
-      'CategoryCard',
-      'CouponForm',
-      'DeliveryInfo',
-      'Footer',
-      'GoodPrices',
-      'GoodGallery',
-      'GoodContent',
-      'GoodPage',
-      'GoodAddToBasket',
-      'GoodCount',
-      'GoodQuantity',
-      'SimilarProducts',
-      'SearchResults',
-      'Cart',
-      'CartItems',
-      'CartTotal',
-      'CartSidebar',
-      'CartCoupon',
-      'CheckoutForm',
-      'OrderSuccess',
-      'Wishlist',
-      'CategoriesGrid',
-      'CategoriesList',
-      'ProductsGrid',
-      'ProductsList',
-      'ProductsFilter',
-      'Pagination',
-      'SortSelect',
-      'PhoneInput',
-      'AddressInput',
-      'DeliveryOptions',
-      'PaymentOptions',
-      'Notice',
-      'Modal',
-      'Popup',
-      'Slider',
-      'Carousel',
-      'Tabs',
-      'Accordion',
-      'Rating',
-      'ReviewForm',
-      'ReviewsList',
-      'SocialShare',
-      'LangSwitcher',
-      'CurrencySwitcher',
-      'AccountMenu',
-      'LoginForm',
-      'RegisterForm',
-      'ProfileForm',
-    ];
-
-    for (const name of componentNames) {
-      if (globalObj[name] && typeof globalObj[name] === 'function') {
-        registerComponent(name, globalObj[name]);
-      }
-    }
-
-    logger.info('Components loaded from bundle', { count: componentRegistry.size });
-  } catch (error) {
-    logger.error('Failed to load components from bundle', {
-      error: error instanceof Error ? error.message : 'Unknown error',
-    });
-  }
-}
+// Re-export component functions for backward compatibility
+export { getComponentNames as getRegisteredComponents } from './components';
+export { loadComponents as loadComponentsFromBundle } from './components';
 
 /**
  * Создаёт React element с ConfigContext provider.
