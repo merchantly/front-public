@@ -26,7 +26,7 @@ class ClientForm extends Component {
   }
 
   deliveryById(deliveryId) {
-    return find(this.props.delivery.list, (d) => d.id == deliveryId)
+    return find(this.props.delivery.list, (d) => d.id == deliveryId);
   }
 
   renderName() {
@@ -39,7 +39,7 @@ class ClientForm extends Component {
       secondName,
       patronymic,
       name,
-      t
+      t,
     } = this.props;
 
     const delivery = this.deliveryById(deliveryId);
@@ -121,7 +121,7 @@ class ClientForm extends Component {
           )
         }
       </div>
-    )
+    );
   }
 
   renderAddress() {
@@ -139,7 +139,7 @@ class ClientForm extends Component {
       slash,
       street,
       postalCode,
-      t
+      t,
     } = this.props;
 
     return (
@@ -270,7 +270,7 @@ class ClientForm extends Component {
           )
         }
       </div>
-    )
+    );
   }
 
   render() {
@@ -310,7 +310,7 @@ class ClientForm extends Component {
                 <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
                   <Select
                     name="client[vendor_delivery_id]"
-                    options={delivery.list.map((i) => ({ value: i.id, title: i.title, }))}
+                    options={delivery.list.map((i) => ({ value: i.id, title: i.title }))}
                     onChange={this.changeDelivery.bind(this)}
                     value={deliveryId}
                   />
@@ -328,7 +328,7 @@ class ClientForm extends Component {
                 <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
                   <Select
                     name="client[vendor_payment_id]"
-                    options={payment.list.map((i) => ({ value: i.id, title: i.title, }))}
+                    options={payment.list.map((i) => ({ value: i.id, title: i.title }))}
                     onChange={this.changePayment.bind(this)}
                     value={paymentId}
                   />
@@ -368,7 +368,7 @@ class ClientForm extends Component {
           </form>
         </div>
       </div>
-    )
+    );
   }
 }
 

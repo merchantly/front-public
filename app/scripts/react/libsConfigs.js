@@ -36,4 +36,4 @@ console.warn = (warning, ...rest) => {
   }
 
   originalWarning.apply(console, [warning, ...rest]);
-}
+};

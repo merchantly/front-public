@@ -11,7 +11,7 @@ export default class ProductCartForProductItems extends Component {
     product: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
     wishlistUrl: PropTypes.string,
-  }
+  };
   render() {
     const { product: { goods, properties }, t } = this.props;
     if (properties.length) {

@@ -49,7 +49,6 @@ class CheckoutField extends Component {
             }
           </div>
         );
-        break;
       case fieldTypes.textarea:
         return (
           <div className="form-group text">
@@ -71,7 +70,6 @@ class CheckoutField extends Component {
             }
           </div>
         );
-        break;
       case fieldTypes.select:
         return (
           <CheckoutFieldSelect
@@ -89,7 +87,6 @@ class CheckoutField extends Component {
             defaultValue={settings.defaultValue}
           />
         );
-        break;
       case fieldTypes.ajax_select:
         return (
           <CheckoutFieldSelectAjax
@@ -110,7 +107,6 @@ class CheckoutField extends Component {
             defaultTitle={ajaxSettings.defaultTitle}
           />
         );
-        break;
       case fieldTypes.hidden:
         return (
           <input
@@ -120,7 +116,6 @@ class CheckoutField extends Component {
             value={value}
           />
         );
-        break;
       default:
         return (
           <div>Unknown field type '{type}'</div>
@@ -132,9 +127,9 @@ class CheckoutField extends Component {
 CheckoutField.propTypes = {
   field: PropTypes.object.isRequired,
   isRequired: PropTypes.bool,
-  value:  PropTypes.oneOfType([
+  value: PropTypes.oneOfType([
     PropTypes.string.isRequired,
-    PropTypes.number.isRequired
+    PropTypes.number.isRequired,
   ]),
   onChange: PropTypes.func.isRequired,
 };

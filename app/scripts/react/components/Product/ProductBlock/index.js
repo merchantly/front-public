@@ -27,7 +27,7 @@ class ProductBlock extends Component {
   }
 
   redirectToSignIn() {
-    window.location.href =  this.props.vendorClientSigninPath
+    window.location.href =  this.props.vendorClientSigninPath;
   }
 
   render () {
@@ -65,7 +65,7 @@ class ProductBlock extends Component {
               </div>
             }
 
-            {!Boolean(product.shortDetails) && <meta itemProp="description" content={product.title}/>}
+            {!product.shortDetails && <meta itemProp="description" content={product.title}/>}
             <ProductPrices product={product} t={t} />
           </AppLink>
           {(showCartButton && product.hasOrderingGoods) && (

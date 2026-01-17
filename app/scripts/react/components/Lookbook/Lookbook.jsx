@@ -33,7 +33,7 @@ Lookbook.propTypes = {
 };
 
 Lookbook.defaultProps = {
-  rtl: false
-}
+  rtl: false,
+};
 
 export default Lookbook;

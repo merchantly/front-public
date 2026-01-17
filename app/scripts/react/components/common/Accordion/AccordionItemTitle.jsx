@@ -9,11 +9,11 @@ export default class AccordionItemTitle extends Component {
     titleClassName: PropTypes.string,
     titleColor: PropTypes.string,
     uuid: PropTypes.string,
-  }
+  };
   render() {
     const { onClick, title, titleClassName, titleColor, uuid } = this.props;
     const style = {
-      color : titleColor,
+      color: titleColor,
       cursor: 'pointer',
       margin: 0,
     };

@@ -4,7 +4,7 @@ import { Image } from 'rc/common/Image';
 import HumanizedMoneyWithCurrency from 'rc/common/Money/HumanizedMoneyWithCurrency';
 import * as schemas from 'r/schemas';
 import {
-  ORDER_IMG_SIZE,
+  ORDER_IMG_SIZE
 } from 'r/constants/OrderConstants';
 
 class OrderItem extends Component {

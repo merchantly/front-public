@@ -9,20 +9,20 @@ import {
   setPackageCount as changePackageCount,
   selectPackage,
   initCart,
-  fetchCart,
+  fetchCart
 } from '../../actions/CartActions';
 import {
   initPackages,
-  fetchPackages,
+  fetchPackages
 } from '../../actions/PackagesActions';
 import {
-  initCartStore,
+  initCartStore
 } from '../../reducers/cart';
 import {
-  initPackageStore,
+  initPackageStore
 } from '../../reducers/packages';
 import {
-  canUseDOM,
+  canUseDOM
 } from '../../helpers/dom';
 import * as schemas from 'r/schemas';
 import { getIn, set } from 'timm';
@@ -43,7 +43,7 @@ class CartContainer extends Component {
       initCart,
       initialCart,
       initPackages,
-      initialPackages
+      initialPackages,
     } = this.props;
 
     if (!storeInitialized && canUseDOM()) {
@@ -111,7 +111,7 @@ CartContainer.propTypes = {
   selectPackage: PropTypes.func.isRequired,
   selectedPackage: PropTypes.string,
   t: PropTypes.func.isRequired,
-  totalPrice: PropTypes.object.isRequired
+  totalPrice: PropTypes.object.isRequired,
 };
 
 CartContainer.defaultProps = {

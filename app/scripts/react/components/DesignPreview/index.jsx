@@ -135,7 +135,7 @@ class DesignPreview extends Component {
   static propTypes = {
     design: PropTypes.object.isRequired,
     pageType: PropTypes.string.isRequired,
-  }
+  };
   componentDidMount() {
     this.attachSheet();
     if (isDesignOpened(this.props.popups)) {

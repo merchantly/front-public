@@ -11,6 +11,6 @@ const ProductGoodActualPrice = ({ good, t }) => (
 
 ProductGoodActualPrice.propTypes = {
   good: PropTypes.object.isRequired,
-}
+};
 
 export default ProductGoodActualPrice;

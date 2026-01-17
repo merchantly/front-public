@@ -7,7 +7,7 @@ import {
   h1,
   schemaOrgGoodAvailability,
   schemaOrgProductArticle,
-  schemaOrgProductCategory,
+  schemaOrgProductCategory
 } from './seo';
 
 export function schemaOrgMarkup(product) {
@@ -72,7 +72,7 @@ export function attributeValue(attribute) {
     title,
     type,
     value,
-  } = attribute
+  } = attribute;
 
   switch(type) {
     case 'AttributeLink':

@@ -43,7 +43,7 @@ WelcomeContainer.defaultProps = {
   showQuantity: false,
   showWelcomeSlider: false,
   vendor: {},
-  rtl: false
+  rtl: false,
 };
 
 export default provideTranslations(WelcomeContainer);

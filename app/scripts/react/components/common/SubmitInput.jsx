@@ -9,7 +9,7 @@ export default class SubmitInput extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
-  }
+  };
   render() {
     return (
       <input {...this.props} type="submit" />

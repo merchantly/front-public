@@ -10,5 +10,5 @@ export default PropTypes.shape({
   fields: PropTypes.arrayOf(checkoutField).isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string),
   availablePayments: PropTypes.arrayOf(PropTypes.number),
-  freeDeliveryThreshold: money
+  freeDeliveryThreshold: money,
 });

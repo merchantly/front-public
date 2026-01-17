@@ -12,7 +12,7 @@ function request(_method, url, srcData = {}) {
   let contentType, processData, method;
   const headers = prepareData({
     'X-Requested-With': 'XMLHttpRequest',
-    'X-Vendor-Token': vendorToken()
+    'X-Vendor-Token': vendorToken(),
   });
   const data = prepareData({ ...srcData, _method });
 
@@ -46,5 +46,5 @@ export default {
   },
   delete(url, srcData) {
     return request('DELETE', url, srcData);
-  }
-}
+  },
+};

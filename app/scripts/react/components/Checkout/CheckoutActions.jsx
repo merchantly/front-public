@@ -14,7 +14,7 @@ class CheckoutActions extends Component {
       startProcessing,
       handleClick,
       isProcessing,
-      isRedirecting
+      isRedirecting,
     } = this.props;
 
     return (

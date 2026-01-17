@@ -31,7 +31,7 @@ class CategoriesShowPage extends Component {
       showQuantity,
       showNextButton,
       nextButton,
-      historyProducts
+      historyProducts,
     } = this.props;
 
     return (
@@ -78,7 +78,7 @@ CategoriesShowPage.propTypes = {
 };
 
 CategoriesShowPage.defaultProps = {
-  historyProducts: []
+  historyProducts: [],
 };
 
 export default CategoriesShowPage;

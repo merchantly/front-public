@@ -15,7 +15,7 @@ class BlogPostListItem extends Component {
       linkTarget,
       imageUrl,
       t,
-    } = this.props
+    } = this.props;
 
     let imagePart = '';
     let titlePart = '';
@@ -79,7 +79,7 @@ BlogPostListItem.propTypes = {
   text: PropTypes.string.isRequired,
   publicUrl: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-}
+};
 
 export default provideTranslations(BlogPostListItem);
 

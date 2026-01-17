@@ -8,4 +8,4 @@ export const simpleFormat = (str = '') => {
   }
 
   return newStr;
-}
+};

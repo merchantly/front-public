@@ -21,7 +21,7 @@ class ChildrenProducts extends Component {
       title,
       container,
       historyProducts,
-      t
+      t,
     } = this.props;
 
     return (

@@ -6,7 +6,7 @@ import AssetImage from 'r/components/common/AssetImage';
 import InputNumberSpinner from 'r/components/common/InputNumberSpinner';
 import { partial } from 'lodash';
 import {
-  SortableHandle,
+  SortableHandle
 } from 'react-sortable-hoc';
 
 const DragHandle = SortableHandle(({good, properties}) =>
@@ -27,12 +27,12 @@ export default class MultipleChoiceFormItem extends Component {
   onChangeAmount = (count) => {
     const { good } = this.props;
     this.props.onChangeAmount(good, count);
-  }
+  };
 
   onRemove = () => {
     const { good } = this.props;
     this.props.onRemove(good);
-  }
+  };
 
   render() {
     const { properties, good, count } = this.props;

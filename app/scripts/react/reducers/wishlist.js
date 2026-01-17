@@ -8,15 +8,15 @@ import {
   WISHLIST_REMOVE_FAILURE,
   WISHLIST_BUTTON_ADD_TO_WISH_LIST,
   WISHLIST_BUTTON_REMOVE_FROM_WISH_LIST,
-  WISHLIST_BUTTON_FETCHING,
+  WISHLIST_BUTTON_FETCHING
 } from 'r/actions/WishlistStateActions';
 import { merge, set, setIn, getIn } from 'timm';
 import { reduce } from 'lodash';
 
 const initialState = {  
   data: {
-    isFetching: false
-  }
+    isFetching: false,
+  },
 };
 
 const actionMap = { 

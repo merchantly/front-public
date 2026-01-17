@@ -44,7 +44,7 @@ class CatalogFilterExpandButton extends Component {
 CatalogFilterExpandButton.propTypes = {
   expanded: PropTypes.bool.isRequired,
   onExpand: PropTypes.func.isRequired,
-  onTurn: PropTypes.func.isRequired
+  onTurn: PropTypes.func.isRequired,
 };
 
 export default CatalogFilterExpandButton;

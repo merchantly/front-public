@@ -9,11 +9,11 @@ import geideaPaymentWidget from 'app/scripts/lib/geideaPaymentWidget';
 
 class OrderShow extends Component {
   onPayClick = () => {
-    const { order } = this.props
+    const { order } = this.props;
 
     const {
       paymentUrl,
-      paymentType
+      paymentType,
     } = order;
 
     if(paymentType.isGeideaPayment) {
@@ -21,7 +21,7 @@ class OrderShow extends Component {
     } else {
       window.location = paymentUrl;
     }
-  }
+  };
 
   render() {
     const {
@@ -39,7 +39,7 @@ class OrderShow extends Component {
       workflowState,
       adminComments,
       deliveryComment,
-      invoceUrl
+      invoceUrl,
     } = order;
     const {
       trackingId,

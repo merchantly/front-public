@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CartButton from './CartButton';
 import {
-  fetchCart,
+  fetchCart
 } from 'r/actions/CartActions';
 import { humanizedMoneyWithCurrency } from 'r/helpers/money';
 import connectToRedux from 'rc/HoC/connectToRedux';

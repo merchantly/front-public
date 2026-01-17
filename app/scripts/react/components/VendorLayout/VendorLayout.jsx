@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TopBanner from 'rc/TopBanner';
 import NavBar, {
-  externalPropTypes as navBarPropTypes,
+  externalPropTypes as navBarPropTypes
 } from 'rc/NavBar';
 import MenuTop from 'rc/MenuTop';
 import LayoutMessages from 'rc/common/LayoutMessages';
 import Footer from './Footer';
 import MenuBottom from 'rc/MenuBottom';
 import Userbar, {
-  externalPropTypes as userbarPropTypes,
+  externalPropTypes as userbarPropTypes
 } from 'rc/Userbar';
 import W1Widget from 'rc/common/W1Widget';
 import ScrollToTop from 'rc/ScrollToTop';

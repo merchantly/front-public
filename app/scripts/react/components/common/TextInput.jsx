@@ -10,7 +10,7 @@ export default class TextInput extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
-  }
+  };
   render() {
     return (
       <input {...this.props} type="text" />

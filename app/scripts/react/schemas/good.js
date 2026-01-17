@@ -20,6 +20,6 @@ export default PropTypes.shape({
   defaultUrl: PropTypes.string,
   sellingByWeight: PropTypes.bool,
   weightOfPrice: PropTypes.number,
-  vatAmount:  PropTypes.object,
+  vatAmount: PropTypes.object,
   vat: PropTypes.number,
 });

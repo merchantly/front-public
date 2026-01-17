@@ -10,7 +10,7 @@ function getCurrency(money) {
 
 function getCurrencyID(money) {
   try {
-    const currencyID = (typeof money === 'string' ? money : money.currencyIsoCode)
+    const currencyID = (typeof money === 'string' ? money : money.currencyIsoCode);
 
     return currencyID.toLowerCase();
   } catch(e) {

@@ -14,15 +14,15 @@ const ERROR_STATE = 'error';
 
 const findEmptyValue = (requires, data) => {
   return find(requires || [], (v) => !data[v]);
-}
+};
 
 class CheckoutFieldSelectAjax extends Component {
   state = {
     status: DEFAULT_STATE,
-    items: []
-  }
+    items: [],
+  };
   componentDidMount() {
-    this.loadItems(this.props.requestData)
+    this.loadItems(this.props.requestData);
   }
   //shouldComponentUpdate(nextProps, nextState) {
     //if (this.state.status != nextState.status || this.state.items != nextState.items) {
@@ -43,19 +43,19 @@ class CheckoutFieldSelectAjax extends Component {
         if (Array.isArray(data)) {
           this.setState({
             items: data,
-            status: LOADED_STATE
-          })
+            status: LOADED_STATE,
+          });
         } else {
           this.setState({
-            status: ERROR_STATE
+            status: ERROR_STATE,
           });
         };
         })
         .fail((xhr, textStatus) => {
           if (textStatus !== 'abort') {
             this.setState({
-              status: ERROR_STATE
-            })
+              status: ERROR_STATE,
+            });
           }
         });
     };
@@ -65,19 +65,19 @@ class CheckoutFieldSelectAjax extends Component {
     if (this.pendingRequest) this.pendingRequest.abort();
 
     const {
-      collectionUrl
+      collectionUrl,
     } = this.props;
 
     // Добыть данные
 
     this.setState({
-      status: LOADING_STATE
+      status: LOADING_STATE,
     });
 
     this.pendingRequest = $.ajax({
       url: apiRoutes.publicUrl() + collectionUrl,
       type: 'GET',
-      data: requestData
+      data: requestData,
     });
 
     return this.pendingRequest;
@@ -96,12 +96,12 @@ render() {
     requiredTitle,
     value,
     disabled,
-    t
+    t,
   } = this.props;
 
   const {
     status,
-    items
+    items,
   } = this.state;
 
   switch(status) {
@@ -128,7 +128,7 @@ render() {
     case ERROR_STATE:
       return (<div className="alert alert-danger">{t('vendor.ajax.error')}</div>);
     default:
-      return (<div className="alert alert-danger">Unknown status {status}</div>)
+      return (<div className="alert alert-danger">Unknown status {status}</div>);
   }
 }
 }

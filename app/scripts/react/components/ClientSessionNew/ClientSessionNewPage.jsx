@@ -46,7 +46,7 @@ ClientSessionNewPage.propTypes = {
 };
 
 ClientSessionNewPage.defaultProps = {
-  phoneValue: ''
+  phoneValue: '',
 };
 
 export default ClientSessionNewPage;

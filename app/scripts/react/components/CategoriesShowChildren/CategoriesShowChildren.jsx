@@ -14,7 +14,7 @@ class CategoriesShowChildren extends Component {
       title,
       vendorRootPath,
       container,
-      historyProducts
+      historyProducts,
     } = this.props;
 
     return childrenProducts.length

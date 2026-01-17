@@ -14,7 +14,7 @@ class Userbar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { launchFromIFrame: false }
+    this.state = { launchFromIFrame: false };
   }
 
   componentWillMount() {
@@ -48,11 +48,11 @@ class Userbar extends Component {
       showW1Design,
     } = this.props;
 
-    const launchFromIFrame = this.state.launchFromIFrame
+    const launchFromIFrame = this.state.launchFromIFrame;
 
     const className = classNames({
       'Userbar': true,
-      'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
+      'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0,
     });
 
     return (

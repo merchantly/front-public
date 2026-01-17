@@ -27,7 +27,7 @@ class CartListPackageItem extends Component {
 
     if (link.dataset.method) return;
 
-    window.last_deleted_item_e = e
+    window.last_deleted_item_e = e;
 
     e.preventDefault();
 
@@ -38,7 +38,7 @@ class CartListPackageItem extends Component {
     }
 
     link.dataset.method = 'delete';
-    link.click()
+    link.click();
   }
 
   render() {

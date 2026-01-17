@@ -38,7 +38,7 @@ ContentPagePage.propTypes = {
 };
 
 ContentPagePage.defaultProps = {
-  rtl: false
-}
+  rtl: false,
+};
 
 export default ContentPagePage;

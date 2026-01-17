@@ -8,7 +8,7 @@ class ProductCardContainer extends Component {
   state = {
     currentState: this.isLoadingNeeded(this.props) ? LOADING_STATE : ERROR_STATE,
     productCard: null,
-  }
+  };
   componentDidMount() {
     const {
       productId,

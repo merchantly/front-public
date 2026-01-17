@@ -20,11 +20,11 @@ class ProductProperties extends Component {
     onGoodChange: PropTypes.func,
     properties: PropTypes.array.isRequired,
     t: PropTypes.func.isRequired,
-  }
+  };
   static defaultProps = {
     goods: [],
     properties: [],
-  }
+  };
   constructor(props) {
     super(props);
 

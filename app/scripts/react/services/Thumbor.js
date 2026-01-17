@@ -23,10 +23,10 @@ function stepSizes(size, rk = 1) {
     height = Math.round(size.height * k);
   } else if (size.width) {
     width = stepSize(size.width) * rk;
-    height = ''
+    height = '';
   } else if (size.height) {
     height = stepSize(size.height) * rk;
-    width = ''
+    width = '';
   }
   // console.log(`Request size: ${size}, ${rk}, return [${width}, ${height}]`);
   return [width, height];

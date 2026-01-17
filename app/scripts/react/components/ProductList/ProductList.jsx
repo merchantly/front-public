@@ -31,7 +31,7 @@ class ProductList extends Component {
       t,
       title,
       isFilterOpenByDefault,
-      historyProducts
+      historyProducts,
     } = this.props;
 
     return (
@@ -108,7 +108,7 @@ ProductList.propTypes = {
 
 ProductList.defaultProps = {
   isFilterOpenByDefault: false,
-  historyProducts: []
-}
+  historyProducts: [],
+};
 
 export default ProductList;
