@@ -17,7 +17,6 @@ exports.default = {
   resolve: {
     modules: [
       path.join(__dirname, '../node_modules'),
-      path.join(__dirname, '../node_modules/@bower_components'),
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug', '.html'],
   },
