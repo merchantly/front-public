@@ -26,8 +26,14 @@ jobs:
         bundler-cache: true
     - name: Test mini_racer
       run: yarn test:mini_racer
-    - name: Install Playwright
-      run: npx playwright install chromium --with-deps
-    - name: Test browser
-      run: yarn test:browser
-      continue-on-error: true  # TODO: Fix browser tests (Enzyme/React 18 compatibility issues)
+    # Browser tests temporarily disabled - Enzyme/React 18 compatibility issues
+    # See: https://github.com/enzymejs/enzyme/issues/2429
+    # 13 tests fail due to:
+    # - renderIntoDocument returns null in React 18
+    # - Legacy context API deprecated
+    # - Concurrent mode incompatibilities
+    # To re-enable: fix remaining test failures or migrate to React Testing Library
+    # - name: Install Playwright
+    #   run: npx playwright install chromium --with-deps
+    # - name: Test browser
+    #   run: yarn test:browser

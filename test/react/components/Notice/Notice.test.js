@@ -1,6 +1,6 @@
 import React from 'react';
 import sinon from 'sinon';
-import { mount, render } from 'enzyme';
+import { render } from 'enzyme';
 import { expect } from 'chai';
 import Notice from '../../../../app/scripts/react/components/Notice';
 
