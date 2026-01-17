@@ -26,6 +26,8 @@ jobs:
         bundler-cache: true
     - name: Test mini_racer
       run: yarn test:mini_racer
-    #- uses: browser-actions/setup-chrome@v1
-    #- name: Test browser
-      #run: yarn test:browser
+    - name: Install Playwright
+      run: npx playwright install chromium --with-deps
+    - name: Test browser
+      run: yarn test:browser
+      continue-on-error: true  # TODO: Fix browser tests (Enzyme/React 18 compatibility issues)

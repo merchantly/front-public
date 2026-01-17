@@ -32,8 +32,10 @@ yarn build:development
 yarn test:prerender    # Основной тест — 50 компонентов
 yarn test:mini_racer   # Тест совместимости с MiniRacer
 
-# Браузерные тесты (отключены в CI — несовместимость mocha-chrome с современным Chrome)
-yarn test:browser
+# Браузерные тесты через Playwright
+yarn test:browser        # Headless режим
+yarn test:browser:headed # С видимым браузером
+yarn test:browser:debug  # Режим отладки
 
 # Анализ бандла
 yarn profile

@@ -27,3 +27,5 @@ www
 /tmp/
 yarn-error.log
 stats.json
+/test-results/
+/playwright-report/
