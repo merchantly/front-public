@@ -6,7 +6,10 @@
  */
 
 import React from 'react';
-import { renderToReadableStream, renderToString } from 'react-dom/server';
+// Bun использует browser API, поэтому импортируем из server.browser
+// renderToReadableStream доступен только в browser/edge runtime
+import { renderToReadableStream } from 'react-dom/server.browser';
+import { renderToString } from 'react-dom/server';
 import { isCrawler, getCrawlerName } from './utils/crawlers';
 import { logger } from './utils/logger';
 import { config, getConfigForContext } from './config';
