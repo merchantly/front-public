@@ -20,6 +20,8 @@ jobs:
       run: yarn build
     - name: Test prerender
       run: yarn test:prerender
+    - name: Test SSR compatibility
+      run: yarn test:ssr
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
