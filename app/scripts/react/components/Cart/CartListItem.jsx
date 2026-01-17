@@ -1,4 +1,3 @@
-/*global gon */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AssetImage from '../common/AssetImage';
@@ -18,6 +17,7 @@ import { connect } from 'react-redux';
 import {
   addGood
 } from 'r/actions/GoodStateActions';
+import { withConfig } from 'r/contexts/ConfigContext';
 
 const WEIGHT_STEP = 0.01;
 
@@ -134,10 +134,11 @@ class CartListItem extends Component {
       amount,
       item,
       t,
+      config,
     } = this.props;
 
     const maxAvail = Math.min(
-      gon.max_items_count || 100,
+      config.maxItemsCount,
       (getIn(item, ['good', 'maxOrderableQuantity']) || 0)
     );
     const options = range(0, Math.max(amount, maxAvail))
@@ -240,17 +241,20 @@ class CartListItem extends Component {
 CartListItem.propTypes = {
   amount: PropTypes.number.isRequired,
   changeAmount: PropTypes.func.isRequired,
+  config: PropTypes.shape({
+    maxItemsCount: PropTypes.number,
+  }).isRequired,
   item: PropTypes.object.isRequired,
   price: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
   sortedCart: PropTypes.bool.isRequired,
 };
 
-export default connectToRedux(connect(
+export default connectToRedux(withConfig(connect(
   (state) => ({
     sortedCart: state.clientState.data.sortedCart,
   }),
   {
     addGood,
   }
-)(CartListItem));
+)(CartListItem)));

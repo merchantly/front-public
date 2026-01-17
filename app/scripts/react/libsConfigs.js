@@ -3,14 +3,28 @@ import ErrorService from './services/Error';
 
 const DEFAULT_LOCALE = 'ru';
 
-let locale = undefined;
+/**
+ * Получить gon объект SSR-safe способом
+ */
+function getGon() {
+  if (typeof window !== 'undefined' && window.gon) {
+    return window.gon;
+  }
+  if (typeof global !== 'undefined' && global.gon) {
+    return global.gon;
+  }
+  return null;
+}
+
+let locale = DEFAULT_LOCALE;
 let translations = {};
 
-// i18n
-if (typeof gon !== 'undefined') {
+// i18n - SSR-safe инициализация
+const gon = getGon();
+if (gon && gon.i18n) {
   locale = gon.i18n.locale || DEFAULT_LOCALE;
   translations = gon.i18n.translations || {};
-};
+}
 
 i18next.init({
   fallbackLng: DEFAULT_LOCALE,

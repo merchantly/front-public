@@ -10,9 +10,10 @@ export const setScrollTop = (elt, nextStep) => {
   return step;
 };
 
-export const getElt = (selector) => (
-  selector === 'window' ? window : document.querySelector(selector)
-);
+export const getElt = (selector) => {
+  if (typeof window === 'undefined') return null;
+  return selector === 'window' ? window : document.querySelector(selector);
+};
 
 export function canUseDOM() {
   return !!(
@@ -45,6 +46,8 @@ export function addEvent(el, eventName, callback, useCapture) {
 let transitionEndEvent = void 0;
 
 export function getTransitionEndEvent() {
+  if (typeof document === 'undefined') return false;
+
   if (transitionEndEvent) {
     return transitionEndEvent;
   }

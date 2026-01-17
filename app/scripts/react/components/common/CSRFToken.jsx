@@ -24,6 +24,9 @@ export default class CSRFToken extends Component {
     }
   }
   csrfToken() {
+    // SSR-safe: на сервере возвращаем null
+    if (typeof document === 'undefined') return null;
+
     const { nodeSelector } = this.props;
     const tokenNode = document.querySelector(nodeSelector);
 

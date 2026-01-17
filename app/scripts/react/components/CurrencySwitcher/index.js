@@ -6,6 +6,9 @@ import CurrencySwitcher from './CurrencySwitcher';
 
 class CurrencySwitcherContainer extends Component {
   handleChange(value) {
+    // SSR-safe: handleChange вызывается только при клике пользователя
+    if (typeof window === 'undefined') return;
+
     const url = new YouAreI(window.location.href);
     url.query_set({currency: value});
     document.location = url.to_string();
