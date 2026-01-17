@@ -5,373 +5,276 @@ import { shallow, render } from 'enzyme';
 import t from '../../../../mocks/t';
 
 import ProductCart from '../../../../../app/scripts/react/components/Product/ProductCart';
+import CSRFToken from '../../../../../app/scripts/react/components/common/CSRFToken';
+import ProductCartNotAvailable from '../../../../../app/scripts/react/components/Product/ProductCart/ProductCartNotAvailable';
+import ProductCartForProduct from '../../../../../app/scripts/react/components/Product/ProductCart/ProductCartForProduct';
+import ProductCartForProductItems from '../../../../../app/scripts/react/components/Product/ProductCart/ProductCartForProductItems';
 
 describe('[Component] ProductCart', () => {
   it('should render when product is empty object', () => {
     const props = {
       product: {},
       t,
+      isAddingGood: false,
+      onChangeAmount: () => {},
+      onSubmit: () => {},
     };
-    expect( () => render(
+    expect(() => render(
       <ProductCart {...props} />
       )
     ).to.not.throw()
   });
 
-  it('should render CSRF token when it\'s passed in formAuthenticity prop', () => {
+  it('should render CSRFToken when formAuthenticity prop is passed', () => {
     const field = 'authenticity_token';
     const token = 'HDbhKZ79CgJJszMyRb7FflQli7P63A0FUTItVMmU7+I=';
     const props = {
       formAuthenticity: { field, token },
       product: {},
       t,
+      isAddingGood: false,
+      onChangeAmount: () => {},
+      onSubmit: () => {},
     };
     const wrapper = shallow(
       <ProductCart {...props} />
     );
-    const CSRFToken = wrapper.find(`input[name="${field}"]`);
+    const csrfToken = wrapper.find(CSRFToken);
 
-    expect(CSRFToken.prop('value')).to.equal(token);
+    expect(csrfToken.exists()).to.be.true;
+    expect(csrfToken.prop('field')).to.equal(field);
+    expect(csrfToken.prop('token')).to.equal(token);
   });
 
-  describe('has_ordering_goods = true and goods = 1', () => {
-    it('should render unavailable status', () => {
+  describe('has_ordering_goods = false', () => {
+    it('should render ProductCartNotAvailable', () => {
       const props = {
         product: { hasOrderingGoods: false },
         t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
       };
       const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const button = wrapper.find('.b-btn_trans');
-      expect(button.text()).to.equal('vendor.product.not_available');
+
+      expect(wrapper.find(ProductCartNotAvailable).exists()).to.be.true;
     });
   });
 
   describe('has_ordering_goods = true and goods = 1', () => {
-    it('should render single hidden input', () => {
+    it('should render ProductCartForProduct with correct good', () => {
       const globalID = 'Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3';
+      const good = {
+        title: 'Размер: 13',
+        article: null,
+        globalId: globalID,
+        isOrdering: true,
+        isRunOut: false,
+        isSale: false,
+        isPreorder: false,
+        image: {
+          title: 'Миникольцо Цепочка золоченая с цирконом б',
+          url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
+          uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
+        },
+        attributes: {
+          94: '13',
+        },
+        quantity: 1,
+        price: {
+          cents: 120000,
+          currencyIsoCode: 'RUB',
+        },
+        actualPrice: {
+          id: 123,
+          price: {
+            cents: 120000,
+            currencyIsoCode: 'RUB',
+          }
+        },
+      };
       const props = {
         product: {
           hasOrderingGoods: true,
-          goods: [
-            {
-              title: 'Размер: 13',
-              article: null,
-              globalId: globalID,
-              isOrdering: true,
-              isRunOut: false,
-              isSale: false,
-              isPreorder: false,
-              image: {
-                title: 'Миникольцо Цепочка золоченая с цирконом б',
-                url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
-                uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
-              },
-              attributes: {
-                94: '13',
-              },
-              quantity: 1,
-              price: {
-                cents: 120000,
-                currencyIsoCode: 'RUB',
-              },
-              actualPrice: {
-                id: 123,
-                price: {
-                  cents: 120000,
-                  currencyIsoCode: 'RUB',
-                }
-              },
-            },
-          ],
+          goods: [good],
         },
         t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
       };
       const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemInput = wrapper.find(`input[name="cart_item[good_id]"]`);
+      const productCartForProduct = wrapper.find(ProductCartForProduct);
 
-      expect(cartItemInput.prop('value')).to.equal(globalID);
+      expect(productCartForProduct.exists()).to.be.true;
+      expect(productCartForProduct.prop('good').globalId).to.equal(globalID);
+    });
+
+    it('should render ProductCartNotAvailable when good has no actualPrice', () => {
+      const props = {
+        product: {
+          hasOrderingGoods: true,
+          goods: [{
+            globalId: 'test',
+            // no actualPrice
+          }],
+        },
+        t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
+      };
+      const wrapper = shallow(
+        <ProductCart {...props} />
+      );
+
+      expect(wrapper.find(ProductCartNotAvailable).exists()).to.be.true;
     });
   });
 
   describe('has_ordering_goods = true and goods > 1', () => {
     const firstGoodGlobalID = 'Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS85ODA3';
     const secondGoodGlobalID = 'Z2lkOi8vbWVyY2hhbnRseS9Qcm9kdWN0SXRlbS8xMDIzNw';
-    const disabledOptionValue = 740;
-    const baseProps = {
-      product: {
-        hasOrderingGoods: true,
-        goods: [
-          {
-            title: 'Размер: 13',
-            article: null,
-            globalId: firstGoodGlobalID,
-            isOrdering: true,
-            isRunOut: false,
-            isSale: false,
-            isPreorder: false,
-            image: {
-              title: 'Миникольцо Цепочка золоченая с цирконом б',
-              url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
-              uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
-            },
-            attributes: {
-              94: '13',
-            },
-            quantity: 1,
-            price: {
-              cents: 120000,
-              currencyIsoCode: 'RUB',
-            },
-            actualPrice: {
-              id: 123,
-              price: {
-                cents: 120000,
-                currencyIsoCode: 'RUB',
-              }
-            },
-          },
-          {
-            title: 'Размер: 14',
-            article: null,
-            globalId: secondGoodGlobalID,
-            isOrdering: false,
-            isRunOut: true,
-            isSale: false,
-            isPreorder: false,
-            image: {
-              title: 'Миникольцо Цепочка золоченая с цирконом б',
-              url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
-              uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
-            },
-            attributes: {
-              94: '14',
-            },
-            quantity: 0,
-            price: {
-              cents: 120000,
-              currencyIsoCode: 'RUB',
-            },
-            actualPrice: {
-              id: 123,
-              price: {
-                cents: 120000,
-                currencyIsoCode: 'RUB',
-              }
-            },
+    const baseGoods = [
+      {
+        title: 'Размер: 13',
+        article: null,
+        globalId: firstGoodGlobalID,
+        isOrdering: true,
+        isRunOut: false,
+        isSale: false,
+        isPreorder: false,
+        image: {
+          title: 'Миникольцо Цепочка золоченая с цирконом б',
+          url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
+          uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
+        },
+        attributes: {
+          94: '13',
+        },
+        quantity: 1,
+        price: {
+          cents: 120000,
+          currencyIsoCode: 'RUB',
+        },
+        actualPrice: {
+          id: 123,
+          price: {
+            cents: 120000,
+            currencyIsoCode: 'RUB',
           }
-        ],
+        },
       },
-      t,
-    };
+      {
+        title: 'Размер: 14',
+        article: null,
+        globalId: secondGoodGlobalID,
+        isOrdering: false,
+        isRunOut: true,
+        isSale: false,
+        isPreorder: false,
+        image: {
+          title: 'Миникольцо Цепочка золоченая с цирконом б',
+          url: 'http://assets.kiiiosk.ru/uploads/shop/5/uploads/product_image/image/5172/image.png',
+          uid: '37560f3221732219f3c804d2498a7377d1878df200dc84fb66f0788f16aae1a7',
+        },
+        attributes: {
+          94: '14',
+        },
+        quantity: 0,
+        price: {
+          cents: 120000,
+          currencyIsoCode: 'RUB',
+        },
+        actualPrice: {
+          id: 123,
+          price: {
+            cents: 120000,
+            currencyIsoCode: 'RUB',
+          }
+        },
+      }
+    ];
 
-    it('should render single select when properties = 0', () => {
+    it('should render ProductCartForProductItems when multiple goods', () => {
       const props = {
-        ...baseProps,
         product: {
-          ...baseProps.product,
+          hasOrderingGoods: true,
+          goods: baseGoods,
           properties: [],
         },
         t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
       };
       const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const cartItemSelect = wrapper.find(`select[name="cart_item[good_id]"]`);
-      const cartItemSelectOptions = cartItemSelect.find('option');
 
-      expect(cartItemSelectOptions.length).to.equal(2);
-      expect(cartItemSelectOptions.at(0).prop('value')).to.equal(firstGoodGlobalID);
-      expect(cartItemSelectOptions.at(1).prop('value')).to.equal(secondGoodGlobalID);
+      expect(wrapper.find(ProductCartForProductItems).exists()).to.be.true;
     });
 
-    it('should render option with disabled attribute when good.is_ordering = false and properties = 0', () => {
-      const props = {
-        ...baseProps,
-        product: {
-          ...baseProps.product,
-          properties: [],
-        },
-        t,
-      };
-      const wrapper = shallow(
-        <ProductCart {...props} />
-      );
-      const cartItemSelect = wrapper.find(`select[name="cart_item[good_id]"]`);
-      const cartItemSelectOptions = cartItemSelect.find('option');
-
-      expect(cartItemSelectOptions.at(1).prop('disabled')).to.equal(true);
-    });
-
-    it('should render selects where their count is equals properties count', () => {
-      const props = {
-        ...baseProps,
-        product: {
-          ...baseProps.product,
-          properties: [
-            {
-              id: 94,
-              title: 'items',
-              type: 'items',
-              items: [
-                {
-                  title: 'Желтый',
-                  value: '13',
-                },
-                {
-                  title: 'Каштановый',
-                  value: '14',
-                },
-              ],
-            },
-            {
-              id: 663,
-              title: 'gender',
-              type: 'items',
-              items: [
-                {
-                  title: 'жен.',
-                  value: disabledOptionValue,
-                },
-              ]
-            }
+    it('should pass correct product to ProductCartForProductItems', () => {
+      const properties = [
+        {
+          id: 94,
+          title: 'items',
+          type: 'items',
+          items: [
+            { title: 'Желтый', value: '13' },
+            { title: 'Каштановый', value: '14' },
           ],
         },
-        t,
-      };
-      const wrapper = shallow(
-        <ProductCart {...props} />
-      );
-      const cartItemSelects = wrapper.find('select');
-
-      expect(cartItemSelects.length).to.equal(props.product.properties.length);
-    });
-
-    it('should render property with type colors', () => {
-      const colorTitle = 'color2';
+      ];
       const props = {
-        ...baseProps,
         product: {
-          ...baseProps.product,
-          properties: [
-            {
-              "id": 94,
-              "title": colorTitle,
-              "type": "colors",
-              "items": [
-                {
-                  "title": "Желтый",
-                  "value": '13',
-                },
-                {
-                  "title": "Каштановый",
-                  "value": '14',
-                },
-              ],
-            },
-            {
-              id: 663,
-              title: 'gender',
-              type: 'items',
-              items: [
-                {
-                  title: 'жен.',
-                  value: disabledOptionValue,
-                },
-              ]
-            }
-          ]
+          hasOrderingGoods: true,
+          goods: baseGoods,
+          properties,
         },
         t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
       };
       const wrapper = shallow(
         <ProductCart {...props} />
       );
-      const colorOption = wrapper.find('.b-item-full__form__option').first();
-      const labels = colorOption.find('label.radiobtn.radiobtn--color');
-      const firstLabelInput = labels.at(0).find('input');
+      const productCartForProductItems = wrapper.find(ProductCartForProductItems);
 
-      expect(colorOption.find('.b-item-full__form__title').text()).to.contain(colorTitle);
-      expect(labels.length).to.equal(props.product.properties[0].items.length);
-      expect(firstLabelInput.prop('value')).to.equal(props.product.properties[0].items[0].value);
+      expect(productCartForProductItems.exists()).to.be.true;
+      expect(productCartForProductItems.prop('product').goods.length).to.equal(2);
+      expect(productCartForProductItems.prop('product').properties).to.equal(properties);
     });
 
-    it('should render disabled option if there are no matched good attributes', () => {
-      const props = {
-        ...baseProps,
-        product: {
-          ...baseProps.product,
-          properties: [
-            {
-              id: 94,
-              title: 'items',
-              type: 'items',
-              items: [
-                {
-                  title: 'Желтый',
-                  value: '13',
-                },
-                {
-                  title: 'Каштановый',
-                  value: '14',
-                },
-              ],
-            },
-            {
-              id: 663,
-              title: 'gender',
-              type: 'items',
-              items: [
-                {
-                  title: 'жен.',
-                  value: disabledOptionValue,
-                },
-              ]
-            }
+    it('should accept goods with matching attributes count to properties count', () => {
+      const properties = [
+        {
+          id: 94,
+          title: 'items',
+          type: 'items',
+          items: [
+            { title: 'Желтый', value: '13' },
+            { title: 'Каштановый', value: '14' },
           ],
         },
-        t,
-      };
-      const wrapper = shallow(
-        <ProductCart {...props} />
-      );
-      const cartItemSelects = wrapper.find('select');
-      const disabledOption = cartItemSelects.at(1).find('option[disabled=true]');
-
-      expect(disabledOption.prop('value')).to.equal(String(disabledOptionValue));
-    });
-
-    it('should accept equal count of goods and properties', () => {
+      ];
       const props = {
-        ...baseProps,
         product: {
-          ...baseProps.product,
-          properties: [
-            {
-              id: 94,
-              title: 'items',
-              type: 'items',
-              items: [
-                {
-                  title: 'Желтый',
-                  value: '13',
-                },
-                {
-                  title: 'Каштановый',
-                  value: '14',
-                },
-              ],
-            },
-          ],
+          hasOrderingGoods: true,
+          goods: baseGoods,
+          properties,
         },
         t,
+        isAddingGood: false,
+        onChangeAmount: () => {},
+        onSubmit: () => {},
       };
-      const wrapper = shallow(
-        <ProductCart {...props} />
-      );
       const propertiesCount = props.product.properties.length;
       const hasDifferentCount = props.product.goods.some((el) =>
         Object.keys(el.attributes).length !== propertiesCount
