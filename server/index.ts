@@ -5,11 +5,12 @@
  * Заменяет mini_racer в Rails приложении.
  *
  * Endpoints:
- * - POST /render     - Рендеринг компонента
+ * - POST /render     - Рендеринг компонента (streaming)
  * - POST /render-batch - Batch рендеринг нескольких компонентов
  * - GET  /health     - Liveness probe
  * - GET  /ready      - Readiness probe
  * - GET  /metrics    - Prometheus metrics
+ * - GET  /components - Список зарегистрированных компонентов
  */
 
 // Polyfills должны быть импортированы ПЕРВЫМИ
@@ -17,6 +18,13 @@ import './polyfills';
 
 import { config, validateConfig } from './config';
 import { logger } from './utils/logger';
+import { isCrawler, getCrawlerName } from './utils/crawlers';
+import {
+  renderComponent,
+  renderBatch,
+  loadComponentsFromBundle,
+  getRegisteredComponents,
+} from './renderer';
 
 // ============================================
 // State
@@ -102,7 +110,7 @@ ssr_ready ${isReady ? 1 : 0}
 }
 
 /**
- * Render single component (placeholder - будет реализовано в следующих фазах)
+ * Render single component with streaming support
  */
 async function handleRender(req: Request): Promise<Response> {
   if (activeRenders >= SSR_MAX_CONCURRENT) {
@@ -112,7 +120,6 @@ async function handleRender(req: Request): Promise<Response> {
     );
   }
 
-  const start = performance.now();
   activeRenders++;
   metrics.renderTotal++;
 
@@ -125,30 +132,42 @@ async function handleRender(req: Request): Promise<Response> {
     };
 
     if (!component) {
+      activeRenders--;
       return Response.json({ error: 'Missing component name' }, { status: 400 });
     }
 
     const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
-    const _timeout = options?.timeout || SSR_TIMEOUT;
+    const userAgent = req.headers.get('User-Agent') || undefined;
+    const timeout = options?.timeout || SSR_TIMEOUT;
 
-    logger.info('Render request', { component, requestId, propsKeys: Object.keys(props || {}), timeout: _timeout });
-
-    // TODO: Реализовать реальный рендеринг в Фазе 2
-    // Пока возвращаем placeholder
-    const html = `<div data-react-class="${component}" data-react-props="${escapeHtml(JSON.stringify(props || {}))}" data-ssr-placeholder="true"></div>`;
-
-    const duration = performance.now() - start;
-    metrics.renderDurationSum += duration;
-
-    logger.info('Render completed', { component, requestId, duration_ms: Math.round(duration) });
-
-    return new Response(html, {
-      headers: {
-        'Content-Type': 'text/html; charset=utf-8',
-        'X-Request-Id': requestId,
-        'X-SSR-Duration-Ms': String(Math.round(duration)),
-      },
+    // Render component (streaming or full based on crawler detection)
+    const result = await renderComponent(component, props || {}, {
+      timeout,
+      waitForAll: options?.waitForAll,
+      userAgent,
+      requestId,
     });
+
+    metrics.renderDurationSum += result.duration;
+
+    const headers: Record<string, string> = {
+      'Content-Type': 'text/html; charset=utf-8',
+      'X-Request-Id': requestId,
+      'X-SSR-Duration-Ms': String(Math.round(result.duration)),
+      'X-SSR-Streaming': result.isStreaming ? 'true' : 'false',
+    };
+
+    if (result.isCrawler && result.crawlerName) {
+      headers['X-SSR-Crawler'] = result.crawlerName;
+    }
+
+    if (result.isStreaming) {
+      // Streaming response
+      return new Response(result.html as ReadableStream, { headers });
+    } else {
+      // Full HTML string
+      return new Response(result.html as string, { headers });
+    }
   } catch (error) {
     metrics.renderErrors++;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
@@ -164,13 +183,14 @@ async function handleRender(req: Request): Promise<Response> {
 }
 
 /**
- * Batch render (placeholder)
+ * Batch render multiple components in parallel
  */
 async function handleBatchRender(req: Request): Promise<Response> {
   try {
     const body = await req.json();
-    const { renders } = body as {
+    const { renders, options } = body as {
       renders: Array<{ id: string; component: string; props: Record<string, unknown> }>;
+      options?: { timeout?: number };
     };
 
     if (!renders || !Array.isArray(renders)) {
@@ -178,22 +198,43 @@ async function handleBatchRender(req: Request): Promise<Response> {
     }
 
     const start = performance.now();
+    const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
+    const userAgent = req.headers.get('User-Agent') || undefined;
 
-    // TODO: Реализовать параллельный рендеринг
-    const results = renders.map(({ id, component, props }) => ({
-      id,
-      html: `<div data-react-class="${component}" data-react-props="${escapeHtml(JSON.stringify(props || {}))}" data-ssr-placeholder="true"></div>`,
-      duration_ms: 0,
+    const results = await renderBatch(renders, {
+      timeout: options?.timeout || SSR_TIMEOUT,
+      userAgent,
+      requestId,
+      waitForAll: true, // Batch always returns full HTML
+    });
+
+    // Transform results for response
+    const responseResults = results.map((r) => ({
+      id: r.id,
+      html: r.html,
+      duration_ms: Math.round(r.duration),
+      error: r.error,
     }));
 
     return Response.json({
-      results,
+      results: responseResults,
       total_duration_ms: Math.round(performance.now() - start),
     });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return Response.json({ error: 'Batch render failed', message: errorMessage }, { status: 500 });
   }
+}
+
+/**
+ * List registered components
+ */
+function handleComponents(): Response {
+  const components = getRegisteredComponents();
+  return Response.json({
+    count: components.length,
+    components,
+  });
 }
 
 // ============================================
@@ -228,6 +269,11 @@ async function startServer() {
     },
   });
 
+  // Load React components from bundle
+  logger.info('Loading components from bundle...');
+  loadComponentsFromBundle();
+  logger.info('Components loaded', { count: getRegisteredComponents().length });
+
   // TODO: Preload translations (Фаза 2)
   // await preloadTranslations(['ru', 'en', 'uk', 'kk']);
 
@@ -255,6 +301,8 @@ async function startServer() {
             return handleReady();
           case '/metrics':
             return handleMetrics();
+          case '/components':
+            return handleComponents();
         }
       }
 
