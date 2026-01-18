@@ -6,6 +6,8 @@
  */
 
 import type { ComponentType } from 'react';
+import { existsSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
 import { logger } from './utils/logger';
 
 // Known Bun/Node built-ins to exclude when scanning globals
@@ -63,14 +65,22 @@ export function loadComponents(): void {
 
   try {
     // Load the prerender bundle
-    const bundlePath = process.env.NODE_ENV === 'production'
+    const bundleRelativePath = process.env.NODE_ENV === 'production'
       ? '../dist/store_app_prerender.production.js'
       : '../dist/store_app_prerender.development.js';
 
+    // Resolve absolute path for existence check
+    const bundlePath = resolve(dirname(import.meta.path), bundleRelativePath);
+
     logger.info('Loading bundle', { path: bundlePath });
 
+    // Check if bundle file exists before requiring
+    if (!existsSync(bundlePath)) {
+      throw new Error(`Bundle file not found: ${bundlePath}. Did you run 'yarn build'?`);
+    }
+
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require(bundlePath);
+    require(bundleRelativePath);
 
     // Find new globals added by the bundle
     const g = globalThis as Record<string, any>;

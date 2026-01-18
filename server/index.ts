@@ -51,6 +51,64 @@ const metrics = {
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const SSR_TIMEOUT = parseInt(process.env.SSR_TIMEOUT || '2000', 10);
 const SSR_MAX_CONCURRENT = parseInt(process.env.SSR_MAX_CONCURRENT || '20', 10);
+const MAX_REQUEST_SIZE = parseInt(process.env.SSR_MAX_REQUEST_SIZE || '10485760', 10); // 10MB
+const MAX_BATCH_SIZE = parseInt(process.env.SSR_MAX_BATCH_SIZE || '50', 10);
+const MAX_PROPS_SIZE = parseInt(process.env.SSR_MAX_PROPS_SIZE || '1048576', 10); // 1MB
+
+// ============================================
+// Validation Helpers
+// ============================================
+
+/**
+ * Validates component name format.
+ * Must start with uppercase letter and contain only alphanumeric chars.
+ */
+function isValidComponentName(name: unknown): name is string {
+  return (
+    typeof name === 'string' &&
+    name.length > 0 &&
+    name.length <= 200 &&
+    /^[A-Z][A-Za-z0-9_]*$/.test(name)
+  );
+}
+
+/**
+ * Checks Content-Length header against limit.
+ * Returns error response if too large, null if OK.
+ */
+function checkRequestSize(req: Request, maxSize: number): Response | null {
+  const contentLength = req.headers.get('Content-Length');
+  if (contentLength && parseInt(contentLength, 10) > maxSize) {
+    return Response.json(
+      { error: 'Request body too large', maxSize },
+      { status: 413 }
+    );
+  }
+  return null;
+}
+
+/**
+ * Validates props object - checks for size and circular references.
+ */
+function validateProps(props: unknown): { valid: boolean; error?: string } {
+  if (props === null || props === undefined) {
+    return { valid: true };
+  }
+
+  if (typeof props !== 'object') {
+    return { valid: false, error: 'Props must be an object' };
+  }
+
+  try {
+    const propsStr = JSON.stringify(props);
+    if (propsStr.length > MAX_PROPS_SIZE) {
+      return { valid: false, error: `Props too large (${propsStr.length} bytes, max ${MAX_PROPS_SIZE})` };
+    }
+    return { valid: true };
+  } catch {
+    return { valid: false, error: 'Props contain circular reference or non-serializable data' };
+  }
+}
 
 // ============================================
 // Handlers
@@ -130,6 +188,10 @@ ssr_ready ${isReady ? 1 : 0}
  * Render single component with streaming support
  */
 async function handleRender(req: Request): Promise<Response> {
+  // Check request size before parsing
+  const sizeError = checkRequestSize(req, MAX_REQUEST_SIZE);
+  if (sizeError) return sizeError;
+
   if (activeRenders >= SSR_MAX_CONCURRENT) {
     return new Response(
       JSON.stringify({ error: 'Server overloaded' }),
@@ -148,9 +210,20 @@ async function handleRender(req: Request): Promise<Response> {
       options?: { timeout?: number; waitForAll?: boolean };
     };
 
-    if (!component) {
+    // Validate component name format
+    if (!isValidComponentName(component)) {
       activeRenders--;
-      return Response.json({ error: 'Missing component name' }, { status: 400 });
+      return Response.json(
+        { error: 'Invalid component name', message: 'Component name must start with uppercase letter and contain only alphanumeric characters' },
+        { status: 400 }
+      );
+    }
+
+    // Validate props
+    const propsValidation = validateProps(props);
+    if (!propsValidation.valid) {
+      activeRenders--;
+      return Response.json({ error: 'Invalid props', message: propsValidation.error }, { status: 400 });
     }
 
     const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
@@ -238,6 +311,10 @@ async function handleRender(req: Request): Promise<Response> {
  * Batch render multiple components in parallel
  */
 async function handleBatchRender(req: Request): Promise<Response> {
+  // Check request size before parsing
+  const sizeError = checkRequestSize(req, MAX_REQUEST_SIZE);
+  if (sizeError) return sizeError;
+
   try {
     const body = await req.json();
     const { renders, options } = body as {
@@ -245,13 +322,59 @@ async function handleBatchRender(req: Request): Promise<Response> {
       options?: { timeout?: number };
     };
 
+    // Validate renders array exists and is an array
     if (!renders || !Array.isArray(renders)) {
       return Response.json({ error: 'Missing renders array' }, { status: 400 });
+    }
+
+    // Validate array is not empty
+    if (renders.length === 0) {
+      return Response.json({ error: 'Empty renders array' }, { status: 400 });
+    }
+
+    // Validate batch size limit
+    if (renders.length > MAX_BATCH_SIZE) {
+      return Response.json(
+        { error: `Batch size exceeds maximum of ${MAX_BATCH_SIZE}`, requested: renders.length },
+        { status: 400 }
+      );
+    }
+
+    // Validate unique IDs
+    const ids = new Set<string>();
+    for (const render of renders) {
+      if (!render.id || typeof render.id !== 'string') {
+        return Response.json({ error: 'Each render must have a string id' }, { status: 400 });
+      }
+      if (ids.has(render.id)) {
+        return Response.json({ error: `Duplicate render ID: ${render.id}` }, { status: 400 });
+      }
+      ids.add(render.id);
+
+      // Validate component name
+      if (!isValidComponentName(render.component)) {
+        return Response.json(
+          { error: 'Invalid component name', id: render.id, component: render.component },
+          { status: 400 }
+        );
+      }
+
+      // Validate props
+      const propsValidation = validateProps(render.props);
+      if (!propsValidation.valid) {
+        return Response.json(
+          { error: 'Invalid props', id: render.id, message: propsValidation.error },
+          { status: 400 }
+        );
+      }
     }
 
     const start = performance.now();
     const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
     const userAgent = req.headers.get('User-Agent') || undefined;
+
+    // Update metrics for batch - count all renders
+    metrics.renderTotal += renders.length;
 
     const results = await renderBatch(renders, {
       timeout: options?.timeout || SSR_TIMEOUT,
@@ -268,13 +391,14 @@ async function handleBatchRender(req: Request): Promise<Response> {
       error: r.error,
     }));
 
-    // Count errors in results
+    // Count errors and successful duration
     const errorCount = responseResults.filter(r => r.error).length;
+    const successfulResults = results.filter(r => !r.error);
+    const totalSuccessfulDuration = successfulResults.reduce((sum, r) => sum + r.duration, 0);
 
-    // Update metrics for batch errors
-    if (errorCount > 0) {
-      metrics.renderErrors += errorCount;
-    }
+    // Update metrics
+    metrics.renderErrors += errorCount;
+    metrics.renderDurationSum += totalSuccessfulDuration;
 
     // Return 207 Multi-Status if some failed, 200 if all succeeded
     const status = errorCount === responseResults.length ? 500 :

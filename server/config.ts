@@ -20,10 +20,23 @@ export interface AppConfig {
  * Глобальная конфигурация SSR сервера.
  * Инициализируется при старте из ENV переменных.
  */
+/**
+ * Безопасный парсинг числа из ENV с дефолтным значением.
+ */
+function parseIntSafe(value: string | undefined, defaultValue: number): number {
+  if (!value) return defaultValue;
+  const parsed = parseInt(value, 10);
+  if (isNaN(parsed) || parsed <= 0) {
+    console.warn(`[Config] Invalid number "${value}", using default ${defaultValue}`);
+    return defaultValue;
+  }
+  return parsed;
+}
+
 export const config: AppConfig = {
   assetHost: process.env.ASSET_HOST || '',
   thumborUrl: process.env.THUMBOR_URL || '',
-  maxItemsCount: parseInt(process.env.MAX_ITEMS_COUNT || '100', 10),
+  maxItemsCount: parseIntSafe(process.env.MAX_ITEMS_COUNT, 100),
 };
 
 /**

@@ -8,7 +8,7 @@
  * Эти тесты документируют контракт API и тестируют вспомогательную логику.
  */
 
-import { expect } from 'chai';
+const { expect } = require('chai');
 
 describe('SSR Error Handling Contract', function () {
   describe('ComponentNotFoundError behavior', function () {
