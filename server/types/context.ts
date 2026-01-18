@@ -32,21 +32,15 @@ export interface CurrencySettings {
 }
 
 /**
- * Настройки для accounting.js
+ * Настройки форматирования чисел
  */
-export interface AccountingSettings {
-  currency: {
-    symbol: string;
-    format: string;
-    decimal?: string;
-    thousand?: string;
-    precision?: number;
-  };
-  number: {
-    precision: number;
-    thousand: string;
-    decimal: string;
-  };
+export interface NumberSettings {
+  /** Количество знаков после запятой */
+  precision: number;
+  /** Разделитель тысяч */
+  thousand: string;
+  /** Десятичный разделитель */
+  decimal: string;
 }
 
 /**
@@ -78,8 +72,16 @@ export interface SsrContext {
   translations: Record<string, unknown>;
   /** Настройки валюты */
   currency: CurrencySettings;
-  /** Настройки для accounting.js */
-  accountingSettings: AccountingSettings;
+  /** Настройки форматирования чисел */
+  numberSettings: NumberSettings;
+}
+
+/**
+ * Helper type для accounting.js (формируется из currency + numberSettings)
+ */
+export interface AccountingSettings {
+  currency: CurrencySettings;
+  number: NumberSettings;
 }
 
 /**

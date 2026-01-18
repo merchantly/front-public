@@ -5,8 +5,8 @@
  * - vendor: информация о магазине (id, URLs, design)
  * - locale: язык интерфейса
  * - translations: переводы строк
- * - currency: настройки валюты
- * - accountingSettings: настройки для accounting.js
+ * - currency: настройки валюты (symbol, format, decimal, thousand, precision)
+ * - numberSettings: настройки форматирования чисел
  * - assetHost, thumborUrl, maxItemsCount, fallbackProductImage: серверные настройки
  *
  * Источники данных (по приоритету):
@@ -51,7 +51,11 @@ ConfigProvider.propTypes = {
       thousand: PropTypes.string,
       precision: PropTypes.number,
     }),
-    accountingSettings: PropTypes.object,
+    numberSettings: PropTypes.shape({
+      precision: PropTypes.number,
+      thousand: PropTypes.string,
+      decimal: PropTypes.string,
+    }),
     assetHost: PropTypes.string,
     thumborUrl: PropTypes.string,
     maxItemsCount: PropTypes.number,
@@ -79,9 +83,10 @@ const DEFAULT_CONFIG = {
     thousand: ' ',
     precision: 0,
   },
-  accountingSettings: {
-    currency: { symbol: '₽', format: '%v %s' },
-    number: { precision: 0, thousand: ' ', decimal: ',' },
+  numberSettings: {
+    precision: 0,
+    thousand: ' ',
+    decimal: ',',
   },
   assetHost: '',
   thumborUrl: '',
@@ -120,6 +125,30 @@ function getSsrConfig() {
 }
 
 /**
+ * Извлечь currency и numberSettings из gon.accounting_settings
+ */
+function extractFromAccountingSettings(accountingSettings) {
+  const settings = accountingSettings || {};
+  const currencySettings = settings.currency || {};
+  const numberSettings = settings.number || {};
+
+  return {
+    currency: {
+      symbol: currencySettings.symbol || '₽',
+      format: currencySettings.format || '%v %s',
+      decimal: currencySettings.decimal || ',',
+      thousand: currencySettings.thousand || ' ',
+      precision: typeof currencySettings.precision === 'number' ? currencySettings.precision : 0,
+    },
+    numberSettings: {
+      precision: typeof numberSettings.precision === 'number' ? numberSettings.precision : 0,
+      thousand: numberSettings.thousand || ' ',
+      decimal: numberSettings.decimal || ',',
+    },
+  };
+}
+
+/**
  * Получить конфигурацию из gon (для legacy fallback в браузере)
  */
 function getGonConfig() {
@@ -127,6 +156,8 @@ function getGonConfig() {
     const gon = window.gon;
     const gonData = gon.__data || {};
     const gonI18n = gon.i18n || {};
+    const { currency, numberSettings } = extractFromAccountingSettings(gon.accounting_settings);
+
     return {
       vendor: {
         id: 0,
@@ -137,14 +168,8 @@ function getGonConfig() {
       },
       locale: gonI18n.locale || 'ru',
       translations: gonI18n.translations || {},
-      currency: {
-        symbol: '₽',
-        format: '%v %s',
-        decimal: ',',
-        thousand: ' ',
-        precision: 0,
-      },
-      accountingSettings: gon.accounting_settings || DEFAULT_CONFIG.accountingSettings,
+      currency,
+      numberSettings,
       assetHost: gon.asset_host || '',
       thumborUrl: gon.thumbor_url || '',
       maxItemsCount: gon.max_items_count || 100,
@@ -157,6 +182,8 @@ function getGonConfig() {
     const gon = global.gon;
     const gonData = gon.__data || {};
     const gonI18n = gon.i18n || {};
+    const { currency, numberSettings } = extractFromAccountingSettings(gon.accounting_settings);
+
     return {
       vendor: {
         id: 0,
@@ -167,14 +194,8 @@ function getGonConfig() {
       },
       locale: gonI18n.locale || 'ru',
       translations: gonI18n.translations || {},
-      currency: {
-        symbol: '₽',
-        format: '%v %s',
-        decimal: ',',
-        thousand: ' ',
-        precision: 0,
-      },
-      accountingSettings: gon.accounting_settings || DEFAULT_CONFIG.accountingSettings,
+      currency,
+      numberSettings,
       assetHost: gon.asset_host || '',
       thumborUrl: gon.thumbor_url || '',
       maxItemsCount: gon.max_items_count || 100,
@@ -247,11 +268,23 @@ export function useCurrency() {
 }
 
 /**
- * useAccountingSettings - хук для получения настроек accounting
+ * useNumberSettings - хук для получения настроек форматирования чисел
+ */
+export function useNumberSettings() {
+  const config = useConfig();
+  return config.numberSettings;
+}
+
+/**
+ * useAccountingSettings - хук для получения настроек accounting.js
+ * Формирует объект из currency + numberSettings
  */
 export function useAccountingSettings() {
   const config = useConfig();
-  return config.accountingSettings;
+  return {
+    currency: config.currency,
+    number: config.numberSettings,
+  };
 }
 
 /**

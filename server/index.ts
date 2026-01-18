@@ -170,9 +170,19 @@ function validateContext(context: unknown): { valid: boolean; error?: string } {
     return { valid: false, error: 'context.currency.precision is required' };
   }
 
-  // accountingSettings validation
-  if (!ctx.accountingSettings || typeof ctx.accountingSettings !== 'object') {
-    return { valid: false, error: 'context.accountingSettings is required' };
+  // numberSettings validation
+  if (!ctx.numberSettings || typeof ctx.numberSettings !== 'object') {
+    return { valid: false, error: 'context.numberSettings is required' };
+  }
+  const numberSettings = ctx.numberSettings as Record<string, unknown>;
+  if (typeof numberSettings.precision !== 'number') {
+    return { valid: false, error: 'context.numberSettings.precision is required' };
+  }
+  if (typeof numberSettings.thousand !== 'string') {
+    return { valid: false, error: 'context.numberSettings.thousand is required' };
+  }
+  if (typeof numberSettings.decimal !== 'string') {
+    return { valid: false, error: 'context.numberSettings.decimal is required' };
   }
 
   return { valid: true };

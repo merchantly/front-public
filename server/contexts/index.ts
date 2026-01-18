@@ -12,6 +12,7 @@ export {
   useLocale,
   useTranslations,
   useCurrency,
+  useNumberSettings,
   useAccountingSettings,
   withConfig,
 } from './ConfigContext';

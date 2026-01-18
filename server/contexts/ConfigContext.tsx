@@ -5,8 +5,7 @@
  * - vendor: информация о магазине (id, URLs, design)
  * - locale: язык интерфейса
  * - translations: переводы строк
- * - currency: настройки валюты
- * - accountingSettings: настройки для accounting.js
+ * - accountingSettings: настройки для accounting.js (включает currency)
  * - assetHost, thumborUrl, maxItemsCount, fallbackProductImage: серверные настройки
  *
  * На сервере: значения приходят из SsrContext + ENV через ConfigProvider
@@ -14,7 +13,7 @@
  */
 
 import React, { createContext, useContext, ReactNode } from 'react';
-import type { AppConfig, SsrContext, VendorInfo, CurrencySettings, AccountingSettings } from '../types/context';
+import type { AppConfig, SsrContext, VendorInfo, CurrencySettings, NumberSettings, AccountingSettings } from '../types/context';
 
 // Context с null по умолчанию (будет заполнен Provider'ом)
 const ConfigContext = createContext<AppConfig | null>(null);
@@ -57,9 +56,10 @@ const DEFAULT_CONFIG: AppConfig = {
     thousand: ' ',
     precision: 0,
   },
-  accountingSettings: {
-    currency: { symbol: '₽', format: '%v %s' },
-    number: { precision: 0, thousand: ' ', decimal: ',' },
+  numberSettings: {
+    precision: 0,
+    thousand: ' ',
+    decimal: ',',
   },
   assetHost: '',
   thumborUrl: '',
@@ -121,11 +121,23 @@ export function useCurrency(): CurrencySettings {
 }
 
 /**
- * Hook для получения настроек accounting
+ * Hook для получения настроек форматирования чисел
+ */
+export function useNumberSettings(): NumberSettings {
+  const config = useConfig();
+  return config.numberSettings;
+}
+
+/**
+ * Hook для получения настроек accounting.js
+ * Формирует объект из currency + numberSettings
  */
 export function useAccountingSettings(): AccountingSettings {
   const config = useConfig();
-  return config.accountingSettings;
+  return {
+    currency: config.currency,
+    number: config.numberSettings,
+  };
 }
 
 /**
