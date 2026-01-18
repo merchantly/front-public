@@ -2,29 +2,26 @@
  * SSR Server Configuration
  *
  * Конфигурация загружается из ENV переменных при старте сервера.
- * Эти значения ранее брались из gon.* на клиенте.
+ * Эти значения используются для формирования AppConfig при SSR.
  */
 
 import { logger } from './utils/logger';
 
-export interface AppConfig {
-  /** CDN хост для статических ресурсов (gon.asset_host) */
+/**
+ * Серверная конфигурация (загружается из ENV)
+ * Эти значения добавляются к SsrContext для формирования полного AppConfig
+ */
+export interface ServerConfig {
+  /** CDN хост для статических ресурсов */
   assetHost: string;
-
-  /** URL Thumbor сервера для обработки изображений (gon.thumbor_url) */
+  /** URL Thumbor сервера для обработки изображений */
   thumborUrl: string;
-
-  /** Максимальное количество товаров в корзине (gon.max_items_count) */
+  /** Максимальное количество товаров в корзине */
   maxItemsCount: number;
-
   /** URL изображения-заглушки для товаров без фото */
   fallbackProductImage: string;
 }
 
-/**
- * Глобальная конфигурация SSR сервера.
- * Инициализируется при старте из ENV переменных.
- */
 /**
  * Безопасный парсинг числа из ENV с дефолтным значением.
  */
@@ -38,7 +35,11 @@ function parseIntSafe(value: string | undefined, defaultValue: number): number {
   return parsed;
 }
 
-export const config: AppConfig = {
+/**
+ * Глобальная конфигурация SSR сервера.
+ * Инициализируется при старте из ENV переменных.
+ */
+export const config: ServerConfig = {
   assetHost: process.env.ASSET_HOST || 'https://assets.kiiiosk.store',
   thumborUrl: process.env.THUMBOR_URL || 'https://thumbor.kiiiosk.store',
   maxItemsCount: parseIntSafe(process.env.MAX_ITEMS_COUNT, 100),
@@ -66,9 +67,8 @@ export function validateConfig(): void {
 }
 
 /**
- * Получить конфигурацию для передачи в React context.
- * Используется в SSR render pipeline.
+ * Получить серверную конфигурацию для объединения с SsrContext.
  */
-export function getConfigForContext(): AppConfig {
+export function getServerConfig(): ServerConfig {
   return { ...config };
 }

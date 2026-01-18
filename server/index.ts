@@ -25,6 +25,7 @@ import {
   RenderError,
 } from './renderer';
 import { isComponentsLoaded, getLoadState } from './components';
+import type { SsrContext } from './types/context';
 
 // ============================================
 // State
@@ -107,6 +108,74 @@ function validateProps(props: unknown): { valid: boolean; error?: string } {
     logger.warn('Props serialization failed', { error: errorMessage });
     return { valid: false, error: `Props serialization failed: ${errorMessage}` };
   }
+}
+
+/**
+ * Validates SSR context object.
+ * Returns validation result with error message if invalid.
+ */
+function validateContext(context: unknown): { valid: boolean; error?: string } {
+  if (!context || typeof context !== 'object') {
+    return { valid: false, error: 'context is required' };
+  }
+
+  const ctx = context as Record<string, unknown>;
+
+  // vendor validation
+  if (!ctx.vendor || typeof ctx.vendor !== 'object') {
+    return { valid: false, error: 'context.vendor is required' };
+  }
+  const vendor = ctx.vendor as Record<string, unknown>;
+  if (typeof vendor.id !== 'number') {
+    return { valid: false, error: 'context.vendor.id (number) is required' };
+  }
+  if (typeof vendor.root_url !== 'string') {
+    return { valid: false, error: 'context.vendor.root_url is required' };
+  }
+  if (typeof vendor.public_api_url !== 'string') {
+    return { valid: false, error: 'context.vendor.public_api_url is required' };
+  }
+  if (typeof vendor.operator_api_url !== 'string') {
+    return { valid: false, error: 'context.vendor.operator_api_url is required' };
+  }
+
+  // locale validation
+  if (typeof ctx.locale !== 'string') {
+    return { valid: false, error: 'context.locale is required' };
+  }
+
+  // translations validation
+  if (!ctx.translations || typeof ctx.translations !== 'object') {
+    return { valid: false, error: 'context.translations is required' };
+  }
+
+  // currency validation
+  if (!ctx.currency || typeof ctx.currency !== 'object') {
+    return { valid: false, error: 'context.currency is required' };
+  }
+  const currency = ctx.currency as Record<string, unknown>;
+  if (typeof currency.symbol !== 'string') {
+    return { valid: false, error: 'context.currency.symbol is required' };
+  }
+  if (typeof currency.format !== 'string') {
+    return { valid: false, error: 'context.currency.format is required' };
+  }
+  if (typeof currency.decimal !== 'string') {
+    return { valid: false, error: 'context.currency.decimal is required' };
+  }
+  if (typeof currency.thousand !== 'string') {
+    return { valid: false, error: 'context.currency.thousand is required' };
+  }
+  if (typeof currency.precision !== 'number') {
+    return { valid: false, error: 'context.currency.precision is required' };
+  }
+
+  // accountingSettings validation
+  if (!ctx.accountingSettings || typeof ctx.accountingSettings !== 'object') {
+    return { valid: false, error: 'context.accountingSettings is required' };
+  }
+
+  return { valid: true };
 }
 
 // ============================================
@@ -202,7 +271,12 @@ async function handleRender(req: Request): Promise<Response> {
   const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
 
   // Parse JSON body first, before incrementing metrics
-  let body: { component: string; props: Record<string, unknown>; options?: { timeout?: number; waitForAll?: boolean } };
+  let body: {
+    component: string;
+    props: Record<string, unknown>;
+    context: SsrContext;
+    options?: { timeout?: number; waitForAll?: boolean };
+  };
   try {
     body = await req.json();
   } catch (error) {
@@ -214,7 +288,7 @@ async function handleRender(req: Request): Promise<Response> {
     );
   }
 
-  const { component, props, options } = body;
+  const { component, props, context, options } = body;
 
   // Validate component name format (before incrementing metrics)
   if (!isValidComponentName(component)) {
@@ -230,6 +304,12 @@ async function handleRender(req: Request): Promise<Response> {
     return Response.json({ error: 'Invalid props', message: propsValidation.error }, { status: 400 });
   }
 
+  // Validate context (before incrementing metrics)
+  const contextValidation = validateContext(context);
+  if (!contextValidation.valid) {
+    return Response.json({ error: 'Invalid context', message: contextValidation.error }, { status: 400 });
+  }
+
   // Increment metrics only for valid requests
   activeRenders++;
   metrics.renderTotal++;
@@ -238,8 +318,8 @@ async function handleRender(req: Request): Promise<Response> {
     const userAgent = req.headers.get('User-Agent') || undefined;
     const timeout = options?.timeout || SSR_TIMEOUT;
 
-    // Render component (streaming or full based on crawler detection)
-    const result = await renderComponent(component, props || {}, {
+    // Render component with context (streaming or full based on crawler detection)
+    const result = await renderComponent(component, props || {}, context, {
       timeout,
       waitForAll: options?.waitForAll,
       userAgent,
@@ -349,9 +429,6 @@ async function startServer() {
   logger.info('Loading components from bundle...');
   loadComponentsFromBundle();
   logger.info('Components loaded', { count: getRegisteredComponents().length });
-
-  // TODO: Preload translations (Фаза 2)
-  // await preloadTranslations(['ru', 'en', 'uk', 'kk']);
 
   isReady = true;
   logger.info('Server is ready');

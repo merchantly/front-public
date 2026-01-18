@@ -1,4 +1,4 @@
-/*global $, Bugsnag, gon */
+/*global $, Bugsnag */
 
 import 'es5-shim';
 
@@ -14,6 +14,16 @@ import './lib/bugsnagAjax';
 
 import 'app/stylesheets/production.scss';
 
+/**
+ * Получить значение из meta-тега
+ * @param {string} name - имя meta-тега
+ * @returns {string|null}
+ */
+function getMetaContent(name) {
+  const meta = document.querySelector(`meta[name="${name}"]`);
+  return meta ? meta.content : null;
+}
+
 if (typeof Bugsnag !== 'undefined') {
   const bugsnagScript = document.querySelector('[src$="bugsnag-2.min.js"]');
 
@@ -22,7 +32,8 @@ if (typeof Bugsnag !== 'undefined') {
 
     Bugsnag.appVersion = appVersion + process.env.APP_VERSION;
   }
-  Bugsnag.releaseStage = gon.env;
+  // Используем meta-тег app-env вместо gon.env
+  Bugsnag.releaseStage = getMetaContent('app-env') || 'development';
   Bugsnag.notifyReleaseStages = ['production', 'reproduction', 'staging'];
   Bugsnag.metaData = { space: 'public' };
 }

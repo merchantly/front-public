@@ -36,4 +36,36 @@ const DEFAULT_SETTINGS = {
   },
 };
 
-window.accounting.settings = (typeof gon !== 'undefined' && gon.accounting_settings) ? gon.accounting_settings : DEFAULT_SETTINGS;
+/**
+ * Получить настройки accounting из доступных источников
+ *
+ * Порядок приоритета:
+ * 1. __SSR_CONFIG__.accountingSettings (новый формат)
+ * 2. gon.accounting_settings (legacy)
+ * 3. DEFAULT_SETTINGS
+ */
+function getAccountingSettings() {
+  // Новый формат: __SSR_CONFIG__
+  if (typeof document !== 'undefined') {
+    const configScript = document.getElementById('__SSR_CONFIG__');
+    if (configScript) {
+      try {
+        const config = JSON.parse(configScript.textContent || '{}');
+        if (config.accountingSettings) {
+          return config.accountingSettings;
+        }
+      } catch (e) {
+        // Игнорируем ошибки парсинга
+      }
+    }
+  }
+
+  // Legacy: gon.accounting_settings
+  if (typeof gon !== 'undefined' && gon.accounting_settings) {
+    return gon.accounting_settings;
+  }
+
+  return DEFAULT_SETTINGS;
+}
+
+window.accounting.settings = getAccountingSettings();

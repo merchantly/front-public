@@ -18,6 +18,9 @@ import {
   getComponentCount,
   loadComponents,
 } from './components';
+import { ConfigProvider } from './contexts/ConfigContext';
+import { config as serverConfig } from './config';
+import type { SsrContext, AppConfig } from './types/context';
 
 // Custom error types for proper HTTP status codes
 export class ComponentNotFoundError extends Error {
@@ -103,14 +106,28 @@ export { loadComponents as loadComponentsFromBundle } from './components';
 
 /**
  * Создаёт React element с ConfigContext provider.
+ * Оборачивает компонент в ConfigProvider с полной конфигурацией.
  */
 function createElementWithContext(
   Component: React.ComponentType<any>,
-  props: Record<string, unknown>
+  props: Record<string, unknown>,
+  ssrContext: SsrContext
 ): React.ReactElement {
-  // Пропсы уже должны содержать всё необходимое из Rails
-  // ConfigContext будет использоваться компонентами через withConfig HOC
-  return React.createElement(Component, props);
+  // Формируем полный AppConfig из SsrContext + серверных настроек
+  const fullConfig: AppConfig = {
+    ...ssrContext,
+    assetHost: serverConfig.assetHost,
+    thumborUrl: serverConfig.thumborUrl,
+    maxItemsCount: serverConfig.maxItemsCount,
+    fallbackProductImage: serverConfig.fallbackProductImage,
+  };
+
+  // Оборачиваем компонент в ConfigProvider
+  return React.createElement(
+    ConfigProvider,
+    { config: fullConfig },
+    React.createElement(Component, props)
+  );
 }
 
 /**
@@ -118,10 +135,16 @@ function createElementWithContext(
  *
  * Для обычных пользователей используется streaming с Suspense.
  * Для crawlers используется waitForAll чтобы они получили полный HTML.
+ *
+ * @param componentName - Имя React компонента для рендеринга
+ * @param props - Пропсы компонента
+ * @param context - SSR контекст (vendor, locale, translations, currency, accountingSettings)
+ * @param options - Опции рендеринга (timeout, waitForAll, userAgent, requestId)
  */
 export async function renderComponent(
   componentName: string,
   props: Record<string, unknown>,
+  context: SsrContext,
   options: RenderOptions = {}
 ): Promise<RenderResult> {
   const start = performance.now();
@@ -154,7 +177,7 @@ export async function renderComponent(
   }
 
   try {
-    const element = createElementWithContext(Component, props);
+    const element = createElementWithContext(Component, props, context);
 
     if (shouldWaitForAll) {
       // Для crawlers или принудительного waitForAll: полный рендеринг без streaming
