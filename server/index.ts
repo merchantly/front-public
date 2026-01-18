@@ -395,10 +395,19 @@ async function handleBatchRender(req: Request): Promise<Response> {
     }
   }
 
+  // Check if adding this batch would exceed concurrent limit
+  if (activeRenders + renders.length > SSR_MAX_CONCURRENT) {
+    return new Response(
+      JSON.stringify({ error: 'Server overloaded', requested: renders.length, available: SSR_MAX_CONCURRENT - activeRenders }),
+      { status: 503, headers: { 'Content-Type': 'application/json', 'Retry-After': '1' } }
+    );
+  }
+
   const start = performance.now();
   const userAgent = req.headers.get('User-Agent') || undefined;
 
-  // Update metrics for batch - count all renders
+  // Track concurrent renders and update metrics
+  activeRenders += renders.length;
   metrics.renderTotal += renders.length;
 
   try {
@@ -442,6 +451,8 @@ async function handleBatchRender(req: Request): Promise<Response> {
     const errorStack = error instanceof Error ? error.stack : undefined;
     logger.error('Batch render error', { error: errorMessage, stack: errorStack, batchSize: renders.length });
     return Response.json({ error: 'Batch render failed', message: errorMessage }, { status: 500 });
+  } finally {
+    activeRenders -= renders.length;
   }
 }
 
