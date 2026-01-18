@@ -6,7 +6,6 @@
  *
  * Endpoints:
  * - POST /render     - Рендеринг компонента (streaming)
- * - POST /render-batch - Batch рендеринг нескольких компонентов
  * - GET  /health     - Liveness probe
  * - GET  /ready      - Readiness probe
  * - GET  /metrics    - Prometheus metrics
@@ -18,10 +17,8 @@ import './polyfills';
 
 import { config, validateConfig } from './config';
 import { logger } from './utils/logger';
-import { isCrawler, getCrawlerName } from './utils/crawlers';
 import {
   renderComponent,
-  renderBatch,
   loadComponentsFromBundle,
   getRegisteredComponents,
   ComponentNotFoundError,
@@ -52,7 +49,6 @@ const PORT = parseInt(process.env.PORT || '3001', 10);
 const SSR_TIMEOUT = parseInt(process.env.SSR_TIMEOUT || '2000', 10);
 const SSR_MAX_CONCURRENT = parseInt(process.env.SSR_MAX_CONCURRENT || '20', 10);
 const MAX_REQUEST_SIZE = parseInt(process.env.SSR_MAX_REQUEST_SIZE || '10485760', 10); // 10MB
-const MAX_BATCH_SIZE = parseInt(process.env.SSR_MAX_BATCH_SIZE || '50', 10);
 const MAX_PROPS_SIZE = parseInt(process.env.SSR_MAX_PROPS_SIZE || '1048576', 10); // 1MB
 
 // ============================================
@@ -320,143 +316,6 @@ async function handleRender(req: Request): Promise<Response> {
 }
 
 /**
- * Batch render multiple components in parallel
- */
-async function handleBatchRender(req: Request): Promise<Response> {
-  // Check request size before parsing
-  const sizeError = checkRequestSize(req, MAX_REQUEST_SIZE);
-  if (sizeError) return sizeError;
-
-  // Extract request ID early for logging context
-  const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
-
-  // Parse JSON body first, before any processing
-  let body: {
-    renders: Array<{ id: string; component: string; props: Record<string, unknown> }>;
-    options?: { timeout?: number };
-  };
-  try {
-    body = await req.json();
-  } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'Invalid JSON';
-    logger.warn('Invalid JSON in batch request body', { error: errorMessage, requestId });
-    return Response.json(
-      { error: 'Invalid JSON', message: errorMessage },
-      { status: 400 }
-    );
-  }
-
-  const { renders, options } = body;
-
-  // Validate renders array exists and is an array
-  if (!renders || !Array.isArray(renders)) {
-    return Response.json({ error: 'Missing renders array' }, { status: 400 });
-  }
-
-  // Validate array is not empty
-  if (renders.length === 0) {
-    return Response.json({ error: 'Empty renders array' }, { status: 400 });
-  }
-
-  // Validate batch size limit
-  if (renders.length > MAX_BATCH_SIZE) {
-    return Response.json(
-      { error: `Batch size exceeds maximum of ${MAX_BATCH_SIZE}`, requested: renders.length },
-      { status: 400 }
-    );
-  }
-
-  // Validate unique IDs
-  const ids = new Set<string>();
-  for (const render of renders) {
-    if (!render.id || typeof render.id !== 'string') {
-      return Response.json({ error: 'Each render must have a string id' }, { status: 400 });
-    }
-    if (ids.has(render.id)) {
-      return Response.json({ error: `Duplicate render ID: ${render.id}` }, { status: 400 });
-    }
-    ids.add(render.id);
-
-    // Validate component name
-    if (!isValidComponentName(render.component)) {
-      return Response.json(
-        { error: 'Invalid component name', id: render.id, component: render.component },
-        { status: 400 }
-      );
-    }
-
-    // Validate props
-    const propsValidation = validateProps(render.props);
-    if (!propsValidation.valid) {
-      return Response.json(
-        { error: 'Invalid props', id: render.id, message: propsValidation.error },
-        { status: 400 }
-      );
-    }
-  }
-
-  // Check if adding this batch would exceed concurrent limit
-  if (activeRenders + renders.length > SSR_MAX_CONCURRENT) {
-    return new Response(
-      JSON.stringify({ error: 'Server overloaded', requested: renders.length, available: SSR_MAX_CONCURRENT - activeRenders }),
-      { status: 503, headers: { 'Content-Type': 'application/json', 'Retry-After': '1' } }
-    );
-  }
-
-  const start = performance.now();
-  const userAgent = req.headers.get('User-Agent') || undefined;
-
-  // Track concurrent renders and update metrics
-  activeRenders += renders.length;
-  metrics.renderTotal += renders.length;
-
-  try {
-    const results = await renderBatch(renders, {
-      timeout: options?.timeout || SSR_TIMEOUT,
-      userAgent,
-      requestId,
-      waitForAll: true, // Batch always returns full HTML
-    });
-
-    // Transform results for response
-    const responseResults = results.map((r) => ({
-      id: r.id,
-      html: r.html,
-      duration_ms: Math.round(r.duration),
-      error: r.error,
-    }));
-
-    // Count errors and successful duration
-    const errorCount = responseResults.filter(r => r.error).length;
-    const successfulResults = results.filter(r => !r.error);
-    const totalSuccessfulDuration = successfulResults.reduce((sum, r) => sum + r.duration, 0);
-
-    // Update metrics
-    metrics.renderErrors += errorCount;
-    metrics.renderDurationSum += totalSuccessfulDuration;
-
-    // Return 207 Multi-Status if some failed, 200 if all succeeded
-    const status = errorCount === responseResults.length ? 500 :
-                   errorCount > 0 ? 207 : 200;
-
-    return Response.json({
-      results: responseResults,
-      total_duration_ms: Math.round(performance.now() - start),
-      errors_count: errorCount,
-    }, { status });
-  } catch (error) {
-    // All renders failed - count them all as errors
-    metrics.renderErrors += renders.length;
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    const errorStack = error instanceof Error ? error.stack : undefined;
-    logger.error('Batch render error', { error: errorMessage, stack: errorStack, batchSize: renders.length });
-    return Response.json({ error: 'Batch render failed', message: errorMessage }, { status: 500 });
-  } finally {
-    activeRenders -= renders.length;
-  }
-}
-
-/**
  * List registered components
  */
 function handleComponents(): Response {
@@ -524,11 +383,8 @@ async function startServer() {
       }
 
       if (method === 'POST') {
-        switch (url.pathname) {
-          case '/render':
-            return handleRender(req);
-          case '/render-batch':
-            return handleBatchRender(req);
+        if (url.pathname === '/render') {
+          return handleRender(req);
         }
       }
 

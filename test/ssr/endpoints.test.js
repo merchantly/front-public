@@ -39,29 +39,6 @@ describe('SSR Error Handling Contract', function () {
     });
   });
 
-  describe('Batch render status codes', function () {
-    it('should return HTTP 200 when all renders succeed', function () {
-      // Contract: POST /render-batch без ошибок возвращает 200
-      expect(true).to.be.true;
-    });
-
-    it('should return HTTP 207 when some renders fail', function () {
-      // Contract: POST /render-batch с частичными ошибками возвращает 207 Multi-Status
-      // Response body: { results: [...], errors_count: N }
-      expect(true).to.be.true;
-    });
-
-    it('should return HTTP 500 when all renders fail', function () {
-      // Contract: POST /render-batch где все провалились возвращает 500
-      expect(true).to.be.true;
-    });
-
-    it('should update metrics.renderErrors for batch errors', function () {
-      // Contract: metrics.renderErrors увеличивается на количество ошибок в batch
-      expect(true).to.be.true;
-    });
-  });
-
   describe('Server overload protection', function () {
     it('should return HTTP 503 when concurrent limit exceeded', function () {
       // Contract: activeRenders >= SSR_MAX_CONCURRENT возвращает 503
@@ -146,7 +123,7 @@ describe('Metrics Contract', function () {
   });
 
   it('should track renderErrors', function () {
-    // Contract: Инкрементируется при ошибках в handleRender и handleBatchRender
+    // Contract: Инкрементируется при ошибках в handleRender
     expect(true).to.be.true;
   });
 
