@@ -53,7 +53,7 @@ function normalizeFilters(additional = []) {
  * 3. global.gon.thumbor_url (SSR с polyfills)
  * 4. '' (fallback)
  */
-function getThumbotUrl() {
+function getThumborUrl() {
   // Виджет
   if (typeof global !== 'undefined' && global.mrch && global.mrch.config) {
     return global.mrch.config.thumbor_url || '';
@@ -74,7 +74,7 @@ function getThumbotUrl() {
 
 const ThumborService = {
   thumborUrl() {
-    return getThumbotUrl();
+    return getThumborUrl();
   },
   imageUrl(url, size, filters) {
     const _url = normalizeUrl(url);

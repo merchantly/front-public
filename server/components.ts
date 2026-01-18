@@ -6,6 +6,8 @@
  */
 
 import type { ComponentType } from 'react';
+import { existsSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
 import { logger } from './utils/logger';
 
 // Known Bun/Node built-ins to exclude when scanning globals
@@ -31,16 +33,29 @@ const BUILT_INS = new Set([
 // Component registry
 const registry: Map<string, ComponentType<any>> = new Map();
 
-// Track if components have been loaded
-let componentsLoaded = false;
+// Track loading state
+type LoadState =
+  | { status: 'unloaded' }
+  | { status: 'loaded'; count: number }
+  | { status: 'error'; message: string };
+
+let loadState: LoadState = { status: 'unloaded' };
 
 /**
  * Загружает компоненты из бандла в реестр.
  * Безопасно вызывать многократно — загрузка произойдёт только один раз.
+ *
+ * @throws Error если загрузка бандла провалилась
  */
 export function loadComponents(): void {
-  if (componentsLoaded) {
+  // Already loaded successfully
+  if (loadState.status === 'loaded') {
     return;
+  }
+
+  // Previously failed - throw the cached error
+  if (loadState.status === 'error') {
+    throw new Error(`Component bundle loading failed: ${loadState.message}`);
   }
 
   const startTime = performance.now();
@@ -50,14 +65,22 @@ export function loadComponents(): void {
 
   try {
     // Load the prerender bundle
-    const bundlePath = process.env.NODE_ENV === 'production'
+    const bundleRelativePath = process.env.NODE_ENV === 'production'
       ? '../dist/store_app_prerender.production.js'
       : '../dist/store_app_prerender.development.js';
 
+    // Resolve absolute path for existence check
+    const bundlePath = resolve(dirname(import.meta.path), bundleRelativePath);
+
     logger.info('Loading bundle', { path: bundlePath });
 
+    // Check if bundle file exists before requiring
+    if (!existsSync(bundlePath)) {
+      throw new Error(`Bundle file not found: ${bundlePath}. Did you run 'yarn build'?`);
+    }
+
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require(bundlePath);
+    require(bundleRelativePath);
 
     // Find new globals added by the bundle
     const g = globalThis as Record<string, any>;
@@ -76,7 +99,7 @@ export function loadComponents(): void {
     }
 
     const duration = performance.now() - startTime;
-    componentsLoaded = true;
+    loadState = { status: 'loaded', count: registry.size };
 
     logger.info('Components loaded successfully', {
       count: registry.size,
@@ -85,18 +108,39 @@ export function loadComponents(): void {
     });
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    logger.error('Failed to load components from bundle', { error: errorMessage });
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
-    // Mark as loaded to prevent retry loops
-    componentsLoaded = true;
+    logger.error('FATAL: Failed to load components from bundle', {
+      error: errorMessage,
+      stack: errorStack,
+    });
+
+    // Store error state to prevent retry loops, but still throw
+    loadState = { status: 'error', message: errorMessage };
+    throw new Error(`Component bundle loading failed: ${errorMessage}`);
   }
 }
 
 /**
+ * Проверяет, загружены ли компоненты успешно.
+ */
+export function isComponentsLoaded(): boolean {
+  return loadState.status === 'loaded';
+}
+
+/**
+ * Возвращает информацию о состоянии загрузки.
+ */
+export function getLoadState(): LoadState {
+  return loadState;
+}
+
+/**
  * Получает компонент по имени.
+ * @throws Error если компоненты не загружены
  */
 export function getComponent(name: string): ComponentType<any> | undefined {
-  if (!componentsLoaded) {
+  if (loadState.status !== 'loaded') {
     loadComponents();
   }
   return registry.get(name);
@@ -106,7 +150,7 @@ export function getComponent(name: string): ComponentType<any> | undefined {
  * Проверяет, зарегистрирован ли компонент.
  */
 export function hasComponent(name: string): boolean {
-  if (!componentsLoaded) {
+  if (loadState.status !== 'loaded') {
     loadComponents();
   }
   return registry.has(name);
@@ -116,7 +160,7 @@ export function hasComponent(name: string): boolean {
  * Возвращает список всех зарегистрированных компонентов.
  */
 export function getComponentNames(): string[] {
-  if (!componentsLoaded) {
+  if (loadState.status !== 'loaded') {
     loadComponents();
   }
   return Array.from(registry.keys()).sort();
@@ -126,7 +170,7 @@ export function getComponentNames(): string[] {
  * Возвращает количество зарегистрированных компонентов.
  */
 export function getComponentCount(): number {
-  if (!componentsLoaded) {
+  if (loadState.status !== 'loaded') {
     loadComponents();
   }
   return registry.size;
@@ -146,5 +190,5 @@ export function registerComponent(name: string, component: ComponentType<any>): 
  */
 export function clearRegistry(): void {
   registry.clear();
-  componentsLoaded = false;
+  loadState = { status: 'unloaded' };
 }

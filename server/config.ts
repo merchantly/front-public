@@ -5,6 +5,8 @@
  * Эти значения ранее брались из gon.* на клиенте.
  */
 
+import { logger } from './utils/logger';
+
 export interface AppConfig {
   /** CDN хост для статических ресурсов (gon.asset_host) */
   assetHost: string;
@@ -14,16 +16,33 @@ export interface AppConfig {
 
   /** Максимальное количество товаров в корзине (gon.max_items_count) */
   maxItemsCount: number;
+
+  /** URL изображения-заглушки для товаров без фото */
+  fallbackProductImage: string;
 }
 
 /**
  * Глобальная конфигурация SSR сервера.
  * Инициализируется при старте из ENV переменных.
  */
+/**
+ * Безопасный парсинг числа из ENV с дефолтным значением.
+ */
+function parseIntSafe(value: string | undefined, defaultValue: number): number {
+  if (!value) return defaultValue;
+  const parsed = parseInt(value, 10);
+  if (isNaN(parsed) || parsed <= 0) {
+    logger.warn('Invalid number in config', { value, defaultValue });
+    return defaultValue;
+  }
+  return parsed;
+}
+
 export const config: AppConfig = {
-  assetHost: process.env.ASSET_HOST || '',
-  thumborUrl: process.env.THUMBOR_URL || '',
-  maxItemsCount: parseInt(process.env.MAX_ITEMS_COUNT || '100', 10),
+  assetHost: process.env.ASSET_HOST || 'https://assets.kiiiosk.store',
+  thumborUrl: process.env.THUMBOR_URL || 'https://thumbor.kiiiosk.store',
+  maxItemsCount: parseIntSafe(process.env.MAX_ITEMS_COUNT, 100),
+  fallbackProductImage: process.env.FALLBACK_PRODUCT_IMAGE || 'https://assets.kiiiosk.store/images/fallback/product-none.png',
 };
 
 /**
@@ -42,8 +61,7 @@ export function validateConfig(): void {
   }
 
   if (warnings.length > 0) {
-    console.warn('[SSR Config] Warnings:');
-    warnings.forEach((w) => console.warn(`  - ${w}`));
+    logger.warn('Config validation warnings', { warnings });
   }
 }
 

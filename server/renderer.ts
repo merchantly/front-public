@@ -19,6 +19,22 @@ import {
   loadComponents,
 } from './components';
 
+// Custom error types for proper HTTP status codes
+export class ComponentNotFoundError extends Error {
+  constructor(public componentName: string, public availableComponents: string[]) {
+    super(`Component "${componentName}" is not registered`);
+    this.name = 'ComponentNotFoundError';
+  }
+}
+
+export class RenderError extends Error {
+  constructor(public componentName: string, public originalError: Error | string) {
+    const message = originalError instanceof Error ? originalError.message : originalError;
+    super(`Failed to render component "${componentName}": ${message}`);
+    this.name = 'RenderError';
+  }
+}
+
 // Types
 export interface RenderOptions {
   /** Timeout в миллисекундах */
@@ -31,18 +47,55 @@ export interface RenderOptions {
   requestId?: string;
 }
 
-export interface RenderResult {
-  /** HTML строка или ReadableStream */
-  html: string | ReadableStream<Uint8Array>;
-  /** Streaming или полный рендеринг */
-  isStreaming: boolean;
+/**
+ * Base properties shared by all render results
+ */
+interface BaseRenderResult {
   /** Время рендеринга в мс */
   duration: number;
-  /** Был ли определён crawler */
-  isCrawler: boolean;
-  /** Название crawler если определён */
-  crawlerName: string | null;
 }
+
+/**
+ * Result when streaming is enabled (regular users)
+ * Streaming is only for non-crawlers
+ */
+interface StreamingRenderResult extends BaseRenderResult {
+  /** ReadableStream для streaming response */
+  html: ReadableStream<Uint8Array>;
+  isStreaming: true;
+  isCrawler: false;
+  crawlerName: null;
+}
+
+/**
+ * Result for crawlers (full HTML, no streaming)
+ */
+interface CrawlerRenderResult extends BaseRenderResult {
+  /** Full HTML string */
+  html: string;
+  isStreaming: false;
+  isCrawler: true;
+  /** Crawler name is always present for crawlers */
+  crawlerName: string;
+}
+
+/**
+ * Result for regular users when waitForAll is forced
+ */
+interface FullRenderResult extends BaseRenderResult {
+  /** Full HTML string */
+  html: string;
+  isStreaming: false;
+  isCrawler: false;
+  crawlerName: null;
+}
+
+/**
+ * Discriminated union type for render results.
+ * Ensures type safety: streaming results have ReadableStream,
+ * non-streaming have string, crawlers always have crawlerName.
+ */
+export type RenderResult = StreamingRenderResult | CrawlerRenderResult | FullRenderResult;
 
 // Re-export component functions for backward compatibility
 export { getComponentNames as getRegisteredComponents } from './components';
@@ -91,23 +144,20 @@ export async function renderComponent(
   const Component = getComponent(componentName);
 
   if (!Component) {
-    // Fallback: возвращаем placeholder div для client-side hydration
-    logger.warn('Component not found, returning placeholder', { component: componentName, requestId });
-    const placeholderHtml = createPlaceholder(componentName, props);
-    return {
-      html: placeholderHtml,
-      isStreaming: false,
-      duration: performance.now() - start,
-      isCrawler: crawlerDetected,
-      crawlerName,
-    };
+    // Выбрасываем ошибку вместо silent fallback
+    logger.error('Component not found', {
+      component: componentName,
+      requestId,
+      availableCount: getComponentCount(),
+    });
+    throw new ComponentNotFoundError(componentName, getComponentNames().slice(0, 20));
   }
 
   try {
     const element = createElementWithContext(Component, props);
 
     if (shouldWaitForAll) {
-      // Для crawlers: полный рендеринг без streaming
+      // Для crawlers или принудительного waitForAll: полный рендеринг без streaming
       const html = await renderWithTimeout(element, timeout, requestId);
       const duration = performance.now() - start;
 
@@ -117,13 +167,24 @@ export async function renderComponent(
         duration_ms: Math.round(duration),
       });
 
-      return {
-        html,
-        isStreaming: false,
-        duration,
-        isCrawler: crawlerDetected,
-        crawlerName,
-      };
+      // Return appropriate discriminated union variant
+      if (crawlerDetected && crawlerName) {
+        return {
+          html,
+          isStreaming: false,
+          duration,
+          isCrawler: true,
+          crawlerName,
+        } satisfies CrawlerRenderResult;
+      } else {
+        return {
+          html,
+          isStreaming: false,
+          duration,
+          isCrawler: false,
+          crawlerName: null,
+        } satisfies FullRenderResult;
+      }
     } else {
       // Для пользователей: streaming
       const stream = await renderToStreamingWithTimeout(element, timeout, requestId);
@@ -139,35 +200,42 @@ export async function renderComponent(
         html: stream,
         isStreaming: true,
         duration,
-        isCrawler: crawlerDetected,
-        crawlerName,
-      };
+        isCrawler: false,
+        crawlerName: null,
+      } satisfies StreamingRenderResult;
     }
   } catch (error) {
     const duration = performance.now() - start;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
     logger.error('Render failed', {
       component: componentName,
       requestId,
       error: errorMessage,
+      stack: errorStack,
       duration_ms: Math.round(duration),
     });
 
-    // Fallback: placeholder для client-side rendering
-    const placeholderHtml = createPlaceholder(componentName, props, errorMessage);
-    return {
-      html: placeholderHtml,
-      isStreaming: false,
-      duration,
-      isCrawler: crawlerDetected,
-      crawlerName,
-    };
+    // Пробрасываем ошибку вместо silent fallback
+    // HTTP layer (index.ts) решит что делать - вернуть 500 или placeholder
+    throw new RenderError(componentName, error instanceof Error ? error : errorMessage);
   }
 }
 
 /**
  * Рендерит в строку с таймаутом (для crawlers).
+ *
+ * ВАЖНО: renderToString синхронный и блокирует event loop.
+ * Timeout через setTimeout НЕ СРАБОТАЕТ если компонент содержит
+ * бесконечный цикл или очень долгую синхронную операцию.
+ * Timeout работает только для protection от "забытого" clearTimeout.
+ *
+ * Для реального timeout protection нужен Worker thread,
+ * что добавляет значительную сложность. Текущая реализация
+ * достаточна для большинства случаев, где компоненты нормально рендерятся.
+ *
+ * @see https://github.com/facebook/react/issues/20669 - React SSR timeout discussion
  */
 async function renderWithTimeout(
   element: React.ReactElement,
@@ -180,7 +248,9 @@ async function renderWithTimeout(
     }, timeout);
 
     try {
-      // renderToString - синхронный, но оборачиваем в Promise для единообразия
+      // renderToString - синхронный, блокирует event loop
+      // Timeout выше - защита только от "забытого" clearTimeout,
+      // не от бесконечных циклов в компонентах
       const html = renderToString(element);
       clearTimeout(timeoutId);
       resolve(html);
@@ -208,7 +278,14 @@ async function renderToStreamingWithTimeout(
     const stream = await renderToReadableStream(element, {
       signal: controller.signal,
       onError(error) {
-        logger.error('Streaming error', { requestId, error: String(error) });
+        const errorStack = error instanceof Error ? error.stack : undefined;
+        logger.error('Streaming error', {
+          requestId,
+          error: String(error),
+          stack: errorStack,
+        });
+        // Abort stream on error to prevent partial/corrupted HTML
+        controller.abort();
       },
     });
 
@@ -218,70 +295,4 @@ async function renderToStreamingWithTimeout(
     clearTimeout(timeoutId);
     throw error;
   }
-}
-
-/**
- * Создаёт placeholder HTML для client-side hydration.
- */
-function createPlaceholder(
-  componentName: string,
-  props: Record<string, unknown>,
-  error?: string
-): string {
-  const propsJson = JSON.stringify(props || {});
-  const escapedProps = escapeHtml(propsJson);
-
-  const errorAttr = error ? ` data-ssr-error="${escapeHtml(error)}"` : '';
-
-  return `<div data-react-class="${componentName}" data-react-props="${escapedProps}" data-ssr-placeholder="true"${errorAttr}></div>`;
-}
-
-/**
- * Escape HTML entities.
- */
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-
-/**
- * Batch render нескольких компонентов параллельно.
- */
-export async function renderBatch(
-  renders: Array<{
-    id: string;
-    component: string;
-    props: Record<string, unknown>;
-  }>,
-  options: RenderOptions = {}
-): Promise<Array<{ id: string; html: string; duration: number; error?: string }>> {
-  const results = await Promise.all(
-    renders.map(async ({ id, component, props }) => {
-      try {
-        const result = await renderComponent(component, props, {
-          ...options,
-          // Batch всегда возвращает строки, не streams
-          waitForAll: true,
-        });
-        return {
-          id,
-          html: result.html as string,
-          duration: result.duration,
-        };
-      } catch (error) {
-        return {
-          id,
-          html: createPlaceholder(component, props, String(error)),
-          duration: 0,
-          error: error instanceof Error ? error.message : 'Unknown error',
-        };
-      }
-    })
-  );
-
-  return results;
 }

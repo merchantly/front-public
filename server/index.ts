@@ -6,7 +6,6 @@
  *
  * Endpoints:
  * - POST /render     - Рендеринг компонента (streaming)
- * - POST /render-batch - Batch рендеринг нескольких компонентов
  * - GET  /health     - Liveness probe
  * - GET  /ready      - Readiness probe
  * - GET  /metrics    - Prometheus metrics
@@ -18,13 +17,14 @@ import './polyfills';
 
 import { config, validateConfig } from './config';
 import { logger } from './utils/logger';
-import { isCrawler, getCrawlerName } from './utils/crawlers';
 import {
   renderComponent,
-  renderBatch,
   loadComponentsFromBundle,
   getRegisteredComponents,
+  ComponentNotFoundError,
+  RenderError,
 } from './renderer';
+import { isComponentsLoaded, getLoadState } from './components';
 
 // ============================================
 // State
@@ -48,6 +48,66 @@ const metrics = {
 const PORT = parseInt(process.env.PORT || '3001', 10);
 const SSR_TIMEOUT = parseInt(process.env.SSR_TIMEOUT || '2000', 10);
 const SSR_MAX_CONCURRENT = parseInt(process.env.SSR_MAX_CONCURRENT || '20', 10);
+const MAX_REQUEST_SIZE = parseInt(process.env.SSR_MAX_REQUEST_SIZE || '10485760', 10); // 10MB
+const MAX_PROPS_SIZE = parseInt(process.env.SSR_MAX_PROPS_SIZE || '1048576', 10); // 1MB
+
+// ============================================
+// Validation Helpers
+// ============================================
+
+/**
+ * Validates component name format.
+ * Must start with uppercase letter and contain only alphanumeric chars.
+ */
+function isValidComponentName(name: unknown): name is string {
+  return (
+    typeof name === 'string' &&
+    name.length > 0 &&
+    name.length <= 200 &&
+    /^[A-Z][A-Za-z0-9_]*$/.test(name)
+  );
+}
+
+/**
+ * Checks Content-Length header against limit.
+ * Returns error response if too large, null if OK.
+ */
+function checkRequestSize(req: Request, maxSize: number): Response | null {
+  const contentLength = req.headers.get('Content-Length');
+  if (contentLength && parseInt(contentLength, 10) > maxSize) {
+    return Response.json(
+      { error: 'Request body too large', maxSize },
+      { status: 413 }
+    );
+  }
+  return null;
+}
+
+/**
+ * Validates props object - checks for size and circular references.
+ */
+function validateProps(props: unknown): { valid: boolean; error?: string } {
+  if (props === null || props === undefined) {
+    return { valid: true };
+  }
+
+  if (typeof props !== 'object') {
+    return { valid: false, error: 'Props must be an object' };
+  }
+
+  try {
+    const propsStr = JSON.stringify(props);
+    if (propsStr.length > MAX_PROPS_SIZE) {
+      return { valid: false, error: `Props too large (${propsStr.length} bytes, max ${MAX_PROPS_SIZE})` };
+    }
+    return { valid: true };
+  } catch (error) {
+    // Log the actual error for debugging (could be circular ref, BigInt, or other serialization issues)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown serialization error';
+    logger.warn('Props serialization failed', { error: errorMessage });
+    return { valid: false, error: `Props serialization failed: ${errorMessage}` };
+  }
+}
 
 // ============================================
 // Handlers
@@ -75,7 +135,21 @@ function handleReady(): Response {
   if (!isReady) {
     return new Response('Not ready', { status: 503 });
   }
-  return Response.json({ status: 'ready' });
+
+  // Also check if components loaded successfully
+  const loadState = getLoadState();
+  if (loadState.status === 'error') {
+    return Response.json(
+      { status: 'error', message: `Components failed to load: ${loadState.message}` },
+      { status: 503 }
+    );
+  }
+
+  if (loadState.status !== 'loaded') {
+    return new Response('Components not loaded', { status: 503 });
+  }
+
+  return Response.json({ status: 'ready', components: loadState.count });
 }
 
 /**
@@ -113,6 +187,10 @@ ssr_ready ${isReady ? 1 : 0}
  * Render single component with streaming support
  */
 async function handleRender(req: Request): Promise<Response> {
+  // Check request size before parsing
+  const sizeError = checkRequestSize(req, MAX_REQUEST_SIZE);
+  if (sizeError) return sizeError;
+
   if (activeRenders >= SSR_MAX_CONCURRENT) {
     return new Response(
       JSON.stringify({ error: 'Server overloaded' }),
@@ -120,23 +198,43 @@ async function handleRender(req: Request): Promise<Response> {
     );
   }
 
+  // Extract request ID early for logging context
+  const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
+
+  // Parse JSON body first, before incrementing metrics
+  let body: { component: string; props: Record<string, unknown>; options?: { timeout?: number; waitForAll?: boolean } };
+  try {
+    body = await req.json();
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : 'Invalid JSON';
+    logger.warn('Invalid JSON in request body', { error: errorMessage, requestId });
+    return Response.json(
+      { error: 'Invalid JSON', message: errorMessage },
+      { status: 400 }
+    );
+  }
+
+  const { component, props, options } = body;
+
+  // Validate component name format (before incrementing metrics)
+  if (!isValidComponentName(component)) {
+    return Response.json(
+      { error: 'Invalid component name', message: 'Component name must start with uppercase letter and contain only alphanumeric characters' },
+      { status: 400 }
+    );
+  }
+
+  // Validate props (before incrementing metrics)
+  const propsValidation = validateProps(props);
+  if (!propsValidation.valid) {
+    return Response.json({ error: 'Invalid props', message: propsValidation.error }, { status: 400 });
+  }
+
+  // Increment metrics only for valid requests
   activeRenders++;
   metrics.renderTotal++;
 
   try {
-    const body = await req.json();
-    const { component, props, options } = body as {
-      component: string;
-      props: Record<string, unknown>;
-      options?: { timeout?: number; waitForAll?: boolean };
-    };
-
-    if (!component) {
-      activeRenders--;
-      return Response.json({ error: 'Missing component name' }, { status: 400 });
-    }
-
-    const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
     const userAgent = req.headers.get('User-Agent') || undefined;
     const timeout = options?.timeout || SSR_TIMEOUT;
 
@@ -171,58 +269,49 @@ async function handleRender(req: Request): Promise<Response> {
   } catch (error) {
     metrics.renderErrors++;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    logger.error('Render error', { error: errorMessage });
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
+    // Handle specific error types with appropriate status codes
+    if (error instanceof ComponentNotFoundError) {
+      logger.error('Component not found', {
+        component: error.componentName,
+        availableComponents: error.availableComponents.slice(0, 10),
+      });
+      return Response.json(
+        {
+          error: 'Component not found',
+          component: error.componentName,
+          message: error.message,
+          availableComponents: error.availableComponents.slice(0, 10),
+        },
+        { status: 404 }
+      );
+    }
+
+    if (error instanceof RenderError) {
+      logger.error('Render error', {
+        component: error.componentName,
+        error: errorMessage,
+        stack: errorStack,
+      });
+      return Response.json(
+        {
+          error: 'Render failed',
+          component: error.componentName,
+          message: errorMessage,
+        },
+        { status: 500 }
+      );
+    }
+
+    // Generic error
+    logger.error('Unexpected render error', { error: errorMessage, stack: errorStack });
     return Response.json(
       { error: 'Render failed', message: errorMessage },
       { status: 500 }
     );
   } finally {
     activeRenders--;
-  }
-}
-
-/**
- * Batch render multiple components in parallel
- */
-async function handleBatchRender(req: Request): Promise<Response> {
-  try {
-    const body = await req.json();
-    const { renders, options } = body as {
-      renders: Array<{ id: string; component: string; props: Record<string, unknown> }>;
-      options?: { timeout?: number };
-    };
-
-    if (!renders || !Array.isArray(renders)) {
-      return Response.json({ error: 'Missing renders array' }, { status: 400 });
-    }
-
-    const start = performance.now();
-    const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
-    const userAgent = req.headers.get('User-Agent') || undefined;
-
-    const results = await renderBatch(renders, {
-      timeout: options?.timeout || SSR_TIMEOUT,
-      userAgent,
-      requestId,
-      waitForAll: true, // Batch always returns full HTML
-    });
-
-    // Transform results for response
-    const responseResults = results.map((r) => ({
-      id: r.id,
-      html: r.html,
-      duration_ms: Math.round(r.duration),
-      error: r.error,
-    }));
-
-    return Response.json({
-      results: responseResults,
-      total_duration_ms: Math.round(performance.now() - start),
-    });
-  } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    return Response.json({ error: 'Batch render failed', message: errorMessage }, { status: 500 });
   }
 }
 
@@ -235,19 +324,6 @@ function handleComponents(): Response {
     count: components.length,
     components,
   });
-}
-
-// ============================================
-// Utilities
-// ============================================
-
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
 }
 
 // ============================================
@@ -307,11 +383,8 @@ async function startServer() {
       }
 
       if (method === 'POST') {
-        switch (url.pathname) {
-          case '/render':
-            return handleRender(req);
-          case '/render-batch':
-            return handleBatchRender(req);
+        if (url.pathname === '/render') {
+          return handleRender(req);
         }
       }
 

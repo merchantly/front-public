@@ -1,0 +1,99 @@
+#!/bin/bash
+#
+# Simple semver management script
+# Reads and modifies .semver file in Ruby YAML format
+#
+
+SEMVER_FILE=".semver"
+
+# Find .semver file in current or parent directories
+find_semver() {
+    local dir="$PWD"
+    while [[ "$dir" != "/" ]]; do
+        if [[ -f "$dir/$SEMVER_FILE" ]]; then
+            echo "$dir/$SEMVER_FILE"
+            return 0
+        fi
+        dir=$(dirname "$dir")
+    done
+    return 1
+}
+
+# Read version from .semver file
+read_version() {
+    local file=$(find_semver)
+    if [[ -z "$file" ]]; then
+        echo "Error: .semver file not found" >&2
+        exit 1
+    fi
+
+    local major=$(grep '^:major:' "$file" | awk '{print $2}')
+    local minor=$(grep '^:minor:' "$file" | awk '{print $2}')
+    local patch=$(grep '^:patch:' "$file" | awk '{print $2}')
+    local special=$(grep '^:special:' "$file" | awk -F"'" '{print $2}')
+
+    if [[ -n "$special" ]]; then
+        echo "${major}.${minor}.${patch}-${special}"
+    else
+        echo "${major}.${minor}.${patch}"
+    fi
+}
+
+# Increment version component
+inc_version() {
+    local file=$(find_semver)
+    if [[ -z "$file" ]]; then
+        echo "Error: .semver file not found" >&2
+        exit 1
+    fi
+
+    local component="$1"
+    local major=$(grep '^:major:' "$file" | awk '{print $2}')
+    local minor=$(grep '^:minor:' "$file" | awk '{print $2}')
+    local patch=$(grep '^:patch:' "$file" | awk '{print $2}')
+
+    case "$component" in
+        major)
+            major=$((major + 1))
+            minor=0
+            patch=0
+            ;;
+        minor)
+            minor=$((minor + 1))
+            patch=0
+            ;;
+        patch)
+            patch=$((patch + 1))
+            ;;
+        *)
+            echo "Usage: semver inc [major|minor|patch]" >&2
+            exit 1
+            ;;
+    esac
+
+    # Update .semver file
+    cat > "$file" << EOF
+---
+:major: ${major}
+:minor: ${minor}
+:patch: ${patch}
+:special: ''
+:metadata: ''
+EOF
+
+    echo "${major}.${minor}.${patch}"
+}
+
+# Main
+case "${1:-}" in
+    inc)
+        inc_version "${2:-patch}"
+        ;;
+    ""|version)
+        read_version
+        ;;
+    *)
+        echo "Usage: semver [inc major|minor|patch] | [version]" >&2
+        exit 1
+        ;;
+esac

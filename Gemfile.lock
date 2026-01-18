@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     libv8-node (23.6.1.0)
     libv8-node (23.6.1.0-aarch64-linux)
@@ -9,6 +9,7 @@ GEM
     libv8-node (23.6.1.0-x86_64-linux-musl)
     mini_racer (0.18.1)
       libv8-node (~> 23.6.1.0)
+    semver2 (3.4.2)
 
 PLATFORMS
   aarch64-linux
@@ -20,6 +21,7 @@ PLATFORMS
 
 DEPENDENCIES
   mini_racer
+  semver2
 
 BUNDLED WITH
-   4.0.4
+  4.0.4
