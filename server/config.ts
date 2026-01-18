@@ -5,6 +5,8 @@
  * Эти значения ранее брались из gon.* на клиенте.
  */
 
+import { logger } from './utils/logger';
+
 export interface AppConfig {
   /** CDN хост для статических ресурсов (gon.asset_host) */
   assetHost: string;
@@ -27,7 +29,7 @@ function parseIntSafe(value: string | undefined, defaultValue: number): number {
   if (!value) return defaultValue;
   const parsed = parseInt(value, 10);
   if (isNaN(parsed) || parsed <= 0) {
-    console.warn(`[Config] Invalid number "${value}", using default ${defaultValue}`);
+    logger.warn('Invalid number in config', { value, defaultValue });
     return defaultValue;
   }
   return parsed;
@@ -55,8 +57,7 @@ export function validateConfig(): void {
   }
 
   if (warnings.length > 0) {
-    console.warn('[SSR Config] Warnings:');
-    warnings.forEach((w) => console.warn(`  - ${w}`));
+    logger.warn('Config validation warnings', { warnings });
   }
 }
 
