@@ -30,9 +30,10 @@ yarn build:development
 
 # Запуск тестов (рекомендуется)
 yarn test:prerender    # Основной тест — 50 компонентов
+yarn test:ssr          # Тест SSR совместимости
 yarn test:mini_racer   # Тест совместимости с MiniRacer
 
-# Браузерные тесты через Playwright
+# Браузерные тесты через Playwright (138 тестов)
 yarn test:browser        # Headless режим
 yarn test:browser:headed # С видимым браузером
 yarn test:browser:debug  # Режим отладки
@@ -106,14 +107,18 @@ react/
 ## Тестирование
 
 - Фреймворк: Mocha + Chai
-- React тестирование: Enzyme с адаптером для React 16.2
+- React тестирование: Enzyme с адаптером для React 18
+- Браузерные тесты: Playwright (запускает Mocha в браузере)
 - Фикстуры: `test/fixtures/` — JSON данные для компонентов
 - Тесты компонентов: `test/react/components/`
+
+**Важно:** Enzyme `mount()` несовместим с React 18 concurrent mode. Используйте `shallow()` или `render()` для тестов компонентов.
 
 Структура теста:
 ```javascript
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import t from 'test/mocks/t';
 import Component from 'rc/ComponentName';
 import fixture from 'test/fixtures/componentName/sample.json';
 ```

@@ -8,10 +8,24 @@ import * as reducers from './reducers';
 import apiMiddleware from './middleware/api';
 import thunkMiddleware from 'redux-thunk';
 
+/**
+ * Получить gon объект SSR-safe способом
+ */
+function getGon() {
+  if (typeof window !== 'undefined' && window.gon) {
+    return window.gon;
+  }
+  if (typeof global !== 'undefined' && global.gon) {
+    return global.gon;
+  }
+  return null;
+}
+
 // Bootstraping serverside data
 let data = {};
-if (global.gon.__data) {
-  const { design } = global.gon.__data;
+const gon = getGon();
+if (gon && gon.__data) {
+  const { design } = gon.__data;
 
   data = {
     design: {

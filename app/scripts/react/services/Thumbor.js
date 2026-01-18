@@ -1,4 +1,3 @@
-/*global gon */
 const MAX_POW = 9;
 const STEP = 256;
 
@@ -45,9 +44,37 @@ function normalizeFilters(additional = []) {
   return fx.length ? `/filters:${fx.join(':')}` : '';
 }
 
+/**
+ * Получить thumborUrl из доступных источников (SSR-safe)
+ *
+ * Порядок приоритета:
+ * 1. global.mrch.config.thumbor_url (виджет)
+ * 2. window.gon.thumbor_url (браузер)
+ * 3. global.gon.thumbor_url (SSR с polyfills)
+ * 4. '' (fallback)
+ */
+function getThumbotUrl() {
+  // Виджет
+  if (typeof global !== 'undefined' && global.mrch && global.mrch.config) {
+    return global.mrch.config.thumbor_url || '';
+  }
+
+  // Браузер
+  if (typeof window !== 'undefined' && window.gon) {
+    return window.gon.thumbor_url || '';
+  }
+
+  // SSR с polyfills (gon заполняется из ENV)
+  if (typeof global !== 'undefined' && global.gon) {
+    return global.gon.thumbor_url || '';
+  }
+
+  return '';
+}
+
 const ThumborService = {
   thumborUrl() {
-    return global.mrch ? global.mrch.config.thumbor_url : global.gon.thumbor_url;
+    return getThumbotUrl();
   },
   imageUrl(url, size, filters) {
     const _url = normalizeUrl(url);

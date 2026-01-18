@@ -3,6 +3,21 @@ import numeral from 'numeral';
 import currencies from '../models/currencies';
 import numeralFormats from "../../locales/numeralFormats";
 
+const DEFAULT_LOCALE = 'ru';
+
+/**
+ * Получить locale SSR-safe способом
+ */
+function getLocale() {
+  if (typeof window !== 'undefined' && window.gon && window.gon.i18n) {
+    return window.gon.i18n.locale || DEFAULT_LOCALE;
+  }
+  if (typeof global !== 'undefined' && global.gon && global.gon.i18n) {
+    return global.gon.i18n.locale || DEFAULT_LOCALE;
+  }
+  return DEFAULT_LOCALE;
+}
+
 function getCurrency(money) {
   const currencyID = getCurrencyID(money);
   return currencies[currencyID] || null;
@@ -22,7 +37,7 @@ function getCurrencyID(money) {
 }
 
 function numeralValue(value) {
-  const language = gon.i18n.locale;
+  const language = getLocale();
 
   if (numeral.currentLanguage !== language) {
     numeral.language(language, numeralFormats[language]);

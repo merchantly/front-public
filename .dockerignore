@@ -1,0 +1,63 @@
+# .dockerignore для SSR образа
+# Используется с: docker build -f Dockerfile.ssr .
+
+# Git
+.git
+.gitignore
+
+# Node modules (переустанавливаются в Docker)
+node_modules
+
+# Тесты
+test
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Документация
+*.md
+docs
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts (кроме dist/)
+build
+stats.json
+
+# Development files
+.storybook
+storybook-static
+*.log
+
+# Source files (кроме server/)
+app/scripts
+app/stylesheets
+
+# Configs не нужные в runtime
+.babelrc
+.eslintrc*
+eslint.config.mjs
+webpack.config.js
+postcss.config.js
+Gemfile*
+.ruby-version
+.mise.toml
+
+# CI/CD
+.github
+.gitlab-ci.yml
+Makefile
+
+# Docker
+Dockerfile*
+docker-compose*
+!Dockerfile.ssr
