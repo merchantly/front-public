@@ -47,18 +47,55 @@ export interface RenderOptions {
   requestId?: string;
 }
 
-export interface RenderResult {
-  /** HTML строка или ReadableStream */
-  html: string | ReadableStream<Uint8Array>;
-  /** Streaming или полный рендеринг */
-  isStreaming: boolean;
+/**
+ * Base properties shared by all render results
+ */
+interface BaseRenderResult {
   /** Время рендеринга в мс */
   duration: number;
-  /** Был ли определён crawler */
-  isCrawler: boolean;
-  /** Название crawler если определён */
-  crawlerName: string | null;
 }
+
+/**
+ * Result when streaming is enabled (regular users)
+ * Streaming is only for non-crawlers
+ */
+interface StreamingRenderResult extends BaseRenderResult {
+  /** ReadableStream для streaming response */
+  html: ReadableStream<Uint8Array>;
+  isStreaming: true;
+  isCrawler: false;
+  crawlerName: null;
+}
+
+/**
+ * Result for crawlers (full HTML, no streaming)
+ */
+interface CrawlerRenderResult extends BaseRenderResult {
+  /** Full HTML string */
+  html: string;
+  isStreaming: false;
+  isCrawler: true;
+  /** Crawler name is always present for crawlers */
+  crawlerName: string;
+}
+
+/**
+ * Result for regular users when waitForAll is forced
+ */
+interface FullRenderResult extends BaseRenderResult {
+  /** Full HTML string */
+  html: string;
+  isStreaming: false;
+  isCrawler: false;
+  crawlerName: null;
+}
+
+/**
+ * Discriminated union type for render results.
+ * Ensures type safety: streaming results have ReadableStream,
+ * non-streaming have string, crawlers always have crawlerName.
+ */
+export type RenderResult = StreamingRenderResult | CrawlerRenderResult | FullRenderResult;
 
 // Re-export component functions for backward compatibility
 export { getComponentNames as getRegisteredComponents } from './components';
@@ -120,7 +157,7 @@ export async function renderComponent(
     const element = createElementWithContext(Component, props);
 
     if (shouldWaitForAll) {
-      // Для crawlers: полный рендеринг без streaming
+      // Для crawlers или принудительного waitForAll: полный рендеринг без streaming
       const html = await renderWithTimeout(element, timeout, requestId);
       const duration = performance.now() - start;
 
@@ -130,13 +167,24 @@ export async function renderComponent(
         duration_ms: Math.round(duration),
       });
 
-      return {
-        html,
-        isStreaming: false,
-        duration,
-        isCrawler: crawlerDetected,
-        crawlerName,
-      };
+      // Return appropriate discriminated union variant
+      if (crawlerDetected && crawlerName) {
+        return {
+          html,
+          isStreaming: false,
+          duration,
+          isCrawler: true,
+          crawlerName,
+        } satisfies CrawlerRenderResult;
+      } else {
+        return {
+          html,
+          isStreaming: false,
+          duration,
+          isCrawler: false,
+          crawlerName: null,
+        } satisfies FullRenderResult;
+      }
     } else {
       // Для пользователей: streaming
       const stream = await renderToStreamingWithTimeout(element, timeout, requestId);
@@ -152,9 +200,9 @@ export async function renderComponent(
         html: stream,
         isStreaming: true,
         duration,
-        isCrawler: crawlerDetected,
-        crawlerName,
-      };
+        isCrawler: false,
+        crawlerName: null,
+      } satisfies StreamingRenderResult;
     }
   } catch (error) {
     const duration = performance.now() - start;
@@ -177,6 +225,17 @@ export async function renderComponent(
 
 /**
  * Рендерит в строку с таймаутом (для crawlers).
+ *
+ * ВАЖНО: renderToString синхронный и блокирует event loop.
+ * Timeout через setTimeout НЕ СРАБОТАЕТ если компонент содержит
+ * бесконечный цикл или очень долгую синхронную операцию.
+ * Timeout работает только для protection от "забытого" clearTimeout.
+ *
+ * Для реального timeout protection нужен Worker thread,
+ * что добавляет значительную сложность. Текущая реализация
+ * достаточна для большинства случаев, где компоненты нормально рендерятся.
+ *
+ * @see https://github.com/facebook/react/issues/20669 - React SSR timeout discussion
  */
 async function renderWithTimeout(
   element: React.ReactElement,
@@ -189,7 +248,9 @@ async function renderWithTimeout(
     }, timeout);
 
     try {
-      // renderToString - синхронный, но оборачиваем в Promise для единообразия
+      // renderToString - синхронный, блокирует event loop
+      // Timeout выше - защита только от "забытого" clearTimeout,
+      // не от бесконечных циклов в компонентах
       const html = renderToString(element);
       clearTimeout(timeoutId);
       resolve(html);
@@ -289,11 +350,19 @@ export async function renderBatch(
           duration: result.duration,
         };
       } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+        // Log batch component error for debugging (renderComponent also logs, but with different context)
+        logger.warn('Batch render: component failed', {
+          id,
+          component,
+          error: errorMessage,
+          requestId: options.requestId,
+        });
         return {
           id,
           html: createPlaceholder(component, props, String(error)),
           duration: 0,
-          error: error instanceof Error ? error.message : 'Unknown error',
+          error: errorMessage,
         };
       }
     })

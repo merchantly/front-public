@@ -105,8 +105,11 @@ function validateProps(props: unknown): { valid: boolean; error?: string } {
       return { valid: false, error: `Props too large (${propsStr.length} bytes, max ${MAX_PROPS_SIZE})` };
     }
     return { valid: true };
-  } catch {
-    return { valid: false, error: 'Props contain circular reference or non-serializable data' };
+  } catch (error) {
+    // Log the actual error for debugging (could be circular ref, BigInt, or other serialization issues)
+    const errorMessage = error instanceof Error ? error.message : 'Unknown serialization error';
+    logger.warn('Props serialization failed', { error: errorMessage });
+    return { valid: false, error: `Props serialization failed: ${errorMessage}` };
   }
 }
 
