@@ -16,6 +16,9 @@ export interface AppConfig {
 
   /** Максимальное количество товаров в корзине (gon.max_items_count) */
   maxItemsCount: number;
+
+  /** URL изображения-заглушки для товаров без фото */
+  fallbackProductImage: string;
 }
 
 /**
@@ -36,9 +39,10 @@ function parseIntSafe(value: string | undefined, defaultValue: number): number {
 }
 
 export const config: AppConfig = {
-  assetHost: process.env.ASSET_HOST || '',
-  thumborUrl: process.env.THUMBOR_URL || '',
+  assetHost: process.env.ASSET_HOST || 'https://assets.kiiiosk.store',
+  thumborUrl: process.env.THUMBOR_URL || 'https://thumbor.kiiiosk.store',
   maxItemsCount: parseIntSafe(process.env.MAX_ITEMS_COUNT, 100),
+  fallbackProductImage: process.env.FALLBACK_PRODUCT_IMAGE || 'https://assets.kiiiosk.store/images/fallback/product-none.png',
 };
 
 /**
