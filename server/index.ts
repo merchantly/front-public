@@ -24,7 +24,10 @@ import {
   renderBatch,
   loadComponentsFromBundle,
   getRegisteredComponents,
+  ComponentNotFoundError,
+  RenderError,
 } from './renderer';
+import { isComponentsLoaded, getLoadState } from './components';
 
 // ============================================
 // State
@@ -75,7 +78,21 @@ function handleReady(): Response {
   if (!isReady) {
     return new Response('Not ready', { status: 503 });
   }
-  return Response.json({ status: 'ready' });
+
+  // Also check if components loaded successfully
+  const loadState = getLoadState();
+  if (loadState.status === 'error') {
+    return Response.json(
+      { status: 'error', message: `Components failed to load: ${loadState.message}` },
+      { status: 503 }
+    );
+  }
+
+  if (loadState.status !== 'loaded') {
+    return new Response('Components not loaded', { status: 503 });
+  }
+
+  return Response.json({ status: 'ready', components: loadState.count });
 }
 
 /**
@@ -171,8 +188,43 @@ async function handleRender(req: Request): Promise<Response> {
   } catch (error) {
     metrics.renderErrors++;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    logger.error('Render error', { error: errorMessage });
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
+    // Handle specific error types with appropriate status codes
+    if (error instanceof ComponentNotFoundError) {
+      logger.error('Component not found', {
+        component: error.componentName,
+        availableComponents: error.availableComponents.slice(0, 10),
+      });
+      return Response.json(
+        {
+          error: 'Component not found',
+          component: error.componentName,
+          message: error.message,
+          availableComponents: error.availableComponents.slice(0, 10),
+        },
+        { status: 404 }
+      );
+    }
+
+    if (error instanceof RenderError) {
+      logger.error('Render error', {
+        component: error.componentName,
+        error: errorMessage,
+        stack: errorStack,
+      });
+      return Response.json(
+        {
+          error: 'Render failed',
+          component: error.componentName,
+          message: errorMessage,
+        },
+        { status: 500 }
+      );
+    }
+
+    // Generic error
+    logger.error('Unexpected render error', { error: errorMessage, stack: errorStack });
     return Response.json(
       { error: 'Render failed', message: errorMessage },
       { status: 500 }
@@ -216,12 +268,28 @@ async function handleBatchRender(req: Request): Promise<Response> {
       error: r.error,
     }));
 
+    // Count errors in results
+    const errorCount = responseResults.filter(r => r.error).length;
+
+    // Update metrics for batch errors
+    if (errorCount > 0) {
+      metrics.renderErrors += errorCount;
+    }
+
+    // Return 207 Multi-Status if some failed, 200 if all succeeded
+    const status = errorCount === responseResults.length ? 500 :
+                   errorCount > 0 ? 207 : 200;
+
     return Response.json({
       results: responseResults,
       total_duration_ms: Math.round(performance.now() - start),
-    });
+      errors_count: errorCount,
+    }, { status });
   } catch (error) {
+    metrics.renderErrors++;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : undefined;
+    logger.error('Batch render error', { error: errorMessage, stack: errorStack });
     return Response.json({ error: 'Batch render failed', message: errorMessage }, { status: 500 });
   }
 }
@@ -235,19 +303,6 @@ function handleComponents(): Response {
     count: components.length,
     components,
   });
-}
-
-// ============================================
-// Utilities
-// ============================================
-
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
 }
 
 // ============================================

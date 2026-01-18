@@ -19,6 +19,22 @@ import {
   loadComponents,
 } from './components';
 
+// Custom error types for proper HTTP status codes
+export class ComponentNotFoundError extends Error {
+  constructor(public componentName: string, public availableComponents: string[]) {
+    super(`Component "${componentName}" is not registered`);
+    this.name = 'ComponentNotFoundError';
+  }
+}
+
+export class RenderError extends Error {
+  constructor(public componentName: string, public originalError: Error | string) {
+    const message = originalError instanceof Error ? originalError.message : originalError;
+    super(`Failed to render component "${componentName}": ${message}`);
+    this.name = 'RenderError';
+  }
+}
+
 // Types
 export interface RenderOptions {
   /** Timeout в миллисекундах */
@@ -91,16 +107,13 @@ export async function renderComponent(
   const Component = getComponent(componentName);
 
   if (!Component) {
-    // Fallback: возвращаем placeholder div для client-side hydration
-    logger.warn('Component not found, returning placeholder', { component: componentName, requestId });
-    const placeholderHtml = createPlaceholder(componentName, props);
-    return {
-      html: placeholderHtml,
-      isStreaming: false,
-      duration: performance.now() - start,
-      isCrawler: crawlerDetected,
-      crawlerName,
-    };
+    // Выбрасываем ошибку вместо silent fallback
+    logger.error('Component not found', {
+      component: componentName,
+      requestId,
+      availableCount: getComponentCount(),
+    });
+    throw new ComponentNotFoundError(componentName, getComponentNames().slice(0, 20));
   }
 
   try {
@@ -146,23 +159,19 @@ export async function renderComponent(
   } catch (error) {
     const duration = performance.now() - start;
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
     logger.error('Render failed', {
       component: componentName,
       requestId,
       error: errorMessage,
+      stack: errorStack,
       duration_ms: Math.round(duration),
     });
 
-    // Fallback: placeholder для client-side rendering
-    const placeholderHtml = createPlaceholder(componentName, props, errorMessage);
-    return {
-      html: placeholderHtml,
-      isStreaming: false,
-      duration,
-      isCrawler: crawlerDetected,
-      crawlerName,
-    };
+    // Пробрасываем ошибку вместо silent fallback
+    // HTTP layer (index.ts) решит что делать - вернуть 500 или placeholder
+    throw new RenderError(componentName, error instanceof Error ? error : errorMessage);
   }
 }
 
@@ -208,7 +217,14 @@ async function renderToStreamingWithTimeout(
     const stream = await renderToReadableStream(element, {
       signal: controller.signal,
       onError(error) {
-        logger.error('Streaming error', { requestId, error: String(error) });
+        const errorStack = error instanceof Error ? error.stack : undefined;
+        logger.error('Streaming error', {
+          requestId,
+          error: String(error),
+          stack: errorStack,
+        });
+        // Abort stream on error to prevent partial/corrupted HTML
+        controller.abort();
       },
     });
 
