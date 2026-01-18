@@ -296,4 +296,3 @@ async function renderToStreamingWithTimeout(
     throw error;
   }
 }
-
