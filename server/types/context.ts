@@ -2,21 +2,19 @@
  * SSR Context Types
  *
  * Типы для структурированного контекста SSR.
- * Заменяет глобальный объект gon.
+ * Содержит ТОЛЬКО поля, реально используемые при рендеринге.
  */
 
 /**
  * Настройки дизайна магазина
  */
 export interface DesignSettings {
-  fontFamily?: string;
-  fontColor?: string;
-  activeElementsColor?: string;
-  logoUrl?: string;
+  /** URL логотипа магазина */
+  logoUrl?: string | null;
 }
 
 /**
- * Настройки валюты
+ * Настройки валюты для accounting.js
  */
 export interface CurrencySettings {
   /** Символ валюты (₽, $, €) */
@@ -32,7 +30,7 @@ export interface CurrencySettings {
 }
 
 /**
- * Настройки форматирования чисел
+ * Настройки форматирования чисел для accounting.js
  */
 export interface NumberSettings {
   /** Количество знаков после запятой */
@@ -47,16 +45,10 @@ export interface NumberSettings {
  * Информация о магазине (vendor)
  */
 export interface VendorInfo {
-  /** ID магазина */
-  id: number;
-  /** Базовый URL магазина */
-  root_url: string;
   /** URL публичного API */
   public_api_url: string;
   /** URL API для операторов */
   operator_api_url: string;
-  /** Настройки дизайна (опционально) */
-  design?: DesignSettings;
 }
 
 /**
@@ -68,12 +60,12 @@ export interface SsrContext {
   vendor: VendorInfo;
   /** Язык интерфейса (ru, en, uk, kk) */
   locale: string;
-  /** Переводы строк */
-  translations: Record<string, unknown>;
   /** Настройки валюты */
   currency: CurrencySettings;
   /** Настройки форматирования чисел */
   numberSettings: NumberSettings;
+  /** Настройки дизайна */
+  design?: DesignSettings;
 }
 
 /**
@@ -85,7 +77,7 @@ export interface AccountingSettings {
 }
 
 /**
- * Полная конфигурация приложения
+ * Полная конфигурация приложения (__SSR_CONFIG__)
  * Включает SsrContext + серверные настройки
  */
 export interface AppConfig extends SsrContext {
@@ -95,6 +87,4 @@ export interface AppConfig extends SsrContext {
   thumborUrl: string;
   /** Максимальное количество товаров в корзине */
   maxItemsCount: number;
-  /** URL изображения-заглушки для товаров без фото */
-  fallbackProductImage: string;
 }

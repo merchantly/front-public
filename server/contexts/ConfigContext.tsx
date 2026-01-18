@@ -1,19 +1,19 @@
 /**
  * ConfigContext - React Context для SSR конфигурации
  *
- * Предоставляет доступ к полной конфигурации приложения включая:
- * - vendor: информация о магазине (id, URLs, design)
+ * Предоставляет доступ к конфигурации приложения:
+ * - vendor: API URLs магазина
  * - locale: язык интерфейса
- * - translations: переводы строк
- * - accountingSettings: настройки для accounting.js (включает currency)
- * - assetHost, thumborUrl, maxItemsCount, fallbackProductImage: серверные настройки
+ * - currency + numberSettings: настройки для accounting.js
+ * - design: настройки дизайна (logoUrl)
+ * - assetHost, thumborUrl, maxItemsCount: серверные настройки
  *
  * На сервере: значения приходят из SsrContext + ENV через ConfigProvider
- * На клиенте: значения загружаются из __SSR_CONFIG__ + __TRANSLATIONS__
+ * На клиенте: значения загружаются из __SSR_CONFIG__
  */
 
 import React, { createContext, useContext, ReactNode } from 'react';
-import type { AppConfig, SsrContext, VendorInfo, CurrencySettings, NumberSettings, AccountingSettings } from '../types/context';
+import type { AppConfig, SsrContext, VendorInfo, CurrencySettings, NumberSettings, AccountingSettings, DesignSettings } from '../types/context';
 
 // Context с null по умолчанию (будет заполнен Provider'ом)
 const ConfigContext = createContext<AppConfig | null>(null);
@@ -26,12 +26,6 @@ interface ConfigProviderProps {
 /**
  * Provider для SSR конфигурации.
  * Оборачивает приложение и предоставляет config через context.
- *
- * @example
- * // В SSR сервере
- * <ConfigProvider config={fullAppConfig}>
- *   <App />
- * </ConfigProvider>
  */
 export const ConfigProvider: React.FC<ConfigProviderProps> = ({ config, children }) => {
   return <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>;
@@ -42,13 +36,10 @@ export const ConfigProvider: React.FC<ConfigProviderProps> = ({ config, children
  */
 const DEFAULT_CONFIG: AppConfig = {
   vendor: {
-    id: 0,
-    root_url: '',
     public_api_url: '',
     operator_api_url: '',
   },
   locale: 'ru',
-  translations: {},
   currency: {
     symbol: '₽',
     format: '%v %s',
@@ -61,20 +52,14 @@ const DEFAULT_CONFIG: AppConfig = {
     thousand: ' ',
     decimal: ',',
   },
+  design: undefined,
   assetHost: '',
   thumborUrl: '',
   maxItemsCount: 100,
-  fallbackProductImage: '',
 };
 
 /**
- * Hook для получения полной конфигурации в компонентах.
- *
- * @example
- * function ProductImage({ src }) {
- *   const { thumborUrl, vendor } = useConfig();
- *   return <img src={`${thumborUrl}/unsafe/200x200/${src}`} />;
- * }
+ * Hook для получения полной конфигурации
  */
 export function useConfig(): AppConfig {
   const contextConfig = useContext(ConfigContext);
@@ -83,13 +68,11 @@ export function useConfig(): AppConfig {
     return contextConfig;
   }
 
-  // На сервере context должен быть всегда установлен через Provider
-  // Возвращаем дефолтные значения только как fallback
   return DEFAULT_CONFIG;
 }
 
 /**
- * Hook для получения информации о магазине
+ * Hook для получения информации о магазине (API URLs)
  */
 export function useVendor(): VendorInfo {
   const config = useConfig();
@@ -102,14 +85,6 @@ export function useVendor(): VendorInfo {
 export function useLocale(): string {
   const config = useConfig();
   return config.locale;
-}
-
-/**
- * Hook для получения переводов
- */
-export function useTranslations(): Record<string, unknown> {
-  const config = useConfig();
-  return config.translations;
 }
 
 /**
@@ -129,8 +104,15 @@ export function useNumberSettings(): NumberSettings {
 }
 
 /**
+ * Hook для получения настроек дизайна
+ */
+export function useDesign(): DesignSettings | undefined {
+  const config = useConfig();
+  return config.design;
+}
+
+/**
  * Hook для получения настроек accounting.js
- * Формирует объект из currency + numberSettings
  */
 export function useAccountingSettings(): AccountingSettings {
   const config = useConfig();
@@ -143,15 +125,6 @@ export function useAccountingSettings(): AccountingSettings {
 /**
  * HOC для class-based компонентов.
  * Инжектит config в props.
- *
- * @example
- * class MyComponent extends React.Component {
- *   render() {
- *     const { config } = this.props;
- *     return <img src={`//${config.assetHost}/logo.png`} />;
- *   }
- * }
- * export default withConfig(MyComponent);
  */
 export function withConfig<P extends { config?: AppConfig }>(
   WrappedComponent: React.ComponentType<P>
