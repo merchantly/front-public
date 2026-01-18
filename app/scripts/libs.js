@@ -58,6 +58,8 @@ function getAccountingSettings() {
             number: config.numberSettings,
           };
         }
+        // SSR_CONFIG есть но неполный
+        console.warn('[accounting] __SSR_CONFIG__ found but missing currency or numberSettings, falling back');
       } catch (e) {
         console.error('[accounting] Failed to parse __SSR_CONFIG__:', e.message);
       }
@@ -66,9 +68,11 @@ function getAccountingSettings() {
 
   // Legacy: gon.accounting_settings
   if (typeof gon !== 'undefined' && gon.accounting_settings) {
+    console.warn('[accounting] Using legacy gon.accounting_settings');
     return gon.accounting_settings;
   }
 
+  console.warn('[accounting] No configuration found, using DEFAULT_SETTINGS');
   return DEFAULT_SETTINGS;
 }
 

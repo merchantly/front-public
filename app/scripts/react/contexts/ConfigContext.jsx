@@ -111,6 +111,12 @@ function getSsrConfig() {
   try {
     const config = JSON.parse(configScript.textContent || '{}');
 
+    // Валидация критических полей
+    if (!config.vendor || !config.locale) {
+      console.error('[ConfigContext] __SSR_CONFIG__ is missing required fields (vendor or locale)');
+      return null;
+    }
+
     // Добавляем translations из глобальной переменной
     const translations = window.__TRANSLATIONS__ || {};
 
@@ -119,7 +125,7 @@ function getSsrConfig() {
       translations,
     };
   } catch (e) {
-    console.warn('Failed to parse __SSR_CONFIG__:', e);
+    console.error('[ConfigContext] Failed to parse __SSR_CONFIG__:', e.message);
     return null;
   }
 }
@@ -228,10 +234,12 @@ export function useConfig() {
   // 3. Fallback на gon для браузера (обратная совместимость)
   const gonConfig = getGonConfig();
   if (gonConfig) {
+    console.warn('[ConfigContext] Using legacy gon fallback');
     return gonConfig;
   }
 
   // 4. Дефолтные значения
+  console.error('[ConfigContext] No configuration source available, using DEFAULT_CONFIG');
   return DEFAULT_CONFIG;
 }
 

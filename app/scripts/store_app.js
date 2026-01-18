@@ -33,7 +33,11 @@ if (typeof Bugsnag !== 'undefined') {
     Bugsnag.appVersion = appVersion + process.env.APP_VERSION;
   }
   // Используем meta-тег app-env вместо gon.env
-  Bugsnag.releaseStage = getMetaContent('app-env') || 'development';
+  const appEnv = getMetaContent('app-env');
+  if (!appEnv) {
+    console.error('[Bugsnag] meta[name="app-env"] not found! Defaulting to "development". Errors may NOT be reported.');
+  }
+  Bugsnag.releaseStage = appEnv || 'development';
   Bugsnag.notifyReleaseStages = ['production', 'reproduction', 'staging'];
   Bugsnag.metaData = { space: 'public' };
 }
