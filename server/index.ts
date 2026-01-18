@@ -26,6 +26,7 @@ import {
 } from './renderer';
 import { isComponentsLoaded, getLoadState } from './components';
 import type { SsrContext } from './types/context';
+import { z } from 'zod';
 
 // ============================================
 // State
@@ -111,80 +112,40 @@ function validateProps(props: unknown): { valid: boolean; error?: string } {
 }
 
 /**
- * Validates SSR context object.
- * Returns validation result with error message if invalid.
+ * Zod schema for SSR context validation.
+ * Matches the contract in BrandyMint/merchantly#4227
+ */
+const SsrContextSchema = z.object({
+  vendor: z.object({
+    public_api_url: z.string(),
+    operator_api_url: z.string(),
+  }),
+  locale: z.string(),
+  currency: z.object({
+    symbol: z.string(),
+    format: z.string(),
+    decimal: z.string(),
+    thousand: z.string(),
+    precision: z.number(),
+  }),
+  numberSettings: z.object({
+    precision: z.number(),
+    thousand: z.string(),
+    decimal: z.string(),
+  }),
+  design: z.object({
+    logoUrl: z.string().nullable().optional(),
+  }).optional(),
+});
+
+/**
+ * Validates SSR context object using Zod schema.
  */
 function validateContext(context: unknown): { valid: boolean; error?: string } {
-  if (!context || typeof context !== 'object') {
-    return { valid: false, error: 'context is required' };
+  const result = SsrContextSchema.safeParse(context);
+  if (!result.success) {
+    return { valid: false, error: result.error.issues[0]?.message || 'Invalid context' };
   }
-
-  const ctx = context as Record<string, unknown>;
-
-  // vendor validation
-  if (!ctx.vendor || typeof ctx.vendor !== 'object') {
-    return { valid: false, error: 'context.vendor is required' };
-  }
-  const vendor = ctx.vendor as Record<string, unknown>;
-  if (typeof vendor.id !== 'number') {
-    return { valid: false, error: 'context.vendor.id (number) is required' };
-  }
-  if (typeof vendor.root_url !== 'string') {
-    return { valid: false, error: 'context.vendor.root_url is required' };
-  }
-  if (typeof vendor.public_api_url !== 'string') {
-    return { valid: false, error: 'context.vendor.public_api_url is required' };
-  }
-  if (typeof vendor.operator_api_url !== 'string') {
-    return { valid: false, error: 'context.vendor.operator_api_url is required' };
-  }
-
-  // locale validation
-  if (typeof ctx.locale !== 'string') {
-    return { valid: false, error: 'context.locale is required' };
-  }
-
-  // translations validation
-  if (!ctx.translations || typeof ctx.translations !== 'object') {
-    return { valid: false, error: 'context.translations is required' };
-  }
-
-  // currency validation
-  if (!ctx.currency || typeof ctx.currency !== 'object') {
-    return { valid: false, error: 'context.currency is required' };
-  }
-  const currency = ctx.currency as Record<string, unknown>;
-  if (typeof currency.symbol !== 'string') {
-    return { valid: false, error: 'context.currency.symbol is required' };
-  }
-  if (typeof currency.format !== 'string') {
-    return { valid: false, error: 'context.currency.format is required' };
-  }
-  if (typeof currency.decimal !== 'string') {
-    return { valid: false, error: 'context.currency.decimal is required' };
-  }
-  if (typeof currency.thousand !== 'string') {
-    return { valid: false, error: 'context.currency.thousand is required' };
-  }
-  if (typeof currency.precision !== 'number') {
-    return { valid: false, error: 'context.currency.precision is required' };
-  }
-
-  // numberSettings validation
-  if (!ctx.numberSettings || typeof ctx.numberSettings !== 'object') {
-    return { valid: false, error: 'context.numberSettings is required' };
-  }
-  const numberSettings = ctx.numberSettings as Record<string, unknown>;
-  if (typeof numberSettings.precision !== 'number') {
-    return { valid: false, error: 'context.numberSettings.precision is required' };
-  }
-  if (typeof numberSettings.thousand !== 'string') {
-    return { valid: false, error: 'context.numberSettings.thousand is required' };
-  }
-  if (typeof numberSettings.decimal !== 'string') {
-    return { valid: false, error: 'context.numberSettings.decimal is required' };
-  }
-
   return { valid: true };
 }
 

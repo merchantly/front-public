@@ -10,9 +10,9 @@ export {
   useConfig,
   useVendor,
   useLocale,
-  useTranslations,
   useCurrency,
   useNumberSettings,
+  useDesign,
   useAccountingSettings,
   withConfig,
 } from './ConfigContext';

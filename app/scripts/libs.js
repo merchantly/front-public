@@ -59,7 +59,7 @@ function getAccountingSettings() {
           };
         }
       } catch (e) {
-        // Игнорируем ошибки парсинга
+        console.error('[accounting] Failed to parse __SSR_CONFIG__:', e.message);
       }
     }
   }

@@ -20,7 +20,7 @@ const ConfigContext = createContext<AppConfig | null>(null);
 
 interface ConfigProviderProps {
   config: AppConfig;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 /**

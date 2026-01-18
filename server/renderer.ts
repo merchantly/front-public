@@ -119,7 +119,6 @@ function createElementWithContext(
     assetHost: serverConfig.assetHost,
     thumborUrl: serverConfig.thumborUrl,
     maxItemsCount: serverConfig.maxItemsCount,
-    fallbackProductImage: serverConfig.fallbackProductImage,
   };
 
   // Оборачиваем компонент в ConfigProvider
