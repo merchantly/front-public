@@ -25,6 +25,8 @@ import {
   RenderError,
 } from './renderer';
 import { isComponentsLoaded, getLoadState } from './components';
+import type { SsrContext } from './types/context';
+import { z } from 'zod';
 
 // ============================================
 // State
@@ -107,6 +109,56 @@ function validateProps(props: unknown): { valid: boolean; error?: string } {
     logger.warn('Props serialization failed', { error: errorMessage });
     return { valid: false, error: `Props serialization failed: ${errorMessage}` };
   }
+}
+
+/**
+ * Zod schema for SSR context validation.
+ * Matches the contract in BrandyMint/merchantly#4227
+ */
+const SsrContextSchema = z.object({
+  vendor: z.object({
+    public_api_url: z.string().url(),
+    operator_api_url: z.string().url(),
+  }),
+  locale: z.string().min(2).max(5),
+  currency: z.object({
+    symbol: z.string().min(1),
+    format: z.string().min(1),
+    decimal: z.string(),
+    thousand: z.string(),
+    precision: z.number().int().nonnegative(),
+  }),
+  numberSettings: z.object({
+    precision: z.number().int().nonnegative(),
+    thousand: z.string(),
+    decimal: z.string(),
+  }),
+  design: z.object({
+    logoUrl: z.string().url().nullable().optional(),
+  }).optional(),
+});
+
+/**
+ * Validates SSR context object using Zod schema.
+ * Returns all validation errors with paths for better debugging.
+ */
+function validateContext(context: unknown): { valid: boolean; error?: string } {
+  const result = SsrContextSchema.safeParse(context);
+  if (!result.success) {
+    // Собираем ВСЕ ошибки с путями к полям
+    const errors = result.error.issues.map((issue) => {
+      const path = issue.path.length > 0 ? issue.path.join('.') : 'root';
+      return `${path}: ${issue.message}`;
+    });
+
+    logger.warn('Context validation failed', {
+      errors,
+      receivedKeys: context && typeof context === 'object' ? Object.keys(context) : 'not an object',
+    });
+
+    return { valid: false, error: errors.join('; ') };
+  }
+  return { valid: true };
 }
 
 // ============================================
@@ -202,7 +254,12 @@ async function handleRender(req: Request): Promise<Response> {
   const requestId = req.headers.get('X-Request-Id') || crypto.randomUUID();
 
   // Parse JSON body first, before incrementing metrics
-  let body: { component: string; props: Record<string, unknown>; options?: { timeout?: number; waitForAll?: boolean } };
+  let body: {
+    component: string;
+    props: Record<string, unknown>;
+    context: SsrContext;
+    options?: { timeout?: number; waitForAll?: boolean };
+  };
   try {
     body = await req.json();
   } catch (error) {
@@ -214,7 +271,7 @@ async function handleRender(req: Request): Promise<Response> {
     );
   }
 
-  const { component, props, options } = body;
+  const { component, props, context, options } = body;
 
   // Validate component name format (before incrementing metrics)
   if (!isValidComponentName(component)) {
@@ -230,6 +287,12 @@ async function handleRender(req: Request): Promise<Response> {
     return Response.json({ error: 'Invalid props', message: propsValidation.error }, { status: 400 });
   }
 
+  // Validate context (before incrementing metrics)
+  const contextValidation = validateContext(context);
+  if (!contextValidation.valid) {
+    return Response.json({ error: 'Invalid context', message: contextValidation.error }, { status: 400 });
+  }
+
   // Increment metrics only for valid requests
   activeRenders++;
   metrics.renderTotal++;
@@ -238,8 +301,8 @@ async function handleRender(req: Request): Promise<Response> {
     const userAgent = req.headers.get('User-Agent') || undefined;
     const timeout = options?.timeout || SSR_TIMEOUT;
 
-    // Render component (streaming or full based on crawler detection)
-    const result = await renderComponent(component, props || {}, {
+    // Render component with context (streaming or full based on crawler detection)
+    const result = await renderComponent(component, props || {}, context, {
       timeout,
       waitForAll: options?.waitForAll,
       userAgent,
@@ -349,9 +412,6 @@ async function startServer() {
   logger.info('Loading components from bundle...');
   loadComponentsFromBundle();
   logger.info('Components loaded', { count: getRegisteredComponents().length });
-
-  // TODO: Preload translations (Фаза 2)
-  // await preloadTranslations(['ru', 'en', 'uk', 'kk']);
 
   isReady = true;
   logger.info('Server is ready');

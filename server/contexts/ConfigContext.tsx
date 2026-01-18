@@ -1,107 +1,130 @@
 /**
  * ConfigContext - React Context для SSR конфигурации
  *
- * Предоставляет доступ к конфигурации (asset_host, thumbor_url, max_items_count)
- * которая ранее бралась из глобального объекта gon.
+ * Предоставляет доступ к конфигурации приложения:
+ * - vendor: API URLs магазина
+ * - locale: язык интерфейса
+ * - currency + numberSettings: настройки для accounting.js
+ * - design: настройки дизайна (logoUrl)
+ * - assetHost, thumborUrl, maxItemsCount: серверные настройки
  *
- * На сервере: значения приходят из ENV через ConfigProvider
- * На клиенте: fallback на gon.* если context не доступен
+ * На сервере: значения приходят из SsrContext + ENV через ConfigProvider
+ * На клиенте: значения загружаются из __SSR_CONFIG__
  */
 
 import React, { createContext, useContext, ReactNode } from 'react';
-import type { AppConfig } from '../config';
+import type { AppConfig, SsrContext, VendorInfo, CurrencySettings, NumberSettings, AccountingSettings, DesignSettings } from '../types/context';
 
 // Context с null по умолчанию (будет заполнен Provider'ом)
 const ConfigContext = createContext<AppConfig | null>(null);
 
 interface ConfigProviderProps {
   config: AppConfig;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 /**
  * Provider для SSR конфигурации.
  * Оборачивает приложение и предоставляет config через context.
- *
- * @example
- * // В SSR сервере
- * <ConfigProvider config={getConfigForContext()}>
- *   <App />
- * </ConfigProvider>
  */
 export const ConfigProvider: React.FC<ConfigProviderProps> = ({ config, children }) => {
   return <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>;
 };
 
 /**
- * Получить gon объект на клиенте (fallback).
- * Возвращает null на сервере или если gon не определён.
+ * Дефолтные значения для конфигурации
  */
-function getGonConfig(): AppConfig | null {
-  if (typeof window === 'undefined') {
-    return null;
-  }
-
-  const gon = (window as any).gon;
-  if (!gon) {
-    return null;
-  }
-
-  return {
-    assetHost: gon.asset_host || '',
-    thumborUrl: gon.thumbor_url || '',
-    maxItemsCount: gon.max_items_count || 100,
-  };
-}
+const DEFAULT_CONFIG: AppConfig = {
+  vendor: {
+    public_api_url: '',
+    operator_api_url: '',
+  },
+  locale: 'ru',
+  currency: {
+    symbol: '₽',
+    format: '%v %s',
+    decimal: ',',
+    thousand: ' ',
+    precision: 0,
+  },
+  numberSettings: {
+    precision: 0,
+    thousand: ' ',
+    decimal: ',',
+  },
+  design: undefined,
+  assetHost: '',
+  thumborUrl: '',
+  maxItemsCount: 100,
+};
 
 /**
- * Hook для получения конфигурации в компонентах.
- *
- * Приоритет:
- * 1. ConfigContext (SSR или если Provider установлен)
- * 2. gon.* (legacy fallback на клиенте)
- * 3. Дефолтные значения
- *
- * @example
- * function AssetImage({ src }) {
- *   const { assetHost } = useConfig();
- *   return <img src={assetHost ? `//${assetHost}/${src}` : `/${src}`} />;
- * }
+ * Hook для получения полной конфигурации
  */
 export function useConfig(): AppConfig {
   const contextConfig = useContext(ConfigContext);
 
-  // Если есть context — используем его (SSR или обёрнуто в Provider)
   if (contextConfig) {
     return contextConfig;
   }
 
-  // Fallback на gon для клиента (legacy поддержка)
-  const gonConfig = getGonConfig();
-  if (gonConfig) {
-    return gonConfig;
-  }
+  return DEFAULT_CONFIG;
+}
 
-  // Дефолтные значения если ничего не доступно
+/**
+ * Hook для получения информации о магазине (API URLs)
+ */
+export function useVendor(): VendorInfo {
+  const config = useConfig();
+  return config.vendor;
+}
+
+/**
+ * Hook для получения текущей локали
+ */
+export function useLocale(): string {
+  const config = useConfig();
+  return config.locale;
+}
+
+/**
+ * Hook для получения настроек валюты
+ */
+export function useCurrency(): CurrencySettings {
+  const config = useConfig();
+  return config.currency;
+}
+
+/**
+ * Hook для получения настроек форматирования чисел
+ */
+export function useNumberSettings(): NumberSettings {
+  const config = useConfig();
+  return config.numberSettings;
+}
+
+/**
+ * Hook для получения настроек дизайна
+ */
+export function useDesign(): DesignSettings | undefined {
+  const config = useConfig();
+  return config.design;
+}
+
+/**
+ * Hook для получения настроек accounting.js
+ */
+export function useAccountingSettings(): AccountingSettings {
+  const config = useConfig();
   return {
-    assetHost: '',
-    thumborUrl: '',
-    maxItemsCount: 100,
+    currency: config.currency,
+    number: config.numberSettings,
   };
 }
 
 /**
  * HOC для class-based компонентов.
  * Инжектит config в props.
- *
- * @example
- * class MyComponent extends React.Component {
- *   render() {
- *     const { config } = this.props;
- *     return <img src={`//${config.assetHost}/logo.png`} />;
- *   }
- * }
- * export default withConfig(MyComponent);
  */
 export function withConfig<P extends { config?: AppConfig }>(
   WrappedComponent: React.ComponentType<P>
@@ -117,4 +140,4 @@ export function withConfig<P extends { config?: AppConfig }>(
 }
 
 export { ConfigContext };
-export type { AppConfig };
+export type { AppConfig, SsrContext };

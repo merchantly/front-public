@@ -36,4 +36,44 @@ const DEFAULT_SETTINGS = {
   },
 };
 
-window.accounting.settings = (typeof gon !== 'undefined' && gon.accounting_settings) ? gon.accounting_settings : DEFAULT_SETTINGS;
+/**
+ * Получить настройки accounting из доступных источников
+ *
+ * Порядок приоритета:
+ * 1. __SSR_CONFIG__.currency + __SSR_CONFIG__.numberSettings (новый формат)
+ * 2. gon.accounting_settings (legacy)
+ * 3. DEFAULT_SETTINGS
+ */
+function getAccountingSettings() {
+  // Новый формат: __SSR_CONFIG__ с currency и numberSettings на верхнем уровне
+  if (typeof document !== 'undefined') {
+    const configScript = document.getElementById('__SSR_CONFIG__');
+    if (configScript) {
+      try {
+        const config = JSON.parse(configScript.textContent || '{}');
+        // Новый формат: currency и numberSettings отдельно
+        if (config.currency && config.numberSettings) {
+          return {
+            currency: config.currency,
+            number: config.numberSettings,
+          };
+        }
+        // SSR_CONFIG есть но неполный
+        console.warn('[accounting] __SSR_CONFIG__ found but missing currency or numberSettings, falling back');
+      } catch (e) {
+        console.error('[accounting] Failed to parse __SSR_CONFIG__:', e.message);
+      }
+    }
+  }
+
+  // Legacy: gon.accounting_settings
+  if (typeof gon !== 'undefined' && gon.accounting_settings) {
+    console.warn('[accounting] Using legacy gon.accounting_settings');
+    return gon.accounting_settings;
+  }
+
+  console.warn('[accounting] No configuration found, using DEFAULT_SETTINGS');
+  return DEFAULT_SETTINGS;
+}
+
+window.accounting.settings = getAccountingSettings();
