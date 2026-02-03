@@ -1,3 +1,3 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'mini_racer'
+gem 'mini_racer', '~> 0.9'
