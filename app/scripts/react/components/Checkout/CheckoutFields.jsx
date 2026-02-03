@@ -7,7 +7,7 @@ import { pick } from 'lodash';
 const buildRequestData = ({belongs = [], requestData = {}}, values) => {
   const belongsData = pick(values, belongs || []);
   return decamelizeKeys({ ...belongsData, ...requestData });
-}
+};
 
 class CheckoutFields extends Component {
   render() {
@@ -21,7 +21,7 @@ class CheckoutFields extends Component {
       <span>
         {fields.map((field) => {
           const value = values[field.name];
-          const requestData = buildRequestData(field.ajaxSettings || {}, values)
+          const requestData = buildRequestData(field.ajaxSettings || {}, values);
 
           return (
             <div className="b-form__row__widget" key={field.name}>
@@ -46,7 +46,7 @@ CheckoutFields.propTypes = {
 };
 
 CheckoutFields.defaultProps = {
-  values: {}
+  values: {},
 };
 
 export default CheckoutFields;

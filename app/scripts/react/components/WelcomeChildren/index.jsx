@@ -21,13 +21,13 @@ WelcomeChildrenContainer.propTypes = {
   showQuantity: PropTypes.bool,
   rtl: PropTypes.bool.isRequired,
   historyProducts: PropTypes.arrayOf(PropTypes.object),
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 
 WelcomeChildrenContainer.defaultProps = {
   showWelcomeSlider: false,
   vendor: {},
-  rtl: false
+  rtl: false,
 };
 
 export default provideTranslations(WelcomeChildrenContainer);

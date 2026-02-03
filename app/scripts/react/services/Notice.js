@@ -2,8 +2,18 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import Notice from '../components/Notice';
 
+/**
+ * Проверка что мы в браузере (SSR-safe)
+ */
+function canUseDOM() {
+  return typeof document !== 'undefined' && document.body;
+}
+
 const NoticeService = {
   getContainer() {
+    // SSR-safe: на сервере возвращаем null
+    if (!canUseDOM()) return null;
+
     let container = document.querySelector('[notice-container]');
 
     if (container == null) {
@@ -23,9 +33,11 @@ const NoticeService = {
   },
 
   notify(type, text, timeout, onClick) {
-    timeout = timeout || this.getTimeoutForText(text);
-
+    // SSR-safe: на сервере уведомления не показываем
     const container = this.getContainer();
+    if (!container) return;
+
+    timeout = timeout || this.getTimeoutForText(text);
     const data = {type, text, timeout};
 
     unmountComponentAtNode(container);
@@ -70,6 +82,7 @@ const NoticeService = {
 
   close() {
     const container = this.getContainer();
+    if (!container) return;
     unmountComponentAtNode(container);
   },
 };

@@ -4,7 +4,7 @@ import FormAuthenticity from 'rc/common/FormAuthenticity';
 import provideTranslations from 'rc/HoC/provideTranslations';
 import * as schemas from 'r/schemas';
 import Select from '../common/Select';
-import MaskedInput from 'react-text-mask'
+import MaskedInput from 'react-text-mask';
 
 class ClientRegistration extends Component {
   constructor(props) {
@@ -26,12 +26,12 @@ class ClientRegistration extends Component {
       timeout,
       vendorRegistrationPath,
       inputFields,
-      occupations
+      occupations,
     } = this.props;
 
     const {
       occupationId,
-    } = this.state
+    } = this.state;
 
     return (
       <div className="b-cart__content">
@@ -96,7 +96,7 @@ class ClientRegistration extends Component {
                     <div className='b-item-full__form__option  b-item-full__form__option_full b-item-full__form__option_pln'>
                       <Select
                         name="client_registration_form[occupation_id]"
-                        options={occupations.map((i) => ({ value: i.id, title: i.name, }))}
+                        options={occupations.map((i) => ({ value: i.id, title: i.name }))}
                         onChange={this.changeOccupation.bind(this)}
                         value={occupationId}
                       />

@@ -1,4 +1,3 @@
-/*global gon */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AssetImage from '../common/AssetImage';
@@ -7,7 +6,7 @@ import HumanizedMoneyWithCurrency from '../common/Money/HumanizedMoneyWithCurren
 import { range, map, size } from 'lodash';
 import { getIn } from 'timm';
 import {
-  ORDER_IMG_SIZE,
+  ORDER_IMG_SIZE
 } from 'r/constants/OrderConstants';
 import CartListImage from './CartListImage';
 import tinycolor from 'tinycolor2';
@@ -16,8 +15,9 @@ import Icon from 'rc/common/Icon';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import {
-  addGood,
+  addGood
 } from 'r/actions/GoodStateActions';
+import { withConfig } from 'r/contexts/ConfigContext';
 
 const WEIGHT_STEP = 0.01;
 
@@ -29,7 +29,7 @@ class CartListItem extends Component {
 
     if (link.dataset.method) return;
 
-    window.last_deleted_item_e = e
+    window.last_deleted_item_e = e;
 
     e.preventDefault();
 
@@ -40,7 +40,7 @@ class CartListItem extends Component {
     }
 
     link.dataset.method = 'delete';
-    link.click()
+    link.click();
   }
 
   changeWeight(ev) {
@@ -69,12 +69,12 @@ class CartListItem extends Component {
     if (attributes) {
       return map(attributes, (attr) => {
         let style = attr.colorHex ? { backgroundColor: attr.colorHex,
-                                      color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'} : {}
+                                      color: tinycolor(attr.colorHex).isLight() ? 'black' : 'white'} : {};
         return (
           <div className="b-item-full__multiple-choice_colored-attribute" style={style}>
             {`${attr.title}: ${attr.value}`}
           </div>
-        )
+        );
       });
     } else {
       return null;
@@ -134,10 +134,11 @@ class CartListItem extends Component {
       amount,
       item,
       t,
+      config,
     } = this.props;
 
     const maxAvail = Math.min(
-      gon.max_items_count || 100,
+      config.maxItemsCount,
       (getIn(item, ['good', 'maxOrderableQuantity']) || 0)
     );
     const options = range(0, Math.max(amount, maxAvail))
@@ -240,17 +241,20 @@ class CartListItem extends Component {
 CartListItem.propTypes = {
   amount: PropTypes.number.isRequired,
   changeAmount: PropTypes.func.isRequired,
+  config: PropTypes.shape({
+    maxItemsCount: PropTypes.number,
+  }).isRequired,
   item: PropTypes.object.isRequired,
   price: PropTypes.object.isRequired,
   t: PropTypes.func.isRequired,
   sortedCart: PropTypes.bool.isRequired,
 };
 
-export default connectToRedux(connect(
+export default connectToRedux(withConfig(connect(
   (state) => ({
-    sortedCart : state.clientState.data.sortedCart,
+    sortedCart: state.clientState.data.sortedCart,
   }),
   {
     addGood,
   }
-)(CartListItem));
+)(CartListItem)));

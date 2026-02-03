@@ -3,7 +3,7 @@ import {
   GOOD_ADD_REQUEST,
   GOOD_ADD_SUCCESS,
   GOOD_ADD_FAILURE,
-  GOOD_STATE_RESET,
+  GOOD_STATE_RESET
 } from 'r/actions/GoodStateActions';
 import { set } from 'timm';
 

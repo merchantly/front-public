@@ -7,7 +7,7 @@ export default class MultipleChoiceItem extends Component {
   static propTypes = {
     good: PropTypes.object.isRequired,
     selected: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
   };
   constructor(props) {
     super(props);
@@ -17,7 +17,7 @@ export default class MultipleChoiceItem extends Component {
     if (this.props.onClick) {
       this.props.onClick(this.props.good);
     }
-  }
+  };
 
   renderTitleContainer = () => {
     const { properties, good, selected } = this.props;
@@ -53,8 +53,8 @@ export default class MultipleChoiceItem extends Component {
         {selected && `\u2714 ${title}`}
         {!selected && title}
       </div>
-    )
-  }
+    );
+  };
 
   render() {
     return this.renderTitleContainer();

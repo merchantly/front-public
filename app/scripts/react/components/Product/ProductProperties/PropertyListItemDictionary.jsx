@@ -8,8 +8,8 @@ export default class PropertyListItemDictionary extends Component {
     value: PropTypes.any,
     options: PropTypes.array.isRequired,
     propertyTitle: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
-  }
+    onChange: PropTypes.func.isRequired,
+  };
   render() {
     return (
       <div className="b-item-full__form__row">

@@ -7,7 +7,7 @@ class CatalogFilterRadio extends Component {
     currentIndex: this.props.items.reduce((prev, item, i) => {
       return item.paramValue === this.props.value ? i : prev;
     }, 0),
-  }
+  };
   getFieldName(item) {
     if (item.paramValue === this.props.default) return;
 

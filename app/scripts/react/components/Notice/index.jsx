@@ -9,8 +9,8 @@ export default class Notice extends Component {
     type: PropTypes.string.isRequired,
     timeout: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
-    onClick: PropTypes.func
-  }
+    onClick: PropTypes.func,
+  };
   componentDidMount() {
     this.timer = new Timer(this.close.bind(this), this.props.timeout);
   }

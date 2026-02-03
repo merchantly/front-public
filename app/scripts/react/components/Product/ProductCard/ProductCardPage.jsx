@@ -99,7 +99,7 @@ ProductCardPage.defaultProps = {
   isOneClickBuy: false,
   similarProducts: {
     showCartButton: false,
-    products: []
+    products: [],
   },
   otherProducts: [],
   deliveryRestrictionMessages: [],
@@ -110,7 +110,7 @@ ProductCardPage.defaultProps = {
   moreContent: {
     show: false,
     height: 300,
-  }
+  },
 };
 
 export default ProductCardPage;

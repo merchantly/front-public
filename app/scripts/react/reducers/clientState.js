@@ -2,7 +2,7 @@ import createReducer from 'r/utils/createReducer';
 import {
   CLIENT_STATE_REQUEST,
   CLIENT_STATE_SUCCESS,
-  CLIENT_STATE_FAILURE,
+  CLIENT_STATE_FAILURE
 } from 'r/actions/ClientStateActions';
 
 const initialState = {

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unused-prop-types */
+ 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -13,8 +13,8 @@ class CatalogFilter extends Component {
   state = {
     showApplyButton: false,
     showClearButton: (this.props.showFilterClearButton && this.filterParamsPresent()),
-    filter: ''
-  }
+    filter: '',
+  };
 
   clearFilter() {
     window.location.replace(window.location.pathname);
@@ -25,7 +25,7 @@ class CatalogFilter extends Component {
     const query = url.query_get();
     delete query['page'];
 
-    Object.keys(query).length > 0
+    Object.keys(query).length > 0;
   }
 
   handleOptionChange(option) {
@@ -33,7 +33,7 @@ class CatalogFilter extends Component {
       showFilteredCount(getFilter(option, option.props.params), this.props.t);
     }
 
-    this.setState({ showApplyButton: true, showClearButton: true})
+    this.setState({ showApplyButton: true, showClearButton: true});
   }
 
   render() {

@@ -16,11 +16,11 @@ export default class AccordionItem extends Component {
     title: PropTypes.string,
     titleClassName: PropTypes.string,
     titleColor: PropTypes.string,
-    isShow: PropTypes.bool
-  }
+    isShow: PropTypes.bool,
+  };
   defaultProps = {
-    isShow: true
-  }
+    isShow: true,
+  };
   constructor(props) {
     super(props);
 
@@ -85,7 +85,7 @@ export default class AccordionItem extends Component {
     const { className, expanded } = this.props;
     const props = {
       className: classNames('react-sanfona-item', className, {
-        'react-sanfona-item-expanded': expanded
+        'react-sanfona-item-expanded': expanded,
       }),
       role: 'tabpanel',
     };
@@ -100,7 +100,7 @@ export default class AccordionItem extends Component {
   }
   render() {
     const {
-      bodyClassName, children, onClick, title, titleColor, titleClassName, isShow
+      bodyClassName, children, onClick, title, titleColor, titleClassName, isShow,
     } = this.props;
     const { maxHeight, overflow } = this.state;
 

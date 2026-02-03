@@ -53,6 +53,6 @@ export default shape({
     fixed: bool,
     fixedDiscount: money,
     freeDelivery: bool,
-    discountPercents: number
+    discountPercents: number,
   }),
 });

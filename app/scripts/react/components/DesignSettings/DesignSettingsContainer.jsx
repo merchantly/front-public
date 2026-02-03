@@ -23,7 +23,7 @@ class DesignSettingsContainer extends Component {
     productPageUrl: PropTypes.string,
     tr: PropTypes.func.isRequired,
     showW1Design: PropTypes.bool.isRequired,
-  }
+  };
   componentDidUpdate() {
     const isOpened = this.isOpened(this.props);
 
@@ -63,7 +63,7 @@ class DesignSettingsContainer extends Component {
       pageType,
       productPageUrl,
       tr,
-      showW1Design
+      showW1Design,
     } = this.props;
 
     if (this.isOpened(this.props)) {

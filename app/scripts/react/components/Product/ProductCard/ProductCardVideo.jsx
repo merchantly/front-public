@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class ProductCardVideo extends Component {
   static propTypes = {
     product: PropTypes.object.isRequired,
-  }
+  };
   render() {
     const { product } = this.props;
 

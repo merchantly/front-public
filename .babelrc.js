@@ -12,7 +12,7 @@ module.exports = {
     "@babel/plugin-proposal-class-properties",
      "add-module-exports",
     ["module-resolver", {
-      "root": ["./", "./node_modules/@bower_components/"],
+      "root": ["./"],
       "alias": {
         "scripts": "./app/scripts",
         "r": "./app/scripts/react",

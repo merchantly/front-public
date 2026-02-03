@@ -43,7 +43,7 @@ LocaleSwitcher.propTypes = {
     PropTypes.shape({
       lang: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }),
+    })
   ),
   current: PropTypes.string.isRequired,
 };

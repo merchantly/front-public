@@ -36,7 +36,7 @@ CategoriesShowContainer.defaultProps = {
     pagination: {},
   },
   isFilterDirty: false,
-  historyProducts: []
+  historyProducts: [],
 };
 
 export default provideTranslations(CategoriesShowContainer);

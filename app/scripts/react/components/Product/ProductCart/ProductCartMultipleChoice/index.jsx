@@ -5,7 +5,7 @@ import MultipleChoiceItem from './MultipleChoiceItem';
 import MultipleChoiceFormItem from './MultipleChoiceFormItem';
 import ProductAddToCartButton from '../../ProductAddToCartButton';
 import {
-  addGoods,
+  addGoods
 } from 'r/actions/GoodStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
@@ -41,11 +41,11 @@ class ProductCartMultipleChoice extends Component {
     goods: PropTypes.array.isRequired,
     productGlobalId: PropTypes.string.isRequired,
     addGoods: PropTypes.func.isRequired,
-  }
+  };
   static defaultProps = {
     goods: [],
     isAddingGood: false,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -72,11 +72,11 @@ class ProductCartMultipleChoice extends Component {
   handleCartButton = () => {
     // spinner
     this.props.addGoods(this.props.productGlobalId, values(this.state.selectedGoods));
-  }
+  };
 
   onChangeAmount = (good, count) => {
     this.onAdd(good, count, true);
-  }
+  };
 
   changeAmmount = (globalId, count) => {
     let items = [...this.state.items];
@@ -86,7 +86,7 @@ class ProductCartMultipleChoice extends Component {
       }
     }
     this.setState({ items: items });
-  }
+  };
 
   deleteFromItems = (globalId) => {
     let items = [...this.state.items];
@@ -96,36 +96,36 @@ class ProductCartMultipleChoice extends Component {
       }
     }
     this.setState({ items: items });
-  }
+  };
 
   onRemove = (good) => {
     delete this.state.selectedGoods[good.globalId];
     this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
     this.deleteFromItems(good.globalId);
-  }
+  };
 
   onAdd = (good, count = 1, changing = false) => {
-    this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good }
+    this.state.selectedGoods[good.globalId] = { globalId: good.globalId, count: count, good: good };
     this.setState({ justAdded: false, selectedGoods: this.state.selectedGoods });
 
     if (changing) {
-      this.changeAmmount(good.globalId, count)
+      this.changeAmmount(good.globalId, count);
     } else {
       let item = { key: good.globalId,
         count: count,
         properties: this.props.properties,
         good: good,
         onRemove: this.onRemove,
-        onChangeAmount: this.onChangeAmount
-      }
+        onChangeAmount: this.onChangeAmount,
+      };
       this.setState((state) => ({ items: state.items.concat(item) }));
     }
-  }
+  };
 
   render() {
     const { goods, productGlobalId, properties, t } = this.props;
     const { selectedGoods, items } = this.state;
-    const empty = isEmpty(selectedGoods)
+    const empty = isEmpty(selectedGoods);
 
     const emptyTitle = this.state.justAdded ? t('vendor.cart.just_added') : t('vendor.cart.not_selected_products');
     const currentGood = { globalId: this.props.productGlobalId };

@@ -1,8 +1,8 @@
 import {
-  clientState,
+  clientState
 } from 'scripts/routes/api';
 import {
-  CALL_API,
+  CALL_API
 } from 'r/middleware/api';
 import { canUseDOM } from 'r/helpers/dom';
 

@@ -1,0 +1,34 @@
+name: Build and test
+
+on:
+  push:
+    branches: [ "master", "develop" ]
+  pull_request:
+    branches: [ "master", "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+    - name: Install dependencies
+      run: yarn install
+    - name: Build
+      run: yarn build
+    - name: Test prerender
+      run: yarn test:prerender
+    - name: Test SSR compatibility
+      run: yarn test:ssr
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+    - name: Test mini_racer
+      run: yarn test:mini_racer
+    - name: Install Playwright
+      run: npx playwright install chromium --with-deps
+    - name: Test browser
+      run: yarn test:browser

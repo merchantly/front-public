@@ -11,7 +11,7 @@ export default class DesignSettingsRadioList extends Component {
     name: PropTypes.string.isRequired,
     items: PropTypes.array.isRequired,
     onChange: PropTypes.func.isRequired,
-  }
+  };
   getItemProps(item) {
     const {
       name,
@@ -80,7 +80,7 @@ class DesignSettingsRadioListItem extends Component {
     checked: PropTypes.bool.isRequired,
     className: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
-  }
+  };
   render() {
     return (
       <label className={classNames('radiobtn', this.props.className)}>

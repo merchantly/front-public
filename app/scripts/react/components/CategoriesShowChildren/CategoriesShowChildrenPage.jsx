@@ -11,7 +11,7 @@ class CategoriesShowChildrenPage extends Component {
 
     this.props.childrenProducts.forEach(function(child) {
       products = products.concat(child.products);
-    })
+    });
 
     try {
       $(window).trigger('m.category', [products.slice(0, 20)]);
@@ -69,7 +69,7 @@ CategoriesShowChildrenPage.propTypes = {
 };
 
 CategoriesShowPage.defaultProps = {
-  historyProducts: []
+  historyProducts: [],
 };
 
 export default CategoriesShowChildrenPage;

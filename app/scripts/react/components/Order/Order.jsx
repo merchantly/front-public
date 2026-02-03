@@ -28,7 +28,7 @@ class Order extends Component {
       totalCount,
       totalPrice,
       totalVat,
-      totalWithoutVat
+      totalWithoutVat,
     } = this.props;
 
     return (

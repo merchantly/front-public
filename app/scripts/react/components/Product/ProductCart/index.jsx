@@ -28,13 +28,13 @@ export default class ProductCart extends Component {
     notAvailableContent: PropTypes.string,
     showAuthForBuyButton: PropTypes.bool,
     vendorClientSigninPath: PropTypes.string,
-  }
+  };
   static defaultProps = {
     formAuthenticity: {},
-  }
+  };
 
   redirectToSignIn() {
-    window.location.href = this.props.vendorClientSigninPath
+    window.location.href = this.props.vendorClientSigninPath;
   }
 
   renderContent(product, t, showAuthForBuyButton) {
@@ -45,7 +45,7 @@ export default class ProductCart extends Component {
             {this.props.t('vendor.button.auth_for_buy')}
           </div>
         </div>
-      )
+      );
     } else {
       if (product.hasOrderingGoods) {
         if (product.goods.length === 1) {
@@ -107,7 +107,7 @@ export default class ProductCart extends Component {
       good,
       onSubmit,
       formAuthenticity,
-      showAuthForBuyButton
+      showAuthForBuyButton,
     } = this.props;
 
     return (

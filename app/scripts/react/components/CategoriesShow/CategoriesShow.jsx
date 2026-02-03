@@ -20,7 +20,7 @@ class CategoriesShow extends Component {
       showCatalogFilter,
       showPagination,
       showQuantity,
-      historyProducts
+      historyProducts,
     } = this.props;
 
     return products.items.length > 0 || isFilterDirty

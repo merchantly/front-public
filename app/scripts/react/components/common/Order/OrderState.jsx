@@ -5,7 +5,7 @@ class OrderState extends Component {
   render() {
     const {
       title,
-      bgStyle
+      bgStyle,
     } = this.props.state;
     
     return (

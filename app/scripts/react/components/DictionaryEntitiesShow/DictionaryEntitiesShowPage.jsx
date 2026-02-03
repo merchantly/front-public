@@ -15,7 +15,7 @@ class DictionaryEntitiesShowPage extends Component {
       vendorRootPath,
       showCartButton,
       showNextButton,
-      nextButton
+      nextButton,
     } = this.props;
 
     return (

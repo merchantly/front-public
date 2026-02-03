@@ -15,7 +15,7 @@ const currencies = {
     "decimal_mark": ",",
     "thousands_separator": " ",
     "iso_numeric": "974",
-    "smallest_denomination": 1
+    "smallest_denomination": 1,
   },
   "eur": {
     "priority": 2,
@@ -30,7 +30,7 @@ const currencies = {
     "decimal_mark": ",",
     "thousands_separator": ".",
     "iso_numeric": "978",
-    "smallest_denomination": 1
+    "smallest_denomination": 1,
   },
   "kzt": {
     "priority": 100,
@@ -45,7 +45,7 @@ const currencies = {
     "decimal_mark": ".",
     "thousands_separator": ",",
     "iso_numeric": "398",
-    "smallest_denomination": 100
+    "smallest_denomination": 100,
   },
   "rub": {
     "priority": 100,
@@ -60,7 +60,7 @@ const currencies = {
     "decimal_mark": ",",
     "thousands_separator": ".",
     "iso_numeric": "643",
-    "smallest_denomination": 1
+    "smallest_denomination": 1,
   },
   "uah": {
     "priority": 100,
@@ -75,7 +75,7 @@ const currencies = {
     "decimal_mark": ".",
     "thousands_separator": ",",
     "iso_numeric": "980",
-    "smallest_denomination": 1
+    "smallest_denomination": 1,
   },
   "usd": {
     "priority": 1,
@@ -90,7 +90,7 @@ const currencies = {
     "decimal_mark": ".",
     "thousands_separator": ",",
     "iso_numeric": "840",
-    "smallest_denomination": 1
+    "smallest_denomination": 1,
   },
   "sar": {
     "priority": 100,
@@ -105,7 +105,7 @@ const currencies = {
     "decimal_mark": ".",
     "thousands_separator": ",",
     "iso_numeric": "682",
-    "smallest_denomination": 5
+    "smallest_denomination": 5,
   },
   "egp": {
     "priority": 100,
@@ -120,7 +120,7 @@ const currencies = {
     "decimal_mark": ".",
     "thousands_separator": ",",
     "iso_numeric": "818",
-    "smallest_denomination": 25
+    "smallest_denomination": 25,
   },
 };
 

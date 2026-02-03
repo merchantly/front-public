@@ -5,7 +5,7 @@ import Payment from './Payment';
 import provideTranslations from 'rc/HoC/provideTranslations';
 export {
   PAYMENT_SUCCESS,
-  PAYMENT_FAILURE,
+  PAYMENT_FAILURE
 } from './Payment';
 
 function PaymentContainer(props) {

@@ -2,7 +2,7 @@ import createReducer from '../utils/createReducer';
 import {
   PACKAGES_REQUEST,
   PACKAGES_SUCCESS,
-  PACKAGES_FAILURE,
+  PACKAGES_FAILURE
 } from '../actions/PackagesActions';
 import { merge } from 'timm';
 

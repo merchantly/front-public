@@ -26,7 +26,7 @@ ProductCardSimilarProducts.propTypes = {
 
 ProductCardSimilarProducts.defaultProps = {
   products: [],
-  showCartButton: false
+  showCartButton: false,
 };
 
 export default ProductCardSimilarProducts;

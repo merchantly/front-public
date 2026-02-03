@@ -2,27 +2,27 @@ const numeralFormats = {
   "ru": {
     delimiters: {
       thousands: ' ',
-        decimal: ','
-    }
+        decimal: ',',
+    },
   },
   'en': {
     delimiters: {
       thousands: ',',
-      decimal: '.'
-    }
+      decimal: '.',
+    },
   },
   'ar_SA': {
     delimiters: {
       thousands: ',',
-      decimal: '.'
-    }
+      decimal: '.',
+    },
   },
   'ar_EGP': {
     delimiters: {
       thousands: ',',
-      decimal: '.'
-    }
-  }
-}
+      decimal: '.',
+    },
+  },
+};
 
 export default numeralFormats;

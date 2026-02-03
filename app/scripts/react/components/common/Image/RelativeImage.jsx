@@ -8,7 +8,7 @@ class RelativeImage extends Component {
   state = {
     height: null,
     width: null,
-  }
+  };
   componentDidMount() {
     this.setRelativeSize(this.props.maxHeight, this.props.maxWidth);
   }
@@ -79,7 +79,7 @@ class RelativeImageWrapper extends Component {
       <div>
         <RelativeImage {...this.props} />
       </div>
-    )
+    );
   }
 }
 

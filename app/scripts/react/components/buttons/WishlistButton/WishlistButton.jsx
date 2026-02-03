@@ -7,7 +7,7 @@ export default class WishlistButton extends Component {
     itemsCount: PropTypes.number,
     text: PropTypes.string,
     url: PropTypes.string.isRequired,
-  }
+  };
   render() {
     const { itemsCount, text, url } = this.props;
 

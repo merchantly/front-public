@@ -9,10 +9,10 @@ import {
   CART_INIT_CHECKOUT,
   CART_SET_FIELD_VALUE,
   CART_SELECT_DELIVERY,
-  CART_SELECT_PAYMENT,
+  CART_SELECT_PAYMENT
 } from 'r/actions/CartActions';
 import {
-  GOOD_ADD_SUCCESS,
+  GOOD_ADD_SUCCESS
 } from 'r/actions/GoodStateActions';
 import { merge, set, setIn, getIn } from 'timm';
 import { reduce } from 'lodash';

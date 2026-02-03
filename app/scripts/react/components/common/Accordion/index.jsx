@@ -11,10 +11,10 @@ export default class Accordion extends Component {
     selectedKey: PropTypes.string,
     onItemClick: PropTypes.func,
     updateEvent: PropTypes.string,
-  }
+  };
   defaultProps = {
     allowMultiple: false,
-  }
+  };
   constructor(props) {
     super(props);
 
@@ -99,8 +99,8 @@ export default class Accordion extends Component {
         expanded,
         key: idx,
         onClick: this.handleClick.bind(this, idx, el),
-        ref: `item-${ idx }`
-      })
+        ref: `item-${ idx }`,
+      });
     });
   }
   render() {

@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   addGood,
-  resetGoodState,
+  resetGoodState
 } from 'r/actions/GoodStateActions';
 import InputNumberSpinner from '../../common/InputNumberSpinner';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import { getIn } from 'timm';
-import { addCartTooltip } from 'r/actions/tooltipActions'
+import { addCartTooltip } from 'r/actions/tooltipActions';
 
 class ProductBlockCartFormButton extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1
-    }
+      amount: props.product.sellingByWeight ? parseFloat(props.product.weightOfPrice) : 1,
+    };
   }
   componentWillMount() {
     const {
@@ -79,7 +79,7 @@ class ProductBlockCartFormButton extends Component {
   onClickHandler(e) {
     this.addToBasket();
 
-    const tooltip = addCartTooltip($(e.target),this.props.t)
+    const tooltip = addCartTooltip($(e.target),this.props.t);
     tooltip.tooltip('show');
     setTimeout(() => {
       tooltip.tooltip('hide');

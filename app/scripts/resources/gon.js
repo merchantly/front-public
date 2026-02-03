@@ -13,7 +13,7 @@ global.gon = {
       'vendor': {
         'payment_discount': {
           'percent': '%{title} (Discount -%{discount}%)',
-          'fixed': '%{title} (Discount -%{discount})'
+          'fixed': '%{title} (Discount -%{discount})',
         },
         'not_published': 'Магазин временно не работает',
         'made_in_kiiiosk': 'Сделано на «%{brand_name_e}»',
@@ -294,7 +294,7 @@ global.gon = {
           'already': 'Уже в корзине',
           'auth_for_buy': 'Войдите, чтобы купить',
           'publish_shop': {
-            'text': 'Опубликовать'
+            'text': 'Опубликовать',
           },
           'disable_with': {
             'sending': 'Отправляем...',
@@ -335,7 +335,7 @@ global.gon = {
             'companyName': 'Наименование компании',
             'inn': 'ИНН',
             'kpp': 'КПП',
-            'ogrn': 'ОГРН'
+            'ogrn': 'ОГРН',
           },
           'titles': {
             'phone': 'Номер телефона',
@@ -361,7 +361,7 @@ global.gon = {
             'companyName': 'Наименование компании',
             'inn': 'ИНН',
             'kpp': 'КПП',
-            'ogrn': 'ОГРН'
+            'ogrn': 'ОГРН',
           },
           'pin_alert': {
             'send': 'Получить пароль',
@@ -395,8 +395,8 @@ global.gon = {
             'title': 'Выбор доставки и платежной системы',
           },
           'company_form': {
-            'title': 'Реквизиты компании'
-          }
+            'title': 'Реквизиты компании',
+          },
         },
         'money': {
           'unknown_iso_code': 'Неизвестный тип валюты %{isoCode}',
@@ -454,8 +454,8 @@ global.gon = {
           "select_other_file": "Выбрать другой файл...",
           "saving": "Сохраняем...",
           "save": "Сохранить",
-          "no_changes": "Изменений нет"
-        }
+          "no_changes": "Изменений нет",
+        },
       },
     },
   },
