@@ -59,11 +59,13 @@ exports.default = [
       {
         loader: 'sass-loader',
         options: {
-          includePaths: [
-            path.resolve(__dirname, '../app/stylesheets'),
-            path.resolve(__dirname, '../node_modules/@bower_components'),
-            path.resolve(__dirname, '../node_modules'),
-          ]
+          sassOptions: {
+            includePaths: [
+              path.resolve(__dirname, '../app/stylesheets'),
+              path.resolve(__dirname, '../node_modules/@bower_components'),
+              path.resolve(__dirname, '../node_modules'),
+            ]
+          }
         }
       },
     ],
