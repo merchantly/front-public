@@ -20,7 +20,7 @@ class Checkout extends Component {
 
     const {
       errorMessage,
-      fields
+      fields,
     } = props;
 
     this.state = { errorMessage: errorMessage, fields: fields, isProcessing: false, isRedirecting: false };
@@ -32,7 +32,7 @@ class Checkout extends Component {
   componentWillReceiveProps(nextProps) {
     const {
       errorMessage,
-      fields
+      fields,
     } = nextProps;
 
     this.setState({ errorMessage: errorMessage, fields: fields });
@@ -59,8 +59,8 @@ class Checkout extends Component {
       const order = await response.json();
 
       if (order.id) {
-        geideaPaymentWidget(order)
-        this.setState({ isProcessing: false, isRedirecting: false })
+        geideaPaymentWidget(order);
+        this.setState({ isProcessing: false, isRedirecting: false });
       } else {
         const { deliveryType } = this.props;
 
@@ -69,11 +69,11 @@ class Checkout extends Component {
           (t) => t.id === deliveryType.id
         ) || head(order.deliveryTypes);
 
-        this.setState({ fields: updatedDeliveryType.fields, isProcessing: false, isRedirecting: false })
+        this.setState({ fields: updatedDeliveryType.fields, isProcessing: false, isRedirecting: false });
       }
     } else {
       const errorText = await response.text();
-      alert('Order fetch error:' + errorText)
+      alert('Order fetch error:' + errorText);
     }
   }
 
@@ -92,7 +92,7 @@ class Checkout extends Component {
       $(window).trigger('m.checkout', {
         items: this.props.items,
         totalCount: this.props.totalCount,
-        totalPrice: this.props.totalPrice
+        totalPrice: this.props.totalPrice,
       });
     } catch (e) {
       console.log('trigger: ', e.message);
@@ -121,15 +121,15 @@ class Checkout extends Component {
       totalPrice,
       t,
       cart,
-      items
+      items,
     } = this.props;
 
     const {
       errorMessage,
       fields,
       isProcessing,
-      isRedirecting
-    } = this.state
+      isRedirecting,
+    } = this.state;
 
     return (
       <form
@@ -224,7 +224,7 @@ Checkout.propTypes = {
   totalCount: PropTypes.number,
   totalPrice: PropTypes.object.isRequired,
   items: PropTypes.array,
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 Checkout.defaultProps = {
   formAuthenticity: {},

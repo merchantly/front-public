@@ -8,7 +8,7 @@ export default class DesignSettingsOption extends Component {
     children: PropTypes.any.isRequired,
     inRow: PropTypes.bool,
     title: PropTypes.string,
-  }
+  };
   render() {
     const { children, className, inRow, title } = this.props;
     const optionClasses = classNames(className, {

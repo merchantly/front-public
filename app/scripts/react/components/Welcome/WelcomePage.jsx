@@ -76,7 +76,7 @@ WelcomePage.propTypes = {
 
 WelcomePage.defaultProps = {
   rtl: false,
-  historyProducts: []
+  historyProducts: [],
 };
 
 export default WelcomePage;

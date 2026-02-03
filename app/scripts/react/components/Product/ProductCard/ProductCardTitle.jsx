@@ -7,7 +7,7 @@ export default class ProductCardTitle extends Component {
   static propTypes = {
     className: PropTypes.string,
     product: PropTypes.object.isRequired,
-  }
+  };
   render() {
     const { className, product } = this.props;
 

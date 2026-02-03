@@ -22,6 +22,7 @@ class WishlistItem extends Component {
           <Image
             className="b-cart__item_img"
             image={item.good.image}
+            loading="lazy"
             maxHeight={143}
             maxWidth={143}
           />

@@ -13,8 +13,8 @@ class CatalogFilterRange extends Component {
 
   state = {
     from: this.props.valueFrom || this.props.from,
-    to: this.props.valueTo || this.props.to
-  }
+    to: this.props.valueTo || this.props.to,
+  };
   handleSlide([from, to]) {
     this.setState({
       from: parseInt(from),

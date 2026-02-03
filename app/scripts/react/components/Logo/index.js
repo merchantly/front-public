@@ -6,8 +6,8 @@ class Logo extends Component {
     linkUrl: PropTypes.string.isRequired,
     logoText: PropTypes.string.isRequired,
     logoUrl: PropTypes.string,
-    imageAlt: PropTypes.string
-  }
+    imageAlt: PropTypes.string,
+  };
 
   render() {
     const { linkUrl, logoUrl, logoText, imageAlt } = this.props;

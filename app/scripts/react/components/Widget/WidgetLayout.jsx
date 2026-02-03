@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MenuTop from 'rc/MenuTop';
 import Userbar, {
-  externalPropTypes as userbarPropTypes,
+  externalPropTypes as userbarPropTypes
 } from 'rc/Userbar';
 import { Clientbar } from 'rc/Clientbar';
 import provideTranslations from 'rc/HoC/provideTranslations';

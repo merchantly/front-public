@@ -5,10 +5,10 @@ import {
   openDesignSettingsPopup, isDesignOpened
 } from 'r/actions/popupActions';
 import {
-  fetchClientState,
+  fetchClientState
 } from 'r/actions/ClientStateActions';
 import {
-  fetchOperatorState,
+  fetchOperatorState
 } from 'r/actions/OperatorStateActions';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import Userbar from './Userbar';
@@ -108,7 +108,7 @@ export default provideTranslations(connectToRedux(connect(
       wishlistItemsCount,
     } = state.clientState.data;
     const {
-      popups
+      popups,
     } = state.popup;
     
     const isDesignSettingOpen = isDesignOpened(popups);    

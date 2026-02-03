@@ -6,7 +6,7 @@ export default class CabinetButton extends Component {
   static propTypes = {
     text: PropTypes.string,
     url: PropTypes.string.isRequired,
-  }
+  };
   render() {
     return (
       <Bubble

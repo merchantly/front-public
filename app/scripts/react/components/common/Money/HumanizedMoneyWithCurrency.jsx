@@ -22,7 +22,7 @@ class HumanizedMoneyWithCurrency extends Component {
 
     return isSymbolFirst(money)
       ? <span>{symbol} <HumanizedMoney money={money} /></span>
-      : <span><HumanizedMoney money={money} /> {symbol}</span>
+      : <span><HumanizedMoney money={money} /> {symbol}</span>;
   }
 }
 
@@ -32,7 +32,7 @@ HumanizedMoneyWithCurrency.propTypes = {
 };
 
 HumanizedMoneyWithCurrency.defaultProps = {
-  noMoneyTitle: '-'
+  noMoneyTitle: '-',
 };
 
 

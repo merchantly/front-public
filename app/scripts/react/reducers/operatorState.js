@@ -2,7 +2,7 @@ import createReducer from 'r/utils/createReducer';
 import {
   OPERATOR_STATE_REQUEST,
   OPERATOR_STATE_SUCCESS,
-  OPERATOR_STATE_FAILURE,
+  OPERATOR_STATE_FAILURE
 } from 'r/actions/OperatorStateActions';
 
 const initialState = {

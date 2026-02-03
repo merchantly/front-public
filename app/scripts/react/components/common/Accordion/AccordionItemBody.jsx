@@ -11,13 +11,13 @@ export default class AccordionItemBody extends Component {
     ]),
     overflow: PropTypes.string,
     uuid: PropTypes.string,
-  }
+  };
   render() {
     const { bodyClassName, children, maxHeight, overflow, uuid } = this.props;
     const style = {
       maxHeight,
       overflow,
-      transition: 'max-height .3s ease'
+      transition: 'max-height .3s ease',
     };
 
     return (

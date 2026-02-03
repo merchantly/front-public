@@ -36,7 +36,7 @@ export function getOptions(properties, goods, filters) {
 
     return {
       ...prev,
-      [property.id]: getOptionsForProperty(property, goods, propertyFilters)
+      [property.id]: getOptionsForProperty(property, goods, propertyFilters),
     };
   }, {});
 }
@@ -60,7 +60,7 @@ export function getUpdatedValues(property, properties, goods, filters, data) {
   const newValues = {
     ...getFiltersForProperty(property, properties, filters),
     ...data,
-  }
+  };
 
   for (let i = 0; i < properties.length; i++) {
     const prop = properties[i];
@@ -119,7 +119,7 @@ function getOptionsForProperty(property, goods, filters) {
 
   return property.items.map((item) => ({
     ...item,
-    disabled: (item.disabled || (enabledValues.indexOf(item.value) === -1))
+    disabled: (item.disabled || (enabledValues.indexOf(item.value) === -1)),
   }));
 }
 

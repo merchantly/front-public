@@ -11,10 +11,10 @@ import {
   changeFieldValue,
   initCheckout,
   selectDelivery,
-  selectPayment,
+  selectPayment
 } from '../../actions/CartActions';
 import {
-  canUseDOM,
+  canUseDOM
 } from '../../helpers/dom';
 import { find, head, includes } from 'lodash';
 import { updateIn, getIn } from 'timm';
@@ -74,7 +74,7 @@ class OrderContainer extends Component {
       totalPrice,
       items,
       totalVat,
-      totalWithoutVat
+      totalWithoutVat,
     } = this.props;
 
 
@@ -134,12 +134,12 @@ OrderContainer.propTypes = {
   }),
   items: PropTypes.array,
   totalCount: PropTypes.number.isRequired,
-  totalPrice: PropTypes.object.isRequired
+  totalPrice: PropTypes.object.isRequired,
 };
 
 OrderContainer.defaultProps = {
   deliveryTypes: [],
-  paymentTypes: []
+  paymentTypes: [],
 };
 
 export default provideTranslations(connectToRedux(connect(
@@ -187,19 +187,19 @@ export default provideTranslations(connectToRedux(connect(
           return cents;
         }
 
-        const paymentDiscounts = getIn(selectedPaymentType, ['paymentDiscounts'])
+        const paymentDiscounts = getIn(selectedPaymentType, ['paymentDiscounts']);
 
         if (paymentDiscounts && paymentDiscounts.length) {
           const paymentDiscount = find(
             paymentDiscounts,
             (pd) => pd.deliveryId === selectedDeliveryTypeId
-          )
+          );
 
           if (paymentDiscount) {
             if(paymentDiscount.type == 'percent') {
-              cents = cents - (cents * paymentDiscount.discount / 100)
+              cents = cents - (cents * paymentDiscount.discount / 100);
             } else {
-              cents = cents - (paymentDiscount.discount * 100)
+              cents = cents - (paymentDiscount.discount * 100);
             }
           }
         }
@@ -222,7 +222,7 @@ export default provideTranslations(connectToRedux(connect(
       totalPrice,
       items,
       totalVat,
-      totalWithoutVat
+      totalWithoutVat,
     };
   },
   {

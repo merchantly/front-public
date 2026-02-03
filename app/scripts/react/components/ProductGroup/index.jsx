@@ -16,7 +16,7 @@ ProductGroupContainer.propTypes = {
   i18n: PropTypes.object,
   products: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape(
-      ...ProductBlock.wrapped.propTypes,
+      ...ProductBlock.wrapped.propTypes
     )).isRequired,
   }).isRequired,
   showCartButton: PropTypes.bool.isRequired,

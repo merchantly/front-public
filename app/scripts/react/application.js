@@ -2,16 +2,30 @@ import {
   applyMiddleware,
   createStore,
   combineReducers,
-  compose,
+  compose
 } from 'redux';
 import * as reducers from './reducers';
 import apiMiddleware from './middleware/api';
 import thunkMiddleware from 'redux-thunk';
 
+/**
+ * Получить gon объект SSR-safe способом
+ */
+function getGon() {
+  if (typeof window !== 'undefined' && window.gon) {
+    return window.gon;
+  }
+  if (typeof global !== 'undefined' && global.gon) {
+    return global.gon;
+  }
+  return null;
+}
+
 // Bootstraping serverside data
 let data = {};
-if (global.gon.__data) {
-  const { design } = global.gon.__data;
+const gon = getGon();
+if (gon && gon.__data) {
+  const { design } = gon.__data;
 
   data = {
     design: {
@@ -32,7 +46,7 @@ global.Kiosk = {
 global.redux = (compose(
   applyMiddleware(
     thunkMiddleware,
-    apiMiddleware,
+    apiMiddleware
   ),
   global.devToolsExtension ? global.devToolsExtension() : (f) => f
 )(createStore))(combineReducers(reducers), data);

@@ -16,11 +16,11 @@ export function resetGoodState(goodId) {
 }
 
 const param_key = function(globalId, key) {
-  return "cart_items[" + globalId + "][" + key + "]"
-}
+  return "cart_items[" + globalId + "][" + key + "]";
+};
 
 export function addGoods(productGlobalId, items, count=1, weight=null) {
-  const data = {}
+  const data = {};
   each(items, (item) => {
     data[param_key(item.good.globalId, 'count')] = item.count;
     data[param_key(item.good.globalId, 'weight')] = item.weight;
@@ -38,7 +38,7 @@ export function addGoods(productGlobalId, items, count=1, weight=null) {
       data: {
         dataType: 'json',
         method: 'post',
-        data: data
+        data: data,
       },
     },
     goodId: productGlobalId,

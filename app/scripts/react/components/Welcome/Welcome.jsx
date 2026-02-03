@@ -106,7 +106,7 @@ Welcome.propTypes = {
 };
 
 Welcome.defaultProps = {
-  rtl: false
+  rtl: false,
 };
 
 export default Welcome;

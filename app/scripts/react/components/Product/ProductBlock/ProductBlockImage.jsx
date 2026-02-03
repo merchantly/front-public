@@ -10,7 +10,7 @@ class ProductBlockImage extends Component {
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
 
     this.state = {
-      showSecond: false
+      showSecond: false,
     };
   }
   getCurrentImage() {
@@ -20,7 +20,7 @@ class ProductBlockImage extends Component {
       secondImage,
     } = this.props.product;
     const {
-      showSecond
+      showSecond,
     } = this.state;
 
     if (!secondImage) {
@@ -61,6 +61,7 @@ class ProductBlockImage extends Component {
         <RelativeImage
           className="b-item__pic"
           image={this.getCurrentImage()}
+          loading="lazy"
           maxWidth={maxWidth}
           title={title}
         />
@@ -70,6 +71,7 @@ class ProductBlockImage extends Component {
               <RelativeImage
                 className="b-item__pic"
                 image={secondImage}
+                loading="lazy"
                 maxWidth={maxWidth}
                 title={title}
               />
@@ -90,7 +92,7 @@ ProductBlockImage.propTypes = {
 
 ProductBlockImage.defaultProps = {
   maxWidth: 458,
-  containerIsHover: false
+  containerIsHover: false,
 };
 
 export default ProductBlockImage;

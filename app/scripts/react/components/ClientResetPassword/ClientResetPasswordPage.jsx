@@ -40,8 +40,8 @@ ClientResetPasswordPage.propTypes = {
 ClientResetPasswordPage.defaultProps = {
   password: {
     value: '',
-    errorMessage: ''
-  }
+    errorMessage: '',
+  },
 };
 
 export default ClientResetPasswordPage;

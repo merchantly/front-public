@@ -4,7 +4,7 @@ import layoutProps from 'test/fixtures/widget/widget-layout.json';
 import connectToRedux from 'rc/HoC/connectToRedux';
 import { connect } from 'react-redux';
 import {
-  initLayout,
+  initLayout
 } from 'r/actions/LayoutActions';
 import 'scripts/resources/gon';
 

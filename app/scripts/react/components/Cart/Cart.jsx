@@ -65,16 +65,16 @@ class Cart extends Component {
     const buffer = mapKeys(
       flatten(Object.values(omit(cartErrors, 'minimalPrice'))),
       (_, k) => `${k}-${suffix}`
-    )
+    );
 
     const errors = transform(
       buffer,
       (ag, value, key) => {
-        ag.push(this.renderError(value, key))
-        return true
+        ag.push(this.renderError(value, key));
+        return true;
       },
       []
-    )
+    );
     return (
       <span className="help-block">
         {isBelowMinimalPrice && this.renderError(t('vendor.errors.cart.minimal_price', {
@@ -112,7 +112,7 @@ class Cart extends Component {
       totalWithoutAmount,
       showCouponCode,
       deliveryRestrictionMessages,
-      recommendedProducts
+      recommendedProducts,
     } = this.props;
     const hasErrors = isBelowMinimalPrice ||
       size(omit(cartErrors, 'minimalPrice')) > 0;

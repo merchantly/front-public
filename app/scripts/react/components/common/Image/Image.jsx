@@ -56,6 +56,7 @@ class Image extends Component {
       hasFixedSize,
       hasRawUrl,
       image,
+      loading,
       maxHeight,
       maxWidth,
       title,
@@ -66,6 +67,7 @@ class Image extends Component {
       <img
         alt={title}
         className={className}
+        loading={loading}
         src={hasRawUrl ? image.url : imageArguments(getUrl)}
         srcSet={hasRawUrl ? void 0 : imageArguments(getRetinaUrl)}
         style={hasFixedSize ? imageArguments(getSize) : void 0}
@@ -81,6 +83,7 @@ Image.propTypes = {
   hasFixedSize: PropTypes.bool,
   hasRawUrl: PropTypes.bool,
   image: schemas.image,
+  loading: PropTypes.oneOf(['lazy', 'eager']),
   maxHeight: PropTypes.number,
   maxWidth: PropTypes.number,
   title: PropTypes.string,
@@ -88,6 +91,7 @@ Image.propTypes = {
 Image.defaultProps = {
   hasFixedSize: false,
   hasRawUrl: false,
+  loading: void 0,
   maxHeight: null,
   maxWidth: null,
   title: '',

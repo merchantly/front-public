@@ -14,7 +14,7 @@ class ProductGoods extends Component {
     onGoodChange: PropTypes.func,
     product: PropTypes.object.isRequired,
     t: PropTypes.func.isRequired,
-  }
+  };
   componentDidMount() {
     const { product, onGoodChange } = this.props;
 

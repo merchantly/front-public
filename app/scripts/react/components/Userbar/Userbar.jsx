@@ -14,12 +14,21 @@ class Userbar extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { launchFromIFrame: false }
+    this.state = { launchFromIFrame: false };
   }
 
   componentWillMount() {
-    const launchFromIFrame = (typeof window !== 'undefined') && window != window.top && window.top.KioskOperatorApp;
-    this.setState( { launchFromIFrame: launchFromIFrame } );
+    // SSR-safe и cross-origin iframe safe проверка
+    const launchFromIFrame = (() => {
+      if (typeof window === 'undefined') return false;
+      try {
+        return window !== window.top && window.top && window.top.KioskOperatorApp;
+      } catch (e) {
+        // cross-origin iframe - доступ к window.top запрещён
+        return false;
+      }
+    })();
+    this.setState({ launchFromIFrame: launchFromIFrame });
   }
 
   render() {
@@ -48,11 +57,11 @@ class Userbar extends Component {
       showW1Design,
     } = this.props;
 
-    const launchFromIFrame = this.state.launchFromIFrame
+    const launchFromIFrame = this.state.launchFromIFrame;
 
     const className = classNames({
       'Userbar': true,
-      'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0
+      'TwoBubbles': hasWishlist && wishlistUrl && wishlistItemsCount > 0,
     });
 
     return (

@@ -28,7 +28,7 @@ class OrderCreated extends Component {
       freeDelivery,
       freeDeliveryThreshold,
       deliveryType,
-      invoceUrl
+      invoceUrl,
     } = order;
     const message = t('vendor.order.created.desc_html', {
       phone,

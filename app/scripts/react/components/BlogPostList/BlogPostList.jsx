@@ -12,7 +12,7 @@ class BlogPostList extends Component {
         pagination,
       },
       recommendedProducts,
-      t
+      t,
     } = this.props;
 
     return (
@@ -43,6 +43,6 @@ BlogPostList.propTypes = {
 
 BlogPostList.defaultProps = {
   recommendedProducts: { showCartButton: false, products: [] },
-}
+};
 
 export default BlogPostList;

@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unused-prop-types */
+ 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as schemas from 'r/schemas';
@@ -34,7 +34,7 @@ CatalogFilterContainer.defaultProps = {
   params: {},
   selectedOptions: [],
   filterApplyType: 'btn',
-  showFilterClearButton: false
+  showFilterClearButton: false,
 };
 
 export default CatalogFilterContainer;

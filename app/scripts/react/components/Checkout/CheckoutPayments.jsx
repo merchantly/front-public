@@ -72,7 +72,7 @@ class CheckoutPayments extends Component {
     const {
       items,
       orderCreditAvailable,
-      t
+      t,
     } = this.props;
 
     return (
@@ -106,7 +106,7 @@ CheckoutPayments.propTypes = {
   onChange: PropTypes.func.isRequired,
   deliveryType: PropTypes.object.isRequired,
   orderCreditAvailable: PropTypes.bool,
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 
 CheckoutPayments.defaultProps = {

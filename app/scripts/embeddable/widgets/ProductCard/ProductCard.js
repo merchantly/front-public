@@ -5,5 +5,5 @@ import './index.scss';
 mrch && mrch.registerWidget('ProductCard', {
   render(props, node) {
     render(createElement(ProductCardContainer, props), node);
-  }
+  },
 });

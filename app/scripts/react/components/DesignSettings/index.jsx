@@ -29,7 +29,7 @@ export default class DesignSettings extends Component {
     unsavedFields: PropTypes.object.isRequired,
     tr: PropTypes.func.isRequired,
     showW1Design: PropTypes.bool.isRequired,
-  }
+  };
   getProps(property) {
     const { current, changeOption, tr} = this.props;
     return {

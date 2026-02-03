@@ -16,9 +16,9 @@ export function showFilteredCount(filter, t) {
         </span>),
         300000,
         () => {
-          window.location.href = `\?${filter}`
+          window.location.href = `?${filter}`;
         }
-      )
+      );
     })
     .fail(NoticeService.errorResponse);
 }

@@ -82,7 +82,7 @@ class MenuTopDeskTopWithChildren extends Component {
   }
   render() {
     const {
-      position
+      position,
     } = this.state;
     const {
       checkIfActive,

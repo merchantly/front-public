@@ -7,7 +7,7 @@ export default class Select extends Component {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     options: PropTypes.array.isRequired,
     onChange: PropTypes.func,
-  }
+  };
   hasOptionWithValue(value) {
     return this.props.options.some((o) => o.value === value);
   }
@@ -33,14 +33,14 @@ export default class Select extends Component {
         {
           options.map((option) => {
             if (!option.disabled) {
-              delete option['disabled']
+              delete option['disabled'];
             }
 
             return (
               <option {...option} key={option.value}>
                 {option.title}
               </option>
-            )
+            );
           })
         }
       </select>

@@ -78,7 +78,7 @@ ProductSearch.propTypes = {
 };
 
 ProductSearch.defaultProps = {
-  isFilterOpenByDefault: false
+  isFilterOpenByDefault: false,
 };
 
 export default ProductSearch;

@@ -6,8 +6,9 @@ import AssetImage from 'r/components/common/AssetImage';
 import InputNumberSpinner from 'r/components/common/InputNumberSpinner';
 import { partial } from 'lodash';
 import {
-  SortableHandle,
+  SortableHandle
 } from 'react-sortable-hoc';
+import { withConfig } from 'r/contexts/ConfigContext';
 
 const DragHandle = SortableHandle(({good, properties}) =>
   <div className="b-item-full__multiple-choice__form__row__items">
@@ -15,8 +16,11 @@ const DragHandle = SortableHandle(({good, properties}) =>
   </div>
 );
 
-export default class MultipleChoiceFormItem extends Component {
+class MultipleChoiceFormItem extends Component {
   static propTypes = {
+    config: PropTypes.shape({
+      maxItemsCount: PropTypes.number,
+    }).isRequired,
     good: PropTypes.object.isRequired,
     count: PropTypes.number.isRequired,
     onRemove: PropTypes.func.isRequired,
@@ -27,15 +31,15 @@ export default class MultipleChoiceFormItem extends Component {
   onChangeAmount = (count) => {
     const { good } = this.props;
     this.props.onChangeAmount(good, count);
-  }
+  };
 
   onRemove = () => {
     const { good } = this.props;
     this.props.onRemove(good);
-  }
+  };
 
   render() {
-    const { properties, good, count } = this.props;
+    const { properties, good, count, config } = this.props;
 
     return (
         <div className="b-item-full__multiple-choice__form__row no-select__for-childs">
@@ -44,7 +48,7 @@ export default class MultipleChoiceFormItem extends Component {
             <InputNumberSpinner
               name={`cart_items[${good.globalId}][count]`}
               min={1}
-              max={gon.max_items_count}
+              max={config.maxItemsCount}
               onChange={this.onChangeAmount}
               step={1}
               value={count}
@@ -57,3 +61,5 @@ export default class MultipleChoiceFormItem extends Component {
     );
   }
 }
+
+export default withConfig(MultipleChoiceFormItem);
