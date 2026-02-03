@@ -1,8 +1,8 @@
 import {
-  cartsShow,
+  cartsShow
 } from '../../routes/api';
 import {
-  CALL_API,
+  CALL_API
 } from '../middleware/api';
 
 export const CART_REQUEST = 'CART_REQUEST';
@@ -90,7 +90,7 @@ export function initCheckout(params) {
       formValues,
       cart,
       coupon,
-      fields
+      fields,
     },
   };
 }

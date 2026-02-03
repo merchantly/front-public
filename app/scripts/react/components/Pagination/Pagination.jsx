@@ -18,11 +18,11 @@ class Pagination extends Component {
       : this.props.currentHref;
 
     if (href) {
-      const url = new YouAreI(href)
-      url.query_push({page: page})
-      return url.to_string()
+      const url = new YouAreI(href);
+      url.query_push({page: page});
+      return url.to_string();
     } else {
-      return '/?page=' + page.toString()
+      return '/?page=' + page.toString();
     }
   }
   render() {
@@ -31,7 +31,7 @@ class Pagination extends Component {
       totalPages,
     } = this.props;
 
-    const showArrows = (totalPages >= WINDOW_SIZE)
+    const showArrows = (totalPages >= WINDOW_SIZE);
 
     if ((totalPages == 1) || (currentPage > totalPages)) {
       return null;

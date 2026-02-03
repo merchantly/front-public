@@ -16,8 +16,8 @@
 // =====================================================================
 
 // Bootstrap variables/mixins
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
 // =====================================================================
 // Global: Variables/Mixins and etc.
@@ -34,17 +34,17 @@
 // =====================================================================
 
 // Bootstrap components
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/tooltip";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
-@import "~bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/labels";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/badges";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
 
 // jQuery.mmenu
-@import "~jQuery.mmenu/src/scss/jquery.mmenu.all";
+@import "~jquery.mmenu/src/scss/jquery.mmenu.all";
 
 // OwlCarousel
 @import "~OwlCarousel/owl-carousel/scss/carousel";

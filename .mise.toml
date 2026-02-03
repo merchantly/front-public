@@ -1,0 +1,8 @@
+[tools]
+node = "20"    # LTS, стабильная версия для legacy проекта
+bun = "latest" # Для SSR сервера (issue #265)
+yarn = "1"     # Classic yarn
+
+[env]
+# Для совместимости с OpenSSL в старых webpack версиях
+NODE_OPTIONS = "--openssl-legacy-provider"

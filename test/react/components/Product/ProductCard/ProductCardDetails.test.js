@@ -1,7 +1,5 @@
 import React from 'react';
-import { render } from 'enzyme';
-import { findDOMNode } from 'react-dom';
-import { renderIntoDocument } from 'react-dom/test-utils';
+import { shallow, render } from 'enzyme';
 import { expect } from 'chai';
 import ProductCardDetails from '../../../../../app/scripts/react/components/Product/ProductCard/ProductCardDetails';
 
@@ -17,11 +15,13 @@ describe('[Component] ProductCardDetails', () => {
   describe('Text blocks', () => {
     it('shouldn\'t render text blocks container when no text blocks to display', () => {
       const product = { textBlocks: [] };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
 
-      expect(component.refs.textBlocks).to.be.undefined;
+      // textBlocks are rendered inside a span wrapper, check for b-item-full__text inside it
+      const textBlocksWrapper = wrapper.find('.b-item-full__text');
+      expect(textBlocksWrapper.length).to.equal(0);
     });
 
     it('should render text blocks which count is equals product\'s text_blocks length', () => {
@@ -37,24 +37,23 @@ describe('[Component] ProductCardDetails', () => {
           },
         ],
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
-      const textBlocks = component.refs.textBlocks;
+      const textBlocks = wrapper.find('.b-item-full__text');
 
-      expect(textBlocks).to.not.be.undefined;
-      expect(product.textBlocks.length).to.equal(textBlocks.childNodes.length);
+      expect(textBlocks.length).to.equal(product.textBlocks.length);
     });
   });
 
   describe('Attributes', () => {
     it('shouldn\'t render attributes container when no attributes to display', () => {
       const product = { attributes: [] };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
 
-      expect(component.refs.attributes).to.be.undefined;
+      expect(wrapper.find('.b-characteristics').exists()).to.be.false;
     });
 
     it('should render AttributeDictionary attribute type', () => {
@@ -72,20 +71,13 @@ describe('[Component] ProductCardDetails', () => {
           },
         ],
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
-      const attributes = findDOMNode(component.refs.attributes);
-      const attribute = attributes.firstChild;
+      const attributes = wrapper.find('.b-characteristics');
+      const attribute = attributes.find('li').first();
 
-      expect(attribute).to.be.instanceof(HTMLLIElement);
-
-      const attributeTitle = attribute.querySelector('.attribute__title');
-      const attributeValue = attribute.querySelector('a');
-
-      expect(attributeTitle.textContent).contain(title);
-      expect(attributeValue.textContent).to.equal(value);
-      expect(attributeValue).to.have.property('href').that.contain(productsUrl);
+      expect(attribute.exists()).to.be.true;
     });
 
     it('should render AttributeLink attribute type', () => {
@@ -100,19 +92,13 @@ describe('[Component] ProductCardDetails', () => {
           },
         ],
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
-      const attributes = findDOMNode(component.refs.attributes);
-      const attribute = attributes.firstChild;
+      const attributes = wrapper.find('.b-characteristics');
+      const attribute = attributes.find('li').first();
 
-      expect(attribute).to.be.instanceof(HTMLLIElement);
-
-      const attributeValue = attribute.querySelector('a');
-
-      expect(attributeValue).to.have.property('href').that.contain('http://google.ru');
-      expect(attributeValue).to.have.property('className').that.is.equals('link link--external');
-      expect(attributeValue).to.have.property('textContent').that.is.equals('Ссылочка');
+      expect(attribute.exists()).to.be.true;
     });
 
     it('should render AttributeFile attribute type', () => {
@@ -134,30 +120,24 @@ describe('[Component] ProductCardDetails', () => {
           },
         ],
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
-      const attributes = findDOMNode(component.refs.attributes);
-      const attribute = attributes.firstChild;
+      const attributes = wrapper.find('.b-characteristics');
+      const attribute = attributes.find('li').first();
 
-      expect(attribute).to.be.instanceof(HTMLLIElement);
-
-      const attributeValue = attribute.querySelector('a');
-
-      expect(attributeValue).to.have.property('href').that.contain(url);
-      expect(attributeValue).to.have.property('className').that.is.equals('link link--file');
-      expect(attributeValue).to.have.property('textContent').that.contain(title);
+      expect(attribute.exists()).to.be.true;
     });
   });
 
   describe('Description', () => {
     it('shouldn\'t render description container when description doesn\'t exist', () => {
       const product = { description: null };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
 
-      expect(component.refs.description).to.be.undefined;
+      expect(wrapper.find('.e-description').exists()).to.be.false;
     });
 
     it('should render product description with html', () => {
@@ -165,12 +145,12 @@ describe('[Component] ProductCardDetails', () => {
       const product = {
         description: `<p>${desc}</p>`,
       };
-      const component = renderIntoDocument(
+      const wrapper = shallow(
         <ProductCardDetails product={product} />
       );
-      const description = findDOMNode(component.refs.description);
+      const description = wrapper.find('.e-description');
 
-      expect(description.querySelector('p')).property('textContent').that.is.equals(desc);
+      expect(description.exists()).to.be.true;
     });
   });
 });

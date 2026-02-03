@@ -9,7 +9,7 @@ import { money } from 'r/helpers/money';
 class ProductGoodPrice extends Component {
   static propTypes = {
     good: PropTypes.object.isRequired,
-  }
+  };
   renderWeightOfPrice(product, t){
     if (product.sellingByWeight && product.weightOfPrice){
       return (

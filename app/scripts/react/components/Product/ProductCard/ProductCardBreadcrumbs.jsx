@@ -7,11 +7,11 @@ export default class ProductCardBreadcrumbs extends Component {
   static propTypes = {
     className: PropTypes.string,
     product: PropTypes.object.isRequired,
-    withMetaTags: PropTypes.bool
-  }
+    withMetaTags: PropTypes.bool,
+  };
 
   renderMetaTags(product) {
-    const category = product.category
+    const category = product.category;
 
     return(
       <div itemScope itemType="https://schema.org/BreadcrumbList">
@@ -29,7 +29,7 @@ export default class ProductCardBreadcrumbs extends Component {
           <meta itemProp="position" content={category.parent ? 2 : 1} />
         </div>
       </div>
-    )
+    );
   }
 
   render() {

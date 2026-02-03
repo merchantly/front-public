@@ -15,7 +15,7 @@ class ItemListCatalog extends Component {
     // отрисовываются размеры изображение в галерее.
     // Они задаются больше и тогда изображения сдвигаются за контейнер.
     this.state = {
-      isOpen: true // По-умолчанию должен показываться
+      isOpen: true, // По-умолчанию должен показываться
     };
   }
 
@@ -74,7 +74,7 @@ ItemListCatalog.propTypes = {
 
 ItemListCatalog.defaultProps = {
   isOpenByDefault: true,
-  showCatalogFilter: false
+  showCatalogFilter: false,
 };
 
 export default ItemListCatalog;

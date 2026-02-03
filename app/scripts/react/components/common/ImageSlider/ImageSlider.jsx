@@ -34,7 +34,7 @@ class ImageSlider extends Component {
     options = {
       ...options,
       rtl: this.props.rtl,
-    }
+    };
 
     if (className) {
       if (className.match(/b-slider_promo/g)) {

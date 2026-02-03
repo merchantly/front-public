@@ -16,7 +16,7 @@ import {
 } from 'r/constants/paymentConstants';
 
 function OrderDeliveryStateLabel( { state, orderDeliveryState } ) {
-  let cssClass = 'label label-danger'
+  let cssClass = 'label label-danger';
 
   switch(state) {
     case DELIVERY_STATE_NEW: 
@@ -38,11 +38,11 @@ function OrderDeliveryStateLabel( { state, orderDeliveryState } ) {
       break;
   }
 
-  return <span className={cssClass} tooltip='true'>{orderDeliveryState}</span>
+  return <span className={cssClass} tooltip='true'>{orderDeliveryState}</span>;
 }
 
 function OrderPaymentStateLabel({ state, updatedAt, orderPaymentType, orderPaymentState }) {
-  let cssClass = 'label label-danger'
+  let cssClass = 'label label-danger';
 
   switch(state) {
     case PAYMENT_STATE_AWAIT: 
@@ -59,7 +59,7 @@ function OrderPaymentStateLabel({ state, updatedAt, orderPaymentType, orderPayme
       break;
   }
 
-  return <span className={cssClass} title={`$(orderPaymentType) $(updatedAt)`} tooltip='true'>{orderPaymentState}</span>
+  return <span className={cssClass} title={`$(orderPaymentType) $(updatedAt)`} tooltip='true'>{orderPaymentState}</span>;
 }
 
 export { OrderDeliveryStateLabel, OrderPaymentStateLabel };

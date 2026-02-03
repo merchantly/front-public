@@ -22,7 +22,10 @@ www
 /jsconfig.json
 /.jsbeautifyrc
 /.vscode
+/.claude
 /testPrerender.js
 /tmp/
 yarn-error.log
 stats.json
+/test-results/
+/playwright-report/

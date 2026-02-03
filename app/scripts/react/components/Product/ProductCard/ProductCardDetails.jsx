@@ -20,14 +20,14 @@ export default class ProductCardDetails extends Component {
     moreContent: {
       show: false,
       default: 300,
-    }
+    },
   };
 
   componentDidMount() {
     const {
       t,
       moreContent,
-    } = this.props
+    } = this.props;
 
     if (moreContent.show) {
       $('.e-description').moreContent(
@@ -35,7 +35,7 @@ export default class ProductCardDetails extends Component {
           height: moreContent.height, 
           textOpen: t('vendor.product.more_content.close'), // тут не перепутано
           textClose: t('vendor.product.more_content.open'), // именно так
-          shadow: true
+          shadow: true,
         }
       );
     }

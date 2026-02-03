@@ -35,7 +35,7 @@ class ScrollToTop extends Component {
     const $container = this.getContainer();
 
     this.setState({
-      isVisible: $container.scrollTop() > offset
+      isVisible: $container.scrollTop() > offset,
     });
   }
   handleClick() {

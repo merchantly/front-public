@@ -8,8 +8,8 @@ export default class ProductGoodPrices extends Component {
   static propTypes = {
     minPrice: PropTypes.object.isRequired,
     maxPrice: PropTypes.object.isRequired,
-    availability: PropTypes.bool
-  }
+    availability: PropTypes.bool,
+  };
   render() {
     const { minPrice, maxPrice, availability } = this.props;
 

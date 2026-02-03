@@ -10,7 +10,7 @@ class InstagramContainer extends Component {
     entries: [],
     hashtag: null,
     profileUrl: null,
-  }
+  };
   componentDidMount() {
     const { entriesLimit, isVisible } = this.props;
 
@@ -36,7 +36,7 @@ class InstagramContainer extends Component {
   }
   render() {
     const { currentState } = this.state;
-    const { isVisible } = this.props
+    const { isVisible } = this.props;
 
     if (isVisible) {
       return (
@@ -54,11 +54,11 @@ class InstagramContainer extends Component {
 
 InstagramContainer.propTypes = {
   entriesLimit: PropTypes.number,
-  isVisible: PropTypes.bool
+  isVisible: PropTypes.bool,
 };
 InstagramContainer.defaultProps = {
   entriesLimit: 10,
-  isVisible: false
+  isVisible: false,
 };
 
 export default InstagramContainer;

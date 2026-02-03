@@ -60,7 +60,7 @@ class MenuTopMobile extends Component {
     } = item;
 
     const {
-      t
+      t,
     } = this.props;
 
     return (

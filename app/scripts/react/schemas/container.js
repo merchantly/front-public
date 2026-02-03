@@ -7,4 +7,4 @@ export default PropTypes.shape({
     }),
     description: PropTypes.string,
     bottomText: PropTypes.string,
-  }) 
+  }); 

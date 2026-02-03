@@ -7,7 +7,7 @@ import {
   OrderPaymentIcon,
   OrderDeliveryIcon,
   OrderReserveStateIcon,
-  OrderPaymentStateIcon,
+  OrderPaymentStateIcon
 } from '../common/Order/OrderIcons';
 
 class CabinetOrder extends Component {

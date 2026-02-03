@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export default class DesignSettingsCloseButton extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
-  }
+  };
   render() {
     return (
       <button

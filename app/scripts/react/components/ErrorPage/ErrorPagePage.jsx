@@ -11,7 +11,7 @@ class ErrorPagePage extends Component {
       subject,
       content,
       phone,
-      email
+      email,
     } = this.props;
 
     return (
@@ -20,7 +20,7 @@ class ErrorPagePage extends Component {
           subject,
           content,
           phone,
-          email
+          email,
         }} />
       </VendorLayoutContainer>
     );
@@ -33,7 +33,7 @@ ErrorPagePage.propTypes = {
   subject: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   phone: PropTypes.string,
-  email: PropTypes.string
+  email: PropTypes.string,
 };
 
 export default ErrorPagePage;

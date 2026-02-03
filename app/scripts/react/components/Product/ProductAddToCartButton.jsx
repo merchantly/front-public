@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { addCartTooltip } from 'r/actions/tooltipActions'
+import { addCartTooltip } from 'r/actions/tooltipActions';
 
 class ProductAddToCartButton extends Component {
   componentDidMount() {
-    const $tooltip = addCartTooltip($('.b-btn-add-cart'), this.props.t)
+    const $tooltip = addCartTooltip($('.b-btn-add-cart'), this.props.t);
 
-    this.setState({tooltip: $tooltip})
+    this.setState({tooltip: $tooltip});
   }
 
   render() {
@@ -28,8 +28,8 @@ class ProductAddToCartButton extends Component {
       // good.actualPrice.id
 
       const {
-        tooltip
-      } = this.state
+        tooltip,
+      } = this.state;
 
       tooltip.tooltip('show');
 

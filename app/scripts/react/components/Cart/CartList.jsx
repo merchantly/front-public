@@ -32,11 +32,11 @@ const SortableList = SortableContainer(({
             price={prices[itemId] || 0}            
             t={t}
           />
-        )
+        );
       })
       }      
     </div>
-  )
+  );
 
 });
 
@@ -69,7 +69,7 @@ class CartList extends Component {
     } = this.props;
 
     const {
-      items
+      items,
     } = this.state;
 
     return (    

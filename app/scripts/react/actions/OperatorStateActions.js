@@ -1,8 +1,8 @@
 import {
-  operatorState,
+  operatorState
 } from 'scripts/routes/api';
 import {
-  CALL_API,
+  CALL_API
 } from 'r/middleware/api';
 import queryString from 'query-string';
 import { canUseDOM } from 'r/helpers/dom';

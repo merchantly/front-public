@@ -6,7 +6,7 @@ export default class DesignButton extends Component {
   static propTypes = {
     onClick: PropTypes.func.isRequired,
     text: PropTypes.string,
-  }
+  };
   render() {
     const { onClick, text } = this.props;
 

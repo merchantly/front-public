@@ -20,10 +20,10 @@ $(() => {
   if (typeof Bugsnag === 'object') {
     Bugsnag.beforeNotify = (error, metaData) => {
       error.stacktrace = error.stacktrace.replace(/chrome-extension:/g, "chrome_extension:");
-    }
+    };
 
     Bugsnag.warn = (error, message) => {
-      console.warn(error, message); //eslint-disable-line
+      console.warn(error, message);  
 
       Bugsnag.notify(error, message, null, 'warning');
     };

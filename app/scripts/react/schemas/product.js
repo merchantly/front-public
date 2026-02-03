@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 import image from './image';
-import money from './money'
+import money from './money';
 import good from './good';
 
 export default PropTypes.shape({

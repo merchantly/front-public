@@ -222,7 +222,7 @@ function designOptions(tr) {
         value: '#f4d3c4',
       }],
     },
-  }
+  };
 }
 
 export default designOptions;

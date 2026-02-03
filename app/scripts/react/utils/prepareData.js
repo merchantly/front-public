@@ -7,7 +7,7 @@ export default function prepareData(srcData) {
 
   let add = function add(key, value) {
     // if (srcData[key] != null) data[key] = srcData[key];
-    data[key] = srcData[key]
+    data[key] = srcData[key];
   };
 
   Object.keys(srcData).forEach((key) => {
@@ -15,7 +15,7 @@ export default function prepareData(srcData) {
       isFormData = true;
       add = function add(key, value) {
         formData.append(key, value);
-      }
+      };
     }
   });
 

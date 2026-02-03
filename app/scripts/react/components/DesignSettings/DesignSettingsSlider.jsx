@@ -11,7 +11,7 @@ export default class DesignSettingsSlider extends Component {
     step: PropTypes.number,
     to: PropTypes.number,
     value: PropTypes.number.isRequired,
-  }
+  };
   handleSlide(value) {
     this.props.onChange(value);
   }

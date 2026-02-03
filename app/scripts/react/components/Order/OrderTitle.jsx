@@ -30,7 +30,7 @@ class OrderTitle extends Component {
     }
 
     const {
-      t
+      t,
     } = this.props;
 
     return t('vendor.order.total_vat', { total_vat: humanizedMoneyWithCurrency(totalVat), total_without_vat: humanizedMoneyWithCurrency(totalWithoutVat) });
@@ -41,7 +41,7 @@ class OrderTitle extends Component {
       totalCount,
       totalPrice,
       totalVat,
-      totalWithoutVat
+      totalWithoutVat,
     } = this.props;
 
     if (totalCount || !isEmpty(totalPrice)) {

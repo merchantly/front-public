@@ -12,7 +12,7 @@ class PropertyListItem extends Component {
     options: PropTypes.array.isRequired,
     property: PropTypes.object.isRequired,
     value: PropTypes.any,
-  }
+  };
   render() {
     const { value, options, property, onChange, t } = this.props;
     const Component = this.getComponentByType(property.type);
@@ -35,7 +35,7 @@ class PropertyListItem extends Component {
   getComponentByType(propertyType) {
     const typeComponents = {
       [propertyTypes.PROPERTY_COLOR_TYPE]: PropertyListItemColor,
-      [propertyTypes.PROPERTY_DICTIONARY_TYPE]: PropertyListItemDictionary
+      [propertyTypes.PROPERTY_DICTIONARY_TYPE]: PropertyListItemDictionary,
     };
 
     return typeComponents[propertyType];

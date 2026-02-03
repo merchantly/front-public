@@ -39,7 +39,7 @@ export function wishlistCall(globalId, method) {
         dataType: 'json',
         method: method,
         data: {
-          'good_id': globalId         
+          'good_id': globalId,         
         },
       },
     },

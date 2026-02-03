@@ -1,4 +1,4 @@
-import { addEvent } from 'r/helpers/dom'
+import { addEvent } from 'r/helpers/dom';
 
 const EVENT_HELPER_SUBMIT_TIMEOUT = 300;
 
