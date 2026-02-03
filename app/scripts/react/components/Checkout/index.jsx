@@ -11,7 +11,6 @@ import CheckoutDeliveries from './CheckoutDeliveries';
 import CheckoutFields from './CheckoutFields';
 import CheckoutPayments from './CheckoutPayments';
 import CheckoutCoupon from './CheckoutCoupon';
-import CheckoutTelegramField from './CheckoutTelegramField';
 import {find, head} from "lodash";
 import geideaPaymentWidget from 'app/scripts/lib/geideaPaymentWidget';
 
@@ -143,7 +142,6 @@ class Checkout extends Component {
         noValidate
       >
         <FormAuthenticity {...formAuthenticity} />
-        <CheckoutTelegramField />
         <div className="b-cart__form b-form">
           {errorMessage
             ? (

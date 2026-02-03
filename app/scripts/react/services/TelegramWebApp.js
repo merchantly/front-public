@@ -3,16 +3,14 @@
  *
  * Handles Telegram Mini App integration:
  * - Detecting if running inside Telegram
- * - Validating initData with backend
- * - Storing telegram_user_id for checkout
+ * - Validating initData with backend (stores telegram_user_id in server-side signed cookie)
  * - Applying Telegram-specific UI adjustments
+ *
+ * Security note: telegram_user_id is stored server-side in a signed cookie after
+ * initData validation. It's NOT passed from frontend to avoid spoofing.
  */
 
-const STORAGE_KEY = 'telegram_user_id';
-const VALIDATE_ENDPOINT = '/vendor/telegram/miniapp/validate';
-
-// In-memory fallback if sessionStorage is unavailable
-let memoryTelegramUserId = null;
+const SESSION_ENDPOINT = '/telegram/miniapp/session';
 
 const TelegramWebApp = {
   /**
@@ -64,56 +62,8 @@ const TelegramWebApp = {
   },
 
   /**
-   * Store telegram_user_id
-   */
-  storeTelegramUserId(userId) {
-    memoryTelegramUserId = userId;
-    try {
-      if (typeof sessionStorage !== 'undefined') {
-        sessionStorage.setItem(STORAGE_KEY, String(userId));
-      }
-    } catch (e) {
-      console.warn('[TelegramWebApp] sessionStorage unavailable:', e.message);
-    }
-  },
-
-  /**
-   * Get stored telegram_user_id
-   */
-  getTelegramUserId() {
-    if (memoryTelegramUserId) {
-      return memoryTelegramUserId;
-    }
-    try {
-      if (typeof sessionStorage !== 'undefined') {
-        const stored = sessionStorage.getItem(STORAGE_KEY);
-        if (stored) {
-          memoryTelegramUserId = parseInt(stored, 10);
-          return memoryTelegramUserId;
-        }
-      }
-    } catch (e) {
-      console.warn('[TelegramWebApp] sessionStorage unavailable:', e.message);
-    }
-    return null;
-  },
-
-  /**
-   * Clear stored telegram_user_id
-   */
-  clearTelegramUserId() {
-    memoryTelegramUserId = null;
-    try {
-      if (typeof sessionStorage !== 'undefined') {
-        sessionStorage.removeItem(STORAGE_KEY);
-      }
-    } catch (e) {
-      // Ignore
-    }
-  },
-
-  /**
-   * Validate initData with backend
+   * Create session by validating initData with backend
+   * Server stores telegram_user_id in signed cookie on success
    * @returns {Promise<{valid: boolean, telegramUserId?: number, error?: string}>}
    */
   async validateInitData() {
@@ -124,7 +74,7 @@ const TelegramWebApp = {
     }
 
     try {
-      const response = await fetch(VALIDATE_ENDPOINT, {
+      const response = await fetch(SESSION_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -136,12 +86,12 @@ const TelegramWebApp = {
 
       const data = await response.json();
 
-      if (response.ok && data.valid) {
-        this.storeTelegramUserId(data.telegram_user_id);
+      if (response.ok && data.success) {
+        // telegram_user_id is stored server-side in signed cookie
         return {
           valid: true,
-          telegramUserId: data.telegram_user_id,
-          telegramUser: data.telegram_user
+          telegramUserId: data.user?.telegram_user_id,
+          telegramUser: data.user
         };
       } else {
         console.warn('[TelegramWebApp] Validation failed:', data.error);
@@ -262,13 +212,28 @@ const TelegramWebApp = {
   },
 
   /**
-   * Enable/disable main button
+   * Current MainButton click handler (for cleanup)
+   * @private
+   */
+  _mainButtonHandler: null,
+
+  /**
+   * Set and show main button
+   * @param {string} text - Button text
+   * @param {Function} onClick - Click handler
+   * @param {Object} options - Optional settings (color, textColor)
    */
   setMainButton(text, onClick, options = {}) {
     const webApp = this.getWebApp();
     if (!webApp || !webApp.MainButton) return;
 
     const { MainButton } = webApp;
+
+    // Remove previous handler to prevent memory leak
+    if (this._mainButtonHandler) {
+      MainButton.offClick(this._mainButtonHandler);
+    }
+    this._mainButtonHandler = onClick;
 
     MainButton.setText(text);
     MainButton.onClick(onClick);
@@ -284,11 +249,16 @@ const TelegramWebApp = {
   },
 
   /**
-   * Hide main button
+   * Hide main button and cleanup handler
    */
   hideMainButton() {
     const webApp = this.getWebApp();
     if (webApp && webApp.MainButton) {
+      // Cleanup handler to prevent stale callbacks
+      if (this._mainButtonHandler) {
+        webApp.MainButton.offClick(this._mainButtonHandler);
+        this._mainButtonHandler = null;
+      }
       webApp.MainButton.hide();
     }
   },
