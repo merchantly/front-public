@@ -92,3 +92,33 @@ global.ClientResetPasswordPage = require('rc/ClientResetPassword/ClientResetPass
 global.ClientRestorePasswordPage = require('rc/ClientRestorePassword/ClientRestorePasswordPage');
 
 import './react/application';
+
+// Telegram WebApp integration
+import TelegramWebApp from './react/services/TelegramWebApp';
+global.TelegramWebApp = TelegramWebApp;
+
+// Initialize Telegram WebApp on DOM ready
+if (typeof document !== 'undefined') {
+  const initTelegram = () => {
+    if (TelegramWebApp.isInTelegram() || TelegramWebApp.isTelegramWebappMode()) {
+      TelegramWebApp.initialize().then(result => {
+        if (result.initialized) {
+          console.log('[TelegramWebApp] Initialized:', result);
+          // Add CSS class for Telegram-specific styles
+          document.body.classList.add('telegram-webapp');
+          if (result.validated) {
+            document.body.classList.add('telegram-validated');
+          }
+        }
+      }).catch(err => {
+        console.error('[TelegramWebApp] Initialization error:', err);
+      });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTelegram);
+  } else {
+    initTelegram();
+  }
+}
