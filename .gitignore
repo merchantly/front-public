@@ -26,3 +26,4 @@ www
 /tmp/
 yarn-error.log
 stats.json
+.worktrees/
