@@ -5,8 +5,11 @@ import ReactDOMServer from 'react-dom/server';
 
 global.gon = {
   i18n: { locale: 'ru' },
-  public_api_url: 'localhost'
+  public_api_url: 'localhost',
+  thumbor_url: 'https://thumbor.test',
 }
+
+import './react/services/Thumbor.test';
 
 require('../dist/store_app_prerender.development.js');
 
