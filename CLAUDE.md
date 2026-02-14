@@ -21,7 +21,7 @@ yarn storybook            # Component dev server on port 9001
 yarn profile              # Bundle analyzer (generates stats.json)
 ```
 
-CI runs `yarn build` then `yarn test:prerender` on Node 16.
+CI runs `yarn build` then `yarn test:prerender` on Node 18.
 
 ## Architecture
 
@@ -105,7 +105,7 @@ test/
 - React 16.2, Redux 3.6, react-router 5 — legacy versions, be careful with API compatibility
 - jQuery 3.4 coexists with React (legacy patterns)
 - CoffeeScript support still present (coffee-loader)
-- Node 16 for builds (.mise.toml), .nvmrc says 10.16.3 (outdated)
+- Node 18 for builds (.mise.toml)
 - Dart-sass (replaced node-sass)
 
 ## Collecting Test Fixtures
