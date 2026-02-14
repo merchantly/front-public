@@ -3,7 +3,7 @@
 const BREAKPOINTS = [40, 80, 160, 240, 320, 480, 640, 768, 1024, 1280, 1536, 1920, 2560];
 
 function snapToBreakpoint(value) {
-  if (!value) return value;
+  if (value == null) return value;
   return BREAKPOINTS.find(bp => bp >= value) || BREAKPOINTS[BREAKPOINTS.length - 1];
 }
 
