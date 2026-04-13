@@ -45,9 +45,10 @@ const getSize = (image, maxHeight, maxWidth) => {
 const getUrl = (image, maxHeight, maxWidth) => (
   ThumborService.imageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters)
 );
-const getRetinaUrl = (image, maxHeight, maxWidth) => (
-  ThumborService.retinaImageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters)
-);
+const getRetinaUrl = (image, maxHeight, maxWidth) => {
+  const url = ThumborService.retinaImageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters);
+  return url ? `${url} 2x` : url;
+};
 
 class Image extends Component {
   render() {

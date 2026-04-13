@@ -67,9 +67,16 @@ describe('ThumborService', () => {
       assert.strictEqual(parseInt(match[1], 10), 640, `Retina 300 should snap to 640, got ${match[1]}`);
     });
 
-    it('should end with 2x suffix', () => {
+    it('should NOT include 2x suffix in URL (2x is a srcSet descriptor, not part of URL)', () => {
       const url = ThumborService.retinaImageUrl('http://img.jpg', { width: 300 }, []);
-      assert(url.endsWith(' 2x'), `Retina URL should end with 2x: ${url}`);
+      assert(!url.includes(' 2x'), `Retina URL should NOT contain ' 2x': ${url}`);
+      assert(!url.includes('%202x'), `Retina URL should NOT contain '%202x': ${url}`);
+    });
+
+    it('should return clean Thumbor URL without space or descriptor', () => {
+      const url = ThumborService.retinaImageUrl('http://img.jpg', { width: 300 }, []);
+      assert(url.match(/\/unsafe\/\d+x\//), `URL should be a valid Thumbor URL: ${url}`);
+      assert(!url.includes(' '), `URL should not contain spaces: ${url}`);
     });
   });
 });

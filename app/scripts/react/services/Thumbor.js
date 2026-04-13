@@ -39,7 +39,7 @@ const ThumborService = {
     const _filters = normalizeFilters(filters);
 
     return this.thumborUrl()
-      ? `${this.thumborUrl()}/unsafe/${width}x${_filters}/${_url} 2x`
+      ? `${this.thumborUrl()}/unsafe/${width}x${_filters}/${_url}`
       : url;
   },
 };
