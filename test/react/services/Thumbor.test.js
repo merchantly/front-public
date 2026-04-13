@@ -78,5 +78,14 @@ describe('ThumborService', () => {
       assert(url.match(/\/unsafe\/\d+x\//), `URL should be a valid Thumbor URL: ${url}`);
       assert(!url.includes(' '), `URL should not contain spaces: ${url}`);
     });
+
+    it('should return raw URL without 2x when thumborUrl is not configured', () => {
+      const saved = global.gon;
+      global.gon = {};
+      const url = ThumborService.retinaImageUrl('http://img.jpg', { width: 300 }, []);
+      global.gon = saved;
+      assert.strictEqual(url, 'http://img.jpg', `Fallback should return raw URL: ${url}`);
+      assert(!url.includes(' 2x'), `Fallback URL should not contain 2x: ${url}`);
+    });
   });
 });

@@ -45,6 +45,8 @@ const getSize = (image, maxHeight, maxWidth) => {
 const getUrl = (image, maxHeight, maxWidth) => (
   ThumborService.imageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters)
 );
+// 2x is a srcSet descriptor, not part of the image URL — appending here
+// prevents SSR from URL-encoding the space into %20, which causes Thumbor 404s
 const getRetinaUrl = (image, maxHeight, maxWidth) => {
   const url = ThumborService.retinaImageUrl(image.url, getSize(image, maxHeight, maxWidth), image.filters);
   return url ? `${url} 2x` : url;
