@@ -19,6 +19,7 @@ import './react/components/Userbar/index.test';
 import './react/components/Logo/Logo.test';
 import './react/components/Notice/Notice.test';
 import './react/components/DesignSettings/DesignSettings.test';
+import './react/components/DesignPreview/DesignPreview.test';
 import './react/components/Product/ProductCart/ProductCart.test';
 import './react/components/Product/ProductCard/ProductCardContainer.test';
 
