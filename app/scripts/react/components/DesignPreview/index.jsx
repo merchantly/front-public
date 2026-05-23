@@ -10,8 +10,28 @@ import { isDesignOpened } from 'r/actions/popupActions';
 
 jss.use(nested);
 
+export function catalogFilterPreviewRule(value) {
+  if (value) return {};
+
+  return {
+    '.b-page .b-item-list_catalog.b-item-list--with-filter .b-item-list__filter': {
+      display: 'none',
+    },
+    '.b-page .b-item-list_catalog.b-item-list--with-filter .b-item-list__filter-container': {
+      display: 'none',
+    },
+    '.b-page .b-item-list_catalog.b-item-list--with-filter .b-item-list__content': {
+      'margin-left': '-18px',
+    },
+    '.b-page .b-item-list_catalog.b-item-list--with-filter .b-item-list__description': {
+      'margin-left': '6px',
+    },
+  };
+}
+
 const _rules = {
   welcome: {
+    mainPageFilter: catalogFilterPreviewRule,
     mainPageRows(value, { mainPageProductsInRow }) {
       const newValue = (value * mainPageProductsInRow) + 1;
 
@@ -23,6 +43,7 @@ const _rules = {
     },
   },
   categories: {
+    categoryPageFilter: catalogFilterPreviewRule,
     categoryPageRows(value, { categoryPageProductsInRow }) {
       const newValue = (value * categoryPageProductsInRow) + 1;
 
