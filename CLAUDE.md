@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+**Canonical agent rules:** see [`.agent/rules/BASE.md`](.agent/rules/BASE.md) and [AGENTS.md](AGENTS.md).
+
 ## Project Overview
 
 MerchantlyFrontApp — React/Redux e-commerce storefront with server-side rendering (SSR) via Ruby MiniRacer (V8). Components render both in browser and on server through `react_ujs`. Props pass from server via `data-react-props` HTML attributes.

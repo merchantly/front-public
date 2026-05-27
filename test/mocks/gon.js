@@ -6,7 +6,7 @@ global.gon = {
       mainPageProductsInRow: 2,
       mainPageRows: 5,
       mainPageInstagram: true,
-      mainPageSlider: false,
+      mainPageSlider: true,
       mainPageBanner: true,
       mainPageFilter: true,
       mainPageOrdered: false,

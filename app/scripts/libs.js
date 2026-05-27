@@ -4,18 +4,18 @@ window.I18n = require('i18next'); // Fallback for rails I18n
 window.$ = window.jQuery = require('jquery');
 window.React = require('react');
 window.ReactDOM = require('react-dom');
-window.EventEmitter = require('@bower_components/eventEmitter');
-window.accounting = require('@bower_components/accounting.js');
+window.EventEmitter = require('wolfy87-eventemitter');
+window.accounting = require('accounting');
 
 // jQuery plugins
-require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
-require('@bower_components/sticky-kit/jquery.sticky-kit');
+require('jquery.mmenu.4.7.5/src/js/jquery.mmenu.min.all');
+require('sticky-kit/dist/sticky-kit');
 
 // Others
 // Не понял где он используется
-// require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
-require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
-require('@bower_components/fancybox/source/jquery.fancybox');
+// require('bootstrap-sass/assets/javascripts/bootstrap');
+require('owlcarousel/owl-carousel/owl.carousel');
+require('fancybox/dist/js/jquery.fancybox');
 
 require('nouislider');
 

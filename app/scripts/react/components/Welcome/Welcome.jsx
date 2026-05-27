@@ -33,25 +33,33 @@ class Welcome extends Component {
       sliderImages,
     } = vendor;
 
+    const hasHero = showWelcomeSlider || preProductsText;
+
     return (
       <div>
-        <div className="b-page__content__inner b-page__content__inner_slider">
-          {showWelcomeSlider && (
-            <ImageSlider
-              className="b-slider_promo"
-              hasThumbs={false}
-              slides={sliderImages}
-              rtl={rtl}
-            />
-          )}
-        </div>
-        {preProductsText && (
-          <div className="b-page__content__inner b-page__content__inner_content">
-            <div className="lead-text">
-              <div
-                className="lead-text__content"
-                dangerouslySetInnerHTML={{ __html: preProductsText }}
-              />
+        {hasHero && (
+          <div className="b-page__content__inner b-page__content__inner_slider b-page__content__inner_slider-max-width welcome-hero-wrap">
+            <div className="welcome-hero">
+              {showWelcomeSlider && (
+                <div className="welcome-hero__slider">
+                  <ImageSlider
+                    className="b-slider_promo"
+                    hasThumbs={false}
+                    slides={sliderImages}
+                    rtl={rtl}
+                  />
+                </div>
+              )}
+              {preProductsText && (
+                <div className="welcome-hero__overlay">
+                  <div className="lead-text">
+                    <div
+                      className="lead-text__content"
+                      dangerouslySetInnerHTML={{ __html: preProductsText }}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}

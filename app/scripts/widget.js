@@ -9,10 +9,10 @@ import Widget from 'app/scripts/react/components/Widget';
 // global.jQuery = jQuery;
 // global.$ = jQuery;
 
-// require('@bower_components/bootstrap-sass-official/assets/javascripts/bootstrap');
-require('@bower_components/jQuery.mmenu/src/js/jquery.mmenu.min.all');
-require('@bower_components/OwlCarousel/owl-carousel/owl.carousel');
-require('@bower_components/fancybox/source/jquery.fancybox');
+// require('bootstrap-sass/assets/javascripts/bootstrap');
+require('jquery.mmenu.4.7.5/src/js/jquery.mmenu.min.all');
+require('owlcarousel/owl-carousel/owl.carousel');
+require('fancybox/dist/js/jquery.fancybox');
 // Отключил вообще fancybox.wannabe
 // Если это нужно будет, то нужно клонировать
 // fancybox и вносить в него правки

@@ -27,3 +27,4 @@ www
 yarn-error.log
 stats.json
 .worktrees/
+.agent.local/

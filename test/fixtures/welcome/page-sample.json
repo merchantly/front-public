@@ -1288,32 +1288,16 @@
   "showQuantity": false,
   "showWelcomeSlider": true,
   "vendor": {
-    "preProductsText": "<p><em>Pre</em> products text</p>",
+    "preProductsText": "<div class=\"row welcome-hero__grid\"><div class=\"col-md-7 col-sm-12 welcome-hero__copy\"><p class=\"welcome-hero__brand\">KIIIOSK</p><h1 class=\"welcome-hero__title\">e-commerce website builder</h1><h5 class=\"welcome-hero__subtitle\">Online payments and inventory management support</h5></div><div class=\"col-md-5 col-sm-12 welcome-hero__cta-col\"><div class=\"welcome-hero__cta\"><h4>Open online shop and start sales today</h4><a href=\"/vendors/new\" class=\"welcome-hero__cta-button\">FREE TRIAL</a></div></div></div>",
     "postProductsText": "<p><em>Post</em> products text</p>",
     "sliderImages": [
       {
         "image": {
-          "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1666/ee8dac29-6bc0-49a8-8cff-93851718ed12.jpg",
-          "height": 400,
-          "width": 1000
-        },
-        "url": "http://wanna-be.ru/categories/8538-kastomnye-kollektsii-masti"
-      },
-      {
-        "image": {
-          "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/1296/f1333e5a-99cc-4f84-b168-bc2e2739cac2.jpg",
+          "url": "https://kiiiosk.store/s/img/main.jpg",
           "height": 800,
-          "width": 2000
+          "width": 1600
         },
-        "url": "http://wanna-be.ru/categories/7499-krasota-v-prostote"
-      },
-      {
-        "image": {
-          "url": "http://assets.kiiiosk.ru/uploads/shop/5/uploads/slider_image/image/8/e442e950-49b4-40a5-9cd6-4711fcb72b2d.jpg",
-          "height": 600,
-          "width": 1500
-        },
-        "url": "/categories/616"
+        "url": "https://kiiiosk.store/"
       }
     ]
   }

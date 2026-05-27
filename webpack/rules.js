@@ -33,7 +33,7 @@ exports.default = [
         options: { transpile: babelifyOptions }
       }
     ],
-    exclude: /(node_modules|bower_components)/,
+    exclude: /node_modules/,
   },
   {
     test: /\.jsx?$/,
@@ -44,7 +44,7 @@ exports.default = [
         query: babelifyOptions
       }
     ],
-    exclude: /(node_modules|bower_components)/,
+    exclude: /node_modules/,
   },
   {
     test: /\.(sass|s?css)$/,
@@ -62,14 +62,13 @@ exports.default = [
           sassOptions: {
             includePaths: [
               path.resolve(__dirname, '../app/stylesheets'),
-              path.resolve(__dirname, '../node_modules/@bower_components'),
               path.resolve(__dirname, '../node_modules'),
             ]
           }
         }
       },
     ],
-    exclude: /(node_modules|bower_components)/,
+    exclude: /node_modules/,
   },
   {
     test: /\.html$/,

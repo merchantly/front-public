@@ -19,7 +19,6 @@ const baseConfig = {
   resolve: {
     modules: [
       path.join(__dirname, 'node_modules'),
-      path.join(__dirname, 'node_modules/@bower_components'),
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
   },
@@ -57,7 +56,6 @@ const devConfig = {
   resolve: {
     modules: [
       path.join(__dirname, 'node_modules'),
-      path.join(__dirname, 'node_modules/@bower_components'),
     ],
     extensions: ['.js', '.jsx', '.json', '.coffee', '.pug'],
   },
